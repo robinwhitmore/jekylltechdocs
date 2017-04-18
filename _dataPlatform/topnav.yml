@@ -1,0 +1,15 @@
+## Platform Platform Platform  Platform  Platform  Platform
+
+## Topnav single links
+## if you want to list an external url, use external_url instead of url. the theme will apply a different link base.
+topnav:
+- title: Platform Topnav
+  items:
+    - title: Develop Apps
+      url: /pf_apps_gs.html
+    - title: Develop Themes
+      url: /pf_themes_gs.html
+    - title: Platform APIs
+      url: /pf_apis_about.html
+
+#Topnav dropdowns

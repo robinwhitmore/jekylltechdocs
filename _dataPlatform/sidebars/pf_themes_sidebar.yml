@@ -1,0 +1,24 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: Create Weebly Themes
+  version:
+  folders:
+
+
+  - title: Get Started with Themes
+    output: web
+    folderitems:
+
+    - title: Get Started with Weebly Themes
+      url: /pf_themes_gs.html
+      output: web
+
+  - title: Design Your Weebly Theme
+    output: web
+    folderitems:
+
+    - title: Theme Design Guidelines
+      url: /pf_themes_design_gl.html
+      output: web

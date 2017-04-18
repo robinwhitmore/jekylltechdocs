@@ -1,0 +1,22 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: Weebly Cloud
+  version:
+  folders:
+
+
+  - title: Get Started
+    output: web
+    folderitems:
+
+    - title: Get Started with Weebly Cloud
+      url: /cl_gs_gs.html
+      output: web
+      type: homepage
+
+
+    - title: Configure Weebly Cloud
+      url: /cl_gs_configure.html
+      output: web

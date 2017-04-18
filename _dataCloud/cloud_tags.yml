@@ -1,0 +1,28 @@
+allowed-tags:
+  - cloud_getting_started
+  - cloud_troubleshooting
+  - cloud_configuration
+  - cloud_custom_apps
+  - cloud_users
+  - cloud_plans
+  - cloud_sites
+  - cloud_api
+  - cloud_plugins
+
+
+  - getting_started
+  - requirements
+  - elements
+  - backend services
+  - snippets
+  - dashboard_cards
+  - manifest
+  - configuration
+  - development
+  - testing
+  - app_revenue
+  - reviews
+  - oauth
+  - apis
+  - webhooks
+  - troubleshooting

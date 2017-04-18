@@ -1,0 +1,20 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: Weebly REST APIs
+  version:
+  folders:
+
+
+  - title: Use the REST APIs
+    output: web
+    folderitems:
+
+    - title: About the REST APIs
+      url: /pf_apis_about.html
+      output: web
+
+    - title: Page API
+      url: /pf_apis_page.html
+      output: web

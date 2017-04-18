@@ -1,0 +1,12 @@
+{% if site.project == "cloud" %}
+{% assign sidebar = site.data.cl_gs_sidebar.entries %}
+{% assign topnav = site.data.cloud_topnav.topnav %}
+{% assign projectTags = site.data.cloud_tags.allowed-tags %}
+{% assign projectFolder = "cloud" %}
+
+{% elsif site.project == "platform" %}
+{% assign sidebar = site.data.pf_apps_sidebar.entries %}
+{% assign topnav = site.data.platform_topnav.topnav %}
+{% assign projectTags = site.data.platform_tags.allowed-tags %}
+{% assign projectFolder = "platform" %}
+{% endif %}
