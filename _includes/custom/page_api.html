@@ -105,7 +105,7 @@
 {% include note.html content = "Any fields returned that are not documented are currently unsupported and can be safely ignored."%}
 
 <h2>Retrieve a List of Pages for a Given Site</h2>
-<h3 class="codeTitle">Enpoint URL:</h3>
+<p class="codeTitle">Enpoint URL:</p>
 {% highlight shell%}
 {% if site.project == "platform" %}
 GET /v1/user/sites/{SITE_ID}/pages
@@ -176,7 +176,7 @@ GET /user/USER_ID/site/{SITE_ID}/page
       </tr>
 </table>
 
-<h3 class="codeTitle">Example CURL request returning all pages:</h3>
+<p class="codeTitle">Example CURL request returning all pages:</p>
 {% highlight shell%}
 {% if site.project == "platform" %}
 curl --request GET \
@@ -192,7 +192,7 @@ curl https://api.weeblycloud.com/user/USER_ID/site/SITE_ID/page \
 {% endif %}
 {% endhighlight %}
 
-<h3 class="codeTitle">Example filtered request:</h3>
+<p class="codeTitle">Example filtered request:</p>
 {% highlight shell%}
 {% if site.project == "platform" %}
 curl --request GET \
@@ -208,7 +208,7 @@ curl https://api.weeblycloud.com/user/USER_ID/site/SITE_ID/page?filterby=layout&
 {% endif %}
 {% endhighlight %}
 
-<h3 class="codeTitle">Example response:</h3>
+<p class="codeTitle">Example response:</p>
 {% highlight json %}
 [
   {
