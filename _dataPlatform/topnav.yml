@@ -6,7 +6,7 @@ topnav:
 - title: Platform Topnav
   items:
     - title: Develop Apps
-      url: /pf_apps_gs.html
+      url: /home.html
     - title: Develop Themes
       url: /pf_themes_gs.html
     - title: Platform APIs

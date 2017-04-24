@@ -81,6 +81,8 @@ data_dir: _dataCloud
 
 project: cloud
 
+project_folder: pages/cloud
+
 index: /cl_gs_gs.html
 
 sidebars:

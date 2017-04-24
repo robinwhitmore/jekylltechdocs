@@ -81,7 +81,7 @@ data_dir: _dataPlatform
 
 project: platform
 
-index: /pf_apps_gs.html
+project_folder: /pages/platform
 
 sidebars:
 - pf_apps_sidebar

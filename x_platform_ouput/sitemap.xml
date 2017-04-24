@@ -9,6 +9,12 @@
   
   
   
+  <url>
+    <loc>http://localhost:4006/home.html</loc>
+  </url>
+  
+  
+  
   
   
   <url>
@@ -25,12 +31,6 @@
   
   <url>
     <loc>http://localhost:4006/pf_apis_page.html</loc>
-  </url>
-  
-  
-  
-  <url>
-    <loc>http://localhost:4006/pf_apps_gs.html</loc>
   </url>
   
   

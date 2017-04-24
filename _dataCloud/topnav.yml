@@ -6,7 +6,7 @@ topnav:
 - title: Topnav
   items:
     - title: Get Started
-      url: /cl_gs_gs.html
+      url: /home.html
     - title: Cloud API
       url: /cl_apis_about.html
     - title: Custom Apps

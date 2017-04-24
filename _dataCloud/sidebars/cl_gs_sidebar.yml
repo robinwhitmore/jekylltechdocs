@@ -12,7 +12,7 @@ entries:
     folderitems:
 
     - title: Get Started with Weebly Cloud
-      url: /cl_gs_gs.html
+      url: /home.html
       output: web
       type: homepage
 
