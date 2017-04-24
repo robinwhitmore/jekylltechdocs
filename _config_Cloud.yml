@@ -28,8 +28,8 @@ exclude:
   - .idea/
   - .gitignore
   - pages/platform
-  - /x_cloud_output
-  - /x_platform_output
+  - x_cloud_output/
+  - x_platform_output/
 # these are the files and directories that jekyll will exclude from the build
 
 feedback_subject_line: Weebly Cloud Developer Docs
@@ -80,10 +80,6 @@ defaults:
 data_dir: _dataCloud
 
 project: cloud
-
-project_folder: pages/cloud
-
-index: /cl_gs_gs.html
 
 sidebars:
 - cl_gs_sidebar
