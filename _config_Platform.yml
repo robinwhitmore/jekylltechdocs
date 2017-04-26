@@ -81,6 +81,10 @@ data_dir: _dataPlatform
 
 project: platform
 
+portal: "Dev Admin portal"
+
+portal_url: <a href="www.dev.weebly.com">dev.weebly.com</a>
+
 sidebars:
 - pf_apps_sidebar
 - pf_apis_sidebar
@@ -92,4 +96,4 @@ description: "Everything you need to build an app for the Weebly platform"
 
 # needed for sitemap.xml file only
 url: robinwhitmore.github.io
-baseurl: /jekylltechdocs
+baseurl:

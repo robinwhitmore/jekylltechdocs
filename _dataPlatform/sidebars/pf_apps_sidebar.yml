@@ -7,7 +7,7 @@ entries:
   folders:
 
 
-  - title: Develop Apps
+  - title: Get Started
     output: web
     folderitems:
 
@@ -16,7 +16,126 @@ entries:
       output: web
       type: homepage
 
+    - title: Create a Developer Account
+      url: /pf_apps_devAccount.html
+      output: web
 
     - title: Sample Applications
       url: /pf_apps_sample.html
+      output: web
+
+    - title: Working in the Weebly UI
+      url: /pf_apps_UI.html
+      output: web
+
+    - title: App Policy Requirements
+      url: /pf_apps_policy_requirements.html
+      output: web
+
+    - title: Why Different Email Addresses?
+      url: /pf_apps_email_addresses.html
+      output: web
+
+    - title: Legal Agreements
+      url: /pf_apps_legal.html
+      output: web
+
+  - title: Develop an App
+    output: web
+    folderitems:
+
+    - title: Develop an App
+      url: /pf_apps_develop.html
+      output: web
+
+    - title: Register Your App
+      url: /pf_apps_register.html
+      output: web
+
+    - title: Manage Your App
+      url: /pf_apps_manage.html
+      output: web
+
+  - title: Get Your App Ready to Publish
+    output: web
+    folderitems:
+
+    - title: Create Your App Center Listing
+      url: /pf_apps_listing.html
+      output: web
+
+    - title: Create a Demo Site for Your App
+      url: /pf_apps_demo.html
+      output: web
+
+  - title: Maintain Your App Post Publication
+    output: web
+    folderitems:
+
+    - title: How to Get Your App Featured
+      url: /pf_apps_featured.html
+      output: web
+
+    - title: Promote Your App
+      url: /pf_apps_promote.html
+      output: web
+
+  - title: App Installation Flow and Authentication
+    output: web
+    folderitems:
+
+    - title: App Authorization and Install Flow
+      url: /pf_apps_authorize_and_install.html
+      output: web
+
+    - title: Authenticate a User from Weebly
+      url: /pf_apps_authenticate.html
+      output: web
+
+  - title: Create a Backend Service
+    output: web
+    folderitems:
+
+    - title: Create a Backend Service
+      url: /pf_apps_backend.html
+      output: web
+
+  - title: Create an Element
+    output: web
+    folderitems:
+
+    - title: What are Elements
+      url: /pf_apps_elements.html
+      output: web
+
+    - title: Element Design Guidelines
+      url: /pf_apps_element_design_guidelines.html
+      output: web
+
+  - title: Create a Dashboard Card
+    output: web
+    folderitems:
+
+    - title: What are Dashboard Cards
+      url: /pf_apps_dashboard_cards.html
+      output: web
+
+    - title: Text Component
+      url: /pf_apps_dashboard_cards_text.html
+      output: web
+
+  - title: Troubleshooting
+    output: web
+    folderitems:
+
+    - title: Troubleshooting
+      url: /pf_apps_troubleshooting.html
+      output: web
+
+  - title: Topic Updates
+    output: web
+    folderitems:
+
+    - title: Topic Updates
+      url: /pf_apps_doc_updates.html
       output: web

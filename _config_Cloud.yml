@@ -81,6 +81,10 @@ data_dir: _dataCloud
 
 project: cloud
 
+portal: "Cloud Admin"
+
+portal_url: <a href="https://weeblycloud.com/admin">https://weeblycloud.com/admin</a>
+
 sidebars:
 - cl_gs_sidebar
 - cl_apps_sidebar

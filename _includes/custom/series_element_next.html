@@ -1,0 +1,14 @@
+<p>{% assign series_pages = site.series_element %}
+    {% for p in pages %}
+    {% if p.series == "element series" %}
+    {% assign nextTopic = page.weight | plus: "1"  %}
+    {% assign previousTopic = page.weight | minus: "1"  %}
+    {% if p.weight == previousTopic %}
+    <a href="{{p.url | remove: "/"}}"><button type="button" class="btn btn-primary">Previous: {{p.weight}}  {{p.title}}</button></a>
+    {% endif %}
+    {% if p.weight == nextTopic  %}
+    <a href="{{p.url | remove: "/"}}"><button type="button" class="btn btn-primary">Next: {{p.weight}}  {{p.title}}</button></a>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+</p>
