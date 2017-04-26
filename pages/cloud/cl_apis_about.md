@@ -1,7 +1,7 @@
 ---
 title: About the Weebly Cloud REST APIs
 keywords:
-tags: [cloud_api]
+tags: [apis, getting started]
 sidebar: cl_apis_sidebar
 permalink: cl_apis_about.html
 summary: Weebly APIs are provided using REST over HTTPS and utilize the HTTP verbs GET, POST, PUT, PATCH and DELETE. We provide a number of client libraries to help get you started. See the following sections for more general information about using our APIs.

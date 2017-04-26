@@ -41,12 +41,14 @@ layout: default
 
   {{content}}
 
+{{site.data.alerts.hr_shaded}}
+
 {% include custom/{{page.series_next}}%}
 
     <div class="tags">
         {% if page.tags != null %}
         <b>Tags: </b>
-        {% assign projectTags = site.data.allowed-tags %}
+        {% assign projectTags = site.data.tags.allowed-tags %}
         {% for tag in page.tags %}
         {% if projectTags contains tag %}
         <a href="{{ "tag_" | append: tag | append: ".html" }}" class="btn btn-default navbar-btn cursorNorm" role="button">{{page.tagName}}{{tag}}</a>

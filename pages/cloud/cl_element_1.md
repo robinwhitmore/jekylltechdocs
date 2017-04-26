@@ -1,8 +1,8 @@
 ---
-title: Design the Element
+title: 1. Design the Element
 layout: "tutorial"
 keywords:
-tags: [getting started, elements, manifest, configuration, development]
+tags: [getting started, custom apps]
 sidebar: cl_apps_sidebar
 permalink: cl_element_1.html
 simple_map: false
@@ -11,6 +11,6 @@ box_number: 2
 series: "element series"
 series_button: series_element.html
 series_next: series_element_next.html
-weight: 2
+weight: 1
 ---
 {% include custom/tutorials/elements2.html%}

@@ -1,7 +1,7 @@
 ---
 title:
 keywords:
-tags: [cloud_getting_started, cloud_troubleshooting, cloud_configuration, cloud_custom_apps, cloud_users, cloud_plans, cloud_sites, cloud_api, cloud_plugins]
+tags: [getting started, troubleshooting, configuration, custom apps, users, plans, sites, apis, plugins]
 sidebar: cl_[X]_sidebar
 permalink: cl_[X].html
 summary:

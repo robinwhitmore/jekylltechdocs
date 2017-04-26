@@ -1,7 +1,7 @@
 ---
 title: Get Started with Weebly Cloud
 keywords:
-tags: [getting_started]
+tags: [getting started]
 sidebar: cl_gs_sidebar
 permalink: home.html
 folder: cloud

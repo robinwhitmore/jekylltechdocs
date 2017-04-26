@@ -1,10 +1,10 @@
 allowed-tags:
-  - getting_started
+  - getting started
   - troubleshooting
   - configuration
-  - custom_apps
+  - custom apps
   - users
   - plans
   - sites
-  - api
+  - apis
   - plugins

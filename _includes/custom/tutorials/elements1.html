@@ -23,3 +23,8 @@
         <li>A code editor that can handle HTML, JavaScript, CSS, and JSON</li>
     </ul>
 </p>
+{% if site.project=="cloud" %}
+<a href="cl_element_1.html"><button type="button" class="btn btn-primary">Let's get started!</a>
+{% elsif site.project=="platform" %}
+<a href="element_1.html"><button type="button" class="btn btn-primary">Let's get started!</a>
+{% endif %}
