@@ -38,6 +38,24 @@
   
   
   <url>
+    <loc>http://localhost:4000/cl_element_1.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/cl_element_2.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/cl_element_main.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4000/cl_gs_configure.html</loc>
   </url>
   

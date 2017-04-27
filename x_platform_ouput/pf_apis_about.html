@@ -250,40 +250,44 @@ $('#toc').on('click', 'a', function() {
 <p>The endpoint is: <code class="highlighter-rouge">https://api.weebly.com/</code>.</p>
 
 <h2 id="versions">Versions</h2>
-<p>We encourage you to explicitly request this version via the Accept header.
- ~~~sh
- Accept: application/vnd.weebly.v1+json
- ~~~~</p>
+<p>We encourage you to explicitly request this version via the Accept header.</p>
 
-<p>## Schema
- All API access is over HTTPS, and accessed from the <code class="highlighter-rouge">api.weebly.com</code> domain. All data is sent and received as JSON. Blank fields are included as null instead of being omitted. Dates and times are Unix Epoch timestamps.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>Accept `application/vnd.weebly.v1+json`
+</code></pre>
+</div>
 
-<p>### List View
- When retrieving a list of resources, a summary list view of each resource is returned. In some cases, this is akin to a compound primary key. In most root resource cases, like product, the list view contains enough information to make a workable list view in an application without making calls for each resource.</p>
+<h2 id="schema">Schema</h2>
+<p>All API access is over HTTPS, and accessed from the <code class="highlighter-rouge">api.weebly.com</code> domain. All data is sent and received as JSON. Blank fields are included as null instead of being omitted. Dates and times are Unix Epoch timestamps.</p>
 
-<p>### Detail View
- When retrieving a single resource, you will receive a detailed view typically resulting in all the attributes of the resource. In addition, sub resources (like a product’s skus) that are owned by this resource are inlined to the result. Other resources (like categories) which are associated but not owned by this resource provide the ids needed to look them up separately.</p>
+<h3 id="list-view">List View</h3>
+<p>When retrieving a list of resources, a summary list view of each resource is returned. In some cases, this is akin to a compound primary key. In most root resource cases, like product, the list view contains enough information to make a workable list view in an application without making calls for each resource.</p>
+
+<h3 id="detail-view">Detail View</h3>
+<p>When retrieving a single resource, you will receive a detailed view typically resulting in all the attributes of the resource. In addition, sub resources (like a product’s skus) that are owned by this resource are inlined to the result. Other resources (like categories) which are associated but not owned by this resource provide the ids needed to look them up separately.</p>
 
 <h2 id="http-redirects">HTTP Redirects</h2>
 <p>We may issue redirects. Any call may result in a redirect, at which point you should make an identical call but to the newly provided resource URL.</p>
 
 <h2 id="http-verbs">HTTP Verbs</h2>
-<p>You can use the following:
-* GET
-​  Used for retrieving resources.
-* POST
-  Used for creating resources.
-* PATCH
-  Used for updating resources with partial JSON data.
-* PUT
-  Used for replacing resources or entire collections.
-* DELETE
-  Used for deleting resources.</p>
+<p>You can use the following:</p>
+
+<ul>
+  <li>GET
+​  Used for retrieving resources.</li>
+  <li>POST
+Used for creating resources.</li>
+  <li>PATCH
+Used for updating resources with partial JSON data.</li>
+  <li>PUT
+Used for replacing resources or entire collections.</li>
+  <li>DELETE
+Used for deleting resources.</li>
+</ul>
 
 <h2 id="authentication">Authentication</h2>
 <p>To access the Weebly API, you will need to authenticate using OAuth, allowing you to access resources based on a particular user and site. After the OAuth flow, you will have a token for that user and site, and you must use it in the header to authenticate all requests. Examples in the API docs show how to add this to the header.</p>
 
-<p>Authenticating with invalid credentials will return 401 Unauthorized, and continued failures will result in 403 Forbidden.</p>
+<p>Authenticating with invalid credentials will return <code class="highlighter-rouge">401 Unauthorized</code>, and continued failures will result in <code class="highlighter-rouge">403 Forbidden</code>.</p>
 
 
     <div class="tags">

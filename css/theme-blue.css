@@ -108,6 +108,13 @@ p.codeTitle {
     margin-bottom: 0px;
 }
 
+/*--------
+what i added
+--------*/
 div.next {
     margin-top: 25px;
+}
+
+p.proc {
+    font-weight: bold;
 }
