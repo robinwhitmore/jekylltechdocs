@@ -1,0 +1,24 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: Developer Tutorials
+  version:
+  folders:
+
+
+  - title: Create an Element
+    output: web
+    folderitems:
+
+    - title: Create an Element
+      url: /pf_element_main.html
+      output: web
+
+    - title: 1. Design the Element
+      url: /pf_element_1.html
+      output: web
+
+    - title: 2. Register the App
+      url: /pf_element_2.html
+      output: web

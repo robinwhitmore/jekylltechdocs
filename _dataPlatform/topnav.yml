@@ -9,7 +9,9 @@ topnav:
       url: /home.html
     - title: Develop Themes
       url: /pf_themes_gs.html
-    - title: Platform APIs
+    - title: APIs
       url: /pf_apis_about.html
+    - title: Tutorials
+      url: /pf_element_main.html
 
 #Topnav dropdowns

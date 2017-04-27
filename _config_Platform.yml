@@ -89,6 +89,7 @@ sidebars:
 - pf_apps_sidebar
 - pf_apis_sidebar
 - pf_themes_sidebar
+- pf_tutorials_sidebar
 - other
 
 description: "Everything you need to build an app for the Weebly platform"

@@ -1,10 +1,10 @@
 ---
-title: Design the Element
+title: 1. Design the Element
 layout: "tutorial"
 keywords:
 tags: [getting started, elements, manifest, configuration, development]
-sidebar: pf_apps_sidebar
-permalink: element_1.html
+sidebar: pf_tutorials_sidebar
+permalink: pf_element_1.html
 simple_map: false
 map_name:
 box_number: 2

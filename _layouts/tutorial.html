@@ -41,9 +41,10 @@ layout: default
 
   {{content}}
 
-{{site.data.alerts.hr_shaded}}
 
-{% include custom/{{page.series_next}}%}
+<div class="next">
+{% include custom/{{page.series_next}} %}
+</div>
 
     <div class="tags">
         {% if page.tags != null %}
