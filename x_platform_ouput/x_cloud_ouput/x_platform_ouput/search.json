@@ -41,6 +41,17 @@
 
 
 {
+"title": "About the Weebly REST API",
+"tags": "getting startedoauthapis",
+"keywords": "",
+"url": "pf_apis_about_old.html",
+"summary": "Weebly APIs are provided using REST over HTTPS. See the following sections for more general information about using our APIs."
+}
+,
+
+
+
+{
 "title": "Pages APIs",
 "tags": "apis",
 "keywords": "",
@@ -89,6 +100,17 @@
 "tags": "getting startedelementsdevelopment",
 "keywords": "",
 "url": "pf_element_main.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Test an include",
+"tags": "getting startedrequirementselementsbackend servicessnippetsdashboard_cardsmanifestconfigurationdevelopmenttestingapp_revenuereviewsoauthapiswebhookstroubleshooting",
+"keywords": "",
+"url": "pf_test.html",
 "summary": ""
 }
 ,

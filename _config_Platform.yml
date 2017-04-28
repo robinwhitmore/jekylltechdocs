@@ -83,7 +83,7 @@ project: platform
 
 portal: "Dev Admin portal"
 
-portal_url: <a href="www.dev.weebly.com">dev.weebly.com</a>
+portal_url: "dev.weebly.com"
 
 sidebars:
 - pf_apps_sidebar

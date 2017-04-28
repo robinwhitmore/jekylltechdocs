@@ -513,10 +513,10 @@ dd {
   .dl-horizontal dd:after {
     content: " ";
     /* 1 */
-  
+
     display: table;
     /* 2 */
-  
+
   }
   .dl-horizontal dd:after {
     clear: both;
@@ -525,10 +525,10 @@ dd {
   .dl-horizontal dd:after {
     content: " ";
     /* 1 */
-  
+
     display: table;
     /* 2 */
-  
+
   }
   .dl-horizontal dd:after {
     clear: both;
@@ -2797,6 +2797,7 @@ input[type="button"].btn-block {
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box;
+  white-space: nowrap;
 }
 .dropdown-menu.pull-right {
   right: 0;

@@ -88,9 +88,9 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            
-            <a class="fa fa-home fa-lg navbar-brand" href="pf_apps_gs.html">&nbsp;<span class="projectTitle"> Weebly Developer Documentation</span></a>
-            
+
+            <a class="fa fa-home fa-lg navbar-brand" href="home.html">&nbsp;<span class="projectTitle">
+                Weebly Developer Documentation</span></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
@@ -106,7 +106,11 @@
                 
                 
                 
-                <li><a href="pf_apis_about.html">Platform APIs</a></li>
+                <li><a href="pf_apis_about.html">APIs</a></li>
+                
+                
+                
+                <li><a href="pf_element_main.html">Tutorials</a></li>
                 
                 
                 
@@ -489,14 +493,15 @@ Download it from Github <a href="https://github.com/Weebly/price-chart-app">here
 <h2>Back-end App Examples</h2>
 <p>This example app uses OAuth to subscribe to webhooks and then logs the webhook notification. There are two versions of the example - one is PHP and the other is NodeJS. Both live in a Git repository that you can clone and run on Heroku.
     <ul>
-        <li>https://github.com/Weebly/php-webhook-client: This is a PHP version of the server-side code for the application. It can be deployed to a Heroku server or your own server. The <code>application.php</code> file contains the methods for handling OAuth, parsing parameters from a request URL, processing the webhooks payload, and outputting messages from the webhooks to the messages.txt file (found in the <code>messages</code> directory). The <code>index.php</code> file accesses the client ID and secret from environment variables. In the <code>lib/Util/Weebly</code> directory, the <code>WeeblyClient.php</code> file builds and returns the URLs needed for OAuth and for making authenticated API calls. It haslo handles trading the authorization code for the access token. Other files in the <code>lib/Util</code> directory verify the HMAC hash and write log messages. All other files are needed by Heroku or other servers, for example to access third-party libs.</li>
-        <li>https://github.com/Weebly/node-webhook-client: This is the NodeJS version of the server side code. It can also be deployed to Heroku. In the apps directory, <code>oauth.js</code> handles the OAuth flow and outputs messages to the <code>/messages/messages.txt</code>. The <code>webhooks-router.jsfile</code> manages the webhooks file and also outputs messages. The <code>utility.js</code> file handles hmac validation and generation. The <code>/middleware/weebly.js</code> file accesses the client ID and secret from environment variables or you can hardcode them in the <code>server.js</code> file. The rest of the files are needed by Heroku or other servers, for example to access third-party libs.</li>
+        <li><a href="https://github.com/Weebly/php-webhook-client">PHP</a>: This version contains the server-side code for the application. It can be deployed to a Heroku server or your own server. The <code>application.php</code> file contains the methods for handling OAuth, parsing parameters from a request URL, processing the webhooks payload, and outputting messages from the webhooks to the messages.txt file (found in the <code>messages</code> directory). The <code>index.php</code> file accesses the client ID and secret from environment variables. In the <code>lib/Util/Weebly</code> directory, the <code>WeeblyClient.php</code> file builds and returns the URLs needed for OAuth and for making authenticated API calls. It haslo handles trading the authorization code for the access token. Other files in the <code>lib/Util</code> directory verify the HMAC hash and write log messages. All other files are needed by Heroku or other servers, for example to access third-party libs.</li>
+
+        <li><a href="https://github.com/Weebly/node-webhook-client">NodeJS</a>: This is the NodeJS version of the server side code. It can also be deployed to Heroku. In the apps directory, <code>oauth.js</code> handles the OAuth flow and outputs messages to the <code>/messages/messages.txt</code>. The <code>webhooks-router.jsfile</code> manages the webhooks file and also outputs messages. The <code>utility.js</code> file handles hmac validation and generation. The <code>/middleware/weebly.js</code> file accesses the client ID and secret from environment variables or you can hardcode them in the <code>server.js</code> file. The rest of the files are needed by Heroku or other servers, for example to access third-party libs.</li>
 </ul>
 
 <p>
     Download and review the code to better understand how to work with our OAuth implementation and how to work with webhooks. You can also use the examples as a starting point for your own app.</p>
 
-<p>To use the sample apps:
+<p class="proc">To use the sample apps:
     <ol>
         <li>If not already done, create a developer account and register this sample app. You'll need the client ID and secret key that gets generated when registering an app in order to use this sample. </li>
         <li>If using Heroku install the <a href="https://devcenter.heroku.com/articles/heroku-command">Heruko command line interface</a>.</li>
@@ -533,9 +538,15 @@ Download it from Github <a href="https://github.com/Weebly/price-chart-app">here
         
         
         
+        <a href="tag_getting started.html" class="btn btn-default navbar-btn cursorNorm" role="button">getting started</a>
         
         
         
+        <a href="tag_elements.html" class="btn btn-default navbar-btn cursorNorm" role="button">elements</a>
+        
+        
+        
+        <a href="tag_backend services.html" class="btn btn-default navbar-btn cursorNorm" role="button">backend services</a>
         
         
         
@@ -551,7 +562,7 @@ Download it from Github <a href="https://github.com/Weebly/price-chart-app">here
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 Weebly. All rights reserved. <br />
- Site last generated: Apr 25, 2017 <br />
+ Site last generated: Apr 27, 2017 <br />
 <p><img src="images/company_logo.png" alt="Company logo"/></p>
                 </div>
             </div>

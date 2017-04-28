@@ -3,28 +3,6 @@
 
 
 
-{
-"title": "Design the Element",
-"tags": "getting startedelementsmanifestconfigurationdevelopment",
-"keywords": "",
-"url": "element_1.html",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "Register the App",
-"tags": "getting startedelementsmanifestconfigurationdevelopment",
-"keywords": "",
-"url": "element_2.html",
-"summary": ""
-}
-,
-
-
-
 
 
 {
@@ -63,6 +41,17 @@
 
 
 {
+"title": "About the Weebly REST API",
+"tags": "getting startedoauthapis",
+"keywords": "",
+"url": "pf_apis_about_old.html",
+"summary": "Weebly APIs are provided using REST over HTTPS. See the following sections for more general information about using our APIs."
+}
+,
+
+
+
+{
 "title": "Pages APIs",
 "tags": "apis",
 "keywords": "",
@@ -79,6 +68,50 @@
 "keywords": "",
 "url": "pf_apps_sample.html",
 "summary": "​This page contains downloadable sample application bundles. Feel free to download, inspect, and modify any of these applications. Each application comes in a working state, and can be downloaded and immediately uploaded into your developer account."
+}
+,
+
+
+
+{
+"title": "1. Design the Element",
+"tags": "getting startedelementsmanifestconfigurationdevelopment",
+"keywords": "",
+"url": "pf_element_1.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "2. Register the App",
+"tags": "getting startedelementsmanifestconfigurationdevelopment",
+"keywords": "",
+"url": "pf_element_2.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Tutorial&amp;#58; Create an Element",
+"tags": "getting startedelementsdevelopment",
+"keywords": "",
+"url": "pf_element_main.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Test an include",
+"tags": "getting startedrequirementselementsbackend servicessnippetsdashboard_cardsmanifestconfigurationdevelopmenttestingapp_revenuereviewsoauthapiswebhookstroubleshooting",
+"keywords": "",
+"url": "pf_test.html",
+"summary": ""
 }
 ,
 

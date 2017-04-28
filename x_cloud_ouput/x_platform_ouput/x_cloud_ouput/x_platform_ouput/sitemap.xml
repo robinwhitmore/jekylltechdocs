@@ -7,18 +7,6 @@
   
   
   
-  <url>
-    <loc>http://localhost:4006/element_1.html</loc>
-  </url>
-  
-  
-  
-  <url>
-    <loc>http://localhost:4006/element_2.html</loc>
-  </url>
-  
-  
-  
   
   
   <url>
@@ -42,6 +30,12 @@
   
   
   <url>
+    <loc>http://localhost:4006/pf_apis_about_old.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4006/pf_apis_page.html</loc>
   </url>
   
@@ -49,6 +43,30 @@
   
   <url>
     <loc>http://localhost:4006/pf_apps_sample.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4006/pf_element_1.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4006/pf_element_2.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4006/pf_element_main.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4006/pf_test.html</loc>
   </url>
   
   

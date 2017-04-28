@@ -30,6 +30,12 @@
   
   
   <url>
+    <loc>http://localhost:4006/pf_apis_about_old.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4006/pf_apis_page.html</loc>
   </url>
   
@@ -55,6 +61,12 @@
   
   <url>
     <loc>http://localhost:4006/pf_element_main.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4006/pf_test.html</loc>
   </url>
   
   
