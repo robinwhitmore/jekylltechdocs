@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+
+
+  
+  
+  
+  
+  
+  
+  <url>
+    <loc>http://localhost:4006/home.html</loc>
+  </url>
+  
+  
+  
+  
+  
+  <url>
+    <loc>http://localhost:4006/js/mydoc_scroll.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4006/pf_apis_about.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4006/pf_apis_page.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4006/pf_apps_sample.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4006/pf_element_1.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4006/pf_element_2.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4006/pf_element_main.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4006/pf_themes_design_gl.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4006/pf_themes_gs.html</loc>
+  </url>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</urlset>

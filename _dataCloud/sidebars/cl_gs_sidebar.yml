@@ -20,3 +20,7 @@ entries:
     - title: Configure Weebly Cloud
       url: /cl_gs_configure.html
       output: web
+
+    - title: Test Git
+      url: /cl_testGit.html
+      output: web
