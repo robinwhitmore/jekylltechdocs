@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Weebly APIs are provided using REST over HTTPS and utilize the HTTP verbs GET, POST, PUT, PATCH and DELETE. We provide a number of client libraries to help g...">
+<meta name="keywords" content="apisgetting started,  ">
+<title>About the Weebly Cloud REST APIs | Weebly Cloud Developer Documentation</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<link rel="stylesheet" href="css/lavish-bootstrap.css">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="fa fa-home fa-lg navbar-brand" href="home.html">&nbsp;<span class="projectTitle">
+                Weebly Cloud Developer Documentation</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                
+                
+                
+                <li><a href="home.html">Get Started</a></li>
+                
+                
+                
+                <li class="active"><a href="cl_apis_about.html">Cloud API</a></li>
+                
+                
+                
+                <li><a href="cl_apps_gs.html">Custom Apps</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+			<li>
+
+
+
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud Developer Docs feedback&body=I have some feedback about the About the Weebly Cloud REST APIs page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+
+</li>
+
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="Search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="About the Weebly Cloud REST APIs">{title}</a></li>',
+                    noResultsText: 'No results',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Sidebar Column -->
+        <div class="col-md-3">
+
+          
+
+
+<ul id="mysidebar" class="nav">
+    <li class="sidebarTitle">Weebly Cloud REST APIs </li>
+    
+    
+    
+    <li>
+        <a href="#">Use the REST APIs</a>
+        <ul>
+            
+            
+            
+            <li class="active"><a href="cl_apis_about.html">About the REST APIs</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="cl_apis_page.html">Page API</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+        <!-- if you aren't using the accordion, uncomment this block:
+           <p class="external">
+               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+           </p>
+           -->
+    </li>
+</ul>
+</div>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+    <!-- Content Column -->
+    <div class="col-md-9">
+        <div class="post-header">
+   <h1 class="post-title-main">About the Weebly Cloud REST APIs</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary">Weebly APIs are provided using REST over HTTPS and utilize the HTTP verbs GET, POST, PUT, PATCH and DELETE. We provide a number of client libraries to help get you started. See the following sections for more general information about using our APIs.</div>
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+
+    
+
+  
+<h2>Endpoint</h2>
+<p>The endpoint is: https://api.weeblycloud.com</p>
+
+<h2>Schema</h2>
+<p>All API access is over HTTPS, and accessed from the <code>api.weeblycloud.com</code> domain. All data is sent and received as JSON. Blank fields are included as null instead of being omitted. Dates and times are Unix Epoch timestamps.</p>
+
+<h3>List View</h3>
+<p>When retrieving a list of resources, a summary list view of each resource is returned. In some cases, this is akin to a compound primary key. In most root resource cases, like product, the list view contains enough information to make a workable list view in an application without making calls for each resource.</p>
+
+<h3>Detail View</h3>
+<p>When retrieving a single resource, you will receive a detailed view typically resulting in all the attributes of the resource. In addition, sub resources (like a product's skus) that are owned by this resource are inlined to the result. Other resources (like categories) which are associated but not owned by this resource provide the ids needed to look them up separately.</p>
+
+<h2>HTTP Redirects</h2>
+<p>We may issue redirects. Any call may result in a redirect, at which point you should make an identical call but to the newly provided resource URL.</p>
+
+<h2>HTTP Verbs</h2>
+<p>You can use the following&#58;
+    <ul>
+        <li><strong>GET</strong><br />
+​           Used for retrieving resources.</li>
+        <li><strong>POST</strong><br />
+​           Used for creating resources.</li>
+        <li><strong>PATCH</strong><br />
+​           Used for updating resources with partial JSON data.</li>
+        <li><strong>PUT</strong><br />
+​           Used for replacing resources or entire collections. Fields will be replaced with given values and any fields without given values will be reset to their default. Any fields without defaults, for example ID fields, will remain unchanged.</li>
+        <li><strong>DELETE</strong><br />
+​           Used for deleting resources.</li>
+    </ul>
+
+<h2>Search Parameters</h2>
+<p>Some endpoints allow you to use search parameters in order to filter your results. When using parameters, do not add that query string to your HMAC Hash.</p>
+
+<h2>Pagination</h2>
+<p>Pagination of certain resources in list view happens automatically. Information about the total number of resources, like the total count, are provided in headers.
+    <ul>
+        <li><code>X-Resultset-Total</code> shows the total number of records for the request.</li>
+        <li><code>X-Resultset-Page</code> shows the page for the call.</li>
+        <li><code>X-Resultset-Limit</code> shows the record limit for the page (i.e. each call). The default is <code>25</code>, the max is <code>200</code>).</li>
+    </ul>
+
+<p>If there are additional pages to be returned, a <code>Link</code> header will be included that has links to the first, previous, next and last pages.</p>
+
+<p>For example, a response from the Site API might return the following in the header, showing that there are a total of 44 records to be returned, this is the first page, and that 25 is the record limit&#58;</p>
+
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="s2">"http_code"</span><span class="err">:</span><span class="w"> </span><span class="mi">200</span><span class="err">,</span><span class="w">
+    </span><span class="s2">"result"</span><span class="err">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"headers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"HTTP\/1.1 200 OK"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Date: Sat, 25 Jun 2016 00:21:34 GMT"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Server: Apache"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"X-REPOSITORY: repos\/myrepos"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"X-Resultset-Total: 44"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"X-Resultset-Page: 1"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"X-Resultset-Limit: 25"</span><span class="p">,</span></code></pre></figure>
+
+
+<p>When you expect the result set to be greater than 25, use these parameters to determine the pages to return and to increase the limit&#58;
+    <ul>
+        <li><code>page</code> (int)<br />
+            Which page of results to return. Starts at <code>1</code>.</li>
+        <li><code>limit</code> (int)<br />
+            Number of results per page. Default <code>25</code>, Max <code>200</code>. Don't forget that raising the limit may affect performance.</li>
+    </ul>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Only the first 25 results are returned by default. If the result set is expected to be over 25, you <strong>must</strong> implement pagination.</div>
+
+
+<p>For example, this CURL request to the Site API returns the second page of result sets.</p>
+
+
+
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/USER_ID/site?page<span class="o">=</span>2&amp;limit<span class="o">=</span>25  <span class="se">\</span>
+ -H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+ -H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+
+
+
+
+## Signing and Authenticating Requests
+The API is validated using both a public key and a private HMAC Hash of the request contents. These values must be passed in the request header as X-Public-Key and X-Signed-Request-Hash. To get started making requests, you will need YOURAPIKEY and YOURAPISECRET which can be generated and obtained on the Settings tab in the Weebly Cloud Admin provided for your account.  YOURAPISECRET is a shared secret known only to you and Weebly Cloud. Do not share YOURAPISECRET.
+
+
+~~~ shell
+POST /hosts/user/39793399/site HTTP/1.1
+User-Agent: curl/7.30.0
+Host: api.weeblycloud.com
+Accept: */*
+Content-type: application/json
+X-Public-Key: YOURAPIKEY
+X-Signed-Request-Hash: YOURSECRETHASH
+~~~
+
+In the example above, `YOURAPIKEY` refers to your API Key. This API Key is used by our system to identify your account. `YOURSECRETHASH` refers to the base-64 encoded HMAC-SHA256 signature. The signature will need to be computed for each request.  You can generate `YOURSECRETHASH` using an HMAC-SHA256 hash of the request TYPE (Ex. POST), URL (ex. user/234256/loginLink) and any REQUEST DATA (ex. `{ 'plan_id': 34 }`) using `YOURAPISECRET` as the key, and base-64 encoding the result. Any requests that do not contain a valid signature will be rejected. Since `YOURAPISECRET`  is shared only by you and Weebly Cloud, we are able to validate your request by generating the same HMAC-SHA256 signature and match it against `YOURSECRETHASH`.
+
+~~~ php
+&lt;?php
+$base_api = "https://api.weeblycloud.com/";
+$api_key = YOURAPIKEY;
+$api_secret = YOURAPISECRET;
+
+$request_type = "POST";
+$url = "user/39793399/site";
+$data = array(
+    "domain" =&gt; "test-site.com"
+);
+
+$content = json_encode($data);
+$hash = hash_hmac('SHA256', $request_type . "\n" . $url . "\n" . $content, $api_secret);
+$hash = base64_encode($hash);
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $base_api.$url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $request_type);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $content);
+curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+	'Content-type: application/json',
+	'X-Public-Key: ' . $api_key,
+	'X-Signed-Request-Hash: ' . $hash
+));
+
+$out = curl_exec($ch);
+$info = curl_getinfo($ch);
+curl_close($ch);
+
+$result = json_decode($out);
+~~~
+
+Note the line below which generates the hash for this request.
+
+~~~
+$hash = hash_hmac('SHA256', $request_type . "\n" . $url . "\n" . $content, $api_secret);
+~~~
+
+## Errors
+
+When a call can't sucessfully complete, Weebly throws an error and returns in the JSON response.
+
+~~~ JSON
+{
+    "error": {
+        "code": 900,
+        "message": "brand_name field missing"
+    }
+}
+~~~
+
+
+Following are the error codes and descriptions&#58;
+<table>
+    <tr>
+        <td>​100</td>
+        <td>Invalid hash provided.<br />The hash does not match the request</td>
+     </tr>
+<tr>
+<td>101</td>
+        <td>Unknown API key provided.<br />Check the Admin portal to verify that your key still exists.</td>
+     </tr>
+<tr>
+<td>102</td>
+        <td>This Weebly account doesn't have API access.</td>
+     </tr>
+<tr>
+<td>200</td>
+        <td>This Weebly account doesn't have access to this user.</td>
+     </tr>
+<tr>
+<td>201</td>
+        <td>This Weebly account doesn't have access to this site.</td>
+     </tr>
+<tr>
+<td>300</td>
+        <td>Query cannot be routed.</td>
+     </tr>
+<tr>
+<td>​900</td>
+        <td>​Invalid request.</td>
+     </tr>
+<tr>
+<td>​999</td>
+        <td>​An unknown error occurred.</td>
+     </tr>
+<tr>
+<td>​-32001</td>
+        <td>​Invalid namespace or function name.</td>
+     </tr>
+<tr>
+<td>​-32002</td>
+        <td>​Class not found.</td>
+     </tr>
+<tr>
+<td>​32404</td>
+        <td>​Invalid request.</td>
+     </tr>
+<tr>
+<td>​32600</td>
+        <td>​Invalid request.</td>
+     </tr>
+<tr>
+<td>​32601</td>
+        <td>​Method not found.</td>
+     </tr>
+<tr>
+<td>32602</td>
+        <td>Invalid parameters - too few.</td>
+     </tr>
+</table>
+</p></p></p>
+
+
+    <div class="tags">
+        
+        <b>Tags: </b>
+        
+        
+        
+        <a href="tag_apis.html" class="btn btn-default navbar-btn cursorNorm" role="button">apis</a>
+        
+        
+        
+        <a href="tag_getting started.html" class="btn btn-default navbar-btn cursorNorm" role="button">getting started</a>
+        
+        
+        
+    </div>
+
+    
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2017 Weebly. All rights reserved. <br />
+ Site last generated: Apr 28, 2017 <br />
+<p><img src="images/company_logo.png" alt="Company logo"/></p>
+                </div>
+            </div>
+</footer>
+
+
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+
+</body>
+
+</html>

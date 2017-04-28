@@ -30,6 +30,7 @@ exclude:
   - pages/platform
   - x_cloud_output/
   - x_platform_output/
+  - x_platform_ouput/
 # these are the files and directories that jekyll will exclude from the build
 
 feedback_subject_line: Weebly Cloud Developer Docs
