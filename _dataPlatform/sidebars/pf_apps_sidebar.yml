@@ -16,6 +16,11 @@ entries:
       output: web
       type: homepage
 
+    - title: Test Git
+      url: /pf_testGit.html
+      output: web
+
+
     - title: Create a Developer Account
       url: /pf_apps_devAccount.html
       output: web

@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="​This page contains downloadable sample application bundles. Feel free to download, inspect, and modify any of these applications. Each application comes in ...">
+<meta name="keywords" content="getting startedelementsbackend services,  ">
+<title>Sample Applications | Weebly Developer Documentation</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<link rel="stylesheet" href="css/lavish-bootstrap.css">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4006feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="fa fa-home fa-lg navbar-brand" href="home.html">&nbsp;<span class="projectTitle">
+                Weebly Developer Documentation</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                
+                
+                
+                <li><a href="home.html">Develop Apps</a></li>
+                
+                
+                
+                <li><a href="pf_themes_gs.html">Develop Themes</a></li>
+                
+                
+                
+                <li><a href="pf_apis_about.html">APIs</a></li>
+                
+                
+                
+                <li><a href="pf_element_main.html">Tutorials</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+			<li>
+
+
+
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&body=I have some feedback about the Sample Applications page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+
+</li>
+
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="Search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Sample Applications">{title}</a></li>',
+                    noResultsText: 'No results',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Sidebar Column -->
+        <div class="col-md-3">
+
+          
+
+
+<ul id="mysidebar" class="nav">
+    <li class="sidebarTitle">Weebly Platform </li>
+    
+    
+    
+    <li>
+        <a href="#">Get Started</a>
+        <ul>
+            
+            
+            
+            <li><a href="home.html">Get Started with Developing Apps</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="pf_apps_devAccount.html">Create a Developer Account</a></li>
+            
+            
+            
+            
+            
+            
+            <li class="active"><a href="pf_apps_sample.html">Sample Applications</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="pf_apps_UI.html">Working in the Weebly UI</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="pf_apps_policy_requirements.html">App Policy Requirements</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="pf_apps_email_addresses.html">Why Different Email Addresses?</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="pf_apps_legal.html">Legal Agreements</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Develop an App</a>
+        <ul>
+            
+            
+            
+            <li><a href="pf_apps_develop.html">Develop an App</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="pf_apps_register.html">Register Your App</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="pf_apps_manage.html">Manage Your App</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Get Your App Ready to Publish</a>
+        <ul>
+            
+            
+            
+            <li><a href="pf_apps_listing.html">Create Your App Center Listing</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="pf_apps_demo.html">Create a Demo Site for Your App</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Maintain Your App Post Publication</a>
+        <ul>
+            
+            
+            
+            <li><a href="pf_apps_featured.html">How to Get Your App Featured</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="pf_apps_promote.html">Promote Your App</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">App Installation Flow and Authentication</a>
+        <ul>
+            
+            
+            
+            <li><a href="pf_apps_authorize_and_install.html">App Authorization and Install Flow</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="pf_apps_authenticate.html">Authenticate a User from Weebly</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Create a Backend Service</a>
+        <ul>
+            
+            
+            
+            <li><a href="pf_apps_backend.html">Create a Backend Service</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Create an Element</a>
+        <ul>
+            
+            
+            
+            <li><a href="pf_apps_elements.html">What are Elements</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="pf_apps_element_design_guidelines.html">Element Design Guidelines</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Create a Dashboard Card</a>
+        <ul>
+            
+            
+            
+            <li><a href="pf_apps_dashboard_cards.html">What are Dashboard Cards</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="pf_apps_dashboard_cards_text.html">Text Component</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Troubleshooting</a>
+        <ul>
+            
+            
+            
+            <li><a href="pf_apps_troubleshooting.html">Troubleshooting</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Topic Updates</a>
+        <ul>
+            
+            
+            
+            <li><a href="pf_apps_doc_updates.html">Topic Updates</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+        <!-- if you aren't using the accordion, uncomment this block:
+           <p class="external">
+               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+           </p>
+           -->
+    </li>
+</ul>
+</div>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+    <!-- Content Column -->
+    <div class="col-md-9">
+        <div class="post-header">
+   <h1 class="post-title-main">Sample Applications</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary">​This page contains downloadable sample application bundles. Feel free to download, inspect, and modify any of these applications. Each application comes in a working state, and can be downloaded and immediately uploaded into your developer account.</div>
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+
+    
+
+  <h2> Bootstrap Element</h2>
+<p> ​A barebones bootstrap element that will get you up and running in the blink of an eye. There is no real functionality in this element, and it is best used as a starting point for beginners. Download it from Github here.</p>
+
+<h2>Pricing Chart Element</h2>
+
+<p>A more functional example of an element. This element displays a given number of price plans, each with a given number of features. This example makes use of settings, content fields, Mustache loops, and LESS CSS. It also contains tooltips and a built-in tutorial. Use it in conjunction with our element tutorial! <br />
+Download it from Github <a href="https://github.com/Weebly/price-chart-app">here</a>.</p>
+<figure><img class="docimage" src="images/sh_priceChart.png" alt="" /><figcaption>Weebly Price Chart</figcaption></figure>
+
+<h2>Full Open Source Element Samples on GitHub</h2>
+
+<p>Elements created by Weebly and available in the App Center are also available in their source code at Github.
+    <ul>
+        <li><a href="https://github.com/Weebly/simple-table-app">simple-table-app</a></li>
+        <li><a href="https://github.com/Weebly/accordion-app">accordion-app</a> </li>
+        <li><a href="https://github.com/Weebly/faq-app">faq-app</a> </li>
+        <li><a href="https://github.com/Weebly/counter-app">counter-app</a></li>
+        <li><a href="https://github.com/Weebly/team-cards-app">team-cards-app</a></li>
+        <li><a href="https://github.com/Weebly/call-out-box-app">call-out-box-app</a></li>
+        <li><a href="https://github.com/Weebly/price-chart-app">price-chart-app</a> </li>
+        <li><a href="https://github.com/Weebly/code-block-app">code-block-app</a></li>
+        <li><a href="https://github.com/Weebly/tabs-app">tabs-app</a></li>
+    </ul>
+</p>
+
+<h2>Back-end App Examples</h2>
+<p>This example app uses OAuth to subscribe to webhooks and then logs the webhook notification. There are two versions of the example - one is PHP and the other is NodeJS. Both live in a Git repository that you can clone and run on Heroku.
+    <ul>
+        <li><a href="https://github.com/Weebly/php-webhook-client">PHP</a>: This version contains the server-side code for the application. It can be deployed to a Heroku server or your own server. The <code>application.php</code> file contains the methods for handling OAuth, parsing parameters from a request URL, processing the webhooks payload, and outputting messages from the webhooks to the messages.txt file (found in the <code>messages</code> directory). The <code>index.php</code> file accesses the client ID and secret from environment variables. In the <code>lib/Util/Weebly</code> directory, the <code>WeeblyClient.php</code> file builds and returns the URLs needed for OAuth and for making authenticated API calls. It haslo handles trading the authorization code for the access token. Other files in the <code>lib/Util</code> directory verify the HMAC hash and write log messages. All other files are needed by Heroku or other servers, for example to access third-party libs.</li>
+
+        <li><a href="https://github.com/Weebly/node-webhook-client">NodeJS</a>: This is the NodeJS version of the server side code. It can also be deployed to Heroku. In the apps directory, <code>oauth.js</code> handles the OAuth flow and outputs messages to the <code>/messages/messages.txt</code>. The <code>webhooks-router.jsfile</code> manages the webhooks file and also outputs messages. The <code>utility.js</code> file handles hmac validation and generation. The <code>/middleware/weebly.js</code> file accesses the client ID and secret from environment variables or you can hardcode them in the <code>server.js</code> file. The rest of the files are needed by Heroku or other servers, for example to access third-party libs.</li>
+</ul>
+
+<p>
+    Download and review the code to better understand how to work with our OAuth implementation and how to work with webhooks. You can also use the examples as a starting point for your own app.</p>
+
+<p class="proc">To use the sample apps:
+    <ol>
+        <li>If not already done, create a developer account and register this sample app. You'll need the client ID and secret key that gets generated when registering an app in order to use this sample. </li>
+        <li>If using Heroku install the <a href="https://devcenter.heroku.com/articles/heroku-command">Heruko command line interface</a>.</li>
+        <li>Clone the Github repo that contains the Weebly example code (or download the zip).</li>
+        <li>Open the <code>manifest.json</code> file and for the <code>callback_url</code> entries, replace <code>ROOT_URL</code> with a URL that points to your server. For <code>client_id</code>, replace <code>CLIENT_ID</code> with your client ID (which is found on your app's page in the Dev Admin portal). </li>
+        <li>If using Heroku, run the following to set your app's client ID and app's secret key as environment variables. If you're not using Heroku, then set these as variables in your environment, or add them to the code.
+
+        <div class="highlighter-rouge"><pre class="highlight"><code>
+            heroku create
+            heroku config:set WEEBLY_CLIENT_ID=[your_apps_client_id]
+            heroku config:set WEEBLY_SECRET_KEY=[your_apps_secret_key]
+            git push heroku master
+            heroku ps:scale web=1
+        </code></pre></div>
+    </li>
+</ol>
+        Both the node and php servers use OAuth to authenticate. In both, the access token in written to the console. You'll need the token to access the API. If using Heroku, you can access the logs using <code>heroku-logs --tail</code>.
+        <br />
+        If you want to run the app from a Weebly site:
+        <ul>
+            <li>Create a zip file that contains only the <code>manifest.json</code> file.</li>
+            <li>Upload the zip to Weebly.</li>
+            <li>Install the uploaded zip to a test site. When you install it, the OAuth process is kicked off.</li>
+        </ul>
+</p>
+
+
+</p>
+
+
+    <div class="tags">
+        
+        <b>Tags: </b>
+        
+        
+        
+        <a href="tag_getting started.html" class="btn btn-default navbar-btn cursorNorm" role="button">getting started</a>
+        
+        
+        
+        <a href="tag_elements.html" class="btn btn-default navbar-btn cursorNorm" role="button">elements</a>
+        
+        
+        
+        <a href="tag_backend services.html" class="btn btn-default navbar-btn cursorNorm" role="button">backend services</a>
+        
+        
+        
+    </div>
+
+    
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2017 Weebly. All rights reserved. <br />
+ Site last generated: Apr 27, 2017 <br />
+<p><img src="images/company_logo.png" alt="Company logo"/></p>
+                </div>
+            </div>
+</footer>
+
+
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+
+</body>
+
+</html>
