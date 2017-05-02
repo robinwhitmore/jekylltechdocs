@@ -21,6 +21,6 @@ entries:
       url: /cl_gs_configure.html
       output: web
 
-    - title: Test Git
-      url: /cl_testGit.html
+    - title: Glossary
+      url: /cl_glossary.html
       output: web

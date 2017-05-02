@@ -144,3 +144,11 @@ entries:
     - title: Topic Updates
       url: /pf_apps_doc_updates.html
       output: web
+
+  - title: Glossary
+    output: web
+    folderitems:
+
+    - title: Glossary
+      url: /pf_glossary.html
+      output: web

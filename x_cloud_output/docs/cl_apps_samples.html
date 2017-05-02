@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="This page contains downloadable sample application bundles. Feel free to download, inspect, and modify any of these applications. Each application comes in a...">
 <meta name="keywords" content="getting startedcustom apps,  ">
-<title>Sample Applications | Weebly Developer Documentation</title>
+<title>Sample Applications | Weebly Cloud Developer Documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -15,6 +15,11 @@
 <link rel="stylesheet" href="css/lavish-bootstrap.css">
 <link rel="stylesheet" href="css/customstyles.css">
 <link rel="stylesheet" href="css/theme-blue.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
@@ -37,6 +42,18 @@
 
 <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
 
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        /*Bootstrap popovers are initialized with the following script. In the options, I'm setting the placement to be on the right, the trigger to be hover rather than click, and to allow HTML from the JSON data source. */
+
+        $('[data-toggle="popover"]').popover({
+            placement: 'top',
+            trigger: 'hover',
+            html: true
+        });
+    })
+</script>
     <script>
         $(document).ready(function() {
             // Initialize navgoco with default options
@@ -90,7 +107,7 @@
             </button>
 
             <a class="fa fa-home fa-lg navbar-brand" href="home.html">&nbsp;<span class="projectTitle">
-                Weebly Developer Documentation</span></a>
+                Weebly Cloud Developer Documentation</span></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
@@ -98,19 +115,15 @@
                 
                 
                 
-                <li><a href="home.html">Develop Apps</a></li>
+                <li><a href="home.html">Get Started</a></li>
                 
                 
                 
-                <li><a href="pf_themes_gs.html">Develop Themes</a></li>
+                <li><a href="cl_apis_about.html">Cloud API</a></li>
                 
                 
                 
-                <li><a href="pf_apis_about.html">APIs</a></li>
-                
-                
-                
-                <li><a href="pf_element_main.html">Tutorials</a></li>
+                <li><a href="cl_apps_gs.html">Custom Apps</a></li>
                 
                 
                 
@@ -122,7 +135,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&body=I have some feedback about the Sample Applications page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud Developer Docs feedback&body=I have some feedback about the Sample Applications page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -166,8 +179,61 @@
 
 
 <ul id="mysidebar" class="nav">
-    <li class="sidebarTitle"> </li>
+    <li class="sidebarTitle">Develop Weebly Apps </li>
     
+    
+    
+    <li>
+        <a href="#">Get Started with Apps</a>
+        <ul>
+            
+            
+            
+            <li><a href="cl_apps_gs.html">Get Started with Developing Apps</a></li>
+            
+            
+            
+            
+            
+            
+            <li class="active"><a href="cl_apps_samples.html">Sample Applications</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Tutorial&#58; Create an Element</a>
+        <ul>
+            
+            
+            
+            <li><a href="cl_element_main.html">Create an Element</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="cl_element_1.html">1. Design the Element</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="cl_element_2.html">2. Register the Element</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
         <!-- if you aren't using the accordion, uncomment this block:
            <p class="external">
                <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
@@ -247,46 +313,6 @@ Download it from Github <a href="https://github.com/Weebly/price-chart-app">here
     </ul>
 </p>
 
-<h2>Back-end App Examples</h2>
-<p>This example app uses OAuth to subscribe to webhooks and then logs the webhook notification. There are two versions of the example - one is PHP and the other is NodeJS. Both live in a Git repository that you can clone and run on Heroku.
-    <ul>
-        <li><a href="https://github.com/Weebly/php-webhook-client">PHP</a>: This version contains the server-side code for the application. It can be deployed to a Heroku server or your own server. The <code>application.php</code> file contains the methods for handling OAuth, parsing parameters from a request URL, processing the webhooks payload, and outputting messages from the webhooks to the messages.txt file (found in the <code>messages</code> directory). The <code>index.php</code> file accesses the client ID and secret from environment variables. In the <code>lib/Util/Weebly</code> directory, the <code>WeeblyClient.php</code> file builds and returns the URLs needed for OAuth and for making authenticated API calls. It haslo handles trading the authorization code for the access token. Other files in the <code>lib/Util</code> directory verify the HMAC hash and write log messages. All other files are needed by Heroku or other servers, for example to access third-party libs.</li>
-
-        <li><a href="https://github.com/Weebly/node-webhook-client">NodeJS</a>: This is the NodeJS version of the server side code. It can also be deployed to Heroku. In the apps directory, <code>oauth.js</code> handles the OAuth flow and outputs messages to the <code>/messages/messages.txt</code>. The <code>webhooks-router.jsfile</code> manages the webhooks file and also outputs messages. The <code>utility.js</code> file handles hmac validation and generation. The <code>/middleware/weebly.js</code> file accesses the client ID and secret from environment variables or you can hardcode them in the <code>server.js</code> file. The rest of the files are needed by Heroku or other servers, for example to access third-party libs.</li>
-</ul>
-
-<p>
-    Download and review the code to better understand how to work with our OAuth implementation and how to work with webhooks. You can also use the examples as a starting point for your own app.</p>
-
-<p class="proc">To use the sample apps:
-    <ol>
-        <li>If not already done, create a developer account and register this sample app. You'll need the client ID and secret key that gets generated when registering an app in order to use this sample. </li>
-        <li>If using Heroku install the <a href="https://devcenter.heroku.com/articles/heroku-command">Heruko command line interface</a>.</li>
-        <li>Clone the Github repo that contains the Weebly example code (or download the zip).</li>
-        <li>Open the <code>manifest.json</code> file and for the <code>callback_url</code> entries, replace <code>ROOT_URL</code> with a URL that points to your server. For <code>client_id</code>, replace <code>CLIENT_ID</code> with your client ID (which is found on your app's page in the Dev Admin portal). </li>
-        <li>If using Heroku, run the following to set your app's client ID and app's secret key as environment variables. If you're not using Heroku, then set these as variables in your environment, or add them to the code.
-
-        <div class="highlighter-rouge"><pre class="highlight"><code>
-            heroku create
-            heroku config:set WEEBLY_CLIENT_ID=[your_apps_client_id]
-            heroku config:set WEEBLY_SECRET_KEY=[your_apps_secret_key]
-            git push heroku master
-            heroku ps:scale web=1
-        </code></pre></div>
-    </li>
-</ol>
-        Both the node and php servers use OAuth to authenticate. In both, the access token in written to the console. You'll need the token to access the API. If using Heroku, you can access the logs using <code>heroku-logs --tail</code>.
-        <br />
-        If you want to run the app from a Weebly site:
-        <ul>
-            <li>Create a zip file that contains only the <code>manifest.json</code> file.</li>
-            <li>Upload the zip to Weebly.</li>
-            <li>Install the uploaded zip to a test site. When you install it, the OAuth process is kicked off.</li>
-        </ul>
-</p>
-
-
-</p>
 
 
     <div class="tags">
@@ -298,6 +324,8 @@ Download it from Github <a href="https://github.com/Weebly/price-chart-app">here
         <a href="tag_getting started.html" class="btn btn-default navbar-btn cursorNorm" role="button">getting started</a>
         
         
+        
+        <a href="tag_custom apps.html" class="btn btn-default navbar-btn cursorNorm" role="button">custom apps</a>
         
         
         
@@ -313,7 +341,7 @@ Download it from Github <a href="https://github.com/Weebly/price-chart-app">here
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 Weebly. All rights reserved. <br />
- Site last generated: Apr 28, 2017 <br />
+ Site last generated: May 1, 2017 <br />
 <p><img src="images/company_logo.png" alt="Company logo"/></p>
                 </div>
             </div>

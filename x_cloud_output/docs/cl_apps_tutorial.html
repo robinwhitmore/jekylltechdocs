@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="In this tutorial, you’ll learn how to recreate the Weebly Price Chart sample element, package it up and test it. This element displays a given number of pric...">
 <meta name="keywords" content="getting startedcustom apps,  ">
-<title>TUTORIAL Create a Weebly Element | Weebly Developer Documentation</title>
+<title>TUTORIAL Create a Weebly Element | Weebly Cloud Developer Documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -15,6 +15,11 @@
 <link rel="stylesheet" href="css/lavish-bootstrap.css">
 <link rel="stylesheet" href="css/customstyles.css">
 <link rel="stylesheet" href="css/theme-blue.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
@@ -37,6 +42,18 @@
 
 <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
 
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        /*Bootstrap popovers are initialized with the following script. In the options, I'm setting the placement to be on the right, the trigger to be hover rather than click, and to allow HTML from the JSON data source. */
+
+        $('[data-toggle="popover"]').popover({
+            placement: 'top',
+            trigger: 'hover',
+            html: true
+        });
+    })
+</script>
     <script>
         $(document).ready(function() {
             // Initialize navgoco with default options
@@ -90,7 +107,7 @@
             </button>
 
             <a class="fa fa-home fa-lg navbar-brand" href="home.html">&nbsp;<span class="projectTitle">
-                Weebly Developer Documentation</span></a>
+                Weebly Cloud Developer Documentation</span></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
@@ -98,19 +115,15 @@
                 
                 
                 
-                <li><a href="home.html">Develop Apps</a></li>
+                <li><a href="home.html">Get Started</a></li>
                 
                 
                 
-                <li><a href="pf_themes_gs.html">Develop Themes</a></li>
+                <li><a href="cl_apis_about.html">Cloud API</a></li>
                 
                 
                 
-                <li><a href="pf_apis_about.html">APIs</a></li>
-                
-                
-                
-                <li><a href="pf_element_main.html">Tutorials</a></li>
+                <li><a href="cl_apps_gs.html">Custom Apps</a></li>
                 
                 
                 
@@ -122,7 +135,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&body=I have some feedback about the TUTORIAL Create a Weebly Element page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud Developer Docs feedback&body=I have some feedback about the TUTORIAL Create a Weebly Element page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -166,8 +179,61 @@
 
 
 <ul id="mysidebar" class="nav">
-    <li class="sidebarTitle"> </li>
+    <li class="sidebarTitle">Develop Weebly Apps </li>
     
+    
+    
+    <li>
+        <a href="#">Get Started with Apps</a>
+        <ul>
+            
+            
+            
+            <li><a href="cl_apps_gs.html">Get Started with Developing Apps</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="cl_apps_samples.html">Sample Applications</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Tutorial&#58; Create an Element</a>
+        <ul>
+            
+            
+            
+            <li><a href="cl_element_main.html">Create an Element</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="cl_element_1.html">1. Design the Element</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="cl_element_2.html">2. Register the Element</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
         <!-- if you aren't using the accordion, uncomment this block:
            <p class="external">
                <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
@@ -235,6 +301,8 @@ $('#toc').on('click', 'a', function() {
         
         
         
+        <a href="tag_custom apps.html" class="btn btn-default navbar-btn cursorNorm" role="button">custom apps</a>
+        
         
         
     </div>
@@ -249,7 +317,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 Weebly. All rights reserved. <br />
- Site last generated: Apr 28, 2017 <br />
+ Site last generated: May 1, 2017 <br />
 <p><img src="images/company_logo.png" alt="Company logo"/></p>
                 </div>
             </div>

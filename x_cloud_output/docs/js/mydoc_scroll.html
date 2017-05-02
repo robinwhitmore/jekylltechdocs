@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="This page demonstrates how you the integration of a script called ScrollTo, which is used here to link definitions of a JSON code sample to a list of definit...">
 <meta name="keywords" content="special_layouts,  json, scrolling, scrollto, jquery plugin">
-<title>Scroll layout | Weebly Developer Documentation</title>
+<title>Scroll layout | Weebly Cloud Developer Documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -15,6 +15,11 @@
 <link rel="stylesheet" href="css/lavish-bootstrap.css">
 <link rel="stylesheet" href="css/customstyles.css">
 <link rel="stylesheet" href="css/theme-blue.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
@@ -37,6 +42,18 @@
 
 <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
 
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        /*Bootstrap popovers are initialized with the following script. In the options, I'm setting the placement to be on the right, the trigger to be hover rather than click, and to allow HTML from the JSON data source. */
+
+        $('[data-toggle="popover"]').popover({
+            placement: 'top',
+            trigger: 'hover',
+            html: true
+        });
+    })
+</script>
     <script>
         $(document).ready(function() {
             // Initialize navgoco with default options
@@ -90,7 +107,7 @@
             </button>
 
             <a class="fa fa-home fa-lg navbar-brand" href="home.html">&nbsp;<span class="projectTitle">
-                Weebly Developer Documentation</span></a>
+                Weebly Cloud Developer Documentation</span></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
@@ -98,19 +115,15 @@
                 
                 
                 
-                <li><a href="home.html">Develop Apps</a></li>
+                <li><a href="home.html">Get Started</a></li>
                 
                 
                 
-                <li><a href="pf_themes_gs.html">Develop Themes</a></li>
+                <li><a href="cl_apis_about.html">Cloud API</a></li>
                 
                 
                 
-                <li><a href="pf_apis_about.html">APIs</a></li>
-                
-                
-                
-                <li><a href="pf_element_main.html">Tutorials</a></li>
+                <li><a href="cl_apps_gs.html">Custom Apps</a></li>
                 
                 
                 
@@ -122,7 +135,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&body=I have some feedback about the Scroll layout page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud Developer Docs feedback&body=I have some feedback about the Scroll layout page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -166,7 +179,7 @@
 
 
 <ul id="mysidebar" class="nav">
-    <li class="sidebarTitle">Weebly Platform </li>
+    <li class="sidebarTitle">Weebly Cloud </li>
     
     
     
@@ -176,233 +189,21 @@
             
             
             
-            <li><a href="home.html">Get Started with Developing Apps</a></li>
+            <li><a href="home.html">Get Started with Weebly Cloud</a></li>
             
             
             
             
             
             
-            <li><a href="pf_apps_devAccount.html">Create a Developer Account</a></li>
+            <li><a href="cl_gs_configure.html">Configure Weebly Cloud</a></li>
             
             
             
             
             
             
-            <li><a href="pf_apps_sample.html">Sample Applications</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="pf_apps_UI.html">Working in the Weebly UI</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="pf_apps_policy_requirements.html">App Policy Requirements</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="pf_apps_email_addresses.html">Why Different Email Addresses?</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="pf_apps_legal.html">Legal Agreements</a></li>
-            
-            
-            
-            
-        </ul>
-        
-        
-    
-    <li>
-        <a href="#">Develop an App</a>
-        <ul>
-            
-            
-            
-            <li><a href="pf_apps_develop.html">Develop an App</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="pf_apps_register.html">Register Your App</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="pf_apps_manage.html">Manage Your App</a></li>
-            
-            
-            
-            
-        </ul>
-        
-        
-    
-    <li>
-        <a href="#">Get Your App Ready to Publish</a>
-        <ul>
-            
-            
-            
-            <li><a href="pf_apps_listing.html">Create Your App Center Listing</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="pf_apps_demo.html">Create a Demo Site for Your App</a></li>
-            
-            
-            
-            
-        </ul>
-        
-        
-    
-    <li>
-        <a href="#">Maintain Your App Post Publication</a>
-        <ul>
-            
-            
-            
-            <li><a href="pf_apps_featured.html">How to Get Your App Featured</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="pf_apps_promote.html">Promote Your App</a></li>
-            
-            
-            
-            
-        </ul>
-        
-        
-    
-    <li>
-        <a href="#">App Installation Flow and Authentication</a>
-        <ul>
-            
-            
-            
-            <li><a href="pf_apps_authorize_and_install.html">App Authorization and Install Flow</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="pf_apps_authenticate.html">Authenticate a User from Weebly</a></li>
-            
-            
-            
-            
-        </ul>
-        
-        
-    
-    <li>
-        <a href="#">Create a Backend Service</a>
-        <ul>
-            
-            
-            
-            <li><a href="pf_apps_backend.html">Create a Backend Service</a></li>
-            
-            
-            
-            
-        </ul>
-        
-        
-    
-    <li>
-        <a href="#">Create an Element</a>
-        <ul>
-            
-            
-            
-            <li><a href="pf_apps_elements.html">What are Elements</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="pf_apps_element_design_guidelines.html">Element Design Guidelines</a></li>
-            
-            
-            
-            
-        </ul>
-        
-        
-    
-    <li>
-        <a href="#">Create a Dashboard Card</a>
-        <ul>
-            
-            
-            
-            <li><a href="pf_apps_dashboard_cards.html">What are Dashboard Cards</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="pf_apps_dashboard_cards_text.html">Text Component</a></li>
-            
-            
-            
-            
-        </ul>
-        
-        
-    
-    <li>
-        <a href="#">Troubleshooting</a>
-        <ul>
-            
-            
-            
-            <li><a href="pf_apps_troubleshooting.html">Troubleshooting</a></li>
-            
-            
-            
-            
-        </ul>
-        
-        
-    
-    <li>
-        <a href="#">Topic Updates</a>
-        <ul>
-            
-            
-            
-            <li><a href="pf_apps_doc_updates.html">Topic Updates</a></li>
+            <li><a href="cl_glossary.html">Glossary</a></li>
             
             
             
@@ -716,7 +517,7 @@ $('#small-box-links').localScroll({
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 Weebly. All rights reserved. <br />
-<span>Page last updated:</span> November 30, 2015<br/> Site last generated: Apr 28, 2017 <br />
+<span>Page last updated:</span> November 30, 2015<br/> Site last generated: May 1, 2017 <br />
 <p><img src="images/company_logo.png" alt="Company logo"/></p>
                 </div>
             </div>

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Weebly APIs are provided using REST over HTTPS and utilize the HTTP verbs GET, POST, PUT, PATCH and DELETE. We provide a number of client libraries to help g...">
 <meta name="keywords" content="apisgetting started,  ">
-<title>About the Weebly Cloud REST APIs | Weebly Developer Documentation</title>
+<title>About the Weebly Cloud REST APIs | Weebly Cloud Developer Documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -15,6 +15,11 @@
 <link rel="stylesheet" href="css/lavish-bootstrap.css">
 <link rel="stylesheet" href="css/customstyles.css">
 <link rel="stylesheet" href="css/theme-blue.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
@@ -37,6 +42,18 @@
 
 <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
 
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        /*Bootstrap popovers are initialized with the following script. In the options, I'm setting the placement to be on the right, the trigger to be hover rather than click, and to allow HTML from the JSON data source. */
+
+        $('[data-toggle="popover"]').popover({
+            placement: 'top',
+            trigger: 'hover',
+            html: true
+        });
+    })
+</script>
     <script>
         $(document).ready(function() {
             // Initialize navgoco with default options
@@ -90,7 +107,7 @@
             </button>
 
             <a class="fa fa-home fa-lg navbar-brand" href="home.html">&nbsp;<span class="projectTitle">
-                Weebly Developer Documentation</span></a>
+                Weebly Cloud Developer Documentation</span></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
@@ -98,19 +115,15 @@
                 
                 
                 
-                <li><a href="home.html">Develop Apps</a></li>
+                <li><a href="home.html">Get Started</a></li>
                 
                 
                 
-                <li><a href="pf_themes_gs.html">Develop Themes</a></li>
+                <li class="active"><a href="cl_apis_about.html">Cloud API</a></li>
                 
                 
                 
-                <li><a href="pf_apis_about.html">APIs</a></li>
-                
-                
-                
-                <li><a href="pf_element_main.html">Tutorials</a></li>
+                <li><a href="cl_apps_gs.html">Custom Apps</a></li>
                 
                 
                 
@@ -122,7 +135,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&body=I have some feedback about the About the Weebly Cloud REST APIs page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud Developer Docs feedback&body=I have some feedback about the About the Weebly Cloud REST APIs page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -166,8 +179,32 @@
 
 
 <ul id="mysidebar" class="nav">
-    <li class="sidebarTitle"> </li>
+    <li class="sidebarTitle">Weebly Cloud REST APIs </li>
     
+    
+    
+    <li>
+        <a href="#">Use the REST APIs</a>
+        <ul>
+            
+            
+            
+            <li class="active"><a href="cl_apis_about.html">About the REST APIs</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="cl_apis_page.html">Page API</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
         <!-- if you aren't using the accordion, uncomment this block:
            <p class="external">
                <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
@@ -225,11 +262,6 @@ $('#toc').on('click', 'a', function() {
   
 <h2>Endpoint</h2>
 <p>The endpoint is: https://api.weeblycloud.com</p>
-
-<h2>Versions</h2>
-<p>We encourage you to explicitly request this version via the Accept header.</p>
-
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">Accept application/vnd.weebly.v1+json</code></pre></figure>
 
 <h2>Schema</h2>
 <p>All API access is over HTTPS, and accessed from the <code>api.weeblycloud.com</code> domain. All data is sent and received as JSON. Blank fields are included as null instead of being omitted. Dates and times are Unix Epoch timestamps.</p>
@@ -301,11 +333,10 @@ $('#toc').on('click', 'a', function() {
 
 
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl --request GET <span class="se">\</span>
-  --url  https://api.weebly.com/v1/user/sites/<span class="o">{</span>SITE_ID/pages?page<span class="o">=</span>2&amp;limit<span class="o">=</span>25 <span class="se">\</span>
-  --header <span class="s1">'accept: application/vnd.weebly.v1+json'</span> <span class="se">\</span>
-  --header <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
-  --header <span class="s1">'x-weebly-access-token: [YOUR_TOKEN]'</span>  <span class="se">\</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/USER_ID/site?page<span class="o">=</span>2&amp;limit<span class="o">=</span>25  <span class="se">\</span>
+ -H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+ -H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
 
 
 
@@ -468,7 +499,7 @@ Following are the error codes and descriptions&#58;
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 Weebly. All rights reserved. <br />
- Site last generated: Apr 28, 2017 <br />
+ Site last generated: May 1, 2017 <br />
 <p><img src="images/company_logo.png" alt="Company logo"/></p>
                 </div>
             </div>

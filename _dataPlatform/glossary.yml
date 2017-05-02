@@ -1,11 +1,55 @@
-jekyll_platform: "Jekyll is a static site generator that builds sites using most modern web technologies."
+App_Center: The one-stop shop where you'll market your app, accessed from the site editor, located at [http://weebly.com/app-center](http://weebly.com/app-center). We'll feature apps in that sidebar as well - users will be able to click on those featured apps and install without having to *browse* through the App Center. Apps that adhere to our policy requirements, have consistently good reviews, and are easy to install and maintain have a great shot at being featured!
 
-fractious: "Like a little mischevious child, full of annoying and constant trouble."
+app: Apps are containers for various things that are installable and merchandized in the Weebly App Center. They are ZIP files that contain, along with all the code, a manifest file that contains configuration metadata for your app, and assets used to display and market your app in the App Center.
 
-gratuitous: "Something that is unwarranted and uncouth, like the social equivalent of a flagrant foul."
+app_icon: A PNG file used to display an app in the App Center. Contrast element icon.
 
-haughty: "Proud and flaunting it. Holding your head high up like a snooty, too-good-for-everything rich person."
+backend_service: An app that directly integrates into the Weebly API. It may or may not have an associated element used to add it to a web page. If it doesn't, it might then use a snippet to install itself into a site.
 
-impertinent: "Someone acting rude and insensitive to others."
+Cloud_Admin: The site used to manage your users, site owners and their accounts, as well as apps and billing. You access Cloud Admin at weeblycloud.com/admin
 
-intrepid: "Brave and courageous especially in a difficult, dangerous situation."
+Code_Editor: Page used to edit the HTML and CSS that makes up a Weebly theme. Accessed by clicking Design > Edit HTML/CSS. Also known as the Theme Editor.
+
+color_variations: The different color combinations provided by a single theme.
+
+dashboard_cards: Cards that display on the Site Home page that provide information about an an app and are specific to the site. You can create a dashboard card as part of an app.
+
+dap: The site you'll use to upload and manage your app, including how it displays in the App Center. You access the portal by clicking Admin Login at dev.weebly.com.
+
+element: Elements are the widgets users drag from the editor sidebar onto a page to declaratively build their site. An app might contain one or more elements.
+
+element_icon: An SVG file used to display an element in the element tray. Contrast app icon.
+
+element_tray: The sidebar of the Page Editor that holds the elements that you drag and drop onto your web page.
+
+header_layout_type: Determines the composition of these different areas in an HTML template':' menu/navigation, header/banner, body/content, and footer. For example, most Weebly themes have a template for a tall header layout and a short header layout.
+
+HTML_template: HTML file used by elements and themes to provide the layout. HTML templates use the Mustache template language. A template provides a specific header layout for a page.
+
+OAuth: An open standard for authorization that provides secure, dedicated access to a resource’s service on behalf of its owner. This allows us to provide your app, and any management pages on your site, with access to the Weebly API and user’s site data.
+
+options: In a theme, additional functionality that a user may elect to use or not use. Examples include displaying social icons or a phone number in the header.
+
+page_editor: Page where you can edit your site's web pages. Developers use this to test their apps in their test site. Accessed from the Site Home page by clicking Build.
+
+page_types: Each area of a Weebly site uses a specific page type':' standard, blog, and store, search. While the HTML template determines where the content on a page goes, the page type determines what type of content to display.
+
+partial: An incomplete page used in Weebly themes to group like areas of functionality.
+
+plan: Assigned to a site to determine the level of functionality. Your plans correspond to a Weebly plan.
+
+plugin: An application that allows you to integrate Weebly into your existing internal application using cPanel, WHMCS, and/or APS2.
+
+site_access_link: A link that allows access to a site without a user name and password.
+
+site_contributor: Users that are not the owners of the site, but have varying access to edit that site and some of the site's settings.
+
+Site_Home_page: Use this page to manage all your sites. You access the editor from here, as well as view your stie's stats. Accessed from www.weebly.com/home.
+
+snippet: HTML code that gets inserted onto a page when the user installs an app configured to use snippets.
+
+team_member: Internal users that are registered to use the Cloud Admin.
+
+test_mode: A mode that allows you to create test users and sites without being charged.
+
+themes: These are the templates that give the look and feel to a web site. Being able to create custom themes is still in Beta, but you're welcome to have a go at creating or customizing themes. Just be aware that not everything in the docs may work as described at this point.

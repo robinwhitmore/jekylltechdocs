@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="The Pages API provides methods for reading and updating information about the pages for a given user's site.">
 <meta name="keywords" content="apis,  ">
-<title>Page API | Weebly Developer Documentation</title>
+<title>Page API | Weebly Cloud Developer Documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -15,6 +15,11 @@
 <link rel="stylesheet" href="css/lavish-bootstrap.css">
 <link rel="stylesheet" href="css/customstyles.css">
 <link rel="stylesheet" href="css/theme-blue.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
@@ -37,6 +42,18 @@
 
 <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
 
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        /*Bootstrap popovers are initialized with the following script. In the options, I'm setting the placement to be on the right, the trigger to be hover rather than click, and to allow HTML from the JSON data source. */
+
+        $('[data-toggle="popover"]').popover({
+            placement: 'top',
+            trigger: 'hover',
+            html: true
+        });
+    })
+</script>
     <script>
         $(document).ready(function() {
             // Initialize navgoco with default options
@@ -90,7 +107,7 @@
             </button>
 
             <a class="fa fa-home fa-lg navbar-brand" href="home.html">&nbsp;<span class="projectTitle">
-                Weebly Developer Documentation</span></a>
+                Weebly Cloud Developer Documentation</span></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
@@ -98,19 +115,15 @@
                 
                 
                 
-                <li><a href="home.html">Develop Apps</a></li>
+                <li><a href="home.html">Get Started</a></li>
                 
                 
                 
-                <li><a href="pf_themes_gs.html">Develop Themes</a></li>
+                <li><a href="cl_apis_about.html">Cloud API</a></li>
                 
                 
                 
-                <li><a href="pf_apis_about.html">APIs</a></li>
-                
-                
-                
-                <li><a href="pf_element_main.html">Tutorials</a></li>
+                <li><a href="cl_apps_gs.html">Custom Apps</a></li>
                 
                 
                 
@@ -122,7 +135,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&body=I have some feedback about the Page API page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud Developer Docs feedback&body=I have some feedback about the Page API page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -166,8 +179,32 @@
 
 
 <ul id="mysidebar" class="nav">
-    <li class="sidebarTitle"> </li>
+    <li class="sidebarTitle">Weebly Cloud REST APIs </li>
     
+    
+    
+    <li>
+        <a href="#">Use the REST APIs</a>
+        <ul>
+            
+            
+            
+            <li><a href="cl_apis_about.html">About the REST APIs</a></li>
+            
+            
+            
+            
+            
+            
+            <li class="active"><a href="cl_apis_page.html">Page API</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
         <!-- if you aren't using the accordion, uncomment this block:
            <p class="external">
                <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
@@ -223,8 +260,6 @@ $('#toc').on('click', 'a', function() {
     
 
   
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> To authenticate with the Weebly API, you need to use OAuth. This will allow you to access resources based on a particular user and site.</div>
-
 <h2> Fields </h2>
 <p>The following table shows all fields that exist for this API, those that are returned when you retrieve a list, and those that are changeable using <code>PATCH</code>. All fields are returned when you retrieve a single item.</p>
 <!-- TODO: style table head and table -->
@@ -330,12 +365,9 @@ $('#toc').on('click', 'a', function() {
 <h2>Retrieve a List of Pages for a Given Site</h2>
 <p class="codeTitle">Enpoint URL:</p>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /v1/user/sites/<span class="o">{</span>SITE_ID<span class="o">}</span>/pages</code></pre></figure>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/page</code></pre></figure>
 
 <p>Returns all pages for the given site. Only list fields are returned.
-    
-    <br />
-    <b>scope:</b> <code>read:site</code>
     
 
 <h3>Query Paramters</h3>
@@ -395,20 +427,16 @@ $('#toc').on('click', 'a', function() {
 
 <p class="codeTitle">Example CURL request returning all pages:</p>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl --request GET <span class="se">\</span>
-  --url https://api.weebly.com/v1/user/sites/987654321/pages <span class="se">\</span>
-  --header <span class="s1">'accept: application/vnd.weebly.v1+json'</span> <span class="se">\</span>
-  --header <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
-  --header <span class="s1">'x-weebly-access-token: [YOUR_TOKEN]"</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/USER_ID/site/SITE_ID/page <span class="se">\</span>
+ -H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+ -H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
 
 
 <p class="codeTitle">Example filtered request:</p>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl --request GET <span class="se">\</span>
-  --url https://api.weebly.com/v1/user/sites/987654321/pages?filterby<span class="o">=</span>layout&amp;filterfor<span class="o">=</span>tall-header <span class="se">\</span>
-  --header <span class="s1">'accept: application/vnd.weebly.v1+json'</span> <span class="se">\</span>
-  --header <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
-  --header <span class="s1">'x-weebly-access-token: [YOUR_TOKEN]"</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/USER_ID/site/SITE_ID/page?filterby<span class="o">=</span>layout&amp;filterfor<span class="o">=</span>tall-header <span class="se">\</span>
+ -H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+ -H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
 
 
 <p class="codeTitle">Example response:</p>
@@ -466,7 +494,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 Weebly. All rights reserved. <br />
- Site last generated: Apr 28, 2017 <br />
+ Site last generated: May 1, 2017 <br />
 <p><img src="images/company_logo.png" alt="Company logo"/></p>
                 </div>
             </div>

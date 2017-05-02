@@ -15,6 +15,11 @@
 <link rel="stylesheet" href="css/lavish-bootstrap.css">
 <link rel="stylesheet" href="css/customstyles.css">
 <link rel="stylesheet" href="css/theme-blue.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
@@ -37,6 +42,18 @@
 
 <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
 
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        /*Bootstrap popovers are initialized with the following script. In the options, I'm setting the placement to be on the right, the trigger to be hover rather than click, and to allow HTML from the JSON data source. */
+
+        $('[data-toggle="popover"]').popover({
+            placement: 'top',
+            trigger: 'hover',
+            html: true
+        });
+    })
+</script>
     <script>
         $(document).ready(function() {
             // Initialize navgoco with default options
@@ -417,6 +434,21 @@
         </ul>
         
         
+    
+    <li>
+        <a href="#">Glossary</a>
+        <ul>
+            
+            
+            
+            <li><a href="pf_glossary.html">Glossary</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
         
         <!-- if you aren't using the accordion, uncomment this block:
            <p class="external">
@@ -473,7 +505,7 @@ $('#toc').on('click', 'a', function() {
     
 
   <h2 id="what-are-weebly-apps">What are Weebly Apps</h2>
-<p>Consider an app to be a bundle that contains one or more of the following types of functionality: backend services, snippets, elements, dashboard cards, and themes. Your app can include one or more of these (more on what these are, below). Apps are installable ZIP files accessed from the Weebly App Center, and contain the following:</p>
+<p>Consider an <a data-container="body" data-toggle="popover" data-content="Apps are containers for various things that are installable and merchandized in the Weebly App Center. They are ZIP files that contain, along with all the code, a manifest file that contains configuration metadata for your app, and assets used to display and market your app in the App Center.">app</a> to be a bundle that contains one or more of the following types of functionality: <a data-container="body" data-toggle="popover" data-content="An app that directly integrates into the Weebly API. It may or may not have an associated element used to add it to a web page. If it doesn't, it might then use a snippet to install itself into a site.">backend services</a>, <a data-container="body" data-toggle="popover" data-content="HTML code that gets inserted onto a page when the user installs an app configured to use snippets.">snippets</a>, <a data-container="body" data-toggle="popover" data-content="Elements are the widgets users drag from the editor sidebar onto a page to declaratively build their site. An app might contain one or more elements.">elements</a>, <a data-container="body" data-toggle="popover" data-content="Cards that display on the Site Home page that provide information about an an app and are specific to the site. You can create a dashboard card as part of an app.">dashboard cards</a>, and <a data-container="body" data-toggle="popover" data-content="These are the templates that give the look and feel to a web site. Being able to create custom themes is still in Beta, but you're welcome to have a go at creating or customizing themes. Just be aware that not everything in the docs may work as described at this point.">themes</a>. Your app can include one or more of these (more on what these are, below). Apps are installable ZIP files accessed from the <a href="http://weebly.com/app-center" data-container="body" data-toggle="popover" data-content="The one-stop shop where you'll market your app, accessed from the site editor, located at [http://weebly.com/app-center](http://weebly.com/app-center). We'll feature apps in that sidebar as well - users will be able to click on those featured apps and install without having to *browse* through the App Center. Apps that adhere to our policy requirements, have consistently good reviews, and are easy to install and maintain have a great shot at being featured!">Weebly App Center</a>, and contain the following:</p>
 
 <ul>
   <li>Code that needs to reside on your customer’s website, such as JavaScript, CSS, and HTML</li>
@@ -481,7 +513,7 @@ $('#toc').on('click', 'a', function() {
   <li>Assets used to display and market your app in the App Center.</li>
 </ul>
 
-<p>All Weebly apps use a manifest to configure certain aspects of the app, such as name, version, and URLs used for installation and management. Weebly apps that require access to user and site information or otherwise need to access the Weebly API, must implement the OAuth process. This flow allows your customer to grant the app permission to be installed access specific data.</p>
+<p>All Weebly apps use a manifest to configure certain aspects of the app, such as name, version, and URLs used for installation and management. Weebly apps that require access to user and site information or otherwise need to access the Weebly API, must implement the <a data-container="body" data-toggle="popover" data-content="An open standard for authorization that provides secure, dedicated access to a resource’s service on behalf of its owner. This allows us to provide your app, and any management pages on your site, with access to the Weebly API and user’s site data.">OAuth process</a>. This flow allows your customer to grant the app permission to be installed access specific data.</p>
 
 <p>While each type of functionality has its own development process, to start creating your app, read the App Policy Requirements and Development topics. These are the requirements and the development steps that all app types must follow. Then use the topics specific to the type you’re creating to continue your development.</p>
 
@@ -521,7 +553,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 Weebly. All rights reserved. <br />
- Site last generated: Apr 28, 2017 <br />
+ Site last generated: May 1, 2017 <br />
 <p><img src="images/company_logo.png" alt="Company logo"/></p>
                 </div>
             </div>

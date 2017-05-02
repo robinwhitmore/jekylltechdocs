@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Welcome to Weebly Cloud! With Weebly Cloud, you provide Weebly’s best-in-class website builder to enable your customers to create their own website, blog or ...">
 <meta name="keywords" content="getting started,  ">
-<title>Get Started with Weebly Cloud | Weebly Developer Documentation</title>
+<title>Get Started with Weebly Cloud | Weebly Cloud Developer Documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -15,6 +15,11 @@
 <link rel="stylesheet" href="css/lavish-bootstrap.css">
 <link rel="stylesheet" href="css/customstyles.css">
 <link rel="stylesheet" href="css/theme-blue.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
@@ -37,6 +42,18 @@
 
 <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
 
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        /*Bootstrap popovers are initialized with the following script. In the options, I'm setting the placement to be on the right, the trigger to be hover rather than click, and to allow HTML from the JSON data source. */
+
+        $('[data-toggle="popover"]').popover({
+            placement: 'top',
+            trigger: 'hover',
+            html: true
+        });
+    })
+</script>
     <script>
         $(document).ready(function() {
             // Initialize navgoco with default options
@@ -90,7 +107,7 @@
             </button>
 
             <a class="fa fa-home fa-lg navbar-brand" href="home.html">&nbsp;<span class="projectTitle">
-                Weebly Developer Documentation</span></a>
+                Weebly Cloud Developer Documentation</span></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
@@ -98,19 +115,15 @@
                 
                 
                 
-                <li class="active"><a href="home.html">Develop Apps</a></li>
+                <li class="active"><a href="home.html">Get Started</a></li>
                 
                 
                 
-                <li><a href="pf_themes_gs.html">Develop Themes</a></li>
+                <li><a href="cl_apis_about.html">Cloud API</a></li>
                 
                 
                 
-                <li><a href="pf_apis_about.html">APIs</a></li>
-                
-                
-                
-                <li><a href="pf_element_main.html">Tutorials</a></li>
+                <li><a href="cl_apps_gs.html">Custom Apps</a></li>
                 
                 
                 
@@ -122,7 +135,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&body=I have some feedback about the Get Started with Weebly Cloud page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud Developer Docs feedback&body=I have some feedback about the Get Started with Weebly Cloud page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -166,8 +179,39 @@
 
 
 <ul id="mysidebar" class="nav">
-    <li class="sidebarTitle"> </li>
+    <li class="sidebarTitle">Weebly Cloud </li>
     
+    
+    
+    <li>
+        <a href="#">Get Started</a>
+        <ul>
+            
+            
+            
+            <li class="active"><a href="home.html">Get Started with Weebly Cloud</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="cl_gs_configure.html">Configure Weebly Cloud</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="cl_glossary.html">Glossary</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
         <!-- if you aren't using the accordion, uncomment this block:
            <p class="external">
                <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
@@ -224,17 +268,17 @@ $('#toc').on('click', 'a', function() {
 
   <h2 id="what-is-weebly-cloud">What is Weebly Cloud?</h2>
 
-<p>Weebly for Cloud provides your customers a best-in-class website builder to enable them to create their own website, blog or online store in minutes. You maintain full control over billing, support, and the customer relationship. The Weebly Cloud platform allows you to easily integrate Weebly into your existing internal application, CMS or third party web application. You can use our Cloud Admin to manage users and sites or you can use our RESTful API to programmatically integrate with existing systems. You can also use plug-ins that allow you to integrate Weebly with existing systems.</p>
+<p>Weebly for Cloud provides your customers a best-in-class website builder to enable them to create their own website, blog or online store in minutes. You maintain full control over billing, support, and the customer relationship. The Weebly Cloud platform allows you to easily integrate Weebly into your existing internal application, CMS or third party web application. You can use our <a data-container="body" data-toggle="popover" data-content="The site used to manage your users, site owners and their accounts, as well as apps and billing. You access Cloud Admin at weeblycloud.com/admin">Cloud Admin</a> to manage users and sites or you can use our RESTful API to programmatically integrate with existing systems. You can also use plug-ins that allow you to integrate Weebly with existing systems.</p>
 
 <h2 id="create-a-weebly-cloud-account">Create a Weebly Cloud Account</h2>
 
-<p>The first step in using the Weebly Cloud API is to create a Weebly Cloud account. This account gives you access to Cloud Admin where you can access your API key and secret, and download plug-ins. If you don’t have a Weebly Cloud account, then email our team <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#098;&#100;&#064;&#119;&#101;&#101;&#098;&#108;&#121;&#046;&#099;&#111;&#109;">here</a>.</p>
+<p>The first step in using the Weebly Cloud API is to create a Weebly Cloud account. This account gives you access to Cloud Admin where you can access your API key and secret, and download plug-ins. If you don’t have a Weebly Cloud account, then email our team <a href="mailto:bd@weebly.com">here</a>.</p>
 
 <p>Once your account is set up, head on over to Configure Weebly Cloud to finish setting up your account.</p>
 
 <h2 id="test-mode">Test Mode</h2>
 
-<p>When first getting acquainted with the Weebly Cloud API your Weebly Cloud account will be in test mode. There are no functional limitations while in test mode, it simply defaults any users and sites created to test so that you won’t be charged for them. They will be periodically removed from the system, but only after your Weebly Cloud account is in production mode.</p>
+<p>When first getting acquainted with the Weebly Cloud API your Weebly Cloud account will be in <a data-container="body" data-toggle="popover" data-content="A mode that allows you to create test users and sites without being charged.">test mode</a>. There are no functional limitations while in test mode, it simply defaults any users and sites created to test so that you won’t be charged for them. They will be periodically removed from the system, but only after your Weebly Cloud account is in production mode.</p>
 
 <p>Once in production mode you can still create a test user by passing the optional parameter of <strong>test_mode</strong>. Learn more about the <a href="cl_api_user">User API</a>.</p>
 
@@ -246,7 +290,7 @@ $('#toc').on('click', 'a', function() {
 
 <h2 id="use-the-weebly-editor">Use the Weebly Editor</h2>
 
-<p>Your customers use the Weebly editor to design their websites. It’s as easy as dragging elements from the element tray and dropping them onto a page.</p>
+<p>Your customers use the <a data-container="body" data-toggle="popover" data-content="Page where you can edit your site's web pages. Developers use this to test their apps in their test site. Accessed from the Site Home page by clicking Build.">Weebly editor</a> to design their websites. It’s as easy as dragging <a data-container="body" data-toggle="popover" data-content="Elements are the widgets users drag from the editor sidebar onto a page to declaratively build their site. An app might contain one or more elements.">elements</a> from the <a data-container="body" data-toggle="popover" data-content="The sidebar of the Page Editor that holds the elements that you drag and drop onto your web page.">element tray</a> and dropping them onto a page.</p>
 <figure><img class="docimage" src="images/cl_editorBranded.png" alt="" /><figcaption>The Weebly Editor</figcaption></figure>
 
 
@@ -273,7 +317,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 Weebly. All rights reserved. <br />
- Site last generated: Apr 28, 2017 <br />
+ Site last generated: May 1, 2017 <br />
 <p><img src="images/company_logo.png" alt="Company logo"/></p>
                 </div>
             </div>

@@ -10,7 +10,7 @@ summary: Welcome to Weebly Cloud! With Weebly Cloud, you provide Weebly’s best
 
 ## What is Weebly Cloud?
 
-Weebly for Cloud provides your customers a best-in-class website builder to enable them to create their own website, blog or online store in minutes. You maintain full control over billing, support, and the customer relationship. The Weebly Cloud platform allows you to easily integrate Weebly into your existing internal application, CMS or third party web application. You can use our Cloud Admin to manage users and sites or you can use our RESTful API to programmatically integrate with existing systems. You can also use plug-ins that allow you to integrate Weebly with existing systems.
+Weebly for Cloud provides your customers a best-in-class website builder to enable them to create their own website, blog or online store in minutes. You maintain full control over billing, support, and the customer relationship. The Weebly Cloud platform allows you to easily integrate Weebly into your existing internal application, CMS or third party web application. You can use our <a data-container="body" data-toggle="popover" data-content="{{site.data.glossary.Cloud_Admin}}">Cloud Admin</a> to manage users and sites or you can use our RESTful API to programmatically integrate with existing systems. You can also use plug-ins that allow you to integrate Weebly with existing systems.
 
 ## Create a Weebly Cloud Account
 
@@ -20,7 +20,7 @@ Once your account is set up, head on over to Configure Weebly Cloud to finish se
 
 ## Test Mode
 
-When first getting acquainted with the Weebly Cloud API your Weebly Cloud account will be in test mode. There are no functional limitations while in test mode, it simply defaults any users and sites created to test so that you won't be charged for them. They will be periodically removed from the system, but only after your Weebly Cloud account is in production mode.
+When first getting acquainted with the Weebly Cloud API your Weebly Cloud account will be in <a data-container="body" data-toggle="popover" data-content="{{site.data.glossary.test_mode}}">test mode</a>. There are no functional limitations while in test mode, it simply defaults any users and sites created to test so that you won't be charged for them. They will be periodically removed from the system, but only after your Weebly Cloud account is in production mode.
 
 Once in production mode you can still create a test user by passing the optional parameter of **test_mode**. Learn more about the [User API](cl_api_user).
 
@@ -32,5 +32,5 @@ In both hosting cases, the Weebly Editor (where your site owners create their si
 
 ## Use the Weebly Editor
 
-Your customers use the Weebly editor to design their websites. It's as easy as dragging elements from the element tray and dropping them onto a page.
+Your customers use the <a data-container="body" data-toggle="popover" data-content="{{site.data.glossary.page_editor}}">Weebly editor</a> to design their websites. It's as easy as dragging <a data-container="body" data-toggle="popover" data-content="{{site.data.glossary.element}}">elements</a> from the <a data-container="body" data-toggle="popover" data-content="{{site.data.glossary.element_tray}}">element tray</a> and dropping them onto a page.
 {% include image.html file="cl_editorBranded.png" caption="The Weebly Editor" %}
