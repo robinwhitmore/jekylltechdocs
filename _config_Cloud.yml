@@ -35,7 +35,10 @@ exclude:
   - feed.xml
   - tooltips.*
   - update.sh
-  - x_build_scripts
+  - x_build_script
+  - cloudOutput
+  - platformOutput
+
 # these are the files and directories that jekyll will exclude from the build
 
 feedback_subject_line: Weebly Cloud Developer Docs

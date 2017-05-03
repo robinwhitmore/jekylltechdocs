@@ -1,10 +1,10 @@
 # build Platform
  cd Documents/jekylltechdocs
- bundle exec jekyll build --config _config_Platform.yml --destination x_platform_output/docs
+ bundle exec jekyll build --config _config_Platform.yml --destination x_platform_output
 
 # copy output to Git Platform output dir
 cd ../..
-cp -R ~/Documents/jekylltechdocs/x_platform_output/docs ~/Documents/PlatformDocs/
+cp -R ~/Documents/jekylltechdocs/x_platform_output ~/Documents/PlatformDocs/
 
  cd Documents/PlatformDocs/
 

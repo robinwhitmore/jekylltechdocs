@@ -1,10 +1,10 @@
 # build Cloud
 cd Documents/jekylltechdocs
-bundle exec jekyll build --config _config_Cloud.yml --destination x_cloud_output/docs
+bundle exec jekyll build --config _config_Cloud.yml --destination x_cloud_output
 
 # copy output to Git Cloud output dir
 cd ../..
-cp -R ~/Documents/jekylltechdocs/x_cloud_output/docs ~/Documents/CloudPublished/
+cp -R ~/Documents/jekylltechdocs/x_cloud_output/ ~/Documents/CloudPublished/
 
 cd Documents/CloudPublished/
 
