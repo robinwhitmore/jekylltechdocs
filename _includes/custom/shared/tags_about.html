@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h2 class="page-header">Topics Sorted by Tags</h2>
+    </div>
+
+<!--    {% for allowed-tags in site.data.tags %}
+        {{allowed-tags}}
+    {% endfor %}-->
+    {% for allowed-tags in site.data.tags.allowed-tags %}
+    {% assign tagName = allowed-tags %}
+
+    <div class="col-md-3 col-sm-6">
+
+            <div class="panel-body text-center">
+                <div class="panel-heading">
+                    <h5>{{tagName}}</h5>
+                </div>
+
+                {% if tagName == "getting_started" %}
+                    {% if site.project == "cloud" %}
+                   <p>Learn all about how to set up and configure Weebly Cloud</p>
+                    {% elsif site.project == "platform" %}
+                    <p>Start creating your app!</p>
+                {% endif %}
+                {% elsif tagName == "requirements" %}
+                <p>Read about the requirements your app will need to adhere to.</p>
+                {% endif %}
+                <a href="tag_{{tagName}}.html" class="btn btn-primary">View Topics</a>
+            </div>
+
+        </div>
+        {% endfor %}
+</div>
