@@ -4,6 +4,8 @@
 {% assign sidebar = site.data.sidebars.cl_apps_sidebar.entries %}
 {% elsif page.sidebar == "cl_apis_sidebar" %}
 {% assign sidebar = site.data.sidebars.cl_apis_sidebar.entries %}
+{% elsif page.sidebar == "cl_tags_sidebar" %}
+{% assign sidebar = site.data.sidebars.cl_tags_sidebar.entries %}
 
 {% elsif page.sidebar == "pf_apps_sidebar" %}
 {% assign sidebar = site.data.sidebars.pf_apps_sidebar.entries %}
@@ -13,6 +15,8 @@
 {% assign sidebar = site.data.sidebars.pf_themes_sidebar.entries %}
 {% elsif page.sidebar == "pf_tutorials_sidebar" %}
 {% assign sidebar = site.data.sidebars.pf_tutorials_sidebar.entries %}
+{% elsif page.sidebar == "pf_tags_sidebar" %}
+{% assign sidebar = site.data.sidebars.pf_tags_sidebar.entries %}
 
 {% else %}
 {% assign sidebar = site.data.sidebars.other.entries %}

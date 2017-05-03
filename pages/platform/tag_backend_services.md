@@ -2,7 +2,7 @@
 title: "Backend Services Topics"
 tagName: backend_services
 search: exclude
-permalink: tag_backendservices.html
-sidebar: pf_apps_sidebar
+permalink: tag_backend_services.html
+sidebar: pf_tags_sidebar
 ---
 {% include taglogic.html %}

@@ -35,8 +35,8 @@ exclude:
   - tooltips.*
   - update.sh
   - x_build_scripts
-    - cloudOutput
-    - platformOutput
+  - cloudOutput
+  - platformOutput
 
 # these are the files and directories that jekyll will exclude from the build
 
@@ -98,6 +98,7 @@ sidebars:
 - pf_apis_sidebar
 - pf_themes_sidebar
 - pf_tutorials_sidebar
+- pf_tags_sidebar
 - other
 
 description: "Everything you need to build an app for the Weebly platform"

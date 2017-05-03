@@ -1,0 +1,81 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: Weebly REST APIs
+  version:
+  folders:
+
+
+  - title: Tag Pages
+    output: web
+    folderitems:
+
+    - title: What are Tag Pages?
+      url: /pf_tags_about.html
+      output: web
+
+    - title: Getting Started
+      url: /tag_getting_started.html
+      output: web
+
+    - title: Troubleshooting
+      url: /tag_troubleshooting.html
+      output: web
+
+    - title: Configuration
+      url: /tag_configuration.html
+      output: web
+
+    - title: Requirements
+      url: /tag_requirements.html
+      output: web
+
+    - title: Elements
+      url: /tag_elements.html
+      output: web
+
+    - title: Backend Services
+      url: /tag_backend_services.html
+      output: web
+
+    - title: Snippets
+      url: /tag_snippets.html
+      output: web
+
+    - title: APIs
+      url: /tag_apis.html
+      output: web
+
+    - title: Dashboard Cards
+      url: /tag_dashboard_cards.html
+      output: web
+
+    - title: Manifest
+      url: /tag_manifest.html
+      output: web
+
+    - title: Development
+      url: /tag_development.html
+      output: web
+
+    - title: Testing
+      url: /tag_testing.html
+      output: web
+
+    - title: App Revenue
+      url: /tag_app_revenue.html
+      output: web
+
+    - title: Reviews
+      url: /tag_reviews.html
+      output: web
+
+    - title: OAuth
+      url: /tag_oauth.html
+      output: web
+
+    - title: Webhooks
+      url: /tag_webhooks.html
+      output: web
+
