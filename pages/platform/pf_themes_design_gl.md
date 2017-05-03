@@ -1,7 +1,7 @@
 ---
 title: Themes Design Guidelines
 keywords:
-tags: [getting started]
+tags: [getting_started]
 sidebar: pf_themes_sidebar
 permalink: pf_themes_design_gl.html
 summary: When you create a Weebly theme, your design needs to support the functionality found on the pages in the different areas of a Weebly site, as well support the elements often used on a site. For example, blog pages require certain functionality and elements, while pages that display products require something different. Gallery elements that display multiple images need to have specific styling available. Because users can easily switch between themes, you need to make sure that you follow these guidelines and requirements to ensure switching between themes is a smooth transition.

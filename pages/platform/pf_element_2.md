@@ -2,7 +2,7 @@
 title: 2. Register the App
 layout: "tutorial"
 keywords:
-tags: [getting started, elements, manifest, configuration, development]
+tags: [getting_started, elements, manifest, configuration, development]
 sidebar: pf_tutorials_sidebar
 permalink: pf_element_2.html
 series: "element series"

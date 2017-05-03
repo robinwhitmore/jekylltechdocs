@@ -1,7 +1,7 @@
 ---
 title: Get Started with Apps
 keywords:
-tags: [getting started]
+tags: [getting_started]
 sidebar: pf_apps_sidebar
 permalink: home.html
 summary: Weebly is a powerful drag and drop website creator that allows people to quickly and easily set up a site, blog, or online store. As a developer, you’ll reach over 40 million users looking to purchase apps to power their businesses. You'll work with Weebly's Elements API to create new integrations and elements, extending the features Weebly offers to help meet our user's many needs. You'll be given access to APIs, code samples, and snippets to help you easily and quickly create new, and useful apps for Weebly users.

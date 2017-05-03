@@ -1,8 +1,8 @@
 allowed-tags:
-  - getting started
+  - getting_started
   - requirements
   - elements
-  - backend services
+  - backend_services
   - snippets
   - dashboard_cards
   - manifest

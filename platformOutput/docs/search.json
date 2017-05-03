@@ -5,7 +5,7 @@
 
 {
 "title": "Glossary",
-"tags": "getting started",
+"tags": "getting_started",
 "keywords": "",
 "url": "pf_glossary.html",
 "summary": ""
@@ -16,7 +16,7 @@
 
 {
 "title": "Get Started with Apps",
-"tags": "getting started",
+"tags": "getting_started",
 "keywords": "",
 "url": "home.html",
 "summary": "Weebly is a powerful drag and drop website creator that allows people to quickly and easily set up a site, blog, or online store. As a developer, you’ll reach over 40 million users looking to purchase apps to power their businesses. You'll work with Weebly's Elements API to create new integrations and elements, extending the features Weebly offers to help meet our user's many needs. You'll be given access to APIs, code samples, and snippets to help you easily and quickly create new, and useful apps for Weebly users."
@@ -40,7 +40,7 @@
 
 {
 "title": "About the Weebly REST API",
-"tags": "getting starteddevelopmentapis",
+"tags": "getting_starteddevelopmentapis",
 "keywords": "",
 "url": "pf_apis_about.html",
 "summary": "Weebly APIs are provided using REST over HTTPS. See the following sections for more general information about using our APIs."
@@ -62,7 +62,7 @@
 
 {
 "title": "Sample Applications",
-"tags": "getting startedelementsbackend services",
+"tags": "getting_startedelementsbackend_services",
 "keywords": "",
 "url": "pf_apps_sample.html",
 "summary": "​This page contains downloadable sample application bundles. Feel free to download, inspect, and modify any of these applications. Each application comes in a working state, and can be downloaded and immediately uploaded into your developer account."
@@ -73,7 +73,7 @@
 
 {
 "title": "1. Design the Element",
-"tags": "getting startedelementsmanifestconfigurationdevelopment",
+"tags": "getting_startedelementsmanifestconfigurationdevelopment",
 "keywords": "",
 "url": "pf_element_1.html",
 "summary": ""
@@ -84,7 +84,7 @@
 
 {
 "title": "2. Register the App",
-"tags": "getting startedelementsmanifestconfigurationdevelopment",
+"tags": "getting_startedelementsmanifestconfigurationdevelopment",
 "keywords": "",
 "url": "pf_element_2.html",
 "summary": ""
@@ -95,7 +95,7 @@
 
 {
 "title": "Tutorial&amp;#58; Create an Element",
-"tags": "getting startedelementsdevelopment",
+"tags": "getting_startedelementsdevelopment",
 "keywords": "",
 "url": "pf_element_main.html",
 "summary": ""
@@ -117,7 +117,7 @@
 
 {
 "title": "Themes Design Guidelines",
-"tags": "getting started",
+"tags": "getting_started",
 "keywords": "",
 "url": "pf_themes_design_gl.html",
 "summary": "When you create a Weebly theme, your design needs to support the functionality found on the pages in the different areas of a Weebly site, as well support the elements often used on a site. For example, blog pages require certain functionality and elements, while pages that display products require something different. Gallery elements that display multiple images need to have specific styling available. Because users can easily switch between themes, you need to make sure that you follow these guidelines and requirements to ensure switching between themes is a smooth transition."
@@ -128,12 +128,44 @@
 
 {
 "title": "Get Started with Themes",
-"tags": "getting started",
+"tags": "getting_started",
 "keywords": "",
 "url": "pf_themes_gs.html",
 "summary": "Themes provide the general look and feel used throughout a website. While Weebly provides a number of great themes, you may find you want to change a few things in a theme. Or maybe you want to change everything! You can do those and everything in between. And once you're done, you can use it on your site or share with your client or friends. To get started, create a web site that you can use to test your theme. Then download our Base theme as a starting point, and start building from there! Or find a theme you mostly like and then change the things you don't. These docs will provide you with all you need to bring your design to the web."
 }
 ,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

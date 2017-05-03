@@ -1,7 +1,7 @@
 ---
 title: About the Weebly REST API
 keywords:
-tags: [getting started, development, apis]
+tags: [getting_started, development, apis]
 sidebar: pf_apis_sidebar
 permalink: pf_apis_about.html
 endpoint: "https://api.weebly.com"
