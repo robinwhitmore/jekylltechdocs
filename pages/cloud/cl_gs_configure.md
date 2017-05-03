@@ -1,7 +1,7 @@
 ---
 title: Configure Weebly Cloud
 keywords:
-tags: [getting started, configuration]
+tags: [getting_started, configuration]
 sidebar: cl_gs_sidebar
 permalink: cl_gs_configure.html
 summary: You use the Settings tab of the Weebly Cloud Admin portal to configure your cloud account. You can add your logo and other company links and contact info, configure locale settings like time and date, set up messages for our support team, set up your domain and URLs, contacts, and access your API keys.

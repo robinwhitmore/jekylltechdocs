@@ -1,8 +1,8 @@
 ---
-title: "Getting Started Topics"
-tagName: getting_started
+title: "Custom App Topics"
+tagName: custom_apps
 search: exclude
-permalink: tag_getting_started.html
+permalink: tag_custom_apps.html
 sidebar: cl_gs_sidebar
 ---
 {% include taglogic.html %}

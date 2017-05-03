@@ -1,7 +1,7 @@
 ---
 title: About the Weebly Cloud REST APIs
 keywords:
-tags: [apis, getting started]
+tags: [apis, getting_started]
 sidebar: cl_apis_sidebar
 permalink: cl_apis_about.html
 endpoint: "https://api.weeblycloud.com"

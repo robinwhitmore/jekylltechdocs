@@ -1,7 +1,7 @@
 ---
 title: Glossary
 keywords:
-tags: [getting started]
+tags: [getting_started]
 sidebar: cl_gs_sidebar
 permalink: cl_glossary.html
 summary:

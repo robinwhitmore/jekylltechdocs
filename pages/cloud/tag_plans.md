@@ -1,8 +1,8 @@
 ---
-title: "Getting Started Topics"
-tagName: getting_started
+title: "Plan Topics"
+tagName: plans
 search: exclude
-permalink: tag_getting_started.html
+permalink: tag_plans.html
 sidebar: cl_gs_sidebar
 ---
 {% include taglogic.html %}

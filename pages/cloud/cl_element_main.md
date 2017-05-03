@@ -2,7 +2,7 @@
 title: Tutorial&#58; Create an Element
 layout: "page"
 keywords:
-tags: [getting started, custom apps]
+tags: [getting_started, custom_apps]
 sidebar: cl_apps_sidebar
 permalink: cl_element_main.html
 simple_map: false

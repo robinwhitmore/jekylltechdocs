@@ -1,8 +1,8 @@
 ---
-title: "Getting Started Topics"
-tagName: getting_started
+title: "Plug-in Topics"
+tagName: plugins
 search: exclude
-permalink: tag_getting_started.html
+permalink: tag_plugins.html
 sidebar: cl_gs_sidebar
 ---
 {% include taglogic.html %}
