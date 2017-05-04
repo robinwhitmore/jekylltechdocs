@@ -4,7 +4,7 @@
 
 # copy output to Git Platform output dir
 cd ../..
-cp -R ~/Documents/jekylltechdocs/x_platform_output ~/Documents/PlatformDocs/
+cp -R ~/Documents/jekylltechdocs/x_platform_output/ ~/Documents/PlatformDocs/
 
  cd Documents/PlatformDocs/
 

@@ -24,6 +24,20 @@
                 {% endif %}
                 {% elsif tagName == "requirements" %}
                 <p>Read about the requirements your app will need to adhere to.</p>
+                {% elsif tagName == "elements" %}
+                <p>Learn how to build custom elements that users drag and drop to build a web site.</p>
+                {% elsif tagName == "backend_services" %}
+                <p>Learn how to build backend services that integrate directly with Weebly via the REST API.</p>
+                {% elsif tagName == "snippets" %}
+                <p>Create HTML code snippets that can be installed onto a sites pages.</p>
+                {% elsif tagName == "dashboard_cards" %}
+                <p>Create dynamic cards that your app uses to show site information or that provide a place to configure and maintain your app.</p>
+                {% elsif tagName == "custom_apps" %}
+                <p>Create apps that you can install directly to your customer's sites.</p>
+                {% elsif tagName == "sites" %}
+                <p>Create and manage your customer's sites.</p>
+                {% elsif tagName == "apis" %}
+                <p>Work with the Weebly API.</p>
                 {% endif %}
                 <a href="tag_{{tagName}}.html" class="btn btn-primary">View Topics</a>
             </div>
