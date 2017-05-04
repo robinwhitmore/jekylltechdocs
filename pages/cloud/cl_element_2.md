@@ -2,6 +2,7 @@
 title: 2. Register the App
 layout: "tutorial"
 keywords:
+type: [tutorial]
 tags:
 sidebar: cl_apps_sidebar
 permalink: cl_element_2.html

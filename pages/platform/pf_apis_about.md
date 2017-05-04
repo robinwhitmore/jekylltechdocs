@@ -1,6 +1,7 @@
 ---
 title: About the Weebly REST API
 keywords:
+type: [concepts, reference]
 tags: [getting_started, development, apis]
 sidebar: pf_apis_sidebar
 permalink: pf_apis_about.html

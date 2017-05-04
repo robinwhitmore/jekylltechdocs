@@ -134,3 +134,17 @@ p.proc {
     columns: 100px 3;
 }
 
+.pageType {
+    float: right;
+    background-color: gray;
+    display: inline;
+    padding: .3em;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    font-size: 14;
+    white-space: nowrap;
+    vertical-align: top;
+    border-radius: .25em;
+    line-height: 2;
+}

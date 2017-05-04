@@ -1,6 +1,7 @@
 ---
 title: TUTORIAL Create a Weebly Element
 keywords:
+type: [tutorial]
 tags: [getting_started, custom_apps]
 sidebar: cl_apps_sidebar
 permalink: cl_apps_tutorial.html

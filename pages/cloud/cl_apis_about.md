@@ -1,6 +1,7 @@
 ---
 title: About the Weebly Cloud REST APIs
 keywords:
+type: [concepts, procedure]
 tags: [apis, getting_started]
 sidebar: cl_apis_sidebar
 permalink: cl_apis_about.html
