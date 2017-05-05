@@ -15,3 +15,14 @@ For example, here's the footer of a published site showing the company name Nash
 
 And here's an email sent inviting a new user.
 {% include image.html file="cl_settings_mail.png" caption="Footer of a published site on Nash Hosting" %}
+
+## Set Your Domain
+
+You can set a domain that is used to access both the Cloud Admin (`<your_domain>/admin`) and the User portal (`<your_domain>/portal`), and that displays in the user's address bar when using the Site Editor. You can choose to use a subdomain of `weeblycloud.com` or you can use a custom domain.
+{% include note.html content="If you don't configure a domain, you will not be able to generate and send emails from the Cloud Admin and you will not have access to the User portal." %}
+
+​To set a subdomain, in the Domain area, click the **Edit** icon, click **Subdomain**, enter the subdomain to be used, and click **Save**. If the subdomain is available, a green checkmark displays. The subdomain will be applied to both the Cloud Admin and the User Login portals.
+
+
+
+

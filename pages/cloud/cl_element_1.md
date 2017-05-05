@@ -3,7 +3,7 @@ title: 1. Design the Element
 layout: "tutorial"
 keywords:
 type: [tutorial]
-tags: [getting_started]
+tags: [getting_started, custom_apps]
 sidebar: cl_apps_sidebar
 permalink: cl_element_1.html
 simple_map: false

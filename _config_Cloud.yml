@@ -92,7 +92,7 @@ project: cloud
 
 portal: "Cloud Admin"
 
-portal_url: <a href="https://weeblycloud.com/admin">https://weeblycloud.com/admin</a>
+portal_url: https://weeblycloud.com/admin
 
 sidebars:
 - cl_gs_sidebar

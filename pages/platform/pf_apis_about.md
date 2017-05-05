@@ -8,7 +8,7 @@ permalink: pf_apis_about.html
 endpoint: "https://api.weebly.com"
 summary: Weebly APIs are provided using REST over HTTPS. See the following sections for more general information about using our APIs.
 ---
-{% include custom/shared/api_about.html %}
+{% include custom/shared/api_about.md %}
 
 <h2>Authentication</h2>
 <p>To access the Weebly API, you will need to authenticate using OAuth, allowing you to access resources based on a particular user and site. After the OAuth flow, you will have a token for that user and site, and you must use it in the header to authenticate all requests. Examples in the API docs show how to add this to the header.</p>

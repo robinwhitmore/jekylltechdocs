@@ -8,7 +8,7 @@ permalink: cl_apis_about.html
 endpoint: "https://api.weeblycloud.com"
 summary: Weebly APIs are provided using REST over HTTPS and utilize the HTTP verbs GET, POST, PUT, PATCH and DELETE. We provide a number of client libraries to help get you started. See the following sections for more general information about using our APIs.
 ---
-{% include custom/shared/api_about.html %}
+{% include custom/shared/api_about.md %}
 
 ## Signing and Authenticating Requests
 The API is validated using both a public key and a private HMAC Hash of the request contents. These values must be passed in the request header as X-Public-Key and X-Signed-Request-Hash. To get started making requests, you will need YOURAPIKEY and YOURAPISECRET which can be generated and obtained on the Settings tab in the Weebly Cloud Admin provided for your account.  YOURAPISECRET is a shared secret known only to you and Weebly Cloud. Do not share YOURAPISECRET.
