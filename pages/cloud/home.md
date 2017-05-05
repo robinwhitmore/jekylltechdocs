@@ -8,7 +8,6 @@ permalink: home.html
 folder: cloud
 summary: Welcome to Weebly Cloud! With Weebly Cloud, you provide Weebly’s best-in-class website builder to enable your customers to create their own website, blog or online store in minutes, while you maintain full control over billing, support, and the customer relationship.
 ---
-
 ## What is Weebly Cloud?
 
 Weebly for Cloud provides your customers a best-in-class website builder to enable them to create their own website, blog or online store in minutes. You maintain full control over billing, support, and the customer relationship. The Weebly Cloud platform allows you to easily integrate Weebly into your existing internal application, CMS or third party web application. You can use our <a data-container="body" data-toggle="popover" data-content="{{site.data.glossary.Cloud_Admin}}">Cloud Admin</a> to manage users and sites or you can use our RESTful API to programmatically integrate with existing systems. You can also use plug-ins that allow you to integrate Weebly with existing systems.

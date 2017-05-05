@@ -16,11 +16,54 @@ entries:
       output: web
       type: homepage
 
+    - title: Integration Overview
+      url: /cl_gs_integration.html
+      output: web
+
+    - title: Creating Custom Apps
+      url: /cl_gs_custom.html
+      output: web
+
+    - title: Understanding Hosting Options
+      url: /cl_gs_hosting.html
+      output: web
 
     - title: Configure Weebly Cloud
       url: /cl_gs_configure.html
       output: web
 
-    - title: Glossary
-      url: /cl_glossary.html
+    - title: Create Cloud Admin Users
+      url: /cl_gs_admin_users.html
+      output: web
+
+  - title: Integrate Weebly
+    output: web
+    folderitems:
+
+    - title: Create Plans
+      url: /cl_gs_plans.html
+      output: web
+
+    - title: Create and Manage Users
+      url: /cl_gs_users.html
+      output: web
+
+    - title: Create Sites
+      url: /cl_gs_sites.html
+      output: web
+
+  - title: Manage Weebly
+    output: web
+    folderitems:
+
+    - title: Handle Upgrades
+      url: /cl_gs_upgrades.html
+      output: web
+
+    - title: Provide SSO Access with a loginLink
+      url: /cl_gs_loginlink.html
+      output: web
+
+    - title: Suspend and Remove Sites
+      url: /cl_gs_suspend.html
       output: web
