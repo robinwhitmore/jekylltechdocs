@@ -11,11 +11,12 @@
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/modern-business.css">
 <link rel="stylesheet" href="css/lavish-bootstrap.css">
 <link rel="stylesheet" href="css/customstyles.css">
 <link rel="stylesheet" href="css/theme-blue.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
@@ -40,7 +41,7 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+<!-- <link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4006feed.xml"> -->
 
 <script type="text/javascript">
     $(document).ready(function() {
@@ -269,7 +270,8 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  
+  <!--TODO: move to md and remove all styling-->
+
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> To authenticate with the Weebly API, you need to use OAuth. This will allow you to access resources based on a particular user and site.</div>
 
 <h2> Fields </h2>
@@ -318,7 +320,7 @@ $('#toc').on('click', 'a', function() {
       </tr>
 <tr>
 <td><div class="paragraph"><code>page_url</code></div></td>
-          <td><div class="paragraph">Relative URL for the page. You can get the domain from <code><a href="http://dev.weebly.com/site-api.html#retrieve-details-for-the-given-site" target="_blank">the Site API</a></code> </div></td>
+          <td><div class="paragraph">Relative URL for the page. You can get the domain from the Site API </div></td>
           <td><div class="paragraph">string</div></td>
           <td><div class="paragraph" style="text-align:center;">X</div></td>
           <td><div class="paragraph"></div></td>
@@ -395,7 +397,7 @@ $('#toc').on('click', 'a', function() {
       </tr>
 <tr>
 <td><div class="paragraph"><strong>page</strong></div></td>
-          <td><div class="paragraph">Which page of results to return. Start is 1.<br /><br /><em><font color="#24678d"><strong>Note</strong>: Only the first 25 results are returned by default. If the result set is expected to be over 25, you must implement <a href="http://dev.weebly.com/use-the-rest-api.html#pagination" target="_blank">pagination</a>.</font></em>
+          <td><div class="paragraph">Which page of results to return. Start is 1.<br /><br /><em><font color="#24678d"><strong>Note</strong>: Only the first 25 results are returned by default. If the result set is expected to be over 25, you must implement pagination.</font></em>
 </div></td>
           <td><div class="paragraph">integer</div></td>
       </tr>
@@ -513,7 +515,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 Weebly. All rights reserved. <br />
- Site last generated: May 4, 2017 <br />
+ Site last generated: May 5, 2017 <br />
 <p><img src="images/company_logo.png" alt="Company logo"/></p>
                 </div>
             </div>

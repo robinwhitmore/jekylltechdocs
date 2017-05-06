@@ -31,4 +31,4 @@ cd Documents/jekylltechdocs
 
 # 3.
 msg "Proofing..."
-time bundle exec htmlproofer ./$DESTINATION 2>&1 | tee cloud_output.txt
+time bundle exec htmlproofer ./$DESTINATION --allow-hash-href --file-ignore mydoc_scroll.html 2>&1 | tee cloud_output.txt

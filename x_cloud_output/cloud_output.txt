@@ -6,113 +6,76 @@ Ran on 26 files!
 
 
 - ./x_cloud_output/404.html
-  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
-     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
-  *  linking to internal hash # that does not exist (line 138)
-     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud Developer Docs feedback&amp;body=I have some feedback about the Page Not Found page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
-  *  linking to internal hash # that does not exist (line 187)
-     <a href="#">Get Started</a>
+
+
+
 - ./x_cloud_output/cl_apis_about.html
-  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
-     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
-  *  linking to internal hash # that does not exist (line 138)
-     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud Developer Docs feedback&amp;body=I have some feedback about the About the Weebly Cloud REST APIs page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
-  *  linking to internal hash # that does not exist (line 187)
-     <a href="#">Use the REST APIs</a>
+
 - ./x_cloud_output/cl_apis_page.html
-  *  External link http://dev.weebly.com/use-the-rest-api.html#pagination failed: 404 No error
-  *  internally linking to /membership-api.html, which does not exist (line 352)
-     <a href="/membership-api.html">membership</a>
-  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
-     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
-  *  linking to internal hash # that does not exist (line 187)
-     <a href="#">Use the REST APIs</a>
-  *  linking to internal hash # that does not exist (line 138)
-     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud Developer Docs feedback&amp;body=I have some feedback about the Page API page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
-- ./x_cloud_output/cl_apps_gs.html
-  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
-     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
-  *  linking to internal hash # that does not exist (line 138)
-     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud Developer Docs feedback&amp;body=I have some feedback about the Get Started with Custom Weebly Apps page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  *  - ./x_cloud_output/cl_apps_gs.html
+
+the Get Started with Custom Weebly Apps 
   *  linking to internal hash # that does not exist (line 187)
      <a href="#">Get Started with Apps</a>
   *  linking to internal hash # that does not exist (line 209)
      <a href="#">Tutorial: Create an Element</a>
 - ./x_cloud_output/cl_apps_samples.html
   *  image images/sh_priceChart.png does not have an alt attribute (line 304)
-  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
-     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+
   *  linking to internal hash # that does not exist (line 187)
      <a href="#">Get Started with Apps</a>
   *  linking to internal hash # that does not exist (line 209)
      <a href="#">Tutorial: Create an Element</a>
-  *  linking to internal hash # that does not exist (line 138)
-     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud Developer Docs feedback&amp;body=I have some feedback about the Sample Applications page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+the Sample Applications 
 - ./x_cloud_output/cl_apps_tutorial.html
-  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
-     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
-  *  linking to internal hash # that does not exist (line 138)
-     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud Developer Docs feedback&amp;body=I have some feedback about the TUTORIAL Create a Weebly Element page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+
+the TUTORIAL Create a Weebly Element 
   *  linking to internal hash # that does not exist (line 187)
      <a href="#">Get Started with Apps</a>
   *  linking to internal hash # that does not exist (line 209)
      <a href="#">Tutorial: Create an Element</a>
 - ./x_cloud_output/cl_element_1.html
-  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
-     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+
   *  linking to internal hash # that does not exist (line 187)
      <a href="#">Get Started with Apps</a>
   *  linking to internal hash # that does not exist (line 209)
      <a href="#">Tutorial: Create an Element</a>
-  *  linking to internal hash # that does not exist (line 138)
-     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud Developer Docs feedback&amp;body=I have some feedback about the 1. Design the Element page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+the 1. Design the Element 
 - ./x_cloud_output/cl_element_2.html
   *  image images/cl_apps.png does not have an alt attribute (line 352)
-  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
-     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+
   *  linking to internal hash # that does not exist (line 209)
      <a href="#">Tutorial: Create an Element</a>
   *  linking to internal hash # that does not exist (line 187)
      <a href="#">Get Started with Apps</a>
-  *  linking to internal hash # that does not exist (line 138)
-     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud Developer Docs feedback&amp;body=I have some feedback about the 2. Register the App page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+the 2. Register the App 
 - ./x_cloud_output/cl_element_main.html
-  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
-     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+
   *  linking to internal hash # that does not exist (line 187)
      <a href="#">Get Started with Apps</a>
   *  linking to internal hash # that does not exist (line 209)
      <a href="#">Tutorial: Create an Element</a>
-  *  linking to internal hash # that does not exist (line 138)
-     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud Developer Docs feedback&amp;body=I have some feedback about the Tutorial: Create an Element page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+the Tutorial: Create an Element 
 - ./x_cloud_output/cl_glossary.html
-  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
-     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+
   *  linking to internal hash # that does not exist (line 187)
      <a href="#">Get Started</a>
-  *  linking to internal hash # that does not exist (line 138)
-     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud Developer Docs feedback&amp;body=I have some feedback about the Glossary page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+the Glossary 
 - ./x_cloud_output/cl_gs_configure.html
   *  image images/cl_settings_footerName.png does not have an alt attribute (line 279)
   *  image images/cl_settings_mail.png does not have an alt attribute (line 282)
-  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
-     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
-  *  linking to internal hash # that does not exist (line 138)
-     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud Developer Docs feedback&amp;body=I have some feedback about the Configure Weebly Cloud page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+
+the Configure Weebly Cloud 
   *  linking to internal hash # that does not exist (line 187)
      <a href="#">Get Started</a>
 - ./x_cloud_output/cl_tags_about.html
-  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
-     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
-  *  linking to internal hash # that does not exist (line 138)
-     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud Developer Docs feedback&amp;body=I have some feedback about the What are Tag Pages? page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+
+the What are Tag Pages? 
   *  linking to internal hash # that does not exist (line 187)
      <a href="#">Tag Pages</a>
 - ./x_cloud_output/cl_testGit.html
-  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
-     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
-  *  linking to internal hash # that does not exist (line 138)
-     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud Developer Docs feedback&amp;body=I have some feedback about the Test Git page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+
+the Test Git 
   *  linking to internal hash # that does not exist (line 187)
      <a href="#">Get Started</a>
 - ./x_cloud_output/glossary.html
@@ -122,10 +85,8 @@ Ran on 26 files!
   *  image images/cl_editorBranded.png does not have an alt attribute (line 300)
   *  internally linking to cl_api_user, which does not exist (line 289)
      <a href="cl_api_user">User API</a>
-  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
-     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
-  *  linking to internal hash # that does not exist (line 138)
-     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud Developer Docs feedback&amp;body=I have some feedback about the Get Started with Weebly Cloud page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+
+the Get Started with Weebly Cloud 
   *  linking to internal hash # that does not exist (line 187)
      <a href="#">Get Started</a>
 - ./x_cloud_output/js/mydoc_scroll.html
@@ -161,73 +122,53 @@ Ran on 26 files!
                 Weebly Cloud Developer Documentation</span></a>
   *  internally linking to images/favicon.ico, which does not exist (line 34)
      <link rel="shortcut icon" href="images/favicon.ico">
-  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
-     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+
   *  linking to internal hash # that does not exist (line 187)
      <a href="#">Get Started</a>
-  *  linking to internal hash # that does not exist (line 138)
-     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud Developer Docs feedback&amp;body=I have some feedback about the Scroll layout page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+the Scroll layout 
 - ./x_cloud_output/tag_apis.html
-  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
-     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
-  *  linking to internal hash # that does not exist (line 138)
-     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud Developer Docs feedback&amp;body=I have some feedback about the API Topics page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+
+the API Topics 
   *  linking to internal hash # that does not exist (line 187)
      <a href="#">Tag Pages</a>
 - ./x_cloud_output/tag_configuration.html
-  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
-     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
-  *  linking to internal hash # that does not exist (line 138)
-     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud Developer Docs feedback&amp;body=I have some feedback about the Configuration Topics page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+
+the Configuration Topics 
   *  linking to internal hash # that does not exist (line 187)
      <a href="#">Tag Pages</a>
 - ./x_cloud_output/tag_custom_apps.html
-  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
-     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+
   *  linking to internal hash # that does not exist (line 187)
      <a href="#">Tag Pages</a>
-  *  linking to internal hash # that does not exist (line 138)
-     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud Developer Docs feedback&amp;body=I have some feedback about the Custom App Topics page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+the Custom App Topics 
 - ./x_cloud_output/tag_getting_started.html
-  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
-     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+
   *  linking to internal hash # that does not exist (line 187)
      <a href="#">Tag Pages</a>
-  *  linking to internal hash # that does not exist (line 138)
-     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud Developer Docs feedback&amp;body=I have some feedback about the Getting Started Topics page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+the Getting Started Topics 
 - ./x_cloud_output/tag_plans.html
-  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
-     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+
   *  linking to internal hash # that does not exist (line 187)
      <a href="#">Tag Pages</a>
-  *  linking to internal hash # that does not exist (line 138)
-     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud Developer Docs feedback&amp;body=I have some feedback about the Plan Topics page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+the Plan Topics 
 - ./x_cloud_output/tag_plugins.html
-  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
-     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+
   *  linking to internal hash # that does not exist (line 187)
      <a href="#">Tag Pages</a>
-  *  linking to internal hash # that does not exist (line 138)
-     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud Developer Docs feedback&amp;body=I have some feedback about the Plug-in Topics page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+the Plug-in Topics 
 - ./x_cloud_output/tag_sites.html
-  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
-     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+
   *  linking to internal hash # that does not exist (line 187)
      <a href="#">Tag Pages</a>
-  *  linking to internal hash # that does not exist (line 138)
-     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud Developer Docs feedback&amp;body=I have some feedback about the Site Topics page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+the Site Topics 
 - ./x_cloud_output/tag_troubleshooting.html
-  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
-     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
-  *  linking to internal hash # that does not exist (line 138)
-     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud Developer Docs feedback&amp;body=I have some feedback about the Troubleshooting Topics page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+
+the Troubleshooting Topics 
   *  linking to internal hash # that does not exist (line 187)
      <a href="#">Tag Pages</a>
 - ./x_cloud_output/tag_users.html
-  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
-     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
-  *  linking to internal hash # that does not exist (line 138)
-     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud Developer Docs feedback&amp;body=I have some feedback about the User Topics page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+
+the User Topics 
   *  linking to internal hash # that does not exist (line 187)
      <a href="#">Tag Pages</a>
 htmlproofer 3.6.0 | Error:  HTML-Proofer found 105 failures!

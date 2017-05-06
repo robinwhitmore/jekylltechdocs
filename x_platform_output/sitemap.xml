@@ -8,13 +8,13 @@
   
   
   <url>
-    <loc>robinwhitmore.github.io/pf_glossary.html</loc>
+    <loc>http://localhost:4006/pf_glossary.html</loc>
   </url>
   
   
   
   <url>
-    <loc>robinwhitmore.github.io/home.html</loc>
+    <loc>http://localhost:4006/home.html</loc>
   </url>
   
   
@@ -22,67 +22,61 @@
   
   
   <url>
-    <loc>robinwhitmore.github.io/js/mydoc_scroll.html</loc>
+    <loc>http://localhost:4006/pf_apis_about.html</loc>
   </url>
   
   
   
   <url>
-    <loc>robinwhitmore.github.io/pf_apis_about.html</loc>
+    <loc>http://localhost:4006/pf_apis_page.html</loc>
   </url>
   
   
   
   <url>
-    <loc>robinwhitmore.github.io/pf_apis_page.html</loc>
+    <loc>http://localhost:4006/pf_apps_sample.html</loc>
   </url>
   
   
   
   <url>
-    <loc>robinwhitmore.github.io/pf_apps_sample.html</loc>
+    <loc>http://localhost:4006/pf_element_1.html</loc>
   </url>
   
   
   
   <url>
-    <loc>robinwhitmore.github.io/pf_element_1.html</loc>
+    <loc>http://localhost:4006/pf_element_2.html</loc>
   </url>
   
   
   
   <url>
-    <loc>robinwhitmore.github.io/pf_element_2.html</loc>
+    <loc>http://localhost:4006/pf_element_main.html</loc>
   </url>
   
   
   
   <url>
-    <loc>robinwhitmore.github.io/pf_element_main.html</loc>
+    <loc>http://localhost:4006/pf_tags_about.html</loc>
   </url>
   
   
   
   <url>
-    <loc>robinwhitmore.github.io/pf_tags_about.html</loc>
+    <loc>http://localhost:4006/pf_testGit.html</loc>
   </url>
   
   
   
   <url>
-    <loc>robinwhitmore.github.io/pf_testGit.html</loc>
+    <loc>http://localhost:4006/pf_themes_design_gl.html</loc>
   </url>
   
   
   
   <url>
-    <loc>robinwhitmore.github.io/pf_themes_design_gl.html</loc>
-  </url>
-  
-  
-  
-  <url>
-    <loc>robinwhitmore.github.io/pf_themes_gs.html</loc>
+    <loc>http://localhost:4006/pf_themes_gs.html</loc>
   </url>
   
   
