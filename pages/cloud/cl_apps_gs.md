@@ -1,7 +1,7 @@
 ---
 title: Get Started with Custom Weebly Apps
 keywords:
-type: [concepts]
+t_type: [concepts]
 tags: [getting_started, custom_apps]
 sidebar: cl_apps_sidebar
 permalink: cl_apps_gs.html

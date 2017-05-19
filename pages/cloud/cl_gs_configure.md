@@ -1,7 +1,7 @@
 ---
 title: Configure Weebly Cloud
 keywords:
-type: [task]
+t_type: [task]
 tags: [getting_started, configuration]
 sidebar: cl_gs_sidebar
 permalink: cl_gs_configure.html

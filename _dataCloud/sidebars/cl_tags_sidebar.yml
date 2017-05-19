@@ -8,7 +8,7 @@ entries:
 
 
   - title: Tag Pages
-    output: web, pdf
+    output: web
     folderitems:
 
     - title: What are tag pages?

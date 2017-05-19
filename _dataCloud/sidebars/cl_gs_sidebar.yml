@@ -6,64 +6,77 @@ entries:
   version:
   folders:
 
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage
+      output: pdf
+      type: frontmatter
+
 
   - title: Get Started
-    output: web
+    output: web, pdf
     folderitems:
 
     - title: Get Started with Weebly Cloud
       url: /home.html
-      output: web
+      output: web, pdf
       type: homepage
 
     - title: Integration Overview
       url: /cl_gs_integration.html
-      output: web
+      output: web, pdf
 
     - title: Creating Custom Apps
       url: /cl_gs_custom.html
-      output: web
+      output: web, pdf
 
     - title: Understanding Hosting Options
       url: /cl_gs_hosting.html
-      output: web
+      output: web, pdf
 
     - title: Configure Weebly Cloud
       url: /cl_gs_configure.html
-      output: web
+      output: web, pdf
 
     - title: Create Cloud Admin Users
       url: /cl_gs_admin_users.html
-      output: web
+      output: web, pdf
 
   - title: Integrate Weebly
-    output: web
+    output: web, pdf
     folderitems:
 
     - title: Create Plans
       url: /cl_gs_plans.html
-      output: web
+      output: web, pdf
 
     - title: Create and Manage Users
       url: /cl_gs_users.html
-      output: web
+      output: web, pdf
 
     - title: Create Sites
       url: /cl_gs_sites.html
-      output: web
+      output: web, pdf
 
   - title: Manage Weebly
-    output: web
+    output: web, pdf
     folderitems:
 
     - title: Handle Upgrades
       url: /cl_gs_upgrades.html
-      output: web
+      output: web, pdf
 
     - title: Provide SSO Access with a loginLink
       url: /cl_gs_loginlink.html
-      output: web
+      output: web, pdf
 
     - title: Suspend and Remove Sites
       url: /cl_gs_suspend.html
-      output: web
+      output: web, pdf

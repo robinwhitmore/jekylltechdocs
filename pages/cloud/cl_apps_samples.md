@@ -1,7 +1,7 @@
 ---
 title: Sample Applications
 keywords:
-type: [reference]
+t_type: [reference]
 tags: [getting_started, custom_apps]
 sidebar: cl_apps_sidebar
 permalink: cl_apps_samples.html

@@ -1,0 +1,48 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: Develop Weebly Apps
+  version:
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage
+      output: pdf
+      type: frontmatter
+
+  - title: Get Started with Apps
+    output: web, pdf
+    folderitems:
+
+    - title: Get Started with Developing Apps
+      url: /ds_apps_gs.html
+      output: web, pdf
+
+    - title: Sample Applications
+      url: /ds_apps_samples.html
+      output: web, pdf
+
+  - title: Tutorial&#58; Create an Element
+    output: web, pdf
+    folderitems:
+
+    - title: Create an Element
+      url: /ds_element_main.html
+      output: web, pdf
+
+    - title: 1. Design the Element
+      url: /ds_element_1.html
+      output: web, pdf
+
+    - title: 2. Register the Element
+      url: /ds_element_2.html
+      output: web, pdf

@@ -21,3 +21,19 @@
 {% else %}
 {% assign sidebar = site.data.sidebars.other.entries %}
 {% endif %}
+
+{% comment %}
+sidebar configuration for print files
+{% endcomment %}
+
+{% if site.product == "cloud_gs" %}
+{% assign sidebar_pdf = site.data.sidebars.cl_gs_sidebar.entries %}
+{% endif %}
+
+{% if site.product == "cloud_apis" %}
+{% assign sidebar_pdf = site.data.sidebars.cl_apis_sidebar.entries %}
+{% endif %}
+
+{% if site.product == "cloud_apps" %}
+{% assign sidebar_pdf = site.data.sidebars.cl_apps_sidebar.entries %}
+{% endif %}

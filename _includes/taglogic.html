@@ -8,7 +8,7 @@
         {% if tag == thisTag %}
 
         <tr><td><a href="{{ page.url | remove: "/" }}">{{page.title}}</a></td>
-            <td>{% for type in page.type %} {{page.typeName}} <span class="label label-default">{{type}} </span>{% endfor %}</td>
+            <td>{% for t_type in page.t_type %} {{page.t_typeName}} <span class="label label-default">{{t_type}} </span>{% endfor %}</td>
           <td>{% if page.summary %} {{ page.summary | strip_html | strip_newlines | truncate: 160 }} {% else %} {{ page.content | truncatewords: 50 | strip_html }} {% endif %}</td>
         </tr>
         {% endif %}

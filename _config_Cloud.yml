@@ -106,4 +106,4 @@ description: "Everything you need to install, configure, and manage Weebly Cloud
 
 # needed for sitemap.xml file only
 url: robinwhitmore.github.io
-baseurl: /jekylltechdocs
+baseurl:

@@ -1,7 +1,7 @@
 ---
 title: Page API
 keywords:
-type: [reference]
+t_type: [reference]
 tags: [apis]
 sidebar: cl_apis_sidebar
 permalink: cl_apis_page.html
