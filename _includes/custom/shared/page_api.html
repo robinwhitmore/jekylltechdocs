@@ -110,7 +110,7 @@
 {% if site.project == "platform" %}
 GET /v1/user/sites/{SITE_ID}/pages
 
-{% elsif site.project == "cloud" %}
+{% else %}
 GET /user/USER_ID/site/{SITE_ID}/page
 {% endif %}
 {% endhighlight %}
@@ -185,7 +185,7 @@ curl --request GET \
   --header 'content-type: application/json' \
   --header 'x-weebly-access-token: [YOUR_TOKEN]"
 
-{% elsif site.project == "cloud" %}
+{% else %}
 curl https://api.weeblycloud.com/user/USER_ID/site/SITE_ID/page \
  -H "X-Public-Key: YOURAPIKEY" \
  -H "X-Signed-Request-Hash: YOURSECRETHASH"
@@ -201,7 +201,7 @@ curl --request GET \
   --header 'content-type: application/json' \
   --header 'x-weebly-access-token: [YOUR_TOKEN]"
 
-{% elsif site.project == "cloud" %}
+{% else %}
 curl https://api.weeblycloud.com/user/USER_ID/site/SITE_ID/page?filterby=layout&filterfor=tall-header \
  -H "X-Public-Key: YOURAPIKEY" \
  -H "X-Signed-Request-Hash: YOURSECRETHASH"

@@ -17,8 +17,8 @@
                </div>
 
                 {% if tagName == "getting_started" %}
-                    {% if site.project == "cloud" %}
-                   <p>Learn all about how to set up and configure Weebly Cloud</p>
+                    {% if site.project != "platform" %}
+                   <p>Learn all about how to set up and configure {{site.name}}</p>
                     {% elsif site.project == "platform" %}
                     <p>Start creating your app!</p>
                 {% endif %}

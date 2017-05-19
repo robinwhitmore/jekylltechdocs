@@ -13,7 +13,7 @@ app icon
 backend service
 : {{site.data.glossary.backend_service}}
 
-{% if site.project == "cloud" %}
+{% if site.project != "platform" %}
 Cloud Admin
 : {{site.data.glossary.Cloud_Admin}}
 {% endif %}
@@ -66,17 +66,17 @@ page types
 partial
 : {{site.data.glossary.partial}}
 
-{% if site.project == "cloud" %}
+{% if site.project != "platform" %}
 plan
 : {{site.data.glossary.plan}}
 {% endif %}
 
-{% if site.project == "cloud" %}
+{% if site.project != "platform" %}
 plug-in
 : {{site.data.glossary.plugin}}
 {% endif %}
 
-{% if site.project == "cloud" %}
+{% if site.project != "platform" %}
 site access link
 : {{site.data.glossary.site_access_link}}
 {% endif %}
@@ -92,12 +92,12 @@ Site Home page
 snippet
 : {{site.data.glossary.snippet}}
 
-{% if site.project == "cloud" %}
+{% if site.project != "platform" %}
 team member
 : {{site.data.glossary.team_member}}
 {% endif %}
 
-{% if site.project == "cloud" %}
+{% if site.project != "platform" %}
 test mode
 : {{site.data.glossary.test_mode}}
 {% endif %}

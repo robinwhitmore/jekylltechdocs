@@ -1,0 +1,13 @@
+---
+title: About the Weebly Cloud for Designer REST APIs
+keywords:
+t_type: [concepts, procedure]
+tags: [apis, getting_started]
+sidebar: ds_apis_sidebar
+permalink: ds_apis_about.html
+endpoint: "https://api.weeblycloud.com"
+summary: Weebly APIs are provided using REST over HTTPS and utilize the HTTP verbs GET, POST, PUT, PATCH and DELETE. We provide a number of client libraries to help get you started. See the following sections for more general information about using our APIs.
+---
+{% include custom/shared/api_about.md %}
+{% include custom/cloud_des/api_about.md %}
+

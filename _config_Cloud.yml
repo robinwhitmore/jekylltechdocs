@@ -94,6 +94,10 @@ portal: "Cloud Admin"
 
 portal_url: https://weeblycloud.com/admin
 
+customer: "customer"
+
+name: "Cloud"
+
 sidebars:
 - cl_gs_sidebar
 - cl_apps_sidebar

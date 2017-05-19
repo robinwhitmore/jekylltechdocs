@@ -1,4 +1,4 @@
-{% if site.project == "cloud" %}
+{% unless site.project == "platform" %}
 ## Client Libraries
 
 Looking for an easy way to get started with our API rather than having to piece it all together yourself? Install one of our client libraries! These libraries make it easy to interact with our API&#58;
@@ -14,7 +14,7 @@ Looking for an easy way to get started with our API rather than having to piece 
 * <a href="https://github.com/Weebly/cloud-client-python">Python</a>
 * <a href="https://github.com/Weebly/cloud-client-java">Java</a>
 
-{% endif %}
+{% endunless %}
 
 ## Endpoint
 The endpoint is: `{{page.endpoint}}`
@@ -94,7 +94,7 @@ When you expect the result set to be greater than 25, use these parameters to de
 For example, this CURL request to the Site API returns the second page of result sets.
 
 
-{% if site.project == "cloud" %}
+{% if site.project != "platform" %}
 {% highlight shell%}
 curl https://api.weeblycloud.com/user/USER_ID/site?page=2&limit=25  \
 -H "X-Public-Key: YOURAPIKEY" \

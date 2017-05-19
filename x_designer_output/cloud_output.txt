@@ -1,0 +1,128 @@
+Running ["ScriptCheck", "LinkCheck", "ImageCheck"] on ["./x_cloud_output"] on *.html... 
+
+
+Checking 22 external links...
+Ran on 25 files!
+
+
+- ./x_cloud_output/404.html
+  *  internally linking to cl_gs_admin_users.html, which does not exist (line 228)
+     <a href="cl_gs_admin_users.html">Create Cloud Admin Users</a>
+  *  internally linking to cl_gs_custom.html, which does not exist (line 207)
+     <a href="cl_gs_custom.html">Creating Custom Apps</a>
+  *  internally linking to cl_gs_hosting.html, which does not exist (line 214)
+     <a href="cl_gs_hosting.html">Understanding Hosting Options</a>
+  *  internally linking to cl_gs_integration.html, which does not exist (line 200)
+     <a href="cl_gs_integration.html">Integration Overview</a>
+  *  internally linking to cl_gs_loginlink.html, which does not exist (line 279)
+     <a href="cl_gs_loginlink.html">Provide SSO Access with a loginLink</a>
+  *  internally linking to cl_gs_plans.html, which does not exist (line 243)
+     <a href="cl_gs_plans.html">Create Plans</a>
+  *  internally linking to cl_gs_sites.html, which does not exist (line 257)
+     <a href="cl_gs_sites.html">Create Sites</a>
+  *  internally linking to cl_gs_suspend.html, which does not exist (line 286)
+     <a href="cl_gs_suspend.html">Suspend and Remove Sites</a>
+  *  internally linking to cl_gs_upgrades.html, which does not exist (line 272)
+     <a href="cl_gs_upgrades.html">Handle Upgrades</a>
+  *  internally linking to cl_gs_users.html, which does not exist (line 250)
+     <a href="cl_gs_users.html">Create and Manage Users</a>
+- ./x_cloud_output/cl_apis_page.html
+  *  internally linking to /membership-api.html, which does not exist (line 354)
+     <a href="/membership-api.html">membership</a>
+- ./x_cloud_output/cl_apps_samples.html
+  *  image images/sh_priceChart.png does not have an alt attribute (line 305)
+- ./x_cloud_output/cl_element_2.html
+  *  image images/cl_apps.png does not have an alt attribute (line 353)
+- ./x_cloud_output/cl_glossary.html
+  *  internally linking to cl_gs_admin_users.html, which does not exist (line 228)
+     <a href="cl_gs_admin_users.html">Create Cloud Admin Users</a>
+  *  internally linking to cl_gs_custom.html, which does not exist (line 207)
+     <a href="cl_gs_custom.html">Creating Custom Apps</a>
+  *  internally linking to cl_gs_hosting.html, which does not exist (line 214)
+     <a href="cl_gs_hosting.html">Understanding Hosting Options</a>
+  *  internally linking to cl_gs_integration.html, which does not exist (line 200)
+     <a href="cl_gs_integration.html">Integration Overview</a>
+  *  internally linking to cl_gs_loginlink.html, which does not exist (line 279)
+     <a href="cl_gs_loginlink.html">Provide SSO Access with a loginLink</a>
+  *  internally linking to cl_gs_plans.html, which does not exist (line 243)
+     <a href="cl_gs_plans.html">Create Plans</a>
+  *  internally linking to cl_gs_sites.html, which does not exist (line 257)
+     <a href="cl_gs_sites.html">Create Sites</a>
+  *  internally linking to cl_gs_suspend.html, which does not exist (line 286)
+     <a href="cl_gs_suspend.html">Suspend and Remove Sites</a>
+  *  internally linking to cl_gs_upgrades.html, which does not exist (line 272)
+     <a href="cl_gs_upgrades.html">Handle Upgrades</a>
+  *  internally linking to cl_gs_users.html, which does not exist (line 250)
+     <a href="cl_gs_users.html">Create and Manage Users</a>
+- ./x_cloud_output/cl_gs_configure.html
+  *  image images/cl_settings_footerName.png does not have an alt attribute (line 359)
+  *  image images/cl_settings_mail.png does not have an alt attribute (line 362)
+  *  internally linking to cl_gs_admin_users.html, which does not exist (line 228)
+     <a href="cl_gs_admin_users.html">Create Cloud Admin Users</a>
+  *  internally linking to cl_gs_custom.html, which does not exist (line 207)
+     <a href="cl_gs_custom.html">Creating Custom Apps</a>
+  *  internally linking to cl_gs_hosting.html, which does not exist (line 214)
+     <a href="cl_gs_hosting.html">Understanding Hosting Options</a>
+  *  internally linking to cl_gs_integration.html, which does not exist (line 200)
+     <a href="cl_gs_integration.html">Integration Overview</a>
+  *  internally linking to cl_gs_loginlink.html, which does not exist (line 279)
+     <a href="cl_gs_loginlink.html">Provide SSO Access with a loginLink</a>
+  *  internally linking to cl_gs_plans.html, which does not exist (line 243)
+     <a href="cl_gs_plans.html">Create Plans</a>
+  *  internally linking to cl_gs_sites.html, which does not exist (line 257)
+     <a href="cl_gs_sites.html">Create Sites</a>
+  *  internally linking to cl_gs_suspend.html, which does not exist (line 286)
+     <a href="cl_gs_suspend.html">Suspend and Remove Sites</a>
+  *  internally linking to cl_gs_upgrades.html, which does not exist (line 272)
+     <a href="cl_gs_upgrades.html">Handle Upgrades</a>
+  *  internally linking to cl_gs_users.html, which does not exist (line 250)
+     <a href="cl_gs_users.html">Create and Manage Users</a>
+- ./x_cloud_output/cl_testGit.html
+  *  internally linking to cl_gs_admin_users.html, which does not exist (line 228)
+     <a href="cl_gs_admin_users.html">Create Cloud Admin Users</a>
+  *  internally linking to cl_gs_custom.html, which does not exist (line 207)
+     <a href="cl_gs_custom.html">Creating Custom Apps</a>
+  *  internally linking to cl_gs_hosting.html, which does not exist (line 214)
+     <a href="cl_gs_hosting.html">Understanding Hosting Options</a>
+  *  internally linking to cl_gs_integration.html, which does not exist (line 200)
+     <a href="cl_gs_integration.html">Integration Overview</a>
+  *  internally linking to cl_gs_loginlink.html, which does not exist (line 279)
+     <a href="cl_gs_loginlink.html">Provide SSO Access with a loginLink</a>
+  *  internally linking to cl_gs_plans.html, which does not exist (line 243)
+     <a href="cl_gs_plans.html">Create Plans</a>
+  *  internally linking to cl_gs_sites.html, which does not exist (line 257)
+     <a href="cl_gs_sites.html">Create Sites</a>
+  *  internally linking to cl_gs_suspend.html, which does not exist (line 286)
+     <a href="cl_gs_suspend.html">Suspend and Remove Sites</a>
+  *  internally linking to cl_gs_upgrades.html, which does not exist (line 272)
+     <a href="cl_gs_upgrades.html">Handle Upgrades</a>
+  *  internally linking to cl_gs_users.html, which does not exist (line 250)
+     <a href="cl_gs_users.html">Create and Manage Users</a>
+- ./x_cloud_output/glossary.html
+  *  anchor has no href attribute (line 1)
+     <a data-container="body" data-toggle="popover" data-content="{{site.data.glossary.OAuth}}"></a>
+- ./x_cloud_output/home.html
+  *  image images/cl_editorBranded.png does not have an alt attribute (line 380)
+  *  internally linking to cl_api_user, which does not exist (line 369)
+     <a href="cl_api_user">User API</a>
+  *  internally linking to cl_gs_admin_users.html, which does not exist (line 228)
+     <a href="cl_gs_admin_users.html">Create Cloud Admin Users</a>
+  *  internally linking to cl_gs_custom.html, which does not exist (line 207)
+     <a href="cl_gs_custom.html">Creating Custom Apps</a>
+  *  internally linking to cl_gs_hosting.html, which does not exist (line 214)
+     <a href="cl_gs_hosting.html">Understanding Hosting Options</a>
+  *  internally linking to cl_gs_integration.html, which does not exist (line 200)
+     <a href="cl_gs_integration.html">Integration Overview</a>
+  *  internally linking to cl_gs_loginlink.html, which does not exist (line 279)
+     <a href="cl_gs_loginlink.html">Provide SSO Access with a loginLink</a>
+  *  internally linking to cl_gs_plans.html, which does not exist (line 243)
+     <a href="cl_gs_plans.html">Create Plans</a>
+  *  internally linking to cl_gs_sites.html, which does not exist (line 257)
+     <a href="cl_gs_sites.html">Create Sites</a>
+  *  internally linking to cl_gs_suspend.html, which does not exist (line 286)
+     <a href="cl_gs_suspend.html">Suspend and Remove Sites</a>
+  *  internally linking to cl_gs_upgrades.html, which does not exist (line 272)
+     <a href="cl_gs_upgrades.html">Handle Upgrades</a>
+  *  internally linking to cl_gs_users.html, which does not exist (line 250)
+     <a href="cl_gs_users.html">Create and Manage Users</a>
+htmlproofer 3.6.0 | Error:  HTML-Proofer found 58 failures!
