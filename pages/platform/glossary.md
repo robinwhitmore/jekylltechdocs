@@ -1,7 +1,7 @@
 ---
 title: Glossary
 keywords:
-type: [reference]
+t_type: [reference]
 tags: [getting_started]
 sidebar: pf_apps_sidebar
 permalink: pf_glossary.html

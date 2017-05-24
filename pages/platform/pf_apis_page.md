@@ -1,7 +1,7 @@
 ---
 title: Pages APIs
 keywords:
-type: [reference]
+t_type: [reference]
 tags: [apis]
 sidebar: pf_apis_sidebar
 permalink: pf_apis_page.html

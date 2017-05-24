@@ -1,7 +1,7 @@
 ---
 title: Sample Applications
 keywords:
-type: [reference]
+t_type: [reference]
 tags: [getting_started, elements, backend_services]
 sidebar: pf_apps_sidebar
 permalink: pf_apps_sample.html

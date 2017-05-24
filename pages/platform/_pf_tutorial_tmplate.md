@@ -2,7 +2,7 @@
 title:
 layout: tutorial.html
 keywords:
-type: [tutorial]
+t_type: [tutorial]
 tags: [getting_started, requirements, elements, backend_services, snippets, dashboard_cards, manifest, configuration, development, testing, app_revenue, reviews, oauth, apis, webhooks, troubleshooting]
 sidebar: pf_[X]_sidebar
 permalink: pf_[X].html

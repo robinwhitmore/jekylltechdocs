@@ -1,0 +1,161 @@
+[
+
+
+
+
+{
+"title": "About the Weebly Cloud for Designer REST APIs",
+"tags": "apisgetting_started",
+"keywords": "",
+"url": "ds_apis_about.html",
+"summary": "Weebly APIs are provided using REST over HTTPS and utilize the HTTP verbs GET, POST, PUT, PATCH and DELETE. We provide a number of client libraries to help get you started. See the following sections for more general information about using our APIs."
+}
+,
+
+
+
+{
+"title": "Page API",
+"tags": "apispages",
+"keywords": "",
+"url": "ds_apis_page.html",
+"summary": "The Pages API provides methods for reading and updating information about the pages for a given user's site."
+}
+,
+
+
+
+{
+"title": "Get Started with Custom Weebly Apps",
+"tags": "getting_startedcustom_apps",
+"keywords": "",
+"url": "ds_apps_gs.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Sample Applications",
+"tags": "getting_startedcustom_apps",
+"keywords": "",
+"url": "ds_apps_samples.html",
+"summary": "This page contains downloadable sample application bundles. Feel free to download, inspect, and modify any of these applications. Each application comes in a working state, and can be downloaded and immediately uploaded into your developer account."
+}
+,
+
+
+
+{
+"title": "1. Design the Element",
+"tags": "getting_startedcustom_apps",
+"keywords": "",
+"url": "ds_element_1.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "2. Register the App",
+"tags": "getting_startedcustom_apps",
+"keywords": "",
+"url": "ds_element_2.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Tutorial&amp;#58; Create an Element",
+"tags": "getting_startedcustom_apps",
+"keywords": "",
+"url": "ds_element_main.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Configure Weebly Cloud",
+"tags": "getting_startedconfiguration",
+"keywords": "",
+"url": "ds_gs_configure.html",
+"summary": "You use the Settings tab of the Weebly Cloud Admin portal to configure your cloud account. You can add your logo and other company links and contact info, configure locale settings like time and date, set up messages for our support team, set up your domain and URLs, contacts, and access your API keys."
+}
+,
+
+
+
+{
+"title": "What are Tag Pages?",
+"tags": "",
+"keywords": "",
+"url": "ds_tags_about.html",
+"summary": "Use tags to find topics based on subject matter."
+}
+,
+
+
+
+{
+"title": "Glossary",
+"tags": "getting_started",
+"keywords": "",
+"url": "cl_glossary.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Get Started with Weebly Cloud for Designers",
+"tags": "getting_started",
+"keywords": "",
+"url": "home.html",
+"summary": "Welcome to Weebly Cloud for Designers! With Weebly Cloud, you use Weebly’s best-in-class website builder to create websites, blogs or online stores in minutes for your clients, while you maintain full control over billing, support, and the customer relationship."
+}
+,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]

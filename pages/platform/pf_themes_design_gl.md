@@ -1,7 +1,7 @@
 ---
 title: Themes Design Guidelines
 keywords:
-type: [concepts]
+t_type: [concepts]
 tags: [getting_started]
 sidebar: pf_themes_sidebar
 permalink: pf_themes_design_gl.html

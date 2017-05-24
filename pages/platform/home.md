@@ -1,7 +1,7 @@
 ---
 title: Get Started with Apps
 keywords:
-type: [concepts]
+t_type: [concepts]
 tags: [getting_started]
 sidebar: pf_apps_sidebar
 permalink: home.html

@@ -1,0 +1,638 @@
+Running ["ScriptCheck", "ImageCheck", "LinkCheck"] on ["./x_platform_output"] on *.html... 
+
+
+Checking 22 external links...
+Ran on 32 files!
+
+
+- ./x_platform_output/404.html
+  *  internally linking to pf_apps_UI.html, which does not exist (line 217)
+     <a href="pf_apps_UI.html">Working in the Weebly UI</a>
+  *  internally linking to pf_apps_authenticate.html, which does not exist (line 333)
+     <a href="pf_apps_authenticate.html">Authenticate a User from Weebly</a>
+  *  internally linking to pf_apps_authorize_and_install.html, which does not exist (line 326)
+     <a href="pf_apps_authorize_and_install.html">App Authorization and Install Flow</a>
+  *  internally linking to pf_apps_backend.html, which does not exist (line 348)
+     <a href="pf_apps_backend.html">Create a Backend Service</a>
+  *  internally linking to pf_apps_dashboard_cards.html, which does not exist (line 385)
+     <a href="pf_apps_dashboard_cards.html">What are Dashboard Cards</a>
+  *  internally linking to pf_apps_dashboard_cards_text.html, which does not exist (line 392)
+     <a href="pf_apps_dashboard_cards_text.html">Text Component</a>
+  *  internally linking to pf_apps_demo.html, which does not exist (line 289)
+     <a href="pf_apps_demo.html">Create a Demo Site for Your App</a>
+  *  internally linking to pf_apps_devAccount.html, which does not exist (line 203)
+     <a href="pf_apps_devAccount.html">Create a Developer Account</a>
+  *  internally linking to pf_apps_develop.html, which does not exist (line 253)
+     <a href="pf_apps_develop.html">Develop an App</a>
+  *  internally linking to pf_apps_doc_updates.html, which does not exist (line 422)
+     <a href="pf_apps_doc_updates.html">Topic Updates</a>
+  *  internally linking to pf_apps_element_design_guidelines.html, which does not exist (line 370)
+     <a href="pf_apps_element_design_guidelines.html">Element Design Guidelines</a>
+  *  internally linking to pf_apps_elements.html, which does not exist (line 363)
+     <a href="pf_apps_elements.html">What are Elements</a>
+  *  internally linking to pf_apps_email_addresses.html, which does not exist (line 231)
+     <a href="pf_apps_email_addresses.html">Why Different Email Addresses?</a>
+  *  internally linking to pf_apps_featured.html, which does not exist (line 304)
+     <a href="pf_apps_featured.html">How to Get Your App Featured</a>
+  *  internally linking to pf_apps_legal.html, which does not exist (line 238)
+     <a href="pf_apps_legal.html">Legal Agreements</a>
+  *  internally linking to pf_apps_listing.html, which does not exist (line 282)
+     <a href="pf_apps_listing.html">Create Your App Center Listing</a>
+  *  internally linking to pf_apps_manage.html, which does not exist (line 267)
+     <a href="pf_apps_manage.html">Manage Your App</a>
+  *  internally linking to pf_apps_policy_requirements.html, which does not exist (line 224)
+     <a href="pf_apps_policy_requirements.html">App Policy Requirements</a>
+  *  internally linking to pf_apps_promote.html, which does not exist (line 311)
+     <a href="pf_apps_promote.html">Promote Your App</a>
+  *  internally linking to pf_apps_register.html, which does not exist (line 260)
+     <a href="pf_apps_register.html">Register Your App</a>
+  *  internally linking to pf_apps_troubleshooting.html, which does not exist (line 407)
+     <a href="pf_apps_troubleshooting.html">Troubleshooting</a>
+  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
+     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+  *  linking to internal hash # that does not exist (line 343)
+     <a href="#">Create a Backend Service</a>
+  *  linking to internal hash # that does not exist (line 142)
+     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&amp;body=I have some feedback about the Page Not Found page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  *  linking to internal hash # that does not exist (line 191)
+     <a href="#">Get Started</a>
+  *  linking to internal hash # that does not exist (line 248)
+     <a href="#">Develop an App</a>
+  *  linking to internal hash # that does not exist (line 277)
+     <a href="#">Get Your App Ready to Publish</a>
+  *  linking to internal hash # that does not exist (line 299)
+     <a href="#">Maintain Your App Post Publication</a>
+  *  linking to internal hash # that does not exist (line 321)
+     <a href="#">App Installation Flow and Authentication</a>
+  *  linking to internal hash # that does not exist (line 358)
+     <a href="#">Create an Element</a>
+  *  linking to internal hash # that does not exist (line 380)
+     <a href="#">Create a Dashboard Card</a>
+  *  linking to internal hash # that does not exist (line 402)
+     <a href="#">Troubleshooting</a>
+  *  linking to internal hash # that does not exist (line 417)
+     <a href="#">Topic Updates</a>
+  *  linking to internal hash # that does not exist (line 432)
+     <a href="#">Glossary</a>
+- ./x_platform_output/glossary.html
+  *  anchor has no href attribute (line 1)
+     <a data-container="body" data-toggle="popover" data-content="{{site.data.glossary.OAuth}}"></a>
+- ./x_platform_output/home.html
+  *  image images/pl_backend_paidmembership.png does not have an alt attribute (line 524)
+  *  internally linking to pf_apps_UI.html, which does not exist (line 217)
+     <a href="pf_apps_UI.html">Working in the Weebly UI</a>
+  *  internally linking to pf_apps_authenticate.html, which does not exist (line 333)
+     <a href="pf_apps_authenticate.html">Authenticate a User from Weebly</a>
+  *  internally linking to pf_apps_authorize_and_install.html, which does not exist (line 326)
+     <a href="pf_apps_authorize_and_install.html">App Authorization and Install Flow</a>
+  *  internally linking to pf_apps_backend.html, which does not exist (line 348)
+     <a href="pf_apps_backend.html">Create a Backend Service</a>
+  *  internally linking to pf_apps_dashboard_cards.html, which does not exist (line 385)
+     <a href="pf_apps_dashboard_cards.html">What are Dashboard Cards</a>
+  *  internally linking to pf_apps_dashboard_cards_text.html, which does not exist (line 392)
+     <a href="pf_apps_dashboard_cards_text.html">Text Component</a>
+  *  internally linking to pf_apps_demo.html, which does not exist (line 289)
+     <a href="pf_apps_demo.html">Create a Demo Site for Your App</a>
+  *  internally linking to pf_apps_devAccount.html, which does not exist (line 203)
+     <a href="pf_apps_devAccount.html">Create a Developer Account</a>
+  *  internally linking to pf_apps_develop.html, which does not exist (line 253)
+     <a href="pf_apps_develop.html">Develop an App</a>
+  *  internally linking to pf_apps_doc_updates.html, which does not exist (line 422)
+     <a href="pf_apps_doc_updates.html">Topic Updates</a>
+  *  internally linking to pf_apps_element_design_guidelines.html, which does not exist (line 370)
+     <a href="pf_apps_element_design_guidelines.html">Element Design Guidelines</a>
+  *  internally linking to pf_apps_elements.html, which does not exist (line 363)
+     <a href="pf_apps_elements.html">What are Elements</a>
+  *  internally linking to pf_apps_email_addresses.html, which does not exist (line 231)
+     <a href="pf_apps_email_addresses.html">Why Different Email Addresses?</a>
+  *  internally linking to pf_apps_featured.html, which does not exist (line 304)
+     <a href="pf_apps_featured.html">How to Get Your App Featured</a>
+  *  internally linking to pf_apps_legal.html, which does not exist (line 238)
+     <a href="pf_apps_legal.html">Legal Agreements</a>
+  *  internally linking to pf_apps_listing.html, which does not exist (line 282)
+     <a href="pf_apps_listing.html">Create Your App Center Listing</a>
+  *  internally linking to pf_apps_manage.html, which does not exist (line 267)
+     <a href="pf_apps_manage.html">Manage Your App</a>
+  *  internally linking to pf_apps_policy_requirements.html, which does not exist (line 224)
+     <a href="pf_apps_policy_requirements.html">App Policy Requirements</a>
+  *  internally linking to pf_apps_promote.html, which does not exist (line 311)
+     <a href="pf_apps_promote.html">Promote Your App</a>
+  *  internally linking to pf_apps_register.html, which does not exist (line 260)
+     <a href="pf_apps_register.html">Register Your App</a>
+  *  internally linking to pf_apps_troubleshooting.html, which does not exist (line 407)
+     <a href="pf_apps_troubleshooting.html">Troubleshooting</a>
+  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
+     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+  *  linking to internal hash # that does not exist (line 321)
+     <a href="#">App Installation Flow and Authentication</a>
+  *  linking to internal hash # that does not exist (line 358)
+     <a href="#">Create an Element</a>
+  *  linking to internal hash # that does not exist (line 299)
+     <a href="#">Maintain Your App Post Publication</a>
+  *  linking to internal hash # that does not exist (line 277)
+     <a href="#">Get Your App Ready to Publish</a>
+  *  linking to internal hash # that does not exist (line 380)
+     <a href="#">Create a Dashboard Card</a>
+  *  linking to internal hash # that does not exist (line 248)
+     <a href="#">Develop an App</a>
+  *  linking to internal hash # that does not exist (line 191)
+     <a href="#">Get Started</a>
+  *  linking to internal hash # that does not exist (line 402)
+     <a href="#">Troubleshooting</a>
+  *  linking to internal hash # that does not exist (line 417)
+     <a href="#">Topic Updates</a>
+  *  linking to internal hash # that does not exist (line 142)
+     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&amp;body=I have some feedback about the Get Started with Apps page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  *  linking to internal hash # that does not exist (line 432)
+     <a href="#">Glossary</a>
+  *  linking to internal hash # that does not exist (line 343)
+     <a href="#">Create a Backend Service</a>
+- ./x_platform_output/js/mydoc_scroll.html
+  *  internal image images/company_logo.png does not exist (line 758)
+  *  internal script js/customscripts.js does not exist (line 32)
+  *  internal script js/jekyll-search.js does not exist (line 154)
+  *  internal script js/jquery.navgoco.min.js does not exist (line 26)
+  *  internal script js/toc.js does not exist (line 31)
+  *  internally linking to css/customstyles.css, which does not exist (line 16)
+     <link rel="stylesheet" href="css/customstyles.css">
+  *  internally linking to css/lavish-bootstrap.css, which does not exist (line 15)
+     <link rel="stylesheet" href="css/lavish-bootstrap.css">
+  *  internally linking to css/modern-business.css, which does not exist (line 14)
+     <link rel="stylesheet" href="css/modern-business.css">
+  *  internally linking to css/syntax.css, which does not exist (line 9)
+     <link rel="stylesheet" href="css/syntax.css">
+  *  internally linking to css/theme-blue.css, which does not exist (line 17)
+     <link rel="stylesheet" href="css/theme-blue.css">
+  *  internally linking to home.html, which does not exist (line 118)
+     <a href="home.html">Develop Apps</a>
+  *  internally linking to home.html, which does not exist (line 196)
+     <a href="home.html">Get Started with Developing Apps</a>
+  *  internally linking to home.html, which does not exist (line 109)
+     <a class="fa fa-home fa-lg navbar-brand" href="home.html"> <span class="projectTitle">
+                Weebly Developer Documentation</span></a>
+  *  internally linking to images/favicon.ico, which does not exist (line 34)
+     <link rel="shortcut icon" href="images/favicon.ico">
+  *  internally linking to pf_apis_about.html, which does not exist (line 126)
+     <a href="pf_apis_about.html">APIs</a>
+  *  internally linking to pf_apps_UI.html, which does not exist (line 217)
+     <a href="pf_apps_UI.html">Working in the Weebly UI</a>
+  *  internally linking to pf_apps_authenticate.html, which does not exist (line 333)
+     <a href="pf_apps_authenticate.html">Authenticate a User from Weebly</a>
+  *  internally linking to pf_apps_authorize_and_install.html, which does not exist (line 326)
+     <a href="pf_apps_authorize_and_install.html">App Authorization and Install Flow</a>
+  *  internally linking to pf_apps_backend.html, which does not exist (line 348)
+     <a href="pf_apps_backend.html">Create a Backend Service</a>
+  *  internally linking to pf_apps_dashboard_cards.html, which does not exist (line 385)
+     <a href="pf_apps_dashboard_cards.html">What are Dashboard Cards</a>
+  *  internally linking to pf_apps_dashboard_cards_text.html, which does not exist (line 392)
+     <a href="pf_apps_dashboard_cards_text.html">Text Component</a>
+  *  internally linking to pf_apps_demo.html, which does not exist (line 289)
+     <a href="pf_apps_demo.html">Create a Demo Site for Your App</a>
+  *  internally linking to pf_apps_devAccount.html, which does not exist (line 203)
+     <a href="pf_apps_devAccount.html">Create a Developer Account</a>
+  *  internally linking to pf_apps_develop.html, which does not exist (line 253)
+     <a href="pf_apps_develop.html">Develop an App</a>
+  *  internally linking to pf_apps_doc_updates.html, which does not exist (line 422)
+     <a href="pf_apps_doc_updates.html">Topic Updates</a>
+  *  internally linking to pf_apps_element_design_guidelines.html, which does not exist (line 370)
+     <a href="pf_apps_element_design_guidelines.html">Element Design Guidelines</a>
+  *  internally linking to pf_apps_elements.html, which does not exist (line 363)
+     <a href="pf_apps_elements.html">What are Elements</a>
+  *  internally linking to pf_apps_email_addresses.html, which does not exist (line 231)
+     <a href="pf_apps_email_addresses.html">Why Different Email Addresses?</a>
+  *  internally linking to pf_apps_featured.html, which does not exist (line 304)
+     <a href="pf_apps_featured.html">How to Get Your App Featured</a>
+  *  internally linking to pf_apps_legal.html, which does not exist (line 238)
+     <a href="pf_apps_legal.html">Legal Agreements</a>
+  *  internally linking to pf_apps_listing.html, which does not exist (line 282)
+     <a href="pf_apps_listing.html">Create Your App Center Listing</a>
+  *  internally linking to pf_apps_manage.html, which does not exist (line 267)
+     <a href="pf_apps_manage.html">Manage Your App</a>
+  *  internally linking to pf_apps_policy_requirements.html, which does not exist (line 224)
+     <a href="pf_apps_policy_requirements.html">App Policy Requirements</a>
+  *  internally linking to pf_apps_promote.html, which does not exist (line 311)
+     <a href="pf_apps_promote.html">Promote Your App</a>
+  *  internally linking to pf_apps_register.html, which does not exist (line 260)
+     <a href="pf_apps_register.html">Register Your App</a>
+  *  internally linking to pf_apps_sample.html, which does not exist (line 210)
+     <a href="pf_apps_sample.html">Sample Applications</a>
+  *  internally linking to pf_apps_troubleshooting.html, which does not exist (line 407)
+     <a href="pf_apps_troubleshooting.html">Troubleshooting</a>
+  *  internally linking to pf_element_main.html, which does not exist (line 130)
+     <a href="pf_element_main.html">Tutorials</a>
+  *  internally linking to pf_glossary.html, which does not exist (line 437)
+     <a href="pf_glossary.html">Glossary</a>
+  *  internally linking to pf_themes_gs.html, which does not exist (line 122)
+     <a href="pf_themes_gs.html">Develop Themes</a>
+  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
+     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+  *  linking to internal hash # that does not exist (line 432)
+     <a href="#">Glossary</a>
+  *  linking to internal hash # that does not exist (line 277)
+     <a href="#">Get Your App Ready to Publish</a>
+  *  linking to internal hash # that does not exist (line 299)
+     <a href="#">Maintain Your App Post Publication</a>
+  *  linking to internal hash # that does not exist (line 321)
+     <a href="#">App Installation Flow and Authentication</a>
+  *  linking to internal hash # that does not exist (line 248)
+     <a href="#">Develop an App</a>
+  *  linking to internal hash # that does not exist (line 343)
+     <a href="#">Create a Backend Service</a>
+  *  linking to internal hash # that does not exist (line 358)
+     <a href="#">Create an Element</a>
+  *  linking to internal hash # that does not exist (line 191)
+     <a href="#">Get Started</a>
+  *  linking to internal hash # that does not exist (line 142)
+     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&amp;body=I have some feedback about the Scroll layout page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  *  linking to internal hash # that does not exist (line 380)
+     <a href="#">Create a Dashboard Card</a>
+  *  linking to internal hash # that does not exist (line 402)
+     <a href="#">Troubleshooting</a>
+  *  linking to internal hash # that does not exist (line 417)
+     <a href="#">Topic Updates</a>
+- ./x_platform_output/pf_apis_about.html
+  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
+     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+  *  linking to internal hash # that does not exist (line 191)
+     <a href="#">Use the REST APIs</a>
+  *  linking to internal hash # that does not exist (line 142)
+     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&amp;body=I have some feedback about the About the Weebly REST API page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+- ./x_platform_output/pf_apis_page.html
+  *  External link http://dev.weebly.com/use-the-rest-api.html#pagination failed: 404 No error
+  *  internally linking to /membership-api.html, which does not exist (line 358)
+     <a href="/membership-api.html">membership</a>
+  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
+     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+  *  linking to internal hash # that does not exist (line 191)
+     <a href="#">Use the REST APIs</a>
+  *  linking to internal hash # that does not exist (line 142)
+     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&amp;body=I have some feedback about the Pages APIs page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+- ./x_platform_output/pf_apps_sample.html
+  *  image images/sh_priceChart.png does not have an alt attribute (line 513)
+  *  internally linking to pf_apps_UI.html, which does not exist (line 217)
+     <a href="pf_apps_UI.html">Working in the Weebly UI</a>
+  *  internally linking to pf_apps_authenticate.html, which does not exist (line 333)
+     <a href="pf_apps_authenticate.html">Authenticate a User from Weebly</a>
+  *  internally linking to pf_apps_authorize_and_install.html, which does not exist (line 326)
+     <a href="pf_apps_authorize_and_install.html">App Authorization and Install Flow</a>
+  *  internally linking to pf_apps_backend.html, which does not exist (line 348)
+     <a href="pf_apps_backend.html">Create a Backend Service</a>
+  *  internally linking to pf_apps_dashboard_cards.html, which does not exist (line 385)
+     <a href="pf_apps_dashboard_cards.html">What are Dashboard Cards</a>
+  *  internally linking to pf_apps_dashboard_cards_text.html, which does not exist (line 392)
+     <a href="pf_apps_dashboard_cards_text.html">Text Component</a>
+  *  internally linking to pf_apps_demo.html, which does not exist (line 289)
+     <a href="pf_apps_demo.html">Create a Demo Site for Your App</a>
+  *  internally linking to pf_apps_devAccount.html, which does not exist (line 203)
+     <a href="pf_apps_devAccount.html">Create a Developer Account</a>
+  *  internally linking to pf_apps_develop.html, which does not exist (line 253)
+     <a href="pf_apps_develop.html">Develop an App</a>
+  *  internally linking to pf_apps_doc_updates.html, which does not exist (line 422)
+     <a href="pf_apps_doc_updates.html">Topic Updates</a>
+  *  internally linking to pf_apps_element_design_guidelines.html, which does not exist (line 370)
+     <a href="pf_apps_element_design_guidelines.html">Element Design Guidelines</a>
+  *  internally linking to pf_apps_elements.html, which does not exist (line 363)
+     <a href="pf_apps_elements.html">What are Elements</a>
+  *  internally linking to pf_apps_email_addresses.html, which does not exist (line 231)
+     <a href="pf_apps_email_addresses.html">Why Different Email Addresses?</a>
+  *  internally linking to pf_apps_featured.html, which does not exist (line 304)
+     <a href="pf_apps_featured.html">How to Get Your App Featured</a>
+  *  internally linking to pf_apps_legal.html, which does not exist (line 238)
+     <a href="pf_apps_legal.html">Legal Agreements</a>
+  *  internally linking to pf_apps_listing.html, which does not exist (line 282)
+     <a href="pf_apps_listing.html">Create Your App Center Listing</a>
+  *  internally linking to pf_apps_manage.html, which does not exist (line 267)
+     <a href="pf_apps_manage.html">Manage Your App</a>
+  *  internally linking to pf_apps_policy_requirements.html, which does not exist (line 224)
+     <a href="pf_apps_policy_requirements.html">App Policy Requirements</a>
+  *  internally linking to pf_apps_promote.html, which does not exist (line 311)
+     <a href="pf_apps_promote.html">Promote Your App</a>
+  *  internally linking to pf_apps_register.html, which does not exist (line 260)
+     <a href="pf_apps_register.html">Register Your App</a>
+  *  internally linking to pf_apps_troubleshooting.html, which does not exist (line 407)
+     <a href="pf_apps_troubleshooting.html">Troubleshooting</a>
+  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
+     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+  *  linking to internal hash # that does not exist (line 380)
+     <a href="#">Create a Dashboard Card</a>
+  *  linking to internal hash # that does not exist (line 191)
+     <a href="#">Get Started</a>
+  *  linking to internal hash # that does not exist (line 248)
+     <a href="#">Develop an App</a>
+  *  linking to internal hash # that does not exist (line 277)
+     <a href="#">Get Your App Ready to Publish</a>
+  *  linking to internal hash # that does not exist (line 299)
+     <a href="#">Maintain Your App Post Publication</a>
+  *  linking to internal hash # that does not exist (line 321)
+     <a href="#">App Installation Flow and Authentication</a>
+  *  linking to internal hash # that does not exist (line 142)
+     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&amp;body=I have some feedback about the Sample Applications page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  *  linking to internal hash # that does not exist (line 343)
+     <a href="#">Create a Backend Service</a>
+  *  linking to internal hash # that does not exist (line 358)
+     <a href="#">Create an Element</a>
+  *  linking to internal hash # that does not exist (line 402)
+     <a href="#">Troubleshooting</a>
+  *  linking to internal hash # that does not exist (line 417)
+     <a href="#">Topic Updates</a>
+  *  linking to internal hash # that does not exist (line 432)
+     <a href="#">Glossary</a>
+- ./x_platform_output/pf_element_1.html
+  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
+     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+  *  linking to internal hash # that does not exist (line 142)
+     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&amp;body=I have some feedback about the 1. Design the Element page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  *  linking to internal hash # that does not exist (line 191)
+     <a href="#">Create an Element</a>
+- ./x_platform_output/pf_element_2.html
+  *  internally linking to dev.weebly.com, which does not exist (line 333)
+     <a href="dev.weebly.com">Dev Admin portal</a>
+  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
+     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+  *  linking to internal hash # that does not exist (line 142)
+     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&amp;body=I have some feedback about the 2. Register the App page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  *  linking to internal hash # that does not exist (line 191)
+     <a href="#">Create an Element</a>
+- ./x_platform_output/pf_element_main.html
+  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
+     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+  *  linking to internal hash # that does not exist (line 191)
+     <a href="#">Create an Element</a>
+  *  linking to internal hash # that does not exist (line 142)
+     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&amp;body=I have some feedback about the Tutorial: Create an Element page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+- ./x_platform_output/pf_glossary.html
+  *  internally linking to pf_apps_UI.html, which does not exist (line 217)
+     <a href="pf_apps_UI.html">Working in the Weebly UI</a>
+  *  internally linking to pf_apps_authenticate.html, which does not exist (line 333)
+     <a href="pf_apps_authenticate.html">Authenticate a User from Weebly</a>
+  *  internally linking to pf_apps_authorize_and_install.html, which does not exist (line 326)
+     <a href="pf_apps_authorize_and_install.html">App Authorization and Install Flow</a>
+  *  internally linking to pf_apps_backend.html, which does not exist (line 348)
+     <a href="pf_apps_backend.html">Create a Backend Service</a>
+  *  internally linking to pf_apps_dashboard_cards.html, which does not exist (line 385)
+     <a href="pf_apps_dashboard_cards.html">What are Dashboard Cards</a>
+  *  internally linking to pf_apps_dashboard_cards_text.html, which does not exist (line 392)
+     <a href="pf_apps_dashboard_cards_text.html">Text Component</a>
+  *  internally linking to pf_apps_demo.html, which does not exist (line 289)
+     <a href="pf_apps_demo.html">Create a Demo Site for Your App</a>
+  *  internally linking to pf_apps_devAccount.html, which does not exist (line 203)
+     <a href="pf_apps_devAccount.html">Create a Developer Account</a>
+  *  internally linking to pf_apps_develop.html, which does not exist (line 253)
+     <a href="pf_apps_develop.html">Develop an App</a>
+  *  internally linking to pf_apps_doc_updates.html, which does not exist (line 422)
+     <a href="pf_apps_doc_updates.html">Topic Updates</a>
+  *  internally linking to pf_apps_element_design_guidelines.html, which does not exist (line 370)
+     <a href="pf_apps_element_design_guidelines.html">Element Design Guidelines</a>
+  *  internally linking to pf_apps_elements.html, which does not exist (line 363)
+     <a href="pf_apps_elements.html">What are Elements</a>
+  *  internally linking to pf_apps_email_addresses.html, which does not exist (line 231)
+     <a href="pf_apps_email_addresses.html">Why Different Email Addresses?</a>
+  *  internally linking to pf_apps_featured.html, which does not exist (line 304)
+     <a href="pf_apps_featured.html">How to Get Your App Featured</a>
+  *  internally linking to pf_apps_legal.html, which does not exist (line 238)
+     <a href="pf_apps_legal.html">Legal Agreements</a>
+  *  internally linking to pf_apps_listing.html, which does not exist (line 282)
+     <a href="pf_apps_listing.html">Create Your App Center Listing</a>
+  *  internally linking to pf_apps_manage.html, which does not exist (line 267)
+     <a href="pf_apps_manage.html">Manage Your App</a>
+  *  internally linking to pf_apps_policy_requirements.html, which does not exist (line 224)
+     <a href="pf_apps_policy_requirements.html">App Policy Requirements</a>
+  *  internally linking to pf_apps_promote.html, which does not exist (line 311)
+     <a href="pf_apps_promote.html">Promote Your App</a>
+  *  internally linking to pf_apps_register.html, which does not exist (line 260)
+     <a href="pf_apps_register.html">Register Your App</a>
+  *  internally linking to pf_apps_troubleshooting.html, which does not exist (line 407)
+     <a href="pf_apps_troubleshooting.html">Troubleshooting</a>
+  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
+     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+  *  linking to internal hash # that does not exist (line 358)
+     <a href="#">Create an Element</a>
+  *  linking to internal hash # that does not exist (line 299)
+     <a href="#">Maintain Your App Post Publication</a>
+  *  linking to internal hash # that does not exist (line 277)
+     <a href="#">Get Your App Ready to Publish</a>
+  *  linking to internal hash # that does not exist (line 380)
+     <a href="#">Create a Dashboard Card</a>
+  *  linking to internal hash # that does not exist (line 248)
+     <a href="#">Develop an App</a>
+  *  linking to internal hash # that does not exist (line 402)
+     <a href="#">Troubleshooting</a>
+  *  linking to internal hash # that does not exist (line 417)
+     <a href="#">Topic Updates</a>
+  *  linking to internal hash # that does not exist (line 191)
+     <a href="#">Get Started</a>
+  *  linking to internal hash # that does not exist (line 432)
+     <a href="#">Glossary</a>
+  *  linking to internal hash # that does not exist (line 343)
+     <a href="#">Create a Backend Service</a>
+  *  linking to internal hash # that does not exist (line 321)
+     <a href="#">App Installation Flow and Authentication</a>
+  *  linking to internal hash # that does not exist (line 142)
+     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&amp;body=I have some feedback about the Glossary page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+- ./x_platform_output/pf_tags_about.html
+  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
+     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+  *  linking to internal hash # that does not exist (line 191)
+     <a href="#">Tag Pages</a>
+  *  linking to internal hash # that does not exist (line 142)
+     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&amp;body=I have some feedback about the About Tags page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+- ./x_platform_output/pf_testGit.html
+  *  internally linking to pf_apps_UI.html, which does not exist (line 217)
+     <a href="pf_apps_UI.html">Working in the Weebly UI</a>
+  *  internally linking to pf_apps_authenticate.html, which does not exist (line 333)
+     <a href="pf_apps_authenticate.html">Authenticate a User from Weebly</a>
+  *  internally linking to pf_apps_authorize_and_install.html, which does not exist (line 326)
+     <a href="pf_apps_authorize_and_install.html">App Authorization and Install Flow</a>
+  *  internally linking to pf_apps_backend.html, which does not exist (line 348)
+     <a href="pf_apps_backend.html">Create a Backend Service</a>
+  *  internally linking to pf_apps_dashboard_cards.html, which does not exist (line 385)
+     <a href="pf_apps_dashboard_cards.html">What are Dashboard Cards</a>
+  *  internally linking to pf_apps_dashboard_cards_text.html, which does not exist (line 392)
+     <a href="pf_apps_dashboard_cards_text.html">Text Component</a>
+  *  internally linking to pf_apps_demo.html, which does not exist (line 289)
+     <a href="pf_apps_demo.html">Create a Demo Site for Your App</a>
+  *  internally linking to pf_apps_devAccount.html, which does not exist (line 203)
+     <a href="pf_apps_devAccount.html">Create a Developer Account</a>
+  *  internally linking to pf_apps_develop.html, which does not exist (line 253)
+     <a href="pf_apps_develop.html">Develop an App</a>
+  *  internally linking to pf_apps_doc_updates.html, which does not exist (line 422)
+     <a href="pf_apps_doc_updates.html">Topic Updates</a>
+  *  internally linking to pf_apps_element_design_guidelines.html, which does not exist (line 370)
+     <a href="pf_apps_element_design_guidelines.html">Element Design Guidelines</a>
+  *  internally linking to pf_apps_elements.html, which does not exist (line 363)
+     <a href="pf_apps_elements.html">What are Elements</a>
+  *  internally linking to pf_apps_email_addresses.html, which does not exist (line 231)
+     <a href="pf_apps_email_addresses.html">Why Different Email Addresses?</a>
+  *  internally linking to pf_apps_featured.html, which does not exist (line 304)
+     <a href="pf_apps_featured.html">How to Get Your App Featured</a>
+  *  internally linking to pf_apps_legal.html, which does not exist (line 238)
+     <a href="pf_apps_legal.html">Legal Agreements</a>
+  *  internally linking to pf_apps_listing.html, which does not exist (line 282)
+     <a href="pf_apps_listing.html">Create Your App Center Listing</a>
+  *  internally linking to pf_apps_manage.html, which does not exist (line 267)
+     <a href="pf_apps_manage.html">Manage Your App</a>
+  *  internally linking to pf_apps_policy_requirements.html, which does not exist (line 224)
+     <a href="pf_apps_policy_requirements.html">App Policy Requirements</a>
+  *  internally linking to pf_apps_promote.html, which does not exist (line 311)
+     <a href="pf_apps_promote.html">Promote Your App</a>
+  *  internally linking to pf_apps_register.html, which does not exist (line 260)
+     <a href="pf_apps_register.html">Register Your App</a>
+  *  internally linking to pf_apps_troubleshooting.html, which does not exist (line 407)
+     <a href="pf_apps_troubleshooting.html">Troubleshooting</a>
+  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
+     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+  *  linking to internal hash # that does not exist (line 142)
+     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&amp;body=I have some feedback about the Test Git page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  *  linking to internal hash # that does not exist (line 248)
+     <a href="#">Develop an App</a>
+  *  linking to internal hash # that does not exist (line 277)
+     <a href="#">Get Your App Ready to Publish</a>
+  *  linking to internal hash # that does not exist (line 299)
+     <a href="#">Maintain Your App Post Publication</a>
+  *  linking to internal hash # that does not exist (line 321)
+     <a href="#">App Installation Flow and Authentication</a>
+  *  linking to internal hash # that does not exist (line 343)
+     <a href="#">Create a Backend Service</a>
+  *  linking to internal hash # that does not exist (line 191)
+     <a href="#">Get Started</a>
+  *  linking to internal hash # that does not exist (line 358)
+     <a href="#">Create an Element</a>
+  *  linking to internal hash # that does not exist (line 380)
+     <a href="#">Create a Dashboard Card</a>
+  *  linking to internal hash # that does not exist (line 402)
+     <a href="#">Troubleshooting</a>
+  *  linking to internal hash # that does not exist (line 417)
+     <a href="#">Topic Updates</a>
+  *  linking to internal hash # that does not exist (line 432)
+     <a href="#">Glossary</a>
+- ./x_platform_output/pf_themes_design_gl.html
+  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
+     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+  *  linking to internal hash # that does not exist (line 191)
+     <a href="#">Get Started with Themes</a>
+  *  linking to internal hash # that does not exist (line 206)
+     <a href="#">Design Your Weebly Theme</a>
+  *  linking to internal hash # that does not exist (line 142)
+     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&amp;body=I have some feedback about the Themes Design Guidelines page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+- ./x_platform_output/pf_themes_gs.html
+  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
+     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+  *  linking to internal hash # that does not exist (line 191)
+     <a href="#">Get Started with Themes</a>
+  *  linking to internal hash # that does not exist (line 206)
+     <a href="#">Design Your Weebly Theme</a>
+  *  linking to internal hash # that does not exist (line 142)
+     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&amp;body=I have some feedback about the Get Started with Themes page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+- ./x_platform_output/tag_apis.html
+  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
+     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+  *  linking to internal hash # that does not exist (line 142)
+     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&amp;body=I have some feedback about the API Topics page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  *  linking to internal hash # that does not exist (line 191)
+     <a href="#">Tag Pages</a>
+- ./x_platform_output/tag_app_revenue.html
+  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
+     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+  *  linking to internal hash # that does not exist (line 142)
+     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&amp;body=I have some feedback about the App Revenue Topics page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  *  linking to internal hash # that does not exist (line 191)
+     <a href="#">Tag Pages</a>
+- ./x_platform_output/tag_backend_services.html
+  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
+     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+  *  linking to internal hash # that does not exist (line 191)
+     <a href="#">Tag Pages</a>
+  *  linking to internal hash # that does not exist (line 142)
+     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&amp;body=I have some feedback about the Backend Services Topics page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+- ./x_platform_output/tag_configuration.html
+  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
+     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+  *  linking to internal hash # that does not exist (line 191)
+     <a href="#">Tag Pages</a>
+  *  linking to internal hash # that does not exist (line 142)
+     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&amp;body=I have some feedback about the Configuration Topics page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+- ./x_platform_output/tag_dashboard_cards.html
+  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
+     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+  *  linking to internal hash # that does not exist (line 191)
+     <a href="#">Tag Pages</a>
+  *  linking to internal hash # that does not exist (line 142)
+     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&amp;body=I have some feedback about the Dashboard Card Topics page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+- ./x_platform_output/tag_development.html
+  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
+     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+  *  linking to internal hash # that does not exist (line 191)
+     <a href="#">Tag Pages</a>
+  *  linking to internal hash # that does not exist (line 142)
+     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&amp;body=I have some feedback about the Development Topics page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+- ./x_platform_output/tag_elements.html
+  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
+     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+  *  linking to internal hash # that does not exist (line 191)
+     <a href="#">Tag Pages</a>
+  *  linking to internal hash # that does not exist (line 142)
+     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&amp;body=I have some feedback about the Elements Topics page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+- ./x_platform_output/tag_getting_started.html
+  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
+     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+  *  linking to internal hash # that does not exist (line 191)
+     <a href="#">Tag Pages</a>
+  *  linking to internal hash # that does not exist (line 142)
+     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&amp;body=I have some feedback about the Getting Started Topics page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+- ./x_platform_output/tag_manifest.html
+  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
+     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+  *  linking to internal hash # that does not exist (line 142)
+     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&amp;body=I have some feedback about the Manifest Topics page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  *  linking to internal hash # that does not exist (line 191)
+     <a href="#">Tag Pages</a>
+- ./x_platform_output/tag_oauth.html
+  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
+     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+  *  linking to internal hash # that does not exist (line 142)
+     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&amp;body=I have some feedback about the Authorization/Authentication Topics page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  *  linking to internal hash # that does not exist (line 191)
+     <a href="#">Tag Pages</a>
+- ./x_platform_output/tag_requirements.html
+  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
+     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+  *  linking to internal hash # that does not exist (line 191)
+     <a href="#">Tag Pages</a>
+  *  linking to internal hash # that does not exist (line 142)
+     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&amp;body=I have some feedback about the Requirements Topics page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+- ./x_platform_output/tag_reviews.html
+  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
+     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+  *  linking to internal hash # that does not exist (line 191)
+     <a href="#">Tag Pages</a>
+  *  linking to internal hash # that does not exist (line 142)
+     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&amp;body=I have some feedback about the App Review Topics page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+- ./x_platform_output/tag_snippets.html
+  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
+     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+  *  linking to internal hash # that does not exist (line 191)
+     <a href="#">Tag Pages</a>
+  *  linking to internal hash # that does not exist (line 142)
+     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&amp;body=I have some feedback about the Snippets Topics page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+- ./x_platform_output/tag_testing.html
+  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
+     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+  *  linking to internal hash # that does not exist (line 191)
+     <a href="#">Tag Pages</a>
+  *  linking to internal hash # that does not exist (line 142)
+     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&amp;body=I have some feedback about the Testing Topics page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+- ./x_platform_output/tag_troubleshooting.html
+  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
+     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+  *  linking to internal hash # that does not exist (line 142)
+     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&amp;body=I have some feedback about the Troubleshooting Topics page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  *  linking to internal hash # that does not exist (line 191)
+     <a href="#">Tag Pages</a>
+- ./x_platform_output/tag_webhooks.html
+  *  internally linking to robinwhitmore.github.iofeed.xml, which does not exist (line 43)
+     <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml">
+  *  linking to internal hash # that does not exist (line 142)
+     <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Platform Developer Docs feedback&amp;body=I have some feedback about the Webhook Topics page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  *  linking to internal hash # that does not exist (line 191)
+     <a href="#">Tag Pages</a>
+htmlproofer 3.6.0 | Error:  HTML-Proofer found 303 failures!

@@ -1,7 +1,7 @@
 ---
 title: Get Started with Themes
 keywords:
-type: [concepts]
+t_type: [concepts]
 tags: [getting_started]
 sidebar: pf_themes_sidebar
 permalink: pf_themes_gs.html
