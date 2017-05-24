@@ -104,8 +104,8 @@
 </table>
 {% include note.html content = "Any fields returned that are not documented are currently unsupported and can be safely ignored."%}
 
-<h2>Retrieve a List of Pages for a Given Site</h2>
-<p class="codeTitle">Enpoint URL:</p>
+<h2><span class="label label-get text-uppercase">get</span> Retrieve a List of Pages for a Given Site</h2>
+
 {% highlight shell%}
 {% if site.project == "platform" %}
 GET /v1/user/sites/{SITE_ID}/pages
@@ -237,3 +237,126 @@ curl https://api.weeblycloud.com/user/USER_ID/site/SITE_ID/page?filterby=layout&
   }
 ]
 {% endhighlight %}
+
+<h2><span class="label label-get text-uppercase">get</span> Retrieve Details for a Page</h2>
+{% highlight shell%}
+{% if site.project == "platform" %}
+GET /v1/user/sites/{SITE_ID}/pages/{PAGE_ID}
+
+{% else %}
+GET /user/USER_ID/site/{SITE_ID}/page/{PAGE_ID}
+{% endif %}
+{% endhighlight %}
+
+<p>Returns all fields for the given page.
+    {% if site.project == "platform" %}
+    <br>
+    <b>scope:</b> <code>read:site</code>
+    {% endif %}
+
+<p class="codeTitle">Example CURL request:</p>
+{% highlight shell%}
+{% if site.project == "platform" %}
+curl --request GET \
+--url https://api.weebly.com/v1/user/sites/987654321/pages/1234567890 \
+--header 'accept: application/vnd.weebly.v1+json' \
+--header 'content-type: application/json' \
+--header 'x-weebly-access-token: [YOUR_TOKEN]"
+
+{% else %}
+curl https://api.weeblycloud.com/user/USER_ID/site/SITE_ID/page/1234567890 \
+-H "X-Public-Key: YOURAPIKEY" \
+-H "X-Signed-Request-Hash: YOURSECRETHASH"
+{% endif %}
+{% endhighlight %}
+
+<p class="codeTitle">Example response:</p>
+<p>See Fields table. All fields for the page are returned.</p>
+{% highlight json %}
+[
+  {
+    "page_id": "1234567890",
+    "title": "Contact",
+    "hidden": false,
+    "membership_required": null,
+    "parent_id": null,
+    "layout": "short-header",
+    "updated_date": "2016-02-08 11:16:19"
+    "page_url": "new.html"
+  }
+]
+{% endhighlight %}
+
+<h2><span class="label label-patch text-uppercase">patch</span> Update a Page</h2>
+{% highlight shell%}
+{% if site.project == "platform" %}
+PATCH /v1/user/sites/{SITE_ID}/pages/{PAGE_ID}
+
+{% else %}
+PATCH /user/USER_ID/site/{SITE_ID}/page/{PAGE_ID}
+{% endif %}
+{% endhighlight %}
+
+<p>Updates the given page.
+    {% if site.project == "platform" %}
+    <br>
+    <b>scope:</b> <code>write:site</code>
+    {% endif %}
+
+<h3>Updateable Fields</h3>
+<p>These fields can be updated</p>
+
+<table>
+    <tr>
+        <td><div class="paragraph">Name</div></td>
+        <td><div class="paragraph">Description</div></td>
+        <td><div class="paragraph">Type</div></td>
+    </tr>
+    <tr>
+        <td><div class="paragraph"><strong>title</strong></div></td>
+        <td><div class="paragraph">The page's title.</div></td>
+        <td><div class="paragraph">string</div></td>
+    </tr>
+</table>
+
+<p class="codeTitle">Example CURL request:</p>
+{% highlight shell%}
+{% if site.project == "platform" %}
+curl --request PATCH \
+ --url https://api.weebly.com/v1/user/sites/987654321/pages/1234567890 \
+ --header 'accept: application/vnd.weebly.v1+json' \
+ --header 'content-type: application/json' \
+ --header 'x-weebly-access-token: [YOUR_TOKEN]"
+ --data '{
+           "title": "New Title"
+        }'
+
+{% else %}
+curl https://api.weeblycloud.com/user/USER_ID/site/SITE_ID/page/1234567890 \
+ -X PATCH \
+ -d '{
+      "title": "My Title"
+  }' \
+ -H "Content-type: application/json" \
+ -H "X-Public-Key: YOURAPIKEY" \
+ -H "X-Signed-Request-Hash: YOURSECRETHASH"
+{% endif %}
+{% endhighlight %}
+
+<p class="codeTitle">Example response:</p>
+<p>See Fields table. All fields for the page are returned.</p>
+{% highlight json %}
+[
+    {
+        "page_id": "1234567890",
+        "title": "My Title",
+        "hidden": false,
+        "membership_required": null,
+        "parent_id": null,
+        "layout": "short-header",
+        "updated_date": "2016-02-08 11:16:19"
+        "page_url": "new.html"
+    }
+]
+{% endhighlight %}
+

@@ -4,7 +4,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="The Pages API provides methods for reading and updating information about the pages for a given user's site.">
-<meta name="keywords" content="apis,  ">
+<meta name="keywords" content="apispages,  ">
 <title>Page API | Weebly Cloud for Designers Documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
@@ -41,7 +41,7 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<!-- <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml"> -->
+<!-- <link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4008feed.xml"> -->
 
 <script type="text/javascript">
     $(document).ready(function() {
@@ -231,7 +231,7 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div>
-    <div class="pageType">   </div>
+    <div class="pageType">  reference </div>
     <div class="post-header">
         <h1 class="post-title-main">Page API</h1>
     </div>
@@ -255,14 +255,14 @@
 $( document ).ready(function() {
   // Handler for .ready() called.
 
-$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2' });
 
 /* this offset helps account for the space taken up by the floating toolbar. */
 $('#toc').on('click', 'a', function() {
   var target = $(this.getAttribute('href'))
     , scroll_target = target.offset().top
 
-  $(window).scrollTop(scroll_target - 10);
+  $(window).scrollTop(scroll_target - 50);
   return false
 })
   
@@ -380,8 +380,7 @@ $('#toc').on('click', 'a', function() {
 </table>
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Any fields returned that are not documented are currently unsupported and can be safely ignored.</div>
 
-<h2>Retrieve a List of Pages for a Given Site</h2>
-<p class="codeTitle">Enpoint URL:</p>
+<h2><span class="label label-get text-uppercase">get</span> Retrieve a List of Pages for a Given Site</h2>
 
 <figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/page</code></pre></figure>
 
@@ -487,7 +486,93 @@ $('#toc').on('click', 'a', function() {
 </span><span class="p">]</span></code></pre></figure>
 
 
-</p>
+<h2><span class="label label-get text-uppercase">get</span> Retrieve Details for a Page</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/page/<span class="o">{</span>PAGE_ID<span class="o">}</span></code></pre></figure>
+
+
+<p>Returns all fields for the given page.
+    
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/USER_ID/site/SITE_ID/page/1234567890 <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+
+<p class="codeTitle">Example response:</p>
+<p>See Fields table. All fields for the page are returned.</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"page_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1234567890"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Contact"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"hidden"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"membership_required"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"parent_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"layout"</span><span class="p">:</span><span class="w"> </span><span class="s2">"short-header"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-02-08 11:16:19"</span><span class="w">
+    </span><span class="s2">"page_url"</span><span class="err">:</span><span class="w"> </span><span class="s2">"new.html"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span></code></pre></figure>
+
+
+<h2><span class="label label-patch text-uppercase">patch</span> Update a Page</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">PATCH /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/page/<span class="o">{</span>PAGE_ID<span class="o">}</span></code></pre></figure>
+
+
+<p>Updates the given page.
+    
+
+<h3>Updateable Fields</h3>
+<p>These fields can be updated</p>
+
+<table>
+    <tr>
+        <td><div class="paragraph">Name</div></td>
+        <td><div class="paragraph">Description</div></td>
+        <td><div class="paragraph">Type</div></td>
+    </tr>
+    <tr>
+        <td><div class="paragraph"><strong>title</strong></div></td>
+        <td><div class="paragraph">The page's title.</div></td>
+        <td><div class="paragraph">string</div></td>
+    </tr>
+</table>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/USER_ID/site/SITE_ID/page/1234567890 <span class="se">\</span>
+ -X PATCH <span class="se">\</span>
+ -d <span class="s1">'{
+      "title": "My Title"
+  }'</span> <span class="se">\</span>
+ -H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
+ -H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+ -H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+
+<p class="codeTitle">Example response:</p>
+<p>See Fields table. All fields for the page are returned.</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"page_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1234567890"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Title"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"hidden"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"membership_required"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"parent_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"layout"</span><span class="p">:</span><span class="w"> </span><span class="s2">"short-header"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-02-08 11:16:19"</span><span class="w">
+        </span><span class="s2">"page_url"</span><span class="err">:</span><span class="w"> </span><span class="s2">"new.html"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span></code></pre></figure>
+
+
+
+</p></p></p>
 
 
     <div class="tags">
@@ -497,6 +582,10 @@ $('#toc').on('click', 'a', function() {
         
         
         <a href="tag_apis.html" class="btn btn-default navbar-btn cursorNorm" role="button">apis</a>
+        
+        
+        
+        <a href="tag_pages.html" class="btn btn-default navbar-btn cursorNorm" role="button">pages</a>
         
         
         
@@ -512,7 +601,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 Weebly. All rights reserved. <br />
- Site last generated: May 19, 2017 <br />
+ Site last generated: May 24, 2017 <br />
 <p><img src="images/company_logo.png" alt="Company logo"/></p>
                 </div>
             </div>

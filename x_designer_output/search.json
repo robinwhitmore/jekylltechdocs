@@ -16,7 +16,7 @@
 
 {
 "title": "Page API",
-"tags": "apis",
+"tags": "apispages",
 "keywords": "",
 "url": "ds_apis_page.html",
 "summary": "The Pages API provides methods for reading and updating information about the pages for a given user's site."

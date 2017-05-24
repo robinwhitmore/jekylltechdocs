@@ -6,7 +6,7 @@ Weebly for Cloud provides your customers a best-in-class website builder to enab
 {% elsif site.project=="designer"%}
 ## What is Weebly Cloud for Designers?
 
-Weebly is a best-in-class website builder that allows you to create websites, blogs and online stores for your clients in minutes. You maintain full control over billing, support, and the customer relationship. You can use our <a data-container="body" data-toggle="popover" data-content="{{site.data.glossary.Cloud_Admin}}">Cloud Admin</a> to manage users and sites and you can use our RESTful API to create custom apps to further your clients' sites functionality.
+Weebly is a best-in-class website builder that allows you to create websites, blogs and online stores for your clients in minutes. You maintain full control over billing, support, and the customer relationship. You can use our <a data-container="body" data-toggle="popover" data-content="{{site.data.glossary.Cloud_Admin}}">Cloud Admin</a> to manage {{site.customer}}s and sites and you can use our RESTful API to create custom apps to further your clients' sites functionality.
 
 {% endif %}
 
@@ -14,7 +14,7 @@ Weebly is a best-in-class website builder that allows you to create websites, bl
 
 The first step in using the Weebly Cloud API is to create a Weebly Cloud account. This account gives you access to Cloud Admin where you can access your API key and secret, and download plug-ins. If you don't have a Weebly Cloud account, then email our team [here](mailto:bd@weebly.com).
 
-Once your account is set up, head on over to Configure Weebly Cloud to finish setting up your account.
+Once your account is set up, head on over to {%if site.project=="designer"%}[Configure Weebly Cloud](ds_gs_configure.html) {%elsif site.project=="cloud"%}[Configure Weebly Cloud](cl_gs_configure.html){%endif%} to finish setting up your account.
 
 ## Test Mode
 

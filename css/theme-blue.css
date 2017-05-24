@@ -160,6 +160,24 @@ p.proc {
     font-weight: normal;
 }
 
-.method {
-
+.label-delete {
+    background-color: #a41e22;
+    border-color: #a41e22;
 }
+.label-post {
+    background-color: #098036;
+    border-color: #098036;
+}
+
+.label-put {
+    background-color: #f4ce42;
+    border-color: #f4ce42;
+}
+
+.label-patch {
+    background-color: #AD510C;
+    border-color: #AD510C;
+}
+.label-get {
+    background-color: #0f6ab4;
+    border-color: #0f6ab4;
