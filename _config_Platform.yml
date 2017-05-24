@@ -28,8 +28,10 @@ exclude:
   - .idea/
   - .gitignore
   - pages/cloud
+  - pages/designer
   - x_cloud_output/
   - x_platform_output/
+  - x_designer_output/
   - Dockerfile
   - feed.xml
   - tooltips.*
@@ -37,6 +39,7 @@ exclude:
   - x_build_scripts
   - cloudOutput
   - platformOutput
+  - designerOutput
 
 # these are the files and directories that jekyll will exclude from the build
 
