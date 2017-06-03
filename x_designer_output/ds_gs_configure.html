@@ -350,8 +350,18 @@ $('#toc').on('click', 'a', function() {
   <h2 id="brand-your-sites-and-the-cloud-admin">Brand Your Sites and the Cloud Admin</h2>
 <p>You can brand Weebly Cloud for Designers by adding your company’s name and uploading your company’s logo and a fav icon. Once configured, your company’s name displays in a number of places, such as  in the Site Editor and in invitation emails.</p>
 
-<p>For example, here’s an email sent inviting a new user.</p>
-<figure><img class="docimage" src="images/cl_settings_mail.png" alt="" /><figcaption>Footer of a published site on Nash Hosting</figcaption></figure>
+<p>For example,  here’s an email sent inviting a new user.</p>
+<figure><img class="docimage" src="images/cl_settings_mail.png" alt="" /></figure>
+<p><br /></p>
+
+<p>​Once uploaded, the logo displays in the Cloud Admin as shown here:</p>
+<figure><img class="docimage" src="images/cl_settings_logo.png" alt="" /></figure>
+<p><br /></p>
+
+<p>To brand  the <a href="http://weeblycloud.com/admin">Cloud Admin</a>, from the <strong>Settings</strong> tab, in the <strong>Customize</strong> area, click the <strong>Edit</strong> icon and enter the company name and upload your logo and favicon.</p>
+<figure><img class="docimage" src="images/cl_settings_uploadLogo.png" alt="" /></figure>
+
+<hr />
 
 <h2 id="set-your-domain">Set Your Domain</h2>
 
@@ -359,7 +369,81 @@ $('#toc').on('click', 'a', function() {
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> If you don’t configure a domain, you will not be able to generate and send emails from the Cloud Admin and you will not have access to the User portal.</div>
 
-<p>To set a subdomain, in the Domain area, click the <strong>Edit</strong> icon, click <strong>Subdomain</strong>, enter the subdomain to be used, and click <strong>Save</strong>. If the subdomain is available, a green checkmark displays. The subdomain will be applied to both the Cloud Admin and the User Login portals.</p>
+<p>To set a subdomain, in the Domain area, click the <strong>Edit</strong> icon, click <strong>Subdomain</strong>, enter the subdomain to be used, and click <strong>Save</strong>. If the subdomain is available, a green checkmark displays. The subdomain will be applied to both the Cloud Admin and the User Login portals, and to the Site Editor URL.</p>
+<figure><img class="docimage" src="images/cl_settings_domain.png" alt="" /></figure>
+<p><br /></p>
+
+<p>For custom domains, click <strong>Custom domain</strong>, enter the domain you’d like to use and click <strong>Next</strong>.</p>
+<figure><img class="docimage" src="images/cl_settings_customDomain.png" alt="" /></figure>
+<p><br /></p>
+
+<p>You now need to add a <code class="highlighter-rouge">CNAME</code> that points <code class="highlighter-rouge">weeblycloud.com</code> to the DNS for your domain. Follow the instructions in the resulting dialog.</p>
+<hr />
+
+<h2 id="email-url">Email URL</h2>
+
+<p>You must add a URL to a specific page about your company that will be used as the return email address on emails automatically sent by the Cloud Admin, such as the team member and client invitations. This URL is required.</p>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> While the emails will appear to be from this destination, they are actually sent from a Weebly IP address. Because of this, you need to create an SPF record for the Weebly IP. More info here.</div>
+
+<!--TODO: URL to troubleshooting topic -->
+
+<p>To set the URL, in the <strong>Footer Message</strong> area, click the <strong>Edit</strong> icon and enter the URL.</p>
+<figure><img class="docimage" src="images/cl_settings_URL.png" alt="" /></figure>
+
+<hr />
+
+<h2 id="configure-basic-settings">Configure Basic Settings</h2>
+
+<p>You can configure locale settings for your sites, such language, time zone, and you can also configure upgrade and upsell URLs. To configure these settings, in the <strong>Configuration</strong> area, click the <strong>Edit</strong> icon and enter the appropriate info for the following:</p>
+<ul>
+  <li><strong>Upgrade URL</strong>: When a user encounters a feature in the Weebly Editor that is part of a plan they do not currently have, they will be prompted to upgrade. This triggers a popup window that loads a URL showing the plans they can upgrade to. Enter that URL here. More about how upgrades work can be found here.
+<!--TODO: enter URL to upgrade topic --></li>
+  <li><strong>Publish Upsell URL</strong>: When a user publishes a site, the Weebly editor displays a publishing modal with a link to the site just published, and often Weebly promotional material as well. You can set a link to a promotion for your company by entering a URL here. The resulting content loads in an iframe (640px W by 200px H) when the site is published. More info here.
+<!--TODO: enter URL to upgrade topic --></li>
+  <li><strong>Default User Language</strong>: Select the default language displayed to your team and clients. They can always change this by selecting a different language from the Settings tab of the editor, or if enabled, the language picker in the User Portal.</li>
+  <li><strong>Default Time Zone</strong>: Select the default time zone used by the Site Editor.</li>
+  <li><strong>Default Date Format</strong>: Select how you want dates displayed by default. You can choose either <code class="highlighter-rouge">MM/DD/YYYY</code> or <code class="highlighter-rouge">DD/MM/YYYY</code>.</li>
+  <li><strong>Default Time Format</strong>: Select how time should display by default - either 12 or 24 hour.</li>
+</ul>
+
+<hr />
+
+<h2 id="view-your-upgrade-hash">View Your Upgrade Hash</h2>
+
+<p>As part of the upgrade URL, Weebly passes in a hash that includes the user ID, the site ID, and a reseller-specific hash. You need to decode this hash to verify that the URL was accessed from the Weebly editor. You can see that hash from the Upgrade Settings area of the Cloud Admin. More about the hash and how to handle the upgrade process here.
+<!--TODO: user_ID? enter URL to upgrade topic --></p>
+
+<p>To view the hash, click the <strong>Show link</strong> in <strong>Upgrade Settings</strong> area. You can also edit the hash by clicking the <strong>Edit</strong> icon.</p>
+
+<figure><img class="docimage" src="images/cl_settings_hash.png" alt="" /></figure>
+
+<hr />
+
+<h2 id="create-a-support-message">Create a Support Message</h2>
+
+<p>You can create a message that displays to Weebly agents when you contact Weebly Support. This message might include important information they need to know, like a specific support process.</p>
+
+<p>To create a message, click the <strong>Edit</strong> icon in the <strong>Agent Message</strong> area and enter your message. You can use up to 125 characters.</p>
+<figure><img class="docimage" src="images/cl_settings_message.png" alt="" /></figure>
+
+<hr />
+
+<h2 id="set-contact-info">Set Contact Info</h2>
+
+<p>You can create three different ways that you can be contacted:</p>
+<ul>
+  <li><strong>Support</strong>: Shown to your customers in the Weebly editor. The phone number and a link to the URL (shown as Support Center) display in the Help menu. All other entered information for this type of contact displays to the Weebly support team, in the case where the customer contacts Weebly directly.</li>
+</ul>
+<figure><img class="docimage" src="images/cl_settings_support.png" alt="" /></figure>
+
+<ul>
+  <li><strong>Billing</strong>: Shown to Weebly support. This contact should be someone who can handle billing inquiries.</li>
+  <li><strong>Technical</strong>: Shown to Weebly Support. This contact should be someone equipped to handle technical issues.<br /></li>
+</ul>
+
+<p>To add a contact, click the <strong>Add Contact</strong> link in the <strong>Contact Info</strong> area, select the contact type, and enter the needed information. You can only create one contact for each type. You can edit a created contact by clicking the <strong>Edit</strong> icon.</p>
+<figure><img class="docimage" src="images/cl_settings_contact.png" alt="" /></figure>
 
 
 
@@ -389,7 +473,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 Weebly. All rights reserved. <br />
- Site last generated: May 24, 2017 <br />
+ Site last generated: Jun 2, 2017 <br />
 <p><img src="images/company_logo.png" alt="Company logo"/></p>
                 </div>
             </div>
