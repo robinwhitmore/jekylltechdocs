@@ -1,6 +1,6 @@
 ---
 title: About the Weebly Cloud for Designer REST APIs
-keywords:
+keywords: endpoint, list view, detail view, http verbs, pagination, authentication, authorization, errors
 t_type: [concepts, procedure]
 tags: [apis, getting_started]
 sidebar: ds_apis_sidebar

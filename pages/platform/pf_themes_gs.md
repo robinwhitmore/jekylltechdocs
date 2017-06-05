@@ -1,6 +1,6 @@
 ---
 title: Get Started with Themes
-keywords:
+keywords: theme editor,
 t_type: [concepts]
 tags: [getting_started]
 sidebar: pf_themes_sidebar

@@ -1,6 +1,6 @@
 ---
 title: Configure Weebly Cloud
-keywords:
+keywords: brand, cloud admin, domain, url, email, settings, upgrade, hash, support, message, contact,
 t_type: [task]
 tags: [getting_started, configuration]
 sidebar: ds_gs_sidebar

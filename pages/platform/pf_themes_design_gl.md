@@ -1,6 +1,6 @@
 ---
 title: Themes Design Guidelines
-keywords:
+keywords: page, layout types,
 t_type: [concepts]
 tags: [getting_started]
 sidebar: pf_themes_sidebar

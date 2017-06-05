@@ -1,6 +1,6 @@
 ---
 title: Sample Applications
-keywords:
+keywords: bootstrap, pricing chart, git hub, backend sample, examples
 t_type: [reference]
 tags: [getting_started, elements, backend_services]
 sidebar: pf_apps_sidebar

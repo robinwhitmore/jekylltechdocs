@@ -1,6 +1,6 @@
 ---
 title: About the Weebly REST API
-keywords:
+keywords: endpoint, list view, detail view, http verbs, pagination, authentication, authorization, parameters, scope
 t_type: [concepts, reference]
 tags: [getting_started, development, apis]
 sidebar: pf_apis_sidebar

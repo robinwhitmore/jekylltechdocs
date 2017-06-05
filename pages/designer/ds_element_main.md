@@ -1,7 +1,7 @@
 ---
 title: Tutorial&#58; Create an Element
 layout: "page"
-keywords:
+keywords: price chart
 t_type: [tutorial]
 tags: [getting_started, custom_apps]
 sidebar: ds_apps_sidebar

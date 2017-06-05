@@ -1,6 +1,6 @@
 ---
 title: What are Tag Pages?
-keywords:
+keywords: tags
 tags:
 sidebar: cl_tags_sidebar
 permalink: cl_tags_about.html

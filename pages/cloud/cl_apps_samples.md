@@ -1,6 +1,6 @@
 ---
 title: Sample Applications
-keywords:
+keywords: bootstrap, pricing chart, git hub, examples
 t_type: [reference]
 tags: [getting_started, custom_apps]
 sidebar: cl_apps_sidebar

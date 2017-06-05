@@ -1,6 +1,6 @@
 ---
 title: About the Weebly Cloud REST APIs
-keywords:
+keywords: libraries, clients, endpoint, list view, detail view, http verbs, pagination, authentication, authorization, errors
 t_type: [concepts, procedure]
 tags: [apis, getting_started]
 sidebar: cl_apis_sidebar
