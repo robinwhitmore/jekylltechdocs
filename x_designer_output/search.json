@@ -92,6 +92,17 @@
 
 
 {
+"title": "Create Sites",
+"tags": "getting_startedsites",
+"keywords": "publish, copy, preview, template, templates, apps",
+"url": "ds_gs_cr_sites.html",
+"summary": "Once a client is created, you can create and implement their site(s) from Cloud Admin. You can also create templates that you can copy to create new sites. Once the site is created, you can use the Editor to edit, preview, and publish the site."
+}
+,
+
+
+
+{
 "title": "Create Plans",
 "tags": "getting_startedplans",
 "keywords": "plans, packages, pages, App Center, access",

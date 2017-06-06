@@ -114,6 +114,17 @@
 
 
 {
+"title": "Create Sites",
+"tags": "getting_startedsites",
+"keywords": "publish, copy, preview, template, templates, apps",
+"url": "cl_gs_sites.html",
+"summary": "Once a user is created, they can create and implement their site(s). Or you can create a site for them, either from Cloud Admin or programmatically. You can also create templates that you can copy to create new sites. Once the site is created, you can use the Editor to edit, preview, and publish the site."
+}
+,
+
+
+
+{
 "title": "What are Tag Pages?",
 "tags": "",
 "keywords": "tags",

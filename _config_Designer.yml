@@ -98,6 +98,8 @@ portal_url: https://weeblycloud.com/admin
 
 customer: "client"
 
+user: "client"
+
 name: "Cloud for Designers"
 
 sidebars:

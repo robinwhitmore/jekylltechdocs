@@ -49,7 +49,7 @@ entries:
       url: /ds_gs_clients.html
       output: web, pdf
 
-    - title: Create Sites
+    - title: Create and Edit Sites
       url: /ds_gs_cr_sites.html
       output: web, pdf
 
