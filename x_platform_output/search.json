@@ -30,7 +30,7 @@
 {
 "title": "About the Weebly REST API",
 "tags": "getting_starteddevelopmentapis",
-"keywords": "",
+"keywords": "endpoint, list view, detail view, http verbs, pagination, authentication, authorization, parameters, scope",
 "url": "pf_apis_about.html",
 "summary": "Weebly APIs are provided using REST over HTTPS. See the following sections for more general information about using our APIs."
 }
@@ -52,7 +52,7 @@
 {
 "title": "Sample Applications",
 "tags": "getting_startedelementsbackend_services",
-"keywords": "",
+"keywords": "bootstrap, pricing chart, git hub, backend sample, examples",
 "url": "pf_apps_sample.html",
 "summary": "​This page contains downloadable sample application bundles. Feel free to download, inspect, and modify any of these applications. Each application comes in a working state, and can be downloaded and immediately uploaded into your developer account."
 }
@@ -85,7 +85,7 @@
 {
 "title": "Tutorial&amp;#58; Create an Element",
 "tags": "getting_startedelementsdevelopment",
-"keywords": "",
+"keywords": "price chart",
 "url": "pf_element_main.html",
 "summary": ""
 }
@@ -105,20 +105,9 @@
 
 
 {
-"title": "Test Git",
-"tags": "getting startedrequirementselementsbackend servicessnippetsdashboard_cardsmanifestconfigurationdevelopmenttestingapp_revenuereviewsoauthapiswebhookstroubleshooting",
-"keywords": "",
-"url": "pf_testGit.html",
-"summary": ""
-}
-,
-
-
-
-{
 "title": "Themes Design Guidelines",
 "tags": "getting_started",
-"keywords": "",
+"keywords": "page, layout types,",
 "url": "pf_themes_design_gl.html",
 "summary": "When you create a Weebly theme, your design needs to support the functionality found on the pages in the different areas of a Weebly site, as well support the elements often used on a site. For example, blog pages require certain functionality and elements, while pages that display products require something different. Gallery elements that display multiple images need to have specific styling available. Because users can easily switch between themes, you need to make sure that you follow these guidelines and requirements to ensure switching between themes is a smooth transition."
 }
@@ -129,7 +118,7 @@
 {
 "title": "Get Started with Themes",
 "tags": "getting_started",
-"keywords": "",
+"keywords": "theme editor,",
 "url": "pf_themes_gs.html",
 "summary": "Themes provide the general look and feel used throughout a website. While Weebly provides a number of great themes, you may find you want to change a few things in a theme. Or maybe you want to change everything! You can do those and everything in between. And once you're done, you can use it on your site or share with your client or friends. To get started, create a web site that you can use to test your theme. Then download our Base theme as a starting point, and start building from there! Or find a theme you mostly like and then change the things you don't. These docs will provide you with all you need to bring your design to the web."
 }

@@ -2,7 +2,7 @@
 
 entries:
 - title: sidebar
-  product: Weebly Cloud for Designers
+  product: Weebly Cloud
   version:
   folders:
 
@@ -24,52 +24,71 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Get Started with Weebly Cloud for Designers
+    - title: Get Started with Weebly Cloud
       url: /home.html
       output: web, pdf
       type: homepage
 
-    - title: Creating Custom Apps
-      url: /ds_gs_custom.html
-      output: web, pdf
-
-    - title: Understanding Hosting Options
-      url: /ds_gs_hosting.html
-      output: web, pdf
-
-    - title: Configure Weebly Cloud for Designers
+    - title: Configure Weebly Cloud
       url: /ds_gs_configure.html
       output: web, pdf
 
-    - title: Create Cloud Admin Users
-      url: /ds_gs_admin_users.html
+    - title: Create Team Members
+      url: /ds_gs_team_members.html
       output: web, pdf
-
-
-  - title: Manage Weebly
-    output: web, pdf
-    folderitems:
 
     - title: Create Plans
       url: /ds_gs_plans.html
       output: web, pdf
 
-    - title: Create and Manage Users
-      url: /ds_gs_users.html
+  - title: Create and Manage Clients and Sites
+    output: web, pdf
+    folderitems:
+
+    - title: Create and Manage Clients
+      url: /ds_gs_clients.html
       output: web, pdf
 
     - title: Create Sites
-      url: /ds_gs_sites.html
+      url: /ds_gs_cr_sites.html
       output: web, pdf
 
-    - title: Handle Upgrades
+    - title: Build Sites
+      url: /ds_gs_bld_sites.html
+      output: web, pdf
+
+    - title: Manage Sites
+      url: /ds_gs_mg_sites.html
+      output: web, pdf
+
+    - title: Let Your Client Preview a Site
+      url: /ds_gs_prev_sites.html
+      output: web, pdf
+
+    - title: Give Clients and Team Members Site Access
+      url: /ds_gs_access_sites.html
+      output: web, pdf
+
+    - title: Handle Site Upgrades
       url: /ds_gs_upgrades.html
       output: web, pdf
 
-    - title: Provide SSO Access with a loginLink
-      url: /ds_gs_loginlink.html
+    - title: Allow Third Party Apps
+      url: /ds_gs_apps.html
       output: web, pdf
 
-    - title: Suspend and Remove Sites
-      url: /ds_gs_suspend.html
+    - title: Market to Your Customers in Weebly
+      url: /ds_gs_market.html
       output: web, pdf
+
+  - title: Billing and Invoicing
+    output: web, pdf
+    folderitems:
+
+    - title: View Client Invoices
+      url: /ds_gs_invoice.html
+      output: web, pdf
+
+    - title: Pay Weebly Bill
+      url: /ds_gs_bill.html
+      output: web, pdfcd

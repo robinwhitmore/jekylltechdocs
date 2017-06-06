@@ -2,10 +2,6 @@ allowed-tags:
   - getting_started
   - troubleshooting
   - configuration
-  - custom_apps
-  - users
+  - clients
   - plans
   - sites
-  - apis
-  - plugins
-  - pages

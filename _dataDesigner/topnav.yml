@@ -7,9 +7,7 @@ topnav:
   items:
     - title: Get Started
       url: /home.html
-    - title: Cloud for Designers API
-      url: /ds_apis_about.html
-    - title: Custom Apps
-      url: /ds_apps_gs.html
+    - title: Tags
+      url: /ds_tags_about.html
 
 #Topnav dropdowns

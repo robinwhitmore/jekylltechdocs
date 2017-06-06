@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="In this tutorial, you’ll learn how to recreate the Weebly Price Chart sample element, package it up and test it. This element displays a given number of pric...">
-<meta name="keywords" content="getting_startedcustom_apps,  ">
-<title>TUTORIAL Create a Weebly Element | Weebly Cloud Developer Documentation</title>
+<meta name="description" content="Weebly offers plans that determine the functionality available to a site. You create your own plans and plan pricing and then associate them with Weebly plan...">
+<meta name="keywords" content="getting_startedplans,  plans, packages, pages, App Center, access">
+<title>Create Plans | Weebly Cloud for Designers Documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -41,7 +41,7 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<!-- <link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000feed.xml"> -->
+<!-- <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml"> -->
 
 <script type="text/javascript">
     $(document).ready(function() {
@@ -108,7 +108,7 @@
             </button>
 
             <a class="fa fa-home fa-lg navbar-brand" href="home.html">&nbsp;<span class="projectTitle">
-                Weebly Cloud Developer Documentation</span></a>
+                Weebly Cloud for Designers Documentation</span></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
@@ -120,11 +120,7 @@
                 
                 
                 
-                <li><a href="cl_apis_about.html">Cloud API</a></li>
-                
-                
-                
-                <li><a href="cl_apps_gs.html">Custom Apps</a></li>
+                <li><a href="ds_tags_about.html">Tags</a></li>
                 
                 
                 
@@ -136,7 +132,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud Developer Docs feedback&body=I have some feedback about the TUTORIAL Create a Weebly Element page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Create Plans page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -154,7 +150,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="TUTORIAL Create a Weebly Element">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Create Plans">{title}</a></li>',
                     noResultsText: 'No results',
                             limit: 10,
                             fuzzy: true,
@@ -188,26 +184,40 @@
 
 
 <ul id="mysidebar" class="nav">
-    <li class="sidebarTitle">Develop Weebly Apps </li>
+    <li class="sidebarTitle">Weebly Cloud </li>
     
     
     
         
     
     <li>
-        <a href="#">Get Started with Apps</a>
+        <a href="#">Get Started</a>
         <ul>
             
             
             
-            <li><a href="cl_apps_gs.html">Get Started with Developing Apps</a></li>
+            <li><a href="home.html">Get Started with Weebly Cloud</a></li>
             
             
             
             
             
             
-            <li><a href="cl_apps_samples.html">Sample Applications</a></li>
+            <li><a href="ds_gs_configure.html">Configure Weebly Cloud</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_gs_team_members.html">Create Team Members</a></li>
+            
+            
+            
+            
+            
+            
+            <li class="active"><a href="ds_gs_plans.html">Create Plans</a></li>
             
             
             
@@ -217,26 +227,90 @@
         
     
     <li>
-        <a href="#">Tutorial&#58; Create an Element</a>
+        <a href="#">Create and Manage Clients and Sites</a>
         <ul>
             
             
             
-            <li><a href="cl_element_main.html">Create an Element</a></li>
+            <li><a href="ds_gs_clients.html">Create and Manage Clients</a></li>
             
             
             
             
             
             
-            <li><a href="cl_element_1.html">1. Design the Element</a></li>
+            <li><a href="ds_gs_cr_sites.html">Create Sites</a></li>
             
             
             
             
             
             
-            <li><a href="cl_element_2.html">2. Register the Element</a></li>
+            <li><a href="ds_gs_bld_sites.html">Build Sites</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_gs_mg_sites.html">Manage Sites</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_gs_prev_sites.html">Let Your Client Preview a Site</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_gs_access_sites.html">Give Clients and Team Members Site Access</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_gs_upgrades.html">Handle Site Upgrades</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_gs_apps.html">Allow Third Party Apps</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_gs_market.html">Market to Your Customers in Weebly</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Billing and Invoicing</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_gs_invoice.html">View Client Invoices</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_gs_bill.html">Pay Weebly Bill</a></li>
             
             
             
@@ -260,9 +334,9 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div>
-    <div class="pageType">  tutorial </div>
+    <div class="pageType">  concepts  task </div>
     <div class="post-header">
-        <h1 class="post-title-main">TUTORIAL Create a Weebly Element</h1>
+        <h1 class="post-title-main">Create Plans</h1>
     </div>
 </div>
 
@@ -272,7 +346,7 @@
 <div class="post-content">
 
    
-    <div class="summary">In this tutorial, you’ll learn how to recreate the Weebly Price Chart sample element, package it up and test it. This element displays a given number of price plans, each with a given number of metrics.</div>
+    <div class="summary">Weebly offers plans that determine the functionality available to a site. You create your own plans and plan pricing and then associate them with Weebly plans. Clients see only your plans.</div>
    
 
 
@@ -305,7 +379,38 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  <h2 id="test">Test</h2>
+  <h2 id="about-plans">About Plans</h2>
+
+<p>The Weebly Cloud platform uses plans to determine what a site does and does not have access to. For example, the Weebly Starter Plan doesn’t allow site search, while the other plans do. Video and audio players are only available on the Pro plan. You create your own plans, including pricing, page limits, and whether or not the plan allows access to the <a href="ds_gs_apps.html">Weebly App Center</a>  (if this is activated for your account), and then associate each of your plans with a Weebly plan. You must create at least one plan, and you must designate one plan as the default that is automatically assigned to a site.</p>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The App Center is not white-labeled. That is, the Weebly brand appears throughout the center.</div>
+
+<p>Every site must be associated with one, and only one plan. Sites are associated with a plan when you <a href="ds_gs_sites.html">create a site</a>. If anyone attempts to add functionality to the site that the plan does not support, they will be asked to upgrade.</p>
+
+<p>Your account representative will setup a default set of plans for you to get started. You use Cloud Admin to add and edit your plans. ​</p>
+<hr />
+
+<h2 id="create-plans-with-cloud-admin">Create Plans with Cloud Admin</h2>
+
+<p>You use the <strong>Packages</strong> icon in Cloud Admin to create the plans you need. For reference, Cloud Admin provides a link that describes and compares all Weebly plans. Use this to decide which plans you’d like to implement for your clients.</p>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Prices shown with the Weebly plan descriptions may not accurately reflect the prices for your account. Please use this only as a reference for plan descriptions, not prices.</div>
+
+<p><strong>To create a plan:</strong></p>
+<ol>
+  <li>In the <a href="weeblycloud.com/admin">Cloud Admin</a>, click <strong>PACKAGES</strong> and click <strong>Add Plan</strong>.</li>
+  <li>Enter a plan name. The name must be unique.</li>
+  <li>Select the corresponding Weebly plan. Your plan will inherit the functionality available in the Weebly plan.</li>
+  <li>Optionally enable access to the <a href="www.weebly.com/app-center">Weebly App Center</a>. If you don’t enable access, no links to the center will display in the Editor.  Depending on how your account was configured, free sites may or may not be able to have access to the app center. Ask your account representative for more info.
+    <div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> Ask your account representative if your unsure whether or not your account has access to the App Center.</div>
+  </li>
+  <li>Optionally set a published page number limit (the site can have an unlimited amount of draft, unpublished pages).</li>
+  <li>Set the monthly and/or yearly pricing for the plan.</li>
+  <li>Optionally set the plan as the default. Only one plan can be the default.</li>
+</ol>
+<figure><img class="docimage" src="images/cl_plans.png" alt="" /></figure>
+<p><br /></p>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> f you are editing a plan to add App Center access, any sites on that plan immediately gain access to the center once you save your changes. If you revoke access, then sites can’t access the App Center going forward, but will continue to be able to use any apps already installed.</div>
+
 
 
     <div class="tags">
@@ -318,7 +423,7 @@ $('#toc').on('click', 'a', function() {
         
         
         
-        <a href="tag_custom_apps.html" class="btn btn-default navbar-btn cursorNorm" role="button">custom_apps</a>
+        <a href="tag_plans.html" class="btn btn-default navbar-btn cursorNorm" role="button">plans</a>
         
         
         
@@ -334,7 +439,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 Weebly. All rights reserved. <br />
- Site last generated: Jun 2, 2017 <br />
+ Site last generated: Jun 5, 2017 <br />
 <p><img src="images/company_logo.png" alt="Company logo"/></p>
                 </div>
             </div>

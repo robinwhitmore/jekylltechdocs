@@ -6,7 +6,7 @@
 {
 "title": "About the Weebly Cloud for Designer REST APIs",
 "tags": "apisgetting_started",
-"keywords": "",
+"keywords": "endpoint, list view, detail view, http verbs, pagination, authentication, authorization, errors",
 "url": "ds_apis_about.html",
 "summary": "Weebly APIs are provided using REST over HTTPS and utilize the HTTP verbs GET, POST, PUT, PATCH and DELETE. We provide a number of client libraries to help get you started. See the following sections for more general information about using our APIs."
 }
@@ -39,7 +39,7 @@
 {
 "title": "Sample Applications",
 "tags": "getting_startedcustom_apps",
-"keywords": "",
+"keywords": "bootstrap, pricing chart, git hub, examples",
 "url": "ds_apps_samples.html",
 "summary": "This page contains downloadable sample application bundles. Feel free to download, inspect, and modify any of these applications. Each application comes in a working state, and can be downloaded and immediately uploaded into your developer account."
 }
@@ -72,7 +72,7 @@
 {
 "title": "Tutorial&amp;#58; Create an Element",
 "tags": "getting_startedcustom_apps",
-"keywords": "",
+"keywords": "price chart",
 "url": "ds_element_main.html",
 "summary": ""
 }
@@ -83,9 +83,31 @@
 {
 "title": "Configure Weebly Cloud",
 "tags": "getting_startedconfiguration",
-"keywords": "",
+"keywords": "brand, cloud admin, domain, url, email, settings, upgrade, hash, support, message, contact,",
 "url": "ds_gs_configure.html",
 "summary": "You use the Settings tab of the Weebly Cloud Admin portal to configure your cloud account. You can add your logo and other company links and contact info, configure locale settings like time and date, set up messages for our support team, set up your domain and URLs, contacts, and access your API keys."
+}
+,
+
+
+
+{
+"title": "Create Plans",
+"tags": "getting_startedplans",
+"keywords": "plans, packages, pages, App Center, access",
+"url": "ds_gs_plans.html",
+"summary": "Weebly offers plans that determine the functionality available to a site. You create your own plans and plan pricing and then associate them with Weebly plans. Clients see only your plans."
+}
+,
+
+
+
+{
+"title": "Create Team Members",
+"tags": "getting_started",
+"keywords": "Cloud Admin, users, roles",
+"url": "ds_gs_team_members.html",
+"summary": "You use Cloud Admin to create team members, which are the users at your company that can use Cloud Admin. Team members are assigned roles that determine what they can and cannot do in Cloud Admin."
 }
 ,
 

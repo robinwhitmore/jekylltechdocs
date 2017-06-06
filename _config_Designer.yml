@@ -102,8 +102,6 @@ name: "Cloud for Designers"
 
 sidebars:
 - ds_gs_sidebar
-- ds_apps_sidebar
-- ds_apis_sidebar
 - ds_tags_sidebar
 - other
 
