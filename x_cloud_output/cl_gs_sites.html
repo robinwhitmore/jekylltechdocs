@@ -41,7 +41,7 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<!-- <link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000feed.xml"> -->
+<!-- <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml"> -->
 
 <script type="text/javascript">
     $(document).ready(function() {
@@ -364,7 +364,7 @@ $('#toc').on('click', 'a', function() {
 
   <h2 id="use-cloud-admin-to-create-sites">Use Cloud Admin to Create Sites</h2>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Using Cloud Admin to work with users and sites is not available to all Weebly installations. If you do not have this functionality and want more info, contact your Weebly business development sales rep.</div>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Using Cloud Admin to work with user and sites is not available to all Weebly installations. If you do not have this functionality and want more info, contact your Weebly representative.</div>
 
 <p>Once you’ve created a user, you can then use Cloud Admin to create a site for that user.
 <!--TODO: add link --></p>
@@ -374,7 +374,8 @@ $('#toc').on('click', 'a', function() {
 <p><strong>To create a site:</strong></p>
 <ol>
   <li>In the <a href="https://weeblycloud.com/admin">Cloud Admin</a>, from the user’s detail page, in the <strong>Sites</strong> area click <strong>Add Site</strong>.</li>
-  <li>In the Add Site dialog, you must provide a title and a unique domain, and select a plan to assign to the site. Then choose to create a new site from scratch (select <strong>New Site</strong> in the <strong>Site Template</strong> area) or you can use a template or copy an existing site for this user (more in the next sections).</li>
+  <li>In the Add Site dialog, you must provide a title and a unique domain, and select a plan to assign to the site.</li>
+  <li>In the <strong>Site Template</strong> area, select <strong>New Site</strong> to create a new site from scratch. Or use a template or copy an existing site (more in the next sections).</li>
   <li>Optionally, provide site settings like timezone, date format, language, and more.</li>
   <li>Click <strong>Save</strong>.</li>
 </ol>
@@ -397,12 +398,12 @@ $('#toc').on('click', 'a', function() {
 <p><strong>To create a template:</strong>
 <!--TODO: Find out how this works w/Designers who don't really have users. Would it be a team memeber? Add links to create user/team member --></p>
 <ol>
-  <li>Optionally create a user that will “own” the template sites, then create your template sites under this user. While you can create a template out of any user’s site, this is a great way to organize and manage your templates.</li>
+  <li>Optionally create a <span style="color: red">user</span> that will “own” the template sites, then create your template sites under this user. While you can create a template out of any user’s site, this is a great way to organize and manage your templates.</li>
   <li>Create a site following the instructions above. Add elements and design your site.</li>
   <li>Optionally add apps from the Weebly App Center or your own custom apps. But remember that access to apps is <a href="cl_gs_plans">based on plans</a> , so you may be restricting the potential sites that can use the template by adding apps. To avoid this, when you use the template, you can temporarily change the plan the new site is on so that it allows access to the App Center. More below.
-    <div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> Remember that a template is a starting point. Don’t add too many elements, or design too specifically. It may end up being more work to remove what isn’t needed, than it would have been to start from scratch.</div>
+    <div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> Remember that a template is a starting point. Don’t add too many elements, or design too specifically. It may end up being more work to remove what isn’t needed than it would have been to start from scratch.</div>
   </li>
-  <li>In the Cloud Admin, from the Site Details page for your template site, click <strong>Add as Template</strong>.
+  <li>In the Cloud Admin, from the details page for your template site, click <strong>Add as Template</strong>.
     <figure><img class="docimage" src="images/cl_addTemplate.png" alt="" /></figure>
     <p><br /></p>
   </li>
@@ -425,8 +426,10 @@ If you want to stop using a site as a template, from the Site Details page, clic
   <li>A user wants to create a clone of one of their existing sites</li>
 </ul>
 
-<p>When you copy a site, it copies the existing site and theme, and copies all pages and page content. Orders and members are not copied, and neither are blog posts. Products, membership settings, and any installed apps are copied. Apps from the App Center will appear in the new site as they do in the original, however they will be in a disconnected state. The site owner will need to explicitly grant permission to reconnect the app when they log into the Editor.
-​</p>
+<p>When you copy a site, it copies the existing site and theme, and copies all pages and page content. Orders and members are not copied, and neither are blog posts. Products, membership settings, and any installed apps are copied. Apps from the App Center will appear in the new site as they do in the original, however they will be in a disconnected state. You or the site owner will need to explicitly grant permission to reconnect the app when logging into the Editor.</p>
+<figure><img class="docimage" src="images/sh_reconnect.png" alt="" /></figure>
+
+<p>​</p>
 
 <p><strong>To copy a site:</strong></p>
 
@@ -434,7 +437,7 @@ If you want to stop using a site as a template, from the Site Details page, clic
   <li>Following the steps above for creating a site in Cloud Admin.</li>
   <li>In the Add Site dialog, scroll down to the <strong>Site Template</strong> section.</li>
   <li>Choose to either copy a template that you’ve created or to copy an existing site for this user.
-    <figure><img class="docimage" src="images/cl_site_create.png" alt="" /></figure>
+    <figure><img class="docimage" src="images/cl_copysite.png" alt="" /></figure>
     <p><br />
 If you choose to copy a template, a dropdown displays showin all templates that you have created. Select the one to use.</p>
     <figure><img class="docimage" src="images/cl_createfromtemplate.png" alt="" /></figure>
@@ -445,16 +448,16 @@ If you choose to copy an existing site, select one of the existing sites from th
   </li>
 </ol>
 
-<p>If the new site is not on a plan that allows access to the App Center, the app will still work, but you will need to connect the app for your customer.</p>
+<p>If the new site is not on a plan that allows access to the App Center, the app will work, but you will need to temporarily change the plan to connect the app.</p>
 
 <p><strong>To allow an app on a plan that doesn’t support the App Center:</strong></p>
 <ol>
   <li>Temporarily change the site’s plan to one that has access to the App Center.</li>
-  <li>Log into the site from the Cloud Admin and grant the permissions for the app.</li>
+  <li>Log into the site from the Cloud Admin and in the Editor, grant the permissions for the app.</li>
   <li>Change the plan back to the original one.</li>
 </ol>
 
-<p>The site owner will be able to manage the app, but will not be able to visit the App Center.</p>
+<p>Anyone editing the site will be able to manage the app, but will not be able to visit the App Center.</p>
 
 <hr />
 
@@ -518,7 +521,7 @@ Then click <strong>Edit</strong> from the portal.</p>
 <figure><img class="docimage" src="images/cl_userPortal.png" alt="" /></figure>
 <p><br /></p>
 
-<p>Or, from the Site Detail page in the Cloud Admin, click <strong>Edit</strong>.</p>
+<p>Or, from the site’s detail page in the Cloud Admin, click <strong>Edit</strong>.</p>
 <figure><img class="docimage" src="images/cl_site_detail_edit.png" alt="" /></figure>
 <p><br /></p>
 
@@ -530,16 +533,17 @@ Then click <strong>Edit</strong> from the portal.</p>
 
 <h2 id="preview-a-site-before-publishing">Preview a Site Before Publishing</h2>
 
-<p>You can preview how a site will appear live without publishing, from the Editor. The site displays in a preview window with a temporary URL. Site owners can use this URL to view the site. The URL remains valid for 30 days.</p>
+<p>You can preview how a site will appear live without publishing, from the Editor. The site displays in a preview window with a temporary URL. You can send this URL to team members or site owners so they can view the site. The URL remains valid for 30 days.</p>
 
-<p><strong>To preview a site:</strong>
-In the Editor, click <strong>Preview</strong>.</p>
+<p><strong>To preview a site:</strong></p>
+
+<p>In the Editor, click <strong>Preview</strong>.</p>
 <figure><img class="docimage" src="images/cl_editor2.png" alt="" /></figure>
 <p><br />
 OR, in the Cloud Admin, from the site’s detail page, click the <strong>Site Preview</strong> link.</p>
 <figure><img class="docimage" src="images/cl_site_previewlink.png" alt="" /></figure>
 <p><br />
-The site displays in a preview window. Copy the URL from here to send to the user or team member.</p>
+The site displays in a preview window. Copy the URL from here and send to the user or team member.</p>
 <figure><img class="docimage" src="images/cl_site_preview.png" alt="" /></figure>
 <p><br /></p>
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Blogs, Commerce, Search, Forms, and Membership do not work in preview sites.</div>

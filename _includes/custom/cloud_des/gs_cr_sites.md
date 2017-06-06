@@ -153,6 +153,7 @@ You can preview how a site will appear live without publishing, from the Editor.
 **To preview a site:**
 
 In the Editor, click **Preview**.
+{% include note.html content="Only users accessing the Editor from Cloud Admin will see the Preview button. It is unavailable to users accessing the site from the User Portal." %}
 {% include image.html file="cl_editor2.png" %}<br>
 OR, in the Cloud Admin, from the site's detail page, click the **Site Preview** link.
 {% include image.html file="cl_site_previewlink.png" %}<br>
