@@ -23,8 +23,9 @@ You use the **Packages** icon in Cloud Admin to create the plans you need. For r
 5. Optionally set a published page number limit (the site can have an unlimited amount of draft, unpublished pages).
 6. Set the monthly and/or yearly pricing for the plan.
 7. Optionally set the plan as the default. Only one plan can be the default.
+<!--TODO: Need a new image for Designer that doesn't show annual plan -->
 {% include image.html file="cl_plans.png" %}<br>
-{% include note.html content="f you are editing a plan to add App Center access, any sites on that plan immediately gain access to the center once you save your changes. If you revoke access, then sites can't access the App Center going forward, but will continue to be able to use any apps already installed." %}
+{% include note.html content="If you are editing a plan to add App Center access, any sites on that plan immediately gain access to the center once you save your changes. If you revoke access, then sites can't access the App Center going forward, but will continue to be able to use any apps already installed." %}
 {% if site.project=="cloud" %}
 <hr>
 

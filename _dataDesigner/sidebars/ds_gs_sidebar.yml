@@ -19,7 +19,7 @@ entries:
       output: pdf
       type: frontmatter
 
-
+#status: not created, in progress, needs review, in review, ready, live
   - title: Get Started
     output: web, pdf
     folderitems:
@@ -28,18 +28,22 @@ entries:
       url: /home.html
       output: web, pdf
       type: homepage
+      #status: in progress - needs my review/rewrite to be more designer focused
 
     - title: Configure Weebly Cloud
       url: /ds_gs_configure.html
       output: web, pdf
+      #status: in progress - needs my review/rewrite to be more designer focused
 
     - title: Create Team Members
       url: /ds_gs_team_members.html
       output: web, pdf
+      #status: needs review
 
     - title: Create Plans
       url: /ds_gs_plans.html
       output: web, pdf
+      #status: needs review
 
   - title: Create and Manage Clients and Sites
     output: web, pdf
@@ -48,38 +52,47 @@ entries:
     - title: Create and Manage Clients
       url: /ds_gs_clients.html
       output: web, pdf
+      #status: not created
 
-    - title: Create and Edit Sites
+    - title: Create Sites
       url: /ds_gs_cr_sites.html
       output: web, pdf
+      #status: need to add new content
 
     - title: Build Sites
       url: /ds_gs_bld_sites.html
       output: web, pdf
+      #status: not created
 
     - title: Manage Sites
       url: /ds_gs_mg_sites.html
       output: web, pdf
+      #status: not created
 
     - title: Let Your Client Preview a Site
       url: /ds_gs_prev_sites.html
       output: web, pdf
+      #status: not created
 
     - title: Give Clients and Team Members Site Access
       url: /ds_gs_access_sites.html
       output: web, pdf
+      #status: not created
 
     - title: Handle Site Upgrades
       url: /ds_gs_upgrades.html
       output: web, pdf
+      #status: not created
 
     - title: Allow Third Party Apps
       url: /ds_gs_apps.html
       output: web, pdf
+      #status: not created
 
     - title: Market to Your Customers in Weebly
       url: /ds_gs_market.html
       output: web, pdf
+      #status: not created
 
   - title: Billing and Invoicing
     output: web, pdf
@@ -88,7 +101,9 @@ entries:
     - title: View Client Invoices
       url: /ds_gs_invoice.html
       output: web, pdf
+      #status: not created
 
     - title: Pay Weebly Bill
       url: /ds_gs_bill.html
-      output: web, pdfcd
+      output: web, pdf
+      #status: not created
