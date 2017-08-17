@@ -1,6 +1,6 @@
 ---
 title: Create Plans
-keywords: plans, packages, pages, App Center, access
+keywords: plans, packages, pages, apps, access
 t_type: [concepts, task]
 tags: [getting_started, plans]
 sidebar: ds_gs_sidebar

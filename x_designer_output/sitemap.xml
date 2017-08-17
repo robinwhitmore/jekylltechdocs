@@ -50,6 +50,12 @@
   
   
   <url>
+    <loc>http://localhost:4008/ds_gs_apps.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4008/ds_gs_configure.html</loc>
   </url>
   
@@ -88,6 +94,8 @@
   <url>
     <loc>http://localhost:4008/home.html</loc>
   </url>
+  
+  
   
   
   

@@ -28,12 +28,12 @@ entries:
       url: /home.html
       output: web, pdf
       type: homepage
-      #status: in progress - needs my review/rewrite to be more designer focused
+      #status: needs review
 
     - title: Configure Weebly Cloud
       url: /ds_gs_configure.html
       output: web, pdf
-      #status: in progress - needs my review/rewrite to be more designer focused
+      #status: needs review
 
     - title: Create Team Members
       url: /ds_gs_team_members.html
@@ -42,6 +42,11 @@ entries:
 
     - title: Create Plans
       url: /ds_gs_plans.html
+      output: web, pdf
+      #status: needs review
+
+    - title: Provide Apps to Your Customers
+      url: /ds_gs_apps.html
       output: web, pdf
       #status: needs review
 
@@ -81,11 +86,6 @@ entries:
 
     - title: Handle Site Upgrades
       url: /ds_gs_upgrades.html
-      output: web, pdf
-      #status: not created
-
-    - title: Allow Third Party Apps
-      url: /ds_gs_apps.html
       output: web, pdf
       #status: not created
 
