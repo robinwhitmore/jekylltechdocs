@@ -16,6 +16,8 @@ Your first step is to get a Weebly Cloud account. This account gives you access 
 
 Once your account is set up, head on over to {%if site.project=="designer"%}[Configure Weebly Cloud](ds_gs_configure.html) {%elsif site.project=="cloud"%}[Configure Weebly Cloud](cl_gs_configure.html){%endif%} to finish setting up your account.
 
+
+
 ## Test Mode
 
 When first getting acquainted with the Weebly Cloud, your account will be in <a data-container="body" data-toggle="popover" data-content="{{site.data.glossary.test_mode}}">test mode</a>. There are no functional limitations while in test mode, it simply defaults any users and sites created to test so that you won't be charged for them. They will be periodically removed from the system, but only after your Weebly Cloud account is in production mode.
@@ -29,6 +31,18 @@ As a Weebly Cloud partner, you can either host the published sites on Weebly's i
 
 In both hosting cases, the Weebly Editor (where your site owners create their sites) is hosted on Weebly. More info about hosting options can be found here.
 {%endif%}
+
+## The Cloud Admin
+Many of the operations needed to manage your customers' websites can be accomplished using the <a data-container="body" data-toggle="popover" data-content="{{site.data.glossary.Cloud_Admin}}">Cloud Admin</a>. Some of these include the ability to delete and restore sites. You access the portal at https://weeblycloud.com/admin.
+{% if site.project==cloud%}
+{% include image.html file="cl_cloudAdmin1.png" caption="Cloud Admin User Page" %}
+{% endif %}
+<!--TODO: add screenshot for desginer-->
+Users of the Cloud Admin are called Team Members, and you can configure the access to functionality they have on the {%if site.project=="designer"%}[Team Member](ds_gs_team_members.html) {%elsif site.project=="cloud"%}[Team Member](cl_gs_team_members.html){%endif%} page.
+
+## The User Portal
+Your {{site.customer}}s access sites through the User Portal. Here, they can view site stats as well as the site editor. You configure the level of access they have by setting site contributor permissions. <!--TODO: add link-->
+{% include image.html file="cl_userPortal.png" caption="The User Portal" %}
 
 ## Use the Weebly Editor
 

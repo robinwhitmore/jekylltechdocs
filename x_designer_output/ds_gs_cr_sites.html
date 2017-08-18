@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Once a client is created, you can create and implement their site(s) from Cloud Admin. You can also create templates that you can copy to create new sites. O...">
 <meta name="keywords" content="getting_startedsites,  publish, copy, preview, template, templates, apps">
-<title>Create Sites | Weebly Cloud for Designers Documentation</title>
+<title>Create and Manage Sites | Weebly Cloud for Designers Documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -132,7 +132,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Create Sites page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Create and Manage Sites page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -150,7 +150,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Create Sites">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Create and Manage Sites">{title}</a></li>',
                     noResultsText: 'No results',
                             limit: 10,
                             fuzzy: true,
@@ -246,7 +246,7 @@
             
             
             
-            <li class="active"><a href="ds_gs_cr_sites.html">Create Sites</a></li>
+            <li class="active"><a href="ds_gs_cr_sites.html">Create and Manage Sites</a></li>
             
             
             
@@ -254,20 +254,6 @@
             
             
             <li><a href="ds_gs_bld_sites.html">Build Sites</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_gs_mg_sites.html">Manage Sites</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_gs_prev_sites.html">Let Your Client Preview a Site</a></li>
             
             
             
@@ -336,7 +322,7 @@
         <div>
     <div class="pageType">  concepts  task </div>
     <div class="post-header">
-        <h1 class="post-title-main">Create Sites</h1>
+        <h1 class="post-title-main">Create and Manage Sites</h1>
     </div>
 </div>
 
@@ -380,10 +366,9 @@ $('#toc').on('click', 'a', function() {
     
 
   <h2 id="use-cloud-admin-to-create-sites">Use Cloud Admin to Create Sites</h2>
-<!--TODO: Need to add new content -->
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Using Cloud Admin to work with client and sites is not available to all Weebly installations. If you do not have this functionality and want more info, contact your Weebly representative.</div>
 
-<p>Once you’ve created a client, you can then use Cloud Admin to create a site for that client.
+<p>Once you’ve <a href="ds_gs_clients.html">created</a> 
+ a client, you can then use Cloud Admin to create a site for that client.
 <!--TODO: add link --></p>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> You must create at least one <a href="ds_gs_plans.html">plan</a> before you can create a site.</div>
@@ -391,18 +376,22 @@ $('#toc').on('click', 'a', function() {
 <p><strong>To create a site:</strong></p>
 <ol>
   <li>In the <a href="https://weeblycloud.com/admin">Cloud Admin</a>, from the client’s detail page, in the <strong>Sites</strong> area click <strong>Add Site</strong>.</li>
-  <li>In the Add Site dialog, you must provide a title and a unique domain, and select a plan to assign to the site.</li>
+  <li>In the Add Site dialog, you must provide a title and a unique domain, and select a plan to assign to the site.
+    <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Domain names must be unique and must not contain <code class="highlighter-rouge">weebly</code>.</div>
+  </li>
   <li>In the <strong>Site Template</strong> area, select <strong>New Site</strong> to create a new site from scratch. Or use a template or copy an existing site (more in the next sections).</li>
-  <li>Optionally, provide site settings like timezone, date format, language, and more.</li>
+  <li>Optionally, provide site settings like timezone, date format, language, and more.
+    <figure><img class="docimage" src="images/cl_site_create.png" alt="" /></figure>
+    <p><br />
+<!--todo: get designer screenshot--></p>
+  </li>
+  <li>In the Theme Gallery, choose the theme for the site. If you’ve created custom themes <!--todo: insert link--> they display on the tab with your company name.
+    <figure><img class="docimage" src="images/cl_theme_gallery.png" alt="" /><figcaption>caption text</figcaption></figure>
+  </li>
   <li>Click <strong>Save</strong>.</li>
 </ol>
 
-<figure><img class="docimage" src="images/cl_site_create.png" alt="" /></figure>
-<p><br /></p>
-
-<p>You can create contributors for the site, including the owner of the site. These are users that can either have complete access to the site or you can limit their access. Find more info here.
-<!--TODO: Add link --></p>
-<hr />
+<p>Unless you set <a href="ds_gs_access_sites.html">contributor permissions</a> <!--todo: check cloud link-->the client has complete access to all pages and settings for the site, including the ability to edit and publish.”</p>
 
 <h2 id="create-a-site-using-a-template">Create a Site Using a Template</h2>
 
@@ -411,7 +400,7 @@ $('#toc').on('click', 'a', function() {
 <p>You can create up to 30 templates.</p>
 
 <p><strong>To create a template:</strong>
-<!--TODO: Find out how this works w/Designers who don't really have users. Would it be a team memeber? Add links to create user/team member --></p>
+<!--TODO: Find out how this works w/Designers who don't really have users. Would it be a team member? Add links to create user/team member --></p>
 <ol>
   <li>Optionally create a <span style="color: red">user</span> that will “own” the template sites, then create your template sites under this user. While you can create a template out of any user’s site, this is a great way to organize and manage your templates.</li>
   <li>Create a site following the instructions above. Add elements and design your site.</li>
@@ -431,8 +420,6 @@ If you want to stop using a site as a template, from the Site Details page, clic
 <figure><img class="docimage" src="images/cl_remove_template.png" alt="" /></figure>
 <p><br /></p>
 
-<hr />
-
 <h2 id="copy-a-site">Copy a Site</h2>
 
 <p>Instead of creating a site from scratch, you can copy an existing one. There are two common use cases for copying a site:</p>
@@ -451,7 +438,7 @@ If you want to stop using a site as a template, from the Site Details page, clic
 <ol>
   <li>Following the steps above for creating a site in Cloud Admin.</li>
   <li>In the Add Site dialog, scroll down to the <strong>Site Template</strong> section.</li>
-  <li>Choose to either copy a template that you’ve created or to copy an existing site for this client.
+  <li>Choose to either copy a template that you’ve created or to copy an existing site.
     <figure><img class="docimage" src="images/cl_copysite.png" alt="" /></figure>
     <p><br />
 If you choose to copy a template, a dropdown displays showin all templates that you have created. Select the one to use.</p>
@@ -474,8 +461,6 @@ If you choose to copy an existing site, select one of the existing sites from th
 
 <p>Anyone editing the site will be able to manage the app, but will not be able to visit the App Center.</p>
 
-<hr />
-
 <h2 id="edit-a-site">Edit a Site</h2>
 
 <p>Once a site is created, you can edit the site one of two ways:</p>
@@ -495,11 +480,9 @@ Then click <strong>Edit</strong> from the portal.</p>
 <figure><img class="docimage" src="images/cl_editor2.png" alt="" /></figure>
 <p><br /></p>
 
-<hr />
-
 <h2 id="preview-a-site-before-publishing">Preview a Site Before Publishing</h2>
 
-<p>You can preview how a site will appear live without publishing, from the Editor. The site displays in a preview window with a temporary URL. You can send this URL to team members or site owners so they can view the site. The URL remains valid for 30 days.</p>
+<p>You can preview how a site will appear live without publishing, from the Editor. The site displays in a preview window with a temporary URL. You can send this URL to team members or clients so they can view the site. The URL remains valid for 30 days.</p>
 
 <p><strong>To preview a site:</strong></p>
 
@@ -516,8 +499,6 @@ The site displays in a preview window. Copy the URL from here and send to the cl
 <p><br /></p>
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Blogs, Commerce, Search, Forms, and Membership do not work in preview sites.</div>
 
-<hr />
-
 <h2 id="publish-a-site">Publish a Site</h2>
 
 <p>When you publish a site, it goes live at the domain you’ve registered for the site and can be immediately accessed.</p>
@@ -526,8 +507,16 @@ The site displays in a preview window. Copy the URL from here and send to the cl
 
 <p>From the Editor, click <strong>Publish</strong>.</p>
 <figure><img class="docimage" src="images/cl_editor2.png" alt="" /></figure>
-<p><br /></p>
 
+<h2 id="change-a-sites-domain">Change a Site’s Domain</h2>
+<p>You can change a site’s domain when needed.</p>
+
+<p>From the site’s detail page, click <strong>Set Domain</strong> and enter the new domain.</p>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Domain names must be unique and must not contain <code class="highlighter-rouge">weebly</code>.</div>
+
+<figure><img class="docimage" src="images/cl_site_detail_domain.png" alt="" /><figcaption>Change the site's domain</figcaption></figure>
+
+<!--todo: designer screenshot-->
 
 
     <div class="tags">
@@ -556,7 +545,7 @@ The site displays in a preview window. Copy the URL from here and send to the cl
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 Weebly. All rights reserved. <br />
- Site last generated: Aug 16, 2017 <br />
+ Site last generated: Aug 17, 2017 <br />
 <p><img src="images/company_logo.png" alt="Company logo"/></p>
                 </div>
             </div>

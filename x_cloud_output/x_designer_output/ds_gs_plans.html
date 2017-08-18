@@ -4,7 +4,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Weebly offers plans that determine the functionality available to a site. You create your own plans and plan pricing and then associate them with Weebly plan...">
-<meta name="keywords" content="getting_startedplans,  plans, packages, pages, App Center, access">
+<meta name="keywords" content="getting_startedplans,  plans, packages, pages, apps, access">
 <title>Create Plans | Weebly Cloud for Designers Documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
@@ -41,7 +41,7 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<!-- <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml"> -->
+<!-- <link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4008feed.xml"> -->
 
 <script type="text/javascript">
     $(document).ready(function() {
@@ -222,6 +222,13 @@
             
             
             
+            
+            
+            <li><a href="ds_gs_apps.html">Provide Apps to Your Customers</a></li>
+            
+            
+            
+            
         </ul>
         
         
@@ -239,7 +246,7 @@
             
             
             
-            <li><a href="ds_gs_cr_sites.html">Create and Edit Sites</a></li>
+            <li><a href="ds_gs_cr_sites.html">Create Sites</a></li>
             
             
             
@@ -275,13 +282,6 @@
             
             
             <li><a href="ds_gs_upgrades.html">Handle Site Upgrades</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_gs_apps.html">Allow Third Party Apps</a></li>
             
             
             
@@ -381,18 +381,19 @@ $('#toc').on('click', 'a', function() {
 
   <h2 id="about-plans">About Plans</h2>
 
-<p>The Weebly Cloud platform uses plans to determine what a site does and does not have access to. For example, the Weebly Starter Plan doesn’t allow site search, while the other plans do. Video and audio players are only available on the Pro plan. You create your own plans, including pricing, page limits, and whether or not the plan allows access to the <a href="ds_gs_apps.html">Weebly App Center</a>  (if this is activated for your account), and then associate each of your plans with a Weebly plan. You must create at least one plan, and you must designate one plan as the default that is automatically assigned to a site.</p>
+<p>The Weebly Cloud platform uses plans to determine what a site does and does not have access to. For example, the Weebly Starter Plan doesn’t allow site search, while the other plans do. Video and audio players are only available on the Pro plan.</p>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The App Center is not white-labeled. That is, the Weebly brand appears throughout the center.</div>
+<p>You create your own plans, including pricing, page limits, and whether or not the plan allows access to the <a href="ds_gs_apps.html">Weebly App Center</a>  (if this is activated for your account), and then associate each of your plans with a Weebly plan. You must create at least one plan.</p>
 
-<p>Every site must be associated with one, and only one plan. Sites are associated with a plan when you <a href="ds_gs_sites.html">create a site</a>. If anyone attempts to add functionality to the site that the plan does not support, they will be asked to upgrade.</p>
+<p>When a site is created, it must be associated with a plan, so you need to designate one of your plans as the default plan automatically assigned to every site (it can then be changed). If anyone attempts to add functionality to the site that its plan does’t support, they will be asked to upgrade.<!--TODO: add link--></p>
 
-<p>Your account representative will setup a default set of plans for you to get started. You use Cloud Admin to add and edit your plans. ​</p>
-<hr />
+<p>Your account representative will setup a default set of plans for you to get started. You use <a data-container="body" data-toggle="popover" data-content="The site used to manage your users, site owners and their accounts, as well as apps and billing. You access Cloud Admin at weeblycloud.com/admin">Cloud Admin</a> to add and edit your plans. ​</p>
 
 <h2 id="create-plans-with-cloud-admin">Create Plans with Cloud Admin</h2>
 
-<p>You use the <strong>Packages</strong> icon in Cloud Admin to create the plans you need. For reference, Cloud Admin provides a link that describes and compares all Weebly plans. Use this to decide which plans you’d like to implement for your clients.</p>
+<p>You use the <strong>Packages</strong> tab in Cloud Admin to create the plans you need. For reference, Cloud Admin provides a link that describes and compares all Weebly plans. Use this to decide which plans you’d like to implement for your clients.</p>
+<figure><img class="docimage" src="images/cl_plans_compare.png" alt="" /><figcaption>Comparison of Weebly plans</figcaption></figure>
+
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Prices shown with the Weebly plan descriptions may not accurately reflect the prices for your account. Please use this only as a reference for plan descriptions, not prices.</div>
 
 <p><strong>To create a plan:</strong></p>
@@ -405,11 +406,12 @@ $('#toc').on('click', 'a', function() {
   </li>
   <li>Optionally set a published page number limit (the site can have an unlimited amount of draft, unpublished pages).</li>
   <li>Set the monthly and/or yearly pricing for the plan.</li>
-  <li>Optionally set the plan as the default. Only one plan can be the default.</li>
+  <li>Optionally set the plan as the default. Only one plan can be the default.
+<!--TODO: Need a new image for Designer that doesn't show annual plan --></li>
 </ol>
 <figure><img class="docimage" src="images/cl_plans.png" alt="" /></figure>
 <p><br /></p>
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> f you are editing a plan to add App Center access, any sites on that plan immediately gain access to the center once you save your changes. If you revoke access, then sites can’t access the App Center going forward, but will continue to be able to use any apps already installed.</div>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> If you are editing a plan to add App Center access, any sites on that plan immediately gain access to the center once you save your changes. If you revoke access, then sites can’t access the App Center going forward, but will continue to be able to use any apps already installed.</div>
 
 
 
@@ -439,7 +441,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 Weebly. All rights reserved. <br />
- Site last generated: Jun 6, 2017 <br />
+ Site last generated: Aug 16, 2017 <br />
 <p><img src="images/company_logo.png" alt="Company logo"/></p>
                 </div>
             </div>

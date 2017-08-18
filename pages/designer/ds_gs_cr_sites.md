@@ -1,5 +1,5 @@
 ---
-title: Create Sites
+title: Create and Manage Sites
 keywords: publish, copy, preview, template, templates, apps
 t_type: [concepts, task]
 tags: [getting_started, sites]

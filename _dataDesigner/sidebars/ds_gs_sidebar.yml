@@ -57,42 +57,32 @@ entries:
     - title: Create and Manage Clients
       url: /ds_gs_clients.html
       output: web, pdf
-      #status: not created
+      #status: in progress. needs to be tested and needs screenshots.
 
-    - title: Create Sites
+    - title: Create and Manage Sites
       url: /ds_gs_cr_sites.html
       output: web, pdf
-      #status: need to add new content
+      #status: needs review
 
     - title: Build Sites
       url: /ds_gs_bld_sites.html
       output: web, pdf
-      #status: not created
-
-    - title: Manage Sites
-      url: /ds_gs_mg_sites.html
-      output: web, pdf
-      #status: not created
-
-    - title: Let Your Client Preview a Site
-      url: /ds_gs_prev_sites.html
-      output: web, pdf
-      #status: not created
+      #status: need to add content - do designers have access to help center?
 
     - title: Give Clients and Team Members Site Access
       url: /ds_gs_access_sites.html
       output: web, pdf
-      #status: not created
+      #status: needs review
 
     - title: Handle Site Upgrades
       url: /ds_gs_upgrades.html
       output: web, pdf
-      #status: not created
+      #status: needs review, but not sure it's needed
 
     - title: Market to Your Customers in Weebly
       url: /ds_gs_market.html
       output: web, pdf
-      #status: not created
+      #status: needs review
 
   - title: Billing and Invoicing
     output: web, pdf

@@ -1,9 +1,10 @@
 ## Use Cloud Admin to Create Sites
-<!--TODO: Need to add new content -->
+
+{% if site.project=="cloud" %}
 <div markdown="span" class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Using Cloud Admin to work with {{site.user}} and sites is not available to all Weebly installations. If you do not have this functionality and want more info, contact your Weebly representative.</div>
-
-
-Once you've created a {{site.user}}, you can then use Cloud Admin to create a site for that {{site.user}}.
+{% endif %}
+Once you've {%if site.project=="designer"%}[created](ds_gs_clients.html) {%elsif site.project=="cloud"%}[created](cl_gs_users.html){%endif%}
+ a {{site.user}}, you can then use Cloud Admin to create a site for that {{site.user}}.
 <!--TODO: add link -->
 {% if site.project=="cloud" %}
 {% include note.html content="You must create at least one [plan](cl_gs_plans.html) before you can create a site." %}
@@ -13,17 +14,19 @@ Once you've created a {{site.user}}, you can then use Cloud Admin to create a si
 **To create a site:**
 1. In the [Cloud Admin](https://weeblycloud.com/admin), from the {{site.user}}'s detail page, in the **Sites** area click **Add Site**.
 2. In the Add Site dialog, you must provide a title and a unique domain, and select a plan to assign to the site.
+   {% include note.html content="Domain names must be unique and must not contain `weebly`." %}
 3. In the **Site Template** area, select **New Site** to create a new site from scratch. Or use a template or copy an existing site (more in the next sections).
 3. Optionally, provide site settings like timezone, date format, language, and more.
+   {% include image.html file="cl_site_create.png" %}<br>
+<!--todo: get designer screenshot-->
+4. In the Theme Gallery, choose the theme for the site. If you've created custom themes <!--todo: insert link--> they display on the tab with your company name.
+   {% include image.html file="cl_theme_gallery.png" caption="caption text" %}
 4. Click **Save**.
 
-{% include image.html file="cl_site_create.png" %}<br>
-{% if site.project=="cloud" %}
-​The site is owned by the {{site.user}} - that is, they have complete access to all pages and settings for the site.
-{% endif %}
-You can create contributors for the site{% if site.project=="designer" %}, including the owner of the site{% endif %}. These are users that can either have complete access to the site or you can limit their access. Find more info here.
-<!--TODO: Add link -->
-<hr>
+
+
+Unless you set {%if site.project=="designer"%}[contributor permissions](ds_gs_access_sites.html) {%elsif site.project=="cloud"%}[contributor permissions](cl_gs_access_sites.html){%endif%}<!--todo: check cloud link-->the {{site.user}} has complete access to all pages and settings for the site, including the ability to edit and publish."
+
 ## Create a Site Using a Template
 
 Instead of creating a site from scratch, you can start with a template. Templates are sites that you've created to use as a starting point for new sites. For example, you might create a template for an online store and one for a portfolio site.
@@ -31,7 +34,7 @@ Instead of creating a site from scratch, you can start with a template. Template
 You can create up to 30 templates.
 
 **To create a template:**
-<!--TODO: Find out how this works w/Designers who don't really have users. Would it be a team memeber? Add links to create user/team member -->
+<!--TODO: Find out how this works w/Designers who don't really have users. Would it be a team member? Add links to create user/team member -->
 1. Optionally create a <span style="color: red">user</span> that will "own" the template sites, then create your template sites under this user. While you can create a template out of any user's site, this is a great way to organize and manage your templates.
 2. Create a site following the instructions above. Add elements and design your site.
 3. Optionally add apps from the Weebly App Center {% if site.project=="cloud" %}or your own custom apps{% endif %}. But remember that access to apps is {% if site.project=="cloud" %}[based on plans](cl_gs_plans) {% elsif site.project=="designer" %} [based on plans](ds_gs_plans){% endif %}, so you may be restricting the potential sites that can use the template by adding apps. To avoid this, when you use the template, you can temporarily change the plan the new site is on so that it allows access to the App Center. More below.
@@ -45,7 +48,6 @@ Once added, that site appears as a template available for use when you chose to 
 If you want to stop using a site as a template, from the Site Details page, click **Remove as Template**.
 {% include image.html file="cl_remove_template.png" %}<br>
 
-<hr>
 ## Copy a Site
 
 Instead of creating a site from scratch, you can copy an existing one. There are two common use cases for copying a site:
@@ -60,7 +62,7 @@ When you copy a site, it copies the existing site and theme, and copies all page
 
 1. Following the steps above for creating a site in Cloud Admin.
 2. In the Add Site dialog, scroll down to the **Site Template** section.
-3. Choose to either copy a template that you've created or to copy an existing site for this {{site.user}}.
+3. Choose to either copy a template that you've created or to copy an existing site.
    {% include image.html file="cl_copysite.png" %}<br>
    If you choose to copy a template, a dropdown displays showin all templates that you have created. Select the one to use.
    {% include image.html file="cl_createfromtemplate.png" %}<br>
@@ -77,7 +79,6 @@ If the new site is not on a plan that allows access to the App Center, the app w
 Anyone editing the site will be able to manage the app, but will not be able to visit the App Center.
 
 {%if site.project=="cloud"%}
-<hr>
 
 ## Use the API to Create Sites
 
@@ -127,8 +128,6 @@ If you use plug-ins with Weebly Cloud, then your users create sites using the pl
 {% include image.html file="cl_odin_createsite.png" %}<br>
 {% endif %}
 
-<hr>
-
 ## Edit a Site
 
 Once a site is created, you can edit the site one of two ways:
@@ -144,11 +143,9 @@ Or, from the site's detail page in the Cloud Admin, click **Edit**.
 ​The site opens in the Editor, where you can make any needed changes.
 {% include image.html file="cl_editor2.png" %}<br>
 
-<hr>
-
 ## Preview a Site Before Publishing
 
-You can preview how a site will appear live without publishing, from the Editor. The site displays in a preview window with a temporary URL. You can send this URL to team members or site owners so they can view the site. The URL remains valid for 30 days.
+You can preview how a site will appear live without publishing, from the Editor. The site displays in a preview window with a temporary URL. You can send this URL to team members or {{site.user}}s so they can view the site. The URL remains valid for 30 days.
 
 **To preview a site:**
 
@@ -161,8 +158,6 @@ The site displays in a preview window. Copy the URL from here and send to the {{
 {% include image.html file="cl_site_preview.png" %}<br>
 {% include note.html content="Blogs, Commerce, Search, Forms, and Membership do not work in preview sites." %}
 
-<hr>
-
 ## Publish a Site
 
 When you publish a site, it goes live at the domain you've registered for the site and can be immediately accessed.
@@ -170,5 +165,12 @@ When you publish a site, it goes live at the domain you've registered for the si
 **To publish a site:**
 
 From the Editor, click **Publish**.
-{% include image.html file="cl_editor2.png" %}<br>
+{% include image.html file="cl_editor2.png" %}
 
+## Change a Site's Domain
+You can change a site's domain when needed.
+
+From the site's detail page, click **Set Domain** and enter the new domain.
+{% include note.html content="Domain names must be unique and must not contain `weebly`." %}
+{% include image.html file="cl_site_detail_domain.png" caption="Change the site's domain" %}
+<!--todo: designer screenshot-->

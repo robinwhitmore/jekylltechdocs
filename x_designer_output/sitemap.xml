@@ -50,7 +50,25 @@
   
   
   <url>
+    <loc>http://localhost:4008/ds_gs_access_sites.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4008/ds_gs_apps.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_gs_bld_sites.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_gs_clients.html</loc>
   </url>
   
   
@@ -68,6 +86,12 @@
   
   
   <url>
+    <loc>http://localhost:4008/ds_gs_market.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4008/ds_gs_plans.html</loc>
   </url>
   
@@ -75,6 +99,12 @@
   
   <url>
     <loc>http://localhost:4008/ds_gs_team_members.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_gs_upgrades.html</loc>
   </url>
   
   

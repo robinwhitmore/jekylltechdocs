@@ -81,6 +81,17 @@
 
 
 {
+"title": "Provide Apps to Sites",
+"tags": "getting_startedconfigurationapps",
+"keywords": "App Center, apps, custom, elements, snippets",
+"url": "ds_gs_apps.html",
+"summary": "Weebly offers an App Center that includes apps from Weebly and also from third parties and you can grant sites access to this center. Or, you can create your own custom apps and have them automatically installed to sites on a specific plan."
+}
+,
+
+
+
+{
 "title": "Configure Weebly Cloud",
 "tags": "getting_startedconfiguration",
 "keywords": "brand, cloud admin, domain, url, email, settings, upgrade, hash, support, message, contact,",
@@ -105,7 +116,7 @@
 {
 "title": "Create Plans",
 "tags": "getting_startedplans",
-"keywords": "plans, packages, pages, App Center, access",
+"keywords": "plans, packages, pages, apps, access",
 "url": "ds_gs_plans.html",
 "summary": "Weebly offers plans that determine the functionality available to a site. You create your own plans and plan pricing and then associate them with Weebly plans. Clients see only your plans."
 }
@@ -148,12 +159,14 @@
 
 {
 "title": "Get Started with Weebly Cloud for Designers",
-"tags": "getting_started",
-"keywords": "",
+"tags": "getting_startedapps",
+"keywords": "get started, test mode, editor, code, apps, themes, custom,",
 "url": "home.html",
-"summary": "Welcome to Weebly Cloud for Designers! With Weebly Cloud, you use Weebly’s best-in-class website builder to create websites, blogs or online stores in minutes for your clients, while you maintain full control over billing, support, and the customer relationship."
+"summary": "Welcome to Weebly Cloud for Designers! With Weebly Cloud, you use Weebly’s best-in-class website builder to create websites, blogs or online stores in minutes for your clients, and the Cloud Admin to maintain full control over billing, support, and the customer relationship."
 }
 ,
+
+
 
 
 
