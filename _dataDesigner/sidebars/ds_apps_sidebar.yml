@@ -46,3 +46,139 @@ entries:
     - title: 2. Register the Element
       url: /ds_element_2.html
       output: web, pdf
+
+    - title: 3. Create a Directory Structure
+      url: ds_element_3.html
+      output: web, pdf
+
+    - title: 4. Create the Manifest
+      url: ds_element_4.html
+      output: web, pdf
+
+    - title: 5. Create the Settings
+      url: ds_element_5.html
+      output: web, pdf
+
+    - title: 6. Create the HTML Template
+      url: ds_element_6.html
+      output: web, pdf
+
+    - title: 7. Create the Styles
+      url: ds_element_7.html
+      output: web, pdf
+
+    - title: 8. Create the JavaScript
+      url: ds_element_8.html
+      output: web, pdf
+
+    - title: 9. Package, Upload, and Test Your Element
+      url: ds_element_9.html
+      output: web, pdf
+
+    - title: Finish
+      url: des_element_finish
+      output: web, pdf
+
+  - title: Develop an App
+    output: web, pdf
+    folderitems:
+
+    - title: Develop an App
+      url: /ds_apps_dev.html
+      output: web, pdf
+
+    - title: Register Your App
+      url: /ds_apps_reg.html
+      output: web, pdf
+
+    - title: Manage Your App
+      url: /ds_apps_manage.html
+      output: web, pdf
+
+    - title: Create the App File Structure
+      url: /ds_apps_files.html
+      output: web, pdf
+
+    - title: Create the App Manifest
+      url: /ds_apps_manifest.html
+      output: web, pdf
+
+  - title: Create a Backend Service
+    output: web, pdf
+    folderitems:
+
+    - title: Create a Backend Service
+      url: /ds_apps_backend.html
+      output: web, pdf
+
+  - title: Create an Element
+    output: web, pdf
+    folderitems:
+
+    - title: What are Elements?
+      url: /ds_apps_elements.html
+      output: web, pdf
+
+    - title: Element Design Guidelines
+      url: /ds_apps_guides.html
+      output: web, pdf
+
+    - title: Element Icon Guidelines
+      url: /ds_apps_icon.html
+      output: web, pdf
+
+    - title: Create an Element
+      url: /ds_apps_element_create.html
+      output: web, pdf
+
+    - title: Add Element Folders
+      url: /ds_apps_element_folders.html
+      output: web, pdf
+
+    - title: Add an Element to the Manifest
+      url: /ds_apps_element_manifest.html
+      output: web, pdf
+
+    - title: Create Element Settings
+      url: /ds_apps_element_settings.html
+      output: web, pdf
+
+    - title: Element Manifest Example
+      url: /ds_apps_element_man_ex.html
+      output: web, pdf
+
+    - title: Create an Element Template
+      url: /ds_apps_element_temp.html
+      output: web, pdf
+
+    - title: Element Template Example
+      url: /ds_apps_element_temp_ex.html
+      output: web, pdf
+
+    - title: Add Stylesheets to an Element
+      url: /ds_apps_element_style.html
+      output: web, pdf
+
+    - title: Add JavaScript to an Element
+      url: /ds_apps_element_js.html
+      output: web, pdf
+
+  - title: Get Your App Ready to Publish
+    output: web, pdf
+    folderitems:
+
+    - title: Upload your App
+      url: /ds_apps_element_upload.html
+      output: web, pdf
+
+    - title: Test Your App
+      url: /ds_apps_element_test.html
+      output: web, pdf
+
+    - title: Release Your App to Your Customer
+      url: /ds_apps_element_release.html
+      output: web, pdf
+
+    - title: Update Your App
+      url: /ds_apps_element_update.html
+      output: web, pdf

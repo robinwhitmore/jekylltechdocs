@@ -422,24 +422,27 @@ $('#toc').on('click', 'a', function() {
 <strong>To configure basic settings:</strong></p>
 <ol>
   <li>From the Cloud Admin, click the <strong>Settings</strong> tab.</li>
-  <li>In the <strong>Configuration</strong> area, click the <strong>Edit</strong> icon and enter the appropriate info for the following:
-    <ul>
-      <li><strong>Upgrade URL</strong>: When a customer encounters a feature in the Weebly Editor that is part of a plan they do not currently have, they will be prompted to upgrade. This triggers a popup window that loads a URL showing the plans they can upgrade to. Enter that URL here. More about how upgrades work can be found here.
-<!--TODO: enter URL to upgrade topic --></li>
-      <li><strong>Publish Upsell URL</strong>: When a customer publishes a site, the Weebly editor displays a publishing modal with a link to the site just published, and often Weebly promotional material as well. You can set a link to a promotion for your company by entering a URL here. The resulting content loads in an iframe (640px W by 200px H) when the site is published. More info here.
-<!--TODO: enter URL to upgrade topic --></li>
-      <li><strong>Default User Language</strong>: Select the default language displayed to your team and customers. They can always change this by selecting a different language from the Settings tab of the editor, or if enabled, the language picker in the User Portal.</li>
-      <li><strong>Default Time Zone</strong>: Select the default time zone used by the Site Editor.</li>
-      <li><strong>Default Date Format</strong>: Select how you want dates displayed by default. You can choose either <code class="highlighter-rouge">MM/DD/YYYY</code> or <code class="highlighter-rouge">DD/MM/YYYY</code>.</li>
-      <li><strong>Default Time Format</strong>: Select how time should display by default - either 12 or 24 hour.</li>
-    </ul>
-  </li>
+  <li>In the <strong>Configuration</strong> area, click the <strong>Edit</strong> icon and enter the appropriate info for the following:</li>
 </ol>
+
+<ul>
+  <li>
+    <p><strong>Upgrade URL</strong>: When a customer encounters a feature in the Weebly Editor that is part of a plan they do not currently have, they will be prompted to upgrade. This triggers a popup window that loads a URL showing the plans they can upgrade to. Enter that URL here. More about how upgrades work can be found <a href="">here</a>.
+<!--TODO: enter URL to upgrade topic --></p>
+  </li>
+  <li><strong>Publish Upsell URL</strong>: When a customer publishes a site, the Weebly editor displays a publishing modal with a link to the site just published, and often Weebly promotional material as well. You can set a link to a promotion for your company by entering a URL here. The resulting content loads in an iframe (640px W by 200px H) when the site is published. More info here.
+<!--TODO: enter URL to upgrade topic --></li>
+  <li><strong>Default User Language</strong>: Select the default language displayed to your team and customers. They can always change this by selecting a different language from the Settings tab of the editor, or if enabled, the language picker in the User Portal.</li>
+  <li><strong>Default Time Zone</strong>: Select the default time zone used by the Site Editor.</li>
+  <li><strong>Default Date Format</strong>: Select how you want dates displayed by default. You can choose either <code class="highlighter-rouge">MM/DD/YYYY</code> or <code class="highlighter-rouge">DD/MM/YYYY</code>.</li>
+  <li><strong>Default Time Format</strong>: Select how time should display by default - either 12 or 24 hour.</li>
+</ul>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> You don’t need to worry about the Upgrade URL or hash. These are used by Weebly enterprise accounts to automatically upgrade their customers when they try to access functionality not covered by their current plan. As a Designer, you will likely upgrade your clients’ plans manually. If you’re interested in automatic upgrading, contact your account representative.</div>
 
 <h2 id="view-your-upgrade-hash">View Your Upgrade Hash</h2>
 
 <p>As part of the upgrade URL, Weebly passes in a hash that includes the user ID, the site ID, and a reseller-specific hash. You need to decode this hash to verify that the URL was accessed from the Weebly editor. You can see that hash from the <strong>Upgrade Settings</strong> area of the Cloud Admin. More about the hash and how to handle the upgrade process here.
-<!--TODO: user_ID? enter URL to upgrade topic --></p>
+<!--TODO: enter URL to upgrade topic --></p>
 
 <p><strong>To view the hash:</strong></p>
 <ol>
