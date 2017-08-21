@@ -74,9 +74,10 @@ entries:
       output: web, pdf
       #status: needs review
 
-    - title: Handle Site Upgrades
-      url: /ds_gs_upgrades.html
-      output: web, pdf
+
+   # - title: Handle Site Upgrades
+    #  url: /ds_gs_upgrades.html
+     # output: web, pdf
       #status: needs review, but not sure it's needed
 
     - title: Market to Your Customers in Weebly
@@ -88,12 +89,7 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: View Client Invoices
+    - title: View and Pay Weebly Invoices
       url: /ds_gs_invoice.html
       output: web, pdf
-      #status: not created
-
-    - title: Pay Weebly Bill
-      url: /ds_gs_bill.html
-      output: web, pdf
-      #status: not created
+      #status: needs review

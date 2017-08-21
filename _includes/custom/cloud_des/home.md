@@ -41,7 +41,7 @@ Many of the operations needed to manage your customers' websites can be accompli
 Users of the Cloud Admin are called Team Members, and you can configure the access to functionality they have on the {%if site.project=="designer"%}[Team Member](ds_gs_team_members.html) {%elsif site.project=="cloud"%}[Team Member](cl_gs_team_members.html){%endif%} page.
 
 ## The User Portal
-Your {{site.customer}}s access sites through the User Portal. Here, they can view site stats as well as the site editor. You configure the level of access they have by setting site contributor permissions. <!--TODO: add link-->
+Your {{site.customer}}s access sites through the User Portal. Here, they can view site stats as well as the site editor. You configure the level of access they have by setting {%if site.project=="designer"%}[site contributor permissions](ds_gs_access_sites.html) {%elsif site.project=="cloud"%}[site contributor permissions](cl_gs_access_sites.html){%endif%}.
 {% include image.html file="cl_userPortal.png" caption="The User Portal" %}
 
 ## Use the Weebly Editor

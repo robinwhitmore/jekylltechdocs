@@ -16,9 +16,9 @@ The App Center is accessed from the Editor, and installed apps are also accessed
 {% include image.html file="appCenter_editor.png" caption="Apps in the Editor" %}
 Apps are managed and uninstalled from the Manage Apps page, also accessed from the Editor, or from the Settings page.
 {% include image.html file="myApps_support.png" caption="My Apps page in the Editor" %}
-To provide access to the Weebly App Center, get in touch with your Account Manager or Business Development contact who will turn this on for your account. Once the App Center is activated, you need to explicitly add App Center access to your site plan(s).<!--TODO: add link--> The links to the App Center (including those in the header and those in the Editor) display only for sites that have purchased plans that include the App Center.
+To provide access to the Weebly App Center, get in touch with your Account Manager or Business Development contact who will turn this on for your account. Once the App Center is activated, you need to explicitly add App Center access to your site {%if site.project=="designer"%}[plan(s)](ds_gs_plans.html) {%elsif site.project=="cloud"%}[plan(s)](cl_gs_plans.html){%endif%}. The links to the App Center (including those in the header and those in the Editor) display only for sites that have purchased plans that include the App Center.
 
-If you allow site contributors<!--TODO: add link-->, those with Admin privileges will be able to access the App Center. All other contributors need to be granted explicit access.
+If you allow {%if site.project=="designer"%}[site contributors](ds_gs_access_sites.html) {%elsif site.project=="cloud"%}[site contributors](cl_gs_access_sites.html){%endif%}, those with Admin privileges will be able to access the App Center. All other contributors need to be granted explicit access.
 
 If you want to be able to install apps for your customers, but not allow them access to the App Center, you or a team member can temporarily set the site's plan to one that allows App Center access, log into the site and install the app(s), and then change the plan to one that can't access the App Center. The customer will be able to use and manage the app, but will not be able to visit the App Center.
 

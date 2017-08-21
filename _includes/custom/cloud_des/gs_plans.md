@@ -6,7 +6,7 @@ You create your own plans, including pricing, page limits, and whether or not th
 {%if site.project=="cloud"%}
 {% include note.html content="The App Center is not white-labeled. That is, the Weebly brand appears throughout the center." %}
 {%endif%}
-When a site is created, it must be associated with a plan, so you need to designate one of your plans as the default plan automatically assigned to every site (it can then be changed). If anyone attempts to add functionality to the site that its plan does't support, they will be asked to upgrade.<!--TODO: add link-->
+When a site is created, it must be associated with a plan, so you need to designate one of your plans as the default plan automatically assigned to every site (it can then be changed). If anyone attempts to add functionality to the site that its plan does't support, they will be asked to {%if site.project=="designer"%}[upgrade](ds_gs_market.html) {%elsif site.project=="cloud"%}[upgrade](cl_gs_market.html){%endif%}.
 
 Your account representative will setup a default set of plans for you to get started. You use <a data-container="body" data-toggle="popover" data-content="{{site.data.glossary.Cloud_Admin}}">Cloud Admin</a> to add and edit your plans{%if site.project=="cloud"%} and if using ﻿plug-ins, import plans using the plug-in interface{% endif %}. ​
 

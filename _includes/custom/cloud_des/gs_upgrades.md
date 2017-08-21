@@ -1,4 +1,3 @@
-<!--todo: find out if designer needs to do this-->​
 {% if site.project=="cloud"%}The Weebly Cloud platform provides a convenient way for external systems to handle changes to account billing and plans. {% endif %}When a user encounters a feature in the Weebly Editor that is part of a plan they do not currently have, they will be prompted to upgrade. This triggers a popup window which loads a URL showing the plans they can upgrade to. You need to create this content, and then handle the upgrade.
 
 You set the upgrade URL in the Cloud Admin (or via the API) on either the Weebly Cloud Account or the Site level (in the event a different URL is set at the site and account level, the site level has the higher precedence).

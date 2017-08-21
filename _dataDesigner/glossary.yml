@@ -53,3 +53,5 @@ team_member: Internal users that are registered to use the Cloud Admin.
 test_mode: A mode that allows you to create test users and sites without being charged.
 
 themes: These are the templates that give the look and feel to a web site. Being able to create custom themes is still in Beta, but you're welcome to have a go at creating or customizing themes. Just be aware that not everything in the docs may work as described at this point.
+
+user_portal: Your clients use this to access sites and statistics. They access the portal at https://weeblycloud.com/portal.

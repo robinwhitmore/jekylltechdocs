@@ -1,7 +1,7 @@
 ---
 title: Handle Site Upgrades
 keywords: sites, upgrades, plans
-t_type: [concepts, task, reference, tutorial]
+t_type: [task]
 tags: [getting_started, plans, sites]
 sidebar: ds_gs_sidebar
 permalink: ds_gs_upgrades.html

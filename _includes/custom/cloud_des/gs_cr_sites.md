@@ -5,7 +5,6 @@
 {% endif %}
 Once you've {%if site.project=="designer"%}[created](ds_gs_clients.html) {%elsif site.project=="cloud"%}[created](cl_gs_users.html){%endif%}
  a {{site.user}}, you can then use Cloud Admin to create a site for that {{site.user}}.
-<!--TODO: add link -->
 {% if site.project=="cloud" %}
 {% include note.html content="You must create at least one [plan](cl_gs_plans.html) before you can create a site." %}
 {% elsif site.project=="designer" %}
