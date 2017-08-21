@@ -47,19 +47,22 @@ You can configure locale settings for your sites, such language, time zone, and 
 **To configure basic settings:**
 1. From the Cloud Admin, click the **Settings** tab.
 2. In the **Configuration** area, click the **Edit** icon and enter the appropriate info for the following:
-* **Upgrade URL**: When a {{site.customer}} encounters a feature in the Weebly Editor that is part of a plan they do not currently have, they will be prompted to upgrade. This triggers a popup window that loads a URL showing the plans they can upgrade to. Enter that URL here. More about how upgrades work can be found here.
+{% if site.project=="cloud"%}
+* **Upgrade URL**: When a {{site.customer}} encounters a feature in the Weebly Editor that is part of a plan they do not currently have, they will be prompted to upgrade. This triggers a popup window that loads a URL showing the plans they can upgrade to. Enter that URL here. More about how upgrades work can be found [here]().
 <!--TODO: enter URL to upgrade topic -->
+{%endif%}
 * **Publish Upsell URL**: When a {{site.customer}} publishes a site, the Weebly editor displays a publishing modal with a link to the site just published, and often Weebly promotional material as well. You can set a link to a promotion for your company by entering a URL here. The resulting content loads in an iframe (640px W by 200px H) when the site is published. More info here.
 <!--TODO: enter URL to upgrade topic -->
 * **Default User Language**: Select the default language displayed to your team and {{site.customer}}s. They can always change this by selecting a different language from the Settings tab of the editor, or if enabled, the language picker in the User Portal.
 * **Default Time Zone**: Select the default time zone used by the Site Editor.
 * **Default Date Format**: Select how you want dates displayed by default. You can choose either `MM/DD/YYYY` or `DD/MM/YYYY`.
 * **Default Time Format**: Select how time should display by default - either 12 or 24 hour.
-
+{% include note.html content="You don't need to worry about the Upgrade URL or hash. These are used by Weebly enterprise accounts to automatically upgrade their customers when they try to access functionality not covered by their current plan. As a Designer, you will likely upgrade your clients' plans manually. If you're interested in automatic upgrading, contact your account representative." %}
+{% if site.project=="cloud"%}
 ## View Your Upgrade Hash
 
 As part of the upgrade URL, Weebly passes in a hash that includes the user ID, the site ID, and a reseller-specific hash. You need to decode this hash to verify that the URL was accessed from the Weebly editor. You can see that hash from the **Upgrade Settings** area of the Cloud Admin. More about the hash and how to handle the upgrade process here.
-<!--TODO: user_ID? enter URL to upgrade topic -->
+<!--TODO: enter URL to upgrade topic -->
 
 **To view the hash:**
 1. From the Cloud Admin, click the **Settings** tab.
@@ -68,7 +71,7 @@ As part of the upgrade URL, Weebly passes in a hash that includes the user ID, t
 {% include note.html content = "If you edit the upgrade hash and you use the WHMCS plug-in, then you must update that configuration as well." %}
 {% endif %}
 {% include image.html file="cl_settings_hash.png" %}
-
+{% endif %}
 ## Create a Support Message
 
 You can create a message that displays to Weebly agents when you contact Weebly Support. This message might include important information they need to know, like a specific support process.

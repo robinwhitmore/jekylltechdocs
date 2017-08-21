@@ -81,11 +81,44 @@
 
 
 {
+"title": "Give Clients and Team Members Site Access",
+"tags": "getting_startedclientssites",
+"keywords": "site contributor, contributor, access, permissions, authorization, site access, site",
+"url": "ds_gs_access_sites.html",
+"summary": "Once you create a site, you can add site contributors - users that have varying access to edit that site and some of the site's settings."
+}
+,
+
+
+
+{
 "title": "Provide Apps to Sites",
 "tags": "getting_startedconfigurationapps",
 "keywords": "App Center, apps, custom, elements, snippets",
 "url": "ds_gs_apps.html",
 "summary": "Weebly offers an App Center that includes apps from Weebly and also from third parties and you can grant sites access to this center. Or, you can create your own custom apps and have them automatically installed to sites on a specific plan."
+}
+,
+
+
+
+{
+"title": "Build Sites",
+"tags": "getting_startedsites",
+"keywords": "sites",
+"url": "ds_gs_bld_sites.html",
+"summary": "You use the Weebly Editor to build sites for your clients."
+}
+,
+
+
+
+{
+"title": "Create and Manage Clients",
+"tags": "getting_startedtroubleshootingconfigurationclientsplanssites",
+"keywords": "clients, admin, configure,",
+"url": "ds_gs_clients.html",
+"summary": "You create and manage your clients in the Cloud Admin. Along with contact information, you can manage a client's sites and their access to functionality on those sites."
 }
 ,
 
@@ -103,11 +136,33 @@
 
 
 {
-"title": "Create Sites",
+"title": "Create and Manage Sites",
 "tags": "getting_startedsites",
 "keywords": "publish, copy, preview, template, templates, apps",
 "url": "ds_gs_cr_sites.html",
 "summary": "Once a client is created, you can create and implement their site(s) from Cloud Admin. You can also create templates that you can copy to create new sites. Once the site is created, you can use the Editor to edit, preview, and publish the site."
+}
+,
+
+
+
+{
+"title": "View and Pay Weebly Invoices",
+"tags": "getting_startedclients",
+"keywords": "invoices, clients, bills, billing",
+"url": "ds_gs_invoice.html",
+"summary": "Cloud Admin has a Billing tab that displays your current Weebly invoices. You can view the details of those invoices and download the current activity. You can also pay invoices from here."
+}
+,
+
+
+
+{
+"title": "Market to Your Customers in Weebly",
+"tags": "getting_startedsites",
+"keywords": "sites, publish, publish modal",
+"url": "ds_gs_market.html",
+"summary": "When a user publishes their site, the Weebly Editor displays a modal. You can customize this modal window by supplying a URL to other content."
 }
 ,
 
@@ -130,6 +185,17 @@
 "keywords": "Cloud Admin, users, roles",
 "url": "ds_gs_team_members.html",
 "summary": "You use Cloud Admin to create team members, which are the users at your company that can use Cloud Admin. Team members are assigned roles that determine what they can and cannot do in Cloud Admin."
+}
+,
+
+
+
+{
+"title": "Handle Site Upgrades",
+"tags": "getting_startedplanssites",
+"keywords": "sites, upgrades, plans",
+"url": "ds_gs_upgrades.html",
+"summary": "Plans determine what functionality a site has. If you try to access functionality not supported by the plan, a popup displays information about upgrading. If you expect your clients to be using the Weebly Editor, you need to provide the content for this popup and you need to handle the upgrade process. If clients won't be using the editor, you'll be shown the standard Weebly dialog."
 }
 ,
 
