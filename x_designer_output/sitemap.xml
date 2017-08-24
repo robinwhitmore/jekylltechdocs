@@ -68,6 +68,12 @@
   
   
   <url>
+    <loc>http://localhost:4008/ds_gs_checklist.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4008/ds_gs_clients.html</loc>
   </url>
   

@@ -1,0 +1,4 @@
+{% if site.project=="cloud"%}Your customers {%elsif site.project=="designer"%}You {%endif%}use the <a data-container="body" data-toggle="popover" data-content="{{site.data.glossary.page_editor}}">Weebly editor</a> to design websites. It's as easy as dragging <a data-container="body" data-toggle="popover" data-content="{{site.data.glossary.element}}">elements</a> from the <a data-container="body" data-toggle="popover" data-content="{{site.data.glossary.element_tray}}">element tray</a> and dropping them onto a page. You access the editor from the Site Detail page in the Cloud Admin.
+{% if page.permalink !="ds_gs_checklist.html" %}
+{% include image.html file="cl_editorBranded.png" caption="The Weebly Editor" %}
+{%endif%}

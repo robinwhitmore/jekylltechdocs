@@ -33,21 +33,13 @@ In both hosting cases, the Weebly Editor (where your site owners create their si
 {%endif%}
 
 ## The Cloud Admin
-Many of the operations needed to manage your customers' websites can be accomplished using the <a data-container="body" data-toggle="popover" data-content="{{site.data.glossary.Cloud_Admin}}">Cloud Admin</a>. Some of these include the ability to delete and restore sites. You access the portal at https://weeblycloud.com/admin.
-{% if site.project==cloud%}
-{% include image.html file="cl_cloudAdmin1.png" caption="Cloud Admin User Page" %}
-{% endif %}
-<!--TODO: add screenshot for desginer-->
-Users of the Cloud Admin are called Team Members, and you can configure the access to functionality they have on the {%if site.project=="designer"%}[Team Member](ds_gs_team_members.html) {%elsif site.project=="cloud"%}[Team Member](cl_gs_team_members.html){%endif%} page.
+{% include custom/cloud_des/inc_cloudAdmin.md %}
 
 ## The User Portal
-Your {{site.customer}}s access sites through the User Portal. Here, they can view site stats as well as the site editor. You configure the level of access they have by setting {%if site.project=="designer"%}[site contributor permissions](ds_gs_access_sites.html) {%elsif site.project=="cloud"%}[site contributor permissions](cl_gs_access_sites.html){%endif%}.
-{% include image.html file="cl_userPortal.png" caption="The User Portal" %}
+{% include custom/cloud_des/inc_userPortal.md %}
 
 ## Use the Weebly Editor
-
-{% if site.project=="cloud"%}Your customers {%elsif site.project=="designer"%}You {%endif%}use the <a data-container="body" data-toggle="popover" data-content="{{site.data.glossary.page_editor}}">Weebly editor</a> to design websites. It's as easy as dragging <a data-container="body" data-toggle="popover" data-content="{{site.data.glossary.element}}">elements</a> from the <a data-container="body" data-toggle="popover" data-content="{{site.data.glossary.element_tray}}">element tray</a> and dropping them onto a page.
-{% include image.html file="cl_editorBranded.png" caption="The Weebly Editor" %}
+{% include custom/cloud_des/inc_weeblyEditor.md %}
 
 ## Add Apps
 {% if site.project=="cloud"%}Your customers {%elsif site.project=="designer"%}You {%endif%}can add more functionality to web sites by visiting the Weebly App Center and downloading and installing apps created by Weebly and by third-party partners. ​{% if site.project=="cloud"%}Site owners {%elsif site.project=="designer"%}You {%endif%}can browse through collections, categories and sub-categories, can filter based on ratings, popularity, freshness, or for free apps, and can search using keywords.

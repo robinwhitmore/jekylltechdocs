@@ -30,6 +30,11 @@ entries:
       type: homepage
       #status: needs review
 
+    - title: Get Started Checklist
+      url: /ds_gs_checklist.html
+      output: web, pdf
+      #status: in progress
+
     - title: Configure Weebly Cloud
       url: /ds_gs_configure.html
       output: web, pdf
