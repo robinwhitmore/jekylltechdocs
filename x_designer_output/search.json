@@ -92,6 +92,17 @@
 
 
 {
+"title": "Using Weebly Cloud Admin",
+"tags": "getting_started",
+"keywords": "cloud admin, admin",
+"url": "ds_gs_admin.html",
+"summary": "The Weebly Cloud Admin is where you manage your clients, their sites, and your Weebly account and installation."
+}
+,
+
+
+
+{
 "title": "Provide Apps to Sites",
 "tags": "getting_startedconfigurationapps",
 "keywords": "App Center, apps, custom, elements, snippets",
@@ -119,6 +130,17 @@
 "keywords": "",
 "url": "ds_gs_checklist.html",
 "summary": "Use this checklist to get up and running quickly with Weebly Cloud for Designers"
+}
+,
+
+
+
+{
+"title": "How Your Clients Work with You",
+"tags": "getting_startedclientssites",
+"keywords": "clients, portal, user portal, ui, sites",
+"url": "ds_gs_client_ui.html",
+"summary": "Your clients access their sites and their site's statistics from the Weebly User Portal"
 }
 ,
 

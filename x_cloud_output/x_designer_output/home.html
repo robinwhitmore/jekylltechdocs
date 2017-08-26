@@ -41,7 +41,7 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<!-- <link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4008feed.xml"> -->
+<!-- <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml"> -->
 
 <script type="text/javascript">
     $(document).ready(function() {
@@ -108,7 +108,7 @@
             </button>
 
             <a class="fa fa-home fa-lg navbar-brand" href="home.html">&nbsp;<span class="projectTitle">
-                Weebly Cloud for Designers Documentation</span></a>
+                Weebly Cloud for Designers</span></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
@@ -201,6 +201,13 @@
             
             
             <li class="active"><a href="home.html">Get Started with Weebly Cloud</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_gs_checklist.html">Get Started Checklist</a></li>
             
             
             
@@ -373,18 +380,25 @@ $('#toc').on('click', 'a', function() {
 <p>Once in production mode you can still create a test user in the Cloud Admin or by passing the optional parameter of <strong>test_mode</strong>. Learn more about the <a href="ds_api_user.html">User API</a></p>
 
 <h2 id="the-cloud-admin">The Cloud Admin</h2>
-<p>Many of the operations needed to manage your customers’ websites can be accomplished using the <a data-container="body" data-toggle="popover" data-content="The site used to manage your users, site owners and their accounts, as well as apps and billing. You access Cloud Admin at weeblycloud.com/admin">Cloud Admin</a>. Some of these include the ability to delete and restore sites. You access the portal at https://weeblycloud.com/admin.</p>
+<!--Cloud Admin-->
+<p>Many of the operations needed to manage your customers’ websites are accomplished using the <a data-container="body" data-toggle="popover" data-content="The site used to manage your users, site owners and their accounts, as well as apps and billing. You access Cloud Admin at weeblycloud.com/admin">Cloud Admin</a>, including the ability to create, manage, and delete sites. You access the portal from <code class="highlighter-rouge">https://your-domain/admin</code>.</p>
+
+<p><span style="color: red">Is this note true?</span></p>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> If your domain is a subdomain of <code class="highlighter-rouge">weeblycloud.com</code>, then you can also access the admin from <code class="highlighter-rouge">https://weeblycloud.com/admin</code>.</div>
 
 <!--TODO: add screenshot for desginer-->
-<p>Users of the Cloud Admin are called Team Members, and you can configure the access to functionality they have on the <a href="ds_gs_team_members.html">Team Member</a>  page.</p>
 
 <h2 id="the-user-portal">The User Portal</h2>
-<p>Your clients access sites through the User Portal. Here, they can view site stats as well as the site editor. You configure the level of access they have by setting <a href="ds_gs_access_sites.html">site contributor permissions</a> .</p>
+<p>Your clients access sites through the User Portal. Here, they can view site stats as well as access the Weebly Editor. You configure the level of access clients have by setting <a href="ds_gs_access_sites.html">site contributor permissions</a>.</p>
+
+<p>You access the portal at <code class="highlighter-rouge">https://your-domain/portal</code>.</p>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> If your domain is a subdomain of <code class="highlighter-rouge">weeblycloud.com</code>, then you can also access the portal from <code class="highlighter-rouge">https://weeblycloud.com/portal</code>.</div>
+
 <figure><img class="docimage" src="images/cl_userPortal.png" alt="" /><figcaption>The User Portal</figcaption></figure>
 
 <h2 id="use-the-weebly-editor">Use the Weebly Editor</h2>
+<p>You use the <a data-container="body" data-toggle="popover" data-content="Page where you can edit your site's web pages. Developers use this to test their apps in their test site. Accessed from the Site Home page by clicking Build.">Weebly editor</a> to design websites. It’s as easy as dragging <a data-container="body" data-toggle="popover" data-content="Elements are the widgets users drag from the editor sidebar onto a page to declaratively build their site. An app might contain one or more elements.">elements</a> from the <a data-container="body" data-toggle="popover" data-content="The sidebar of the Page Editor that holds the elements that you drag and drop onto your web page.">element tray</a> and dropping them onto a page. You access the editor from the Site Detail page in the Cloud Admin.</p>
 
-<p>You use the <a data-container="body" data-toggle="popover" data-content="Page where you can edit your site's web pages. Developers use this to test their apps in their test site. Accessed from the Site Home page by clicking Build.">Weebly editor</a> to design websites. It’s as easy as dragging <a data-container="body" data-toggle="popover" data-content="Elements are the widgets users drag from the editor sidebar onto a page to declaratively build their site. An app might contain one or more elements.">elements</a> from the <a data-container="body" data-toggle="popover" data-content="The sidebar of the Page Editor that holds the elements that you drag and drop onto your web page.">element tray</a> and dropping them onto a page.</p>
 <figure><img class="docimage" src="images/cl_editorBranded.png" alt="" /><figcaption>The Weebly Editor</figcaption></figure>
 
 <h2 id="add-apps">Add Apps</h2>
@@ -445,7 +459,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 Weebly. All rights reserved. <br />
- Site last generated: Aug 21, 2017 <br />
+ Site last generated: Aug 24, 2017 <br />
 <p><img src="images/company_logo.png" alt="Company logo"/></p>
                 </div>
             </div>
