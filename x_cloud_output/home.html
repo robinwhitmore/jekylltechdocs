@@ -397,12 +397,19 @@ $('#toc').on('click', 'a', function() {
 <p>Users of the Cloud Admin are called Team Members, and you can configure the access to functionality they have on the <a href="cl_gs_team_members.html">Team Member</a> page.</p>
 
 <h2 id="the-user-portal">The User Portal</h2>
-<p>Your customers access sites through the User Portal. Here, they can view site stats as well as access the Weebly Editor. You configure the level of access users have by setting <a href="cl_gs_access_sites.html">site contributor permissions</a>.</p>
+<p>Your customers access sites through the User Portal at <code class="highlighter-rouge">https://your-domain/portal</code>.</p>
 
-<p>You access the portal at <code class="highlighter-rouge">https://your-domain/portal</code>.</p>
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> If your domain is a subdomain of <code class="highlighter-rouge">weeblycloud.com</code>, then you can also access the portal from <code class="highlighter-rouge">https://weeblycloud.com/portal</code>.</div>
 
 <figure><img class="docimage" src="images/cl_userPortal.png" alt="" /><figcaption>The User Portal</figcaption></figure>
+
+<p>Here, they can view site stats as well as access the Weebly Editor. You configure the level of access users have by setting <a href="cl_gs_access_sites.html">site contributor permissions</a>.</p>
+
+<p>For example, you can completely <a href="ds_gs_access_sites.html">restrict a client’s access</a> so that they can’t access the editor at all. Or you might give limited access so that the client can view their site’s pages in the Weebly Editor, but they can’t add pages or publish. This screenshot shows the Weebly Editor with restricted permissions. There’s no Publish button and when the user clicks the Pages tab, instead of being shown the UI that lets them add pages, they’re shown a list of pages they can view.</p>
+<figure><img class="docimage" src="images/cl_editor_restricted.png" alt="" /><figcaption>The Weebly Editor with restricted permissions</figcaption></figure>
+
+<p>You can also send your clients a preview of the published site. When you click the <strong>Preview</strong> button in the editor, the site displays in a preview window with a temporary URL that you can send to clients. The URL remains valid for 30 days.</p>
+<figure><img class="docimage" src="images/cl_site_preview.png" alt="" /><figcaption>A preview of a site</figcaption></figure>
 
 <h2 id="use-the-weebly-editor">Use the Weebly Editor</h2>
 <p>Your customers use the <a data-container="body" data-toggle="popover" data-content="Page where you can edit your site's web pages. Developers use this to test their apps in their test site. Accessed from the Site Home page by clicking Build.">Weebly editor</a> to design websites. It’s as easy as dragging <a data-container="body" data-toggle="popover" data-content="Elements are the widgets users drag from the editor sidebar onto a page to declaratively build their site. An app might contain one or more elements.">elements</a> from the <a data-container="body" data-toggle="popover" data-content="The sidebar of the Page Editor that holds the elements that you drag and drop onto your web page.">element tray</a> and dropping them onto a page. You access the editor from the Site Detail page in the Cloud Admin.</p>
@@ -437,7 +444,7 @@ $('#toc').on('click', 'a', function() {
 <h2 id="have-questions">Have Questions?</h2>
 
 <p>If you have any questions while you’re building an app or customizing a theme, or suggestions for how we can improve the APIs, the Cloud Admin, or the documentation, use the <strong>Submit Ticket</strong> link in the Cloud Admin. Once submitted, a ticket is sent to the Cloud support team.</p>
-<figure><img class="docimage" src="images/cl_adminPortal.png" alt="" /><figcaption>Submit a Ticket from the Cloud Admin</figcaption></figure>
+<figure><img class="docimage" src="images/cl_adminPortal_support.png" alt="" /><figcaption>Submit a Ticket from the Cloud Admin</figcaption></figure>
 <p><br /></p>
 
 
@@ -463,7 +470,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 Weebly. All rights reserved. <br />
- Site last generated: Aug 24, 2017 <br />
+ Site last generated: Aug 25, 2017 <br />
 <p><img src="images/company_logo.png" alt="Company logo"/></p>
                 </div>
             </div>

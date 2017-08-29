@@ -19,15 +19,15 @@ The Clients tab is where you [create](ds_gs_clients) new clients, as well as bro
 
 <span style="color: red">[[screenshot of client tab main page]]</span>
 
-When you click on a client name, you're taken to the client's detail page. Here, you can [manage](ds_gs_clients.html#manage-clients) different aspects of the client, as well as create sites for them or log support questions.
+When you click on a client name, you're taken to the client's detail page. Here, you can [manage](ds_gs_clients.html#manage-clients) different aspects of the client, as well as create sites for them.
 
 <span style="color: red">[[screenshot of client detail page]]</span>
 ## Team
-If your company has more than one person who will use the Cloud Admin, here's where you [create and manage](ds_gs_team_members.html#create-a-team-member) those users, called Team Members. You create and search for Team Members from the main page.
+If your company has more than one person who will use the Cloud Admin, you create [create](ds_gs_team_members.html#create-a-team-member) those users as Team Members.
 
 <span style="color: red">[[screenshot of team tab main page]]</span>
 
-When you click on a member name, you navigate to their detail page, where you [assign a role](ds_gs_team_members.html#team-member-roles) that determines the access they have in the Cloud Admin.
+When you click on a member name, you navigate to their detail page where you [assign a role](ds_gs_team_members.html#team-member-roles) that determines the level of access they have in the Cloud Admin.
 
 <span style="color: red">[[screenshot of team detail page]]</span>
 ## Packages
@@ -41,13 +41,13 @@ Click on a plan to edit it's configuration, including its associated Weebly plan
 
 <span style="color: red">[[screenshot of plan detail page]]</span>
 ## Apps
-You can develop custom apps built on the Weebly platform that you install to your client's sites. You use the Apps tab to [create](ds_apps_gs.html), manage, and [release](ds_apps_element_release.html) those apps.
+You can develop custom apps that you install to your client's sites. You use the Apps tab to [create](ds_apps_gs.html), manage, and [release](ds_apps_element_release.html) those apps.
 
 <span style="color: red">[[screenshot of app detail page]]</span>
 
 ## Themes
 <!--todo: add links to themes-->
-Weebly themes provide a general structure and design palette for any website built using the Weebly editor. While Weebly provides a number of themes, you may want to create your own. You use the Themes tab to upload custom themes so that they are available to your sites.
+Weebly themes provide a general structure and design palette for any website built using the Weebly editor. While Weebly provides a number of themes, you may want to create your own. You use the Themes tab to upload your custom themes so that they are available to your sites.
 
 <span style="color: red">[[screenshot of theme upload page]]</span>
 
