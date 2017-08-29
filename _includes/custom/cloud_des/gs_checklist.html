@@ -5,15 +5,16 @@ These are the tools you, your team members (if you have any), and your clients u
 ### Cloud Admin
 {% include custom/cloud_des/inc_cloudAdmin.md %}
 
-Learn about the Cloud Admin here.<!--todo: add link--> <span style="color: red">[[topic tba]]</span>
+Learn about the Cloud Admin {%if site.project=="designer"%}[here](ds_gs_admin.html) {%elsif site.project=="cloud"%}[here](cl_gs_admin.html){%endif%}
+.
 ### User Portal
 {% include custom/cloud_des/inc_userPortal.md %}
 
-More about the User Portal here.<!--todo: add link--> <span style="color: red">[[topic tba]]</span>
+More about the User Portal {%if site.project=="designer"%}[here](ds_gs_client_ui.html) {%elsif site.project=="cloud"%}[here](cl_gs_client_ui.html){%endif%}.
 ### Weebly Editor
 {% include custom/cloud_des/inc_weeblyEditor.md %}
 
-Learn about the Weebly Editor here.<!--todo: add link--> <span style="color: red">[[topic tba]]</span>
+Learn about the Weebly Editor {%if site.project=="designer"%}[here](ds_gs_client_ui.html) {%elsif site.project=="cloud"%}[here](cl_gs_client_ui.html){%endif%}.
 
 ## 2. Set Your Domain
 Log into the Cloud Admin to configure your domain. You can use either a subdomain of `weeblycloud.com` or you can use a custom domain. This domain is used to log into the Cloud Admin (`https://your-domain/admin`) and the User Portal (`https://your-domain/portal`).

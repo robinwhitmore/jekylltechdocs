@@ -34,7 +34,7 @@ You can create up to 30 templates.
 
 **To create a template:**
 <!--TODO: Find out how this works w/Designers who don't really have users. Would it be a team member? Add links to create user/team member -->
-1. Optionally create a <span style="color: red">user</span> that will "own" the template sites, then create your template sites under this user. While you can create a template out of any user's site, this is a great way to organize and manage your templates.
+1. Optionally create a <span style="color: red">user</span> that will "own" the template sites, then create your template sites under this user. While you can create a template out of any user's site, this is a great way to organize and manage your templates.<span style="color: red">[[How should we tell designers to organize their templates since they don't have users? Create a client just for templates?]]</span>
 2. Create a site following the instructions above. Add elements and design your site.
 3. Optionally add apps from the Weebly App Center {% if site.project=="cloud" %}or your own custom apps{% endif %}. But remember that access to apps is {% if site.project=="cloud" %}[based on plans](cl_gs_plans) {% elsif site.project=="designer" %} [based on plans](ds_gs_plans){% endif %}, so you may be restricting the potential sites that can use the template by adding apps. To avoid this, when you use the template, you can temporarily change the plan the new site is on so that it allows access to the App Center. More below.
    {% include tip.html content="Remember that a template is a starting point. Don't add too many elements, or design too specifically. It may end up being more work to remove what isn't needed than it would have been to start from scratch." %}
@@ -173,3 +173,34 @@ From the site's detail page, click **Set Domain** and enter the new domain.
 {% include note.html content="Domain names must be unique and must not contain `weebly`." %}
 {% include image.html file="cl_site_detail_domain.png" caption="Change the site's domain" %}
 <!--todo: designer screenshot-->
+
+## Suspend Access to a Site
+To temporarily prevent a user from updating their site in the event they are delinquent on their payment, their access to a site can be suspended using the `Site::disable` endpoint. <!--todo: add link-->When a site is suspended, access to the Weebly editor is disabled (the published site remains unchanged and active).
+{% if site.project=="cloud"%}
+SSO loginLinks<!--todo: add link--> can still be generated for a suspended site. Clicking on a loginLink will inform the user that access to the site is disabled and will point them to contact their administrator.
+{%endif%}
+Use the `GET /site` API <!--todo: add link-->which returns a `suspended` parameter with a value of `true` or `false` to determine if a site is suspended (the Cloud Admin also shows you if a site is suspended).  A site can be taken out of a suspended state by making a call to `Site::enable`.<!--todo: add link--> ​
+{% if site.project=="cloud"%}
+If you use the WHMCS plug-in, you can use that to suspend and reactivate accounts.<!--todo: add link-->
+{%endif%}
+
+## Unpublish a Site
+In the event you want to unpublish a site you can use the `Site::unpublish` endpoint. This will unpublish the site, but not prevent the user from republishing, if they have access to do so. This API method should not be taken lightly. Unpublishing a user's site should be communicated far in advance so the user can take the appropriate steps to remedy the situation. ​<!--todo: add link-->
+
+{% if site.project=="designer"%}
+You'll no longer be billed for the unpublished site.
+{%endif%}
+
+## Delete a Site
+If a user cancels their subscription you can delete their site(s). This completely prevents the user from accessing the site {%if site.project=="cloud"%}by SSO loginLink or login credentials. Weebly will no longer bill the partner for the site once it is deleted{%endif%}. You can delete a site from the site detail page in the Cloud Admin.
+{% if site.project=="cloud" %}
+{% include image.html file="cl_site_detail_delete.png" caption="Delete a site from the Cloud Admin" %}
+
+You can also delete a site by making a call to the DELETE /site API. <!--todo: add link-->
+{%endif%}
+<!--todo: need desginer image-->
+
+
+
+
+

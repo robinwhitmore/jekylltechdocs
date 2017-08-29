@@ -78,16 +78,20 @@ entries:
       output: web, pdf
       #status: needs review
 
-    - title: Build Sites
-      url: /ds_gs_bld_sites.html
+    - title: Restore Elements, Pages, and Sites
+      url: /ds_gs_restore.html
       output: web, pdf
-      #status: need to add content - do designers have access to help center?
+      #status: needs review
 
     - title: Give Clients and Team Members Site Access
       url: /ds_gs_access_sites.html
       output: web, pdf
       #status: needs review
 
+    - title: Allow Sites to Use SSL
+      url: /ds_gs_ssl.html
+      output: web, pdf
+      #status: needs review
 
    # - title: Handle Site Upgrades
     #  url: /ds_gs_upgrades.html

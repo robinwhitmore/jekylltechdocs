@@ -68,12 +68,6 @@
   
   
   <url>
-    <loc>http://localhost:4008/ds_gs_bld_sites.html</loc>
-  </url>
-  
-  
-  
-  <url>
     <loc>http://localhost:4008/ds_gs_checklist.html</loc>
   </url>
   
@@ -117,6 +111,18 @@
   
   <url>
     <loc>http://localhost:4008/ds_gs_plans.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_gs_restore.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_gs_ssl.html</loc>
   </url>
   
   
