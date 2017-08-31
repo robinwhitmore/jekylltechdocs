@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="You use the Weebly Editor to build sites for your clients.">
-<meta name="keywords" content="getting_startedsites,  sites">
-<title>Build Sites | Weebly Cloud for Designers Documentation</title>
+<meta name="description" content="Weebly sites can use SSL, as long as they are on the Weebly Business plan. However, you'll need to use the Weebly Cloud API to enable the SSL option to displ...">
+<meta name="keywords" content="getting_startedconfigurationsites,  ssl, sites">
+<title>Allow Sites to Use SSL | Weebly Cloud for Designers Documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -136,7 +136,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Build Sites page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Allow Sites to Use SSL page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -154,7 +154,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Build Sites">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Allow Sites to Use SSL">{title}</a></li>',
                     noResultsText: 'No results',
                             limit: 10,
                             fuzzy: true,
@@ -278,7 +278,7 @@
             
             
             
-            <li class="active"><a href="ds_gs_bld_sites.html">Build Sites</a></li>
+            <li><a href="ds_gs_restore.html">Restore Elements, Pages, and Sites</a></li>
             
             
             
@@ -286,6 +286,13 @@
             
             
             <li><a href="ds_gs_access_sites.html">Give Clients and Team Members Site Access</a></li>
+            
+            
+            
+            
+            
+            
+            <li class="active"><a href="ds_gs_ssl.html">Allow Sites to Use SSL</a></li>
             
             
             
@@ -333,7 +340,7 @@
         <div>
     <div class="pageType">  task </div>
     <div class="post-header">
-        <h1 class="post-title-main">Build Sites</h1>
+        <h1 class="post-title-main">Allow Sites to Use SSL</h1>
     </div>
 </div>
 
@@ -343,7 +350,7 @@
 <div class="post-content">
 
    
-    <div class="summary">You use the Weebly Editor to build sites for your clients.</div>
+    <div class="summary">Weebly sites can use SSL, as long as they are on the Weebly Business plan. However, you'll need to use the Weebly Cloud API to enable the SSL option to display in the Site's settings so that the site owner can enable it.</div>
    
 
 
@@ -376,8 +383,25 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  <p>You use the Weebly Editor to edit sites. Use the Drag and drop elements from the sidebar to build areas of a page.
-<!--todo: ? can designers access weebly help center? if so, just put links here. Otherwise, need to add content.--></p>
+  <p>Sites built on the Weebly Business plan can optionally use SSL outside of the checkout flow (pages in the checkout flow always use <code class="highlighter-rouge">HTTPS</code>). Site owners can turn this setting on and off in the General settings section of the editor. They can use SSL only for the checkout flow or for the entire site.</p>
+<figure><img class="docimage" src="images/cl_ssl.png" alt="" /><figcaption>SSL setting in the Weebly Editor</figcaption></figure>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> If the site contains a store, the checkout flow always uses HTTPs, regardless of how SSL is configured for the site. If the SSL option is not selected for the site or for checkout, the URL for the checkout flow is <code class="highlighter-rouge">checkout.weebly.com</code>. If the SSL option is selected, the site’s own domain is used.</div>
+
+<p>However, by default the SSL option does not display on the General settings page. You need to make a call to the <code class="highlighter-rouge">Site</code> API <!--todo: add link-->and update a site’s record to enable the SSL option. You use the <code class="highlighter-rouge">PATCH</code> endpoint and set <code class="highlighter-rouge">allow_ssl</code> to <code class="highlighter-rouge">true</code>.
+​Here’s an example:</p>
+<p class="codeTitle">Enable the SSL Option in the Editor:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/USER_ID/site/SITE_ID <span class="se">\</span>
+-X PATCH <span class="se">\</span>
+-d <span class="s1">'{
+"allow_ssl": true
+}'</span> <span class="se">\</span>
+-H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p>More info on using the Site API here.<!--todo: insert link--></p>
 
 
     <div class="tags">
@@ -387,6 +411,10 @@ $('#toc').on('click', 'a', function() {
         
         
         <a href="tag_getting_started.html" class="btn btn-default navbar-btn cursorNorm" role="button">getting_started</a>
+        
+        
+        
+        <a href="tag_configuration.html" class="btn btn-default navbar-btn cursorNorm" role="button">configuration</a>
         
         
         
@@ -406,7 +434,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 Weebly. All rights reserved. <br />
- Site last generated: Aug 28, 2017 <br />
+ Site last generated: Aug 29, 2017 <br />
 <p><img src="images/company_logo.png" alt="Company logo"/></p>
                 </div>
             </div>

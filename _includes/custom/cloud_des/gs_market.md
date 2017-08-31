@@ -6,7 +6,8 @@ You can use this modal window to advertise your own services by setting the publ
 {% include image.html file="cl_upsell_custom.png" caption="Custom content in the Publish modal" %}
 
 Because the `site_ID` and `user_ID` are passed into the upsell URL, you can dynamically override the content to display based on the user and site being published.
-{% if site.project=="designer" %} Clients are accessed using their `user_id`. <!--todo: is this true?-->{%endif%}
+{% if site.project=="designer" %} Clients are accessed using their `user_id`. <span style="color: red">[[Is this true?]]</span>
+<!--todo: is this true?-->{%endif%}
 Here's an example URL in the iframe:
 <p class="codeTitle">Example Publish Modal URL:</p>
 {% highlight HTML%}

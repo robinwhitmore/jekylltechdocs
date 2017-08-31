@@ -6,7 +6,6 @@ entries:
   version:
   folders:
 
-
   - title: Tag Pages
     output: web
     folderitems:
@@ -49,4 +48,8 @@ entries:
 
     - title: Plug-ins
       url: /tag_plugins.html
+      output: web
+
+    - title: Themes
+      url: /tag_themes.html
       output: web

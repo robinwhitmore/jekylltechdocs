@@ -400,7 +400,7 @@ $('#toc').on('click', 'a', function() {
 <p><strong>To create a template:</strong>
 <!--TODO: Find out how this works w/Designers who don't really have users. Would it be a team member? Add links to create user/team member --></p>
 <ol>
-  <li>Optionally create a <span style="color: red">user</span> that will “own” the template sites, then create your template sites under this user. While you can create a template out of any user’s site, this is a great way to organize and manage your templates.</li>
+  <li>Optionally create a <span style="color: red">user</span> that will “own” the template sites, then create your template sites under this user. While you can create a template out of any user’s site, this is a great way to organize and manage your templates.<span style="color: red">[[How should we tell designers to organize their templates since they don’t have users? Create a client just for templates?]]</span></li>
   <li>Create a site following the instructions above. Add elements and design your site.</li>
   <li>Optionally add apps from the Weebly App Center or your own custom apps. But remember that access to apps is <a href="cl_gs_plans">based on plans</a> , so you may be restricting the potential sites that can use the template by adding apps. To avoid this, when you use the template, you can temporarily change the plan the new site is on so that it allows access to the App Center. More below.
     <div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> Remember that a template is a starting point. Don’t add too many elements, or design too specifically. It may end up being more work to remove what isn’t needed than it would have been to start from scratch.</div>
@@ -563,6 +563,28 @@ The site displays in a preview window. Copy the URL from here and send to the us
 
 <!--todo: designer screenshot-->
 
+<h2 id="suspend-access-to-a-site">Suspend Access to a Site</h2>
+<p>To temporarily prevent a user from updating their site in the event they are delinquent on their payment, their access to a site can be suspended using the <code class="highlighter-rouge">Site::disable</code> endpoint. <!--todo: add link-->When a site is suspended, access to the Weebly editor is disabled (the published site remains unchanged and active).</p>
+
+<p>SSO loginLinks<!--todo: add link--> can still be generated for a suspended site. Clicking on a loginLink will inform the user that access to the site is disabled and will point them to contact their administrator.</p>
+
+<p>Use the <code class="highlighter-rouge">GET /site</code> API <!--todo: add link-->which returns a <code class="highlighter-rouge">suspended</code> parameter with a value of <code class="highlighter-rouge">true</code> or <code class="highlighter-rouge">false</code> to determine if a site is suspended (the Cloud Admin also shows you if a site is suspended).  A site can be taken out of a suspended state by making a call to <code class="highlighter-rouge">Site::enable</code>.<!--todo: add link--> ​</p>
+
+<p>If you use the WHMCS plug-in, you can use that to suspend and reactivate accounts.<!--todo: add link--></p>
+
+<h2 id="unpublish-a-site">Unpublish a Site</h2>
+<p>In the event you want to unpublish a site you can use the <code class="highlighter-rouge">Site::unpublish</code> endpoint. This will unpublish the site, but not prevent the user from republishing, if they have access to do so. This API method should not be taken lightly. Unpublishing a user’s site should be communicated far in advance so the user can take the appropriate steps to remedy the situation. ​<!--todo: add link--></p>
+
+<h2 id="delete-a-site">Delete a Site</h2>
+<p>If a user cancels their subscription you can delete their site(s). This completely prevents the user from accessing the site by SSO loginLink or login credentials. Weebly will no longer bill the partner for the site once it is deleted. You can delete a site from the site detail page in the Cloud Admin.</p>
+
+<figure><img class="docimage" src="images/cl_site_detail_delete.png" alt="" /><figcaption>Delete a site from the Cloud Admin</figcaption></figure>
+
+<p>You can also delete a site by making a call to the DELETE /site API. <!--todo: add link--></p>
+
+<!--todo: need desginer image-->
+
+
 
     <div class="tags">
         
@@ -590,7 +612,7 @@ The site displays in a preview window. Copy the URL from here and send to the us
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 Weebly. All rights reserved. <br />
- Site last generated: Aug 28, 2017 <br />
+ Site last generated: Aug 29, 2017 <br />
 <p><img src="images/company_logo.png" alt="Company logo"/></p>
                 </div>
             </div>

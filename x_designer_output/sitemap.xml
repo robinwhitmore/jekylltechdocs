@@ -44,6 +44,12 @@
   
   
   <url>
+    <loc>http://localhost:4008/ds_element_3.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4008/ds_element_main.html</loc>
   </url>
   
@@ -141,6 +147,12 @@
   
   <url>
     <loc>http://localhost:4008/ds_tags_about.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_[X].html</loc>
   </url>
   
   

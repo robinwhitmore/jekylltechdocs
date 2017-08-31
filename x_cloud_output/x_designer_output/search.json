@@ -92,6 +92,17 @@
 
 
 {
+"title": "Using Weebly Cloud Admin",
+"tags": "getting_started",
+"keywords": "cloud admin, admin",
+"url": "ds_gs_admin.html",
+"summary": "The Weebly Cloud Admin is where you manage your clients, their sites, and your Weebly account and installation."
+}
+,
+
+
+
+{
 "title": "Provide Apps to Sites",
 "tags": "getting_startedconfigurationapps",
 "keywords": "App Center, apps, custom, elements, snippets",
@@ -103,22 +114,22 @@
 
 
 {
-"title": "Build Sites",
-"tags": "getting_startedsites",
-"keywords": "sites",
-"url": "ds_gs_bld_sites.html",
-"summary": "You use the Weebly Editor to build sites for your clients."
+"title": "Get Started Checklist",
+"tags": "getting_started",
+"keywords": "",
+"url": "ds_gs_checklist.html",
+"summary": "Use this checklist to get up and running quickly with Weebly Cloud for Designers"
 }
 ,
 
 
 
 {
-"title": "Get Started Checklist",
-"tags": "getting_started",
-"keywords": "",
-"url": "ds_gs_checklist.html",
-"summary": "Use this checklist to get up and running quickly with Weebly Cloud for Designers"
+"title": "How Your Clients Work with You",
+"tags": "getting_startedclientssites",
+"keywords": "clients, portal, user portal, ui, sites",
+"url": "ds_gs_client_ui.html",
+"summary": "Your clients access their sites and their site's statistics from the Weebly User Portal"
 }
 ,
 
@@ -185,6 +196,28 @@
 "keywords": "plans, packages, pages, apps, access",
 "url": "ds_gs_plans.html",
 "summary": "Weebly offers plans that determine the functionality available to a site. You create your own plans and plan pricing and then associate them with Weebly plans. Clients see only your plans."
+}
+,
+
+
+
+{
+"title": "Restore Elements, Pages, and Sites",
+"tags": "troubleshootingsites",
+"keywords": "sites, elements, editor",
+"url": "ds_gs_restore.html",
+"summary": "There may be times when someone accidentally delete an element. When this happens, you can use Cloud Admin to restore deleted elements. You can also restore deleted pages and deleted sites."
+}
+,
+
+
+
+{
+"title": "Allow Sites to Use SSL",
+"tags": "getting_startedconfigurationsites",
+"keywords": "ssl, sites",
+"url": "ds_gs_ssl.html",
+"summary": "Weebly sites can use SSL, as long as they are on the Weebly Business plan. However, you'll need to use the Weebly Cloud API to enable the SSL option to display in the Site's settings so that the site owner can enable it."
 }
 ,
 
