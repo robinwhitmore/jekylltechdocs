@@ -13,7 +13,26 @@ topnav:
       url: /ds_themes_gs.html
     - title: Cloud APIs
       url: /ds_apis_about.html
-    - title: Tags
-      url: /ds_tags_about.html
+   # - title: Tags
+    #  url: /ds_tags_about.html
 
 #Topnav dropdowns
+topnav_dropdowns:
+- title: Topnav dropdowns
+  folders:
+    - title: Get Started DD
+      folderitems:
+        - title: Get Started
+          url: /home
+        - title: Create and Manage Clients and Sites
+          url: /ds_gs_clients.html
+        - title: Billing and Invoicing
+          url: /ds_gs_invoice.html
+    - title: Custom Apps DD
+      folderitems:
+        - title: Get Started with Apps
+          url: /ds_apps_gs.html
+        - title: Tutorial
+          url: /ds_element_main.html
+        - title: Develop an App
+          url: /ds_apps_develop.html

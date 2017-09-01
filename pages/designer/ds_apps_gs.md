@@ -1,6 +1,6 @@
 ---
 title: Get Started with Custom Weebly Apps
-keywords:
+keywords: apps, custom, development site, elements, backend,
 t_type: [concepts]
 tags: [getting_started, custom_apps]
 sidebar: ds_apps_sidebar

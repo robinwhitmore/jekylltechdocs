@@ -3,7 +3,7 @@ title: 2. Register the App
 layout: "tutorial"
 keywords:
 t_type: [tutorial]
-tags: [getting_started, custom_apps]
+tags: []
 sidebar: ds_apps_sidebar
 permalink: ds_element_2.html
 series: "element series"

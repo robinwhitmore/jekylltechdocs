@@ -26,10 +26,12 @@ entries:
     - title: Get Started with Developing Apps
       url: /ds_apps_gs.html
       output: web, pdf
+      #status: ready for review
 
     - title: Sample Applications
       url: /ds_apps_samples.html
       output: web, pdf
+      #status: ready for review
 
   - title: Tutorial&#58; Create an Element
     output: web, pdf
@@ -104,6 +106,7 @@ entries:
       output: web, pdf
 
   - title: Create a Backend Service
+    url: /ds_apps_ba
     output: web, pdf
     folderitems:
 

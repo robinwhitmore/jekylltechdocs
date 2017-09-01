@@ -3,7 +3,7 @@ title: 3. Create the Directory Structure
 layout: "tutorial"
 keywords:
 t_type: [tutorial]
-tags: [getting_started, custom_apps]
+tags: []
 sidebar: ds_apps_sidebar
 permalink: ds_element_3.html
 series: "element series"

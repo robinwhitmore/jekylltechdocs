@@ -1,65 +1,52 @@
-<h2> Bootstrap Element</h2>
-<p> ​A barebones bootstrap element that will get you up and running in the blink of an eye. There is no real functionality in this element, and it is best used as a starting point for beginners. Download it from Github here.</p>
+## Bootstrap Element
+A barebones bootstrap element that will get you up and running in the blink of an eye. There is no real functionality in this element, and it is best used as a starting point for beginners. Download it from Github [here](https://github.com/Weebly/bootstrap-app).
 
-<h2>Pricing Chart Element</h2>
+## Pricing Chart Element
 
-<p>A more functional example of an element. This element displays a given number of price plans, each with a given number of features. This example makes use of settings, content fields, Mustache loops, and LESS CSS. It also contains tooltips and a built-in tutorial. Use it in conjunction with our element tutorial! <br>
-Download it from Github <a href="https://github.com/Weebly/price-chart-app">here</a>.</p>
+A more functional example of an element. This element displays a given number of price plans, each with a given number of features. This example makes use of settings, content fields, Mustache loops, and LESS CSS. It also contains tooltips and a built-in tutorial. Use it in conjunction with our {%if site.project=="designer"%}[element tutorial](ds_element_main.html){%elsif site.project=="cloud"%}[element tutorial](cl_element_main.html) {% elsif site.project=="platform" %}[element tutorial](pf_element_main.html){%endif%}.
+
+Download it from Github [here](https://github.com/Weebly/price-chart-app).
 {% include image.html file="sh_priceChart.png" caption="Weebly Price Chart" %}
 
-<h2>Full Open Source Element Samples on GitHub</h2>
+## Full Open Source Element Samples on GitHub
 
-<p>Elements created by Weebly and available in the App Center are also available in their source code at Github.
-    <ul>
-        <li><a href="https://github.com/Weebly/simple-table-app">simple-table-app</a></li>
-        <li><a href="https://github.com/Weebly/accordion-app">accordion-app</a> </li>
-        <li><a href="https://github.com/Weebly/faq-app">faq-app</a> </li>
-        <li><a href="https://github.com/Weebly/counter-app">counter-app</a></li>
-        <li><a href="https://github.com/Weebly/team-cards-app">team-cards-app</a></li>
-        <li><a href="https://github.com/Weebly/call-out-box-app">call-out-box-app</a></li>
-        <li><a href="https://github.com/Weebly/price-chart-app">price-chart-app</a> </li>
-        <li><a href="https://github.com/Weebly/code-block-app">code-block-app</a></li>
-        <li><a href="https://github.com/Weebly/tabs-app">tabs-app</a></li>
-    </ul>
-</p>
+Elements created by Weebly and available in the App Center are also available in their source code at Github.
+* [Simple Table](https://github.com/Weebly/simple-table-app)
+* [Accordion](https://github.com/Weebly/accordion-app)
+* [FAQ](https://github.com/Weebly/faq-app)
+* [Counter](https://github.com/Weebly/counter-app)
+* [Team Cards](https://github.com/Weebly/team-cards-app)
+* [Call Out Box](https://github.com/Weebly/call-out-box-app)
+* [Price Chart](https://github.com/Weebly/price-chart-app)
+* [Code Block](https://github.com/Weebly/code-block-app)
+* [Tabs](https://github.com/Weebly/tabs-app)
 
 {% if site.project == "platform" %}
+## Back-end App Examples
+This example app uses OAuth to subscribe to webhooks and then logs the webhook notification. There are two versions of the example - one is PHP and the other is NodeJS. Both live in a Git repository that you can clone and run on Heroku.
+* [PHP](https://github.com/Weebly/php-webhook-client): This version contains the server-side code for the application. It can be deployed to a Heroku server or your own server. The `application.php` file contains the methods for handling OAuth, parsing parameters from a request URL, processing the webhooks payload, and outputting messages from the webhooks to the messages.txt file (found in the `messages` directory). The `index.php` file accesses the client ID and secret from environment variables. In the `lib/Util/Weebly` directory, the `WeeblyClient.php` file builds and returns the URLs needed for OAuth and for making authenticated API calls. It haslo handles trading the authorization code for the access token. Other files in the `lib/Util` directory verify the HMAC hash and write log messages. All other files are needed by Heroku or other servers, for example to access third-party libs.
+ * [NodeJS](https://github.com/Weebly/node-webhook-client): This is the NodeJS version of the server side code. It can also be deployed to Heroku. In the apps directory, `oauth.js` handles the OAuth flow and outputs messages to the `/messages/messages.txt`. The `webhooks-router.js` file manages the webhooks file and also outputs messages. The `utility.js` file handles hmac validation and generation. The `/middleware/weebly.js` file accesses the client ID and secret from environment variables or you can hardcode them in the `server.js` file. The rest of the files are needed by Heroku or other servers, for example to access third-party libs.
 
-<h2>Back-end App Examples</h2>
-<p>This example app uses OAuth to subscribe to webhooks and then logs the webhook notification. There are two versions of the example - one is PHP and the other is NodeJS. Both live in a Git repository that you can clone and run on Heroku.
-    <ul>
-        <li><a href="https://github.com/Weebly/php-webhook-client">PHP</a>: This version contains the server-side code for the application. It can be deployed to a Heroku server or your own server. The <code>application.php</code> file contains the methods for handling OAuth, parsing parameters from a request URL, processing the webhooks payload, and outputting messages from the webhooks to the messages.txt file (found in the <code>messages</code> directory). The <code>index.php</code> file accesses the client ID and secret from environment variables. In the <code>lib/Util/Weebly</code> directory, the <code>WeeblyClient.php</code> file builds and returns the URLs needed for OAuth and for making authenticated API calls. It haslo handles trading the authorization code for the access token. Other files in the <code>lib/Util</code> directory verify the HMAC hash and write log messages. All other files are needed by Heroku or other servers, for example to access third-party libs.</li>
+Download and review the code to better understand how to work with our OAuth implementation and how to work with webhooks. You can also use the examples as a starting point for your own app.
 
-        <li><a href="https://github.com/Weebly/node-webhook-client">NodeJS</a>: This is the NodeJS version of the server side code. It can also be deployed to Heroku. In the apps directory, <code>oauth.js</code> handles the OAuth flow and outputs messages to the <code>/messages/messages.txt</code>. The <code>webhooks-router.jsfile</code> manages the webhooks file and also outputs messages. The <code>utility.js</code> file handles hmac validation and generation. The <code>/middleware/weebly.js</code> file accesses the client ID and secret from environment variables or you can hardcode them in the <code>server.js</code> file. The rest of the files are needed by Heroku or other servers, for example to access third-party libs.</li>
-</ul>
+**To use the sample apps:**
+1. If not already done, create a developer account and register this sample app. You'll need the client ID and secret key that gets generated when registering an app in order to use this sample.
+2. If using Heroku install the [Heruko command line interface](https://devcenter.heroku.com/articles/heroku-command)
+3. Clone the Github repo that contains the Weebly example code (or download the zip).
+4. Open the `manifest.json<` file and for the `callback_url` entries, replace `ROOT_URL` with a URL that points to your server. For `client_id<`, replace `CLIENT_ID` with your client ID (which is found on your app's page in the Dev Admin portal).
+5. If using Heroku, run the following to set your app's client ID and app's secret key as environment variables. If you're not using Heroku, then set these as variables in your environment, or add them to the code.
+{% highlight php %}
+heroku create
+heroku config:set WEEBLY_CLIENT_ID=[your_apps_client_id]
+heroku config:set WEEBLY_SECRET_KEY=[your_apps_secret_key]
+git push heroku master
+heroku ps:scale web=1
+{% endhighlight %}
 
-<p>
-    Download and review the code to better understand how to work with our OAuth implementation and how to work with webhooks. You can also use the examples as a starting point for your own app.</p>
+Both the node and php servers use OAuth to authenticate. In both, the access token in written to the console. You'll need the token to access the API. If using Heroku, you can access the logs using `heroku-logs --tail`.
 
-<p class="proc">To use the sample apps:
-    <ol>
-        <li>If not already done, create a developer account and register this sample app. You'll need the client ID and secret key that gets generated when registering an app in order to use this sample. </li>
-        <li>If using Heroku install the <a href="https://devcenter.heroku.com/articles/heroku-command">Heruko command line interface</a>.</li>
-        <li>Clone the Github repo that contains the Weebly example code (or download the zip).</li>
-        <li>Open the <code>manifest.json</code> file and for the <code>callback_url</code> entries, replace <code>ROOT_URL</code> with a URL that points to your server. For <code>client_id</code>, replace <code>CLIENT_ID</code> with your client ID (which is found on your app's page in the Dev Admin portal). </li>
-        <li>If using Heroku, run the following to set your app's client ID and app's secret key as environment variables. If you're not using Heroku, then set these as variables in your environment, or add them to the code.
-
-        <div class="highlighter-rouge"><pre class="highlight"><code>
-            heroku create
-            heroku config:set WEEBLY_CLIENT_ID=[your_apps_client_id]
-            heroku config:set WEEBLY_SECRET_KEY=[your_apps_secret_key]
-            git push heroku master
-            heroku ps:scale web=1
-        </code></pre></div>
-    </li>
-</ol>
-        Both the node and php servers use OAuth to authenticate. In both, the access token in written to the console. You'll need the token to access the API. If using Heroku, you can access the logs using <code>heroku-logs --tail</code>.
-        <br>
-        If you want to run the app from a Weebly site:
-        <ul>
-            <li>Create a zip file that contains only the <code>manifest.json</code> file.</li>
-            <li>Upload the zip to Weebly.</li>
-            <li>Install the uploaded zip to a test site. When you install it, the OAuth process is kicked off.</li>
-        </ul>
-</p>
+If you want to run the app from a Weebly site:
+1. Create a zip file that contains only the `manifest.json` file.
+2. Upload the zip to Weebly.
+3. Install the uploaded zip to a test site. When you install it, the OAuth process is kicked off.
 {% endif %}
