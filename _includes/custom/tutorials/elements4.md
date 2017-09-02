@@ -1,12 +1,25 @@
-We’ll be zipping up our development directory to deliver the app, so we need to create a directory structure that’s valid for Weebly.
-1. Create a directory named `PriceChart`. This is the root level directory.
-2. As a child to that directory, create a sub-directory and name it `files`.
-   ​The root directory may contain one or more elements as part of the total app. Since our app is a single element, we’ll create just this one sub-directory.
-3. Within the files directory, create the following sub-directories:
-   * `css`
-   * `html`
-   * `js`
-   * `assets`
-4. From the sample app directory that you unzipped (from the prerequisites step), copy the `icon.svg` file to the `PriceChart/files` directory. We won’t be creating this icon in the tutorial, and you’ll need it in order to upload your app.
+The manifest provides the metadata needed for the element to work correctly, both in the editor and when published.
 
+1. Create a JSON file named manifest.json and save it to the PriceChart root directory.
+2. Add the following properties:
+   * `manifest` = `1`
+   * `client_id` = the client ID listed for the app, as created when we registered your app.
+   * `version` = the version for the app, in this case `1.0.0`.
+   * `elements:` =
+     * `name` = `Price Chart`. This is the name that will be displayed in the sidebar of the editor.
+     * `path` = the subdirectory for the element, in this case `files`.
+     * `version` = the version for the element, in this case, `1.0.0` (the app and the element can be different versions).
 
+For example:
+{% highlight json %}
+{
+    “manifest”: “1”,
+    “client_id”: “123456”,
+    “version”: “1.0.0”,
+    “elements”:[{
+        “name”: “Price Chart”,
+        “path”: “files”,
+        “version”: “1.0.0”
+    }]
+}
+{% endhighlight %}

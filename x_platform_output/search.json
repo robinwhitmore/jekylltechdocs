@@ -62,7 +62,7 @@
 
 {
 "title": "1. Design the Element",
-"tags": "getting_startedelementsmanifestconfigurationdevelopment",
+"tags": "",
 "keywords": "",
 "url": "pf_element_1.html",
 "summary": ""
@@ -73,9 +73,86 @@
 
 {
 "title": "2. Register the App",
-"tags": "getting_startedelementsmanifestconfigurationdevelopment",
+"tags": "",
 "keywords": "",
 "url": "pf_element_2.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "3. Create a Directory Structure",
+"tags": "",
+"keywords": "",
+"url": "pf_element_3.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "4. Create the Manifest",
+"tags": "",
+"keywords": "",
+"url": "pf_element_4.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "5. Create the Settings",
+"tags": "",
+"keywords": "",
+"url": "pf_element_5.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "6. Create the HTML Template",
+"tags": "",
+"keywords": "",
+"url": "pf_element_6.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "7. Create the Styles",
+"tags": "",
+"keywords": "",
+"url": "pf_element_7.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "8. Create the JavaScript",
+"tags": "",
+"keywords": "",
+"url": "pf_element_8.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "9. Package, Upload, and Test Your Element",
+"tags": "",
+"keywords": "",
+"url": "pf_element_9.html",
 "summary": ""
 }
 ,

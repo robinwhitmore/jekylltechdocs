@@ -22,3 +22,32 @@ entries:
     - title: 2. Register the App
       url: /pf_element_2.html
       output: web
+
+    - title: 3. Create a Directory Structure
+      url: /pf_element_3.html
+      output: web
+
+    - title: 4. Create the Manifest
+      url: /pf_element_4.html
+      output: web
+
+    - title: 5. Create the Settings
+      url: /pf_element_5.html
+      output: web
+
+    - title: 6. Create the HTML Template
+      url: /pf_element_6.html
+      output: web
+
+    - title: 7. Create the Styles
+      url: /pf_element_7.html
+      output: web
+
+    - title: 8. Create the JavaScript
+      url: /pf_element_8.html
+      output: web
+
+    - title: 9. Package, Upload, and Test Your Element
+      url: /pf_element_9.html
+      output: web
+

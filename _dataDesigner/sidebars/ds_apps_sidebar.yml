@@ -50,35 +50,35 @@ entries:
       output: web, pdf
 
     - title: 3. Create a Directory Structure
-      url: ds_element_3.html
+      url: /ds_element_3.html
       output: web, pdf
 
     - title: 4. Create the Manifest
-      url: ds_element_4.html
+      url: /ds_element_4.html
       output: web, pdf
 
     - title: 5. Create the Settings
-      url: ds_element_5.html
+      url: /ds_element_5.html
       output: web, pdf
 
     - title: 6. Create the HTML Template
-      url: ds_element_6.html
+      url: /ds_element_6.html
       output: web, pdf
 
     - title: 7. Create the Styles
-      url: ds_element_7.html
+      url: /ds_element_7.html
       output: web, pdf
 
     - title: 8. Create the JavaScript
-      url: ds_element_8.html
+      url: /ds_element_8.html
       output: web, pdf
 
     - title: 9. Package, Upload, and Test Your Element
-      url: ds_element_9.html
+      url: /ds_element_9.html
       output: web, pdf
 
     - title: Finish
-      url: des_element_finish
+      url: /ds_element_finish.html
       output: web, pdf
 
   - title: Develop an App

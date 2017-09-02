@@ -9,4 +9,4 @@ permalink: pf_element_main.html
 
 
 ---
-{% include custom/tutorials/elements1.html%}
+{% include custom/tutorials/elements.md%}

@@ -11,4 +11,4 @@ series_button: series_element.html
 series_next: series_element_next.html
 weight: 2
 ---
-{% include custom/tutorials/elements3.html%}
+{% include custom/tutorials/elements2.md%}
