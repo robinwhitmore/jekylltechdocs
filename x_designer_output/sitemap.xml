@@ -20,7 +20,25 @@
   
   
   <url>
+    <loc>http://localhost:4008/ds_apps_dev.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4008/ds_apps_gs.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_apps_manage.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_apps_reg.html</loc>
   </url>
   
   

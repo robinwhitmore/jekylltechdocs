@@ -36,50 +36,61 @@ entries:
   - title: Tutorial&#58; Create an Element
     output: web, pdf
     folderitems:
-
+      #status: ready for review
     - title: Create an Element
       url: /ds_element_main.html
       output: web, pdf
+      #status: ready for review
 
     - title: 1. Design the Element
       url: /ds_element_1.html
       output: web, pdf
+      #status: ready for review
 
     - title: 2. Register the Element
       url: /ds_element_2.html
       output: web, pdf
+      #status: ready for review
 
     - title: 3. Create a Directory Structure
       url: /ds_element_3.html
       output: web, pdf
+      #status: ready for review
 
     - title: 4. Create the Manifest
       url: /ds_element_4.html
       output: web, pdf
+      #status: ready for review
 
     - title: 5. Create the Settings
       url: /ds_element_5.html
       output: web, pdf
+      #status: ready for review
 
     - title: 6. Create the HTML Template
       url: /ds_element_6.html
       output: web, pdf
+      #status: ready for review
 
     - title: 7. Create the Styles
       url: /ds_element_7.html
       output: web, pdf
+      #status: ready for review
 
     - title: 8. Create the JavaScript
       url: /ds_element_8.html
       output: web, pdf
+      #status: ready for review
 
     - title: 9. Package, Upload, and Test Your Element
       url: /ds_element_9.html
       output: web, pdf
+      #status: ready for review
 
     - title: Finish
       url: /ds_element_finish.html
       output: web, pdf
+      #status: ready for review
 
   - title: Develop an App
     output: web, pdf
@@ -88,14 +99,17 @@ entries:
     - title: Develop an App
       url: /ds_apps_dev.html
       output: web, pdf
+      #status: ready for review
 
     - title: Register Your App
       url: /ds_apps_reg.html
       output: web, pdf
+      #status: ready for review
 
     - title: Manage Your App
       url: /ds_apps_manage.html
       output: web, pdf
+      #status: ready for review
 
     - title: Create the App File Structure
       url: /ds_apps_files.html

@@ -13,8 +13,8 @@ topnav:
       url: /ds_themes_gs.html
     - title: Cloud APIs
       url: /ds_apis_about.html
-   # - title: Tags
-    #  url: /ds_tags_about.html
+    - title: Tags
+      url: /ds_tags_about.html
 
 #Topnav dropdowns
 #topnav_dropdowns:

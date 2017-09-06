@@ -26,11 +26,44 @@
 
 
 {
+"title": "Develop an App",
+"tags": "getting_startedappscustom",
+"keywords": "apps, custom, steps, elements, backend, service",
+"url": "ds_apps_dev.html",
+"summary": "While there are two different types of apps (backend services and elements), they both have the same initial and final development steps. Start your development process by following the initial steps below. Then follow the development process for the type of app you're creating. Finish up by following the final steps, also below."
+}
+,
+
+
+
+{
 "title": "Get Started with Custom Weebly Apps",
 "tags": "getting_startedcustom_apps",
 "keywords": "apps, custom, development site, elements, backend,",
 "url": "ds_apps_gs.html",
 "summary": ""
+}
+,
+
+
+
+{
+"title": "Manage Your App",
+"tags": "getting_startedapps",
+"keywords": "manage, apps, custom, status, version, developer site,",
+"url": "ds_apps_manage.html",
+"summary": "You manage your app(s) using the Cloud Admin. From here, you can do a number of different things like access your development site, install the app to your development site, release the app to a plan, and upload new versions."
+}
+,
+
+
+
+{
+"title": "Register Your App",
+"tags": "getting_startedappscustom",
+"keywords": "register, app, client ID,",
+"url": "ds_apps_reg.html",
+"summary": "You use the APPS tab of the Cloud Admin to register and manage your apps."
 }
 ,
 
