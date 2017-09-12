@@ -114,19 +114,21 @@ entries:
     - title: Create the App File Structure
       url: /ds_apps_files.html
       output: web, pdf
+      #status: ready for review
 
     - title: Create the App Manifest
       url: /ds_apps_manifest.html
       output: web, pdf
+      #ready for review
 
   - title: Create a Backend Service
-    url: /ds_apps_ba
     output: web, pdf
     folderitems:
 
     - title: Create a Backend Service
       url: /ds_apps_backend.html
       output: web, pdf
+      #ready for review
 
   - title: Create an Element
     output: web, pdf
@@ -135,14 +137,17 @@ entries:
     - title: What are Elements?
       url: /ds_apps_elements.html
       output: web, pdf
+      #ready for review
 
     - title: Element Design Guidelines
       url: /ds_apps_guides.html
       output: web, pdf
+      #ready for revew
 
     - title: Element Icon Guidelines
       url: /ds_apps_icon.html
       output: web, pdf
+      #ready for review
 
     - title: Create an Element
       url: /ds_apps_element_create.html

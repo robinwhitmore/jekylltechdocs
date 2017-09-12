@@ -26,11 +26,44 @@
 
 
 {
+"title": "Create a Backend Service",
+"tags": "getting_startedapps",
+"keywords": "backend, service, backend service, app, snippet, snippets",
+"url": "ds_apps_backend.html",
+"summary": "Backend services typically provide additional functionality for a user's website. They can be full-fledged apps that run on your server and access our API, or they can be simple snippets."
+}
+,
+
+
+
+{
 "title": "Develop an App",
 "tags": "getting_startedappscustom",
 "keywords": "apps, custom, steps, elements, backend, service",
 "url": "ds_apps_dev.html",
 "summary": "While there are two different types of apps (backend services and elements), they both have the same initial and final development steps. Start your development process by following the initial steps below. Then follow the development process for the type of app you're creating. Finish up by following the final steps, also below."
+}
+,
+
+
+
+{
+"title": "What are Elements?",
+"tags": "getting_startedelements",
+"keywords": "elements, settings, tutorial",
+"url": "ds_apps_elements.html",
+"summary": "​Elements are the widgets that users drag and drop from Weebly's Editor element tray to create HTML for the page. Users can create an entire web site using elements, without ever having to create any code themselves!"
+}
+,
+
+
+
+{
+"title": "Create the App File Structure",
+"tags": "getting_startedapps",
+"keywords": "directory, files, manifest",
+"url": "ds_apps_files.html",
+"summary": "The file structure for your app must be as Weebly expects in order for you to upload it to the App Center."
 }
 ,
 
@@ -48,11 +81,44 @@
 
 
 {
+"title": "Element Design Guidelines",
+"tags": "elements",
+"keywords": "guidelines, icon, placeholder, element, elements",
+"url": "ds_apps_guides.html",
+"summary": "Follow these guidelines to create an element that behaves like a native Weebly element."
+}
+,
+
+
+
+{
+"title": "Element Icon Guidelines",
+"tags": "elements",
+"keywords": "elements, icon, icons, svg, editor",
+"url": "ds_apps_icon.html",
+"summary": "You need to provide an icon .svg file used to drag and drop the element onto a page."
+}
+,
+
+
+
+{
 "title": "Manage Your App",
 "tags": "getting_startedapps",
 "keywords": "manage, apps, custom, status, version, developer site,",
 "url": "ds_apps_manage.html",
 "summary": "You manage your app(s) using the Cloud Admin. From here, you can do a number of different things like access your development site, install the app to your development site, release the app to a plan, and upload new versions."
+}
+,
+
+
+
+{
+"title": "Create the App Manifest",
+"tags": "configurationapps",
+"keywords": "manifest, files, apps, configure",
+"url": "ds_apps_manifest.html",
+"summary": "The manifest.json file outlines the structure of the app, and provides pertinent information about locales, authorship, and more. It must exist for each app and must live at the root of the application's zip file."
 }
 ,
 
@@ -407,6 +473,8 @@
 "summary": "Welcome to Weebly Cloud for Designers! With Weebly Cloud, you use Weebly’s best-in-class website builder to create websites, blogs or online stores in minutes for your clients, and the Cloud Admin to maintain full control over billing, support, and the customer relationship."
 }
 ,
+
+
 
 
 

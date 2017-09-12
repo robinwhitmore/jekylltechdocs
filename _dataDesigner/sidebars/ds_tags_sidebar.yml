@@ -26,10 +26,6 @@ entries:
       url: /tag_configuration.html
       output: web
 
-    - title: Custom Apps
-      url: /tag_custom_apps.html
-      output: web
-
     - title: Users
       url: /tag_users.html
       output: web
@@ -46,8 +42,12 @@ entries:
       url: /tag_apis.html
       output: web
 
-    - title: Plug-ins
-      url: /tag_plugins.html
+    - title: Custom Apps
+      url: /tag_custom_apps.html
+      output: web
+
+    - title: Elements
+      url: /tag_elements.html
       output: web
 
     - title: Themes

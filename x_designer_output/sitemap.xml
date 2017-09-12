@@ -20,7 +20,25 @@
   
   
   <url>
+    <loc>http://localhost:4008/ds_apps_backend.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4008/ds_apps_dev.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_apps_elements.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_apps_files.html</loc>
   </url>
   
   
@@ -32,7 +50,25 @@
   
   
   <url>
+    <loc>http://localhost:4008/ds_apps_guides.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_apps_icon.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4008/ds_apps_manage.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_apps_manifest.html</loc>
   </url>
   
   
@@ -226,6 +262,8 @@
   <url>
     <loc>http://localhost:4008/home.html</loc>
   </url>
+  
+  
   
   
   
