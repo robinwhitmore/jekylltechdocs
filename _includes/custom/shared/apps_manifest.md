@@ -7,7 +7,7 @@ Create your manifest with the following elements:
    The `client_id` of your application. The value is created when you register<!--todo: link--> your app.
 
 * `version`: (required)
-   The version of your application.  Provided as a string, following Semantic Versioning guidelines (Major.Minor.Patch: for example 1.5.13).
+   The version of your application.  Provided as a string, following Semantic Versioning guidelines (`Major.Minor.Patch`: for example `1.5.13`).
 
 * `locale`: (optional)
    Describes the default and supported locales with the following properties:

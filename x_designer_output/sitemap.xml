@@ -32,6 +32,30 @@
   
   
   <url>
+    <loc>http://localhost:4008/ds_apps_element_create.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_apps_element_folders.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_apps_element_manifest.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_apps_element_settings.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4008/ds_apps_elements.html</loc>
   </url>
   

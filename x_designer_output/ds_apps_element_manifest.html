@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="keywords" content=",  ">
-<title>4. Create the Manifest | Weebly Cloud for Designers Documentation</title>
+<meta name="description" content="Each element provided in your app is defined in the top-level manifest.json, within the elements array.  Each element is a single object in the array, and sp...">
+<meta name="keywords" content="elements,  manifest, element, properties, settings">
+<title>Add an Element to the Manifest | Weebly Cloud for Designers Documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -145,7 +145,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the 4. Create the Manifest page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Add an Element to the Manifest page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -163,7 +163,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="4. Create the Manifest">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Add an Element to the Manifest">{title}</a></li>',
                     noResultsText: 'No results',
                             limit: 10,
                             fuzzy: true,
@@ -259,7 +259,7 @@
             
             
             
-            <li class="active"><a href="ds_element_4.html">4. Create the Manifest</a></li>
+            <li><a href="ds_element_4.html">4. Create the Manifest</a></li>
             
             
             
@@ -409,7 +409,7 @@
             
             
             
-            <li><a href="ds_apps_element_manifest.html">Add an Element to the Manifest</a></li>
+            <li class="active"><a href="ds_apps_element_manifest.html">Add an Element to the Manifest</a></li>
             
             
             
@@ -510,445 +510,80 @@
 
     <!-- Content Column -->
     <div class="col-md-9">
-        <div class="post-header">
-   <h1 class="post-title-main">4. Create the Manifest</h1>
-</div>
-
-
-
-<div class="post-content">
-
-   <div class="seriesContext">
-    <div class="btn-group">
-        <button type="button" data-toggle="dropdown" class="btn btn-primary dropdown-toggle">Element Tutorial<span class="caret"></span></button>
-        <ol class="dropdown-menu">
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <li>
-                <a href="ds_element_1.html"><!--1.--> 1. Design the Element</a>
-            </li>
-            
-            
-            
-            
-            
-            <li>
-                <a href="ds_element_2.html"><!--2.--> 2. Register the App</a>
-            </li>
-            
-            
-            
-            
-            
-            <li>
-                <a href="ds_element_3.html"><!--3.--> 3. Create the Directory Structure</a>
-            </li>
-            
-            
-            
-            
-            
-            <li class="active"> → <!--4.--> 4. Create the Manifest</li>
-            
-            
-            
-            
-            
-            <li>
-                <a href="ds_element_5.html"><!--5.--> 5. Create the Settings</a>
-            </li>
-            
-            
-            
-            
-            
-            <li>
-                <a href="ds_element_6.html"><!--6.--> 6. Create the HTML Template</a>
-            </li>
-            
-            
-            
-            
-            
-            <li>
-                <a href="ds_element_7.html"><!--7.--> 7. Create the Styles</a>
-            </li>
-            
-            
-            
-            
-            
-            <li>
-                <a href="ds_element_8.html"><!--8.--> 8. Create the JavaScript</a>
-            </li>
-            
-            
-            
-            
-            
-            <li>
-                <a href="ds_element_9.html"><!--9.--> 9. Package, Upload, and Test Your Element</a>
-            </li>
-            
-            
-            
-            
-            
-            <li>
-                <a href="ds_element_finish.html"><!--10.--> Finish!</a>
-            </li>
-            
-            
-            
-        </ol>
+        <div>
+    <div class="pageType">  task </div>
+    <div class="post-header">
+        <h1 class="post-title-main">Add an Element to the Manifest</h1>
     </div>
 </div>
 
 
 
 
+<div class="post-content">
+
+   
+    <div class="summary">Each element provided in your app is defined in the top-level manifest.json, within the elements array.  Each element is a single object in the array, and specifies the name, location, and settings of the element. Once you define the element, you then define the properties that make up the settings.</div>
+   
+
+
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 50);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
 
 
     
 
-  <p>The manifest provides the metadata needed for the element to work correctly, both in the editor and when published.</p>
+  <h2 id="define-the-element">Define the Element</h2>
 
-<ol>
-  <li>Create a JSON file named manifest.json and save it to the PriceChart root directory.</li>
-  <li>Add the following properties:
-    <ul>
-      <li><code class="highlighter-rouge">manifest</code> = <code class="highlighter-rouge">1</code></li>
-      <li><code class="highlighter-rouge">client_id</code> = the client ID listed for the app, as created when we registered your app.</li>
-      <li><code class="highlighter-rouge">version</code> = the version for the app, in this case <code class="highlighter-rouge">1.0.0</code>.</li>
-      <li><code class="highlighter-rouge">elements:</code> =
-        <ul>
-          <li><code class="highlighter-rouge">name</code> = <code class="highlighter-rouge">Price Chart</code>. This is the name that will be displayed in the sidebar of the editor.</li>
-          <li><code class="highlighter-rouge">path</code> = the subdirectory for the element, in this case <code class="highlighter-rouge">files</code>.</li>
-          <li><code class="highlighter-rouge">version</code> = the version for the element, in this case, <code class="highlighter-rouge">1.0.0</code> (the app and the element can be different versions).</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ol>
+<p>An element is defined using the <code class="highlighter-rouge">elements</code> property that lives at the root of <code class="highlighter-rouge">manifest.json</code>.
+Each element must contain the following properties (see the example<!-- todo: link--> for additional help):</p>
+<ul>
+  <li><code class="highlighter-rouge">path</code> (required): A file path to the root directory of the element within the bundle.  For example, if you place the element files within the <code class="highlighter-rouge">elements/ExampleElement</code> directory, the path property would simply be <code class="highlighter-rouge">elements/ExampleElement</code>.</li>
+  <li><code class="highlighter-rouge">name</code> (required): The name of the element.  This is what will appear in the element tray in the editor, and will be used as the title in any setting dialogs shown to users.</li>
+  <li><code class="highlighter-rouge">version</code> (required): The version of the element, provided as a string following <a href="http://semver.org/">Semantic Versioning</a> guidelines (<code class="highlighter-rouge">Major.Minor.Patch</code>: for example <code class="highlighter-rouge">1.5.13</code>). Elements do not need to use the same version number as the parent app.</li>
+  <li><code class="highlighter-rouge">settings</code>: These are the configurable settings that the user can change. If you’re element doesn’t have settings, then you don’t need to include this property, and you’re done configuring the manifest. If you do want to add settings, continue on to <a href="ds_apps_element_settings.html">Create Element Settings</a></li>
+</ul>
 
-<p>For example:</p>
+<p>Here’s an example of this first part of the manifest:</p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-    </span><span class="err">“manifest”:</span><span class="w"> </span><span class="err">“1”,</span><span class="w">
-    </span><span class="err">“client_id”:</span><span class="w"> </span><span class="err">“123456”,</span><span class="w">
-    </span><span class="err">“version”:</span><span class="w"> </span><span class="err">“1.0.0”,</span><span class="w">
-    </span><span class="err">“elements”:[{</span><span class="w">
-        </span><span class="err">“name”:</span><span class="w"> </span><span class="err">“Price</span><span class="w"> </span><span class="err">Chart”,</span><span class="w">
-        </span><span class="err">“path”:</span><span class="w"> </span><span class="err">“files”,</span><span class="w">
-        </span><span class="err">“version”:</span><span class="w"> </span><span class="err">“1.0.0”</span><span class="w">
-    </span><span class="p">}</span><span class="err">]</span><span class="w">
-</span><span class="err">}</span></code></pre></figure>
+    </span><span class="nt">"manifest"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.2.4"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"elements"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Price Chart"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"files"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.2.4"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"settings"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="err">...</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
 
-
-
-
-<div class="next">
-<p>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <a href="ds_element_3.html"><button type="button" class="btn btn-primary">Previous: <!--3.-->  3. Create the Directory Structure</button></a>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <a href="ds_element_5.html"><button type="button" class="btn btn-primary">Next: <!--5.-->  5. Create the Settings</button></a>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</p>
-
-</div>
 
     <div class="tags">
         
@@ -956,10 +591,13 @@
         
         
         
+        <a href="tag_elements.html" class="btn btn-default navbar-btn cursorNorm" role="button">elements</a>
+        
+        
+        
     </div>
 
     
-
 
 </div>
 

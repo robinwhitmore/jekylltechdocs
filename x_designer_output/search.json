@@ -48,6 +48,50 @@
 
 
 {
+"title": "Create an Element",
+"tags": "appselements",
+"keywords": "element, develop",
+"url": "ds_apps_element_create.html",
+"summary": "After you create your app, you implement these additional steps to create an element."
+}
+,
+
+
+
+{
+"title": "Add Element Folders",
+"tags": "elements",
+"keywords": "elements, directory, folders",
+"url": "ds_apps_element_folders.html",
+"summary": "If you've already created your file directory for your app, you may have also created your element directories. But if not, follow these guidelines."
+}
+,
+
+
+
+{
+"title": "Add an Element to the Manifest",
+"tags": "elements",
+"keywords": "manifest, element, properties, settings",
+"url": "ds_apps_element_manifest.html",
+"summary": "Each element provided in your app is defined in the top-level manifest.json, within the elements array.  Each element is a single object in the array, and specifies the name, location, and settings of the element. Once you define the element, you then define the properties that make up the settings."
+}
+,
+
+
+
+{
+"title": "Create Element Settings",
+"tags": "elements",
+"keywords": "elements, settings, manifest",
+"url": "ds_apps_element_settings.html",
+"summary": "Your element can include settings that the user configures when including it on a web page. You create these settings as property keys in the manifest.json file."
+}
+,
+
+
+
+{
 "title": "What are Elements?",
 "tags": "getting_startedelements",
 "keywords": "elements, settings, tutorial",

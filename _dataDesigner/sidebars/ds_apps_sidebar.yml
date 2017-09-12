@@ -152,10 +152,12 @@ entries:
     - title: Create an Element
       url: /ds_apps_element_create.html
       output: web, pdf
+      #ready for review
 
     - title: Add Element Folders
       url: /ds_apps_element_folders.html
       output: web, pdf
+      #ready for review
 
     - title: Add an Element to the Manifest
       url: /ds_apps_element_manifest.html

@@ -559,6 +559,7 @@ $('#toc').on('click', 'a', function() {
   <p>Applications are the core package that can contain backend services and/or elements. You bundle each Application as a ZIP file. This archive must have a specific structure.</p>
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> When zipping your application for upload, be sure to zip the contents of your root folder, and not the root folder itself.  This will cause your application to be invalid! Also, make sure all directories and files have read/write permissions.</div>
 
+<h2 id="app-directories">App Directories</h2>
 <p>The root directory of every application contains the <code class="highlighter-rouge">manifest.json</code> file.  The manifest provides the defining characteristics of the application. Backend services require only this file in the directory.</p>
 
 <p>​This shows the structure for a backend service named <code class="highlighter-rouge">MyApp</code>.</p>
@@ -567,6 +568,8 @@ $('#toc').on('click', 'a', function() {
   - manifest.json</code></pre></figure>
 
 <p>Your directory structure may also require additional directories and files if you are creating an element.</p>
+
+<h2 id="element-directories">Element Directories</h2>
 
 <p>Directly below the root folder for your app, you add an element directory for each element you create. Within that directory, you can add the following directories and files (required files are noted):</p>
 <ul>
