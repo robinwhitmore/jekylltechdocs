@@ -1,6 +1,6 @@
 ---
 title: Create Element Settings
-keywords: elements, settings, manifest
+keywords: elements, settings, manifest, group, properties
 t_type: [concepts, task]
 tags: [elements]
 sidebar: ds_apps_sidebar

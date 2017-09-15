@@ -83,7 +83,7 @@
 {
 "title": "Create Element Settings",
 "tags": "elements",
-"keywords": "elements, settings, manifest",
+"keywords": "elements, settings, manifest, group, properties",
 "url": "ds_apps_element_settings.html",
 "summary": "Your element can include settings that the user configures when including it on a web page. You create these settings as property keys in the manifest.json file."
 }
