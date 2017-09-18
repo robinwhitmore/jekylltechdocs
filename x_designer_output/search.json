@@ -4,6 +4,17 @@
 
 
 {
+"title": "API test",
+"tags": "themes",
+"keywords": "",
+"url": "ds_api_test.html",
+"summary": "Test API template"
+}
+,
+
+
+
+{
 "title": "About the Weebly Cloud for Designer REST APIs",
 "tags": "apisgetting_started",
 "keywords": "endpoint, list view, detail view, http verbs, pagination, authentication, authorization, errors",

@@ -1,3 +1,6 @@
+---
+layout: "page"
+---
 <!--TODO: move to md and remove all styling-->
 {% if site.project == "platform" %}
 {% include custom/shared/note_oauthAPI.html%}

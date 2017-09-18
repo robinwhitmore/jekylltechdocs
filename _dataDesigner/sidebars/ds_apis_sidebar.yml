@@ -30,3 +30,7 @@ entries:
     - title: Page API
       url: /ds_apis_page.html
       output: web, pdf
+
+    - title: Test API
+      url: ds_api_test.html
+      output: web, pdf

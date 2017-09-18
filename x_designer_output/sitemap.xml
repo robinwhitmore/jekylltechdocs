@@ -8,6 +8,12 @@
   
   
   <url>
+    <loc>http://localhost:4008/ds_api_test.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4008/ds_apis_about.html</loc>
   </url>
   

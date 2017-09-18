@@ -11,4 +11,4 @@ map_name:
 box_number: 1
 
 ---
-{% include custom/tutorials/elements1.html%}
+{% include custom/tutorials/elements1.md%}
