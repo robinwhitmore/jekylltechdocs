@@ -162,30 +162,37 @@ entries:
     - title: Add an Element to the Manifest
       url: /ds_apps_element_manifest.html
       output: web, pdf
+      #ready for review
 
     - title: Create Element Settings
       url: /ds_apps_element_settings.html
       output: web, pdf
+      #ready for review
 
     - title: Element Manifest Example
       url: /ds_apps_element_man_ex.html
       output: web, pdf
+      #ready for review
 
     - title: Create an Element Template
       url: /ds_apps_element_temp.html
       output: web, pdf
+      #ready for review
 
     - title: Element Template Example
       url: /ds_apps_element_temp_ex.html
       output: web, pdf
+      #ready for review
 
     - title: Add Stylesheets to an Element
       url: /ds_apps_element_style.html
       output: web, pdf
+      #ready for review
 
     - title: Add JavaScript to an Element
       url: /ds_apps_element_js.html
       output: web, pdf
+      #ready for review
 
   - title: Get Your App Ready to Publish
     output: web, pdf
@@ -194,15 +201,19 @@ entries:
     - title: Upload your App
       url: /ds_apps_element_upload.html
       output: web, pdf
+      #ready for review
 
     - title: Test Your App
       url: /ds_apps_element_test.html
       output: web, pdf
+      #ready for review
 
-    - title: Release Your App to Your Customer
+    - title: Release Your App
       url: /ds_apps_element_release.html
       output: web, pdf
+      #ready for review
 
     - title: Update Your App
       url: /ds_apps_element_update.html
       output: web, pdf
+      #ready for review
