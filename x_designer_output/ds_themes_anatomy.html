@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="When creating themes, you'll be working with HTML pages, mustache templates, JavaScript, cascading style sheets (CSS or LESS), images, and manifest files. Th...">
+<meta name="keywords" content="getting_startedthemes,  template, layout, css, less, js, javascript,">
+<title>Anatomy of a Theme | Weebly Cloud for Designers Documentation</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/modern-business.css">
+<link rel="stylesheet" href="css/lavish-bootstrap.css">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/theme-blue.css">
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<!-- <link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4008feed.xml"> -->
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        /*Bootstrap popovers are initialized with the following script. In the options, I'm setting the placement to be on the right, the trigger to be hover rather than click, and to allow HTML from the JSON data source. */
+
+        $('[data-toggle="popover"]').popover({
+            placement: 'top',
+            trigger: 'hover',
+            html: true
+        });
+    })
+</script>
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="fa fa-home fa-lg navbar-brand" href="home.html">&nbsp;<span class="projectTitle">
+                Weebly Cloud for Designers</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                
+                
+                
+                <li><a href="home.html">Get Started</a></li>
+                
+                
+                
+                <li><a href="ds_apps_gs.html">Custom Apps</a></li>
+                
+                
+                
+                <li><a href="ds_themes_start.html">Custom Themes</a></li>
+                
+                
+                
+                <li><a href="ds_apis_about.html">Cloud APIs</a></li>
+                
+                
+                
+                <li><a href="ds_tags_about.html">Tags</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+			<li>
+
+
+
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Anatomy of a Theme page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+
+</li>
+
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="Search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Anatomy of a Theme">{title}</a></li>',
+                    noResultsText: 'No results',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Sidebar Column -->
+        <div class="col-md-3">
+
+          
+
+
+
+
+
+
+
+
+
+
+<ul id="mysidebar" class="nav">
+    <li class="sidebarTitle">Develop Weebly Themes </li>
+    
+    
+    
+        
+    
+    <li>
+        <a href="#">Get Started with Customizing Themes</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_themes_start.html">Customizing Themes</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_sample.html">Download Sample Themes</a></li>
+            
+            
+            
+            
+            
+            
+            <li class="active"><a href="ds_themes_anatomy.html">Anatomy of a Theme</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_directory.html">Theme Directory Structure</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="">Tutorial&#58; Customize a Theme</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_sample.html">Sample Themes</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_issues.html">Known Issues</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Theme Design</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_themes_guidelines.html">Theme Design Guidelines</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_page.html">Page Guidelines for Themes</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_element_guidelines.html">Element Guidelines for Themes</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Create a Theme</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_themes_create.html">How to Create a Theme</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_page.html">Page Guidelines for Themes</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_import_export.html">Import and Export Themes</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_implement_css.html">Implement the CSS</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_create_templates.html">Create HTML Layout Templates</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_paritials.html">Use Partials</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_manifest.html">Create the Theme Manifest</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_page.html">Page Guidelines for Themes</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_options.html">Add Options to Your Themes</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_palette.html">Create a Color Palette</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_variations.html">Add Color Variations</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_screenshot.html">Create a Theme Screenshot</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_deliver.html">Deliver Your Theme</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_update.html">Update Your Theme</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Theme Resources</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_themes_design_resources.html">Design Resources</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_LESS.html">About LESS</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_mustache.html">About Mustache</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Theme FAQs</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_themes_faqs.html">Theme FAQs</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+        <!-- if you aren't using the accordion, uncomment this block:
+           <p class="external">
+               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+           </p>
+           -->
+    </li>
+</ul>
+</div>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+    <!-- Content Column -->
+    <div class="col-md-9">
+        <div>
+    <div class="pageType">  concepts </div>
+    <div class="post-header">
+        <h1 class="post-title-main">Anatomy of a Theme</h1>
+    </div>
+</div>
+
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary">When creating themes, you'll be working with HTML pages, mustache templates, JavaScript, cascading style sheets (CSS or LESS), images, and manifest files. This may sound like a lot, but once you understand how all the pieces fit together, you'll realize there's not much to it!</div>
+   
+
+
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 50);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+
+    
+
+  <h2 id="html-template-pages-and-layout">HTML Template Pages and Layout</h2>
+<div style="width:100%;overflow:hidden">
+    <div style="width:60%;overflow:hidden;float:left">
+        <p>Weebly templates are HTML pages that use the Mustache templating language. Mustache allows pages to use variables that are resolved using data from the site. A Weebly page usually has the following:</p>
+<ul>
+<li><strong>Menu/navigation</strong>: This area contains the generated navigation (created based on how the site owner organizes their pages), cart, login, and optionally search. Some themes place this at the top of the page, some after a header image, and others at the bottom.</li>
+
+<li><strong>Header/banner</strong>: At the top of the page, this area generally includes the headline and any headline text, often in a banner. The user can change the background of a header, insert a video, or change the height or layout, all without needing to touch any code. And as a theme developer, you don't need to do anything extra to provide this functionality if you start with the Base theme (or other theme). It's built in.
+    <!--todo: figure out why size isn't working here-->
+    <img src="images/themeHeader.png" width="100px" /></li>
+</ul>
+
+    </div>
+<div style="float:right">
+<figure><img class="docimage" src="images/themeslayout.png" alt="" /></figure>
+
+</div>
+</div>
+<ul>
+  <li><strong>Body/content</strong>: This is the area where site owners add their main content by choosing from predefined layouts, or by designing the area from scratch using elements (you don’t need to add that functionality to your theme - like the header layouts, it’s built in). You can add sections to the body, which allow the owner to add distinct areas with different layouts. If you don’t include sections in your template, users can add them later, after they choose your template.
+    <figure><img class="docimage" src="images/themesSectionChange.png" alt="" /><figcaption>You can drag elements into the body area</figcaption></figure>
+  </li>
+  <li><strong>Footer</strong>: The universal section at the bottom of every page.
+​</li>
+</ul>
+<p>&nbsp;</p>
+<p>When site owners create a page, they choose from three different header types that determine where the above areas are displayed:</p>
+<ul>
+  <li><strong>Header</strong>: Has a title bar area with navigation and title/logo above a header area that normally consists of a banner image or video. The content area displays below the banner image.
+    <figure><img class="docimage" src="images/theme_header.png" alt="" /><figcaption>The Header type contains a banner above the content</figcaption></figure>
+  </li>
+  <li><strong>No Header</strong>: Doesn’t have a header area with a banner image. Only the title bar area and content areas display.
+    <figure><img class="docimage" src="images/theme_noheader.png" alt="" /><figcaption>The No Header type doesn't display a banner</figcaption></figure>
+  </li>
+  <li><strong>Splash</strong>: Doesn’t have a content area and the banner image is the full size of the page.
+    <figure><img class="docimage" src="images/theme_splash.png" alt="" /><figcaption>The Splash type has a banner image and doesn't have a content area</figcaption></figure>
+  </li>
+</ul>
+
+<p>As a theme designer, you determine how each of the header types should be designed. For example, one theme might have a Header template designed like this:</p>
+
+<figure><img class="docimage" src="images/themeLayout1.png" alt="" /><figcaption>Header template with logo and navigation above a banner</figcaption></figure>
+
+<p>While another theme’s Header page might look like this:</p>
+
+<figure><img class="docimage" src="images/themeLayout2.png" alt="" /><figcaption>Header template with logo above navigation</figcaption></figure>
+
+<p>You need to create templates for these header types (you don’t have to create one for every type and you can create different types). The templates are in HTML and use variables to provide the content. You add <code class="highlighter-rouge">div</code> tags for each of the areas on the page (eg: logo/title, navigation, banner) to provide the general layout, and then add references to variables like <code class="highlighter-rouge"><span class="p">{</span><span class="err">menu</span><span class="p">}</span></code> or to pull the content into those areas. More about creating the templates here<!--todo: link-->.</p>
+
+<h2 id="partials">Partials</h2>
+
+<p>While the template determines the general layout of a page, the specific content displayed on that page is controlled by partials. Partials are just what they sound like - an incomplete page, like an include or import. For example, any page in the site can use any template (one with a header, one without), but a page containing products has a very specific way of displaying a product within that template.  The Product partial determines that display. As a theme developer, you can customize the structure and styling of some of these partials.</p>
+<figure><img class="docimage" src="images/themePartial.png" alt="" /><figcaption>Partials determine how content displays</figcaption></figure>
+
+<p>You can also create your own partials. This might be useful when you want something to appear throughout the site. You create your own partial, include it in a Weebly partial, and then it will appear on every page that uses that partial.</p>
+
+<p>More about partials here.<!--todo: link--></p>
+
+<h2 id="theme-styles-and-colors">Theme Styles and Colors</h2>
+<p>Weebly themes use <a href="ds_themes_LESS.html">LESS</a>
+to style components on a page. LESS extends CSS and adds features like variables and mixins. The main stylesheet for all themes is named main.less. It contains the classes, pseudo-classes, and IDs to style the different areas of the page - headers, navigation, banner, content, footer, forms and buttons, and so on. You can edit the existing LESS file as needed. In fact, you’ll likely do most of your work in this file.</p>
+
+<p>Themes can use a <a href="ds_themes_palette.html">color palette</a> to deterimine the main color scheme for a site. Palettes are optional, but they do provide a way for users to determine the main colors used on their site. A palette defines the primary color for the site, plus an optional accent color. As a theme designer, you determine where these two colors are used. You can provide any number of predefined palettes for the theme, and users can also select their own.</p>
+
+<p>Here’s a theme with two predefined palettes. The user can click the eyedropper icon to select any other two colors they’d prefer.</p>
+<figure><img class="docimage" src="images/theme_paletteBlue.png" alt="" /><figcaption>Theme with a blue and pink palette</figcaption></figure>
+
+<p>​You can further define the color scheme of a theme by providing light and dark <a href="ds_themes_variations.html">color variations</a>. Color variations are a way to define specific colors for areas of a site. For example, you might create a light variation that has a white background in the header like the one above, and a dark variation that uses a black background.</p>
+<figure><img class="docimage" src="images/theme_paletteBlueDark.png" alt="" /><figcaption>Same theme with a dark variation</figcaption></figure>
+
+<p>​Aside from light and dark variations, you can create color variations to provide color schemes that the user can’t customize. For example, the Venue theme offers 4 different color variations:</p>
+<figure><img class="docimage" src="images/theme_variations.png" alt="" /><figcaption>Theme with color variations</figcaption></figure>
+
+<p>​Clicking a color changes the colors used for the header background and button background, among other things. Here’s the same theme, but using the dark red version.</p>
+<figure><img class="docimage" src="images/theme_variationsRed.png" alt="" /><figcaption>Theme with color variations</figcaption></figure>
+
+<p>Both versions and palettes use variables in the LESS files to handle the color selections. More about implementing color variations for your theme <a href="ds_themes_variations.html">here</a>.</p>
+
+<p>​Palettes and variations are completely optional. If you don’t want users to be able to change the color scheme of your theme, then you don’t need to implement them.</p>
+
+<h2 id="theme-functionality">Theme Functionality</h2>
+
+<p>When you create a Weebly theme, you can provide <a href="ds_themes_options.html">options</a> that allow the user to change the way the theme functions or displays. For example, you might allow the user to choose how the nav bar displays (either sticky or static) or you might allow them to place a color overlay over the banner image. If you can control it with CSS, you can make it an option. Or you can choose to not provide any options at all.</p>
+<figure><img class="docimage" src="images/theme_optionNav.png" alt="" /><figcaption>Users set options in the editor</figcaption></figure>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> When you provide options or color palettes/variations, if you update your theme, the user’s choices will remain after they receive the update.</div>
+
+<h2 id="javascript">JavaScript</h2>
+
+<p>Weebly themes use JavaScript to add functionality like event handling and mobile display. You should include the basic scripts that come with the theme you are using as your base, and then you can add your own scripts in your own custom file.</p>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Any URLs used in external scripts for your theme must use the <code class="highlighter-rouge">HTTPS</code> protocol.</div>
+
+
+
+    <div class="tags">
+        
+        <b>Tags: </b>
+        
+        
+        
+        <a href="tag_getting_started.html" class="btn btn-default navbar-btn cursorNorm" role="button">getting_started</a>
+        
+        
+        
+        <a href="tag_themes.html" class="btn btn-default navbar-btn cursorNorm" role="button">themes</a>
+        
+        
+        
+    </div>
+
+    
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2017 Weebly. All rights reserved. <br />
+ Site last generated: Sep 20, 2017 <br />
+<p><img src="images/company_logo.png" alt="Company logo"/></p>
+                </div>
+            </div>
+</footer>
+
+
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+
+</body>
+
+</html>

@@ -4,13 +4,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
-<meta name="keywords" content="getting_startedcustom_apps,  ">
+<meta name="keywords" content="getting_startedcustom_apps,  apps, custom, development site, elements, backend,">
 <title>Get Started with Custom Weebly Apps | Weebly Cloud for Designers Documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/modern-business.css">
 <link rel="stylesheet" href="css/lavish-bootstrap.css">
@@ -18,8 +18,9 @@
 <link rel="stylesheet" href="css/theme-blue.css">
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -121,6 +122,14 @@
                 
                 
                 <li class="active"><a href="ds_apps_gs.html">Custom Apps</a></li>
+                
+                
+                
+                <li><a href="ds_themes_gs.html">Custom Themes</a></li>
+                
+                
+                
+                <li><a href="ds_apis_about.html">Cloud APIs</a></li>
                 
                 
                 
@@ -292,7 +301,7 @@
             
             
             
-            <li><a href="des_element_finish">Finish</a></li>
+            <li><a href="ds_element_finish.html">Finish</a></li>
             
             
             
@@ -471,7 +480,7 @@
             
             
             
-            <li><a href="ds_apps_element_release.html">Release Your App to Your Customer</a></li>
+            <li><a href="ds_apps_element_release.html">Release Your App</a></li>
             
             
             
@@ -553,4 +562,63 @@ $('#toc').on('click', 'a', function() {
 <h2 id="what-are-apps">What are Apps?</h2>
 <p>​Apps are containers for various things that are installable to a Weebly site. They are ZIP files that contain, along with all the code, a manifest file that contains configuration metadata for your app, and an icon used to display your app in the Weebly Editor. Consider an app to be a bundle that contains one or more of the following types of functionality:</p>
 <ul>
-  <li><strong>Backend service</strong>: Apps that integrate directly with Weebly to provide some sort of additional functionality, such as managing mailing lists, providing security, or additional e-commerc
+  <li><a href="ds_apps_backend.html"><strong>Backend Services</strong></a> : Apps that integrate directly with Weebly to provide some sort of additional functionality, such as managing mailing lists, providing security, or additional e-commerce functionality. A backend service may or may not also include an element. For example, you might provide an element for your backend service so users can drag and drop it onto their page. Or you might directly install a snippet of code onto each page and skip the element.</li>
+  <li><a href="ds_apps_elements.html"><strong>Elements</strong></a> : Widgets that site owners can drag and drop onto a page. You configure settings that affect how the widget displays and behaves at runtime. If needed, you can also create a tutorial to help users install, configure, and use the element. An icon for your element appears in the Weebly editor and looks and behaves as though it were native to Weebly.</li>
+</ul>
+
+<p>While each type has its own development process, they also all share some development steps. Please read the <a href="ds_apps_dev.html">Development</a>  topic first - these are requirements and the steps that all app types must follow. Then read the topics specific to the type you’re developing.</p>
+
+<h2 id="first-steps">First Steps…</h2>
+
+<p>You use the <a href="ds_apps_manage.html"><strong>APPS</strong></a>  tab in <a data-container="body" data-toggle="popover" data-content="The site used to manage your users, site owners and their accounts, as well as apps and billing. You access Cloud Admin at weeblycloud.com/admin">Cloud Admin</a> to work with your app, including testing, uploading new versions, and managing the plans that the app is available to.
+<!--todo: get screenshot--><figure><img class="docimage" src="images/cl_apps.png" alt="" /></figure></p>
+
+<p>You’ll also be given access to your own development site that you can use to test your app. This site has special developer features, such as being able to install more than one version of your app. Team members with the <a href="ds_gs_team_members.html#team-member-roles">role</a>  of Admin or Technical are able to create and manage an app and use the development site.</p>
+
+<p>If you’re creating an element, go ahead and try our <a href="ds_element_main.html">tutorial</a> . It’ll teach you everything you’ll need to create your first Weebly element!</p>
+
+<h2 id="sample-apps">Sample Apps</h2>
+
+<p>Download one of our <a href="ds_apps_samples.html">sample apps</a>  to help you get started. The Bootstrap element is a very simple app, while the Pricing Chart app shows a bit more complexity. You can also download the source for our Weebly apps.</p>
+
+
+    <div class="tags">
+        
+        <b>Tags: </b>
+        
+        
+        
+        <a href="tag_getting_started.html" class="btn btn-default navbar-btn cursorNorm" role="button">getting_started</a>
+        
+        
+        
+        
+        
+    </div>
+
+    
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2017 Weebly. All rights reserved. <br />
+ Site last generated: Sep 19, 2017 <br />
+<p><img src="images/company_logo.png" alt="Company logo"/></p>
+                </div>
+            </div>
+</footer>
+
+
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+
+</body>
+
+</html>

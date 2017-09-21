@@ -4,13 +4,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
-<meta name="keywords" content="getting_startedcustom_apps,  price chart">
+<meta name="keywords" content="getting_startedcustom_apps,  price chart, tutorial, custom">
 <title>Tutorial&#58; Create an Element | Weebly Cloud for Designers Documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/modern-business.css">
 <link rel="stylesheet" href="css/lavish-bootstrap.css">
@@ -18,8 +18,9 @@
 <link rel="stylesheet" href="css/theme-blue.css">
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -41,7 +42,7 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<!-- <link rel="alternate" type="application/rss+xml" title="" href="robinwhitmore.github.iofeed.xml"> -->
+<!-- <link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4008feed.xml"> -->
 
 <script type="text/javascript">
     $(document).ready(function() {
@@ -121,6 +122,14 @@
                 
                 
                 <li><a href="ds_apps_gs.html">Custom Apps</a></li>
+                
+                
+                
+                <li><a href="ds_themes_gs.html">Custom Themes</a></li>
+                
+                
+                
+                <li><a href="ds_apis_about.html">Cloud APIs</a></li>
                 
                 
                 
@@ -292,7 +301,7 @@
             
             
             
-            <li><a href="des_element_finish">Finish</a></li>
+            <li><a href="ds_element_finish.html">Finish</a></li>
             
             
             
@@ -471,7 +480,7 @@
             
             
             
-            <li><a href="ds_apps_element_release.html">Release Your App to Your Customer</a></li>
+            <li><a href="ds_apps_element_release.html">Release Your App</a></li>
             
             
             
@@ -545,34 +554,36 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  <p>In this tutorial, youll learn how to recreate the Weebly Price Chart sample element, package it up and test it. This element displays a given number of price plans, each with a given number of metrics.
+  <p>In this tutorial, youll learn how to recreate the <a href="ds_apps_samples.html#pricing-chart-element">Weebly Price Chart</a> sample element, package it up and test it. This element displays a given number of price plans, each with a given number of metrics.</p>
 
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The theme determines things like font and color, so how the Price Chart Displays in your site may be different than what you see in this tutorial.</div>
 
-
 <figure><img class="docimage" src="images/sh_priceChart.png" alt="Weebly Price Chart" /><figcaption>The Weebly Price Chart</figcaption></figure>
-</p>
 
-<p><strong>You'll learn how to:</strong>
-    <ul>
-        <li>Follow Weebly best practices for designing an element</li>
-        <li>Register an app</li>
-        <li>Create the needed directory structure</li>
-        <li>Create the apps manifest, including the configuration settings needed for the element to function properly</li>
-        <li>Create the HTML, CSS, and JavaScript files for the element</li>
-        <li>Package up the app and install it to a test site</li>
-    </ul>
-</p>
+<p><strong>You’ll learn how to:</strong></p>
+<ul>
+  <li>Follow Weebly best practices for designing an element</li>
+  <li>Register an app</li>
+  <li>Create the needed directory structure</li>
+  <li>Create the apps manifest, including the configuration settings needed for the element to function properly</li>
+  <li>Create the HTML, CSS, and JavaScript files for the element</li>
+  <li>Package up the app and install it to a test site</li>
+</ul>
+
 <p><strong>Time to complete:</strong> About 45 minutes</p>
+
 <p><strong>User experience:</strong> Intermediate web design with knowledge of CSS</p>
-<p><strong>Prerequisites:</strong>
-    <ul>
-        <li>The Price Chart sample application<br />
-            Well be recreating this application in this tutorial. Youll need the files to compare your work, and in some cases, to complete a step. Download the app and the assets zip files from our Git repository, and unzip them to a local directory. </li>
-        <li>A code editor that can handle HTML, JavaScript, CSS, and JSON</li>
-    </ul>
-</p>
+
+<p><strong>Prerequisites:</strong></p>
+<ul>
+  <li>The Price Chart sample application
+We’ll be recreating this application in this tutorial. Youll need the files to compare your work, and in some cases, to complete a step. <a href="https://github.com/Weebly/price-chart-app">Download</a> the app and the assets zip files from our Git repository, and unzip them to a local directory.</li>
+  <li>A code editor that can handle HTML, JavaScript, CSS, and JSON</li>
+</ul>
+
 <div class="next">
+
+    <a href="ds_element_1.html"><button type="button" class="btn btn-primary">Let's get started!</button></a>
 
 </div>
 
@@ -602,7 +613,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 Weebly. All rights reserved. <br />
- Site last generated: Aug 29, 2017 <br />
+ Site last generated: Sep 19, 2017 <br />
 <p><img src="images/company_logo.png" alt="Company logo"/></p>
                 </div>
             </div>

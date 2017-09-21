@@ -10,7 +10,7 @@
 
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/modern-business.css">
 <link rel="stylesheet" href="css/lavish-bootstrap.css">
@@ -18,8 +18,9 @@
 <link rel="stylesheet" href="css/theme-blue.css">
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -278,20 +279,19 @@ $('#toc').on('click', 'a', function() {
 
   <!--TODO: move to md and remove all styling-->
 
-<h2> Fields </h2>
-<p>The following table shows all fields that exist for this API, those that are returned when you retrieve a list, and those that are changeable using <code>PATCH</code>. All fields are returned when you retrieve a single item.</p>
-<!-- TODO: style table head and table -->
-<table>
-<tr>
-<td><div class="paragraph">Name</div></td>
-          <td><div class="paragraph">Description</div></td>
-          <td><div class="paragraph">Type</div></td>
-          <td><div class="paragraph">List</div></td>
-          <td><div class="paragraph">Change-able</div></td>
-      </tr>
-<tr>
-<td><div class="paragraph">​<code>page_id</code>
-</div></td>
+<h2 id="fields">Fields</h2>
+<p>The following table shows all fields that exist for this API, those that are returned when you retrieve a list, and those that are changeable using <code class="highlighter-rouge">PATCH</code>. All fields are returned when you retrieve a single item.
+<!-- TODO: style table head and table --></p>
+<table width="100%">
+    <tr>
+        <td><strong>Name</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Type</strong></td>
+        <td><strong>List</strong></td>
+        <td><strong>Changeable</strong></td>
+    </tr>
+    <tr>
+        <td><div class="paragraph">​<code>page_id</code></div></td>
           <td><div class="paragraph">The unique ID of a page</div></td>
           <td><div class="paragraph">string</div></td>
           <td><div class="paragraph" style="text-align:center;">X</div></td>
@@ -570,8 +570,15 @@ $('#toc').on('click', 'a', function() {
     </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span></code></pre></figure>
 
+<span style="color: red">[[Below is just for design purposes to show all possible API call labels]]</span>
+<h2><span class="label label-put text-uppercase">put</span> Replace a Page</h2>
+<p>Some placeholder text</p>
 
+<h2><span class="label label-post text-uppercase">post</span> Create a Page</h2>
+<p>Some placeholder text</p>
 
+<h2><span class="label label-delete text-uppercase">delete</span> Delete a Page</h2>
+<p>Some placeholder text</p>
 </p></p></p>
 
 
@@ -601,7 +608,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 Weebly. All rights reserved. <br />
- Site last generated: Aug 29, 2017 <br />
+ Site last generated: Sep 19, 2017 <br />
 <p><img src="images/company_logo.png" alt="Company logo"/></p>
                 </div>
             </div>

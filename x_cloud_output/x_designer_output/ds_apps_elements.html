@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="​Elements are the widgets that users drag and drop from Weebly's Editor element tray to create HTML for the page. Users can create an entire web site using e...">
+<meta name="keywords" content="getting_startedelements,  elements, settings, tutorial">
+<title>What are Elements? | Weebly Cloud for Designers Documentation</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/modern-business.css">
+<link rel="stylesheet" href="css/lavish-bootstrap.css">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/theme-blue.css">
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<!-- <link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4008feed.xml"> -->
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        /*Bootstrap popovers are initialized with the following script. In the options, I'm setting the placement to be on the right, the trigger to be hover rather than click, and to allow HTML from the JSON data source. */
+
+        $('[data-toggle="popover"]').popover({
+            placement: 'top',
+            trigger: 'hover',
+            html: true
+        });
+    })
+</script>
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="fa fa-home fa-lg navbar-brand" href="home.html">&nbsp;<span class="projectTitle">
+                Weebly Cloud for Designers</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                
+                
+                
+                <li><a href="home.html">Get Started</a></li>
+                
+                
+                
+                <li><a href="ds_apps_gs.html">Custom Apps</a></li>
+                
+                
+                
+                <li><a href="ds_themes_gs.html">Custom Themes</a></li>
+                
+                
+                
+                <li><a href="ds_apis_about.html">Cloud APIs</a></li>
+                
+                
+                
+                <li><a href="ds_tags_about.html">Tags</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+			<li>
+
+
+
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the What are Elements? page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+
+</li>
+
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="Search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="What are Elements?">{title}</a></li>',
+                    noResultsText: 'No results',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Sidebar Column -->
+        <div class="col-md-3">
+
+          
+
+
+
+
+
+
+
+
+
+
+<ul id="mysidebar" class="nav">
+    <li class="sidebarTitle">Develop Weebly Apps </li>
+    
+    
+    
+        
+    
+    <li>
+        <a href="#">Get Started with Apps</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_apps_gs.html">Get Started with Developing Apps</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_samples.html">Sample Applications</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Tutorial&#58; Create an Element</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_element_main.html">Create an Element</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_element_1.html">1. Design the Element</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_element_2.html">2. Register the Element</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_element_3.html">3. Create a Directory Structure</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_element_4.html">4. Create the Manifest</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_element_5.html">5. Create the Settings</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_element_6.html">6. Create the HTML Template</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_element_7.html">7. Create the Styles</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_element_8.html">8. Create the JavaScript</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_element_9.html">9. Package, Upload, and Test Your Element</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_element_finish.html">Finish</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Develop an App</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_apps_dev.html">Develop an App</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_reg.html">Register Your App</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_manage.html">Manage Your App</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_files.html">Create the App File Structure</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_manifest.html">Create the App Manifest</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Create a Backend Service</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_apps_backend.html">Create a Backend Service</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Create an Element</a>
+        <ul>
+            
+            
+            
+            <li class="active"><a href="ds_apps_elements.html">What are Elements?</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_guides.html">Element Design Guidelines</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_icon.html">Element Icon Guidelines</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_element_create.html">Create an Element</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_element_folders.html">Add Element Folders</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_element_manifest.html">Add an Element to the Manifest</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_element_settings.html">Create Element Settings</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_element_man_ex.html">Element Manifest Example</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_element_temp.html">Create an Element Template</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_element_temp_ex.html">Element Template Example</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_element_style.html">Add Stylesheets to an Element</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_element_js.html">Add JavaScript to an Element</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Get Your App Ready to Publish</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_apps_element_upload.html">Upload your App</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_element_test.html">Test Your App</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_element_release.html">Release Your App</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_element_update.html">Update Your App</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+        <!-- if you aren't using the accordion, uncomment this block:
+           <p class="external">
+               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+           </p>
+           -->
+    </li>
+</ul>
+</div>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+    <!-- Content Column -->
+    <div class="col-md-9">
+        <div>
+    <div class="pageType">  concepts </div>
+    <div class="post-header">
+        <h1 class="post-title-main">What are Elements?</h1>
+    </div>
+</div>
+
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary">​Elements are the widgets that users drag and drop from Weebly's Editor element tray to create HTML for the page. Users can create an entire web site using elements, without ever having to create any code themselves!</div>
+   
+
+
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 50);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+
+    
+
+  <h2 id="element-basics">Element Basics</h2>
+
+<p>An element is made up of the following:</p>
+<ul>
+  <li>
+    <p><strong>Manifest<!--todo: add link--> file entries</strong> (<code class="highlighter-rouge">manifest.json</code>): These entries describe the element and define the settings used to display the element. For example, your element might need color, size, or quantity properties to be set. You set default values for those properties in the manifest, and then a modal displays the properties and the user can change the defaults. Settings are not mandatory (think the Weebly Spacer element), can be displayed in the native Weebly settings modal or from an external web page displayed in an iframe.</p>
+
+    <p>You can also configure tooltips for the settings or even a fully-functional tutorial for your element, including a video. The tutorial can be configured to automatically open when the element is first used, and can always be accessed from the Settings dialog.</p>
+  </li>
+  <li>
+    <p><strong>Template</strong> (<code class="highlighter-rouge">element.tpl</code>): This file creates the HTML to render the element. Templates can include text, images, and buttons that are directly editable by the user of the web site (called <em>content fields</em>). You can access settings from the manifest file and other data using mustache tags.</p>
+  </li>
+  <li><strong>JavaScript library</strong> (<code class="highlighter-rouge">element.js</code>): You can include JavaScript functions to add events, interactions, and effects to your element. You can access and update settings and other data from JavaScript using the Backbone Model. We include the jQuery and UnderscoreJS libraries for your use.
+    <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> If your app also needs to use these libraries, do not expose any global variables, including jQuery or Underscore, as conflicts may arise.</div>
+  </li>
+  <li>
+    <p>​<strong>Stylesheet</strong> (<code class="highlighter-rouge">element.css</code>): You style your element using CSS. We use the LESS CSS pre-processor, so you can write your stylesheet using LESS. You can access settings and other data in your stylesheet.</p>
+  </li>
+  <li><strong>Assets</strong>: You can include things like graphic files, snippets, etc. to complete your element. You must include the <code class="highlighter-rouge">.svg</code> icon that displays your element in the element tray. See the design guidelines<!--todo: link--> for details.</li>
+</ul>
+
+<p>If your element needs to behave differently in the editor than at runtime, you can include editor-specific versions of your stylesheet, JavaScript, and template.</p>
+
+<p>As an example, here’s the manifest for the sample Price Chart element. The <code class="highlighter-rouge">plans</code> property is defined as an integer that determines the number of price plans. The <code class="highlighter-rouge">features</code> property is defined as an integer that determines the number of features per plan. Both of these have a tooltip. The <code class="highlighter-rouge">alignment</code> property is set to default to the left.</p>
+
+<p>The value of the <code class="highlighter-rouge">type</code> property in the settings determines the widgets that display the property. For example, a <code class="highlighter-rouge">type</code> of <code class="highlighter-rouge">text</code> displays a text box. A <code class="highlighter-rouge">type</code> of <code class="highlighter-rouge">int</code> displays a text box that validates for an integer. <code class="highlighter-rouge">Color</code> displays a color picker. You can find the complete list of types here<!--todo: link-->.</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="w">    </span><span class="s2">"properties"</span><span class="err">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"plans"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Plans"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"int"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"step"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"min"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"tooltip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Select the number of plans to display."</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"features"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Features"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"int"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"step"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"min"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"tooltip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Select the number of features for each plan."</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"alignment"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Align"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"align"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"center"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="err">}</span><span class="p">]</span></code></pre></figure>
+
+<p>The <code class="highlighter-rouge">property</code> type group is used to group properties together. All properties must belong to a group, which is the top level property (there can be a single group). In the editor, each group displays in its own section in the modal.
+​</p>
+
+<p>The element’s HTML template uses a table to display the plans and features by retrieving the values of the <code class="highlighter-rouge">plans</code> and <code class="highlighter-rouge">features</code> settings in the manifest. The <code class="highlighter-rouge">plans</code> setting determines the number of columns to display, and the <code class="highlighter-rouge">features</code> setting determines the number of the rows.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"price-chart  buttonLocation-"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"name"</span><span class="nt">&gt;</span>
+        
+        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cell"</span><span class="nt">&gt;</span>{name_:text default="Name #"}<span class="nt">&lt;/td&gt;</span>
+        
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"price"</span><span class="nt">&gt;</span>
+        
+        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cell"</span><span class="nt">&gt;</span>{price_:text default="10"}<span class="nt">&lt;/td&gt;</span>
+        
+    <span class="nt">&lt;/tr&gt;</span>
+    . . .
+    
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"metric"</span><span class="nt">&gt;</span>
+        
+        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cell"</span><span class="nt">&gt;</span>{metric__:text default="Metric #"}<span class="nt">&lt;/td&gt;</span>
+        
+    <span class="nt">&lt;/tr&gt;</span>
+    
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"buttons-bottom"</span><span class="nt">&gt;</span>
+        
+        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"cell"</span><span class="nt">&gt;</span>{buttonText_bottom_:button}<span class="nt">&lt;/td&gt;</span>
+        
+    <span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+
+<p>When the element is dropped on to a page, the following displays:</p>
+<figure><img class="docimage" src="images/sh_priceChart.png" alt="" /><figcaption>The Weebly Price Chart</figcaption></figure>
+
+<p>The user can edit the <strong>Plan</strong> and <strong>Feature</strong> names directly, as well as the button text.</p>
+
+<p>Here’s an illustration to help map the template and manifest code to what is displayed in the Settings dialog and the page:</p>
+<figure><img class="docimage" src="images/elementDropMap2.png" alt="" /><figcaption>Settings in the manifest and template</figcaption></figure>
+
+<p>In addition to defining the properties for settings, you also use the manifest to configure how the element will function. When <code class="highlighter-rouge">autopop</code> is set to <code class="highlighter-rouge">true</code>, a dialog displays when the element is dropped from the tray. When set to <code class="highlighter-rouge">false</code>, the dialog displays only when the user interacts with (most usually clicks) the element once it’s  dropped on the page. You can create a tutorial for your element cand configure it to automatically display only the first time the element is dragged onto a page.</p>
+
+<p>You can make a property private so that the data is not available to visitors of the site, and can only be used within the editor. This might be useful if the property contains private information (such as API Keys).</p>
+
+<p>If you need the element properties to be set at an external site, you provide a URL to that site and the requested page displays in a modal, using JSON Web tokens (JWT) to pass in user information. You can use the <code class="highlighter-rouge">PostMessage</code> API to pass data between your page and Weebly. We add an invisible overlay div to your iframe so that users can click the element to access its settings. Once the settings panel is opened, the overlay is removed so that users can interact with your iframe.</p>
+
+<p>Click here to find out how to create the element and settings. <!--todo: link--></p>
+
+<h2 id="element-tutorials">Element Tutorials</h2>
+
+<p>When your element has a tricky configuration or might need some explaining to use properly, you can create a tutorial. You create it in the manifest, along with the settings. You can configure your tutorial to automatically open the first time the user drags the element onto the page. After that (or if you don’t want it to automatically open), users access the tutorial from the Settings dialog.</p>
+<figure><img class="docimage" src="images/tutorialModal.png" alt="" /><figcaption>Tutorial button in settings dialog</figcaption></figure>
+
+<p>Element tutorials include introductory text followed by these different types of content:</p>
+<ul>
+  <li><strong>Steps</strong>: You can include up to five numbered steps.
+    <figure><img class="docimage" src="images/tutorialSteps.png" alt="" /><figcaption>Tutorial steps</figcaption></figure>
+  </li>
+  <li><strong>Video</strong>: You can provide a URL to a YouTube video that opens in a takeover window.
+    <figure><img class="docimage" src="images/tutorialVideo.png" alt="" /><figcaption>Tutorial video</figcaption></figure>
+  </li>
+  <li><strong>Nested topics</strong>: If you want your tutorial to have more than one topic, you nest topics under a parent. You can create a full help set with up to 8 topics of step and/or video content. The name of each topic displays as a link on the main tutorial page. The resulting topics display within the dialog, with a link to go back to the main page.
+    <figure><img class="docimage" src="images/tutorialNested.png" alt="" /><figcaption>Main tutorial page with nested topics</figcaption></figure>
+  </li>
+</ul>
+
+<p>Click here to find out how to create an element tutorial. <!--todo: link--></p>
+
+
+
+    <div class="tags">
+        
+        <b>Tags: </b>
+        
+        
+        
+        <a href="tag_getting_started.html" class="btn btn-default navbar-btn cursorNorm" role="button">getting_started</a>
+        
+        
+        
+        <a href="tag_elements.html" class="btn btn-default navbar-btn cursorNorm" role="button">elements</a>
+        
+        
+        
+    </div>
+
+    
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2017 Weebly. All rights reserved. <br />
+ Site last generated: Sep 19, 2017 <br />
+<p><img src="images/company_logo.png" alt="Company logo"/></p>
+                </div>
+            </div>
+</footer>
+
+
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Stylesheets are the paint and polish on top of your element. They provide style instructions, and are a powerful way to make your element appear more profess...">
+<meta name="keywords" content="elements,  CSS, style, stylesheets, element">
+<title>Add Stylesheets to an Element | Weebly Cloud for Designers Documentation</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/modern-business.css">
+<link rel="stylesheet" href="css/lavish-bootstrap.css">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/theme-blue.css">
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<!-- <link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4008feed.xml"> -->
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        /*Bootstrap popovers are initialized with the following script. In the options, I'm setting the placement to be on the right, the trigger to be hover rather than click, and to allow HTML from the JSON data source. */
+
+        $('[data-toggle="popover"]').popover({
+            placement: 'top',
+            trigger: 'hover',
+            html: true
+        });
+    })
+</script>
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="fa fa-home fa-lg navbar-brand" href="home.html">&nbsp;<span class="projectTitle">
+                Weebly Cloud for Designers</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                
+                
+                
+                <li><a href="home.html">Get Started</a></li>
+                
+                
+                
+                <li><a href="ds_apps_gs.html">Custom Apps</a></li>
+                
+                
+                
+                <li><a href="ds_themes_gs.html">Custom Themes</a></li>
+                
+                
+                
+                <li><a href="ds_apis_about.html">Cloud APIs</a></li>
+                
+                
+                
+                <li><a href="ds_tags_about.html">Tags</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+			<li>
+
+
+
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Add Stylesheets to an Element page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+
+</li>
+
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="Search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Add Stylesheets to an Element">{title}</a></li>',
+                    noResultsText: 'No results',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Sidebar Column -->
+        <div class="col-md-3">
+
+          
+
+
+
+
+
+
+
+
+
+
+<ul id="mysidebar" class="nav">
+    <li class="sidebarTitle">Develop Weebly Apps </li>
+    
+    
+    
+        
+    
+    <li>
+        <a href="#">Get Started with Apps</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_apps_gs.html">Get Started with Developing Apps</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_samples.html">Sample Applications</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Tutorial&#58; Create an Element</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_element_main.html">Create an Element</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_element_1.html">1. Design the Element</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_element_2.html">2. Register the Element</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_element_3.html">3. Create a Directory Structure</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_element_4.html">4. Create the Manifest</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_element_5.html">5. Create the Settings</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_element_6.html">6. Create the HTML Template</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_element_7.html">7. Create the Styles</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_element_8.html">8. Create the JavaScript</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_element_9.html">9. Package, Upload, and Test Your Element</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_element_finish.html">Finish</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Develop an App</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_apps_dev.html">Develop an App</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_reg.html">Register Your App</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_manage.html">Manage Your App</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_files.html">Create the App File Structure</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_manifest.html">Create the App Manifest</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Create a Backend Service</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_apps_backend.html">Create a Backend Service</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Create an Element</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_apps_elements.html">What are Elements?</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_guides.html">Element Design Guidelines</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_icon.html">Element Icon Guidelines</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_element_create.html">Create an Element</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_element_folders.html">Add Element Folders</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_element_manifest.html">Add an Element to the Manifest</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_element_settings.html">Create Element Settings</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_element_man_ex.html">Element Manifest Example</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_element_temp.html">Create an Element Template</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_element_temp_ex.html">Element Template Example</a></li>
+            
+            
+            
+            
+            
+            
+            <li class="active"><a href="ds_apps_element_style.html">Add Stylesheets to an Element</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_element_js.html">Add JavaScript to an Element</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Get Your App Ready to Publish</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_apps_element_upload.html">Upload your App</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_element_test.html">Test Your App</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_element_release.html">Release Your App</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_apps_element_update.html">Update Your App</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+        <!-- if you aren't using the accordion, uncomment this block:
+           <p class="external">
+               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+           </p>
+           -->
+    </li>
+</ul>
+</div>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+    <!-- Content Column -->
+    <div class="col-md-9">
+        <div>
+    <div class="pageType">  reference </div>
+    <div class="post-header">
+        <h1 class="post-title-main">Add Stylesheets to an Element</h1>
+    </div>
+</div>
+
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary">Stylesheets are the paint and polish on top of your element. They provide style instructions, and are a powerful way to make your element appear more professional. Keep in mind though that the sites using your element are styled using themes. You want your element to also be styled by themes so that it appears seamless. The styling you add for your element should be minimal - only style HTML components that you want to appear the same in every site, no matter the theme being used.</div>
+   
+
+
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 50);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+
+    
+
+  <h2 id="editor-vs-published-stylesheets">Editor vs. Published Stylesheets</h2>
+
+<p>Your stylesheet files live in the <a href="ds_apps_element_folders.html"><code class="highlighter-rouge">css</code> directory</a> directory for your element. You need to create a file named <code class="highlighter-rouge">element.css</code>, which will be used for both the editor and the published site.  You can also provide an <code class="highlighter-rouge">editor_element.css</code> file, to be used only within the editor. This allows you to specify different styles when editing or configuring your element within the editor. This may be necessary when your element requires interactivity with the user on a published site, as the element placeholder in the editor cannot be interactive.</p>
+
+<h2 id="style-your-element-to-work-with-themes">Style Your Element to Work with Themes</h2>
+
+<p>How Weebly websites look - their colors, styles, layout - are determined by themes. Web site owners can change themes to change the look and feel of their website. Apps that you create need to look as though they belong, regardless of the theme that the owner chooses.</p>
+
+<p>Weebly themes use Less and CSS to style the different elements on a web page, both when in the editor and on the published site. You need to make sure any HTML tags used in your app use correct classes and that you don’t style these classes - you want them to inherit their style from the theme applied to the site. In fact, you should allow most of your HTML to be styled by the theme’s CSS. The CSS for your app or element should style only those components that must appear the same in every site, no matter the theme.</p>
+
+<p>These are the classes you must use and must <strong>not</strong> style:</p>
+<ul>
+  <li>All input element used in forms: use <code class="highlighter-rouge">.wsite-form-input</code>
+  These include text input as well as radios and checkboxes.</li>
+  <li>Selects: use <code class="highlighter-rouge">.form-select</code></li>
+  <li>Buttons: Use <code class="highlighter-rouge">.wsite-button</code> and <code class="highlighter-rouge">.wsite-button-inner</code>
+  These classes can be used on either link or button components.</li>
+</ul>
+
+<h2 id="less-css">LESS CSS</h2>
+<p>Before rendering your CSS to the page, it is run through the <a href="http://lesscss.org/">LESS CSS preprocessor</a>, so you can use LESS CSS in your <code class="highlighter-rouge">element.css</code> and <code class="highlighter-rouge">editor_element.css</code> files. Your CSS is wrapped in a scoped selector, meaning the CSS affects the styling of only the contents within your elements.
+Here’s an example of a LESS variable used in a stylesheet:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nf">#color</span><span class="o">:</span> <span class="err">#</span><span class="nf">#FF0000</span><span class="o">;</span>
+
+<span class="nc">.example</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="err">@</span><span class="n">color</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Because there may be multiple copies of one element on any given page, we strongly encourage you to use classes in your CSS or templates. Do not use IDs.</div>
+
+<h2 id="access-settings">Access Settings</h2>
+<p>All of your settings are available as LESS variables in your CSS files.  Simply access them as you would expect to in standard LESS fashion.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.price-chart</span> <span class="p">{</span>
+    <span class="err">@</span><span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="err">@</span><span class="n">borderColor</span><span class="p">;</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="err">@</span><span class="n">backgroundColor</span><span class="p">;</span>
+    <span class="nl">border</span><span class="p">:</span> <span class="err">@</span><span class="n">border</span><span class="p">;</span>
+    <span class="nl">border-spacing</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span></code></pre></figure>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Some settings will be strings, including quotes.  In cases where LESS cannot properly set a variable, the variable is set as a string. You can “un-stringify” it with LESS String Interpolation.</div>
+
+<h2 id="access-additional-data">Access Additional Data</h2>
+<p>You can access the path to your elements’ assets, similar to the way you access settings, using the <code class="highlighter-rouge">assets_path</code> variable. This is the HTTP accessible root path to your elements’ assets folder, in protocol-agnostic form.  It is accessible as a property of your Element object:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.example</span> <span class="p">{</span>
+    <span class="nl">background-image</span><span class="p">:</span> <span class="sx">url("@{assets_path}file.png")</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+
+
+    <div class="tags">
+        
+        <b>Tags: </b>
+        
+        
+        
+        <a href="tag_elements.html" class="btn btn-default navbar-btn cursorNorm" role="button">elements</a>
+        
+        
+        
+    </div>
+
+    
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2017 Weebly. All rights reserved. <br />
+ Site last generated: Sep 19, 2017 <br />
+<p><img src="images/company_logo.png" alt="Company logo"/></p>
+                </div>
+            </div>
+</footer>
+
+
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+
+</body>
+
+</html>

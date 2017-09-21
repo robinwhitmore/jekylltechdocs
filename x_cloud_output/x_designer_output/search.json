@@ -4,6 +4,17 @@
 
 
 {
+"title": "API test",
+"tags": "themes",
+"keywords": "",
+"url": "ds_api_test.html",
+"summary": "Test API template"
+}
+,
+
+
+
+{
 "title": "About the Weebly Cloud for Designer REST APIs",
 "tags": "apisgetting_started",
 "keywords": "endpoint, list view, detail view, http verbs, pagination, authentication, authorization, errors",
@@ -26,11 +37,253 @@
 
 
 {
+"title": "Create a Backend Service",
+"tags": "getting_startedapps",
+"keywords": "backend, service, backend service, app, snippet, snippets",
+"url": "ds_apps_backend.html",
+"summary": "Backend services typically provide additional functionality for a user's website. They can be full-fledged apps that run on your server and access our API, or they can be simple snippets."
+}
+,
+
+
+
+{
+"title": "Develop an App",
+"tags": "getting_startedappscustom",
+"keywords": "apps, custom, steps, elements, backend, service",
+"url": "ds_apps_dev.html",
+"summary": "While there are two different types of apps (backend services and elements), they both have the same initial and final development steps. Start your development process by following the initial steps below. Then follow the development process for the type of app you're creating. Finish up by following the final steps, also below."
+}
+,
+
+
+
+{
+"title": "Create an Element",
+"tags": "appselements",
+"keywords": "element, develop",
+"url": "ds_apps_element_create.html",
+"summary": "After you create your app, you implement these additional steps to create an element."
+}
+,
+
+
+
+{
+"title": "Add Element Folders",
+"tags": "elements",
+"keywords": "elements, directory, folders",
+"url": "ds_apps_element_folders.html",
+"summary": "If you've already created your file directory for your app, you may have also created your element directories. But if not, follow these guidelines."
+}
+,
+
+
+
+{
+"title": "Add JavaScript to an Element",
+"tags": "elements",
+"keywords": "JavaScript, element, scripts, events",
+"url": "ds_apps_element_js.html",
+"summary": "Adding JavaScript to your element is easy, and allows for more powerful elements."
+}
+,
+
+
+
+{
+"title": "Element Manifest Example",
+"tags": "elements",
+"keywords": "example, sample, json, manifest, settings",
+"url": "ds_apps_element_man_ex.html",
+"summary": "The following example shows the manifest from the Pricing Chart sample element. This manifest contains both application-level manifest data and element manifest data. The element-specific information lives within the objects in the "elements" array."
+}
+,
+
+
+
+{
+"title": "Add an Element to the Manifest",
+"tags": "elements",
+"keywords": "manifest, element, properties, settings",
+"url": "ds_apps_element_manifest.html",
+"summary": "Each element provided in your app is defined in the top-level manifest.json, within the elements array.  Each element is a single object in the array, and specifies the name, location, and settings of the element. Once you define the element, you then define the properties that make up the settings."
+}
+,
+
+
+
+{
+"title": "Release Your App",
+"tags": "appselements",
+"keywords": "release, app, element, auto-install, install",
+"url": "ds_apps_element_release.html",
+"summary": "You release your app by associating it with a plan. Every site on that plan will have the app installed."
+}
+,
+
+
+
+{
+"title": "Create Element Settings",
+"tags": "elements",
+"keywords": "elements, settings, manifest, group, properties",
+"url": "ds_apps_element_settings.html",
+"summary": "Your element can include settings that the user configures when including it on a web page. You create these settings as property keys in the manifest.json file."
+}
+,
+
+
+
+{
+"title": "Add Stylesheets to an Element",
+"tags": "elements",
+"keywords": "CSS, style, stylesheets, element",
+"url": "ds_apps_element_style.html",
+"summary": "Stylesheets are the paint and polish on top of your element. They provide style instructions, and are a powerful way to make your element appear more professional. Keep in mind though that the sites using your element are styled using themes. You want your element to also be styled by themes so that it appears seamless. The styling you add for your element should be minimal - only style HTML components that you want to appear the same in every site, no matter the theme being used."
+}
+,
+
+
+
+{
+"title": "Create an Element Template",
+"tags": "elements",
+"keywords": "template, element, mustache, content fields,",
+"url": "ds_apps_element_temp.html",
+"summary": "Templates are the core component of an element. The template is the actual HTML content that will be rendered on a users page."
+}
+,
+
+
+
+{
+"title": "Element Template Example",
+"tags": "elements",
+"keywords": "element, template, sample, example, mustache",
+"url": "ds_apps_element_temp_ex.html",
+"summary": "The following example shows the template code for the Pricing Chart sample element."
+}
+,
+
+
+
+{
+"title": "Test Your App",
+"tags": "apps",
+"keywords": "test, QA, dev site,",
+"url": "ds_apps_element_test.html",
+"summary": "After you've uploaded your application, you'll want install it on your test site to view and QA it."
+}
+,
+
+
+
+{
+"title": "Update Your App",
+"tags": "appselements",
+"keywords": "update, version, release, app, element",
+"url": "ds_apps_element_update.html",
+"summary": "You can update your app by creating a new version"
+}
+,
+
+
+
+{
+"title": "Upload Your App",
+"tags": "appselements",
+"keywords": "upload, zip, dev admin portal,",
+"url": "ds_apps_element_upload.html",
+"summary": "Once you create and package your app, you upload it so that you can test it and eventually release it to your customers."
+}
+,
+
+
+
+{
+"title": "What are Elements?",
+"tags": "getting_startedelements",
+"keywords": "elements, settings, tutorial",
+"url": "ds_apps_elements.html",
+"summary": "​Elements are the widgets that users drag and drop from Weebly's Editor element tray to create HTML for the page. Users can create an entire web site using elements, without ever having to create any code themselves!"
+}
+,
+
+
+
+{
+"title": "Create the App File Structure",
+"tags": "getting_startedapps",
+"keywords": "directory, files, manifest",
+"url": "ds_apps_files.html",
+"summary": "The file structure for your app must be as Weebly expects in order for you to upload it to the App Center."
+}
+,
+
+
+
+{
 "title": "Get Started with Custom Weebly Apps",
 "tags": "getting_startedcustom_apps",
-"keywords": "",
+"keywords": "apps, custom, development site, elements, backend,",
 "url": "ds_apps_gs.html",
 "summary": ""
+}
+,
+
+
+
+{
+"title": "Element Design Guidelines",
+"tags": "elements",
+"keywords": "guidelines, icon, placeholder, element, elements",
+"url": "ds_apps_guides.html",
+"summary": "Follow these guidelines to create an element that behaves like a native Weebly element."
+}
+,
+
+
+
+{
+"title": "Element Icon Guidelines",
+"tags": "elements",
+"keywords": "elements, icon, icons, svg, editor",
+"url": "ds_apps_icon.html",
+"summary": "You need to provide an icon .svg file used to drag and drop the element onto a page."
+}
+,
+
+
+
+{
+"title": "Manage Your App",
+"tags": "getting_startedapps",
+"keywords": "manage, apps, custom, status, version, developer site,",
+"url": "ds_apps_manage.html",
+"summary": "You manage your app(s) using the Cloud Admin. From here, you can do a number of different things like access your development site, install the app to your development site, release the app to a plan, and upload new versions."
+}
+,
+
+
+
+{
+"title": "Create the App Manifest",
+"tags": "configurationapps",
+"keywords": "manifest, files, apps, configure",
+"url": "ds_apps_manifest.html",
+"summary": "The manifest.json file outlines the structure of the app, and provides pertinent information about locales, authorship, and more. It must exist for each app and must live at the root of the application's zip file."
+}
+,
+
+
+
+{
+"title": "Register Your App",
+"tags": "getting_startedappscustom",
+"keywords": "register, app, client ID,",
+"url": "ds_apps_reg.html",
+"summary": "You use the APPS tab of the Cloud Admin to register and manage your apps."
 }
 ,
 
@@ -49,7 +302,7 @@
 
 {
 "title": "1. Design the Element",
-"tags": "getting_startedcustom_apps",
+"tags": "",
 "keywords": "",
 "url": "ds_element_1.html",
 "summary": ""
@@ -60,7 +313,7 @@
 
 {
 "title": "2. Register the App",
-"tags": "getting_startedcustom_apps",
+"tags": "",
 "keywords": "",
 "url": "ds_element_2.html",
 "summary": ""
@@ -70,9 +323,97 @@
 
 
 {
+"title": "3. Create the Directory Structure",
+"tags": "",
+"keywords": "",
+"url": "ds_element_3.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "4. Create the Manifest",
+"tags": "",
+"keywords": "",
+"url": "ds_element_4.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "5. Create the Settings",
+"tags": "",
+"keywords": "",
+"url": "ds_element_5.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "6. Create the HTML Template",
+"tags": "",
+"keywords": "",
+"url": "ds_element_6.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "7. Create the Styles",
+"tags": "",
+"keywords": "",
+"url": "ds_element_7.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "8. Create the JavaScript",
+"tags": "",
+"keywords": "",
+"url": "ds_element_8.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "9. Package, Upload, and Test Your Element",
+"tags": "",
+"keywords": "",
+"url": "ds_element_9.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Finish!",
+"tags": "",
+"keywords": "",
+"url": "ds_element_finish.html",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "Tutorial&amp;#58; Create an Element",
 "tags": "getting_startedcustom_apps",
-"keywords": "price chart",
+"keywords": "price chart, tutorial, custom",
 "url": "ds_element_main.html",
 "summary": ""
 }
@@ -257,6 +598,17 @@
 
 
 {
+"title": "Customize Weebly Themes",
+"tags": "getting_startedsitesthemescustom",
+"keywords": "themes, sites, custom",
+"url": "ds_[X].html",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "Glossary",
 "tags": "getting_started",
 "keywords": "",
@@ -275,6 +627,8 @@
 "summary": "Welcome to Weebly Cloud for Designers! With Weebly Cloud, you use Weebly’s best-in-class website builder to create websites, blogs or online stores in minutes for your clients, and the Cloud Admin to maintain full control over billing, support, and the customer relationship."
 }
 ,
+
+
 
 
 

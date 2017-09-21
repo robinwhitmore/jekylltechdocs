@@ -10,7 +10,7 @@
 
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/modern-business.css">
 <link rel="stylesheet" href="css/lavish-bootstrap.css">
@@ -18,8 +18,9 @@
 <link rel="stylesheet" href="css/theme-blue.css">
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -349,28 +350,27 @@
 
 
 
+
+
+
     
 
-  <p>In this step, we’ll register the app in the Cloud Admin so that we have the info needed to create the manifest.
-​<ol>
-    <li> Open the <a href="https://weeblycloud.com/admin">Cloud Admin</a></li>
-    <li> Click the <strong>APPS</strong> tab and click <strong>Create New App</strong></li>
-    <li>Enter your account email in the <strong>App Name</strong> field, for example, <code>myemail@email.com</code>.
-        <div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> App names must be unique. Using your account email as a name for this tutorial ensures this name will be unique.</div></li>
-
-​   
-
-    <li>Click <strong>Save</strong>.</li>
+  <p>We’ll be zipping up our development directory to deliver the app, so we need to create a directory structure that’s valid for Weebly.</p>
+<ol>
+  <li>Create a directory named <code class="highlighter-rouge">PriceChart</code>. This is the root level directory.</li>
+  <li>As a child to that directory, create a sub-directory and name it <code class="highlighter-rouge">files</code>.
+​The root directory may contain one or more elements as part of the total app. Since our app is a single element, we’ll create just this one sub-directory.</li>
+  <li>Within the files directory, create the following sub-directories:
+    <ul>
+      <li><code class="highlighter-rouge">css</code></li>
+      <li><code class="highlighter-rouge">html</code></li>
+      <li><code class="highlighter-rouge">js</code></li>
+      <li><code class="highlighter-rouge">assets</code></li>
+    </ul>
+  </li>
+  <li>From the sample app directory that you unzipped (from the <a href="cl_element_main.html">prerequisites</a> step), copy the <code class="highlighter-rouge">icon.svg</code> file to the <code class="highlighter-rouge">PriceChart/files</code> directory. We won’t be creating this icon in the tutorial, and you’ll need it in order to upload your app.</li>
 </ol>
 
-
-​We now have a Client ID and Secret for the app (located in the card on the left). We’ll need the Client ID when we create the element’s manifest.
-
-<figure><img class="docimage" src="images/cl_apps.png" alt="" /></figure>
-
-
-
-</p>
 
 
 
@@ -478,7 +478,7 @@
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 Weebly. All rights reserved. <br />
- Site last generated: Aug 29, 2017 <br />
+ Site last generated: Sep 19, 2017 <br />
 <p><img src="images/company_logo.png" alt="Company logo"/></p>
                 </div>
             </div>
