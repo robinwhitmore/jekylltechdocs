@@ -13,6 +13,7 @@
     </div>
 <div style="float:right">
 {% include image.html file="themeslayout.png" %}
+    <!--todo: not displaying on git pages-->
 </div>
 </div>
 * **Body/content**: This is the area where site owners add their main content by choosing from predefined layouts, or by designing the area from scratch using elements (you don't need to add that functionality to your theme - like the header layouts, it's built in). You can add sections to the body, which allow the owner to add distinct areas with different layouts. If you don't include sections in your template, users can add them later, after they choose your template.

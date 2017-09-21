@@ -598,11 +598,44 @@
 
 
 {
+"title": "Anatomy of a Theme",
+"tags": "getting_startedthemes",
+"keywords": "template, layout, css, less, js, javascript,",
+"url": "ds_themes_anatomy.html",
+"summary": "When creating themes, you'll be working with HTML pages, mustache templates, JavaScript, cascading style sheets (CSS or LESS), images, and manifest files. This may sound like a lot, but once you understand how all the pieces fit together, you'll realize there's not much to it!"
+}
+,
+
+
+
+{
 "title": "Customize Weebly Themes",
 "tags": "getting_startedsitesthemescustom",
 "keywords": "themes, sites, custom",
 "url": "ds_[X].html",
 "summary": ""
+}
+,
+
+
+
+{
+"title": "Download Sample Themes",
+"tags": "getting_startedthemes",
+"keywords": "samples, themes, github",
+"url": "ds_themes_sample.html",
+"summary": "Use our Base theme to get started creating your own custom theme."
+}
+,
+
+
+
+{
+"title": "Get Started with Customizing Themes",
+"tags": "getting_startedthemes",
+"keywords": "themes, code editor, manage",
+"url": "ds_themes_start.html",
+"summary": "​Themes provide the general look and feel used throughout a website. While Weebly provides a number of great themes, you may find you want to change a few things in a theme. Or maybe you want to change everything! You can do those and everything in between."
 }
 ,
 

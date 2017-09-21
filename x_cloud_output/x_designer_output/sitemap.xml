@@ -332,7 +332,25 @@
   
   
   <url>
+    <loc>http://localhost:4008/ds_themes_anatomy.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4008/ds_[X].html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_themes_sample.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_themes_start.html</loc>
   </url>
   
   
