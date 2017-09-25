@@ -1,0 +1,1 @@
+If you're not in the Code Editor, from the **Theme** tab, click **Edit HTML/CSS**.

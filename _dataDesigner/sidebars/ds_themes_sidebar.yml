@@ -36,65 +36,77 @@ entries:
     - title: Anatomy of a Theme
       url: /ds_themes_anatomy.html
       output: web, pdf
+      #ready for review
 
     - title: Theme Directory Structure
       url: /ds_themes_directory.html
       output: web, pdf
-
-    - title: Tutorial&#58; Customize a Theme
-      output: web, pdf
-      folderitems:
-
-      - title: 1. Download the Base Theme
-        url: /ds_themes_1.html
-        output: web, pdf
-
-      - title: 2. Apply YOur Theme to a Test Site
-        url: /ds_themes_2.html
-        output: web, pdf
-
-      - title: 3. Add a Color Palette
-        url: /ds_themes_3.html
-        output: web, pdf
-
-      - title: 4. Create Variations of the Theme
-        url: /ds_themes_4.html
-        output: web, pdf
-
-      - title: 5. Edit the Header Template
-        url: /ds_themes_5.html
-        output: web, pdf
-
-      - title: 6. Edit the main.less File
-        url: /ds_themes_6.html
-        output: web, pdf
-
-      - title: 7. Edit the Blog Post Partial
-        url: /ds_themes_7.html
-        output: web, pdf
-
-      - title: 8. Add a Theme Option
-        url: /ds_themes_8.html
-        output: web, pdf
-
-      - title: 9. Add a Screenshot
-        url: /ds_themes_9.html
-        output: web, pdf
-
-      - title: 10. Deliver Your Theme
-        url: /ds_themes_10.html
-        output: web, pdf
-
-      - title: Finish
-        url: /ds_themes_finish.html
-        output: web, pdf
+      #ready for review
 
     - title: Sample Themes
       url: /ds_themes_sample.html
       output: web, pdf
+      #ready for review
 
     - title: Known Issues
       url: /ds_themes_issues.html
+      output: web, pdf
+
+  - title: Tutorial&#58; Customize a Theme
+    output: web, pdf
+    folderitems:
+
+    - title: Customize a Weebly Theme
+      url: /ds_themes_tutorial.html
+      output: web, pdf
+      #ready for review
+
+    - title: 1. Download the Base Theme
+      url: /ds_themes_1.html
+      output: web, pdf
+      #ready for review
+
+    - title: 2. Apply YOur Theme to a Test Site
+      url: /ds_themes_2.html
+      output: web, pdf
+      #ready for review
+
+    - title: 3. Add a Color Palette
+      url: /ds_themes_3.html
+      output: web, pdf
+      #ready for review
+
+    - title: 4. Create Variations of the Theme
+      url: /ds_themes_4.html
+      output: web, pdf
+      #ready for review
+
+    - title: 5. Edit the Header Template
+      url: /ds_themes_5.html
+      output: web, pdf
+
+    - title: 6. Edit the main.less File
+      url: /ds_themes_6.html
+      output: web, pdf
+
+    - title: 7. Edit the Blog Post Partial
+      url: /ds_themes_7.html
+      output: web, pdf
+
+    - title: 8. Add a Theme Option
+      url: /ds_themes_8.html
+      output: web, pdf
+
+    - title: 9. Add a Screenshot
+      url: /ds_themes_9.html
+      output: web, pdf
+
+    - title: 10. Deliver Your Theme
+      url: /ds_themes_10.html
+      output: web, pdf
+
+    - title: Finish
+      url: /ds_themes_finish.html
       output: web, pdf
 
   - title: Theme Design

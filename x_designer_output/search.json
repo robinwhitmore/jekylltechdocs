@@ -598,11 +598,143 @@
 
 
 {
+"title": "1. Download the Base Theme",
+"tags": "",
+"keywords": "",
+"url": "ds_themes_1.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "10. Deliver Your Theme",
+"tags": "",
+"keywords": "",
+"url": "ds_themes_10.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "2. Apply Your Theme to a Test Site",
+"tags": "",
+"keywords": "",
+"url": "ds_themes_2.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "3. Add a Color Palette",
+"tags": "",
+"keywords": "",
+"url": "ds_themes_3.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "4. Create Variations",
+"tags": "",
+"keywords": "",
+"url": "ds_themes_4.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "5. Edit the Header Template",
+"tags": "",
+"keywords": "",
+"url": "ds_themes_5.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "6. Edit the main.less File",
+"tags": "",
+"keywords": "",
+"url": "ds_themes_6.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "7. Edit the Blog Post Partial",
+"tags": "",
+"keywords": "",
+"url": "ds_themes_7.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "8. Add a Theme Option",
+"tags": "",
+"keywords": "",
+"url": "ds_themes_8.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "9. Add a Screenshot",
+"tags": "",
+"keywords": "",
+"url": "ds_themes_9.html",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "Anatomy of a Theme",
 "tags": "getting_startedthemes",
 "keywords": "template, layout, css, less, js, javascript,",
 "url": "ds_themes_anatomy.html",
 "summary": "When creating themes, you'll be working with HTML pages, mustache templates, JavaScript, cascading style sheets (CSS or LESS), images, and manifest files. This may sound like a lot, but once you understand how all the pieces fit together, you'll realize there's not much to it!"
+}
+,
+
+
+
+{
+"title": "Theme Directory Structure",
+"tags": "getting_startedthemes",
+"keywords": "directory, folders, assets, manifest",
+"url": "ds_themes_directory.html",
+"summary": "If you will edit your theme using the Weebly Code Editor, the directories and files are created for you remotely. If you want to use another editor, follow these guidelines to set up your development directory."
+}
+,
+
+
+
+{
+"title": "You Did It!",
+"tags": "",
+"keywords": "",
+"url": "ds_themes_finish.html",
+"summary": ""
 }
 ,
 
@@ -636,6 +768,17 @@
 "keywords": "themes, code editor, manage",
 "url": "ds_themes_start.html",
 "summary": "​Themes provide the general look and feel used throughout a website. While Weebly provides a number of great themes, you may find you want to change a few things in a theme. Or maybe you want to change everything! You can do those and everything in between."
+}
+,
+
+
+
+{
+"title": "Tutorial&amp;#58; Customize a Weebly Theme",
+"tags": "getting_startedthemes",
+"keywords": "tutorial, themes, custom",
+"url": "ds_themes_tutorial.html",
+"summary": ""
 }
 ,
 

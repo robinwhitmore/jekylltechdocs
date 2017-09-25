@@ -7,4 +7,4 @@ tags: [getting_started, custom_apps]
 sidebar: ds_apps_sidebar
 permalink: ds_element_main.html
 ---
-{% include custom/tutorials/elements.md%}
+{% include custom/tutorials/themes.md%}
