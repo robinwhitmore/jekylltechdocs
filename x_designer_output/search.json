@@ -708,6 +708,17 @@
 
 
 {
+"title": "About LESS",
+"tags": "themes",
+"keywords": "LESS, css, stylesheets",
+"url": "ds_themes_LESS.html",
+"summary": "This topic provides some high-level info about what you can do with LESS. For more information, visit the LESS website at http://lesscss.org/#."
+}
+,
+
+
+
+{
 "title": "Anatomy of a Theme",
 "tags": "getting_startedthemes",
 "keywords": "template, layout, css, less, js, javascript,",
@@ -719,11 +730,66 @@
 
 
 {
+"title": "How to Create a Theme",
+"tags": "getting_startedthemes",
+"keywords": "theme, steps, procedure",
+"url": "ds_themes_create.html",
+"summary": "The best way to create a theme is start with an existing theme and change it as you need."
+}
+,
+
+
+
+{
+"title": "Create the HTML Layout Templates",
+"tags": "themes",
+"keywords": "template, header, theme, layout, foundation, tag, tags, section, mobile, theme tags",
+"url": "ds_themes_create_templates.html",
+"summary": "You implement one HTML template file for each of the header types your theme will support - header, no header, and splash)."
+}
+,
+
+
+
+{
+"title": "Deliver Your Theme",
+"tags": "themes",
+"keywords": "create, admin, theme, upload",
+"url": "ds_themes_deliver.html",
+"summary": "You use the Cloud Admin to make your theme available to sites. You can make it available to all sites by uploading it to the Theme Gallery, or you can deliver it to a single site."
+}
+,
+
+
+
+{
+"title": "Design Resources",
+"tags": "themes",
+"keywords": "resources, palettes, colors, icons, images",
+"url": "ds_themes_design_resources.html",
+"summary": "This page lists resources you can use while building your theme."
+}
+,
+
+
+
+{
 "title": "Theme Directory Structure",
 "tags": "getting_startedthemes",
 "keywords": "directory, folders, assets, manifest",
 "url": "ds_themes_directory.html",
 "summary": "If you will edit your theme using the Weebly Code Editor, the directories and files are created for you remotely. If you want to use another editor, follow these guidelines to set up your development directory."
+}
+,
+
+
+
+{
+"title": "Element Requirements for Themes",
+"tags": "troubleshootingthemes",
+"keywords": "requirements, elements, button, gallery, divider, forms,",
+"url": "ds_themes_element_guidelines.html",
+"summary": "Site owners build Weebly pages by dragging and dropping elements onto a page. Some of these elements are configurable. Your theme needs to be able to handle the different configurations. Review the main.less stylesheets for different themes to see how these elements can be styled."
 }
 ,
 
@@ -752,11 +818,121 @@
 
 
 {
+"title": "Theme Design Guidelines",
+"tags": "troubleshootingthemes",
+"keywords": "guidelines, themes, design, requirements, troubleshooting, font, color, palette, variation, browser, image, responsive, display, layout",
+"url": "ds_themes_guidelines.html",
+"summary": "When you create a Weebly theme, your design needs to support the functionality found on the pages in the different areas of a Weebly site, as well support the elements often used on a site. For example, blog pages expect certain content and elements, while pages that display products expect something different. Because users can easily switch between themes, you need to make sure that you follow these guidelines and requirements to ensure switching between themes is a smooth transition."
+}
+,
+
+
+
+{
+"title": "Implement the CSS or LESS",
+"tags": "themes",
+"keywords": "css, less, stylesheets, theme, image, layouts, color, color variables, variables",
+"url": "ds_themes_implement_css.html",
+"summary": "Your stylesheets provide the look and feel of the theme, and as such, is what gives your theme its soul. Weebly themes support both CSS and LESS, which is a pre-processor for CSS that provides additional functionality, such as variables, mixins, and nesting. You can use either CSS or LESS, but not a mix."
+}
+,
+
+
+
+{
+"title": "Known Issues",
+"tags": "troubleshootingthemes",
+"keywords": "troubleshooting, JavaScript",
+"url": "ds_themes_issues.html",
+"summary": "Following are current issues when creating themes."
+}
+,
+
+
+
+{
+"title": "Create the Theme Manifest",
+"tags": "configurationthemes",
+"keywords": "manifest, theme, configuration,",
+"url": "ds_themes_manifest.html",
+"summary": "Metadata for a theme is contained in the manifest.json file, which lives in the root directory of the theme zip that you upload to Weebly.  Here you add functionality like responsiveness, color adjusting, and options like search and social icons."
+}
+,
+
+
+
+{
+"title": "About Mustache",
+"tags": "themes",
+"keywords": "mustache, templates, templating language,",
+"url": "ds_themes_mustache.html",
+"summary": "Mustache is a templating language that expands tags in a template with provided values. Weebly uses Mustache in theme partial files."
+}
+,
+
+
+
+{
+"title": "Add Options to Your Theme",
+"tags": "themesconfiguration",
+"keywords": "options, toggle, dropdown, body class",
+"url": "ds_themes_options.html",
+"summary": "You can design your theme so that some aspects of it can be globally changed. For example, you might want site owners to be able to turn search off and on, or determine how to align the menu. Or you might want them to be able to change the color or size of something. These choices are created with options and controlled with styles."
+}
+,
+
+
+
+{
+"title": "Page Requirements for Themes",
+"tags": "troubleshootingthemes",
+"keywords": "guidelines, requirements, themes, blog, store, search",
+"url": "ds_themes_page.html",
+"summary": "Pages that display in certain areas of a Weebly site need to provide distinct content provided by partials. This topic includes all expected classes used on blog, store, and search partials. Your theme needs to support styling these components. Review the .tpl partial files and main.less files for actual class names."
+}
+,
+
+
+
+{
+"title": "Create a Color Palette",
+"tags": "configurationthemes",
+"keywords": "color palette, eyedropper, accent color, primary color, variables, LESS variables, LESS, manifest,",
+"url": "ds_themes_palette.html",
+"summary": "You can create a color palette for your theme that allows the user to select a primary and an accent color for the site."
+}
+,
+
+
+
+{
+"title": "Use Partials",
+"tags": "themes",
+"keywords": "partials, template, mustache, product, blog, commerce, membership",
+"url": "ds_themes_partials.html",
+"summary": "Weebly sites use partials as a way to easily organize and find different parts of the website. You can edit these partials to change how their contents display."
+}
+,
+
+
+
+{
 "title": "Download Sample Themes",
 "tags": "getting_startedthemes",
 "keywords": "samples, themes, github",
 "url": "ds_themes_sample.html",
 "summary": "Use our Base theme to get started creating your own custom theme."
+}
+,
+
+
+
+{
+"title": "Create a Theme Screenshot",
+"tags": "themes",
+"keywords": "theme, screenshot, gallery",
+"url": "ds_themes_screenshot.html",
+"summary": "Once your theme is complete, you need to create a screenshot of it to display in the Theme chooser, shown when a user creates a site or decides to change their theme."
 }
 ,
 
@@ -779,6 +955,28 @@
 "keywords": "tutorial, themes, custom",
 "url": "ds_themes_tutorial.html",
 "summary": ""
+}
+,
+
+
+
+{
+"title": "Update Your Theme",
+"tags": "themes",
+"keywords": "update, version, theme, upgrade",
+"url": "ds_themes_update.html",
+"summary": "After you've created a theme and added it to the Gallery, you can create a new version."
+}
+,
+
+
+
+{
+"title": "Add Color Variations",
+"tags": "configurationthemes",
+"keywords": "color, color variations, light, dark, is_dark, LESS, css",
+"url": "ds_themes_variations.html",
+"summary": "If you're creating color palettes for your theme, then you may also want to create light and dark variations of each palette."
 }
 ,
 
@@ -833,6 +1031,17 @@
 
 
 
+
+
+
+{
+"title": "Import and Export Themes",
+"tags": "themes",
+"keywords": "import, export, theme,",
+"url": "ds_themes_import_export.html",
+"summary": "Import themes to bring them into the Weebly editor where you can edit and test them. You import themes using the Weebly UI. Export themes to create a zip file used to distribute the theme."
+}
+,
 
 
 

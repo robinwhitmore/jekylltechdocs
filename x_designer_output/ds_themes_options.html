@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="You can design your theme so that some aspects of it can be globally changed. For example, you might want site owners to be able to turn search off and on, o...">
+<meta name="keywords" content="themesconfiguration,  options, toggle, dropdown, body class">
+<title>Add Options to Your Theme | Weebly Cloud for Designers Documentation</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/modern-business.css">
+<link rel="stylesheet" href="css/lavish-bootstrap.css">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/theme-blue.css">
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<!-- <link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4008feed.xml"> -->
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        /*Bootstrap popovers are initialized with the following script. In the options, I'm setting the placement to be on the right, the trigger to be hover rather than click, and to allow HTML from the JSON data source. */
+
+        $('[data-toggle="popover"]').popover({
+            placement: 'top',
+            trigger: 'hover',
+            html: true
+        });
+    })
+</script>
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="fa fa-home fa-lg navbar-brand" href="home.html">&nbsp;<span class="projectTitle">
+                Weebly Cloud for Designers</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                
+                
+                
+                <li><a href="home.html">Get Started</a></li>
+                
+                
+                
+                <li><a href="ds_apps_gs.html">Custom Apps</a></li>
+                
+                
+                
+                <li><a href="ds_themes_start.html">Custom Themes</a></li>
+                
+                
+                
+                <li><a href="ds_apis_about.html">Cloud APIs</a></li>
+                
+                
+                
+                <li><a href="ds_tags_about.html">Tags</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+			<li>
+
+
+
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Add Options to Your Theme page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+
+</li>
+
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="Search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Add Options to Your Theme">{title}</a></li>',
+                    noResultsText: 'No results',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Sidebar Column -->
+        <div class="col-md-3">
+
+          
+
+
+
+
+
+
+
+
+
+
+<ul id="mysidebar" class="nav">
+    <li class="sidebarTitle">Develop Weebly Themes </li>
+    
+    
+    
+        
+    
+    <li>
+        <a href="#">Get Started with Customizing Themes</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_themes_start.html">Customizing Themes</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_sample.html">Download Sample Themes</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_anatomy.html">Anatomy of a Theme</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_directory.html">Theme Directory Structure</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_issues.html">Known Issues</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Tutorial&#58; Customize a Theme</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_themes_tutorial.html">Customize a Weebly Theme</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_1.html">1. Download the Base Theme</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_2.html">2. Apply YOur Theme to a Test Site</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_3.html">3. Add a Color Palette</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_4.html">4. Create Variations of the Theme</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_5.html">5. Edit the Header Template</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_6.html">6. Edit the main.less File</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_7.html">7. Edit the Blog Post Partial</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_8.html">8. Add a Theme Option</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_9.html">9. Add a Screenshot</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_10.html">10. Deliver Your Theme</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_finish.html">Finish</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Theme Design</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_themes_guidelines.html">Theme Design Guidelines</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_page.html">Page Guidelines for Themes</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_element_guidelines.html">Element Guidelines for Themes</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Create a Theme</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_themes_create.html">How to Create a Theme</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_import_export.html">Import and Export Themes</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_implement_css.html">Implement the CSS</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_create_templates.html">Create HTML Layout Templates</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_partials.html">Use Partials</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_manifest.html">Create the Theme Manifest</a></li>
+            
+            
+            
+            
+            
+            
+            <li class="active"><a href="ds_themes_options.html">Add Options to Your Themes</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_palette.html">Create a Color Palette</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_variations.html">Add Color Variations</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_screenshot.html">Create a Theme Screenshot</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_deliver.html">Deliver Your Theme</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_update.html">Update Your Theme</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Theme Resources</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_themes_design_resources.html">Design Resources</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_LESS.html">About LESS</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_mustache.html">About Mustache</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Partial Maps</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_themes_blogPartials.html">Blog Partials</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_comPartials.html">Commerce Partials</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_membershipPartials.html">Membership Partials</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_navPartials.html">Navigation Partials</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_searchPartials.html">Search Partials</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Theme FAQs</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_themes_faqs.html">Theme FAQs</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+        <!-- if you aren't using the accordion, uncomment this block:
+           <p class="external">
+               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+           </p>
+           -->
+    </li>
+</ul>
+</div>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+    <!-- Content Column -->
+    <div class="col-md-9">
+        <div>
+    <div class="pageType">  concepts  task </div>
+    <div class="post-header">
+        <h1 class="post-title-main">Add Options to Your Theme</h1>
+    </div>
+</div>
+
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary">You can design your theme so that some aspects of it can be globally changed. For example, you might want site owners to be able to turn search off and on, or determine how to align the menu. Or you might want them to be able to change the color or size of something. These choices are created with options and controlled with styles.</div>
+   
+
+
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 50);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+
+    
+
+  <h2 id="about-theme-options">About Theme Options</h2>
+
+<p>When a Weebly theme includes options, users can configure them from the sidebar of the Theme tab in the editor. For example, the theme shown below allows the user to change aspects of the header.</p>
+<figure><img class="docimage" src="images/theme_options.png" alt="" /><figcaption>Users can turn Search on and off or collapse the navigation bar in the header using options</figcaption></figure>
+
+<p>You can create the following types of options:</p>
+
+<ul>
+  <li><strong>Toggle</strong> (as shown in the Full Width Body option, above): Turns the option on or off for the site.</li>
+  <li><strong>Dropdown</strong> (as shown in the Header Style option): Choices are provided from a dropdown list.</li>
+  <li><strong>Color</strong>(as shown in the Header Overlay option): Choose a color to change some color aspect on a page. You must use LESS for your styles if you use this option.</li>
+  <li><strong>Pixel</strong>(as shown in the Header Spacing option):  Change the size of something on a page. You must use LESS for your styles if you use this option.</li>
+</ul>
+
+<p>When you create a toggle option, a body class with the toggle’s value gets added. The class name is the name you give the option, with <code class="highlighter-rouge">-on</code> or <code class="highlighter-rouge">-off</code> appended. You then can style those classes in your stylesheet. For example, say you create an option that allows the user to turn the search bar off and on and you name the option <code class="highlighter-rouge">search-bar</code>. Two classes will be created: one for when search is turned on called <code class="highlighter-rouge">search-bar-on</code>, and one for when it’s off, called <code class="highlighter-rouge">search-bar-off</code>.</p>
+
+<p>When you create a dropdown option with a number of values, then the classes will be the name of your option followed by the value. For example, if you create an option named <code class="highlighter-rouge">header-style</code> that determines the header style to use, and you define the choices to be <code class="highlighter-rouge">full-width</code> and <code class="highlighter-rouge">boxed</code>, you’d end up with two classes to be styled: <code class="highlighter-rouge">header-style-full-width</code>, and <code class="highlighter-rouge">header-style-boxed</code>.</p>
+
+<p>The color and a pixel options are controlled with LESS variables whose name is created based on your option name. For example, if you created a color option named <code class="highlighter-rouge">header-overlay</code>, you will have a variable named <code class="highlighter-rouge">@header-overlay</code> to hold the chosen value. A pixel option named <code class="highlighter-rouge">header-spacing</code> will have the <code class="highlighter-rouge">@header-spacing</code> variable available to hold the value of the height. You must use LESS for your theme styles if you want to use these options.</p>
+
+<h2 id="create-options">Create Options</h2>
+
+<p>You configure theme options in the <a href="ds_themes_manifest.html">manifest</a> file where you declare the option, it’s type, default value, and if a dropdown type, the allowable values (including the default). The name that you give the option, along with the value of any choices, are used to create CSS classes or variables that can be styled.</p>
+
+<p>Define the following properties for each option:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">name</code>: Name of CSS class or variable that will be used to reference this option. The name cannot have spaces.</li>
+  <li><code class="highlighter-rouge">title</code>: The name that displays to the user in the editor.</li>
+  <li><code class="highlighter-rouge">type</code>: Specifies the option type. Choose from one of the following:
+    <ul>
+      <li><code class="highlighter-rouge">toggle</code>: The option is either <code class="highlighter-rouge">on</code> or <code class="highlighter-rouge">off</code></li>
+      <li><code class="highlighter-rouge">dropdown</code>: The user makes a choice from a list. If you use this, then you must also create choices properties.</li>
+      <li><code class="highlighter-rouge">color</code>: The user chooses a color.</li>
+      <li><code class="highlighter-rouge">pixel</code>: The user sets a pixel size.</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">default</code>: The default value. Each type has a different type of default:
+    <ul>
+      <li><code class="highlighter-rouge">toggle</code>: Either true or false. If no default is set, true will be used.</li>
+      <li><code class="highlighter-rouge">dropdown</code>: One of the values configured in the choices property.  If no default is set, the first choice will be used.</li>
+      <li><code class="highlighter-rouge">color</code>: A hex value</li>
+      <li><code class="highlighter-rouge">pixel</code>: Don’t use default. Instead, you can optionally set <code class="highlighter-rouge">min</code> and <code class="highlighter-rouge">max</code> properties to define a default size.</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">choices</code>: Only needed for dropdown types - create an array of value/title pairs for each choice. <code class="highlighter-rouge">value</code> is used to create the CSS class/variable to represent this choice, while <code class="highlighter-rouge">title</code> is displayed in the editor.</li>
+  <li><code class="highlighter-rouge">is-body-class</code>: Set to <code class="highlighter-rouge">true</code> for toggle and dropdown types. Set to <code class="highlighter-rouge">false</code> for color and pixel types.
+  Creates a class based on the option name and attaches it to the body tags used in the site. This class allows you to style based on the selection.</li>
+  <li><code class="highlighter-rouge">is-less-var</code>: Set to <code class="highlighter-rouge">true</code> for color and pixel types. Set to <code class="highlighter-rouge">false</code> for toggle and dropdown types.
+  Creates a LESS variable based on the option name, allowing you to style any selector that includes the variable.</li>
+</ul>
+
+<h2 id="option-examples">Option Examples</h2>
+
+<p>Say you want to create an option that turns the nav bar on and off.
+Here’s what the manifest entry might look like:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="w"> </span><span class="err"></span><span class="w">
+</span><span class="p">{</span><span class="w">
+    </span><span class="nt">"custom-options"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="err">.</span><span class="w"> </span><span class="err">.</span><span class="w"> </span><span class="err">.</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"hide-nav"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Collapse Navigation"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"toggle"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"default"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"is-body-class"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"is-less-var"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+    </span></code></pre></figure>
+
+<p>Here’s what the entry in the <code class="highlighter-rouge">main_style.css</code> or <code class="highlighter-rouge">main.less</code> might be:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    <span class="err"></span>
+<span class="nf">#navigation-bar</span> <span class="p">{</span>
+<span class="c">/* navigation bar styling.
+Don't need to style the "off" class, as we
+want the nav bar to display....*/</span>
+<span class="err">body.hide-nav-on</span> <span class="err">#navigation-bar</span> <span class="err">{</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span> <span class="err">//</span> <span class="err">hide</span> <span class="err">nav</span> <span class="err">bar</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>And here’s how it displays in the editor:</p>
+<figure><img class="docimage" src="images/theme_optionNav.png" alt="" /><figcaption>Option to hide (collapse) the navigation bar</figcaption></figure>
+
+<p>Here’s a manifest example showing one of each type of option:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="s2">"custom-options"</span><span class="err">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"navbar-toggle"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Toggle Nav Bar"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"toggle"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"is-body-class"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"is-less-var"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"banner-color"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Banner Color"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"color"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#000"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"is-body-class"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"is-less-var"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"banner-height"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Banner Height in pixels"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pixel"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"min"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"max"</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"is-body-class"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"is-less-var"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"banner-location"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Location of banner"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dropdown"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"left"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"choices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"left"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Left"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"right"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Right"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nt">"is-body-class"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"is-less-var"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+ </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span></code></pre></figure>
+
+<p>Your LESS stylesheet might then contain the following entries using the classes and variables created for the options.</p>
+
+<p>For another example, check out our <a href="ds_themes_sample.html">Base LESS</a> theme example.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">body</span><span class="nc">.banner-location-left</span> <span class="p">{</span>
+    <span class="nl">content</span><span class="p">:</span> <span class="s2">''</span><span class="p">;</span>
+    <span class="err">...</span>
+    <span class="nl">left</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="nl">height</span><span class="p">:</span> <span class="err">@</span><span class="n">banner-height</span><span class="p">;</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="err">@</span><span class="n">banner-color</span><span class="p">;</span>
+    <span class="err">...</span>
+<span class="p">}</span>
+
+<span class="nt">body</span><span class="nc">.banner-location-right</span> <span class="p">{</span>
+    <span class="nl">content</span><span class="p">:</span> <span class="s2">''</span><span class="p">;</span>
+    <span class="err">...</span>
+    <span class="nl">right</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="nl">height</span><span class="p">:</span> <span class="err">@</span><span class="n">banner-height</span><span class="p">;</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="err">@</span><span class="n">banner-color</span><span class="p">;</span>
+    <span class="err">...</span>
+<span class="p">}</span>
+
+<span class="nt">body</span><span class="nc">.navbar-toggle-off</span> <span class="p">{</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+
+    <div class="tags">
+        
+        <b>Tags: </b>
+        
+        
+        
+        <a href="tag_themes.html" class="btn btn-default navbar-btn cursorNorm" role="button">themes</a>
+        
+        
+        
+        <a href="tag_configuration.html" class="btn btn-default navbar-btn cursorNorm" role="button">configuration</a>
+        
+        
+        
+    </div>
+
+    
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2017 Weebly. All rights reserved. <br />
+ Site last generated: Sep 29, 2017 <br />
+<p><img src="images/company_logo.png" alt="Company logo"/></p>
+                </div>
+            </div>
+</footer>
+
+
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+
+</body>
+
+</html>

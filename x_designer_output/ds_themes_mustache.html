@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Mustache is a templating language that expands tags in a template with provided values. Weebly uses Mustache in theme partial files.">
+<meta name="keywords" content="themes,  mustache, templates, templating language,">
+<title>About Mustache | Weebly Cloud for Designers Documentation</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/modern-business.css">
+<link rel="stylesheet" href="css/lavish-bootstrap.css">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/theme-blue.css">
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<!-- <link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4008feed.xml"> -->
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        /*Bootstrap popovers are initialized with the following script. In the options, I'm setting the placement to be on the right, the trigger to be hover rather than click, and to allow HTML from the JSON data source. */
+
+        $('[data-toggle="popover"]').popover({
+            placement: 'top',
+            trigger: 'hover',
+            html: true
+        });
+    })
+</script>
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="fa fa-home fa-lg navbar-brand" href="home.html">&nbsp;<span class="projectTitle">
+                Weebly Cloud for Designers</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                
+                
+                
+                <li><a href="home.html">Get Started</a></li>
+                
+                
+                
+                <li><a href="ds_apps_gs.html">Custom Apps</a></li>
+                
+                
+                
+                <li><a href="ds_themes_start.html">Custom Themes</a></li>
+                
+                
+                
+                <li><a href="ds_apis_about.html">Cloud APIs</a></li>
+                
+                
+                
+                <li><a href="ds_tags_about.html">Tags</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+			<li>
+
+
+
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the About Mustache page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+
+</li>
+
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="Search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="About Mustache">{title}</a></li>',
+                    noResultsText: 'No results',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Sidebar Column -->
+        <div class="col-md-3">
+
+          
+
+
+
+
+
+
+
+
+
+
+<ul id="mysidebar" class="nav">
+    <li class="sidebarTitle">Develop Weebly Themes </li>
+    
+    
+    
+        
+    
+    <li>
+        <a href="#">Get Started with Customizing Themes</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_themes_start.html">Customizing Themes</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_sample.html">Download Sample Themes</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_anatomy.html">Anatomy of a Theme</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_directory.html">Theme Directory Structure</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_issues.html">Known Issues</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Tutorial&#58; Customize a Theme</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_themes_tutorial.html">Customize a Weebly Theme</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_1.html">1. Download the Base Theme</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_2.html">2. Apply YOur Theme to a Test Site</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_3.html">3. Add a Color Palette</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_4.html">4. Create Variations of the Theme</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_5.html">5. Edit the Header Template</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_6.html">6. Edit the main.less File</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_7.html">7. Edit the Blog Post Partial</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_8.html">8. Add a Theme Option</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_9.html">9. Add a Screenshot</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_10.html">10. Deliver Your Theme</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_finish.html">Finish</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Theme Design</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_themes_guidelines.html">Theme Design Guidelines</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_page.html">Page Guidelines for Themes</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_element_guidelines.html">Element Guidelines for Themes</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Create a Theme</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_themes_create.html">How to Create a Theme</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_import_export.html">Import and Export Themes</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_implement_css.html">Implement the CSS</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_create_templates.html">Create HTML Layout Templates</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_partials.html">Use Partials</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_manifest.html">Create the Theme Manifest</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_options.html">Add Options to Your Themes</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_palette.html">Create a Color Palette</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_variations.html">Add Color Variations</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_screenshot.html">Create a Theme Screenshot</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_deliver.html">Deliver Your Theme</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_update.html">Update Your Theme</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Theme Resources</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_themes_design_resources.html">Design Resources</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_LESS.html">About LESS</a></li>
+            
+            
+            
+            
+            
+            
+            <li class="active"><a href="ds_themes_mustache.html">About Mustache</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Partial Maps</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_themes_blogPartials.html">Blog Partials</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_comPartials.html">Commerce Partials</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_membershipPartials.html">Membership Partials</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_navPartials.html">Navigation Partials</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_searchPartials.html">Search Partials</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Theme FAQs</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_themes_faqs.html">Theme FAQs</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+        <!-- if you aren't using the accordion, uncomment this block:
+           <p class="external">
+               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+           </p>
+           -->
+    </li>
+</ul>
+</div>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+    <!-- Content Column -->
+    <div class="col-md-9">
+        <div>
+    <div class="pageType">  reference </div>
+    <div class="post-header">
+        <h1 class="post-title-main">About Mustache</h1>
+    </div>
+</div>
+
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary">Mustache is a templating language that expands tags in a template with provided values. Weebly uses Mustache in theme partial files.</div>
+   
+
+
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 50);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+
+    
+
+  <p>Mustache is “logic-less” because there are only tags that are replaced with a value or a series of values. In Weebly, Mustache tags are used in <a href="ds_themes_partials.html">partials</a> to provide content like product information for a page.</p>
+
+<h2 id="a-quick-example">A Quick Example</h2>
+
+<p>A typical Mustache template:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">Customer Name: {{name}}
+Thanks for placing Order #{{order_no}}!
+Your shipping will be:
+{{#overnight}}
+Fedex Overnight: ${{shipping_cost}}
+{{/overnight}}</code></pre></figure>
+
+<p>Given the following hash:
+</p>
+
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="o">{</span>
+<span class="s2">"name"</span>: <span class="s2">"Chris"</span>,
+<span class="s2">"order_no"</span>: 1234,
+<span class="s2">"shipping_cost"</span>: 20,
+<span class="s2">"overnight"</span>: <span class="nb">true</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Will produce the following:
+</p>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">Customer Name: Chris
+Thanks <span class="k">for </span>placing Order <span class="c">#1234!</span>
+Your shipping will be:
+Fedex Overnight: <span class="nv">$20</span></code></pre></figure>
+
+<h2 id="tag-types">Tag Types</h2>
+
+<p>Tags are indicated by the double brackets. In the above example, <code class="highlighter-rouge"><span class="p">{</span><span class="err">{name</span><span class="p">}</span><span class="err">}</span></code> is a variable tag that gets replaced by the given content <code class="highlighter-rouge">Chris.</code></p>
+
+<h2 id="sections">Sections</h2>
+
+<p>Sections can display a block of text one or more times, in other words, can iterate over a list. You use the hash (#) to start a section and a slash (/) to end it. If the key exists and has a non-false value, the HTML between the pound and slash will be rendered once for each item in the list. If the list is empty or false, then whatever is between the # and / is not displayed. If the value is not a list, but a single item, then that single value displays.</p>
+
+<p>For example, in the Archives partial in Weebly themes, the <code class="highlighter-rouge">#items</code> section is used on blog pages:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">
+{{#items}}
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{url}}"</span> <span class="na">class=</span><span class="s">"blog-link"</span><span class="nt">&gt;</span>{{title}}<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;br</span> <span class="nt">/&gt;</span>
+{{/items}}</code></pre></figure>
+
+<p>It displays a list of monthly blog post titles as links.</p>
+
+<p>You can also display inverted sections, in other words the inverse of the value of the tag. Inverted sections start with a caret (^) and end with a slash (/).</p>
+
+<p>For example, the Archives partial contains an inverted section (<code class="highlighter-rouge">#t1</code>) after the <code class="highlighter-rouge">#items</code> section to display text if no blog post titles exist:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{{^items}}
+    {{#tl}}No Archives{{/tl}}
+{{/items}}</code></pre></figure>
+
+<h2 id="comments">Comments</h2>
+
+<p>Comments begin with a bang (!). Anything following that is ignored. Many Weebly partials contain comments to describe what the partial is used for:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">
+{{!
+An area that shows the various months of blog post archives.
+Most likely in the sidebar the blog sidebar.
+}}</code></pre></figure>
+
+<h2 id="partials">Partials</h2>
+
+<p>Partials can be nested in other partials, using the greater than sign (&gt;). For example, the Main partial used to display products actually calls other partials for the content:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"wsite-com-product-area"</span><span class="nt">&gt;</span>
+    {{&gt; commerce/product/images}}
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"wsite-com-product-info"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"wsite-com-product-info-inner"</span><span class="nt">&gt;</span>
+            {{&gt; commerce/product/title}}
+            {{&gt; commerce/product/sku}}
+            {{&gt; commerce/product/price}}
+            {{&gt; commerce/product/short-description}}
+            {{&gt; commerce/product/sharing}}
+            {{&gt; commerce/product/options}}
+            <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"wsite-com-product-inventory"</span><span class="nt">&gt;</span>
+                {{&gt; commerce/product/quantity}}
+                {{&gt; commerce/product/inventory}}
+            <span class="nt">&lt;/div&gt;</span>
+            . . .
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+
+    <div class="tags">
+        
+        <b>Tags: </b>
+        
+        
+        
+        <a href="tag_themes.html" class="btn btn-default navbar-btn cursorNorm" role="button">themes</a>
+        
+        
+        
+    </div>
+
+    
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2017 Weebly. All rights reserved. <br />
+ Site last generated: Sep 29, 2017 <br />
+<p><img src="images/company_logo.png" alt="Company logo"/></p>
+                </div>
+            </div>
+</footer>
+
+
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+
+</body>
+
+</html>

@@ -392,13 +392,49 @@
   
   
   <url>
+    <loc>http://localhost:4008/ds_themes_LESS.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4008/ds_themes_anatomy.html</loc>
   </url>
   
   
   
   <url>
+    <loc>http://localhost:4008/ds_themes_create.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_themes_create_templates.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_themes_deliver.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_themes_design_resources.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4008/ds_themes_directory.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_themes_element_guidelines.html</loc>
   </url>
   
   
@@ -416,7 +452,67 @@
   
   
   <url>
+    <loc>http://localhost:4008/ds_themes_guidelines.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_themes_implement_css.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_themes_issues.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_themes_manifest.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_themes_mustache.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_themes_options.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_themes_page.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_themes_palette.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_themes_partials.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4008/ds_themes_sample.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_themes_screenshot.html</loc>
   </url>
   
   
@@ -429,6 +525,18 @@
   
   <url>
     <loc>http://localhost:4008/ds_themes_tutorial.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_themes_update.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_themes_variations.html</loc>
   </url>
   
   
@@ -472,6 +580,12 @@
   
   
   
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_themes_import_export.html</loc>
+  </url>
   
   
   
