@@ -730,6 +730,28 @@
 
 
 {
+"title": "Blog Paritals",
+"tags": "themes",
+"keywords": "blog, partials, templates, themes,",
+"url": "ds_themes_blogPartials.html",
+"summary": "Blog partials are used on the blog pages"
+}
+,
+
+
+
+{
+"title": "Commerce Partials",
+"tags": "themes",
+"keywords": "eCommerce, commerce, partials, templates",
+"url": "ds_themes_comPartials.html",
+"summary": "Commerce partials are used in the store pages."
+}
+,
+
+
+
+{
 "title": "How to Create a Theme",
 "tags": "getting_startedthemes",
 "keywords": "theme, steps, procedure",
@@ -862,11 +884,33 @@
 
 
 {
+"title": "Membership Partials",
+"tags": "themes",
+"keywords": "members, membership, partials, templates",
+"url": "ds_themes_membershipPartials.html",
+"summary": "When a site allows members, a login link is displayed in the navigation bar (controlled by the navigation partials). When logged in, users can view their account information. The Membership partials display the dialogs used to log in."
+}
+,
+
+
+
+{
 "title": "About Mustache",
 "tags": "themes",
 "keywords": "mustache, templates, templating language,",
 "url": "ds_themes_mustache.html",
 "summary": "Mustache is a templating language that expands tags in a template with provided values. Weebly uses Mustache in theme partial files."
+}
+,
+
+
+
+{
+"title": "Navigation Partials",
+"tags": "themes",
+"keywords": "navigation, templates, partials",
+"url": "ds_themes_navPartials.html",
+"summary": "The navigation partials display the menu at the top of the web page."
 }
 ,
 
@@ -933,6 +977,17 @@
 "keywords": "theme, screenshot, gallery",
 "url": "ds_themes_screenshot.html",
 "summary": "Once your theme is complete, you need to create a screenshot of it to display in the Theme chooser, shown when a user creates a site or decides to change their theme."
+}
+,
+
+
+
+{
+"title": "Search Partials",
+"tags": "themes",
+"keywords": "search, partials, templates",
+"url": "ds_themes_searchPartials.html",
+"summary": "The search partials are used to display the search results page."
 }
 ,
 

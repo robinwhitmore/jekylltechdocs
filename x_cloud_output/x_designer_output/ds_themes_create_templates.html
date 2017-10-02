@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="You implement one HTML template file for each of the header types your theme will support - header, no header, and splash).">
+<meta name="keywords" content="themes,  template, header, theme, layout, foundation, tag, tags, section, mobile, theme tags">
+<title>Create the HTML Layout Templates | Weebly Cloud for Designers Documentation</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/modern-business.css">
+<link rel="stylesheet" href="css/lavish-bootstrap.css">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/theme-blue.css">
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<!-- <link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4008feed.xml"> -->
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        /*Bootstrap popovers are initialized with the following script. In the options, I'm setting the placement to be on the right, the trigger to be hover rather than click, and to allow HTML from the JSON data source. */
+
+        $('[data-toggle="popover"]').popover({
+            placement: 'top',
+            trigger: 'hover',
+            html: true
+        });
+    })
+</script>
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="fa fa-home fa-lg navbar-brand" href="home.html">&nbsp;<span class="projectTitle">
+                Weebly Cloud for Designers</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                
+                
+                
+                <li><a href="home.html">Get Started</a></li>
+                
+                
+                
+                <li><a href="ds_apps_gs.html">Custom Apps</a></li>
+                
+                
+                
+                <li><a href="ds_themes_start.html">Custom Themes</a></li>
+                
+                
+                
+                <li><a href="ds_apis_about.html">Cloud APIs</a></li>
+                
+                
+                
+                <li><a href="ds_tags_about.html">Tags</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+			<li>
+
+
+
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Create the HTML Layout Templates page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+
+</li>
+
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="Search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Create the HTML Layout Templates">{title}</a></li>',
+                    noResultsText: 'No results',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Sidebar Column -->
+        <div class="col-md-3">
+
+          
+
+
+
+
+
+
+
+
+
+
+<ul id="mysidebar" class="nav">
+    <li class="sidebarTitle">Develop Weebly Themes </li>
+    
+    
+    
+        
+    
+    <li>
+        <a href="#">Get Started with Customizing Themes</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_themes_start.html">Customizing Themes</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_sample.html">Download Sample Themes</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_anatomy.html">Anatomy of a Theme</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_directory.html">Theme Directory Structure</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_issues.html">Known Issues</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Tutorial&#58; Customize a Theme</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_themes_tutorial.html">Customize a Weebly Theme</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_1.html">1. Download the Base Theme</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_2.html">2. Apply YOur Theme to a Test Site</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_3.html">3. Add a Color Palette</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_4.html">4. Create Variations of the Theme</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_5.html">5. Edit the Header Template</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_6.html">6. Edit the main.less File</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_7.html">7. Edit the Blog Post Partial</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_8.html">8. Add a Theme Option</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_9.html">9. Add a Screenshot</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_10.html">10. Deliver Your Theme</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_finish.html">Finish</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Theme Design</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_themes_guidelines.html">Theme Design Guidelines</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_page.html">Page Guidelines for Themes</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_element_guidelines.html">Element Guidelines for Themes</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Create a Theme</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_themes_create.html">How to Create a Theme</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_import_export.html">Import and Export Themes</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_implement_css.html">Implement the CSS</a></li>
+            
+            
+            
+            
+            
+            
+            <li class="active"><a href="ds_themes_create_templates.html">Create HTML Layout Templates</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_partials.html">Use Partials</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_manifest.html">Create the Theme Manifest</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_options.html">Add Options to Your Themes</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_palette.html">Create a Color Palette</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_variations.html">Add Color Variations</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_screenshot.html">Create a Theme Screenshot</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_deliver.html">Deliver Your Theme</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_update.html">Update Your Theme</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Theme Resources</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_themes_design_resources.html">Design Resources</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_LESS.html">About LESS</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_mustache.html">About Mustache</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Partial Maps</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_themes_blogPartials.html">Blog Partials</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_comPartials.html">Commerce Partials</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_membershipPartials.html">Membership Partials</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_navPartials.html">Navigation Partials</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_themes_searchPartials.html">Search Partials</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Theme FAQs</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_themes_faqs.html">Theme FAQs</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+        <!-- if you aren't using the accordion, uncomment this block:
+           <p class="external">
+               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+           </p>
+           -->
+    </li>
+</ul>
+</div>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+    <!-- Content Column -->
+    <div class="col-md-9">
+        <div>
+    <div class="pageType">  task </div>
+    <div class="post-header">
+        <h1 class="post-title-main">Create the HTML Layout Templates</h1>
+    </div>
+</div>
+
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary">You implement one HTML template file for each of the header types your theme will support - header, no header, and splash).</div>
+   
+
+
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 50);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+
+    
+
+  <p>Every template file must contain the foundation code and the mandatory theme tags used to insert content. We also provide optional tags to pull in other pre-defined content, and you can create custom tags to create additional areas where users can add content. Aside from adding tags, you can also optionally create a header area and sections that allow your users to change the background, the layout, and for sections, the ability to copy and move them.</p>
+
+<p>You can use existing HTML from another theme, or you can create your own from scratch. Make sure that your <a href="ds_themes_implement_css.html">stylesheets</a> support all styles that you use in the HTML.</p>
+
+<h2 id="create-an-html-template-file-">Create an HTML Template File ​</h2>
+
+<p>You need to create one template for each of the following header types that you want to support:</p>
+<ul>
+  <li><strong>Header</strong>: Has a title bar area with navigation and title/logo above a header area that normally consists of a banner image or video. The content area displays below the banner image.</li>
+</ul>
+<figure><img class="docimage" src="images/theme_header.png" alt="" /><figcaption>The Header type contains a banner above the content</figcaption></figure>
+
+<ul>
+  <li><strong>No Header</strong>: Doesn’t have a header area with a banner image. Only the title bar area and content areas display.</li>
+</ul>
+<figure><img class="docimage" src="images/theme_noheader.png" alt="" /><figcaption>The No Header type doesn't display a banner</figcaption></figure>
+
+<ul>
+  <li><strong>Splash</strong>: Doesn’t have a content area and the banner image is the full size of the page.</li>
+</ul>
+<figure><img class="docimage" src="images/theme_splash.png" alt="" /><figcaption>The Splash type has a banner image and doesn't have a content area</figcaption></figure>
+
+<p>​You can either create a template file by modifying an existing template, or by creating a new one.</p>
+
+<p>To modify an existing template, simply open it in the Code Editor. To create a template from scratch, in the Code Editor, click the <strong>+</strong> icon next to <strong>HEADER TYPE</strong> and choose <strong>New Header Type</strong>. A file opens in the editor with the mandatory theme tags. You must add the foundation code and the code to display the mandatory tags (below). Click the <strong>Settings</strong> icon to set the name of the file, or to delete it.</p>
+
+<p>You can also work externally and upload your template. Click the <strong>+</strong> icon and choose <strong>Upload Header Type(s)</strong>.</p>
+
+<h2 id="the-foundation-">The Foundation ​</h2>
+
+<p>​Every page type needs the basic foundation code, shown below. Give the <code class="highlighter-rouge">body</code> tag the class that reflects that page’s type:</p>
+<ul>
+  <li><strong>Header</strong>: header-page</li>
+  <li><strong>No Header</strong>: no-header-page</li>
+  <li><strong>Splash Page</strong>: splash-page</li>
+</ul>
+
+<p>For example, the sample below shows the foundation for a header template.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"Content-Type"</span> <span class="na">content=</span><span class="s">"text/html; charset=utf-8"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0;"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body</span> <span class="na">class=</span><span class="s">"header-page"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+
+<span class="nt">&lt;/html&gt;</span></code></pre></figure>
+
+<p>​If you are creating your theme using an existing theme as a base, be sure you don’t remove any of the foundation code.</p>
+
+<h2 id="mandatory-theme-tags-">Mandatory Theme Tags ​</h2>
+
+<p>​All Weebly themes need to include the following tags:</p>
+<ul>
+  <li><strong>{title}</strong> or <strong>{logo)</strong>: Use <code class="highlighter-rouge"><span class="p">{</span><span class="err">title</span><span class="p">}</span></code> to display only the title of the site. Use <code class="highlighter-rouge"><span class="p">{</span><span class="err">logo</span><span class="p">}</span></code> to allow the site owner to decide whether to use the title or a logo file that they will upload.</li>
+  <li><strong>{menu}</strong>: Displays the pages in the site</li>
+  <li><strong>{content}</strong>: Displays the main content on the page. Much of this content is handled by <a href="ds_themes_partials.html">partials</a>.</li>
+  <li><strong>{footer}</strong>: Displays footer content at the bottom of the page</li>
+</ul>
+
+<p>Where you place these tags and how you style the generated content is up to you. If you create a new file (and aren’t editing one from an existing theme), then these are added for you.</p>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The editor adds the {title} tag, but you can replace that with the {logo} tag if you want.</div>
+
+<p>​​This graphic shows where these tags are used in the Base theme:
+​<figure><img class="docimage" src="images/themesHTML.png" alt="" /></figure></p>
+
+<p>​Here’s the code from the Base theme showing the mandatory tags:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">
+<span class="nt">&lt;body</span> <span class="na">class=</span><span class="s">"header-page"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"wrapper"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"header"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+            . . .
+            {logo}
+            <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"nav"</span><span class="nt">&gt;</span>{menu}<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"mobile-nav"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"mobile-input"</span><span class="nt">&gt;</span>
+            {menu}
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    . . .
+
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"main"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>{content}<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"footer"</span><span class="nt">&gt;</span>{footer}<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+. . .
+<span class="nt">&lt;/body&gt;</span></code></pre></figure>
+
+<h2 id="optional-tags">Optional Tags</h2>
+
+<p>​If your theme supports social icons, search, and phone number/text using <a href="ds_themes_options.html">options</a>, then you need to add these tags:</p>
+
+<ul>
+  <li><strong>{phone:text}</strong>: Displays the text “Add Text” that the user can click to edit.</li>
+  <li><strong>{social}</strong>: Adds the ability to display social icons. The user can click the area to configure the icons to display.</li>
+  <li><strong>{search}</strong>: Displays the search icon.</li>
+</ul>
+
+<p>If you want your theme to display a headline and supporting paragraph text (for example, on a landing page), then you can use these headline tags:</p>
+
+<ul>
+  <li><strong>{headline:text}</strong>: Displays placeholder text in a headline font that the user can edit/replace.</li>
+  <li><strong>{headline-paragraph:text}</strong>: Displays placeholder paragraph text.</li>
+</ul>
+
+<p>This graphic shows where these tags are used in the Impact theme.</p>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Site owners need to explicitly turn options (phone, social, search) on using Options. Search is only available in paid sites</div>
+
+<figure><img class="docimage" src="images/themesSocial.png" alt="" /><figcaption>Optional tags to display contact, social media, and search links</figcaption></figure>
+
+<p>​Here’s code showing how these tags are used in the Impact theme.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"menu-controls-wrap"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"search"</span><span class="nt">&gt;</span>{search}<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"social"</span><span class="nt">&gt;</span>{social}<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"phone-number"</span><span class="nt">&gt;</span>{phone:text}<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- .menu-controls-wrap --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"banner-wrap"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"banner"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;h2&gt;</span>{headline:text global="false"}<span class="nt">&lt;/h2&gt;</span>
+                <span class="nt">&lt;p&gt;</span>{headline-paragraph:text global="false"}<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- banner-wrap --&gt;</span>
+<span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- .menu-controls-wrap --&gt;</span></code></pre></figure>
+
+<p>​We also provide these predefined tags for you to use:</p>
+
+<ul>
+  <li><strong>{action:button}</strong>: Adds a button. The user can edit the button text and set the link, spacing, and button style.</li>
+  <li><strong>{minicart}</strong>: Relocates existing store minicart element from its default placement in the navigation bar. A wrapper populates with the class name <code class="highlighter-rouge">wsite-custom-minicart-wrapper</code>.</li>
+  <li><strong>{membership}</strong>: Relocates existing log in/log out element from its default placement in the navigation bar. A wrapper populates with the class name <code class="highlighter-rouge">wsite-custom-membership-wrapper</code>.</li>
+  <li><strong>{subtitle:text}</strong>: Adds a subtitle text/slogan.</li>
+  <li><strong>{sidebar:content}</strong>: Adds a sidebar to the website.</li>
+  <li><strong>{address:text}</strong>: Adds address fields.</li>
+</ul>
+
+<p>By default, all tags show the same content on every page that uses this template’s header type. However, you can allow unique content on each page by specifying the <code class="highlighter-rouge">global="false"</code> attribute. For example, if you use the <code class="highlighter-rouge"><span class="p">{</span><span class="err">subtitle:text</span><span class="p">}</span></code> tag, by default whatever the user enters for that text on one page appears on all pages that use that same header type. Instead, if you set it to <code class="highlighter-rouge">global="false"</code>, then they can set different text on each page.</p>
+
+<h2 id="custom-tags">Custom Tags</h2>
+
+<p>​You can use the tags below to create custom-named areas where users can add content not covered by the predefined tags. Substitute area-name with a more meaningful word.</p>
+
+<ul>
+  <li><strong>{area-name:text}</strong>: An area that holds text</li>
+  <li><strong>{area-name:content}</strong>: An area to drag content elements into</li>
+  <li>
+    <p><strong>{area-name:image}</strong>: An area that holds an image</p>
+
+    <p>Be sure to include size constraints, for example <code class="highlighter-rouge"><span class="p">{</span><span class="err">area-name:image</span><span class="w"> </span><span class="err">max-width=</span><span class="nt">"200"</span><span class="w"> </span><span class="err">max-height=</span><span class="nt">"200"</span><span class="err">}</span></code>.</p>
+  </li>
+</ul>
+
+<p>For example, you might create an area for content specifically meant for information about the web site owner. You could create the tag <code class="highlighter-rouge"><span class="p">{</span><span class="err">user-info:text</span><span class="p">}</span></code>, and the user will see <strong>Click here to edit</strong>.</p>
+
+<p>For example:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"user-info"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"user-name"</span><span class="nt">&gt;</span>{user-info:text}<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"user-address"</span><span class="nt">&gt;</span>{address:text}<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>​You can also use the <code class="highlighter-rouge">global="false"</code> attribute for these tags. Don’t forget to update your stylesheet to style these tags.</p>
+
+<h2 id="add-a-header-area">Add a Header Area</h2>
+
+<p>​A header area is an optional area in the header that a user can configure as needed. When a user clicks into a header area, a popup menu displays and they can change the background image, color, and optionally add a video (if on a premium plan).
+​</p>
+<figure><img class="docimage" src="images/themeHeader.png" alt="" /><figcaption>Theme header area</figcaption></figure>
+
+<p>​​To add a header area, add the <code class="highlighter-rouge"><span class="p">{</span><span class="err">{#header</span><span class="p">}</span><span class="err">}</span></code> tag at the end of the main <code class="highlighter-rouge">banner-wrap</code> <code class="highlighter-rouge">div</code>, as shown in the following code:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"banner-wrap"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"header-wrap"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"header"</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label</span> <span class="na">id=</span><span class="s">"nav-trigger"</span> <span class="na">class=</span><span class="s">"hamburger"</span> <span class="na">for=</span><span class="s">"mobile-input"</span><span class="nt">&gt;&lt;span&gt;&lt;/span&gt;&lt;/label&gt;</span>
+            <span class="nt">&lt;h1</span> <span class="na">id=</span><span class="s">"logo"</span><span class="nt">&gt;</span>{logo}<span class="nt">&lt;/h1&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"nav"</span><span class="nt">&gt;</span>{menu}<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"mobile-nav"</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+            {menu}
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    {{#header}}
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"banner"</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>{content}<span class="nt">&lt;/div&gt;</span>
+    {{/header}}
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>​Use the <code class="highlighter-rouge">container</code> class to style as needed.</p>
+
+<h2 id="add-a-section">Add a Section</h2>
+
+<p>Sections are optional areas where a user can drag content, allowing pages that use the same template to appear quite different, just by adding and designing sections. With sections, when the user clicks on the main content area, a popup menu displays showing options for designing the section. The user can also drag the blue outline to change the height of the section. ​
+​</p>
+<figure><img class="docimage" src="images/themesSectionChange.png" alt="" /><figcaption>Sections allow users to add content in different areas</figcaption></figure>
+
+<p>​To add a section to a template, add the `` tag shown in the following code where you want the content to appear. The <code class="highlighter-rouge">container</code> class can be used to style the section, for example to set <code class="highlighter-rouge">max-width</code> and centering of the sections.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">
+[HEADER BLOCK]
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">“main-wrap”</span><span class="nt">&gt;</span>
+    {{#sections}}
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+        {content}
+    <span class="nt">&lt;/div&gt;</span>
+    {{/sections}}
+<span class="nt">&lt;/div&gt;</span>
+[FOOTER BLOCK]</code></pre></figure>
+
+<h2 id="design-for-mobile-">Design for Mobile ​</h2>
+
+<p>Most Weebly customers will want their website to work on desktop and mobile devices. Make sure that you handle displays on these smaller screens appropriately.</p>
+
+
+    <div class="tags">
+        
+        <b>Tags: </b>
+        
+        
+        
+        <a href="tag_themes.html" class="btn btn-default navbar-btn cursorNorm" role="button">themes</a>
+        
+        
+        
+    </div>
+
+    
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2017 Weebly. All rights reserved. <br />
+ Site last generated: Sep 29, 2017 <br />
+<p><img src="images/company_logo.png" alt="Company logo"/></p>
+                </div>
+            </div>
+</footer>
+
+
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+
+</body>
+
+</html>

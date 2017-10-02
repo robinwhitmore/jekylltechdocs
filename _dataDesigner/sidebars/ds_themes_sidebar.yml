@@ -221,22 +221,27 @@ entries:
     - title: Blog Partials
       url: /ds_themes_blogPartials.html
       output: web, pdf
+      #ready for review
 
     - title: Commerce Partials
       url: /ds_themes_comPartials.html
       output: web, pdf
+      #ready for review
 
     - title: Membership Partials
       url: /ds_themes_membershipPartials.html
       output: web, pdf
+      #ready for review
 
     - title: Navigation Partials
       url: /ds_themes_navPartials.html
       output: web, pdf
+      # ready for review
 
     - title: Search Partials
       url: /ds_themes_searchPartials.html
       output: web, pdf
+      #read for review
 
   - title: Theme FAQs
     output: web, pdf
