@@ -5,7 +5,7 @@ You can customize a theme for just one site (as can any owner of a site or a {%i
 ## Get Started with Themes
 A Weebly theme provides a general structure and design palette for any website built using the Weebly editor. Weebly strives to provide ultimate flexibility for our users, so our themes don't dictate a template or a mandatory organization of content. Instead, they provide a beautiful backdrop for the site's content.
 
-To get started, create a web site that you can use to test your theme. Then download our Base theme<!--todo: link--> as a starting point, and start building from there! Or find a theme you mostly like and then change the things you don't.
+To get started, create a web site that you can use to test your theme. Then download our {% if site.project=="designer" %}[Base theme](ds_themes_sample.html){%elsif site.project=="cloud" %}[Base theme](cl_themes_sample.html){%elsif site.project=="platform" %}[Base theme](pf_themes_sample.html){%endif%} as a starting point, and start building from there! Or find a theme you mostly like and then change the things you don't.
 ​
 
 Weebly themes can offer quite a degree of flexibility, like allowing the site owner to change colors to match their branding, or adding search functionality, or hiding areas of the site. Site owners can also change the fonts used throughout the site. Site owners make these changes from the **Theme** tab of the editor.

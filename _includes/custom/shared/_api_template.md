@@ -14,7 +14,7 @@ The following table shows all fields that exist for this API, those that are ret
         <td><strong>Changeable</strong></td>
     </tr>
     <tr>
-        <td>â€‹<code>user_id</code></td>
+        <td>â??<code>user_id</code></td>
         <td>The unique ID of the authenticated user</td>
         <td>string</td>
         <td>X</td>
@@ -23,7 +23,7 @@ The following table shows all fields that exist for this API, those that are ret
     </tr>
     <tr>
         <td><code>site_id</code></td>
-        <td>ID of a Weebly site, unique to the currently authenticated userâ€‹</td>
+        <td>ID of a Weebly site, unique to the currently authenticated userâ??</td>
         <td>string</td>
         <td>X</td>
         <td>X</td>
@@ -117,7 +117,7 @@ Returned values are paginated. You can further filter results using these parame
     </tr>
     <tr>
         <td><code>filterfor</code></td>
-        <td>â€‹Value to search the filterby field for.</td>
+        <td>â??Value to search the filterby field for.</td>
         <td>string</td>
     </tr>
     <tr>
@@ -500,3 +500,4 @@ curl https://api.weeblycloud.com/user/USER_ID/site/SITE_ID/page/1234567890 \
 
 <strong>Response</strong>
 <p>There is no response to a delete request.</p>
+

@@ -1,0 +1,375 @@
+Running ["ScriptCheck", "ImageCheck", "LinkCheck"] on ["./x_designer_output"] on *.html... 
+
+
+​https://codepen.io/​ is an invalid URL
+​https://daneden.github.io/animate.css/ is an invalid URL
+Checking 73 external links...
+Ran on 116 files!
+
+
+- ./x_designer_output/ds_apis_page.html
+  *  internally linking to /membership-api.html, which does not exist (line 379)
+     <a href="/membership-api.html">membership</a>
+- ./x_designer_output/ds_apps_element_release.html
+  *  image images/cl_app_publish.png does not have an alt attribute (line 578)
+  *  image images/cl_apps_autoInstall.png does not have an alt attribute (line 571)
+- ./x_designer_output/ds_apps_element_settings.html
+  *  image images/externalButton2.png does not have an alt attribute (line 707)
+  *  image images/priceChartSettings.png does not have an alt attribute (line 582)
+  *  image images/priceChartSettingsAdv.png does not have an alt attribute (line 583)
+  *  image images/settings.png does not have an alt attribute (line 561)
+- ./x_designer_output/ds_apps_element_test.html
+  *  image images/cl_apps_install.png does not have an alt attribute (line 561)
+- ./x_designer_output/ds_apps_element_upload.html
+  *  image images/cl_cloudAdmin_newApp.png does not have an alt attribute (line 573)
+- ./x_designer_output/ds_apps_elements.html
+  *  image images/elementDropMap2.png does not have an alt attribute (line 649)
+  *  image images/sh_priceChart.png does not have an alt attribute (line 644)
+  *  image images/tutorialModal.png does not have an alt attribute (line 662)
+  *  image images/tutorialNested.png does not have an alt attribute (line 673)
+  *  image images/tutorialSteps.png does not have an alt attribute (line 667)
+  *  image images/tutorialVideo.png does not have an alt attribute (line 670)
+- ./x_designer_output/ds_apps_gs.html
+  *  image images/cl_apps.png does not have an alt attribute (line 574)
+- ./x_designer_output/ds_apps_icon.html
+  *  image images/ElementIconVO.png does not have an alt attribute (line 577)
+  *  image images/element_icon.png does not have an alt attribute (line 560)
+- ./x_designer_output/ds_apps_manage.html
+  *  image images/cl_app_status.png does not have an alt attribute (line 610)
+  *  image images/cl_apps.png does not have an alt attribute (line 567)
+  *  image images/cl_apps_list.png does not have an alt attribute (line 561)
+- ./x_designer_output/ds_apps_reg.html
+  *  image images/cl_apps.png does not have an alt attribute (line 570)
+- ./x_designer_output/ds_apps_samples.html
+  *  image images/sh_priceChart.png does not have an alt attribute (line 567)
+- ./x_designer_output/ds_gs_access_sites.html
+  *  image images/cl_contributorNew.png does not have an alt attribute (line 429)
+  *  image images/cl_contributor_perms.png does not have an alt attribute (line 434)
+  *  image images/cl_contributor_site.png does not have an alt attribute (line 437)
+- ./x_designer_output/ds_gs_admin.html
+  *  image images/cl_cloudAdmin.png does not have an alt attribute (line 419)
+- ./x_designer_output/ds_gs_apps.html
+  *  image images/appCenter.png does not have an alt attribute (line 424)
+  *  image images/appCenter_editor.png does not have an alt attribute (line 430)
+  *  image images/appDetails_long.png does not have an alt attribute (line 427)
+  *  image images/myApps_support.png does not have an alt attribute (line 433)
+- ./x_designer_output/ds_gs_client_ui.html
+  *  image images/cl_editor_restricted.png does not have an alt attribute (line 419)
+  *  image images/cl_site_preview.png does not have an alt attribute (line 422)
+  *  image images/cl_userPortal.png does not have an alt attribute (line 414)
+- ./x_designer_output/ds_gs_configure.html
+  *  image images/cl_settings_URL.png does not have an alt attribute (line 455)
+  *  image images/cl_settings_api.png does not have an alt attribute (line 519)
+  *  image images/cl_settings_contact.png does not have an alt attribute (line 504)
+  *  image images/cl_settings_customDomain.png does not have an alt attribute (line 442)
+  *  image images/cl_settings_domain.png does not have an alt attribute (line 440)
+  *  image images/cl_settings_logo.png does not have an alt attribute (line 418)
+  *  image images/cl_settings_mail.png does not have an alt attribute (line 414)
+  *  image images/cl_settings_message.png does not have an alt attribute (line 482)
+  *  image images/cl_settings_support.png does not have an alt attribute (line 489)
+  *  image images/cl_settings_uploadLogo.png does not have an alt attribute (line 428)
+- ./x_designer_output/ds_gs_cr_sites.html
+  *  image images/cl_addTemplate.png does not have an alt attribute (line 452)
+  *  image images/cl_copysite.png does not have an alt attribute (line 483)
+  *  image images/cl_copysite.png does not have an alt attribute (line 489)
+  *  image images/cl_createfromtemplate.png does not have an alt attribute (line 486)
+  *  image images/cl_editor2.png does not have an alt attribute (line 550)
+  *  image images/cl_editor2.png does not have an alt attribute (line 521)
+  *  image images/cl_editor2.png does not have an alt attribute (line 533)
+  *  image images/cl_remove_template.png does not have an alt attribute (line 461)
+  *  image images/cl_site_create.png does not have an alt attribute (line 425)
+  *  image images/cl_site_detail_domain.png does not have an alt attribute (line 558)
+  *  image images/cl_site_detail_edit.png does not have an alt attribute (line 510)
+  *  image images/cl_site_detail_edit.png does not have an alt attribute (line 517)
+  *  image images/cl_site_preview.png does not have an alt attribute (line 539)
+  *  image images/cl_site_previewlink.png does not have an alt attribute (line 536)
+  *  image images/cl_theme_gallery.png does not have an alt attribute (line 430)
+  *  image images/cl_userPortal.png does not have an alt attribute (line 513)
+  *  image images/sh_reconnect.png does not have an alt attribute (line 473)
+- ./x_designer_output/ds_gs_invoice.html
+  *  image images/cl_billing.png does not have an alt attribute (line 427)
+  *  image images/cl_billing_create.png does not have an alt attribute (line 419)
+  *  image images/cl_billing_details.png does not have an alt attribute (line 431)
+  *  image images/cl_billing_details.png does not have an alt attribute (line 457)
+- ./x_designer_output/ds_gs_market.html
+  *  image images/cl_promoModal.png does not have an alt attribute (line 413)
+  *  image images/cl_upsellURL.png does not have an alt attribute (line 434)
+  *  image images/cl_upsell_custom.png does not have an alt attribute (line 416)
+- ./x_designer_output/ds_gs_plans.html
+  *  image images/cl_plans.png does not have an alt attribute (line 440)
+  *  image images/cl_plans_compare.png does not have an alt attribute (line 423)
+- ./x_designer_output/ds_gs_restore.html
+  *  image images/cl_recoverSite.png does not have an alt attribute (line 412)
+- ./x_designer_output/ds_gs_ssl.html
+  *  image images/cl_ssl.png does not have an alt attribute (line 411)
+- ./x_designer_output/ds_gs_team_members.html
+  *  image images/cl_memberCreate.png does not have an alt attribute (line 418)
+  *  image images/cl_memberCreate.png does not have an alt attribute (line 449)
+  *  image images/cl_members.png does not have an alt attribute (line 414)
+- ./x_designer_output/ds_gs_upgrades.html
+  *  image images/cl_upgrade.png does not have an alt attribute (line 414)
+- ./x_designer_output/ds_themes_10.html
+  *  image images/theme_export.png does not have an alt attribute (line 895)
+- ./x_designer_output/ds_themes_2.html
+  *  image images/importTheme.gif does not have an alt attribute (line 920)
+- ./x_designer_output/ds_themes_3.html
+  *  image images/theme_color_support.gif does not have an alt attribute (line 924)
+  *  image images/theme_palette.png does not have an alt attribute (line 944)
+  *  image images/themes_colorpresets.gif does not have an alt attribute (line 937)
+- ./x_designer_output/ds_themes_4.html
+  *  image images/themeLightDark.png does not have an alt attribute (line 889)
+  *  image images/theme_variables.gif does not have an alt attribute (line 939)
+- ./x_designer_output/ds_themes_5.html
+  *  image images/theme_header_choice.png does not have an alt attribute (line 890)
+  *  image images/theme_header_edit.gif does not have an alt attribute (line 921)
+- ./x_designer_output/ds_themes_6.html
+  *  image images/theme_float_left.gif does not have an alt attribute (line 943)
+  *  image images/theme_float_right.gif does not have an alt attribute (line 997)
+  *  image images/theme_header_new.png does not have an alt attribute (line 1005)
+- ./x_designer_output/ds_themes_7.html
+  *  image images/theme_blogDefault.png does not have an alt attribute (line 892)
+  *  image images/theme_blog_edit.gif does not have an alt attribute (line 913)
+- ./x_designer_output/ds_themes_8.html
+  *  image images/theme_option_onoff.gif does not have an alt attribute (line 940)
+- ./x_designer_output/ds_themes_anatomy.html
+  *  image images/themeHeader.png does not have an alt attribute (line 618)
+  *  image images/themeLayout1.png does not have an alt attribute (line 654)
+  *  image images/themeLayout2.png does not have an alt attribute (line 658)
+  *  image images/themePartial.png does not have an alt attribute (line 665)
+  *  image images/theme_header.png does not have an alt attribute (line 640)
+  *  image images/theme_noheader.png does not have an alt attribute (line 645)
+  *  image images/theme_optionNav.png does not have an alt attribute (line 696)
+  *  image images/theme_paletteBlue.png does not have an alt attribute (line 678)
+  *  image images/theme_paletteBlueDark.png does not have an alt attribute (line 681)
+  *  image images/theme_splash.png does not have an alt attribute (line 650)
+  *  image images/theme_variations.png does not have an alt attribute (line 684)
+  *  image images/theme_variationsRed.png does not have an alt attribute (line 687)
+  *  image images/themesSectionChange.png does not have an alt attribute (line 630)
+  *  image images/themeslayout.png does not have an alt attribute (line 623)
+- ./x_designer_output/ds_themes_blogPartials.html
+  *  image images/partial_blog_comments.png does not have an alt attribute (line 623)
+  *  image images/partial_blog_layout.png does not have an alt attribute (line 612)
+  *  image images/partial_blog_modules.png does not have an alt attribute (line 634)
+  *  image images/partial_blog_more.png does not have an alt attribute (line 639)
+  *  image images/partial_blog_page.png does not have an alt attribute (line 644)
+  *  image images/partial_blog_post.png does not have an alt attribute (line 649)
+- ./x_designer_output/ds_themes_comPartials.html
+  *  image images/partial_commerce_empty.png does not have an alt attribute (line 648)
+  *  image images/partial_commerce_footer.png does not have an alt attribute (line 653)
+  *  image images/partial_commerce_hierarchy.png does not have an alt attribute (line 623)
+  *  image images/partial_commerce_item.png does not have an alt attribute (line 658)
+  *  image images/partial_commerce_main.png does not have an alt attribute (line 616)
+  *  image images/partial_commerce_mainProd.png does not have an alt attribute (line 666)
+  *  image images/partial_commerce_mainProd2.png does not have an alt attribute (line 680)
+  *  image images/partial_commerce_page.png does not have an alt attribute (line 629)
+  *  image images/partial_commerce_product.png does not have an alt attribute (line 634)
+  *  image images/partial_commerce_social.png does not have an alt attribute (line 693)
+  *  image images/partial_commerce_subcat.png does not have an alt attribute (line 639)
+- ./x_designer_output/ds_themes_create_templates.html
+  *  image images/themeHeader.png does not have an alt attribute (line 787)
+  *  image images/theme_header.png does not have an alt attribute (line 619)
+  *  image images/theme_noheader.png does not have an alt attribute (line 624)
+  *  image images/theme_splash.png does not have an alt attribute (line 629)
+  *  image images/themesHTML.png does not have an alt attribute (line 676)
+  *  image images/themesSectionChange.png does not have an alt attribute (line 813)
+  *  image images/themesSocial.png does not have an alt attribute (line 724)
+- ./x_designer_output/ds_themes_deliver.html
+  *  image images/theme_gallery.png does not have an alt attribute (line 612)
+  *  image images/theme_gallery.png does not have an alt attribute (line 638)
+  *  image images/themes_adminCreate.png does not have an alt attribute (line 635)
+- ./x_designer_output/ds_themes_design_resources.html
+  *  ​https://codepen.io/​ is an invalid URL
+  *  ​https://daneden.github.io/animate.css/ is an invalid URL
+- ./x_designer_output/ds_themes_directory.html
+  *  image images/themeDirectory.png does not have an alt attribute (line 634)
+- ./x_designer_output/ds_themes_guidelines.html
+  *  image images/themeHeader.png does not have an alt attribute (line 641)
+  *  image images/theme_header.png does not have an alt attribute (line 628)
+  *  image images/theme_lightDark.png does not have an alt attribute (line 690)
+  *  image images/theme_noheader.png does not have an alt attribute (line 633)
+  *  image images/theme_palette.png does not have an alt attribute (line 680)
+  *  image images/theme_splash.png does not have an alt attribute (line 638)
+  *  image images/theme_variations.png does not have an alt attribute (line 695)
+  *  image images/themesSectionChange.png does not have an alt attribute (line 644)
+  *  image images/themes_palettePrimary.png does not have an alt attribute (line 686)
+- ./x_designer_output/ds_themes_import_export.html
+  *  image images/theme_export.png does not have an alt attribute (line 640)
+- ./x_designer_output/ds_themes_membershipPartials.html
+  *  image images/partial_membershipAccount.png does not have an alt attribute (line 612)
+  *  image images/partial_membershipDenied.png does not have an alt attribute (line 617)
+  *  image images/partial_membershipLogin.png does not have an alt attribute (line 622)
+  *  image images/partial_membershipReset.png does not have an alt attribute (line 627)
+  *  image images/partial_membershipSet.png does not have an alt attribute (line 632)
+- ./x_designer_output/ds_themes_navPartials.html
+  *  image images/partial_nav.png does not have an alt attribute (line 611)
+- ./x_designer_output/ds_themes_options.html
+  *  image images/theme_optionNav.png does not have an alt attribute (line 694)
+  *  image images/theme_options.png does not have an alt attribute (line 612)
+- ./x_designer_output/ds_themes_palette.html
+  *  image images/theme_paletteBlue.png does not have an alt attribute (line 614)
+  *  image images/theme_palettePrimary.png does not have an alt attribute (line 638)
+  *  image images/theme_palettePrimaryAccent.png does not have an alt attribute (line 620)
+  *  image images/theme_palettePrimaryAccent.png does not have an alt attribute (line 641)
+  *  image images/theme_paletteRose.png does not have an alt attribute (line 617)
+- ./x_designer_output/ds_themes_screenshot.html
+  *  image images/themeGallery.png does not have an alt attribute (line 611)
+- ./x_designer_output/ds_themes_searchPartials.html
+  *  image images/partial_searchEmpty.png does not have an alt attribute (line 626)
+  *  image images/partial_searchHeader.png does not have an alt attribute (line 612)
+  *  image images/partial_searchNormal.png does not have an alt attribute (line 635)
+  *  image images/partial_searchPage.png does not have an alt attribute (line 617)
+  *  image images/partial_searchProduct.png does not have an alt attribute (line 640)
+- ./x_designer_output/ds_themes_start.html
+  *  image images/cl_themes_admin.png does not have an alt attribute (line 634)
+  *  image images/ds_theme_gallery.png does not have an alt attribute (line 643)
+  *  image images/theme_codeEditor.png does not have an alt attribute (line 628)
+  *  image images/theme_lightHeader.png does not have an alt attribute (line 619)
+- ./x_designer_output/ds_themes_variations.html
+  *  image images/theme_paletteBlue.png does not have an alt attribute (line 612)
+  *  image images/theme_paletteBlueDark.png does not have an alt attribute (line 615)
+  *  image images/theme_variations.png does not have an alt attribute (line 619)
+  *  image images/theme_variationsRed.png does not have an alt attribute (line 622)
+- ./x_designer_output/glossary.html
+  *  anchor has no href attribute (line 1)
+     <a data-container="body" data-toggle="popover" data-content="{{site.data.glossary.OAuth}}"></a>
+- ./x_designer_output/home.html
+  *  image images/appCenter.png does not have an alt attribute (line 452)
+  *  image images/cl_adminPortal_support.png does not have an alt attribute (line 478)
+  *  image images/cl_editorBranded.png does not have an alt attribute (line 448)
+  *  image images/cl_theme_gallery.png does not have an alt attribute (line 472)
+  *  image images/cl_userPortal.png does not have an alt attribute (line 441)
+  *  image images/theme_codeEditor.png does not have an alt attribute (line 468)
+  *  internally linking to ds_api_user.html, which does not exist (line 425)
+     <a href="ds_api_user.html">User API</a>
+- ./x_designer_output/titlepage/index.html
+  *  image http://localhost:4008//images/company_logo_big.png does not have an alt attribute (line 415)
+  *  internal image images/company_logo.png does not exist (line 442)
+  *  internal script js/customscripts.js does not exist (line 34)
+  *  internal script js/jekyll-search.js does not exist (line 160)
+  *  internal script js/jquery.navgoco.min.js does not exist (line 28)
+  *  internal script js/toc.js does not exist (line 33)
+  *  internally linking to css/bootstrap.min.css, which does not exist (line 13)
+     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  *  internally linking to css/customstyles.css, which does not exist (line 17)
+     <link rel="stylesheet" href="css/customstyles.css">
+  *  internally linking to css/lavish-bootstrap.css, which does not exist (line 16)
+     <link rel="stylesheet" href="css/lavish-bootstrap.css">
+  *  internally linking to css/modern-business.css, which does not exist (line 15)
+     <link rel="stylesheet" href="css/modern-business.css">
+  *  internally linking to css/syntax.css, which does not exist (line 9)
+     <link rel="stylesheet" href="css/syntax.css">
+  *  internally linking to css/theme-blue.css, which does not exist (line 18)
+     <link rel="stylesheet" href="css/theme-blue.css">
+  *  internally linking to ds_apis_about.html, which does not exist (line 132)
+     <a href="ds_apis_about.html">Cloud APIs</a>
+  *  internally linking to ds_apps_gs.html, which does not exist (line 124)
+     <a href="ds_apps_gs.html">Custom Apps</a>
+  *  internally linking to ds_gs_access_sites.html, which does not exist (line 297)
+     <a href="ds_gs_access_sites.html">Give Clients and Team Members Site Access</a>
+  *  internally linking to ds_gs_admin.html, which does not exist (line 226)
+     <a href="ds_gs_admin.html">Use Weebly Cloud Admin</a>
+  *  internally linking to ds_gs_apps.html, which does not exist (line 261)
+     <a href="ds_gs_apps.html">Provide Apps to Your Customers</a>
+  *  internally linking to ds_gs_checklist.html, which does not exist (line 219)
+     <a href="ds_gs_checklist.html">Get Started Checklist</a>
+  *  internally linking to ds_gs_client_ui.html, which does not exist (line 233)
+     <a href="ds_gs_client_ui.html">How Your Clients Work with You</a>
+  *  internally linking to ds_gs_clients.html, which does not exist (line 276)
+     <a href="ds_gs_clients.html">Create and Manage Clients</a>
+  *  internally linking to ds_gs_configure.html, which does not exist (line 240)
+     <a href="ds_gs_configure.html">Configure Weebly Cloud</a>
+  *  internally linking to ds_gs_cr_sites.html, which does not exist (line 283)
+     <a href="ds_gs_cr_sites.html">Create and Manage Sites</a>
+  *  internally linking to ds_gs_invoice.html, which does not exist (line 326)
+     <a href="ds_gs_invoice.html">View and Pay Weebly Invoices</a>
+  *  internally linking to ds_gs_market.html, which does not exist (line 311)
+     <a href="ds_gs_market.html">Market to Your Customers in Weebly</a>
+  *  internally linking to ds_gs_plans.html, which does not exist (line 254)
+     <a href="ds_gs_plans.html">Create Plans</a>
+  *  internally linking to ds_gs_restore.html, which does not exist (line 290)
+     <a href="ds_gs_restore.html">Restore Elements, Pages, and Sites</a>
+  *  internally linking to ds_gs_ssl.html, which does not exist (line 304)
+     <a href="ds_gs_ssl.html">Allow Sites to Use SSL</a>
+  *  internally linking to ds_gs_team_members.html, which does not exist (line 247)
+     <a href="ds_gs_team_members.html">Create Team Members</a>
+  *  internally linking to ds_gs_trouble.html, which does not exist (line 341)
+     <a href="ds_gs_trouble.html">Troubleshooting Weebly Cloud</a>
+  *  internally linking to ds_tags_about.html, which does not exist (line 136)
+     <a href="ds_tags_about.html">Tags</a>
+  *  internally linking to ds_themes_start.html, which does not exist (line 128)
+     <a href="ds_themes_start.html">Custom Themes</a>
+  *  internally linking to home.html, which does not exist (line 120)
+     <a href="home.html">Get Started</a>
+  *  internally linking to home.html, which does not exist (line 212)
+     <a href="home.html">Get Started with Weebly Cloud</a>
+  *  internally linking to home.html, which does not exist (line 111)
+     <a class="fa fa-home fa-lg navbar-brand" href="home.html"> <span class="projectTitle">
+                Weebly Cloud for Designers</span></a>
+  *  internally linking to images/favicon.ico, which does not exist (line 36)
+     <link rel="shortcut icon" href="images/favicon.ico">
+- ./x_designer_output/tocpage/index.html
+  *  internal image images/company_logo.png does not exist (line 444)
+  *  internal script js/customscripts.js does not exist (line 34)
+  *  internal script js/jekyll-search.js does not exist (line 160)
+  *  internal script js/jquery.navgoco.min.js does not exist (line 28)
+  *  internal script js/toc.js does not exist (line 33)
+  *  internally linking to css/bootstrap.min.css, which does not exist (line 13)
+     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  *  internally linking to css/customstyles.css, which does not exist (line 17)
+     <link rel="stylesheet" href="css/customstyles.css">
+  *  internally linking to css/lavish-bootstrap.css, which does not exist (line 16)
+     <link rel="stylesheet" href="css/lavish-bootstrap.css">
+  *  internally linking to css/modern-business.css, which does not exist (line 15)
+     <link rel="stylesheet" href="css/modern-business.css">
+  *  internally linking to css/syntax.css, which does not exist (line 9)
+     <link rel="stylesheet" href="css/syntax.css">
+  *  internally linking to css/theme-blue.css, which does not exist (line 18)
+     <link rel="stylesheet" href="css/theme-blue.css">
+  *  internally linking to ds_apis_about.html, which does not exist (line 132)
+     <a href="ds_apis_about.html">Cloud APIs</a>
+  *  internally linking to ds_apps_gs.html, which does not exist (line 124)
+     <a href="ds_apps_gs.html">Custom Apps</a>
+  *  internally linking to ds_gs_access_sites.html, which does not exist (line 297)
+     <a href="ds_gs_access_sites.html">Give Clients and Team Members Site Access</a>
+  *  internally linking to ds_gs_admin.html, which does not exist (line 226)
+     <a href="ds_gs_admin.html">Use Weebly Cloud Admin</a>
+  *  internally linking to ds_gs_apps.html, which does not exist (line 261)
+     <a href="ds_gs_apps.html">Provide Apps to Your Customers</a>
+  *  internally linking to ds_gs_checklist.html, which does not exist (line 219)
+     <a href="ds_gs_checklist.html">Get Started Checklist</a>
+  *  internally linking to ds_gs_client_ui.html, which does not exist (line 233)
+     <a href="ds_gs_client_ui.html">How Your Clients Work with You</a>
+  *  internally linking to ds_gs_clients.html, which does not exist (line 276)
+     <a href="ds_gs_clients.html">Create and Manage Clients</a>
+  *  internally linking to ds_gs_configure.html, which does not exist (line 240)
+     <a href="ds_gs_configure.html">Configure Weebly Cloud</a>
+  *  internally linking to ds_gs_cr_sites.html, which does not exist (line 283)
+     <a href="ds_gs_cr_sites.html">Create and Manage Sites</a>
+  *  internally linking to ds_gs_invoice.html, which does not exist (line 326)
+     <a href="ds_gs_invoice.html">View and Pay Weebly Invoices</a>
+  *  internally linking to ds_gs_market.html, which does not exist (line 311)
+     <a href="ds_gs_market.html">Market to Your Customers in Weebly</a>
+  *  internally linking to ds_gs_plans.html, which does not exist (line 254)
+     <a href="ds_gs_plans.html">Create Plans</a>
+  *  internally linking to ds_gs_restore.html, which does not exist (line 290)
+     <a href="ds_gs_restore.html">Restore Elements, Pages, and Sites</a>
+  *  internally linking to ds_gs_ssl.html, which does not exist (line 304)
+     <a href="ds_gs_ssl.html">Allow Sites to Use SSL</a>
+  *  internally linking to ds_gs_team_members.html, which does not exist (line 247)
+     <a href="ds_gs_team_members.html">Create Team Members</a>
+  *  internally linking to ds_gs_trouble.html, which does not exist (line 341)
+     <a href="ds_gs_trouble.html">Troubleshooting Weebly Cloud</a>
+  *  internally linking to ds_tags_about.html, which does not exist (line 136)
+     <a href="ds_tags_about.html">Tags</a>
+  *  internally linking to ds_themes_start.html, which does not exist (line 128)
+     <a href="ds_themes_start.html">Custom Themes</a>
+  *  internally linking to home.html, which does not exist (line 120)
+     <a href="home.html">Get Started</a>
+  *  internally linking to home.html, which does not exist (line 212)
+     <a href="home.html">Get Started with Weebly Cloud</a>
+  *  internally linking to home.html, which does not exist (line 111)
+     <a class="fa fa-home fa-lg navbar-brand" href="home.html"> <span class="projectTitle">
+                Weebly Cloud for Designers</span></a>
+  *  internally linking to images/favicon.ico, which does not exist (line 36)
+     <link rel="shortcut icon" href="images/favicon.ico">
+htmlproofer 3.6.0 | Error:  HTML-Proofer found 249 failures!

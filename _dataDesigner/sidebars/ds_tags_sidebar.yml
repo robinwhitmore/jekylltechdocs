@@ -38,10 +38,6 @@ entries:
       url: /tag_sites.html
       output: web
 
-    - title: APIs
-      url: /tag_apis.html
-      output: web
-
     - title: Custom Apps
       url: /tag_custom_apps.html
       output: web

@@ -1,5 +1,5 @@
 ## Signing and Authenticating Requests
-The API is validated using both a public key and a private HMAC Hash of the request contents. These values must be passed in the request header as X-Public-Key and X-Signed-Request-Hash. To get started making requests, you will need YOURAPIKEY and YOURAPISECRET which can be generated and obtained on the Settings tab in the Weebly Cloud Admin provided for your account.  YOURAPISECRET is a shared secret known only to you and Weebly Cloud. Do not share YOURAPISECRET.
+The API is validated using both a public key and a private HMAC Hash of the request contents. These values must be passed in the request header as `X-Public-Key` and `X-Signed-Request-Hash`. To get started making requests, you will need YOURAPIKEY and YOURAPISECRET which can be generated and obtained on the {% if site.project=="designer" %}[Settings](ds_gs_configure.html#view-and-create-api-keys-and-secrets){%elsif site.project=="cloud" %}[Settings](cl_gs_configure.html#view-and-create-api-keys-and-secrets){%endif%} tab in the Weebly Cloud Admin provided for your account.  YOURAPISECRET is a shared secret known only to you and Weebly Cloud. Do not share YOURAPISECRET.
 
 
 ~~~ shell
@@ -60,10 +60,10 @@ When a call can't sucessfully complete, Weebly throws an error and returns in th
 
 ~~~ JSON
 {
-"error": {
-"code": 900,
-"message": "brand_name field missing"
-}
+    "error": {
+        "code": 900,
+        "message": "brand_name field missing"
+    }
 }
 ~~~
 

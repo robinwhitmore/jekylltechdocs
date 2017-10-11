@@ -13,8 +13,8 @@ Repeat the install, editor development, and development site testing using the W
 To test on sites other than the development site:
 * Create a new app with the updates you'd like to test.
 * Create a test {%if site.project=="designer"%}[plan](ds_gs_plans.html) {%elsif site.project=="cloud"%}[plan](cl_gs_plans.html){%endif%}.
-* Set Auto-Install <!--todo: add link-->to the test plan.
+* Set {% if site.project=="designer" %}[Auto-Install](ds_apps_element_release.html){%elsif site.project=="cloud" %}[Auto-Install](cl_apps_element_release.html){%endif%} to the test plan.
 * Create some test {%if site.project=="designer"%}[sites](ds_gs_cr_sites.html) {%elsif site.project=="cloud"%}[sites](cl_gs_cr_sites.html){%endif%} and associate those sites with your test plan.
-* Release your app<!--todo: link--> to that plan.
+* {% if site.project=="designer" %}[Release your app](ds_apps_element_release.html){%elsif site.project=="cloud" %}[Release your app](cl_apps_element_release.html){%endif%}  to that plan.
 Your app should automatically be installed on your test sites.
 {% endif %}

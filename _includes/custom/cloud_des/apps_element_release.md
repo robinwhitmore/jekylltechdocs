@@ -6,7 +6,7 @@ To release your app, you need to associate your app to a plan, and then publish 
 
 
 **To release your app**:
-1. Associate your app with a plan. On the {%if site.project=="designer"%}[app's detail](ds_gs_admin.html#appspage){%elsif site.project=="cloud"%}[app's detail](cl_gs_admin.html#appspage){%endif%} page, click **Auto-Install Settings**. A dialog displays the plans that you've created.
+1. Associate your app with a plan. On the {%if site.project=="designer"%}[app's detail](ds_gs_admin.html#apps){%elsif site.project=="cloud"%}[app's detail](cl_gs_admin.html#apps){%endif%} page, click **Auto-Install Settings**. A dialog displays the plans that you've created.
 2. Select the plans that should include this app and click **Save**.
     {% include image.html file="cl_apps_autoInstall.png" caption="Associate the app to a plan" %}
 3. From the Version History area of the App Details page, click the ellipsis button for the version to become active and choose **Publish Version**. The status for this version moves from `Draft` to `Active`

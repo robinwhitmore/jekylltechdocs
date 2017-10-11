@@ -30,4 +30,4 @@ You create team members from the Cloud Admin.
 5. Click **Save**.
 {% include image.html file="cl_memberCreate.png" caption="Creating a team member"%}<br>
 When a team member is created, an email is sent with a link that allows them to create a password and log into the Cloud Admin (the email is the username). {%if site.project=="cloud"%}You can also create this login link using the <span style="color: red">Team Member API</span>.{% endif %}
-<!--TODO: add link-->
+<!--TODO: Cloud: add link-->

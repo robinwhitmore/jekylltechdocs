@@ -1,7 +1,7 @@
 ## Element Basics
 
 An element is made up of the following:
-* **Manifest<!--todo: add link--> file entries** (`manifest.json`): These entries describe the element and define the settings used to display the element. For example, your element might need color, size, or quantity properties to be set. You set default values for those properties in the manifest, and then a modal displays the properties and the user can change the defaults. Settings are not mandatory (think the Weebly Spacer element), can be displayed in the native Weebly settings modal or from an external web page displayed in an iframe.
+* **{% if site.project=="designer" %}[Manifest](ds_apps_manifest.html){%elsif site.project=="cloud" %}[Manifest](cl_apps_manifest.html){%elsif site.project=="platform" %}[Manifest](pf_apps_manifest.html){%endif%} file entries** (`manifest.json`): These entries describe the element and define the settings used to display the element. For example, your element might need color, size, or quantity properties to be set. You set default values for those properties in the manifest, and then a modal displays the properties and the user can change the defaults. Settings are not mandatory (think the Weebly Spacer element), can be displayed in the native Weebly settings modal or from an external web page displayed in an iframe.
 
     You can also configure tooltips for the settings or even a fully-functional tutorial for your element, including a video. The tutorial can be configured to automatically open when the element is first used, and can always be accessed from the Settings dialog.
 
@@ -12,13 +12,13 @@ An element is made up of the following:
 
 * ​**Stylesheet** (`element.css`): You style your element using CSS. We use the LESS CSS pre-processor, so you can write your stylesheet using LESS. You can access settings and other data in your stylesheet.
 
-* **Assets**: You can include things like graphic files, snippets, etc. to complete your element. You must include the `.svg` icon that displays your element in the element tray. See the design guidelines<!--todo: link--> for details.
+* **Assets**: You can include things like graphic files, snippets, etc. to complete your element. You must include the `.svg` icon that displays your element in the element tray. See the {% if site.project=="designer" %}[design guidelines](ds_apps_guides.html){%elsif site.project=="cloud" %}[design guidelines](cl_apps_guides.html){%elsif site.project=="platform" %}[design guidelines](pf_apps_guides.html){%endif%} for details.
 
 If your element needs to behave differently in the editor than at runtime, you can include editor-specific versions of your stylesheet, JavaScript, and template.
 
 As an example, here's the manifest for the sample Price Chart element. The `plans` property is defined as an integer that determines the number of price plans. The `features` property is defined as an integer that determines the number of features per plan. Both of these have a tooltip. The `alignment` property is set to default to the left.
 
-The value of the `type` property in the settings determines the widgets that display the property. For example, a `type` of `text` displays a text box. A `type` of `int` displays a text box that validates for an integer. `Color` displays a color picker. You can find the complete list of types here<!--todo: link-->.
+The value of the `type` property in the settings determines the widgets that display the property. For example, a `type` of `text` displays a text box. A `type` of `int` displays a text box that validates for an integer. `Color` displays a color picker. You can find the complete list of types {% if site.project=="designer" %}[here](ds_apps_element_settings.html#setting-types){%elsif site.project=="cloud" %}[here](cl_apps_element_settings.html#setting-types){%elsif site.project=="platform" %}[here](pf_apps_element_settings.html#setting-types){%endif%}.
 
 
 
@@ -99,7 +99,7 @@ You can make a property private so that the data is not available to visitors of
 
 If you need the element properties to be set at an external site, you provide a URL to that site and the requested page displays in a modal, using JSON Web tokens (JWT) to pass in user information. You can use the `PostMessage` API to pass data between your page and Weebly. We add an invisible overlay div to your iframe so that users can click the element to access its settings. Once the settings panel is opened, the overlay is removed so that users can interact with your iframe.
 
-Click here to find out how to create the element and settings. <!--todo: link-->
+Click {% if site.project=="designer" %}[here](ds_apps_element_manifest.html){%elsif site.project=="cloud" %}[here](cl_apps_element_manifest.html){%elsif site.project=="platform" %}[here](pf_apps_element_manifest.html){%endif%} to find out how to create the element and settings.
 
 ## Element Tutorials
 
@@ -116,7 +116,7 @@ Element tutorials include introductory text followed by these different types of
 * **Nested topics**: If you want your tutorial to have more than one topic, you nest topics under a parent. You can create a full help set with up to 8 topics of step and/or video content. The name of each topic displays as a link on the main tutorial page. The resulting topics display within the dialog, with a link to go back to the main page.
     {% include image.html file="tutorialNested.png" caption="Main tutorial page with nested topics" %}
 
-Click here to find out how to create an element tutorial. <!--todo: link-->
+Click {% if site.project=="designer" %}[here](ds_apps_element_manifest.html#create-a-tutorial){%elsif site.project=="cloud" %}[here](cl_apps_element_manifest.html#create-a-tutorial){%elsif site.project=="platform" %}[here](pf_apps_element_manifest.html#create-a-tutorial){%endif%} to find out how to create an element tutorial.
 
 
 

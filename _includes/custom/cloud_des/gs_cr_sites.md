@@ -18,13 +18,17 @@ Once you've {%if site.project=="designer"%}[created](ds_gs_clients.html) {%elsif
 3. Optionally, provide site settings like timezone, date format, language, and more.
    {% include image.html file="cl_site_create.png" %}<br>
 <!--todo: get designer screenshot-->
-4. In the Theme Gallery, choose the theme for the site. If you've created custom themes <!--todo: insert link--> they display on the tab with your company name.
+4. In the Theme Gallery, choose the theme for the site. If you've created {% if site.project=="designer" %}[custom themes](ds_themes_start.html){%elsif site.project=="cloud" %}[custom themes](cl_themes_start.html){%endif%} they display on the tab with your company name.
    {% include image.html file="cl_theme_gallery.png" caption="caption text" %}
 4. Click **Save**.
 
+{% if site.project=="designer" %}
+When you create a site for a client, they don't have any access to it, other than visiting the published site. If you want them to be able to access the site so they do things like manage orders, view blog comments, or even edit the site, you need to set them up as a [site contributor](ds_gs_access_sites.html). Once that's done, they'll be able to access the site from the User Portal.
+{% elsif site.project=="cloud" %}
 
+Unless you set [contributor permissions](cl_gs_access_sites.html), the user has complete access to all pages and settings for the site, including the ability to edit and publish. You can restrict that access by setting their [Site Contributor permissions](cl_gs_access_sites.html).
+{%endif%}
 
-Unless you set {%if site.project=="designer"%}[contributor permissions](ds_gs_access_sites.html) {%elsif site.project=="cloud"%}[contributor permissions](cl_gs_access_sites.html){%endif%}<!--todo: check cloud link-->the {{site.user}} has complete access to all pages and settings for the site, including the ability to edit and publish."
 
 ## Create a Site Using a Template
 
@@ -33,10 +37,10 @@ Instead of creating a site from scratch, you can start with a template. Template
 You can create up to 30 templates.
 
 **To create a template:**
-<!--TODO: Find out how this works w/Designers who don't really have users. Would it be a team member? Add links to create user/team member -->
-1. Optionally create a <span style="color: red">user</span> that will "own" the template sites, then create your template sites under this user. While you can create a template out of any user's site, this is a great way to organize and manage your templates.<span style="color: red">[[How should we tell designers to organize their templates since they don't have users? Create a client just for templates?]]</span>
+
+1. Optionally create a {{site.user}} that will "own" the template sites, then create your template sites under this {{site.user}}. While you can create a template out of any {{site.user}}'s site, this is a great way to organize and manage your templates.
 2. Create a site following the instructions above. Add elements and design your site.
-3. Optionally add apps from the Weebly App Center {% if site.project=="cloud" %}or your own custom apps{% endif %}. But remember that access to apps is {% if site.project=="cloud" %}[based on plans](cl_gs_plans) {% elsif site.project=="designer" %} [based on plans](ds_gs_plans){% endif %}, so you may be restricting the potential sites that can use the template by adding apps. To avoid this, when you use the template, you can temporarily change the plan the new site is on so that it allows access to the App Center. More below.
+3. Optionally add apps from the Weebly App Center {% if site.project=="cloud" %}or your own custom apps{% endif %}. But remember that access to apps is {% if site.project=="cloud" %}[based on plans](cl_gs_plans.html) {% elsif site.project=="designer" %} [based on plans](ds_gs_plans.html){% endif %}, so you may be restricting the potential sites that can use the template by adding apps. To avoid this, when you use the template, you can temporarily change the plan the new site is on so that it allows access to the App Center. More below.
    {% include tip.html content="Remember that a template is a starting point. Don't add too many elements, or design too specifically. It may end up being more work to remove what isn't needed than it would have been to start from scratch." %}
 4. In the Cloud Admin, from the details page for your template site, click **Add as Template**.
    {% include image.html file="cl_addTemplate.png" %}<br>
@@ -116,14 +120,14 @@ curl https://api.weeblycloud.com/user/USER_ID/site \
 {% endhighlight %}
 
 There are many optional parameters that can be passed when creating a site. More information can be found in the API doc, here.
-<!-- TODO: Add link -->
+<!-- TODO: Add API link -->
 {% include note.html content="If no `plan_id` is provided, then the site is assigned the default plan." %}
 
 <hr>
 ## Use Plug-ins to Create Sites
 
 If you use plug-ins with Weebly Cloud, then your users create sites using the plug-in's UI. This image shows the page in APS2 Weebly Cloud plug-in UI where you can create a site.
-<!-- TODO: add link to plugins -->
+<!-- TODO: add CLOUD link to plugins -->
 {% include image.html file="cl_odin_createsite.png" %}<br>
 {% endif %}
 
@@ -175,17 +179,17 @@ From the site's detail page, click **Set Domain** and enter the new domain.
 <!--todo: designer screenshot-->
 
 ## Suspend Access to a Site
-To temporarily prevent a user from updating their site in the event they are delinquent on their payment, their access to a site can be suspended using the `Site::disable` endpoint. <!--todo: add link-->When a site is suspended, access to the Weebly editor is disabled (the published site remains unchanged and active).
+To temporarily prevent a user from updating their site in the event they are delinquent on their payment, their access to a site can be suspended using the `Site::disable` endpoint. <!--todo: API: add link-->When a site is suspended, access to the Weebly editor is disabled (the published site remains unchanged and active).
 {% if site.project=="cloud"%}
-SSO loginLinks<!--todo: add link--> can still be generated for a suspended site. Clicking on a loginLink will inform the user that access to the site is disabled and will point them to contact their administrator.
+SSO loginLinks<!--todo: Cloud: add link--> can still be generated for a suspended site. Clicking on a loginLink will inform the user that access to the site is disabled and will point them to contact their administrator.
 {%endif%}
-Use the `GET /site` API <!--todo: add link-->which returns a `suspended` parameter with a value of `true` or `false` to determine if a site is suspended (the Cloud Admin also shows you if a site is suspended).  A site can be taken out of a suspended state by making a call to `Site::enable`.<!--todo: add link--> ​
+Use the `GET /site` API <!--todo: API: add API link-->which returns a `suspended` parameter with a value of `true` or `false` to determine if a site is suspended (the Cloud Admin also shows you if a site is suspended).  A site can be taken out of a suspended state by making a call to `Site::enable`.<!--todo: API: add link--> ​
 {% if site.project=="cloud"%}
-If you use the WHMCS plug-in, you can use that to suspend and reactivate accounts.<!--todo: add link-->
+If you use the WHMCS plug-in, you can use that to suspend and reactivate accounts.<!--todo: Cloud: add link-->
 {%endif%}
 
 ## Unpublish a Site
-In the event you want to unpublish a site you can use the `Site::unpublish` endpoint. This will unpublish the site, but not prevent the user from republishing, if they have access to do so. This API method should not be taken lightly. Unpublishing a user's site should be communicated far in advance so the user can take the appropriate steps to remedy the situation. ​<!--todo: add link-->
+In the event you want to unpublish a site you can use the `Site::unpublish` endpoint. This will unpublish the site, but not prevent the user from republishing, if they have access to do so. This API method should not be taken lightly. Unpublishing a user's site should be communicated far in advance so the user can take the appropriate steps to remedy the situation. ​<!--todo: API: add link-->
 
 {% if site.project=="designer"%}
 You'll no longer be billed for the unpublished site.
@@ -196,7 +200,7 @@ If a user cancels their subscription you can delete their site(s). This complete
 {% if site.project=="cloud" %}
 {% include image.html file="cl_site_detail_delete.png" caption="Delete a site from the Cloud Admin" %}
 
-You can also delete a site by making a call to the DELETE /site API. <!--todo: add link-->
+You can also delete a site by making a call to the DELETE /site API. <!--todo: API: add link-->
 {%endif%}
 <!--todo: need desginer image-->
 

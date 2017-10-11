@@ -2,7 +2,7 @@ You upload your app using the {{site.portal}}. Upload versions when you want to:
 * Test your latest changes
 * Release new versions to your customers
 Be sure any upload adheres to the required  application {%if site.project=="designer"%}[file structure](ds_apps_element_folders.html){%elsif site.project=="cloud"%}[file structure](cl_apps_element_folders.html){%elsif site.project=="platform"%}[file structure](pf_apps_element_folders.html){%endif%} and {%if site.project=="cloud"%}[manifest](cl_apps_manifest.html){%elsif site.project=="designer"%}[manifest](ds_apps_manifest.html){%elsif site.project=="platform"%}[manifest](pf_apps_manifest.html){% endif %} structure.
-After you've uploaded your application, you'll want to install it on your test site to view and QA it.<!--todo: add link-->
+After you've uploaded your application, you'll want to install it on your test site to view and {% if site.project=="designer" %}[QA](ds_apps_element_test.html){%elsif site.project=="cloud" %}[QA](cl_apps_element_test.html){%elsif site.project=="platform" %}[QA](pf_apps_element_test.html){%endif%} it.
 
 ## Package Your App
 ​Your app needs to be delivered as a zip file. Create a zip file FROM the root directory and not OF the root directory. In other words, open the root directory (where the `manifest.json` file should be), select all files and directories, then create a zip of those. If you create a zip of the root directory, your zip file will not be able to upload to Weebly. Also, make sure all directories and files have read and write permissions.

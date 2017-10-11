@@ -93,7 +93,7 @@ In our template, we need to create a table that creates the right number of colu
    ~~~
 {% endraw %}
 
-​You can see the complete template code here.<!--todo: add link-->
+​You can see the complete template code {% if site.project=="designer" %}[here](ds_apps_element_temp_ex.html){%elsif site.project=="cloud" %}[here](cl_apps_element_temp_ex.html){%elsif site.project=="platform" %}[here](pf_apps_element_temp_ex.html){%endif%}.
 
 ​We now have the template for our Price Chart! Let’s create the styles next.
 

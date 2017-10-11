@@ -54,13 +54,13 @@ Additionally you can create your own apps and have them automatically installed 
 
 A Weebly theme provides a general structure and design palette for any website built using the Weebly editor. Weebly strives to provide ultimate flexibility for our users, so our themes don't dictate a template or a mandatory organization of content. Instead, they provide a beautiful backdrop for the site's content.
 
-While we provide a number of themes, you may want to create your own. Because themes need to have very specific structures and files in order to work on the Weebly platform, instead of creating a custom theme from scratch, you can start with any theme and then customize it to meet your needs. We also provide a base theme that you can use as a start. More about customizing themes here <!--TODO: insert link -->, including a tutorial that walks you through the process.
+While we provide a number of themes, you may want to create your own. Because themes need to have very specific structures and files in order to work on the Weebly platform, instead of creating a custom theme from scratch, you can start with any theme and then customize it to meet your needs. We also provide a base theme that you can use as a start. More about customizing themes {% if site.project=="designer" %}[here](ds_themes_start.html){%elsif site.project=="cloud" %}[here](cl_themes_start.html){%endif%}, including a tutorial that walks you through the process.
 
 You can customize a theme directly from the Weebly Editor. Click the Theme tab and then click
 **Edit HTML/CSS** to open the built-in Code Editor.
 {% include image.html file="theme_codeEditor.png" caption="The Weebly Code Editor"%}<br>
 
-​​​You manage <!--TODO: insert link -->your custom themes from the Theme tab of the Cloud Admin. Any themes you add here are available for{%if site.project=="designer"%} you and{%endif%} your {{site.customer}} when {%if site="cloud"%}creating or{%endif%} editing a site.
+​​​You {% if site.project=="designer" %}[manage](ds_themes_deliver.html){%elsif site.project=="cloud" %}[manage](cl_themes_deliver.html){%endif%} your custom themes from the Theme tab of the Cloud Admin. Any themes you add here are available for{%if site.project=="designer"%} you and{%endif%} your {{site.customer}} when {%if site="cloud"%}creating or{%endif%} editing a site.
 {% include image.html file="cl_theme_gallery.png" caption="The Weebly Theme Gallery"%}<br>
 
 ## Have Questions?

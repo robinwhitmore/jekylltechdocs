@@ -49,7 +49,7 @@ If your theme is responsive, you should also style for these respective breakpoi
 Colors are very important in determining the look, feel, and versatility of your theme. There are two optional ways you can offer color versions for your theme: color palettes and variations.
 
 ### Color Palettes
-{% if site.project=="designer" %}[Color palettes](ds_page.html){%elsif site.project=="cloud" %}[Color palettes](cl_page.html){%elsif site.project=="platform" %}[Color palettes](pf_page.html){%endif%} allow the user to select up to two color choices for their site: a primary color and an accent color. Users can choose the colors, allowing them to better personalize and brand their site. If you want, you can create default palettes that have the primary and accent colors already defined.
+{% if site.project=="designer" %}[Color palettes](ds_themes_palette.html){%elsif site.project=="cloud" %}[Color palettes](cl_themes_palette.html){%elsif site.project=="platform" %}[Color palettes](pf_themes_palette.html){%endif%} allow the user to select up to two color choices for their site: a primary color and an accent color. Users can choose the colors, allowing them to better personalize and brand their site. If you want, you can create default palettes that have the primary and accent colors already defined.
 ​
 Here's a theme with one default color palette. Users click the dropper icon to select a different pair of colors if they don't want to use the defaults.
 {% include image.html file="theme_palette.png" caption="Palettes provide default color choices and also allow the users to select their own" %}

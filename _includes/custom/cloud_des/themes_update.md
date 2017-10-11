@@ -24,6 +24,6 @@ Changes other than to the theme's name require you to edit the theme's files, cr
 
 Any sites using the theme will get your updates, including sites that were created as a copy from another site or from a template that used the theme. The changes won't be active until the site is published again but users will see your changes in the Editor. If your theme contains color palettes, variations, or options, previous selections made by the user will be retained after the update.
 
-{% include tip.html content="If you want to force theme updates to live sites, use the Site API to republish sites after you upload the new zip." %}<!--todo: link-->
+{% include tip.html content="If you want to force theme updates to live sites, use the Site API to republish sites after you upload the new zip." %}<!--todo: API link-->
 
 If you are updating a theme for a single user (that is, you don't want to make it available to all users via the Cloud Admin), then simply deliver the updated zip file. The user can {% if site.project=="designer" %}[import](ds_themes_import_export.html){%elsif site.project=="cloud" %}[import](cl_themes_import_export.html){%endif%} the new zip and apply the update as though it were a new theme. The theme's name will have a number appended to it to indicate that it's a version of the original. For example, if you had originally provided a zip named `MyTheme.zip` and then provided a new zip with the same name, when the user imports it, Weebly changes the name to `MyTheme_1.zip`, keeping the original intact.

@@ -1,6 +1,6 @@
 When you work in the Weebly Code Editor, you'll see your changes reflected on a web site as you make them. So let's create a test site that we can use for our theme.
 {% if site.project=="cloud" or "designer" %}
-1. Follow the instructions {%if site.project=="designer"%}[here](ds_cr_sites.html){%elsif site.project=="cloud"%}[here](cl_cr_sites.html){%elsif site.project=="platform"%}[here](pf_cr_sites.html){%endif%} to create your test site.
+1. Follow the instructions {%if site.project=="designer"%}[here](ds_gs_cr_sites.html){%elsif site.project=="cloud"%}[here](cl_gs_cr_sites.html){%elsif site.project=="platform"%}[here](pf_gs_cr_sites.html){%endif%} to create your test site.
 Don't use a template, or copy an existing site.
 {% elsif site.project=="platform" %}
 2. In the {{site.portal}}, click Edit Site.

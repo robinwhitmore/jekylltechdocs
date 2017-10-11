@@ -16,11 +16,9 @@ You create a client from the Client tab of the Cloud Admin.
 
 **To create a client:**
 1. From the Client tab of the Cloud Admin, click **Add Client**.
-2. Enter a name and email for your client.
-The email must be unique to Weebly, as this is what they will use to log into the <a data-container="body" data-toggle="popover" data-content="{{site.data.glossary.user_portal}}">User Portal.</a>
-3. Optionally send an invite email to the client. This email will have a link to their User Portal, so be sure to configure their contributor access right away. You can also send an email at a later date from their detail page.<!--todo: Q: Is this true?-->
-4. Set their contributor access. <!--todo: need to get info once coded-->
-By default, clients have <!--todo: ?? --> access to their sites. You can restrict that access by setting their Site Contributor permissions. <!--todo: add link-->
+2. Enter a name and email for your client and optional ID and phone number.
+
+    The email must be unique to Weebly, as this is what they will use to log into the <a data-container="body" data-toggle="popover" data-content="{{site.data.glossary.user_portal}}">User Portal.</a>
 
 Once you create a client, they are assigned an ID and you're taken to their detail page.
 <!--todo: screenshot-->
@@ -28,15 +26,9 @@ Once you create a client, they are assigned an ID and you're taken to their deta
 ## Manage Clients
 You manage clients from the client's detail page.
 You can do the following from here:
-<!--todo: test-->
+
 * Edit their personal info
-* Reset their password
-* Send an invite email
-* Turn test mode on/off
-* Disable the user
-* Add a site
-* View activity logs
-* Create a support request
+* [Add a site](ds_gs_cr_sites.html)
 * Add notes
 
 **To manage a client:**

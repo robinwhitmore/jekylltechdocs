@@ -101,7 +101,7 @@ entries:
     - title: Market to Your Customers in Weebly
       url: /ds_gs_market.html
       output: web, pdf
-      #status: needs review
+     #status: needs review
 
   - title: Billing and Invoicing
     output: web, pdf
@@ -111,3 +111,11 @@ entries:
       url: /ds_gs_invoice.html
       output: web, pdf
       #status: needs review
+
+  - title: Troubleshooting
+    output: web, pdf
+    folderitems:
+
+    - title: Troubleshooting Weebly Cloud
+      url: /ds_gs_trouble.html
+      output: web, pdf

@@ -15,7 +15,7 @@ The tabs on the side of the portal allow you manage different parts of Weebly Cl
 <!--todo: verify tabs-->
 <!--todo: get screenshots-->
 ## Clients
-The Clients tab is where you [create](ds_gs_clients) new clients, as well as browse through or search for existing clients.
+The Clients tab is where you [create](ds_gs_clients.html) new clients, as well as browse through or search for existing clients.
 
 <span style="color: red">[[screenshot of client tab main page]]</span>
 
@@ -46,8 +46,8 @@ You can develop custom apps that you install to your client's sites. You use the
 <span style="color: red">[[screenshot of app detail page]]</span>
 
 ## Themes
-<!--todo: add links to themes-->
-Weebly themes provide a general structure and design palette for any website built using the Weebly editor. While Weebly provides a number of themes, you may want to create your own. You use the Themes tab to upload your custom themes so that they are available to your sites.
+
+Weebly [themes](ds_themes_start.html) provide a general structure and design palette for any website built using the Weebly editor. While Weebly provides a number of themes, you may want to create your own. You use the Themes tab to upload your custom themes so that they are available to your sites.
 
 <span style="color: red">[[screenshot of theme upload page]]</span>
 

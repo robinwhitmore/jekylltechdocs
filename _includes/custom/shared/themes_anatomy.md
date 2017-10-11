@@ -32,7 +32,7 @@ While another theme's Header page might look like this:
 
 {% include image.html file="themeLayout2.png" caption="Header template with logo above navigation" %}
 
-You need to create templates for these header types (you don't have to create one for every type and you can create different types). The templates are in HTML and use variables to provide the content. You add `div` tags for each of the areas on the page (eg: logo/title, navigation, banner) to provide the general layout, and then add references to variables like `{menu}` or to pull the content into those areas. More about creating the templates here<!--todo: link-->.
+You need to create templates for these header types (you don't have to create one for every type and you can create different types). The templates are in HTML and use variables to provide the content. You add `div` tags for each of the areas on the page (eg: logo/title, navigation, banner) to provide the general layout, and then add references to variables like `{menu}` or to pull the content into those areas. More about creating the templates {% if site.project=="designer" %}[here](ds_themes_create_templates.html){%elsif site.project=="cloud" %}[here](cl_themes_create_templates.html){%elsif site.project=="platform" %}[here](pf_themes_create_templates.html){%endif%}.
 
 ## Partials
 
@@ -41,7 +41,7 @@ While the template determines the general layout of a page, the specific content
 
 You can also create your own partials. This might be useful when you want something to appear throughout the site. You create your own partial, include it in a Weebly partial, and then it will appear on every page that uses that partial.
 
-More about partials here.<!--todo: link-->
+More about partials {% if site.project=="designer" %}[here](ds_themes_partials.html){%elsif site.project=="cloud" %}[here](cl_themes_partials.html){%elsif site.project=="platform" %}[here](pf_themes_partials.html){%endif%}.
 
 ## Theme Styles and Colors
 Weebly themes use {%if site.project=="designer"%}[LESS](ds_themes_LESS.html){%elsif site.project=="cloud"%}[LESS](cl_themes_LESS.html){%elsif site.project=="platform"%}[LESS](pf_themes_LESS.html){%endif%}

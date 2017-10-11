@@ -17,10 +17,10 @@ You use the **Packages** tab in Cloud Admin to create the plans you need. For re
 {% include note.html content="Prices shown with the Weebly plan descriptions may not accurately reflect the prices for your account. Please use this only as a reference for plan descriptions, not prices." %}
 
 **To create a plan:**
-1. In the [Cloud Admin](weeblycloud.com/admin), click **PACKAGES** and click **Add Plan**.
+1. In the [Cloud Admin](https://weeblycloud.com/admin), click **PACKAGES** and click **Add Plan**.
 2. Enter a plan name. The name must be unique.
 3. Select the corresponding Weebly plan. Your plan will inherit the functionality available in the Weebly plan.
-4. Optionally enable access to the [Weebly App Center](www.weebly.com/app-center). If you don't enable access, no links to the center will display in the Editor. {%if site.project=="cloud"%}You can still create and install your own <span style="color: red">custom apps</span> for this plan.{% endif %} Depending on how your account was configured, free sites may or may not be able to have access to the app center. Ask your account representative for more info.
+4. Optionally enable access to the [Weebly App Center](http://www.weebly.com/app-center). If you don't enable access, no links to the center will display in the Editor. {%if site.project=="cloud"%}You can still create and install your own <span style="color: red">custom apps</span> for this plan.{% endif %} Depending on how your account was configured, free sites may or may not be able to have access to the app center. Ask your account representative for more info.
    {% include tip.html content="Ask your account representative if your unsure whether or not your account has access to the App Center." %}
 5. Optionally set a published page number limit (the site can have an unlimited amount of draft, unpublished pages).
 6. Set the monthly and/or yearly pricing for the plan.
@@ -34,7 +34,7 @@ You use the **Packages** tab in Cloud Admin to create the plans you need. For re
 ## Create Plans with Plug-ins
 
 If you are using plug-ins, then you can import any plans created in Weebly Cloud as shown above, directly into the plug-in. See the appropriate <span style="color:red">plug-in topics</span> for more info.
-<!-- TODO: add link -->
+<!-- TODO: Cloud: add link -->
 {% include image.html file="cl_plan_whmcs.png" %}
 
 {% endif %}

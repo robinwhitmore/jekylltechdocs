@@ -27,8 +27,8 @@ entries:
       url: /ds_apis_about.html
       output: web, pdf
 
-    - title: Page API
-      url: /ds_apis_page.html
+    - title: Account API
+      url: /ds_apis_account.html
       output: web, pdf
 
     - title: Test API

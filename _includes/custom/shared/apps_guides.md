@@ -12,7 +12,7 @@ When determining settings for your element, try to use the same setting metaphor
 Here are some questions to think about before you start coding. You'll need the answers in order to create your element:
 * Should the element dialog display automatically when the element is dropped onto the page? Or will the user need to click the element to open the dialog?
 * Will the element's settings display in the native Weebly dialog using Weebly components (preferred) or will the user be presented with an external site displayed in an iframe?
-* What type of display (such as text, integer, color picker) is needed for each setting? The Weebly dialog supports these types<!--todo: link-->.
+* What type of display (such as text, integer, color picker) is needed for each setting? The Weebly dialog supports {% if site.project=="designer" %}[these types](ds_apps_element_settings.html#setting-types){%elsif site.project=="cloud" %}[these types](cl_apps_element_settings.html#setting-types){%elsif site.project=="platform" %}[these types](pf_apps_element_settings.html#setting-types){%endif%}.
 * What settings can be grouped together and displayed on one dialog page? What settings will need their own section?
 * Do the settings require tooltips to help the user configure them correctly?
 * Is configuring and using the element complicated and so might need a tutorial? Should the tutorial be include a set of steps or a video?
@@ -22,7 +22,7 @@ Here are some questions to think about before you start coding. You'll need the 
 
 ## Element Icon
 
-​You need to create an `svg` file to represent your element in the element tray. It must be named `icon.svg`, and must live in the root folder of your element.  Follow our element icon guidelines<!--todo: link--> when creating your icon.
+​You need to create an `svg` file to represent your element in the element tray. It must be named `icon.svg`, and must live in the root folder of your element.  Follow our element icon {% if site.project=="designer" %}[guidelines](ds_apps_icon.html){%elsif site.project=="cloud" %}[guidelines](cl_apps_icon.html){%elsif site.project=="platform" %}[guidelines](pf_apps_icon.html){%endif%} when creating your icon.
 
 ## Element Placeholder
 

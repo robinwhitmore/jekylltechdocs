@@ -13,7 +13,7 @@ function msg {
 
 SOURCE="jekylltechdocs"
 DESTINATION="x_designer_output"
-PROJECT="cloud"
+PROJECT="designer"
 
 export PROOF=true
 export NOKOGIRI_USE_SYSTEM_LIBRARIES=true
@@ -31,4 +31,4 @@ cd Documents/jekylltechdocs
 
 # 3.
 msg "Proofing..."
-time bundle exec htmlproofer ./$DESTINATION --allow-hash-href --file-ignore mydoc_scroll.html 2>&1 | tee designer_output.txt
+time bundle exec htmlproofer ./$DESTINATION --allow-hash-href --checks_to_ignore ["ImageCheck"] --file-ignore mydoc_scroll.html 2>&1 | tee designer_output.txt

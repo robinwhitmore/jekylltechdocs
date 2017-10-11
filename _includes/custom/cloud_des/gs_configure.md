@@ -34,8 +34,7 @@ You can set a domain to access both the Cloud Admin (`http://your_domain/admin`)
 {%if site.project=="cloud"%}Your company name displays as a link in the footer of all your customer sites (the color and styling of the link is determined by the theme in use). {%endif%}You must add a URL to a specific page about your company {% if site.project == "designer" %}that will be {%elsif site.project=="cloud"%} for that link. This URL is also {%endif%}used as the return email address on emails automatically sent by the Cloud Admin, such as the team member and {{site.customer}} invitations. This URL is required. {%if site.project=="cloud"%}In this example, the company's name is Nash Hosting.
 {% include image.html file="cl_settings_footerName.png" %}{% endif %}
 
-{% include note.html content="While the emails will appear to be from this destination, they are actually sent from a Weebly IP address. Because of this, you need to create an SPF record for the Weebly IP. More info here." %}
-<!--TODO: URL to troubleshooting topic -->
+<div markdown="span" class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> While the emails will appear to be from this destination, they are actually sent from a Weebly IP address. Because of this, you need to create an SPF record for the Weebly IP. More info {% if site.project=="designer" %}[here](ds_gs_trouble.html){%elsif site.project=="cloud" %}[here](cl_gs_trouble.html){%endif%}.</div>
 
 **To set the URL:**
 1. From the Cloud Admin, click the **Settings** tab.
@@ -44,15 +43,17 @@ You can set a domain to access both the Cloud Admin (`http://your_domain/admin`)
 ## Configure Basic Settings
 
 You can configure locale settings for your sites, such language, time zone, and you can also configure upgrade and upsell URLs.
+
 **To configure basic settings:**
+
 1. From the Cloud Admin, click the **Settings** tab.
 2. In the **Configuration** area, click the **Edit** icon and enter the appropriate info for the following:
-{% if site.project=="cloud"%}
-* **Upgrade URL**: When a {{site.customer}} encounters a feature in the Weebly Editor that is part of a plan they do not currently have, they will be prompted to upgrade. This triggers a popup window that loads a URL showing the plans they can upgrade to. Enter that URL here. More about how upgrades work can be found [here]().
-<!--TODO: enter URL to upgrade topic -->
+
+    {% if site.project=="cloud"%}
+    * **Upgrade URL**: When a {{site.customer}} encounters a feature in the Weebly Editor that is part of a plan they do not currently have, they will be prompted to upgrade. This triggers a popup window that loads a URL showing the plans they can upgrade to. Enter that URL here. More about how upgrades work can be found [here](cl_gs_upgrades.html).
+
+* **Publish Upsell URL**: When a {{site.customer}} publishes a site, the Weebly editor displays a publishing modal with a link to the site just published, and often Weebly promotional material as well. You can set a link to a promotion for your company by entering a URL here. The resulting content loads in an iframe (640px W by 200px H) when the site is published. More info [here](cl_gs_upgrades.html).
 {%endif%}
-* **Publish Upsell URL**: When a {{site.customer}} publishes a site, the Weebly editor displays a publishing modal with a link to the site just published, and often Weebly promotional material as well. You can set a link to a promotion for your company by entering a URL here. The resulting content loads in an iframe (640px W by 200px H) when the site is published. More info here.
-<!--TODO: enter URL to upgrade topic -->
 * **Default User Language**: Select the default language displayed to your team and {{site.customer}}s. They can always change this by selecting a different language from the Settings tab of the editor, or if enabled, the language picker in the User Portal.
 * **Default Time Zone**: Select the default time zone used by the Site Editor.
 * **Default Date Format**: Select how you want dates displayed by default. You can choose either `MM/DD/YYYY` or `DD/MM/YYYY`.
@@ -61,8 +62,7 @@ You can configure locale settings for your sites, such language, time zone, and 
 {% if site.project=="cloud"%}
 ## View Your Upgrade Hash
 
-As part of the upgrade URL, Weebly passes in a hash that includes the user ID, the site ID, and a reseller-specific hash. You need to decode this hash to verify that the URL was accessed from the Weebly editor. You can see that hash from the **Upgrade Settings** area of the Cloud Admin. More about the hash and how to handle the upgrade process here.
-<!--TODO: enter URL to upgrade topic -->
+As part of the upgrade URL, Weebly passes in a hash that includes the user ID, the site ID, and a reseller-specific hash. You need to decode this hash to verify that the URL was accessed from the Weebly editor. You can see that hash from the **Upgrade Settings** area of the Cloud Admin. More about the hash and how to handle the upgrade process [here](cl_gs_upgrades.html).
 
 **To view the hash:**
 1. From the Cloud Admin, click the **Settings** tab.
@@ -77,7 +77,9 @@ As part of the upgrade URL, Weebly passes in a hash that includes the user ID, t
 You can create a message that displays to Weebly agents when you contact Weebly Support. This message might include important information they need to know, like a specific support process.
 
 **To create a message:**
-1. From the **Agent Message** area, click the **Edit** icon and enter your message (up to 125 characters).
+
+
+From the **Agent Message** area, click the **Edit** icon and enter your message (up to 125 characters).
 {% include image.html file="cl_settings_message.png" %}
 
 ## Set Contact Info
@@ -96,7 +98,7 @@ You can edit a created contact by clicking the **Edit** icon.
 {% include image.html file="cl_settings_contact.png" %}
 
 ## View and Create API Keys and Secrets
-API keys and secrets are used during API calls <!--TODO: add link-->to verify the sender of a request. You need to create a key to use the API{%if site.project=="cloud"%}, and you'll also need to create a key when you install any <span style="color: red">plug-ins</span>{%endif%}.
+API keys and secrets are used during {% if site.project=="designer" %}[API calls](ds_apis_about.html){%elsif site.project=="cloud" %}[API calls](cl_apis_about.html){%endif%} to verify the sender of a request. You need to create a key to use the API{%if site.project=="cloud"%}, and you'll also need to create a key when you install any <span style="color: red">plug-ins</span>{%endif%}.
 
 **To create a key:**
 1. From the Cloud Admin, click the **Settings** tab.
