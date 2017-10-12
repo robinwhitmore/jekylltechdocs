@@ -4,6 +4,7 @@
 $color: #003055;
 $secondary-color: #5B6D7F; /* New color */
 $heading-color: #000b2e;
+$nav-color: $heading-color;
 $brand-color: #0073ff;
 $link-color: #5EA1F7; /* New color */
 
@@ -12,11 +13,6 @@ $font-family: "effra", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helv
 $font-size: 16px;
 
 $border-color: #dfe6ee;
-
-
-
-
-
 
 
 
@@ -30,13 +26,13 @@ h4 {color: #808080; }
     color: white !important;
 }
 
-.nav > li.active > a {
-    background-color: #347DBE !important;
-}
+// .nav > li.active > a {
+//     background-color: #347DBE !important;
+// }
 
-.nav > li > a:hover {
-    background-color: #248ec2;
-}
+// .nav > li > a:hover {
+//     background-color: #248ec2;
+// }
 
 div.navbar-collapse .dropdown-menu > li > a:hover {
     background-color: #347DBE;
@@ -54,34 +50,12 @@ a[data-toggle="tooltip"] {
     cursor: default;
 }
 /* top navbar */
-.navbar-inverse {
-    background-color: #347DBE !important;
-    border-color: #015CAE !important;
-}
 
-/*.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
-    color: #015CAE !important;
-}*/
-
-.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
-    background-color: #015CAE !important;
-    color: white !important;
-}
-
-/* not sure if using this ...*/
-.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-    border-color: #248ec2;
-}
 
 .btn-primary {
     color: white;
     background-color: #347DBE;
     border-color: #347DBE;
-}
-
-.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
-    background-color: #347DBE !important;
-    color: white !important;
 }
 
 .btn-primary:hover,
@@ -138,10 +112,6 @@ p.proc {
 }
 
 .navbar-brand {
-    color: white !important;
-}
-/* don't know why this kept getting overwritten */
-.navbar-inverse .navbar-nav > li > a {
     color: white !important;
 }
 
@@ -450,11 +420,6 @@ li.dropdownActive a {
 }
 
 
-.navbar-inverse .navbar-nav > li > a {
-    background-color: transparent;
-    margin-top:10px;
-}
-
 .post-content .rssfeedLink {
     color: #248EC2;
 }
@@ -494,15 +459,15 @@ a.accordion-toggle, a.accordion-collapsed {
     margin: 2px 0;
 }
 
-.nav a {
-    color: #333;
-    display: block;
-    outline: none;
-    /*-webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;*/
-    text-decoration: none;
-}
+// .nav a {
+//     color: #333;
+//     display: block;
+//     outline: none;
+//     -webkit-border-radius: 4px;
+//     -moz-border-radius: 4px;
+//     border-radius: 4px;
+//     text-decoration: none;
+// }
 
 .nav li > a > span {
     float: right;
@@ -518,27 +483,27 @@ a.accordion-toggle, a.accordion-collapsed {
     content: '\25b4';
 }
 
-.nav a:hover, .nav li.active > a {
-    background-color: #8D8D8D;
-    color: #f5f5f5;
-}
+// .nav a:hover, .nav li.active > a {
+//     background-color: #8D8D8D;
+//     color: #f5f5f5;
+// }
 
-.nav > li.active > a  {
-background-color: #347DBE;
-}
+// .nav > li.active > a  {
+// background-color: #347DBE;
+// }
 
-.nav li a {
-    font-size: 12px;
-    line-height: 18px;
-    padding: 2px 10px;
-    background-color: #f1f1f1;
-}
+// .nav li a {
+//     font-size: 12px;
+//     line-height: 18px;
+//     padding: 2px 10px;
+//     background-color: #f1f1f1;
+// }
 
-.nav > li > a {
-    font-size: 14px;
-    line-height: 20px;
-    padding: 4px 10px;
-}
+// .nav > li > a {
+//     font-size: 14px;
+//     line-height: 20px;
+//     padding: 4px 10px;
+// }
 
 ul#mysidebar {
     border-radius:0px;
@@ -556,35 +521,23 @@ ul#mysidebar {
 }
 
 
-.nav ul li a {
-    background-color: #FAFAFA;
-}
+// .nav ul li a {
+//     background-color: #FAFAFA;
+// }
 
-.nav li a {
-    padding-right:10px;
-}
+// .nav li a {
+//     padding-right:10px;
+// }
 
-.nav li a:hover {
-    background-color: #8D8D8D;
-}
+// .nav li a:hover {
+//     background-color: #8D8D8D;
+// }
 
 .nav ul li a {
     border-top:1px solid whitesmoke;
     padding-left:10px;
 }
 /* end sidebar */
-
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > .active > a:hover,
-.navbar-inverse .navbar-nav > .active > a:focus {
-    border-radius:5px;
-}
-
-.navbar-inverse .navbar-nav>.open>a,
-.navbar-inverse .navbar-nav>.open>a:focus,
-.navbar-inverse .navbar-nav>.open>a:hover {
-    border-radius: 5px;
-}
 
 span.projectTitle {
     font-family: Helvetica;
@@ -701,7 +654,7 @@ button.cursorNorm {
     cursor: default;
 }
 
-a.dropdown-toggle, .navbar-inverse .navbar-nav > li > a  {
+a.dropdown-toggle {
     margin-left: 10px;
 }
 
@@ -751,10 +704,10 @@ h4 {color: #808080; font-weight:normal; font-size:120%; font-style:italic;}
     overflow: hidden;
 }
 
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-    background-color: #248ec2;
-    color: white;
-}
+// .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+//     background-color: #248ec2;
+//     color: white;
+// }
 
 ol li ol li {list-style-type: lower-alpha;}
 ol li ul li {list-style-type: disc;}
@@ -854,10 +807,10 @@ ol.series li {
     display:block;
 }
 
-/* not sure if using this ...*/
-.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-    border-color: #248ec2 !important;
-}
+// /* not sure if using this ...*/
+// .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+//     border-color: #248ec2 !important;
+// }
 
 #mysidebar .nav ul {
     background-color: #FAFAFA;
@@ -1312,19 +1265,39 @@ h4.panel-title {
 
 
 
+/* EXTENDABLES ---------------------------------------------------------- */
+
+.font-base {
+	color: #003055;
+	font-family: "effra", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.font-smoothing {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
 /* BASE TYPOGRAPHY ---------------------------------------------------------- */
 
 body {
     color: #28292C;
-    font-size: 16px;
-   	font-family: 'effra', serif;
+	font-family: "effra", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+	font-size: 16px;
 }
+
 
 a,
 a:link,
 a:visited,
 a:active {
 	color: $link-color;
+}
+
+p {
+	line-height: 1.5;
 }
 
 h2  {
@@ -1356,21 +1329,19 @@ h2  {
 
 /* POST HEADER */
 
-// .post-title-main {
-// 	font-size: 44px;
-// 	font-weight: 300;
-//     letter-spacing: -.4px;
-//     line-height: 1.1;
-//     margin-bottom: 8px;
-// }
-
 .pageType {
 	margin-bottom: 16px;
 }
 
 .summary {
 	color: $secondary-color;
+	line-height: 1.5;
 	margin-bottom: 24px;
+}
+
+a.NavLink {
+	font-weight: 400;
+	color: $nav-color;
 }
 
 

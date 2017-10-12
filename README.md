@@ -10,7 +10,9 @@ gem install jekyll bundler
 bundle install
 
 # Start dev env. Specify one the config files in the root folder.
-jekyll serve --config _config_Cloud.yml
+jekyll serve --config _config_Designer.yml
+
+# Visit http://localhost:4008/
 
 ```
 
