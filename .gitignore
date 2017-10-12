@@ -1,0 +1,17 @@
+# Boilerplate
+
+node_modules
+.DS_Store
+npm-debug.log
+npm-debug.log.*
+.idea
+.npmrc
+package-lock.json
+coverage
+*.sublime-project
+*.sublime-workspace
+
+# Jekyll
+
+_site
+*_output.txt
