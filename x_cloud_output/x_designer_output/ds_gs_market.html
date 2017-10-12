@@ -331,6 +331,21 @@
         </ul>
         
         
+    
+    <li>
+        <a href="#">Troubleshooting</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_gs_trouble.html">Troubleshooting Weebly Cloud</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
         
         <!-- if you aren't using the accordion, uncomment this block:
            <p class="external">
@@ -400,17 +415,8 @@ $('#toc').on('click', 'a', function() {
 <p>You can use this modal window to advertise your own services by setting the publish_upsell_url to a URL where you have content published. That content loads in an iframe (640px W by 200px H) when a site is published. Here’s an example of custom content in the modal (the yellow background is for demonstration purposes only).</p>
 <figure><img class="docimage" src="images/cl_upsell_custom.png" alt="" /><figcaption>Custom content in the Publish modal</figcaption></figure>
 
-<p>Because the <code class="highlighter-rouge">site_ID</code> and <code class="highlighter-rouge">user_ID</code> are passed into the upsell URL, you can dynamically override the content to display based on the user and site being published.
- Clients are accessed using their <code class="highlighter-rouge">user_id</code>. <span style="color: red">[[Is this true?]]</span>
-<!--todo: is this true?-->
-Here’s an example URL in the iframe:</p>
-<p class="codeTitle">Example Publish Modal URL:</p>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html">iframe src="http://your-url.com/upsell.php?user_id=1234567<span class="err">&amp;</span>site_id=1234567891011234"
-style="width:100%; height:200px; margin-top:20px; overflow-x:hidden; border:none;"</code></pre></figure>
-
 <h2 id="customize-the-publish-modal">Customize the Publish Modal</h2>
-<p>Before you can configure Weebly Cloud to use custom content in the Publish modal, you need to create it on a site that can be accessed. You can set the URL in the Cloud Admin or if you want different content displayed based on the site or user, you can set it dynamically using the Site or Account API.</p>
+<p>Before you can configure Weebly Cloud to use custom content in the Publish modal, you need to create it on a site that can be accessed. You set the URL in the Cloud Admin.</p>
 
 <p><strong>To set the URL in the Cloud Admin:</strong></p>
 <ol>
@@ -420,22 +426,6 @@ style="width:100%; height:200px; margin-top:20px; overflow-x:hidden; border:none
   </li>
   <li>Enter the URL to your custom content.</li>
 </ol>
-
-<p><strong>To set the URL dyanmically using the API:</strong></p>
-
-<p>Use the <code class="highlighter-rouge">PATCH</code> request from the Account API if you want all sites for an account to see the same content, or from the Site API if you want content to be based on the site being published. <!--todo: add links--></p>
-
-<p>Here’s a example:</p>
-<p class="codeTitle">Example CURL Request for Publish Upsell URL:</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl https://api.weeblycloud.com/user/USER_ID/site/SITE_ID <span class="se">\</span>
--X PATCH <span class="se">\</span>
--d <span class="s1">'{
-"publish_upsell_url": "http://www.brand.com/upsell.html"
-}'</span> <span class="se">\</span>
--H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
--H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
--H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
 
 
 
@@ -465,7 +455,7 @@ style="width:100%; height:200px; margin-top:20px; overflow-x:hidden; border:none
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 Weebly. All rights reserved. <br />
- Site last generated: Oct 2, 2017 <br />
+ Site last generated: Oct 10, 2017 <br />
 <p><img src="images/company_logo.png" alt="Company logo"/></p>
                 </div>
             </div>

@@ -8,6 +8,12 @@
   
   
   <url>
+    <loc>http://localhost:4008/ds_api_account.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4008/ds_api_test.html</loc>
   </url>
   
@@ -320,6 +326,12 @@
   
   
   <url>
+    <loc>http://localhost:4008/ds_gs_trouble.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4008/ds_gs_upgrades.html</loc>
   </url>
   
@@ -447,6 +459,12 @@
   
   <url>
     <loc>http://localhost:4008/ds_themes_element_guidelines.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_themes_faqs.html</loc>
   </url>
   
   
@@ -580,6 +598,8 @@
   <url>
     <loc>http://localhost:4008/home.html</loc>
   </url>
+  
+  
   
   
   

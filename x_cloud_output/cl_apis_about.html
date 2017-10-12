@@ -373,7 +373,7 @@ $('#toc').on('click', 'a', function() {
 -H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
 
 <h2 id="signing-and-authenticating-requests">Signing and Authenticating Requests</h2>
-<p>The API is validated using both a public key and a private HMAC Hash of the request contents. These values must be passed in the request header as X-Public-Key and X-Signed-Request-Hash. To get started making requests, you will need YOURAPIKEY and YOURAPISECRET which can be generated and obtained on the Settings tab in the Weebly Cloud Admin provided for your account.  YOURAPISECRET is a shared secret known only to you and Weebly Cloud. Do not share YOURAPISECRET.</p>
+<p>The API is validated using both a public key and a private HMAC Hash of the request contents. These values must be passed in the request header as <code class="highlighter-rouge">X-Public-Key</code> and <code class="highlighter-rouge">X-Signed-Request-Hash</code>. To get started making requests, you will need YOURAPIKEY and YOURAPISECRET which can be generated and obtained on the <a href="cl_gs_configure.html#view-and-create-api-keys-and-secrets">Settings</a> tab in the Weebly Cloud Admin provided for your account.  YOURAPISECRET is a shared secret known only to you and Weebly Cloud. Do not share YOURAPISECRET.</p>
 
 <div class="language-shell highlighter-rouge"><pre class="highlight"><code>POST /hosts/user/39793399/site HTTP/1.1
 User-Agent: curl/7.30.0
@@ -432,10 +432,10 @@ X-Signed-Request-Hash: YOURSECRETHASH
 <p>When a call can’t sucessfully complete, Weebly throws an error and returns in the JSON response.</p>
 
 <pre><code class="language-JSON">{
-"error": {
-"code": 900,
-"message": "brand_name field missing"
-}
+    "error": {
+        "code": 900,
+        "message": "brand_name field missing"
+    }
 }
 </code></pre>
 
@@ -526,7 +526,7 @@ X-Signed-Request-Hash: YOURSECRETHASH
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 Weebly. All rights reserved. <br />
- Site last generated: Oct 2, 2017 <br />
+ Site last generated: Oct 10, 2017 <br />
 <p><img src="images/company_logo.png" alt="Company logo"/></p>
                 </div>
             </div>

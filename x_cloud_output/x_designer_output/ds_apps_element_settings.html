@@ -559,9 +559,8 @@ $('#toc').on('click', 'a', function() {
   <p>When a user interacts with your element in the editor (in most cases by clicking on it), Weebly uses the data in the manifest to generate a dialog that allows the user to update the settings.</p>
 
 <figure><img class="docimage" src="images/settings.png" alt="" style="max-width: 400px" /><figcaption>Settings Dialog</figcaption></figure>
-<!--todo: fix graphic size-->
 
-<p>Before you configure your settings in the manifest, be sure that you’ve considered the <a href="ds_apps_guides.html">guidelines</a> and started the configuration of your element in the <a href="ds_apps_element_manifest.html">manifest</a>. Refer to the example manifest<!--todo: link--> for help.</p>
+<p>Before you configure your settings in the manifest, be sure that you’ve considered the <a href="ds_apps_guides.html">guidelines</a> and started the configuration of your element in the <a href="ds_apps_element_manifest.html">manifest</a>. Refer to the <a href="ds_apps_element_man_ex.html">example</a> manifest for help.</p>
 
 <h2 id="start-the-settings-configuration">Start the Settings Configuration</h2>
 <p>The parent <code class="highlighter-rouge">settings</code> property tells Weebly that this element has settings and needs a dialog to display them. It has two sub-properties: <code class="highlighter-rouge">config</code> and <code class="highlighter-rouge">properties</code>. <code class="highlighter-rouge">Config</code> determines how the dialog behaves. <code class="highlighter-rouge">Properties</code> holds the individual settings. As a child to the <code class="highlighter-rouge">settings</code> object you created in <a href="ds_apps_element_manifest.html">Add an element to the Manifest</a>, add the following:</p>
@@ -823,7 +822,7 @@ $('#toc').on('click', 'a', function() {
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> You <strong>must</strong> remain on the same host/domain that you specify in <code class="highlighter-rouge">manifest.json</code>.  Any redirects will cause the <code class="highlighter-rouge">postMessage</code> protocol to fail. Additionally, all URLS must use the <code class="highlighter-rouge">HTTPS</code> protocol.</div>
 
 <h2 id="access-settings-from-your-app">Access Settings from Your App</h2>
-<p>You can access your settings from anywhere within your application code, including JavaScript, CSS, and templates. Please see the various sections for Templates, Javascript, and Stylesheets<!--todo: links--> for information on how to access them in each location.</p>
+<p>You can access your settings from anywhere within your application code, including JavaScript, CSS, and templates. Please see the various sections for <a href="ds_apps_element_temp.html">templates</a>, <a href="ds_apps_element_js.html">JavaScript</a>, and <a href="ds_apps_element_style.html">CSS</a> for information on how to access them from each location.</p>
 
 
     <div class="tags">
@@ -848,7 +847,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 Weebly. All rights reserved. <br />
- Site last generated: Oct 2, 2017 <br />
+ Site last generated: Oct 10, 2017 <br />
 <p><img src="images/company_logo.png" alt="Company logo"/></p>
                 </div>
             </div>

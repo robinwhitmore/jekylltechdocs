@@ -559,7 +559,7 @@ $('#toc').on('click', 'a', function() {
   <h2 id="define-the-element">Define the Element</h2>
 
 <p>An element is defined using the <code class="highlighter-rouge">elements</code> property that lives at the root of <code class="highlighter-rouge">manifest.json</code>.
-Each element must contain the following properties (see the example<!-- todo: link--> for additional help):</p>
+Each element must contain the following properties (see the <a href="ds_apps_element_man_ex.html">example</a> for additional help):</p>
 <ul>
   <li><code class="highlighter-rouge">path</code> (required): A file path to the root directory of the element within the bundle.  For example, if you place the element files within the <code class="highlighter-rouge">elements/ExampleElement</code> directory, the path property would simply be <code class="highlighter-rouge">elements/ExampleElement</code>.</li>
   <li><code class="highlighter-rouge">name</code> (required): The name of the element.  This is what will appear in the element tray in the editor, and will be used as the title in any setting dialogs shown to users.</li>
@@ -584,6 +584,82 @@ Each element must contain the following properties (see the example<!-- todo: li
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
+<h2 id="create-a-tutorial">Create a Tutorial</h2>
+
+<p>You create a tutorial in the manifest. You can configure it so that it opens the first time a user drags your element to the page. Otherwise, the tutorial is accessed from a Tutorial button in the settings dialog. Tutorial topics can be either stepped content or embedded videos, and you can nest one level of up to 8 topics.</p>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Use HTML only for links. These must open in a new tab/window.</div>
+
+<p>Use the following properties to create your tutorial in the manifest:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">tutorial</code>: Property used to group the tutorial content. This is placed at the same level as the <code class="highlighter-rouge">settings</code> property.</li>
+  <li><code class="highlighter-rouge">label</code>: Required when nesting topics, this is the name of the nested topic. It displays as the title in the parent topic. Use only for nested topics.</li>
+  <li><code class="highlighter-rouge">introduction</code>: The text that appears at the top of the dialog. If you are nesting topics, each has its own introduction.</li>
+  <li><code class="highlighter-rouge">type</code>: The type of content in this topic. Valid values are:
+    <ul>
+      <li><code class="highlighter-rouge">step</code>: Creates a numbered procedure list.</li>
+      <li><code class="highlighter-rouge">video</code>: Embeds a YouTube video.</li>
+      <li><code class="highlighter-rouge">topics</code>: Denotes this as the parent topic to nested child topics</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">content</code>: Holds the actual content to display. Valid values depend on the type.
+    <ul>
+      <li><code class="highlighter-rouge">step</code>: An array of strings, one for each step. The maximum number of steps is 5.</li>
+      <li><code class="highlighter-rouge">video</code>: Enter the YouTube ID as a string (for example, as29f83)</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">autopop</code>: Set to <code class="highlighter-rouge">true</code> to have the tutorial automatically open the first time the user drags the element onto the page. The default is <code class="highlighter-rouge">false</code>. If you also set <code class="highlighter-rouge">autopop=true</code> on your element, the tutorial opens first and then the settings dialog.</li>
+</ul>
+
+<p>​Here’s an example of a tutorial consisting of one stepped topic:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="err"></span><span class="s2">"tutorial"</span><span class="err">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"introduction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The price chart is a simple way to visually compare different plans with their features and prices."</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"steps"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"Choose the number of plans you would like. Each plan will add a new column to the chart."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Choose the number of features for each plan. Each feature will add a row to the chart."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Modify the currency setting to ensure the price of each plan is in the correct currency."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Fill out each plan's name, price, and list of features."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Choose where to put your sign up button. It can be place at the end of the features list or at the top with the plan's price."</span><span class="p">,</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nt">"autopop"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span><span class="err">.</span><span class="w"> </span><span class="err">.</span><span class="w"> </span><span class="err">.</span></code></pre></figure>
+
+<p>You create more than one topic by nesting an array of topics as content for the parent, being sure to set the parent to <code class="highlighter-rouge">type=topics</code>.  Use the <code class="highlighter-rouge">label</code> property for each child topic to set the title bar of the dialog. You can have a maximum of 8 nested topics.</p>
+
+<p>​Here’s a tutorial with nested topics - the first one is a stepped topic and the second is a video.</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="err"></span><span class="w">
+</span><span class="s2">"tutorial"</span><span class="err">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"introduction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The price chart is a simple way to visually compare different plans with their features and prices."</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"topics"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Setup instructions"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"introduction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Follow these simple steps to help you get started!"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"steps"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"Choose the number of plans you would like. Each plan will add a new column to the chart."</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"Choose the number of features for each plan. Each feature will add a row to the chart."</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"Modify the currency setting to ensure the price of each plan is in the correct currency."</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"Fill out each plan's name, price, and list of features."</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"Choose where to put your sign up button. It can be place at the end of the features list or at the top with the plan's price."</span><span class="p">,</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Build an online store"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"introduction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"View an in-depth webinar about building an online store with Weebly."</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6clKBa8x1qk"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nt">"autopop"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+
 
     <div class="tags">
         
@@ -607,7 +683,7 @@ Each element must contain the following properties (see the example<!-- todo: li
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 Weebly. All rights reserved. <br />
- Site last generated: Oct 2, 2017 <br />
+ Site last generated: Oct 10, 2017 <br />
 <p><img src="images/company_logo.png" alt="Company logo"/></p>
                 </div>
             </div>

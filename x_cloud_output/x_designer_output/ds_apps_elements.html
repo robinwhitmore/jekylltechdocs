@@ -561,7 +561,7 @@ $('#toc').on('click', 'a', function() {
 <p>An element is made up of the following:</p>
 <ul>
   <li>
-    <p><strong>Manifest<!--todo: add link--> file entries</strong> (<code class="highlighter-rouge">manifest.json</code>): These entries describe the element and define the settings used to display the element. For example, your element might need color, size, or quantity properties to be set. You set default values for those properties in the manifest, and then a modal displays the properties and the user can change the defaults. Settings are not mandatory (think the Weebly Spacer element), can be displayed in the native Weebly settings modal or from an external web page displayed in an iframe.</p>
+    <p><strong><a href="ds_apps_manifest.html">Manifest</a> file entries</strong> (<code class="highlighter-rouge">manifest.json</code>): These entries describe the element and define the settings used to display the element. For example, your element might need color, size, or quantity properties to be set. You set default values for those properties in the manifest, and then a modal displays the properties and the user can change the defaults. Settings are not mandatory (think the Weebly Spacer element), can be displayed in the native Weebly settings modal or from an external web page displayed in an iframe.</p>
 
     <p>You can also configure tooltips for the settings or even a fully-functional tutorial for your element, including a video. The tutorial can be configured to automatically open when the element is first used, and can always be accessed from the Settings dialog.</p>
   </li>
@@ -574,14 +574,14 @@ $('#toc').on('click', 'a', function() {
   <li>
     <p>​<strong>Stylesheet</strong> (<code class="highlighter-rouge">element.css</code>): You style your element using CSS. We use the LESS CSS pre-processor, so you can write your stylesheet using LESS. You can access settings and other data in your stylesheet.</p>
   </li>
-  <li><strong>Assets</strong>: You can include things like graphic files, snippets, etc. to complete your element. You must include the <code class="highlighter-rouge">.svg</code> icon that displays your element in the element tray. See the design guidelines<!--todo: link--> for details.</li>
+  <li><strong>Assets</strong>: You can include things like graphic files, snippets, etc. to complete your element. You must include the <code class="highlighter-rouge">.svg</code> icon that displays your element in the element tray. See the <a href="ds_apps_guides.html">design guidelines</a> for details.</li>
 </ul>
 
 <p>If your element needs to behave differently in the editor than at runtime, you can include editor-specific versions of your stylesheet, JavaScript, and template.</p>
 
 <p>As an example, here’s the manifest for the sample Price Chart element. The <code class="highlighter-rouge">plans</code> property is defined as an integer that determines the number of price plans. The <code class="highlighter-rouge">features</code> property is defined as an integer that determines the number of features per plan. Both of these have a tooltip. The <code class="highlighter-rouge">alignment</code> property is set to default to the left.</p>
 
-<p>The value of the <code class="highlighter-rouge">type</code> property in the settings determines the widgets that display the property. For example, a <code class="highlighter-rouge">type</code> of <code class="highlighter-rouge">text</code> displays a text box. A <code class="highlighter-rouge">type</code> of <code class="highlighter-rouge">int</code> displays a text box that validates for an integer. <code class="highlighter-rouge">Color</code> displays a color picker. You can find the complete list of types here<!--todo: link-->.</p>
+<p>The value of the <code class="highlighter-rouge">type</code> property in the settings determines the widgets that display the property. For example, a <code class="highlighter-rouge">type</code> of <code class="highlighter-rouge">text</code> displays a text box. A <code class="highlighter-rouge">type</code> of <code class="highlighter-rouge">int</code> displays a text box that validates for an integer. <code class="highlighter-rouge">Color</code> displays a color picker. You can find the complete list of types <a href="ds_apps_element_settings.html#setting-types">here</a>.</p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="w">    </span><span class="s2">"properties"</span><span class="err">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
         </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"plans"</span><span class="p">,</span><span class="w">
@@ -654,7 +654,7 @@ $('#toc').on('click', 'a', function() {
 
 <p>If you need the element properties to be set at an external site, you provide a URL to that site and the requested page displays in a modal, using JSON Web tokens (JWT) to pass in user information. You can use the <code class="highlighter-rouge">PostMessage</code> API to pass data between your page and Weebly. We add an invisible overlay div to your iframe so that users can click the element to access its settings. Once the settings panel is opened, the overlay is removed so that users can interact with your iframe.</p>
 
-<p>Click here to find out how to create the element and settings. <!--todo: link--></p>
+<p>Click <a href="ds_apps_element_manifest.html">here</a> to find out how to create the element and settings.</p>
 
 <h2 id="element-tutorials">Element Tutorials</h2>
 
@@ -674,7 +674,7 @@ $('#toc').on('click', 'a', function() {
   </li>
 </ul>
 
-<p>Click here to find out how to create an element tutorial. <!--todo: link--></p>
+<p>Click <a href="ds_apps_element_manifest.html#create-a-tutorial">here</a> to find out how to create an element tutorial.</p>
 
 
 
@@ -704,7 +704,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 Weebly. All rights reserved. <br />
- Site last generated: Oct 2, 2017 <br />
+ Site last generated: Oct 10, 2017 <br />
 <p><img src="images/company_logo.png" alt="Company logo"/></p>
                 </div>
             </div>
