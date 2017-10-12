@@ -2706,78 +2706,78 @@ to use on their projects.
 /* Types
 ------------------------- */
 
-.type_info {
+.Notice.type_info {
 	background-color: #f4f8fa;
 	color: #003055
 }
 
-.type_info .Icon {
+.Notice.type_info .Icon {
 	color: #0073ff;
 }
 
-.type_info + .type_info:not(.subtle) {
+.Notice.type_info + .type_info:not(.subtle) {
 	margin-top: 0;
 	padding-top: 0;
 }
 
-.type_info.subtle + .type_info {
+.Notice.type_info.subtle + .type_info {
 	margin-top: 16px;
 	padding-top: 16px;
 }
 
-.type_success {
+.Notice.type_success {
 	background-color: #d9ffe6;
 	color: #006013
 }
 
-.type_success .Icon {
+.Notice.type_success .Icon {
 	color: #00ce48;
 }
 
-.type_success + .type_success:not(.subtle) {
+.Notice.type_success + .Notice.type_success:not(.subtle) {
 	margin-top: 0;
 	padding-top: 0;
 }
 
-.type_success.subtle + .type_success {
+.Notice.type_success.subtle + .type_success {
 	margin-top: 16px;
 	padding-top: 16px;
 }
 
-.type_warning {
+.Notice.type_warning {
 	background-color: #fff2de;
 	color: #8e3600
 }
 
-.type_warning .Icon {
+.Notice.type_warning .Icon {
 	color: #ff9f00;
 }
 
-.type_warning + .type_warning:not(.subtle) {
+.Notice.type_warning + .Notice.type_warning:not(.subtle) {
 	margin-top: 0;
 	padding-top: 0;
 }
 
-.type_warning.subtle + .type_warning {
+.Notice.type_warning.subtle + .Notice.type_warning {
 	margin-top: 16px;
 	padding-top: 16px;
 }
 
-.type_error {
+.Notice.type_error {
 	background-color: #fbeae5;
 	color: #830808
 }
 
-.type_error .Icon {
+.Notice.type_error .Icon {
 	color: #ff2825;
 }
 
-.type_error + .type_error:not(.subtle) {
+.Notice.type_error + .Notice.type_error:not(.subtle) {
 	margin-top: 0;
 	padding-top: 0;
 }
 
-.type_error.subtle + .type_error {
+.Notice.type_error.subtle + .Notice.type_error {
 	margin-top: 16px;
 	padding-top: 16px;
 }

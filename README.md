@@ -24,3 +24,8 @@ Make sure jQuery is loaded ahead of bootstrap.js.
 *JSON load error.*
 - Remove comma at end of search.json.
 - Remove malformed entry using `"` in description.
+
+
+## Reference
+
+- [Liquid Template Docs](https://shopify.github.io/liquid/)
