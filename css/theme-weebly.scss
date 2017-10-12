@@ -659,10 +659,12 @@ table tr.info {
     background-color: #d9edf7 !important;
 }
 
-section table tr.warning, table tr.testing, table tr.testing > td.sorting_1  {
+section table tr.warning,
+table tr.testing,
+table tr.testing > td.sorting  {
     background-color: #fcf8e3 !important;
 }
-section table tr.danger, table tr.preference, table tr.preference > td.sorting_1  {
+section table tr.danger, table tr.preference, table tr.preference > td.sorting  {
     background-color: #f2dede !important;
 }
 
@@ -1354,19 +1356,16 @@ h2  {
 
 /* POST HEADER */
 
-.post-title-main {
-	font-size: 44px;
-	font-weight: 300;
-    letter-spacing: -.4px;
-    line-height: 1.1;
-    margin-bottom: 8px;
-}
+// .post-title-main {
+// 	font-size: 44px;
+// 	font-weight: 300;
+//     letter-spacing: -.4px;
+//     line-height: 1.1;
+//     margin-bottom: 8px;
+// }
 
 .pageType {
 	margin-bottom: 16px;
-	font-size: 16px;
-	text-transform: uppercase;
-	color: #BBC2C9;
 }
 
 .summary {
