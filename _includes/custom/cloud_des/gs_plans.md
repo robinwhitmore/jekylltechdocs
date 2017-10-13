@@ -21,7 +21,7 @@ You use the **Packages** tab in Cloud Admin to create the plans you need. For re
 2. Enter a plan name. The name must be unique.
 3. Select the corresponding Weebly plan. Your plan will inherit the functionality available in the Weebly plan.
 4. Optionally enable access to the [Weebly App Center](http://www.weebly.com/app-center). If you don't enable access, no links to the center will display in the Editor. {%if site.project=="cloud"%}You can still create and install your own <span style="color: red">custom apps</span> for this plan.{% endif %} Depending on how your account was configured, free sites may or may not be able to have access to the app center. Ask your account representative for more info.
-   {% include tip.html content="Ask your account representative if your unsure whether or not your account has access to the App Center." %}
+   {% include note.html type="tip" content="Ask your account representative if your unsure whether or not your account has access to the App Center." %}
 5. Optionally set a published page number limit (the site can have an unlimited amount of draft, unpublished pages).
 6. Set the monthly and/or yearly pricing for the plan.
 7. Optionally set the plan as the default. Only one plan can be the default.

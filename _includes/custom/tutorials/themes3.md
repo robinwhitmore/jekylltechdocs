@@ -6,7 +6,7 @@ Let's use the following as the primary and accent colors:
 * Primary: #35235D (purple)
 * Accent: #DB2464 (dark pink)​
 
-{% include tip.html content="If at any time  the colors or display in the preview seem incorrect , it may be because the manifest has invalid JSON. You can use a validator like [this one](https://jsonlint.com/) to make sure your code is correct." %}
+{% include note.html type="tip" content="If at any time  the colors or display in the preview seem incorrect , it may be because the manifest has invalid JSON. You can use a validator like [this one](https://jsonlint.com/) to make sure your code is correct." %}
 
 
 1. With the Base theme applied to your site, click the **Theme** tab.
@@ -43,7 +43,7 @@ Let's use the following as the primary and accent colors:
 
     {% include image.html file="theme_palette.png" caption="Color palette with two colors" %}
 
-    {% include tip.html content="If you don't see the palette, try refreshing your browser." %}
+    {% include note.html type="tip" content="If you don't see the palette, try refreshing your browser." %}
 
 
 ### What Just Happened?

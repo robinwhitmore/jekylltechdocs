@@ -20,7 +20,7 @@ We’ll configure these settings in the manifest.
       },
    ~~~
 
-   {% include tip.html content="Remember that true and false don't need quotes in JSON!" %}
+   {% include note.html type="tip" content="Remember that true and false don't need quotes in JSON!" %}
 2. All settings must belong to a group, and that group is used to create a section in the Settings dialog. The first group we’ll create will be for the settings that determine how many price plans and features display, as well as alignment and button location. We want to title this section “Settings,” so we’ll enter the following:
    ~~~ json
    "properties": [{

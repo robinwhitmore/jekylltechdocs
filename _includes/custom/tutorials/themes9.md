@@ -4,7 +4,7 @@ Now that we're done customizing the theme, let's take a screenshot so that it ca
 
 2. In the Code Editor, take a screenshot of the theme from the preview below the code. If your screenshot app allows it, try to make the size of the screenshot 1590px wide, 894px high, with a DPI of 480, and saved as a JPG. Or you can edit the shot after taking it to meet these requirements.
 
-    {%include tip.html content="Normally, you'd take the screenshot from a published site, but for this tutorial, we'll just use the editor preview." %}
+    {%include note.html type="tip" content="Normally, you'd take the screenshot from a published site, but for this tutorial, we'll just use the editor preview." %}
 
 2. Save the screenshot to a local directory with the name `screenshot.jpg`.
 

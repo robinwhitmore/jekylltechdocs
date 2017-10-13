@@ -1,9 +1,9 @@
 {% if include.type == 'tip' %}
-<div markdown="span" class="Notice type_success" role="alert">
-	<b>Tip:</b> {{include.content}}
-</div>
+	<div markdown="span" class="Notice type_success" role="alert">
+		<b>Tip:</b> {{include.content}}
+	</div>
 {% else %}
-<div markdown="span" class="Notice type_info" role="alert">
-	<b>Note:</b> {{include.content}}
-</div>
+	<div markdown="span" class="Notice type_info" role="alert">
+		<b>Note:</b> {{include.content}}
+	</div>
 {% endif %}

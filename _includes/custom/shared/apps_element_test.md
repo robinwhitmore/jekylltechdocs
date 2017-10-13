@@ -6,7 +6,7 @@ To install your application to a test site, from the {%if site.project=="designe
 ​Test your app in the editor. If you created a tutorial, test that it displays properly and that the instructions and descriptions are correct. Publish your site and test the functionality on a published site. You may also want to test it on a mobile device.
 
 As a developer, you can install multiple versions of your app onto your development site (and only your development site). When you reinstall your app, any previously installed versions will not be overwritten - you will have multiple versions installed to your test site. If you don't wish to have multiple versions, be sure to archive your previous version before installing a newer version.
-{% include tip.html content="This is not the case for your customers. When you release a new version of your app, any customer that has it installed will automatically receive the new version and will have the older version uninstalled for them." %}
+{% include note.html type="tip" content="This is not the case for your customers. When you release a new version of your app, any customer that has it installed will automatically receive the new version and will have the older version uninstalled for them." %}
 
 Repeat the install, editor development, and development site testing using the Weebly app from a mobile device, to be sure nothing breaks when used on smaller devices. Also make sure to test the scenario where a user may own multiple sites and wants to install your app onto more than one site.
 {% if site.project=="cloud" or "designer" %}

@@ -54,7 +54,7 @@ To create the element's setting properties, you define the following:
 * `label`: The label for the setting displayed in the dialog.
 * `type`: The type of the setting.  This dictates how the setting will appear in the dialog, and what validations can be applied to it. See Setting Types, [below](#setting-types), for allowed options.
 * `default`: The default value for this setting.
-   {% include tip.html content="Use `default: \" \"`  for null." %}
+   {% include note.html type="tip" content="Use `default: \" \"`  for null." %}
 * `hidden`: Set to `true` if you don't want this setting to display in the dialog. When set to `true`, you must supply a value for `default`. Default is `false.`
     {% include note.html content="If you want to have all of your settings managed from an external URL (see [below](#create-external-settings)), you can set `hidden` to `true` on all settings.  When the dialog displays, it will simply contain a button to open the iframe." %}
 * `private`: Set to `true` to make the setting unavailable to the published site (default is `false`).  In some cases, settings may contain private information (such as API Keys).  This ensure that the data is not available to visitors of the site, and can only be used within the editor.

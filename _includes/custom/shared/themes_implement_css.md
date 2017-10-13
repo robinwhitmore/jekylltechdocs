@@ -1,6 +1,6 @@
 For CSS, there is one main stylesheet, `main_style.css`. If your theme uses {% if site.project=="designer" %}[color variations](ds_themes_variations.html){%elsif site.project=="cloud" %}[color variations](cl_themes_variations.html){%elsif site.project=="platform" %}[color variations](pf_themes_variations.html){%endif%}, then those different variations are declared in JSON at the beginning of the stylesheet. For LESS, there is one main stylesheet, `main.less`, and if using color variations, there will be a stylesheet for each color.
 
-{% include tip.html content="Start with the stylesheet from an existing theme so that you're sure to have all necessary classes and IDs styled." %}
+{% include note.html type="tip" content="Start with the stylesheet from an existing theme so that you're sure to have all necessary classes and IDs styled." %}
 
 ## Reset Styles
 
