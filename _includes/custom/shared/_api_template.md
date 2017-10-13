@@ -14,7 +14,7 @@ The following table shows all fields that exist for this API, those that are ret
         <td><strong>Changeable</strong></td>
     </tr>
     <tr>
-        <td>â??<code>user_id</code></td>
+        <td>â€‹<code>user_id</code></td>
         <td>The unique ID of the authenticated user</td>
         <td>string</td>
         <td>X</td>
@@ -23,7 +23,7 @@ The following table shows all fields that exist for this API, those that are ret
     </tr>
     <tr>
         <td><code>site_id</code></td>
-        <td>ID of a Weebly site, unique to the currently authenticated userâ??</td>
+        <td>ID of a Weebly site, unique to the currently authenticated userâ€‹</td>
         <td>string</td>
         <td>X</td>
         <td>X</td>
@@ -63,9 +63,9 @@ The following table shows all fields that exist for this API, those that are ret
     </tr>
 
 </table>
-{% include note.html content = "Any fields returned that are not documented are currently unsupported and can be safely ignored."%}
+{% include custom/notes/note_api_undoc.md %}
 
-<h2><span class="label label-get text-uppercase">get</span> Retrieve a List of <span style ="color:red">Object</span>s for a Given Site</h2>
+<h2><span class="label label-get text-uppercase">get</span> Retrieve a List of <span style ="color:red">Object</span>s</h2>
 
 {% highlight shell%}
 {% if site.project == "platform" %}
@@ -76,11 +76,11 @@ GET /user/USER_ID/site/{SITE_ID}/
 {% endif %}
 {% endhighlight %}
 
-<p>Returns all <span style="color:red">object</span>s for the given site. Only list fields are returned.
-    {% if site.project == "platform" %}
-    <br>
-    <b>scope:</b> <code>read:site</code>
-    {% endif %}
+Returns all <span style="color:red">object</span>s for the given site. Only `list` fields are returned.
+{% if site.project == "platform" %}
+<br>
+**scope:** `read:site`
+{% endif %}
 
 ### Query Paramters
 Returned values are paginated. You can further filter results using these parameters:
@@ -117,7 +117,7 @@ Returned values are paginated. You can further filter results using these parame
     </tr>
     <tr>
         <td><code>filterfor</code></td>
-        <td>â??Value to search the filterby field for.</td>
+        <td>â€‹Value to search the filterby field for.</td>
         <td>string</td>
     </tr>
     <tr>
@@ -146,7 +146,7 @@ curl --request GET \
 --header 'x-weebly-access-token: [YOUR_TOKEN]"
 
 {% else %}
-curl https://api.weeblycloud.com/user/USER_ID/site/SITE_ID/object \
+curl https://api.weeblycloud.com/user/123456/site/987654321/object \
 -H "X-Public-Key: YOURAPIKEY" \
 -H "X-Signed-Request-Hash: YOURSECRETHASH"
 {% endif %}
@@ -162,7 +162,7 @@ curl --request GET \
 --header 'x-weebly-access-token: [YOUR_TOKEN]"
 
 {% else %}
-curl https://api.weeblycloud.com/user/USER_ID/site/SITE_ID/page?filterby=layout&filterfor=tall-header \
+curl https://api.weeblycloud.com/user/123456/site/987654321/page?filterby=layout&filterfor=tall-header \
 -H "X-Public-Key: YOURAPIKEY" \
 -H "X-Signed-Request-Hash: YOURSECRETHASH"
 {% endif %}
@@ -171,30 +171,30 @@ curl https://api.weeblycloud.com/user/USER_ID/site/SITE_ID/page?filterby=layout&
 <p class="codeTitle">Example response:</p>
 {% highlight json %}
 [
-    {
-        "page_id": "131221993403487092",
-        "title": "new",
-        "page_order": 2,
-        "parent_id": "205694454183612584",
-        "layout": "tall-header",
-        "page_url": "new.html"
-    },
-    {
-        "page_id": "205694454183612584",
-        "title": "Blog",
-        "page_order": 2,
-        "parent_id": null,
-        "layout": "tall-header",
-        "page_url": "blog1.html"
-    },
-    {
-        "page_id": "267240304658043510",
-        "title": "members only",
-        "page_order": 4,
-        "parent_id": null,
-        "layout": "tall-header",
-        "page_url": "members-only.html"
-    }
+{
+"page_id": "131221993403487092",
+"title": "new",
+"page_order": 2,
+"parent_id": "205694454183612584",
+"layout": "tall-header",
+"page_url": "new.html"
+},
+{
+"page_id": "205694454183612584",
+"title": "Blog",
+"page_order": 2,
+"parent_id": null,
+"layout": "tall-header",
+"page_url": "blog1.html"
+},
+{
+"page_id": "267240304658043510",
+"title": "members only",
+"page_order": 4,
+"parent_id": null,
+"layout": "tall-header",
+"page_url": "members-only.html"
+}
 ]
 {% endhighlight %}
 
@@ -208,11 +208,11 @@ GET /user/USER_ID/site/{SITE_ID}/
 {% endif %}
 {% endhighlight %}
 
-<p>Returns all fields for the given <span style="color:red">object</span>.
-    {% if site.project == "platform" %}
-    <br>
-    <b>scope:</b> <code>read:site</code>
-    {% endif %}
+Returns all fields for the given <span style="color:red">object</span>.
+{% if site.project == "platform" %}
+<br>
+**scope:** `read:site`
+{% endif %}
 
 <p class="codeTitle">Example CURL request:</p>
 {% highlight shell%}
@@ -224,7 +224,7 @@ curl --request GET \
 --header 'x-weebly-access-token: [YOUR_TOKEN]"
 
 {% else %}
-curl https://api.weeblycloud.com/user/USER_ID/site/SITE_ID/page/1234567890 \
+curl https://api.weeblycloud.com/user/123456/site/987654321/page/1234567890 \
 -H "X-Public-Key: YOURAPIKEY" \
 -H "X-Signed-Request-Hash: YOURSECRETHASH"
 {% endif %}
@@ -234,16 +234,16 @@ curl https://api.weeblycloud.com/user/USER_ID/site/SITE_ID/page/1234567890 \
 <p>See Fields table. All fields for the <span style="color:red">object</span> are returned.</p>
 {% highlight json %}
 [
-    {
-        "page_id": "1234567890",
-        "title": "Contact",
-        "hidden": false,
-        "membership_required": null,
-        "parent_id": null,
-        "layout": "short-header",
-        "updated_date": "2016-02-08 11:16:19",
-        "page_url": "new.html"
-    }
+{
+"page_id": "1234567890",
+"title": "Contact",
+"hidden": false,
+"membership_required": null,
+"parent_id": null,
+"layout": "short-header",
+"updated_date": "2016-02-08 11:16:19",
+"page_url": "new.html"
+}
 ]
 {% endhighlight %}
 
@@ -257,14 +257,15 @@ POST /user/USER_ID/site/{SITE_ID}/page
 {% endif %}
 {% endhighlight %}
 
-<p>Creates a <span style="color:red">object</span>.
-    {% if site.project == "platform" %}
-    <br>
-    <b>scope:</b> <code>write:site</code>
-    {% endif %}
+Creates a <span style="color:red">object</span>.
+{% if site.project == "platform" %}
+<br>
+**scope:** `write:site`
+{% endif %}
 
-<h3>Createable Fields</h3>
-<p>These fields can be created</p>
+### Createable Fields
+
+These fields can be created:
 
 <table>
     <tr>
@@ -290,15 +291,15 @@ curl --request POST \
 --header 'content-type: application/json' \
 --header 'x-weebly-access-token: [YOUR_TOKEN]"
 --data '{
-            "title": "My Title"
-        }'
+"title": "My Title"
+}'
 
 {% else %}
-curl https://api.weeblycloud.com/user/USER_ID/site/SITE_ID/page \
+curl https://api.weeblycloud.com/user/123456/site/987654321/page \
 -X POST \
 -d '{
-        "title": "My Title"
-    }' \
+"title": "My Title"
+}' \
 -H "Content-type: application/json" \
 -H "X-Public-Key: YOURAPIKEY" \
 -H "X-Signed-Request-Hash: YOURSECRETHASH"
@@ -307,15 +308,15 @@ curl https://api.weeblycloud.com/user/USER_ID/site/SITE_ID/page \
 
 <p class="codeTitle">Example response:</p>
 {% highlight json %}
- {
-    "page_id": "1234567890",
-    "title": "My Title",
-    "hidden": false,
-    "membership_required": null,
-    "parent_id": null,
-    "layout": "short-header",
-    "updated_date": "2016-02-08 11:16:19",
-    "page_url": "new.html"
+{
+"page_id": "1234567890",
+"title": "My Title",
+"hidden": false,
+"membership_required": null,
+"parent_id": null,
+"layout": "short-header",
+"updated_date": "2016-02-08 11:16:19",
+"page_url": "new.html"
 }
 {% endhighlight %}
 
@@ -329,14 +330,15 @@ PUT /user/USER_ID/site/{SITE_ID}/page/{PAGE_ID}
 {% endif %}
 {% endhighlight %}
 
-<p>Replaces the given <span style="color:red">object</span>.
-    {% if site.project == "platform" %}
-    <br>
-    <b>scope:</b> <code>write:site</code>
-    {% endif %}
+Replaces the given <span style="color:red">object</span>.
+{% if site.project == "platform" %}
+<br>
+**scope:** `write:site`
+{% endif %}
 
-<h3>Replaceable Fields</h3>
-<p>These fields can be replaced</p>
+### Replaceable Fields
+
+These fields can be replaced:
 
 <table>
     <tr>
@@ -362,15 +364,15 @@ curl --request PUT \
 --header 'content-type: application/json' \
 --header 'x-weebly-access-token: [YOUR_TOKEN]"
 --data '{
-            "title": "New Title"
-        }'
+"title": "New Title"
+}'
 
 {% else %}
-curl https://api.weeblycloud.com/user/USER_ID/site/SITE_ID/page/1234567890 \
+curl https://api.weeblycloud.com/user/123456/site/987654321/page/1234567890 \
 -X PUT \
 -d '{
-        "title": "New Title"
-    }' \
+"title": "New Title"
+}' \
 -H "Content-type: application/json" \
 -H "X-Public-Key: YOURAPIKEY" \
 -H "X-Signed-Request-Hash: YOURSECRETHASH"
@@ -380,14 +382,14 @@ curl https://api.weeblycloud.com/user/USER_ID/site/SITE_ID/page/1234567890 \
 <p class="codeTitle">Example response:</p>
 {% highlight json %}
 {
-    "page_id": "1234567890",
-    "title": "My Title",
-    "hidden": false,
-    "membership_required": null,
-    "parent_id": null,
-    "layout": "short-header",
-    "updated_date": "2016-02-08 11:16:19",
-    "page_url": "new.html"
+"page_id": "1234567890",
+"title": "My Title",
+"hidden": false,
+"membership_required": null,
+"parent_id": null,
+"layout": "short-header",
+"updated_date": "2016-02-08 11:16:19",
+"page_url": "new.html"
 }
 {% endhighlight %}
 
@@ -401,14 +403,15 @@ PATCH /user/USER_ID/site/{SITE_ID}/page/{PAGE_ID}
 {% endif %}
 {% endhighlight %}
 
-<p>Updates the given <span style="color:red">object</span>.
-    {% if site.project == "platform" %}
-    <br>
-    <b>scope:</b> <code>write:site</code>
-    {% endif %}
+Updates the given <span style="color:red">object</span>.
+{% if site.project == "platform" %}
+<br>
+**scope:** `write:site`
+{% endif %}
 
-<h3>Updateable Fields</h3>
-<p>These fields can be updated</p>
+### Updateable Fields
+
+These fields can be updated:
 
 <table>
     <tr>
@@ -434,15 +437,15 @@ curl --request PATCH \
 --header 'content-type: application/json' \
 --header 'x-weebly-access-token: [YOUR_TOKEN]"
 --data '{
-            "title": "New Title"
-        }'
+"title": "New Title"
+}'
 
 {% else %}
-curl https://api.weeblycloud.com/user/USER_ID/site/SITE_ID/page/1234567890 \
+curl https://api.weeblycloud.com/user/987654321/site/123456/page/1234567890 \
 -X PATCH \
 -d '{
-        "title": "My Title"
-    }' \
+"title": "My Title"
+}' \
 -H "Content-type: application/json" \
 -H "X-Public-Key: YOURAPIKEY" \
 -H "X-Signed-Request-Hash: YOURSECRETHASH"
@@ -450,17 +453,17 @@ curl https://api.weeblycloud.com/user/USER_ID/site/SITE_ID/page/1234567890 \
 {% endhighlight %}
 
 <p class="codeTitle">Example response:</p>
-<p>See Fields table. All fields for the <span style="color:red">object</span> are returned.</p>
+See Fields table. All fields for the <span style="color:red">object</span> are returned.</p>
 {% highlight json %}
 {
-    "page_id": "1234567890",
-    "title": "My Title",
-    "hidden": false,
-    "membership_required": null,
-    "parent_id": null,
-    "layout": "short-header",
-    "updated_date": "2016-02-08 11:16:19",
-    "page_url": "new.html"
+"page_id": "1234567890",
+"title": "My Title",
+"hidden": false,
+"membership_required": null,
+"parent_id": null,
+"layout": "short-header",
+"updated_date": "2016-02-08 11:16:19",
+"page_url": "new.html"
 }
 {% endhighlight %}
 
@@ -474,11 +477,11 @@ DELETE /user/USER_ID/site/{SITE_ID}/page/{PAGE_ID}
 {% endif %}
 {% endhighlight %}
 
-<p>Deletes the given <span style="color:red">object</span>.
-    {% if site.project == "platform" %}
-    <br>
-    <b>scope:</b> <code>write:site</code>
-    {% endif %}
+Deletes the given <span style="color:red">object</span>.
+{% if site.project == "platform" %}
+<br>
+**scope:** `write:site`
+{% endif %}
 
 <p class="codeTitle">Example CURL request:</p>
 {% highlight shell%}
@@ -490,7 +493,7 @@ curl --request DELETE \
 --header 'x-weebly-access-token: [YOUR_TOKEN]"
 
 {% else %}
-curl https://api.weeblycloud.com/user/USER_ID/site/SITE_ID/page/1234567890 \
+curl https://api.weeblycloud.com/user/123456/site/987654321/page/1234567890 \
 -X DELETE \
 -H "Content-type: application/json" \
 -H "X-Public-Key: YOURAPIKEY" \
@@ -498,6 +501,5 @@ curl https://api.weeblycloud.com/user/USER_ID/site/SITE_ID/page/1234567890 \
 {% endif %}
 {% endhighlight %}
 
-<strong>Response</strong>
-<p>There is no response to a delete request.</p>
-
+**Response**
+There is no response to a delete request.

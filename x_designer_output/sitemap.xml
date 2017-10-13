@@ -8,19 +8,31 @@
   
   
   <url>
+    <loc>http://localhost:4008/ds_apis_about.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4008/ds_api_account.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://localhost:4008/ds_api_test.html</loc>
+    <loc>http://localhost:4008/ds_api_blog.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://localhost:4008/ds_apis_about.html</loc>
+    <loc>http://localhost:4008/ds_api_blog_post.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_api_test.html</loc>
   </url>
   
   
@@ -630,6 +642,12 @@
   
   
   
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/css/theme-weebly.css</loc>
+  </url>
   
   
   

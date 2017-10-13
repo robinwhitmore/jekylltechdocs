@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Use the Blog API to return information about a site's blog(s).">
+<meta name="keywords" content="sites,  blog">
+<title>Blog API | Weebly Cloud for Designers Documentation</title>
+
+<link rel="stylesheet" href="css/syntax.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+<!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/modern-business.css">
+<link rel="stylesheet" href="css/lavish-bootstrap.css">
+-->
+<link rel="stylesheet" href="css/orbit.css">
+<link rel="stylesheet" href="css/theme-weebly.css">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<!-- <link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4008feed.xml"> -->
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        /*Bootstrap popovers are initialized with the following script. In the options, I'm setting the placement to be on the right, the trigger to be hover rather than click, and to allow HTML from the JSON data source. */
+
+        $('[data-toggle="popover"]').popover({
+            placement: 'top',
+            trigger: 'hover',
+            html: true
+        });
+    })
+</script>
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="fa fa-home fa-lg navbar-brand" href="home.html">&nbsp;<span class="projectTitle">
+                Weebly Cloud for Designers</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right NavList horizontal">
+                <!-- entries without drop-downs appear here -->
+                
+                
+                
+                <li class="NavLinkLi">
+                	<a href="home.html" class="NavLink">Get Started</a>
+               	</li>
+                
+                
+                
+                <li class="NavLinkLi">
+                	<a href="ds_apps_gs.html" class="NavLink">Custom Apps</a>
+               	</li>
+                
+                
+                
+                <li class="NavLinkLi">
+                	<a href="ds_themes_start.html" class="NavLink">Custom Themes</a>
+               	</li>
+                
+                
+                
+                <li class="NavLinkLi">
+                	<a href="ds_apis_about.html" class="NavLink">Cloud APIs</a>
+               	</li>
+                
+                
+                
+                <li class="NavLinkLi">
+                	<a href="ds_tags_about.html" class="NavLink">Tags</a>
+               	</li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+			<li class="NavLinkLi">
+
+
+
+  <a class="email NavLink" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Blog API page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+
+</li>
+
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="Search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Blog API">{title}</a></li>',
+                    noResultsText: 'No results',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Sidebar Column -->
+        <div class="col-md-3">
+
+          
+
+
+
+
+
+
+
+
+
+
+<ul id="mysidebar" class="nav">
+    <li class="sidebarTitle">Weebly Cloud REST APIs </li>
+    
+    
+    
+        
+    
+    <li>
+        <a href="#">Use the REST APIs</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_api_about.html">How to Use the REST APIs</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_account.html">Account API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_blog.html">Blog API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_blog_post.html">Blog Post API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_form.html">Form API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_form_entry.html">Form Entry API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_member.html">Member API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_group.html">Group API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_page.html">Page API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_plan.html">Plan API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_site.html">Site API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_store.html">Store API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_category.html">Category API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_category_image.html">Category Image API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_coupon.html">Coupon API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_order.html">Order API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_order_billing.html">Order Billing API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_order_billing_transaction.html">Order Billing Transaction API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_order_item.html">Order Item API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_order_shipment.html">Order Shipment API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_order_shipment_transaction.html">Order Shipment Transaction API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_product.html">Product API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_product_image.html">Product Image API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_product_option.html">Product Option API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_product_option_choice.html">Product Option Choice API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_product_sku.html">Product SKU API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_subaccount.html">Sub-Account API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_team_member.html">Team Member API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_themes_cloud.html">Themes (Custom Cloud) API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_themes_user.html">Themes (User) API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_user.html">User API</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Webhooks</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_wh_webhooks">How to Use Webhooks</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_wh_user">User Webhooks</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_wh_site">Site Webhooks</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_wh_store">Store Webhooks</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_wh_member">Member Webhooks</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_wh_form">Form Webhooks</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_wh_blog">Blog Webhooks</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+        <!-- if you aren't using the accordion, uncomment this block:
+           <p class="external">
+               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+           </p>
+           -->
+    </li>
+</ul>
+</div>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+    <!-- Content Column -->
+    <div class="col-md-9">
+        <div>
+    <div class="post-header">
+        <h1 class="post-title-main display-2">Blog API</h1>
+    </div>
+    <div class="pageType">  reference </div>
+</div>
+
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary">Use the Blog API to return information about a site's blog(s).</div>
+   
+
+
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 50);
+  return false
+})
+
+});
+</script>
+
+<div id="toc" class="toc"></div>
+
+    
+
+
+    
+
+  <p>By default, Weebly <a href="https://hc.weebly.com/hc/en-us/articles/201405086-Create-a-Blog-Post">blogs</a> allow comments and use a native commenting system that allows moderation - comments need approval before displaying on the site. Site owners can elect to use Disqus or Facebook instead. Owners can also add custom code to the header and/or footer of their blog.</p>
+
+<p>Use the Blog API to retrieve a list of blogs on the site or details about a given blog. For information about blog posts, use the <a href="ds_api_blog_post.html">Blog Post</a> API.</p>
+
+<p>The following table shows all fields that exist for this API, noting those that are returned when you retrieve a list. All fields are returned when you retrieve a single item.</p>
+<table>
+    <tbody>
+    <tr>
+        <td><strong>Name</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Type</strong></td>
+        <td><strong>List</strong></td>
+    </tr>
+    <tr>
+        <td><code>user_id</code></td>
+        <td>The unique ID of the authenticated user.</td>
+        <td>string</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>site_id</code></td>
+        <td>ID of a Weebly site, unique to the currently authenticated
+            user.</td>
+        <td>string</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>blog_id</code></td>
+        <td>Unique ID for this blog.<br />
+        </td>
+        <td>string</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>page_id</code></td>
+        <td>​​The unique ID of the page<!--todo: link--> that the blog is
+            on.</td>
+        <td>string</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>title</code></td>
+        <td>The blog's title<br />
+        </td>
+        <td>string</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td>
+            <code>allow_comments</code>
+        </td>
+        <td>Whether or not the blog allows
+            comments. Valid values are:
+            <ul>
+                <li><code>yes</code></li>
+                <li><code>no​​</code></li>
+            </ul>
+        </td>
+        <td>string</td>
+        <td>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <code>date_format</code>
+        </td>
+        <td>Format used for dates on this
+            site. Valid values are:<br />
+            <ul>
+                <li><code>n/j/Y</code>:
+                    month/day/year</li>
+                <li><code>j/n/Y</code>:
+                    day/month/year</li>
+            </ul>
+        </td>
+        <td>string</td>
+        <td>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <code>time_format</code>
+        </td>
+        <td>Time format used for the blog.
+            Valid values are:
+            <ul>
+                <li><code>12</code></li>
+                <li><code>24</code></li>
+            </ul>
+        </td>
+        <td>string</td>
+        <td>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <code>page_blog_num</code>
+        </td>
+        <td>​The page number for pagination
+            of the blog.
+        </td>
+        <td>string</td>
+        <td>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <code>blog_link</code>
+        </td>
+        <td>A link to the blog, without the
+            site URL. (example: <code>blog.html</code>)<br />
+        </td>
+        <td>string</td>
+        <td>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <code>blog_slug</code>
+        </td>
+        <td>​​​The unique (within the site)
+            slug for the blog.
+        </td>
+        <td>string</td>
+        <td>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <code>require_approval</code>
+        </td>
+        <td>Whether or not comments require
+            approval. Valid values:
+            <ul>
+                <li><code>true</code></li>
+                <li><code>false</code></li>
+            </ul>
+        </td>
+        <td>boolean<br />
+        </td>
+        <td><br />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <code>post_header_code</code>
+        </td>
+        <td>​​​The HTML code that goes in
+            the post header.
+        </td>
+        <td>string</td>
+        <td>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <code>post_footer_code</code>
+        </td>
+        <td>​​​​The HTML code that goes in
+            the post footer.
+        </td>
+        <td>string</td>
+        <td>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <code>time_zone</code>
+        </td>
+        <td>Time zone of the blog. ​Valid
+            values can be found <a href="http://cloud-developer.weebly.com/uploads/3/0/3/1/30316827/timezones.json" target="_blank">here<!--todo: Need to repost this somewhere--></a>.<br />
+        </td>
+        <td>string</td>
+        <td>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <code>commenting_system</code>
+        </td>
+        <td>How blog comments are selected.
+            default uses Weebly. Valid values are:
+            <ul>
+                <li>​<code>default</code> (uses
+                    Weebly)</li>
+                <li><code>disqus</code></li>
+                <li><code>facebook</code></li>
+            </ul>
+        </td>
+        <td>string</td>
+        <td>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <code>updated_date</code>
+        </td>
+        <td>​​Date the blog was last updated.
+        </td>
+        <td>​​Unix timestamp in GMT<br />
+        </td>
+        <td><br />
+        </td>
+    </tr>
+    </tbody>
+</table>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Any fields returned that are not documented are currently unsupported and can be safely ignored.</div>
+
+<h2><span class="label label-get text-uppercase">get</span> Retrieve a List of Blogs</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/blog</code></pre></figure>
+
+<p>Returns all blogs for the given site. Only <code class="highlighter-rouge">list</code> fields are returned.</p>
+
+<p class="codeTitle">Example CURL request returning all blogs:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/blog <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"blog_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"442134315209084655"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"page_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"697954564875544555"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Personal Blog"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"blog_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"546579684213136568"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"page_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"697954564875544557"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Work Blog"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span></code></pre></figure>
+
+<h2><span class="label label-get text-uppercase">get</span> Retrieve Details for a Blog
+</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/blog/<span class="o">{</span>BLOG_ID<span class="o">}</span></code></pre></figure>
+
+<p>Returns all fields for the given blog.
+    
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/page/1234567890 <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+
+<p class="codeTitle">Example response:</p>
+<p>See Fields table. All fields for the blog are returned.</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"blog_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1234567890"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"page_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"87654321098"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"allow_comments"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yes"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"date_format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"us"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"time_format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"n/j/y"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"page_blog_num"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"blog_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"blog.html"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"blog_slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"blog"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"require_approval"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"post_header_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"post_footer_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"time_zone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"America\/Los_Angeles"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"commenting_system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Work Blog"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1415318319</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+
+</p>
+
+
+    <div class="tags">
+        
+        <b>Tags: </b>
+        
+        
+        
+        <a href="tag_sites.html" class="btn btn-default navbar-btn cursorNorm" role="button">sites</a>
+        
+        
+        
+    </div>
+
+    
+
+</div>
+
+<hr class="shaded"/>
+
+<footer class="footer">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="footer__fineprint">
+				&copy;2017 Weebly. All rights reserved. <br />
+				 Site last generated: Oct 12, 2017
+			</div>
+			<div class="footer__logo">
+				<img src="images/weebly_logo.svg" alt="Weebly logo"/>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+
+</body>
+
+</html>

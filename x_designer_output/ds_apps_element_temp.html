@@ -6,20 +6,22 @@
 <meta name="description" content="Templates are the core component of an element. The template is the actual HTML content that will be rendered on a users page.">
 <meta name="keywords" content="elements,  template, element, mustache, content fields,">
 <title>Create an Element Template | Weebly Cloud for Designers Documentation</title>
+
 <link rel="stylesheet" href="css/syntax.css">
-
-
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+<!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/modern-business.css">
 <link rel="stylesheet" href="css/lavish-bootstrap.css">
-<link rel="stylesheet" href="css/customstyles.css">
-<link rel="stylesheet" href="css/theme-blue.css">
+-->
+<link rel="stylesheet" href="css/orbit.css">
+<link rel="stylesheet" href="css/theme-weebly.css">
 
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 
 
@@ -56,6 +58,7 @@
         });
     })
 </script>
+
     <script>
         $(document).ready(function() {
             // Initialize navgoco with default options
@@ -112,28 +115,38 @@
                 Weebly Cloud for Designers</span></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right NavList horizontal">
                 <!-- entries without drop-downs appear here -->
                 
                 
                 
-                <li><a href="home.html">Get Started</a></li>
+                <li class="NavLinkLi">
+                	<a href="home.html" class="NavLink">Get Started</a>
+               	</li>
                 
                 
                 
-                <li><a href="ds_apps_gs.html">Custom Apps</a></li>
+                <li class="NavLinkLi">
+                	<a href="ds_apps_gs.html" class="NavLink">Custom Apps</a>
+               	</li>
                 
                 
                 
-                <li><a href="ds_themes_start.html">Custom Themes</a></li>
+                <li class="NavLinkLi">
+                	<a href="ds_themes_start.html" class="NavLink">Custom Themes</a>
+               	</li>
                 
                 
                 
-                <li><a href="ds_apis_about.html">Cloud APIs</a></li>
+                <li class="NavLinkLi">
+                	<a href="ds_apis_about.html" class="NavLink">Cloud APIs</a>
+               	</li>
                 
                 
                 
-                <li><a href="ds_tags_about.html">Tags</a></li>
+                <li class="NavLinkLi">
+                	<a href="ds_tags_about.html" class="NavLink">Tags</a>
+               	</li>
                 
                 
                 
@@ -141,11 +154,11 @@
                 <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
                 
                 
-			<li>
+			<li class="NavLinkLi">
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Create an Element Template page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email NavLink" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Create an Element Template page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -511,10 +524,10 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div>
-    <div class="pageType">  task </div>
     <div class="post-header">
-        <h1 class="post-title-main">Create an Element Template</h1>
+        <h1 class="post-title-main display-2">Create an Element Template</h1>
     </div>
+    <div class="pageType">  task </div>
 </div>
 
 
@@ -545,11 +558,11 @@ $('#toc').on('click', 'a', function() {
   $(window).scrollTop(scroll_target - 50);
   return false
 })
-  
+
 });
 </script>
 
-<div id="toc"></div>
+<div id="toc" class="toc"></div>
 
     
 
@@ -591,7 +604,10 @@ $('#toc').on('click', 'a', function() {
 
 <p>Every content field must have a unique name. If two content fields share a name, only the first one will act as an editable content field, with the other remaining as text within the element.
 ​</p>
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The DOM structure generated for the element differs between the editor and published sites.  You need to account for both DOM structures when styling your element.</div>
+
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> The DOM structure generated for the element differs between the editor and published sites.  You need to account for both DOM structures when styling your element.
+</div>
 
 <p>If you want to be able to hide/display different areas of content at a time, then use CSS to set visibility and any content set to visible will be displayed. You can also set a width on the content area, for example, <code class="highlighter-rouge"><span class="p">{</span><span class="err">myContentArea:content</span><span class="w"> </span><span class="err">width=</span><span class="nt">"50%"</span><span class="err">}</span></code>. If a user moves or copies a <code class="highlighter-rouge"><span class="p">{</span><span class="err">content</span><span class="p">}</span></code> field, all child elements will get moved/copied as well.</p>
 
@@ -634,9 +650,13 @@ $('#toc').on('click', 'a', function() {
     {{/plans_each}}
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> There is potential for name collisions here! If you have a setting named <code class="highlighter-rouge">plans</code>, and also a setting named <code class="highlighter-rouge">plans_each</code>, we will not generate the iterable value for you!</div>
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> There is potential for name collisions here! If you have a setting named <code class="highlighter-rouge">plans</code>, and also a setting named <code class="highlighter-rouge">plans_each</code>, we will not generate the iterable value for you!
+</div>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> We will not generate loops for values that are greater than 100, for performance reasons.  If you have a setting that you intend to use as a loop, be sure to set appropriate minimums and maximums!</div>
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> We will not generate loops for values that are greater than 100, for performance reasons.  If you have a setting that you intend to use as a loop, be sure to set appropriate minimums and maximums!
+</div>
 
 <h2 id="access-additional-data">Access Additional Data</h2>
 
@@ -650,7 +670,9 @@ $('#toc').on('click', 'a', function() {
      <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"your_image.png"</span> <span class="nt">/&gt;</span>
    <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> If you provide a setting named <code class="highlighter-rouge">assets_path</code> in your manifest, it will be overridden with this value.</div>
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> If you provide a setting named <code class="highlighter-rouge">assets_path</code> in your manifest, it will be overridden with this value.
+</div>
 
 <ul>
   <li><code class="highlighter-rouge">element_id</code>, <code class="highlighter-rouge">user_id</code>, <code class="highlighter-rouge">site_id</code>: These are the respective ID’s for the current user, site, and element instance.  You can access these in your templates using standard Mustache syntax:</li>
@@ -660,12 +682,17 @@ $('#toc').on('click', 'a', function() {
     {{user_id}} - {{site_id}} - {{element_id}}
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> We can not guarantee that <code class="highlighter-rouge">element_id</code> and <code class="highlighter-rouge">site_id</code> will be universally unique.  We recommend that you use a composite key for any storage you may be doing on your servers or services!</div>
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> We can not guarantee that <code class="highlighter-rouge">element_id</code> and <code class="highlighter-rouge">site_id</code> will be universally unique.  We recommend that you use a composite key for any storage you may be doing on your servers or services!
+</div>
 
 <h2 id="use-iframes">Use IFrames</h2>
 
 <p>If your element contains an iframe, we will automatically add an additional invisible overlay <code class="highlighter-rouge">div</code> for your element. This <code class="highlighter-rouge">div</code> ensures that Weebly users will have a clickable target for accessing settings. Once the settings panel is opened, the overlay is removed so that users can interact with your iframe.</p>
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> If you dynamically add an iframe after page load, our system may not properly add an overlay <code class="highlighter-rouge">div</code>.  This will cause users to be unable to access your element settings!  Please try to avoid dynamically creating iframes during the lifecycle of your element.</div>
+
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> If you dynamically add an iframe after page load, our system may not properly add an overlay <code class="highlighter-rouge">div</code>.  This will cause users to be unable to access your element settings!  Please try to avoid dynamically creating iframes during the lifecycle of your element.
+</div>
 
 
 
@@ -687,14 +714,18 @@ $('#toc').on('click', 'a', function() {
 
 <hr class="shaded"/>
 
-<footer>
-            <div class="row">
-                <div class="col-lg-12 footer">
-               &copy;2017 Weebly. All rights reserved. <br />
- Site last generated: Oct 11, 2017 <br />
-<p><img src="images/company_logo.png" alt="Company logo"/></p>
-                </div>
-            </div>
+<footer class="footer">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="footer__fineprint">
+				&copy;2017 Weebly. All rights reserved. <br />
+				 Site last generated: Oct 12, 2017
+			</div>
+			<div class="footer__logo">
+				<img src="images/weebly_logo.svg" alt="Weebly logo"/>
+			</div>
+		</div>
+	</div>
 </footer>
 
 

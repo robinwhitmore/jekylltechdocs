@@ -6,20 +6,22 @@
 <meta name="description" content="Welcome to Weebly Cloud for Designers! With Weebly Cloud, you use Weebly’s best-in-class website builder to create websites, blogs or online stores in minute...">
 <meta name="keywords" content="getting_startedapps,  get started, test mode, editor, code, apps, themes, custom,">
 <title>Get Started with Weebly Cloud for Designers | Weebly Cloud for Designers Documentation</title>
+
 <link rel="stylesheet" href="css/syntax.css">
-
-
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+<!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/modern-business.css">
 <link rel="stylesheet" href="css/lavish-bootstrap.css">
-<link rel="stylesheet" href="css/customstyles.css">
-<link rel="stylesheet" href="css/theme-blue.css">
+-->
+<link rel="stylesheet" href="css/orbit.css">
+<link rel="stylesheet" href="css/theme-weebly.css">
 
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 
 
@@ -56,6 +58,7 @@
         });
     })
 </script>
+
     <script>
         $(document).ready(function() {
             // Initialize navgoco with default options
@@ -112,28 +115,38 @@
                 Weebly Cloud for Designers</span></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right NavList horizontal">
                 <!-- entries without drop-downs appear here -->
                 
                 
                 
-                <li class="active"><a href="home.html">Get Started</a></li>
+                <li class="active NavLinkLi isActive">
+                	<a href="home.html" class="NavLink">Get Started</a>
+                </li>
                 
                 
                 
-                <li><a href="ds_apps_gs.html">Custom Apps</a></li>
+                <li class="NavLinkLi">
+                	<a href="ds_apps_gs.html" class="NavLink">Custom Apps</a>
+               	</li>
                 
                 
                 
-                <li><a href="ds_themes_start.html">Custom Themes</a></li>
+                <li class="NavLinkLi">
+                	<a href="ds_themes_start.html" class="NavLink">Custom Themes</a>
+               	</li>
                 
                 
                 
-                <li><a href="ds_apis_about.html">Cloud APIs</a></li>
+                <li class="NavLinkLi">
+                	<a href="ds_apis_about.html" class="NavLink">Cloud APIs</a>
+               	</li>
                 
                 
                 
-                <li><a href="ds_tags_about.html">Tags</a></li>
+                <li class="NavLinkLi">
+                	<a href="ds_tags_about.html" class="NavLink">Tags</a>
+               	</li>
                 
                 
                 
@@ -141,11 +154,11 @@
                 <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
                 
                 
-			<li>
+			<li class="NavLinkLi">
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Get Started with Weebly Cloud for Designers page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email NavLink" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Get Started with Weebly Cloud for Designers page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -362,10 +375,10 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div>
-    <div class="pageType">  concepts </div>
     <div class="post-header">
-        <h1 class="post-title-main">Get Started with Weebly Cloud for Designers</h1>
+        <h1 class="post-title-main display-2">Get Started with Weebly Cloud for Designers</h1>
     </div>
+    <div class="pageType">  concepts </div>
 </div>
 
 
@@ -396,11 +409,11 @@ $('#toc').on('click', 'a', function() {
   $(window).scrollTop(scroll_target - 50);
   return false
 })
-  
+
 });
 </script>
 
-<div id="toc"></div>
+<div id="toc" class="toc"></div>
 
     
 
@@ -426,17 +439,23 @@ $('#toc').on('click', 'a', function() {
 
 <h2 id="the-cloud-admin">The Cloud Admin</h2>
 <!--Cloud Admin-->
+
 <p>Many of the operations needed to manage your customers’ websites are accomplished using the <a data-container="body" data-toggle="popover" data-content="The site used to manage your users, site owners and their accounts, as well as apps and billing. You access Cloud Admin at weeblycloud.com/admin">Cloud Admin</a>, including the ability to create, manage, and delete sites. You access the portal from <code class="highlighter-rouge">https://your-domain/admin</code>.</p>
 
 <p><span style="color: red">Is this note true?</span></p>
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> If your domain is a subdomain of <code class="highlighter-rouge">weeblycloud.com</code>, then you can also access the admin from <code class="highlighter-rouge">https://weeblycloud.com/admin</code>.</div>
+
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> If your domain is a subdomain of <code class="highlighter-rouge">weeblycloud.com</code>, then you can also access the admin from <code class="highlighter-rouge">https://weeblycloud.com/admin</code>.
+</div>
 
 <!--TODO: add screenshot for desginer-->
 
 <h2 id="the-user-portal">The User Portal</h2>
 <p>Your clients access sites through the User Portal at <code class="highlighter-rouge">https://your-domain/portal</code>.</p>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> If your domain is a subdomain of <code class="highlighter-rouge">weeblycloud.com</code>, then you can also access the portal from <code class="highlighter-rouge">https://weeblycloud.com/portal</code>.</div>
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> If your domain is a subdomain of <code class="highlighter-rouge">weeblycloud.com</code>, then you can also access the portal from <code class="highlighter-rouge">https://weeblycloud.com/portal</code>.
+</div>
 
 <figure><img class="docimage" src="images/cl_userPortal.png" alt="" /><figcaption>The User Portal</figcaption></figure>
 
@@ -455,7 +474,9 @@ $('#toc').on('click', 'a', function() {
 
 <p>Additionally you can create your own apps and have them automatically installed based on the plan a site is associated with. More on the App Center and custom apps <a href="ds_gs_apps.html">here</a> .</p>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The App Center is not white-labeled. That is, the Weebly brand appears throughout the center.</div>
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> The App Center is not white-labeled. That is, the Weebly brand appears throughout the center.
+</div>
 
 <h2 id="customize-themes">Customize Themes</h2>
 
@@ -501,14 +522,18 @@ $('#toc').on('click', 'a', function() {
 
 <hr class="shaded"/>
 
-<footer>
-            <div class="row">
-                <div class="col-lg-12 footer">
-               &copy;2017 Weebly. All rights reserved. <br />
- Site last generated: Oct 11, 2017 <br />
-<p><img src="images/company_logo.png" alt="Company logo"/></p>
-                </div>
-            </div>
+<footer class="footer">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="footer__fineprint">
+				&copy;2017 Weebly. All rights reserved. <br />
+				 Site last generated: Oct 12, 2017
+			</div>
+			<div class="footer__logo">
+				<img src="images/weebly_logo.svg" alt="Weebly logo"/>
+			</div>
+		</div>
+	</div>
 </footer>
 
 

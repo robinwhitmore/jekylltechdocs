@@ -6,20 +6,22 @@
 <meta name="description" content="If you're creating color palettes for your theme, then you may also want to create light and dark variations of each palette.">
 <meta name="keywords" content="configurationthemes,  color, color variations, light, dark, is_dark, LESS, css">
 <title>Add Color Variations | Weebly Cloud for Designers Documentation</title>
+
 <link rel="stylesheet" href="css/syntax.css">
-
-
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+<!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/modern-business.css">
 <link rel="stylesheet" href="css/lavish-bootstrap.css">
-<link rel="stylesheet" href="css/customstyles.css">
-<link rel="stylesheet" href="css/theme-blue.css">
+-->
+<link rel="stylesheet" href="css/orbit.css">
+<link rel="stylesheet" href="css/theme-weebly.css">
 
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 
 
@@ -56,6 +58,7 @@
         });
     })
 </script>
+
     <script>
         $(document).ready(function() {
             // Initialize navgoco with default options
@@ -112,28 +115,38 @@
                 Weebly Cloud for Designers</span></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right NavList horizontal">
                 <!-- entries without drop-downs appear here -->
                 
                 
                 
-                <li><a href="home.html">Get Started</a></li>
+                <li class="NavLinkLi">
+                	<a href="home.html" class="NavLink">Get Started</a>
+               	</li>
                 
                 
                 
-                <li><a href="ds_apps_gs.html">Custom Apps</a></li>
+                <li class="NavLinkLi">
+                	<a href="ds_apps_gs.html" class="NavLink">Custom Apps</a>
+               	</li>
                 
                 
                 
-                <li><a href="ds_themes_start.html">Custom Themes</a></li>
+                <li class="NavLinkLi">
+                	<a href="ds_themes_start.html" class="NavLink">Custom Themes</a>
+               	</li>
                 
                 
                 
-                <li><a href="ds_apis_about.html">Cloud APIs</a></li>
+                <li class="NavLinkLi">
+                	<a href="ds_apis_about.html" class="NavLink">Cloud APIs</a>
+               	</li>
                 
                 
                 
-                <li><a href="ds_tags_about.html">Tags</a></li>
+                <li class="NavLinkLi">
+                	<a href="ds_tags_about.html" class="NavLink">Tags</a>
+               	</li>
                 
                 
                 
@@ -141,11 +154,11 @@
                 <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
                 
                 
-			<li>
+			<li class="NavLinkLi">
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Add Color Variations page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email NavLink" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Add Color Variations page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -561,10 +574,10 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div>
-    <div class="pageType">  concepts  task </div>
     <div class="post-header">
-        <h1 class="post-title-main">Add Color Variations</h1>
+        <h1 class="post-title-main display-2">Add Color Variations</h1>
     </div>
+    <div class="pageType">  concepts  task </div>
 </div>
 
 
@@ -595,11 +608,11 @@ $('#toc').on('click', 'a', function() {
   $(window).scrollTop(scroll_target - 50);
   return false
 })
-  
+
 });
 </script>
 
-<div id="toc"></div>
+<div id="toc" class="toc"></div>
 
     
 
@@ -706,13 +719,17 @@ For example, the dark blue variation might have a file named <code class="highli
 <span class="k">@text_color</span><span class="p">:</span> <span class="m">#b1b1b1</span><span class="p">;</span>
 <span class="k">@border_color</span><span class="p">:</span><span class="m">#55555</span></code></pre></figure>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The file loading order for LESS files is first <code class="highlighter-rouge">variables.less</code>, then <code class="highlighter-rouge">variables_&lt;variationName&gt;.less</code> (which allows the color options to override the default), and lastly <code class="highlighter-rouge">main.less</code>. Make sure you do not define values for any variables in your <code class="highlighter-rouge">main.less</code> file, or they will overwrite values in the variable files.</div>
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> The file loading order for LESS files is first <code class="highlighter-rouge">variables.less</code>, then <code class="highlighter-rouge">variables_&lt;variationName&gt;.less</code> (which allows the color options to override the default), and lastly <code class="highlighter-rouge">main.less</code>. Make sure you do not define values for any variables in your <code class="highlighter-rouge">main.less</code> file, or they will overwrite values in the variable files.
+</div>
 
 <p>Also, if all your variable color files are overwriting <em>all</em> the variables in <code class="highlighter-rouge">variables.less</code>, then you don’t need to create <code class="highlighter-rouge">variables.less</code>. Simply create a variables file for each color.</p>
 
 <h2 id="create-the-variation-styles-in-css">Create the Variation Styles in CSS</h2>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> If your theme uses a color palette, then you must use LESS instead of CSS.</div>
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> If your theme uses a color palette, then you must use LESS instead of CSS.
+</div>
 
 <p>If your theme uses CSS, then your variations can live at the top of the <code class="highlighter-rouge">main_style.css</code> file. Create commented-out JSON that contains the different values for CSS properties for each variation.</p>
 
@@ -799,14 +816,18 @@ For example, the dark blue variation might have a file named <code class="highli
 
 <hr class="shaded"/>
 
-<footer>
-            <div class="row">
-                <div class="col-lg-12 footer">
-               &copy;2017 Weebly. All rights reserved. <br />
- Site last generated: Oct 11, 2017 <br />
-<p><img src="images/company_logo.png" alt="Company logo"/></p>
-                </div>
-            </div>
+<footer class="footer">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="footer__fineprint">
+				&copy;2017 Weebly. All rights reserved. <br />
+				 Site last generated: Oct 12, 2017
+			</div>
+			<div class="footer__logo">
+				<img src="images/weebly_logo.svg" alt="Weebly logo"/>
+			</div>
+		</div>
+	</div>
 </footer>
 
 

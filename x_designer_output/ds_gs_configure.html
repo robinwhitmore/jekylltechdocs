@@ -6,20 +6,22 @@
 <meta name="description" content="You use the Settings tab of the Weebly Cloud Admin portal to configure your cloud account. You can add your logo and other company links and contact info, co...">
 <meta name="keywords" content="getting_startedconfiguration,  brand, cloud admin, domain, url, email, settings, upgrade, hash, support, message, contact,">
 <title>Configure Weebly Cloud | Weebly Cloud for Designers Documentation</title>
+
 <link rel="stylesheet" href="css/syntax.css">
-
-
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+<!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/modern-business.css">
 <link rel="stylesheet" href="css/lavish-bootstrap.css">
-<link rel="stylesheet" href="css/customstyles.css">
-<link rel="stylesheet" href="css/theme-blue.css">
+-->
+<link rel="stylesheet" href="css/orbit.css">
+<link rel="stylesheet" href="css/theme-weebly.css">
 
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 
 
@@ -56,6 +58,7 @@
         });
     })
 </script>
+
     <script>
         $(document).ready(function() {
             // Initialize navgoco with default options
@@ -112,28 +115,38 @@
                 Weebly Cloud for Designers</span></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right NavList horizontal">
                 <!-- entries without drop-downs appear here -->
                 
                 
                 
-                <li><a href="home.html">Get Started</a></li>
+                <li class="NavLinkLi">
+                	<a href="home.html" class="NavLink">Get Started</a>
+               	</li>
                 
                 
                 
-                <li><a href="ds_apps_gs.html">Custom Apps</a></li>
+                <li class="NavLinkLi">
+                	<a href="ds_apps_gs.html" class="NavLink">Custom Apps</a>
+               	</li>
                 
                 
                 
-                <li><a href="ds_themes_start.html">Custom Themes</a></li>
+                <li class="NavLinkLi">
+                	<a href="ds_themes_start.html" class="NavLink">Custom Themes</a>
+               	</li>
                 
                 
                 
-                <li><a href="ds_apis_about.html">Cloud APIs</a></li>
+                <li class="NavLinkLi">
+                	<a href="ds_apis_about.html" class="NavLink">Cloud APIs</a>
+               	</li>
                 
                 
                 
-                <li><a href="ds_tags_about.html">Tags</a></li>
+                <li class="NavLinkLi">
+                	<a href="ds_tags_about.html" class="NavLink">Tags</a>
+               	</li>
                 
                 
                 
@@ -141,11 +154,11 @@
                 <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
                 
                 
-			<li>
+			<li class="NavLinkLi">
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Configure Weebly Cloud page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email NavLink" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Configure Weebly Cloud page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -362,10 +375,10 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div>
-    <div class="pageType">  task </div>
     <div class="post-header">
-        <h1 class="post-title-main">Configure Weebly Cloud</h1>
+        <h1 class="post-title-main display-2">Configure Weebly Cloud</h1>
     </div>
+    <div class="pageType">  task </div>
 </div>
 
 
@@ -396,11 +409,11 @@ $('#toc').on('click', 'a', function() {
   $(window).scrollTop(scroll_target - 50);
   return false
 })
-  
+
 });
 </script>
 
-<div id="toc"></div>
+<div id="toc" class="toc"></div>
 
     
 
@@ -431,7 +444,9 @@ $('#toc').on('click', 'a', function() {
 
 <p>You can set a domain to access both the Cloud Admin (<code class="highlighter-rouge">http://your_domain/admin</code>) and the User portal (<code class="highlighter-rouge">http://your_domain/portal</code>), and that displays in the user’s address bar when using the Site Editor. You can choose to use a subdomain of <code class="highlighter-rouge">weeblycloud.com</code> or you can use a custom domain.</p>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> If you don’t configure a domain, you will not be able to generate and send emails from the Cloud Admin and you will not have access to the User portal.</div>
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> If you don’t configure a domain, you will not be able to generate and send emails from the Cloud Admin and you will not have access to the User portal.
+</div>
 
 <p><strong>To set a subdomain:</strong></p>
 <ol>
@@ -472,7 +487,10 @@ $('#toc').on('click', 'a', function() {
   <li><strong>Default Date Format</strong>: Select how you want dates displayed by default. You can choose either <code class="highlighter-rouge">MM/DD/YYYY</code> or <code class="highlighter-rouge">DD/MM/YYYY</code>.</li>
   <li><strong>Default Time Format</strong>: Select how time should display by default - either 12 or 24 hour.</li>
 </ul>
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> You don’t need to worry about the Upgrade URL or hash. These are used by Weebly enterprise accounts to automatically upgrade their customers when they try to access functionality not covered by their current plan. As a Designer, you will likely upgrade your clients’ plans manually. If you’re interested in automatic upgrading, contact your account representative.</div>
+
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> You don’t need to worry about the Upgrade URL or hash. These are used by Weebly enterprise accounts to automatically upgrade their customers when they try to access functionality not covered by their current plan. As a Designer, you will likely upgrade your clients’ plans manually. If you’re interested in automatic upgrading, contact your account representative.
+</div>
 
 <h2 id="create-a-support-message">Create a Support Message</h2>
 
@@ -544,14 +562,18 @@ $('#toc').on('click', 'a', function() {
 
 <hr class="shaded"/>
 
-<footer>
-            <div class="row">
-                <div class="col-lg-12 footer">
-               &copy;2017 Weebly. All rights reserved. <br />
- Site last generated: Oct 11, 2017 <br />
-<p><img src="images/company_logo.png" alt="Company logo"/></p>
-                </div>
-            </div>
+<footer class="footer">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="footer__fineprint">
+				&copy;2017 Weebly. All rights reserved. <br />
+				 Site last generated: Oct 12, 2017
+			</div>
+			<div class="footer__logo">
+				<img src="images/weebly_logo.svg" alt="Weebly logo"/>
+			</div>
+		</div>
+	</div>
 </footer>
 
 

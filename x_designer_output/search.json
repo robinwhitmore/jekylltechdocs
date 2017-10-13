@@ -4,6 +4,17 @@
 
 
 {
+"title": "About the Weebly Cloud for Designer REST APIs",
+"tags": "apisgetting_started",
+"keywords": "endpoint, list view, detail view, http verbs, pagination, authentication, authorization, errors",
+"url": "ds_apis_about.html",
+"summary": "Weebly APIs are provided using REST over HTTPS and utilize the HTTP verbs GET, POST, PUT, PATCH and DELETE. We provide a number of client libraries to help get you started. See the following sections for more general information about using our APIs."
+}
+,
+
+
+
+{
 "title": "Account APIs",
 "tags": "configuration",
 "keywords": "account",
@@ -15,22 +26,33 @@
 
 
 {
-"title": "API test",
-"tags": "themes",
-"keywords": "",
-"url": "ds_api_test.html",
-"summary": "Test API template"
+"title": "Blog API",
+"tags": "sites",
+"keywords": "blog",
+"url": "ds_api_blog.html",
+"summary": "Use the Blog API to return information about a site's blog(s)."
 }
 ,
 
 
 
 {
-"title": "About the Weebly Cloud for Designer REST APIs",
-"tags": "apisgetting_started",
-"keywords": "endpoint, list view, detail view, http verbs, pagination, authentication, authorization, errors",
-"url": "ds_apis_about.html",
-"summary": "Weebly APIs are provided using REST over HTTPS and utilize the HTTP verbs GET, POST, PUT, PATCH and DELETE. We provide a number of client libraries to help get you started. See the following sections for more general information about using our APIs."
+"title": "Blog Post API",
+"tags": "sites",
+"keywords": "blog, blog post, post",
+"url": "ds_api_blog_post.html",
+"summary": "Use the Blog Post API to return details about a post to a blog, or to update a post."
+}
+,
+
+
+
+{
+"title": "API test",
+"tags": "themes",
+"keywords": "",
+"url": "ds_api_test.html",
+"summary": "Test API template"
 }
 ,
 
@@ -1121,6 +1143,17 @@
 
 
 
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
+"url": "csstheme-weebly.css",
+"summary": ""
+}
+,
 
 
 

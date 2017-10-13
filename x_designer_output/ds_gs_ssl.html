@@ -6,20 +6,22 @@
 <meta name="description" content="Weebly sites can use SSL, as long as they are on the Weebly Business plan. However, you'll need to use the Weebly Cloud API to enable the SSL option to displ...">
 <meta name="keywords" content="getting_startedconfigurationsites,  ssl, sites">
 <title>Allow Sites to Use SSL | Weebly Cloud for Designers Documentation</title>
+
 <link rel="stylesheet" href="css/syntax.css">
-
-
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+<!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/modern-business.css">
 <link rel="stylesheet" href="css/lavish-bootstrap.css">
-<link rel="stylesheet" href="css/customstyles.css">
-<link rel="stylesheet" href="css/theme-blue.css">
+-->
+<link rel="stylesheet" href="css/orbit.css">
+<link rel="stylesheet" href="css/theme-weebly.css">
 
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 
 
@@ -56,6 +58,7 @@
         });
     })
 </script>
+
     <script>
         $(document).ready(function() {
             // Initialize navgoco with default options
@@ -112,28 +115,38 @@
                 Weebly Cloud for Designers</span></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right NavList horizontal">
                 <!-- entries without drop-downs appear here -->
                 
                 
                 
-                <li><a href="home.html">Get Started</a></li>
+                <li class="NavLinkLi">
+                	<a href="home.html" class="NavLink">Get Started</a>
+               	</li>
                 
                 
                 
-                <li><a href="ds_apps_gs.html">Custom Apps</a></li>
+                <li class="NavLinkLi">
+                	<a href="ds_apps_gs.html" class="NavLink">Custom Apps</a>
+               	</li>
                 
                 
                 
-                <li><a href="ds_themes_start.html">Custom Themes</a></li>
+                <li class="NavLinkLi">
+                	<a href="ds_themes_start.html" class="NavLink">Custom Themes</a>
+               	</li>
                 
                 
                 
-                <li><a href="ds_apis_about.html">Cloud APIs</a></li>
+                <li class="NavLinkLi">
+                	<a href="ds_apis_about.html" class="NavLink">Cloud APIs</a>
+               	</li>
                 
                 
                 
-                <li><a href="ds_tags_about.html">Tags</a></li>
+                <li class="NavLinkLi">
+                	<a href="ds_tags_about.html" class="NavLink">Tags</a>
+               	</li>
                 
                 
                 
@@ -141,11 +154,11 @@
                 <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
                 
                 
-			<li>
+			<li class="NavLinkLi">
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Allow Sites to Use SSL page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email NavLink" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Allow Sites to Use SSL page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -362,10 +375,10 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div>
-    <div class="pageType">  task </div>
     <div class="post-header">
-        <h1 class="post-title-main">Allow Sites to Use SSL</h1>
+        <h1 class="post-title-main display-2">Allow Sites to Use SSL</h1>
     </div>
+    <div class="pageType">  task </div>
 </div>
 
 
@@ -396,11 +409,11 @@ $('#toc').on('click', 'a', function() {
   $(window).scrollTop(scroll_target - 50);
   return false
 })
-  
+
 });
 </script>
 
-<div id="toc"></div>
+<div id="toc" class="toc"></div>
 
     
 
@@ -410,7 +423,9 @@ $('#toc').on('click', 'a', function() {
   <p>Sites built on the Weebly Business plan can optionally use SSL outside of the checkout flow (pages in the checkout flow always use <code class="highlighter-rouge">HTTPS</code>). Site owners can turn this setting on and off in the General settings section of the editor. They can use SSL only for the checkout flow or for the entire site.</p>
 <figure><img class="docimage" src="images/cl_ssl.png" alt="" /><figcaption>SSL setting in the Weebly Editor</figcaption></figure>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> If the site contains a store, the checkout flow always uses HTTPs, regardless of how SSL is configured for the site. If the SSL option is not selected for the site or for checkout, the URL for the checkout flow is <code class="highlighter-rouge">checkout.weebly.com</code>. If the SSL option is selected, the site’s own domain is used.</div>
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> If the site contains a store, the checkout flow always uses HTTPs, regardless of how SSL is configured for the site. If the SSL option is not selected for the site or for checkout, the URL for the checkout flow is <code class="highlighter-rouge">checkout.weebly.com</code>. If the SSL option is selected, the site’s own domain is used.
+</div>
 
 <p>However, by default the SSL option does not display on the General settings page. You need to make a call to the <code class="highlighter-rouge">Site</code> API <!--todo: add API link-->and update a site’s record to enable the SSL option. You use the <code class="highlighter-rouge">PATCH</code> endpoint and set <code class="highlighter-rouge">allow_ssl</code> to <code class="highlighter-rouge">true</code>.
 ​Here’s an example:</p>
@@ -454,14 +469,18 @@ $('#toc').on('click', 'a', function() {
 
 <hr class="shaded"/>
 
-<footer>
-            <div class="row">
-                <div class="col-lg-12 footer">
-               &copy;2017 Weebly. All rights reserved. <br />
- Site last generated: Oct 11, 2017 <br />
-<p><img src="images/company_logo.png" alt="Company logo"/></p>
-                </div>
-            </div>
+<footer class="footer">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="footer__fineprint">
+				&copy;2017 Weebly. All rights reserved. <br />
+				 Site last generated: Oct 12, 2017
+			</div>
+			<div class="footer__logo">
+				<img src="images/weebly_logo.svg" alt="Weebly logo"/>
+			</div>
+		</div>
+	</div>
 </footer>
 
 

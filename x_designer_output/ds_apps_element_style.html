@@ -6,20 +6,22 @@
 <meta name="description" content="Stylesheets are the paint and polish on top of your element. They provide style instructions, and are a powerful way to make your element appear more profess...">
 <meta name="keywords" content="elements,  CSS, style, stylesheets, element">
 <title>Add Stylesheets to an Element | Weebly Cloud for Designers Documentation</title>
+
 <link rel="stylesheet" href="css/syntax.css">
-
-
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+<!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/modern-business.css">
 <link rel="stylesheet" href="css/lavish-bootstrap.css">
-<link rel="stylesheet" href="css/customstyles.css">
-<link rel="stylesheet" href="css/theme-blue.css">
+-->
+<link rel="stylesheet" href="css/orbit.css">
+<link rel="stylesheet" href="css/theme-weebly.css">
 
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 
 
@@ -56,6 +58,7 @@
         });
     })
 </script>
+
     <script>
         $(document).ready(function() {
             // Initialize navgoco with default options
@@ -112,28 +115,38 @@
                 Weebly Cloud for Designers</span></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right NavList horizontal">
                 <!-- entries without drop-downs appear here -->
                 
                 
                 
-                <li><a href="home.html">Get Started</a></li>
+                <li class="NavLinkLi">
+                	<a href="home.html" class="NavLink">Get Started</a>
+               	</li>
                 
                 
                 
-                <li><a href="ds_apps_gs.html">Custom Apps</a></li>
+                <li class="NavLinkLi">
+                	<a href="ds_apps_gs.html" class="NavLink">Custom Apps</a>
+               	</li>
                 
                 
                 
-                <li><a href="ds_themes_start.html">Custom Themes</a></li>
+                <li class="NavLinkLi">
+                	<a href="ds_themes_start.html" class="NavLink">Custom Themes</a>
+               	</li>
                 
                 
                 
-                <li><a href="ds_apis_about.html">Cloud APIs</a></li>
+                <li class="NavLinkLi">
+                	<a href="ds_apis_about.html" class="NavLink">Cloud APIs</a>
+               	</li>
                 
                 
                 
-                <li><a href="ds_tags_about.html">Tags</a></li>
+                <li class="NavLinkLi">
+                	<a href="ds_tags_about.html" class="NavLink">Tags</a>
+               	</li>
                 
                 
                 
@@ -141,11 +154,11 @@
                 <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
                 
                 
-			<li>
+			<li class="NavLinkLi">
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Add Stylesheets to an Element page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email NavLink" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Add Stylesheets to an Element page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -511,10 +524,10 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div>
-    <div class="pageType">  reference </div>
     <div class="post-header">
-        <h1 class="post-title-main">Add Stylesheets to an Element</h1>
+        <h1 class="post-title-main display-2">Add Stylesheets to an Element</h1>
     </div>
+    <div class="pageType">  reference </div>
 </div>
 
 
@@ -545,11 +558,11 @@ $('#toc').on('click', 'a', function() {
   $(window).scrollTop(scroll_target - 50);
   return false
 })
-  
+
 });
 </script>
 
-<div id="toc"></div>
+<div id="toc" class="toc"></div>
 
     
 
@@ -585,7 +598,9 @@ Here’s an example of a LESS variable used in a stylesheet:</p>
     <span class="nl">background-color</span><span class="p">:</span> <span class="err">@</span><span class="n">color</span><span class="p">;</span>
 <span class="p">}</span></code></pre></figure>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Because there may be multiple copies of one element on any given page, we strongly encourage you to use classes in your CSS or templates. Do not use IDs.</div>
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> Because there may be multiple copies of one element on any given page, we strongly encourage you to use classes in your CSS or templates. Do not use IDs.
+</div>
 
 <h2 id="access-settings">Access Settings</h2>
 <p>All of your settings are available as LESS variables in your CSS files.  Simply access them as you would expect to in standard LESS fashion.</p>
@@ -597,7 +612,9 @@ Here’s an example of a LESS variable used in a stylesheet:</p>
     <span class="nl">border</span><span class="p">:</span> <span class="err">@</span><span class="n">border</span><span class="p">;</span>
     <span class="nl">border-spacing</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span></code></pre></figure>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Some settings will be strings, including quotes.  In cases where LESS cannot properly set a variable, the variable is set as a string. You can “un-stringify” it with LESS String Interpolation.</div>
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> Some settings will be strings, including quotes.  In cases where LESS cannot properly set a variable, the variable is set as a string. You can “un-stringify” it with LESS String Interpolation.
+</div>
 
 <h2 id="access-additional-data">Access Additional Data</h2>
 <p>You can access the path to your elements’ assets, similar to the way you access settings, using the <code class="highlighter-rouge">assets_path</code> variable. This is the HTTP accessible root path to your elements’ assets folder, in protocol-agnostic form.  It is accessible as a property of your Element object:</p>
@@ -626,14 +643,18 @@ Here’s an example of a LESS variable used in a stylesheet:</p>
 
 <hr class="shaded"/>
 
-<footer>
-            <div class="row">
-                <div class="col-lg-12 footer">
-               &copy;2017 Weebly. All rights reserved. <br />
- Site last generated: Oct 11, 2017 <br />
-<p><img src="images/company_logo.png" alt="Company logo"/></p>
-                </div>
-            </div>
+<footer class="footer">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="footer__fineprint">
+				&copy;2017 Weebly. All rights reserved. <br />
+				 Site last generated: Oct 12, 2017
+			</div>
+			<div class="footer__logo">
+				<img src="images/weebly_logo.svg" alt="Weebly logo"/>
+			</div>
+		</div>
+	</div>
 </footer>
 
 

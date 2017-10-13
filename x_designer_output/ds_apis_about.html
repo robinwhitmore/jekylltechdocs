@@ -6,20 +6,22 @@
 <meta name="description" content="Weebly APIs are provided using REST over HTTPS and utilize the HTTP verbs GET, POST, PUT, PATCH and DELETE. We provide a number of client libraries to help g...">
 <meta name="keywords" content="apisgetting_started,  endpoint, list view, detail view, http verbs, pagination, authentication, authorization, errors">
 <title>About the Weebly Cloud for Designer REST APIs | Weebly Cloud for Designers Documentation</title>
+
 <link rel="stylesheet" href="css/syntax.css">
-
-
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+<!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/modern-business.css">
 <link rel="stylesheet" href="css/lavish-bootstrap.css">
-<link rel="stylesheet" href="css/customstyles.css">
-<link rel="stylesheet" href="css/theme-blue.css">
+-->
+<link rel="stylesheet" href="css/orbit.css">
+<link rel="stylesheet" href="css/theme-weebly.css">
 
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 
 
@@ -56,6 +58,7 @@
         });
     })
 </script>
+
     <script>
         $(document).ready(function() {
             // Initialize navgoco with default options
@@ -112,28 +115,38 @@
                 Weebly Cloud for Designers</span></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right NavList horizontal">
                 <!-- entries without drop-downs appear here -->
                 
                 
                 
-                <li><a href="home.html">Get Started</a></li>
+                <li class="NavLinkLi">
+                	<a href="home.html" class="NavLink">Get Started</a>
+               	</li>
                 
                 
                 
-                <li><a href="ds_apps_gs.html">Custom Apps</a></li>
+                <li class="NavLinkLi">
+                	<a href="ds_apps_gs.html" class="NavLink">Custom Apps</a>
+               	</li>
                 
                 
                 
-                <li><a href="ds_themes_start.html">Custom Themes</a></li>
+                <li class="NavLinkLi">
+                	<a href="ds_themes_start.html" class="NavLink">Custom Themes</a>
+               	</li>
                 
                 
                 
-                <li class="active"><a href="ds_apis_about.html">Cloud APIs</a></li>
+                <li class="active NavLinkLi isActive">
+                	<a href="ds_apis_about.html" class="NavLink">Cloud APIs</a>
+                </li>
                 
                 
                 
-                <li><a href="ds_tags_about.html">Tags</a></li>
+                <li class="NavLinkLi">
+                	<a href="ds_tags_about.html" class="NavLink">Tags</a>
+               	</li>
                 
                 
                 
@@ -141,11 +154,11 @@
                 <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
                 
                 
-			<li>
+			<li class="NavLinkLi">
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the About the Weebly Cloud for Designer REST APIs page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email NavLink" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the About the Weebly Cloud for Designer REST APIs page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -209,21 +222,274 @@
             
             
             
-            <li class="active"><a href="ds_apis_about.html">About the REST APIs</a></li>
+            <li><a href="ds_api_about.html">How to Use the REST APIs</a></li>
             
             
             
             
             
             
-            <li><a href="ds_apis_account.html">Account API</a></li>
+            <li><a href="ds_api_account.html">Account API</a></li>
             
             
             
             
             
             
-            <li><a href="ds_api_test.html">Test API</a></li>
+            <li><a href="ds_api_blog.html">Blog API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_blog_post.html">Blog Post API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_form.html">Form API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_form_entry.html">Form Entry API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_member.html">Member API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_group.html">Group API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_page.html">Page API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_plan.html">Plan API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_site.html">Site API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_store.html">Store API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_category.html">Category API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_category_image.html">Category Image API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_coupon.html">Coupon API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_order.html">Order API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_order_billing.html">Order Billing API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_order_billing_transaction.html">Order Billing Transaction API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_order_item.html">Order Item API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_order_shipment.html">Order Shipment API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_order_shipment_transaction.html">Order Shipment Transaction API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_product.html">Product API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_product_image.html">Product Image API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_product_option.html">Product Option API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_product_option_choice.html">Product Option Choice API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_product_sku.html">Product SKU API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_subaccount.html">Sub-Account API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_team_member.html">Team Member API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_themes_cloud.html">Themes (Custom Cloud) API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_themes_user.html">Themes (User) API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_api_user.html">User API</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Webhooks</a>
+        <ul>
+            
+            
+            
+            <li><a href="ds_wh_webhooks">How to Use Webhooks</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_wh_user">User Webhooks</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_wh_site">Site Webhooks</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_wh_store">Store Webhooks</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_wh_member">Member Webhooks</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_wh_form">Form Webhooks</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="ds_wh_blog">Blog Webhooks</a></li>
             
             
             
@@ -247,10 +513,10 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div>
-    <div class="pageType">  concepts  procedure </div>
     <div class="post-header">
-        <h1 class="post-title-main">About the Weebly Cloud for Designer REST APIs</h1>
+        <h1 class="post-title-main display-2">About the Weebly Cloud for Designer REST APIs</h1>
     </div>
+    <div class="pageType">  concepts  procedure </div>
 </div>
 
 
@@ -281,11 +547,11 @@ $('#toc').on('click', 'a', function() {
   $(window).scrollTop(scroll_target - 50);
   return false
 })
-  
+
 });
 </script>
 
-<div id="toc"></div>
+<div id="toc" class="toc"></div>
 
     
 
@@ -379,7 +645,9 @@ $('#toc').on('click', 'a', function() {
  Number of results per page. Default <code class="highlighter-rouge">25</code>, Max <code class="highlighter-rouge">200</code>. Don’t forget that raising the limit may affect performance.</li>
 </ul>
 
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Only the first 25 results are returned by default. If the result set is expected to be over 25, you <strong>must</strong> implement pagination.</div>
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> Only the first 25 results are returned by default. If the result set is expected to be over 25, you <strong>must</strong> implement pagination.
+</div>
 
 <p>For example, this CURL request to the Site API returns the second page of result sets.</p>
 
@@ -536,14 +804,18 @@ X-Signed-Request-Hash: YOURSECRETHASH
 
 <hr class="shaded"/>
 
-<footer>
-            <div class="row">
-                <div class="col-lg-12 footer">
-               &copy;2017 Weebly. All rights reserved. <br />
- Site last generated: Oct 11, 2017 <br />
-<p><img src="images/company_logo.png" alt="Company logo"/></p>
-                </div>
-            </div>
+<footer class="footer">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="footer__fineprint">
+				&copy;2017 Weebly. All rights reserved. <br />
+				 Site last generated: Oct 12, 2017
+			</div>
+			<div class="footer__logo">
+				<img src="images/weebly_logo.svg" alt="Weebly logo"/>
+			</div>
+		</div>
+	</div>
 </footer>
 
 
