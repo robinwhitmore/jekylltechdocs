@@ -420,64 +420,13 @@ a.accordion-toggle, a.accordion-collapsed {
 }
 
 /* navgoco sidebar styles (customized) */
-.nav, .nav ul, .nav li {
+.nav,
+.nav ul,
+.nav li {
     list-style: none;
 }
 
-.nav ul {
-    padding: 0;
-    /*margin: 0 0 0 18px;*/
-    margin:0px;
-}
 
-.nav {
-    /* padding: 4px;*/
-    padding:0px;
-    margin: 0px;
-}
-
-.nav > li {
-    margin: 1px 0;
-}
-
-.nav > li li {
-    margin: 2px 0;
-}
-
-.nav li > a > span {
-    float: right;
-    font-size: 19px;
-    font-weight: bolder;
-}
-
-
-.nav li > a > span:after {
-    content: '\25be';
-}
-.nav li.active > a > span:after {
-    content: '\25b4';
-}
-
-ul#mysidebar {
-    border-radius:0px;
-}
-
-.nav ul li ul li a {
-    padding-left:40px;
-}
-
-.nav li.thirdlevel > a {
-    color: #248EC2;
-    font-weight:bold;
-    padding-left:20px;
-    background-color: whitesmoke !important;
-}
-
-
-.nav ul li a {
-    border-top:1px solid whitesmoke;
-    padding-left:10px;
-}
 /* end sidebar */
 
 
