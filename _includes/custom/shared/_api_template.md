@@ -5,6 +5,7 @@
 
 The following table shows all fields that exist for this API, those that are returned when you retrieve a list, those that are required for `PUT` and `POST`, and those that are changeable using `PATCH` and `PUT`. All fields are returned when you retrieve a single item.
 <table>
+    <tbody>
     <tr>
         <td><strong>Name</strong></td>
         <td><strong>Description</strong></td>
@@ -18,50 +19,100 @@ The following table shows all fields that exist for this API, those that are ret
         <td>The unique ID of the authenticated user</td>
         <td>string</td>
         <td>X</td>
-        <td></td>
-        <td></td>
+        <td><br>
+        </td>
+        <td><br>
+        </td>
     </tr>
     <tr>
-        <td><code>site_id</code></td>
-        <td>ID of a Weebly site, unique to the currently authenticated user​</td>
+        <td><code>field</code></td>
+        <td>description​</td>
         <td>string</td>
-        <td>X</td>
-        <td>X</td>
-        <td></td>
+        <td>list</td>
+        <td>rqd</td>
+        <td>chg</td>
     </tr>
     <tr>
-        <td><code>name</code></td>
+        <td><code>field</code></td>
+        <td>description</td>
+        <td>string</td>
+        <td>list</td>
+        <td>reqd</td>
+        <td>chg</td>
+    </tr>
+    <tr>
+        <td><code>field</code> </td>
+        <td>description</td>
+        <td>string</td>
+        <td>list</td>
+        <td>reqd</td>
+        <td>chg</td>
+    </tr>
+    <tr>
+        <td><code>field</code> </td>
+        <td>description</td>
+        <td>type</td>
+        <td>list</td>
+        <td>req</td>
+        <td>ch</td>
+    </tr>
+    <tr>
+        <td><code>field</code> </td>
+        <td>description</td>
+        <td>type</td>
+        <td>list</td>
+        <td>req</td>
+        <td>ch</td>
+    </tr>
+    <tr>
+        <td><code>field</code> </td>
+        <td>description</td>
+        <td>type</td>
+        <td>list</td>
+        <td>req</td>
+        <td>ch</td>
+    </tr>
+    <tr>
+        <td><code>post_created_date</code> </td>
         <td>description</td>
         <td>string</td>
         <td>X</td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><code>name</code></td>
-        <td>description</td>
-        <td>string</td>
-        <td>X</td>
-        <td></td>
+        <td><br>
+        </td>
         <td></td>
     </tr>
     <tr>
-        <td><code>name</code></td>
+        <td><code>post_created_date</code> </td>
         <td>description</td>
         <td>string</td>
-        <td>X</td>
-        <td></td>
-        <td></td>
+        <td><br>
+        </td>
+        <td><br>
+        </td>
+        <td><br>
+        </td>
     </tr>
     <tr>
-        <td><code>name</code></td>
-        <td>description</td>
-        <td>string</td>
+        <td><code>created_date</code> </td>
+        <td>Date the ## was first created.</td>
+        <td>Unix GMT Timestamp</td>
         <td>X</td>
-        <td></td>
-        <td></td>
+        <td><br>
+        </td>
+        <td><br>
+        </td>
     </tr>
-
+    <tr>
+        <td><code>updated_date</code> </td>
+        <td>Date the ## was last updated.</td>
+        <td>Unix GMT Timestamp</td>
+        <td>X</td>
+        <td><br>
+        </td>
+        <td><br>
+        </td>
+    </tr>
+    </tbody>
 </table>
 {% include custom/notes/note_api_undoc.md %}
 

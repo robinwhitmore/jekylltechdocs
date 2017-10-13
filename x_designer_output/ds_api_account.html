@@ -7,16 +7,20 @@
 <meta name="keywords" content="configuration,  account">
 <title>Account APIs | Weebly Cloud for Designers Documentation</title>
 
+
 <link rel="stylesheet" href="css/syntax.css">
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-
-<!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
+<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+ -->
+<!--
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/modern-business.css">
-<link rel="stylesheet" href="css/lavish-bootstrap.css">
+
 -->
+<link rel="stylesheet" href="css/lavish-bootstrap.css">
+
 <link rel="stylesheet" href="css/orbit.css">
+<link rel="stylesheet" href="css/orbit-external.css">
 <link rel="stylesheet" href="css/theme-weebly.css">
 
 
@@ -209,306 +213,460 @@
 
 
 
-<ul id="mysidebar" class="nav">
-    <li class="sidebarTitle">Weebly Cloud REST APIs </li>
+<ul id="mysidebar" class="nav NavList">
+   <!--  <li class="sidebarTitle">Weebly Cloud REST APIs </li> -->
+
     
+	    
+		    
+	    
+		    
+
+			    <li class="NavLinkLi">
+			        <a href="#" class="NavLink isSecondary">Use the REST APIs</a>
+			        <ul class="NavList Children">
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_about.html" class="NavLink isSecondary">How to Use the REST APIs</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="active isActive NavLinkLi">
+					            	<a href="ds_api_account.html" class="NavLink  isSecondary">Account API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_blog.html" class="NavLink isSecondary">Blog API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_blog_post.html" class="NavLink isSecondary">Blog Post API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_form.html" class="NavLink isSecondary">Form API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_form_entry.html" class="NavLink isSecondary">Form Entry API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_member.html" class="NavLink isSecondary">Member API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_group.html" class="NavLink isSecondary">Group API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_page.html" class="NavLink isSecondary">Page API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_plan.html" class="NavLink isSecondary">Plan API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_site.html" class="NavLink isSecondary">Site API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_store.html" class="NavLink isSecondary">Store API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_category.html" class="NavLink isSecondary">Category API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_category_image.html" class="NavLink isSecondary">Category Image API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_coupon.html" class="NavLink isSecondary">Coupon API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_order.html" class="NavLink isSecondary">Order API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_order_billing.html" class="NavLink isSecondary">Order Billing API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_order_billing_transaction.html" class="NavLink isSecondary">Order Billing Transaction API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_order_item.html" class="NavLink isSecondary">Order Item API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_order_shipment.html" class="NavLink isSecondary">Order Shipment API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_order_shipment_transaction.html" class="NavLink isSecondary">Order Shipment Transaction API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_product.html" class="NavLink isSecondary">Product API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_product_image.html" class="NavLink isSecondary">Product Image API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_product_option.html" class="NavLink isSecondary">Product Option API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_product_option_choice.html" class="NavLink isSecondary">Product Option Choice API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_product_sku.html" class="NavLink isSecondary">Product SKU API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_subaccount.html" class="NavLink isSecondary">Sub-Account API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_team_member.html" class="NavLink isSecondary">Team Member API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_themes_cloud.html" class="NavLink isSecondary">Themes (Custom Cloud) API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_themes_user.html" class="NavLink isSecondary">Themes (User) API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_user.html" class="NavLink isSecondary">User API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			        </ul>
+			    </li>
+		    
+	    
+		    
+
+			    <li class="NavLinkLi">
+			        <a href="#" class="NavLink isSecondary">Webhooks</a>
+			        <ul class="NavList Children">
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_wh_webhooks.html" class="NavLink isSecondary">How to Use Webhooks</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_wh_user.html" class="NavLink isSecondary">User Webhooks</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_wh_site.html" class="NavLink isSecondary">Site Webhooks</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_wh_store.html" class="NavLink isSecondary">Store Webhooks</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_wh_member.html" class="NavLink isSecondary">Member Webhooks</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_wh_form.html" class="NavLink isSecondary">Form Webhooks</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_wh_blog.html" class="NavLink isSecondary">Blog Webhooks</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			        </ul>
+			    </li>
+		    
+	    
     
-    
-        
-    
-    <li>
-        <a href="#">Use the REST APIs</a>
-        <ul>
-            
-            
-            
-            <li><a href="ds_api_about.html">How to Use the REST APIs</a></li>
-            
-            
-            
-            
-            
-            
-            <li class="active"><a href="ds_api_account.html">Account API</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_api_blog.html">Blog API</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_api_blog_post.html">Blog Post API</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_api_form.html">Form API</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_api_form_entry.html">Form Entry API</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_api_member.html">Member API</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_api_group.html">Group API</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_api_page.html">Page API</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_api_plan.html">Plan API</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_api_site.html">Site API</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_api_store.html">Store API</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_api_category.html">Category API</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_api_category_image.html">Category Image API</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_api_coupon.html">Coupon API</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_api_order.html">Order API</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_api_order_billing.html">Order Billing API</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_api_order_billing_transaction.html">Order Billing Transaction API</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_api_order_item.html">Order Item API</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_api_order_shipment.html">Order Shipment API</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_api_order_shipment_transaction.html">Order Shipment Transaction API</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_api_product.html">Product API</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_api_product_image.html">Product Image API</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_api_product_option.html">Product Option API</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_api_product_option_choice.html">Product Option Choice API</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_api_product_sku.html">Product SKU API</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_api_subaccount.html">Sub-Account API</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_api_team_member.html">Team Member API</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_api_themes_cloud.html">Themes (Custom Cloud) API</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_api_themes_user.html">Themes (User) API</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_api_user.html">User API</a></li>
-            
-            
-            
-            
-        </ul>
-        
-        
-    
-    <li>
-        <a href="#">Webhooks</a>
-        <ul>
-            
-            
-            
-            <li><a href="ds_wh_webhooks">How to Use Webhooks</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_wh_user">User Webhooks</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_wh_site">Site Webhooks</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_wh_store">Store Webhooks</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_wh_member">Member Webhooks</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_wh_form">Form Webhooks</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="ds_wh_blog">Blog Webhooks</a></li>
-            
-            
-            
-            
-        </ul>
-        
-        
-        
-        <!-- if you aren't using the accordion, uncomment this block:
-           <p class="external">
-               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
-           </p>
-           -->
-    </li>
+
 </ul>
 </div>
 
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
-<script>$("li.active").parents('li').toggleClass("active");</script>
+<script>
+$("li.active").parents('li').toggleClass("active");
+</script>
 
     <!-- Content Column -->
     <div class="col-md-9">
@@ -559,6 +717,7 @@ $('#toc').on('click', 'a', function() {
     
 
   
+<h2 id="fields">Fields</h2>
 <p>The following table shows all fields that exist for this API, those that are returned when you retrieve a list, those that are required for <code class="highlighter-rouge">PUT</code>, and those that are changeable using <code class="highlighter-rouge">PATCH</code>. All fields are returned when you retrieve a single item.</p>
 <table>
     <tbody>
@@ -597,8 +756,10 @@ $('#toc').on('click', 'a', function() {
     </tbody>
 </table>
 
-<div class="Notice type_info" role="alert">
-	<b>Note:</b> Any fields returned that are not documented are currently unsupported and can be safely ignored.
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div markdown="span" class="Notice type_info" role="alert"&gt;
+	&lt;b&gt;Note:&lt;/b&gt; Any fields returned that are not documented are currently unsupported and can be safely ignored.
+&lt;/div&gt;
+</code></pre>
 </div>
 
 <h2><span class="label label-get text-uppercase">get</span> Retrieve Account Details</h2>
@@ -640,7 +801,7 @@ $('#toc').on('click', 'a', function() {
 -X PUT <span class="se">\</span>
 -d <span class="s1">'{
         "brand_name": "My New Brand",
-        "publish_upsell_url": "http:\/\/www.mynewbrand.com\/upsell.html",
+        "publish_upsell_url": "http:\/\/www.mynewbrand.com\/upsell.html"
 }'</span> <span class="se">\</span>
 -H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
 -H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
@@ -653,8 +814,8 @@ $('#toc').on('click', 'a', function() {
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
     </span><span class="nt">"account"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nt">"brand_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Brand"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"publish_upsell_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http:\/\/www.mynewbrand.com\/upsell.html"</span><span class="p">,</span><span class="w">
-    </span><span class="err">}</span><span class="w">
+        </span><span class="nt">"publish_upsell_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http:\/\/www.mynewbrand.com\/upsell.html"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
 
@@ -672,7 +833,7 @@ $('#toc').on('click', 'a', function() {
 -X PATCH <span class="se">\</span>
 -d <span class="s1">'{
         "brand_name": "My Brand",
-        "publish_upsell_url": "http:\/\/www.mynewbrand.com\/upsell.html",
+        "publish_upsell_url": "http:\/\/www.mynewbrand.com\/upsell.html"
     }'</span> <span class="se">\</span>
 -H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
 -H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
@@ -685,8 +846,8 @@ $('#toc').on('click', 'a', function() {
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
     </span><span class="nt">"account"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nt">"brand_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Brand"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"publish_upsell_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http:\/\/www.mynewbrand.com\/upsell.html"</span><span class="p">,</span><span class="w">
-    </span><span class="err">}</span><span class="w">
+        </span><span class="nt">"publish_upsell_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http:\/\/www.mynewbrand.com\/upsell.html"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
 
@@ -716,7 +877,7 @@ $('#toc').on('click', 'a', function() {
 		<div class="col-lg-12">
 			<div class="footer__fineprint">
 				&copy;2017 Weebly. All rights reserved. <br />
-				 Site last generated: Oct 12, 2017
+				 Site last generated: Oct 13, 2017
 			</div>
 			<div class="footer__logo">
 				<img src="images/weebly_logo.svg" alt="Weebly logo"/>

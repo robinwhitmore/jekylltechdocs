@@ -7,7 +7,7 @@
 "title": "About the Weebly Cloud for Designer REST APIs",
 "tags": "apisgetting_started",
 "keywords": "endpoint, list view, detail view, http verbs, pagination, authentication, authorization, errors",
-"url": "ds_apis_about.html",
+"url": "ds_api_about.html",
 "summary": "Weebly APIs are provided using REST over HTTPS and utilize the HTTP verbs GET, POST, PUT, PATCH and DELETE. We provide a number of client libraries to help get you started. See the following sections for more general information about using our APIs."
 }
 ,
@@ -42,6 +42,28 @@
 "keywords": "blog, blog post, post",
 "url": "ds_api_blog_post.html",
 "summary": "Use the Blog Post API to return details about a post to a blog, or to update a post."
+}
+,
+
+
+
+{
+"title": "Form API",
+"tags": "sites",
+"keywords": "forms",
+"url": "ds_api_form.html",
+"summary": "Use the Form API to retrieve all forms for a site."
+}
+,
+
+
+
+{
+"title": "Form Entry API",
+"tags": "sites",
+"keywords": "forms, form entries, entries",
+"url": "ds_api_form_entry.html",
+"summary": "​Use the Form Entries API to return entries for a given form."
 }
 ,
 

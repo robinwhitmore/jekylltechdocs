@@ -26,6 +26,25 @@ Make sure jQuery is loaded ahead of bootstrap.js.
 - Remove malformed entry using `"` in description.
 
 
-## Reference
+## Documentations
+
+### Includes
+
+### note.html
+
+```
+{% include note.html content="..." %}
+{% include note.html type="tip" content="..." %}
+```
+
+### image.html
+
+```
+{% include image.html file="cl_apps.png" caption="App Detail page in the Cloud Admin" alt="Interface showing form to change details of an app" %}
+{% include image.html file="weebly.png" url="http://weebly.com" caption="Weebly.com" alt="Weebly logo" %}
+```
+
+
+## External Resources
 
 - [Liquid Template Docs](https://shopify.github.io/liquid/)

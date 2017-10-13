@@ -1,7 +1,7 @@
 {% if site.project == "platform" %}
 {% include custom/shared/note_oauthAPI.html%}
 {% endif %}
-
+## Fields
 The following table shows all fields that exist for this API, those that are returned when you retrieve a list, those that are required for `PUT`, and those that are changeable using `PATCH`. All fields are returned when you retrieve a single item.
 <table>
     <tbody>
@@ -169,7 +169,7 @@ curl https://api.weeblycloud.com/account \
 -X PUT \
 -d '{
         "brand_name": "My New Brand",
-        "publish_upsell_url": "http:\/\/www.mynewbrand.com\/upsell.html",
+        "publish_upsell_url": "http:\/\/www.mynewbrand.com\/upsell.html"
 }' \
 -H "Content-type: application/json" \
 -H "X-Public-Key: YOURAPIKEY" \
@@ -197,7 +197,7 @@ curl https://api.weeblycloud.com/account \
 {
     "account": {
         "brand_name": "My Brand",
-        "publish_upsell_url": "http:\/\/www.mynewbrand.com\/upsell.html",
+        "publish_upsell_url": "http:\/\/www.mynewbrand.com\/upsell.html"
     }
 }
 {% elsif site.project=="cloud" %}
@@ -246,7 +246,7 @@ curl https://api.weeblycloud.com/account \
 -X PATCH \
 -d '{
         "brand_name": "My Brand",
-        "publish_upsell_url": "http:\/\/www.mynewbrand.com\/upsell.html",
+        "publish_upsell_url": "http:\/\/www.mynewbrand.com\/upsell.html"
     }' \
 -H "Content-type: application/json" \
 -H "X-Public-Key: YOURAPIKEY" \
@@ -261,7 +261,7 @@ curl https://api.weeblycloud.com/account \
 {
     "account": {
         "brand_name": "My Brand",
-        "publish_upsell_url": "http:\/\/www.mynewbrand.com\/upsell.html",
+        "publish_upsell_url": "http:\/\/www.mynewbrand.com\/upsell.html"
     }
 }
 {% elsif site.project=="cloud" %}

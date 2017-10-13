@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Use the Form API to retrieve all forms for a site.">
+<meta name="keywords" content="sites,  forms">
+<title>Form API | Weebly Cloud for Designers Documentation</title>
+
+
+<link rel="stylesheet" href="css/syntax.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+ -->
+<!--
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/modern-business.css">
+
+-->
+<link rel="stylesheet" href="css/lavish-bootstrap.css">
+
+<link rel="stylesheet" href="css/orbit.css">
+<link rel="stylesheet" href="css/orbit-external.css">
+<link rel="stylesheet" href="css/theme-weebly.css">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<!-- <link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4008feed.xml"> -->
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        /*Bootstrap popovers are initialized with the following script. In the options, I'm setting the placement to be on the right, the trigger to be hover rather than click, and to allow HTML from the JSON data source. */
+
+        $('[data-toggle="popover"]').popover({
+            placement: 'top',
+            trigger: 'hover',
+            html: true
+        });
+    })
+</script>
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="fa fa-home fa-lg navbar-brand" href="home.html">&nbsp;<span class="projectTitle">
+                Weebly Cloud for Designers</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right NavList horizontal">
+                <!-- entries without drop-downs appear here -->
+                
+                
+                
+                <li class="NavLinkLi">
+                	<a href="home.html" class="NavLink">Get Started</a>
+               	</li>
+                
+                
+                
+                <li class="NavLinkLi">
+                	<a href="ds_apps_gs.html" class="NavLink">Custom Apps</a>
+               	</li>
+                
+                
+                
+                <li class="NavLinkLi">
+                	<a href="ds_themes_start.html" class="NavLink">Custom Themes</a>
+               	</li>
+                
+                
+                
+                <li class="NavLinkLi">
+                	<a href="ds_apis_about.html" class="NavLink">Cloud APIs</a>
+               	</li>
+                
+                
+                
+                <li class="NavLinkLi">
+                	<a href="ds_tags_about.html" class="NavLink">Tags</a>
+               	</li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+			<li class="NavLinkLi">
+
+
+
+  <a class="email NavLink" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Form API page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+
+</li>
+
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="Search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Form API">{title}</a></li>',
+                    noResultsText: 'No results',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Sidebar Column -->
+        <div class="col-md-3">
+
+          
+
+
+
+
+
+
+
+
+
+
+<ul id="mysidebar" class="nav NavList">
+   <!--  <li class="sidebarTitle">Weebly Cloud REST APIs </li> -->
+
+    
+	    
+		    
+	    
+		    
+
+			    <li class="NavLinkLi">
+			        <a href="#" class="NavLink isSecondary">Use the REST APIs</a>
+			        <ul class="NavList Children">
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_about.html" class="NavLink isSecondary">How to Use the REST APIs</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_account.html" class="NavLink isSecondary">Account API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_blog.html" class="NavLink isSecondary">Blog API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_blog_post.html" class="NavLink isSecondary">Blog Post API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="active isActive NavLinkLi">
+					            	<a href="ds_api_form.html" class="NavLink  isSecondary">Form API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_form_entry.html" class="NavLink isSecondary">Form Entry API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_member.html" class="NavLink isSecondary">Member API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_group.html" class="NavLink isSecondary">Group API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_page.html" class="NavLink isSecondary">Page API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_plan.html" class="NavLink isSecondary">Plan API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_site.html" class="NavLink isSecondary">Site API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_store.html" class="NavLink isSecondary">Store API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_category.html" class="NavLink isSecondary">Category API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_category_image.html" class="NavLink isSecondary">Category Image API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_coupon.html" class="NavLink isSecondary">Coupon API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_order.html" class="NavLink isSecondary">Order API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_order_billing.html" class="NavLink isSecondary">Order Billing API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_order_billing_transaction.html" class="NavLink isSecondary">Order Billing Transaction API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_order_item.html" class="NavLink isSecondary">Order Item API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_order_shipment.html" class="NavLink isSecondary">Order Shipment API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_order_shipment_transaction.html" class="NavLink isSecondary">Order Shipment Transaction API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_product.html" class="NavLink isSecondary">Product API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_product_image.html" class="NavLink isSecondary">Product Image API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_product_option.html" class="NavLink isSecondary">Product Option API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_product_option_choice.html" class="NavLink isSecondary">Product Option Choice API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_product_sku.html" class="NavLink isSecondary">Product SKU API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_subaccount.html" class="NavLink isSecondary">Sub-Account API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_team_member.html" class="NavLink isSecondary">Team Member API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_themes_cloud.html" class="NavLink isSecondary">Themes (Custom Cloud) API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_themes_user.html" class="NavLink isSecondary">Themes (User) API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_api_user.html" class="NavLink isSecondary">User API</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			        </ul>
+			    </li>
+		    
+	    
+		    
+
+			    <li class="NavLinkLi">
+			        <a href="#" class="NavLink isSecondary">Webhooks</a>
+			        <ul class="NavList Children">
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_wh_webhooks.html" class="NavLink isSecondary">How to Use Webhooks</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_wh_user.html" class="NavLink isSecondary">User Webhooks</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_wh_site.html" class="NavLink isSecondary">Site Webhooks</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_wh_store.html" class="NavLink isSecondary">Store Webhooks</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_wh_member.html" class="NavLink isSecondary">Member Webhooks</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_wh_form.html" class="NavLink isSecondary">Form Webhooks</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="ds_wh_blog.html" class="NavLink isSecondary">Blog Webhooks</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			        </ul>
+			    </li>
+		    
+	    
+    
+
+</ul>
+</div>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>
+$("li.active").parents('li').toggleClass("active");
+</script>
+
+    <!-- Content Column -->
+    <div class="col-md-9">
+        <div>
+    <div class="post-header">
+        <h1 class="post-title-main display-2">Form API</h1>
+    </div>
+    <div class="pageType">  reference </div>
+</div>
+
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary">Use the Form API to retrieve all forms for a site.</div>
+   
+
+
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 50);
+  return false
+})
+
+});
+</script>
+
+<div id="toc" class="toc"></div>
+
+    
+
+
+    
+
+  <p>Site owners can add <a href="https://hc.weebly.com/hc/en-us/articles/212044867-Create-a-Survey-Poll-RSVP-or-Contact-Form">forms to pages</a> that allow their visitors to leave information, like their name and address, or to create surveys or polls.</p>
+
+<p>Use the Form API to retrieve all forms for a site. Use the <a href="ds_api_form_entry.html">Form Entries</a> API to view the actual entries from a given form.</p>
+
+<h2 id="fields">Fields</h2>
+<p>The following table shows all fields that exist for this API and those that are returned when you retrieve a list. All fields are returned when you retrieve a single item.</p>
+<table>
+    <tbody>
+    <tr>
+        <td><strong>Name</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Type</strong></td>
+        <td><strong>List</strong></td>
+    </tr>
+    <tr>
+        <td><code>site_id</code></td>
+        <td>ID of a Weebly site, unique to the currently authenticated user​</td>
+        <td>string</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>form_id</code></td>
+        <td>Unique ID for a form
+        </td>
+        <td>string</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>form_name</code></td>
+        <td>The name given to a form when created</td>
+        <td>string</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>last_submitted</code></td>
+        <td>Timestamp for the date of the last form submission.
+        </td>
+        <td>Unix GMT Timestamp</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>submission_count</code></td>
+        <td>The number of form submissions.
+        </td>
+        <td>string</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>page_id</code></td>
+        <td>A unique ID that represents the <a href="ds_api_page.html">page</a> containing the form.
+        </td>
+        <td>string</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>site_title</code></td>
+        <td>​Title of the site that contains the form.
+        </td>
+        <td>string</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>deleted</code></td>
+        <td>Whether or not the form has been deleted.<br />
+            Valid values are:
+           <ul>
+               <li><code>1</code>: true</li>
+               <li><code>0</code>: false</li>
+           </ul></td>
+        <td>string</td>
+        <td>X</td>
+    </tr>
+
+    </tbody>
+</table>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Any fields returned that are not documented are currently unsupported and can be safely ignored.</div>
+
+<h2><span class="label label-get text-uppercase">get</span> Retrieve a List of Forms
+</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/form</code></pre></figure>
+
+<p>Returns all forms for the given site.</p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+<p>Returned values are <a href="ds_api_about.html#pagination">paginated</a>. You can further filter results using these parameters:</p>
+<table>
+    <tr>
+        <td><strong>Parameter</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Type</strong></td>
+    </tr>
+    <tr>
+        <td><code>page</code></td>
+        <td>Which page of results to return. Start is <code>1</code>.
+            <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Only the first 25 results are returned by default. If the result set is expected to be over 25, you must implement pagination.</div>
+
+        </td>
+        <td>integer</td>
+    </tr>
+    <tr>
+        <td><code>limit</code></td>
+        <td>Number of results per page to return. Default is <code>25</code>. <br />Max is <code>200</code>.</td>
+        <td>integer</td>
+    </tr>
+    <tr>
+        <td><code>query</code></td>
+        <td>Use to retrieve only forms that have a full-text match with the query string.</td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td><code>filterby</code></td>
+        <td>Field name to set a filter on.
+        </td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td><code>filterfor</code></td>
+        <td>​Value to search the filterby field for.</td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td><code>sortby</code></td>
+        <td>Field name to sort by</td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td><code>sortdir</code></td>
+        <td>Sort direction. Valid values are:
+            <ul>
+                <li><code>asc</code></li>
+                <li><code>desc</code></li>
+            </ul>
+        </td>
+        <td>string</td>
+    </tr>
+</table>
+
+<p class="codeTitle">Example CURL request returning all forms:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/form <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example filtered request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/form?sortby<span class="o">=</span>form_id&amp;sortdir<span class="o">=</span>asc <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"site_id"</span><span class="p">:</span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"form_id"</span><span class="p">:</span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"form_name"</span><span class="p">:</span><span class="s2">"Contact Form"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"last_submitted"</span><span class="p">:</span><span class="mi">1453382915</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"submission_count"</span><span class="p">:</span><span class="s2">"4"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"page_id"</span><span class="p">:</span><span class="s2">"765432198"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"site_title"</span><span class="p">:</span><span class="s2">"My Site"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"deleted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"site_id"</span><span class="p">:</span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"form_id"</span><span class="p">:</span><span class="s2">"456789"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"form_name"</span><span class="p">:</span><span class="s2">"RSVP Form"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"last_submitted"</span><span class="p">:</span><span class="mi">1453374946</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"submission_count"</span><span class="p">:</span><span class="s2">"8"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"page_id"</span><span class="p">:</span><span class="s2">"76543321"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"site_title"</span><span class="p">:</span><span class="s2">"My Site"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"deleted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span></code></pre></figure>
+
+<h2><span class="label label-get text-uppercase">get</span> Retrieve Details for a Form
+</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/form/<span class="o">{</span>FORM_ID<span class="o">}</span></code></pre></figure>
+
+<p>Returns all fields for the given form.</p>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/form/123456 <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+<p>See Fields table. All fields for the form are returned.</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nt">"site_id"</span><span class="p">:</span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"form_id"</span><span class="p">:</span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"form_name"</span><span class="p">:</span><span class="s2">"RSVP Form"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"last_submitted"</span><span class="p">:</span><span class="mi">1453374946</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"submission_count"</span><span class="p">:</span><span class="s2">"8"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"page_id"</span><span class="p">:</span><span class="s2">"7654321"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"site_title"</span><span class="p">:</span><span class="s2">"My Site"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"deleted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+
+    <div class="tags">
+        
+        <b>Tags: </b>
+        
+        
+        
+        <a href="tag_sites.html" class="btn btn-default navbar-btn cursorNorm" role="button">sites</a>
+        
+        
+        
+    </div>
+
+    
+
+</div>
+
+<hr class="shaded"/>
+
+<footer class="footer">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="footer__fineprint">
+				&copy;2017 Weebly. All rights reserved. <br />
+				 Site last generated: Oct 13, 2017
+			</div>
+			<div class="footer__logo">
+				<img src="images/weebly_logo.svg" alt="Weebly logo"/>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+
+</body>
+
+</html>

@@ -5,7 +5,7 @@ Use the Blog API to retrieve a list of blogs on the site or details about a give
 {% if site.project == "platform" %}
 {% include custom/shared/note_oauthAPI.html%}
 {% endif %}
-
+## Fields
 The following table shows all fields that exist for this API, noting those that are returned when you retrieve a list. All fields are returned when you retrieve a single item.
 <table>
     <tbody>

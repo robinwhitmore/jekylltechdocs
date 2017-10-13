@@ -34,120 +34,123 @@ entries:
       # ready for review
 
     - title: Blog API
-      url: ds_api_blog.html
+      url: /ds_api_blog.html
       output: web, pdf
       # ready for review
 
     - title: Blog Post API
-      url: ds_api_blog_post.html
+      url: /ds_api_blog_post.html
       output: web, pdf
+      # ready for review
 
     - title: Form API
-      url: ds_api_form.html
+      url: /ds_api_form.html
       output: web, pdf
+      # ready for review
 
     - title: Form Entry API
-      url: ds_api_form_entry.html
+      url: /ds_api_form_entry.html
       output: web, pdf
+      # ready for review
 
     - title: Member API
-      url: ds_api_member.html
+      url: /ds_api_member.html
       output: web, pdf
 
     - title: Group API
-      url: ds_api_group.html
+      url: /ds_api_group.html
       output: web, pdf
 
     - title: Page API
-      url: ds_api_page.html
+      url: /ds_api_page.html
       output: web, pdf
 
     - title: Plan API
-      url: ds_api_plan.html
+      url: /ds_api_plan.html
       output: web, pdf
 
     - title: Site API
-      url: ds_api_site.html
+      url: /ds_api_site.html
       output: web, pdf
 
     - title: Store API
-      url: ds_api_store.html
+      url: /ds_api_store.html
       output: web, pdf
 
     - title: Category API
-      url: ds_api_category.html
+      url: /ds_api_category.html
       output: web, pdf
 
     - title: Category Image API
-      url: ds_api_category_image.html
+      url: /ds_api_category_image.html
       output: web, pdf
 
     - title: Coupon API
-      url: ds_api_coupon.html
+      url: /ds_api_coupon.html
       output: web, pdf
 
     - title: Order API
-      url: ds_api_order.html
+      url: /ds_api_order.html
       output: web, pdf
 
     - title: Order Billing API
-      url: ds_api_order_billing.html
+      url: /ds_api_order_billing.html
       output: web, pdf
 
     - title: Order Billing Transaction API
-      url: ds_api_order_billing_transaction.html
+      url: /ds_api_order_billing_transaction.html
       output: web, pdf
 
     - title: Order Item API
-      url: ds_api_order_item.html
+      url: /ds_api_order_item.html
       output: web, pdf
 
     - title: Order Shipment API
-      url: ds_api_order_shipment.html
+      url: /ds_api_order_shipment.html
       output: web, pdf
 
     - title: Order Shipment Transaction API
-      url: ds_api_order_shipment_transaction.html
+      url: /ds_api_order_shipment_transaction.html
       output: web, pdf
 
     - title: Product API
-      url: ds_api_product.html
+      url: /ds_api_product.html
       output: web, pdf
 
     - title: Product Image API
-      url: ds_api_product_image.html
+      url: /ds_api_product_image.html
       output: web, pdf
 
     - title: Product Option API
-      url: ds_api_product_option.html
+      url: /ds_api_product_option.html
       output: web, pdf
 
     - title: Product Option Choice API
-      url: ds_api_product_option_choice.html
+      url: /ds_api_product_option_choice.html
       output: web, pdf
 
     - title: Product SKU API
-      url: ds_api_product_sku.html
+      url: /ds_api_product_sku.html
       output: web, pdf
 
     - title: Sub-Account API
-      url: ds_api_subaccount.html
+      url: /ds_api_subaccount.html
       output: web, pdf
 
     - title: Team Member API
-      url: ds_api_team_member.html
+      url: /ds_api_team_member.html
       output: web, pdf
 
     - title: Themes (Custom Cloud) API
-      url: ds_api_themes_cloud.html
+      url: /ds_api_themes_cloud.html
       output: web, pdf
 
     - title: Themes (User) API
-      url: ds_api_themes_user.html
+      url: /ds_api_themes_user.html
       output: web, pdf
 
     - title: User API
-      url: ds_api_user.html
+      url: /ds_api_user.html
       output: web, pdf
 
   - title: Webhooks
@@ -155,29 +158,29 @@ entries:
     folderitems:
 
     - title: How to Use Webhooks
-      url: ds_wh_webhooks
+      url: /ds_wh_webhooks.html
       output: web, pdf
 
     - title: User Webhooks
-      url: ds_wh_user
+      url: /ds_wh_user.html
       output: web, pdf
 
     - title: Site Webhooks
-      url: ds_wh_site
+      url: /ds_wh_site.html
       output: web, pdf
 
     - title: Store Webhooks
-      url: ds_wh_store
+      url: /ds_wh_store.html
       output: web, pdf
 
     - title: Member Webhooks
-      url: ds_wh_member
+      url: /ds_wh_member.html
       output: web, pdf
 
     - title: Form Webhooks
-      url: ds_wh_form
+      url: /ds_wh_form.html
       output: web, pdf
 
     - title: Blog Webhooks
-      url: ds_wh_blog
+      url: /ds_wh_blog.html
       output: web, pdf
