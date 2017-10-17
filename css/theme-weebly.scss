@@ -1090,7 +1090,7 @@ h4.panel-title {
 
 .font-base {
 	color: #003055;
-	font-family: "effra", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+	font-family: $font-family;
 	font-size: 16px;
 	line-height: 1.5;
 }
@@ -1104,7 +1104,8 @@ h4.panel-title {
 /* BASE TYPOGRAPHY ---------------------------------------------------------- */
 
 body {
-	font-family: "effra", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+    color: #28292C;
+	font-family: $font-family;
 	font-size: 16px;
 
 	/* TEMP SOLUTION
@@ -1202,6 +1203,14 @@ body {
 a.NavLink {
 	font-weight: 400;
 	color: $nav-color;
+	@extend .font-base;
+	@extend .font-smoothing;
+}
+
+/* When a nested Nav Link is active, Orbit does not highlight the parent. */
+.NavLinkLi.active > .NavLink {
+	color: $brand-color;
+	font-weight: 500;
 }
 
 div.Notice {
