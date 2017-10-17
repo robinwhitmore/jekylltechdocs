@@ -56,18 +56,22 @@ entries:
     - title: Member API
       url: /ds_api_member.html
       output: web, pdf
+      # ready for review
 
     - title: Group API
       url: /ds_api_group.html
       output: web, pdf
+      # ready for review
 
     - title: Page API
       url: /ds_api_page.html
       output: web, pdf
+      # ready for review
 
     - title: Plan API
       url: /ds_api_plan.html
       output: web, pdf
+      # ready for review
 
     - title: Site API
       url: /ds_api_site.html

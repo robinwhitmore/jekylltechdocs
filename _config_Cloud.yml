@@ -102,6 +102,8 @@ user: "user"
 
 name: "Cloud"
 
+company: "reseller"
+
 sidebars:
 - cl_gs_sidebar
 - cl_apps_sidebar

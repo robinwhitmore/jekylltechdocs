@@ -44,6 +44,30 @@
   
   
   <url>
+    <loc>http://localhost:4008/ds_api_group.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_api_member.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_api_page.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_api_plan.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4008/ds_api_test.html</loc>
   </url>
   

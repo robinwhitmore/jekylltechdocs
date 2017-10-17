@@ -70,6 +70,50 @@
 
 
 {
+"title": "Group API",
+"tags": "sites",
+"keywords": "member, membership, group,",
+"url": "ds_api_group.html",
+"summary": "Use the Group API to view, create, update and delete groups."
+}
+,
+
+
+
+{
+"title": "Member API",
+"tags": "sites",
+"keywords": "member, membership, login,",
+"url": "ds_api_member.html",
+"summary": "Use the Member API to return information about members, as well as to create, update, and delete members."
+}
+,
+
+
+
+{
+"title": "Page API",
+"tags": "sites",
+"keywords": "page, hidden, page order, layout, url",
+"url": "ds_api_page.html",
+"summary": "The Pages API provides methods for reading and updating information about the pages for a site."
+}
+,
+
+
+
+{
+"title": "Plan API",
+"tags": "plans",
+"keywords": "plans, plan, page limit, terms",
+"url": "ds_api_plan.html",
+"summary": "The Plan API lets you review your plans and add plans for a given site."
+}
+,
+
+
+
+{
 "title": "API test",
 "tags": "themes",
 "keywords": "",

@@ -102,6 +102,8 @@ user: "client"
 
 name: "Cloud for Designers"
 
+company: "designer"
+
 sidebars:
 - ds_gs_sidebar
 - ds_apps_sidebar
