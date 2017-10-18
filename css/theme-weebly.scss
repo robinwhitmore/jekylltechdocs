@@ -1057,3 +1057,16 @@ div.Notice {
 	background-position: 20px 20px;
 	padding-left: 42px;
 }
+
+/* Move top margin in secondary nav from container of the links to the links.
+   Any top/bottom margins on the container will cause the layout to bounce when it is targeted by
+   a jQuery collapse.
+*/
+.Children {
+	margin-top: 0;
+}
+
+.NavList > *:first-child {
+	margin-top: 8px;
+}
+
