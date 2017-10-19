@@ -294,7 +294,7 @@ curl https://api.weeblycloud.com/user/123456/site/987654321/group/1 \
 }
 {% endhighlight %}
 
-<h2><span class="label label-patch text-uppercase">post</span> Create a Group</h2>
+<h2>{% include label.html content="post" %} Create a Group</h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
 POST /v1/user/sites/{SITE_ID}/groups

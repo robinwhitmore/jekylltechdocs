@@ -102,29 +102,6 @@ p.proc {
     font-weight: normal;
 }
 
-.label-delete {
-    background-color: #a41e22;
-    border-color: #a41e22;
-}
-.label-post {
-    background-color: #098036;
-    border-color: #098036;
-}
-
-.label-put {
-    background-color: #f4ce42;
-    border-color: #f4ce42;
-}
-
-.label-patch {
-    background-color: #AD510C;
-    border-color: #AD510C;
-}
-.label-get {
-    background-color: #0f6ab4;
-    border-color: #0f6ab4;
-}
-
 .bs-callout {
     padding: 20px;
     margin: 20px 0;
@@ -729,11 +706,6 @@ div.results {
     width: 100%;
 }
 
-.post-meta {
-    font-size: 14px;
-    color: #828282;
-}
-
 .post-link {
     font-size: 22px;
 }
@@ -741,26 +713,6 @@ div.results {
 .post-list p {
     margin: 10px 0px;
 }
-
-time {
-    margin-right: 10px;
-}
-
-p.post-meta time {
-    margin-right: 0px;
-}
-
-span.label.label-default {
-    background-color: gray;
-}
-
-span.label.label-primary {
-    background-color: #f0ad4e;
-}
-.col-lg-12 .nav li a {
-	background-color: white;
-}
-
 
 .nav li.active > a.subfoldersTitle {
     background-color: whitesmoke;
