@@ -6,12 +6,12 @@ The following table shows all fields that exist for this API, those that are ret
 <table>
     <tbody>
     <tr>
-        <td><strong>Name</strong></td>
-        <td><strong>Description</strong></td>
-        <td><strong>Type</strong></td>
-        <td><strong>List</strong></td>
-        <td><strong>Required</strong></td>
-        <td><strong>Changeable</strong></td>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>List</th>
+        <th>Required</th>
+        <th>Changeable</th>
     </tr>
     <tr>
         <td><code>brand_name</code><br>
@@ -136,7 +136,7 @@ curl https://api.weeblycloud.com/account \
 {% endif %}
 {% endhighlight %}
 
-<h2><span class="label label-put text-uppercase">put</span> Update the Given Fields for an Account</h2>
+<h2>{% include label.html content="put" %} Update the Given Fields for an Account</h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
 PATCH /v1/user/sites/{SITE_ID}/pages/{PAGE_ID}

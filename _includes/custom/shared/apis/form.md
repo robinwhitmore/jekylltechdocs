@@ -11,10 +11,10 @@ The following table shows all fields that exist for this API and those that are 
 <table>
     <tbody>
     <tr>
-        <td><strong>Name</strong></td>
-        <td><strong>Description</strong></td>
-        <td><strong>Type</strong></td>
-        <td><strong>List</strong></td>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>List</th>
     </tr>
     <tr>
         <td><code>site_id</code></td>
@@ -101,9 +101,9 @@ Returns all forms for the given site.
 Returned values are {% if site.project=="designer" %}[paginated](ds_api_about.html#pagination){%elsif site.project=="cloud" %}[paginated](cl_api_about.html#pagination.html){%elsif site.project=="platform" %}[paginated](pf_api_about.html#pagination.html){%endif%}. You can further filter results using these parameters:
 <table>
     <tr>
-        <td><strong>Parameter</strong></td>
-        <td><strong>Description</strong></td>
-        <td><strong>Type</strong></td>
+        <th>Parameter</th>
+        <th>Description</th>
+        <th>Type</th>
     </tr>
     <tr>
         <td><code>page</code></td>

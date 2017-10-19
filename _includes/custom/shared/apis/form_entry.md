@@ -10,10 +10,10 @@ The following table shows all fields that exist for this API and those that are 
 <table>
     <tbody>
     <tr>
-        <td><strong>Name</strong></td>
-        <td><strong>Description</strong></td>
-        <td><strong>Type</strong></td>
-        <td><strong>List</strong></td>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>List</th>
     </tr>
     <tr>
         <td><code>elements</code></td>
@@ -73,9 +73,9 @@ Returned values are {% if site.project=="designer" %}[paginated](ds_api_about.ht
 
 <table>
     <tr>
-        <td><strong>Parameter</strong></td>
-        <td><strong>Description</strong></td>
-        <td><strong>Type</strong></td>
+        <th>Parameter</th>
+        <th>Description</th>
+        <th>Type</th>
     </tr>
     <tr>
         <td><code>page</code></td>

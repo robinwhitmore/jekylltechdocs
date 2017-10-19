@@ -10,10 +10,10 @@ The following table shows all fields that exist for this API, noting those that 
 <table>
     <tbody>
     <tr>
-        <td><strong>Name</strong></td>
-        <td><strong>Description</strong></td>
-        <td><strong>Type</strong></td>
-        <td><strong>List</strong></td>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>List</th>
     </tr>
     <tr>
         <td><code>user_id</code></td>

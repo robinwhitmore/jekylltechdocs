@@ -9,12 +9,12 @@ Site owners create [blog posts](https://hc.weebly.com/hc/en-us/articles/20140508
 The following table shows all fields that exist for this API, those that are returned when you retrieve a list, those that are required for `PUT` and those that are changeable using `PATCH` and `PUT`. All fields are returned when you retrieve a single item.
 <table>
     <tr>
-        <td><strong>Name</strong></td>
-        <td><strong>Description</strong></td>
-        <td><strong>Type</strong></td>
-        <td><strong>List</strong></td>
-        <td><strong>Required</strong></td>
-        <td><strong>Changeable</strong></td>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>List</th>
+        <th>Required</th>
+        <th>Changeable</th>
     </tr>
     <tr>
         <td>​<code>user_id</code></td>
@@ -352,10 +352,10 @@ These fields can be replaced:
 
 <table>
     <tr>
-        <td><strong>Name</strong></td>
-        <td><strong>Description</strong></td>
-        <td><strong>Type</strong></td>
-        <td><strong>Notes</strong></td>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Notes</th>
     </tr>
     <tr>
         <td><code>post_body</code></td>
@@ -458,10 +458,10 @@ These fields can be updated:
 
 <table>
 <tr>
-    <td><strong>Name</strong></td>
-    <td><strong>Description</strong></td>
-    <td><strong>Type</strong></td>
-    <td><strong>Notes</strong></td>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Type</th>
+    <th>Notes</th>
 </tr>
 <tr>
     <td><code>post_body</code></td>

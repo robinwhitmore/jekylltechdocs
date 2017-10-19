@@ -7,12 +7,12 @@ The following table shows all fields that exist for this API, those that are ret
 <table>
     <tbody>
     <tr>
-        <td><strong>Name</strong></td>
-        <td><strong>Description</strong></td>
-        <td><strong>Type</strong></td>
-        <td><strong>List</strong></td>
-        <td><strong>Required</strong></td>
-        <td><strong>Changeable</strong></td>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>List</th>
+        <th>Required</th>
+        <th>Changeable</th>
     </tr>
     <tr>
         <td>​<code>user_id</code></td>
@@ -137,9 +137,9 @@ Returns all <span style="color:red">object</span>s for the given site. Only `lis
 Returned values are paginated. You can further filter results using these parameters:
 <table>
     <tr>
-        <td><strong>Parameter</strong></td>
-        <td><strong>Description</strong></td>
-        <td><strong>Type</strong></td>
+        <th>Parameter</th>
+        <th>Description</th>
+        <th>Type</th>
     </tr>
     <tr>
         <td><code>page</code></td>
@@ -320,10 +320,10 @@ These fields can be created:
 
 <table>
     <tr>
-        <td><strong>Name</strong></td>
-        <td><strong>Description</strong></td>
-        <td><strong>Type</strong></td>
-        <td><strong>Notes</strong></td>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Notes</th>
     </tr>
     <tr>
         <td><code>title</code></td>
@@ -393,10 +393,10 @@ These fields can be replaced:
 
 <table>
     <tr>
-        <td><strong>Name</strong></td>
-        <td><strong>Description</strong></td>
-        <td><strong>Type</strong></td>
-        <td><strong>Notes</strong></td>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Notes</th>
     </tr>
     <tr>
         <td><code>title</code></td>
@@ -466,10 +466,10 @@ These fields can be updated:
 
 <table>
     <tr>
-        <td><strong>Name</strong></td>
-        <td><strong>Description</strong></td>
-        <td><strong>Type</strong></td>
-        <td><strong>Notes</strong></td>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Notes</th>
     </tr>
     <tr>
         <td><code>title</code></td>

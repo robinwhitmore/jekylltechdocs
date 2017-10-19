@@ -6,10 +6,10 @@ The following table shows all fields that exist for this API and those that are 
 <table>
     <tbody>
     <tr>
-        <td><strong>Name</strong></td>
-        <td><strong>Description</strong></td>
-        <td><strong>Type</strong></td>
-        <td><strong>Required</strong></td>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Required</th>
     </tr>
     <tr>
         <td>​<code>plans</code></td>
@@ -23,7 +23,6 @@ The following table shows all fields that exist for this API and those that are 
         <td>string</td>
         <td></td>
     </tr>
-
     <tr>
         <td><code>page_limit</code></td>
         <td>Maximum number of published pages allowed under this plan. If the plan allows unlimited pages, the value is <code>0</code>. If a user tries to add a page above that limit, they are prompted to upgrade.</td>
@@ -263,10 +262,10 @@ These fields can be created:
 
 <table>
     <tr>
-        <td><strong>Name</strong></td>
-        <td><strong>Description</strong></td>
-        <td><strong>Type</strong></td>
-        <td><strong>Notes</strong></td>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Notes</th>
     </tr>
     <tr>
         <td><code>plan_id</code></td>
