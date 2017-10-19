@@ -252,7 +252,7 @@ curl https://api.weeblycloud.com/user/123456/site/987654321/plan \
 }
 {% endhighlight %}
 
-<h2><span class="label label-patch text-uppercase">post</span> Assign a Plan to a Site</h2>
+<h2>{% include label.html content="post" %} Assign a Plan to a Site</h2>
 {% highlight shell%}
 POST /user/USER_ID/site/{SITE_ID}/plan
 {% endhighlight %}

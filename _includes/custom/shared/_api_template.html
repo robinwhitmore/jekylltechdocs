@@ -223,7 +223,7 @@ are returned.</p>
 "new.html" }
 ]
 {% endhighlight %}
-<h2><span class="label label-patch text-uppercase">post</span> Create a
+<h2>{% include label.html content="post" %} Create a
 <span style="color: red;">object</span></h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
@@ -279,7 +279,7 @@ curl https://api.weeblycloud.com/user/USER_ID/site/SITE_ID/page \
 "page_url": "new.html"
 }
 {% endhighlight %}
-<h2><span class="label label-patch text-uppercase">post</span> Replace
+<h2>{% include label.html content="post" %} Replace
 a <span style="color: red;">object</span></h2>
 {% highlight shell%}
 {% if site.project == "platform" %}

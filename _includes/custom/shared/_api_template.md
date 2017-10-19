@@ -298,7 +298,7 @@ curl https://api.weeblycloud.com/user/123456/site/987654321/page/1234567890 \
 ]
 {% endhighlight %}
 
-<h2><span class="label label-patch text-uppercase">post</span> Create a <span style="color:red">object</span></h2>
+<h2>{% include label.html content="post" %} Create a <span style="color:red">object</span></h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
 POST /v1/user/sites/{SITE_ID}/pages
@@ -371,7 +371,7 @@ curl https://api.weeblycloud.com/user/123456/site/987654321/page \
 }
 {% endhighlight %}
 
-<h2><span class="label label-patch text-uppercase">post</span> Replace a <span style="color:red">object</span></h2>
+<h2>{% include label.html content="post" %} Replace a <span style="color:red">object</span></h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
 PUT /v1/user/sites/{SITE_ID}/pages/{PAGE_ID}

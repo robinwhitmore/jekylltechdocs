@@ -355,7 +355,7 @@ curl https://api.weeblycloud.com/user/123456/site/987654321/member/3 \
 }
 {% endhighlight %}
 
-<h2><span class="label label-patch text-uppercase">post</span> Create a Member</h2>
+<h2>{% include label.html content="post" %} Create a Member</h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
 POST /v1/user/sites/{SITE_ID}/members
