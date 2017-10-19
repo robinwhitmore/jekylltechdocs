@@ -108,7 +108,7 @@ The following table shows all fields that exist for this API and those that are 
 </table>
 {% include custom/notes/note_api_undoc.md %}
 
-<h2><span class="label label-get text-uppercase">get</span> Retrieve a List of Plans
+<h2>{% include label.html content="get" %} Retrieve a List of Plans
 </h2>
 
 {% highlight shell%}
@@ -216,7 +216,7 @@ curl https://api.weeblycloud.com/plan \
 }
 {% endhighlight %}
 
-<h2><span class="label label-get text-uppercase">get</span> Retrieve the Plan for a Site
+<h2>{% include label.html content="get" %} Retrieve the Plan for a Site
 </h2>
 {% highlight shell%}
 GET /user/USER_ID/site/{SITE_ID}/plan

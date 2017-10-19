@@ -116,7 +116,7 @@ The following table shows all fields that exist for this API, those that are ret
 </table>
 {% include custom/notes/note_api_undoc.md %}
 
-<h2><span class="label label-get text-uppercase">get</span> Retrieve a List of <span style ="color:red">Object</span>s</h2>
+<h2>{% include label.html content="get" %} Retrieve a List of <span style ="color:red">Object</span>s</h2>
 
 {% highlight shell%}
 {% if site.project == "platform" %}
@@ -249,7 +249,7 @@ curl https://api.weeblycloud.com/user/123456/site/987654321/page?filterby=layout
 ]
 {% endhighlight %}
 
-<h2><span class="label label-get text-uppercase">get</span> Retrieve Details for a <span style="color:red">object</span></h2>
+<h2>{% include label.html content="get" %} Retrieve Details for a <span style="color:red">object</span></h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
 GET /v1/user/sites/{SITE_ID}/
@@ -444,7 +444,7 @@ curl https://api.weeblycloud.com/user/123456/site/987654321/page/1234567890 \
 }
 {% endhighlight %}
 
-<h2><span class="label label-patch text-uppercase">patch</span> Update a <span style="color:red">object</span></h2>
+<h2>{% include label.html content="patch" %} Update a <span style="color:red">object</span></h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
 PATCH /v1/user/sites/{SITE_ID}/pages/{PAGE_ID}
@@ -518,7 +518,7 @@ See Fields table. All fields for the <span style="color:red">object</span> are r
 }
 {% endhighlight %}
 
-<h2><span class="label label-delete text-uppercase">delete</span> Delete a <span style="color:red">object</span></h2>
+<h2>{% include label.html content="delete" %} Delete a <span style="color:red">object</span></h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
 DELETE /v1/user/sites/{SITE_ID}/pages/{PAGE_ID}

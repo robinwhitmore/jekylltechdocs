@@ -155,7 +155,7 @@ The following table shows all fields that exist for this API, those that are ret
 </table>
 {% include custom/notes/note_api_undoc.md %}
 
-<h2><span class="label label-get text-uppercase">get</span> Retrieve a List of Members
+<h2>{% include label.html content="get" %} Retrieve a List of Members
 </h2>
 
 {% highlight shell%}
@@ -304,7 +304,7 @@ curl https://api.weeblycloud.com/user/123456/site/987654321//member?sortby=name&
 ]
 {% endhighlight %}
 
-<h2><span class="label label-get text-uppercase">get</span> Retrieve Details for a Member</h2>
+<h2>{% include label.html content="get" %} Retrieve Details for a Member</h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
 GET /v1/user/sites/{SITE_ID}/members/{MEMBER_ID}
@@ -466,7 +466,7 @@ curl https://api.weeblycloud.com/user/123456/site/987654321/page \
 }
 {% endhighlight %}
 
-<h2><span class="label label-patch text-uppercase">patch</span> Update a Member</h2>
+<h2>{% include label.html content="patch" %} Update a Member</h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
 PATCH /v1/user/sites/{SITE_ID}/members/{MEMBER_ID}
@@ -569,7 +569,7 @@ curl https://api.weeblycloud.com/user/987654321/site/123456/member/2 \
 }
 {% endhighlight %}
 
-<h2><span class="label label-delete text-uppercase">delete</span> Delete a Member</h2>
+<h2>{% include label.html content="delete" %} Delete a Member</h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
 DELETE /v1/user/sites/{SITE_ID}/members/{MEMBER_ID}

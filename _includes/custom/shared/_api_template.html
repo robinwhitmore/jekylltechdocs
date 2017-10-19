@@ -14,16 +14,16 @@ that are returned when you retrieve a list, those that are required for
       <td><strong>Description</strong></td>
       <td><strong>Type</strong></td>
       <td><strong>List</strong></td><td style="vertical-align: top;">Required<br></td><td style="vertical-align: top;">Changeable<br></td>
-      
-      
+
+
     </tr>
     <tr>
       <td><code>user_id</code></td>
       <td>The unique ID of the authenticated user.</td>
       <td>string</td>
       <td>X</td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td>
-      
-      
+
+
     </tr>
     <tr>
       <td><code>site_id</code></td>
@@ -31,16 +31,16 @@ that are returned when you retrieve a list, those that are required for
 user.</td>
       <td>string</td>
       <td>X</td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td>
-      
-      
+
+
     </tr>
     <tr>
       <td><code>blog_id</code></td>
       <td>Unique ID for this blog.<br></td>
       <td>string</td>
       <td>X</td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td>
-      
-      
+
+
     </tr>
     <tr>
       <td><code>page_id</code></td>
@@ -48,8 +48,8 @@ user.</td>
       </td>
       <td>string</td>
       <td>X</td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td>
-      
-      
+
+
     </tr>
     <tr>
       <td><code>title<br>
@@ -57,8 +57,8 @@ user.</td>
       <td>The blog's title<br></td>
       <td>string</td>
       <td>X</td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td>
-      
-      
+
+
     </tr><tr><td style="vertical-align: top;"><pre>allow_comments</pre></td><td style="vertical-align: top;">Whether or not the blog allows comments. Valid values are:<br><ul><li>yes</li><li>no</li></ul></td><td style="vertical-align: top;">string</td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td></tr><tr><td style="vertical-align: top;"><pre>date_format</pre></td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;">string</td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td></tr><tr><td style="vertical-align: top;"><pre>time_format</pre></td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;">string</td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td></tr><tr><td style="vertical-align: top;"><pre>page_blog_num</pre></td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;">string</td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td></tr><tr><td style="vertical-align: top;"><pre>blog_link</pre></td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;">string</td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td></tr><tr><td style="vertical-align: top;"><pre>blog_slug</pre></td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;">string</td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td></tr><tr><td style="vertical-align: top;"><pre>require_approval</pre></td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;">boolean<br></td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td></tr><tr><td style="vertical-align: top;"><pre>post_header_code</pre></td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;">string</td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td></tr><tr><td style="vertical-align: top;"><pre>post_footer_code</pre></td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;">string</td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td></tr><tr><td style="vertical-align: top;"><pre>time_zone</pre></td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;">string</td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td></tr><tr><td style="vertical-align: top;"><pre>commenting_system</pre></td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;">string</td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td></tr><tr><td style="vertical-align: top;"><pre>created date</pre></td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><table><tbody><tr><td style="vertical-align: top;">Unix timestamp in GMT<br>
 </td>
 </tr></tbody></table></td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td></tr><tr><td style="vertical-align: top;"><pre>updated_date</pre></td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;">Unix timestamp in GMT<br></td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td></tr>
@@ -66,7 +66,7 @@ user.</td>
 </table>
 {% include note.html content = "Any fields returned that are not
 documented are currently unsupported and can be safely ignored."%}
-<h2><span class="label label-get text-uppercase">get</span> Retrieve a
+<h2>{% include label.html content="get" %} Retrieve a
 List of <span style="color: red;">Object</span>s for a Given Site</h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
@@ -185,7 +185,7 @@ https://api.weeblycloud.com/user/USER_ID/site/SITE_ID/page?filterby=layout&amp;f
 "tall-header", "page_url": "members-only.html" }
 ]
 {% endhighlight %}
-<h2><span class="label label-get text-uppercase">get</span> Retrieve
+<h2>{% include label.html content="get" %} Retrieve
 Details for a <span style="color: red;">object</span></h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
@@ -337,7 +337,7 @@ https://api.weeblycloud.com/user/USER_ID/site/SITE_ID/page/1234567890 \
 "new.html"
 }
 {% endhighlight %}
-<h2><span class="label label-patch text-uppercase">patch</span> Update
+<h2>{% include label.html content="patch" %} Update
 a <span style="color: red;">object</span></h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
@@ -397,7 +397,7 @@ are returned.</p>
 "new.html"
 }
 {% endhighlight %}
-<h2><span class="label label-delete text-uppercase">delete</span>
+<h2>{% include label.html content="delete" %}
 Delete a <span style="color: red;">object</span></h2>
 {% highlight shell%}
 {% if site.project == "platform" %}

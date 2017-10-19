@@ -37,6 +37,22 @@ Make sure jQuery is loaded ahead of bootstrap.js.
 {% include note.html type="tip" content="..." %}
 ```
 
+### label.html
+
+```
+# Using any of the following content values will automatically color the label.
+{% include label.html content="get" %}
+{% include label.html content="put" %}
+{% include label.html content="post" %}
+{% include label.html content="patch" %}
+{% include label.html content="delete" %}
+
+# But you are free to pass any content in to the label. It will use default styling.
+{% include label.html content="Hello There" %}
+
+```
+
+
 ### image.html
 
 ```

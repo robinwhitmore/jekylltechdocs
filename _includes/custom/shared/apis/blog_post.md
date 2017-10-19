@@ -174,7 +174,7 @@ The following table shows all fields that exist for this API, those that are ret
     </tr>
     <tr>
         <td><code>date_format</code></td>
-        <td>Format used for dates on this site.<br> 
+        <td>Format used for dates on this site.<br>
             Valid values are:
             <ul>
                 <li><code>n/j/Y</code>: month/day/year</li>
@@ -204,7 +204,7 @@ The following table shows all fields that exist for this API, those that are ret
 </table>
 {% include custom/notes/note_api_undoc.md %}
 
-<h2><span class="label label-get text-uppercase">get</span> Retrieve a List of Blog Posts
+<h2>{% include label.html content="get" %} Retrieve a List of Blog Posts
 </h2>
 
 {% highlight shell%}
@@ -269,7 +269,7 @@ curl https://api.weeblycloud.com/user/123456/site/987654321/blog/6543/post \
 ]
 {% endhighlight %}
 
-<h2><span class="label label-get text-uppercase">get</span> Retrieve Details for a Blog Post
+<h2>{% include label.html content="get" %} Retrieve Details for a Blog Post
 </h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
@@ -331,7 +331,7 @@ curl https://api.weeblycloud.com/user/123456/site/987654321/blog/6543/post/82700
 {% endhighlight %}
 
 
-<h2><span class="label label-patch text-uppercase">put</span> Replace a Blog Post</h2>
+<h2>{% include label.html content="put" %}  Replace a Blog Post</h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
 PUT /v1/user/sites/{SITE_ID}/bloga/{BLOG_ID}/posts/{POST_ID}
@@ -436,7 +436,8 @@ curl https://api.weeblycloud.com/user/123456/site/987654321/blog/6543/post/82700
 }
 {% endhighlight %}
 
-<h2><span class="label label-patch text-uppercase">patch</span> Update a Blog Post</h2>
+<h2>{% include label.html content="patch" %} Update a Blog Post</h2>
+
 {% highlight shell%}
 {% if site.project == "platform" %}
 PATCH /v1/user/sites/{SITE_ID}/blogs/{BLOG_ID}/posts/{POST_ID}
@@ -540,7 +541,7 @@ curl https://api.weeblycloud.com/user/123456/site/987654321/blog/6543/post/82700
 }
 {% endhighlight %}
 
-<h2><span class="label label-delete text-uppercase">delete</span> Delete a Blog Post</h2>
+<h2>{% include label.html content="delete" %} Delete a Blog Post</h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
 DELETE /v1/user/sites/{SITE_ID}/blogs/{BLOG_ID}/posts/{POST_ID}

@@ -80,7 +80,7 @@ The following table shows all fields that exist for this API, those that are ret
 </table>
 {% include note.html content = "Any fields returned that are not documented are currently unsupported and can be safely ignored."%}
 
-<h2><span class="label label-get text-uppercase">get</span> Retrieve Account Details</h2>
+<h2>{% include label.html content="get" %} Retrieve Account Details</h2>
 
 {% highlight shell%}
 {% if site.project == "platform" %}
@@ -213,7 +213,7 @@ curl https://api.weeblycloud.com/account \
 {% endif %}
 {% endhighlight %}
 
-<h2><span class="label label-patch text-uppercase">patch</span> Update an Account</h2>
+<h2>{% include label.html content="patch" %} Update an Account</h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
 PATCH /v1/user/sites/{SITE_ID}/pages/{PAGE_ID}

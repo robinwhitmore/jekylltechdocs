@@ -119,7 +119,7 @@ Contact - page_order 3
 </table>
 {% include custom/notes/note_api_undoc.md %}
 
-<h2><span class="label label-get text-uppercase">get</span> Retrieve a List of Pages
+<h2>{% include label.html content="get" %} Retrieve a List of Pages
 </h2>
 
 {% highlight shell%}
@@ -259,7 +259,7 @@ curl https://api.weeblycloud.com/user/123456/site/987654321/page?filterby=layout
 ]
 {% endhighlight %}
 
-<h2><span class="label label-get text-uppercase">get</span> Retrieve Details for a Page
+<h2>{% include label.html content="get" %} Retrieve Details for a Page
 </h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
@@ -308,7 +308,7 @@ curl https://api.weeblycloud.com/user/123456/site/987654321/page/131221993403487
 {% endhighlight %}
 
 
-<h2><span class="label label-patch text-uppercase">patch</span> Update a Page</h2>
+<h2>{% include label.html content="patch" %} Update a Page</h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
 PATCH /v1/user/sites/{SITE_ID}/pages/{PAGE_ID}
