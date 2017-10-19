@@ -54,13 +54,14 @@ layout: default
 
     <div class="tags">
         {% if page.tags != null %}
-        <b>Tags: </b>
-        {% assign projectTags = site.data.tags.allowed-tags %}
-        {% for tag in page.tags %}
-        {% if projectTags contains tag %}
-        <a href="{{ "tag_" | append: tag | append: ".html" }}" class="btn btn-default navbar-btn cursorNorm" role="button">{{page.tagName}}{{tag}}</a>
-        {% endif %}
-        {% endfor %}
+	        Tags<br />
+	        {% assign projectTags = site.data.tags.allowed-tags %}
+	        {% for tag in page.tags %}
+				{% if forloop.index != 1 %}, {% endif %}
+		        {% if projectTags contains tag %}
+		        	<a href="{{ "tag_" | append: tag | append: ".html" }}" class="btn btn-default navbar-btn cursorNorm" role="button">{{page.tagName}}{{tag}}</a>
+		        {% endif %}
+	        {% endfor %}
         {% endif %}
     </div>
 
