@@ -676,9 +676,9 @@ a.no_icon:after
     padding-left: 0;
 }
 
-.btn-default {
-    margin-bottom: 10px;
-}
+// .btn-default {
+//     margin-bottom: 10px;
+// }
 
 /* algolia search */
 
@@ -942,7 +942,6 @@ figure {
 }
 
 
-
 /* FOOTER ------------------------------------------------------------------- */
 
 .footer {
@@ -959,6 +958,16 @@ figure {
 
 .footer__logo {
 
+}
+
+/* CARD ------------------------------------------------------------------- */
+
+.Card {
+	margin-bottom: 24px;
+}
+
+.card-header {
+	margin-top: 0;
 }
 
 
