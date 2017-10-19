@@ -9,13 +9,14 @@ $nav-color: $heading-color;
 $brand-color: #0073ff;
 $post-link-color: #46A2FF; /* New color */
 
-
-
 $font-family: "effra", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+$font-family-mono: Menlo, Monaco, Consolas, "Courier New", monospace;
 $font-size: 16px;
 
 $border-color: #dfe6ee;
+$border-radius: 6px;
 
+$sidebar-width: 220px;
 
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
@@ -188,18 +189,19 @@ p.proc {
 .breadcrumb > .active {color: #777 !important;}
 
 /* make room for the nav bar */
-h1[id],
-h2[id],
-h3[id],
-h4[id],
-h5[id],
-h6[id],
-dt[id]{
-padding-top: 60px;
-margin-top: -40px
-}
+// h1[id],
+// h2[id],
+// h3[id],
+// h4[id],
+// h5[id],
+// h6[id],
+// dt[id]{
+// padding-top: 60px;
+// margin-top: -40px
+// }
 
-.post-content ol li, .post-content ul li {
+.post-content ol li,
+.post-content ul li {
     margin: 8px 0px;
 }
 
@@ -470,8 +472,8 @@ a.fa.fa-envelope-o.mailto {
     font-weight: 600;
 }
 
-h3 {color: #ED1951; font-weight:normal; font-size:130%;}
-h4 {color: #808080; font-weight:normal; font-size:120%; font-style:italic;}
+// h3 {color: #ED1951; font-weight:normal; font-size:130%;}
+// h4 {color: #808080; font-weight:normal; font-size:120%; font-style:italic;}
 
 .alert, .callout {
     overflow: hidden;
@@ -572,9 +574,10 @@ ol.series li {
     display:block;
 }
 
-#mysidebar .nav ul {
-    background-color: #FAFAFA;
-}
+// #mysidebar .nav ul {
+//     background-color: #FAFAFA;
+// }
+
 .nav ul.series li {
     list-style: decimal;
     font-size:12px;
@@ -603,10 +606,6 @@ table code {background-color: transparent;}
 table p {
     margin-top: 12px;
     margin-bottom: 12px;
-}
-
-pre {
-    margin: 25px 0px;
 }
 
 video {
@@ -655,17 +654,6 @@ span.red {
     font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 }
 
-h3.codeExplanation {
-    font-size:18px;
-    font-style:normal;
-    color: black;
-    line-height: 24px;
-}
-
-span.soft {
-    color: #c0c0c0;
-}
-
 .githubEditButton {
     margin-bottom:7px;
 }
@@ -684,36 +672,10 @@ span.soft {
     color: red !important;
 }
 
-.formBoundary {
-    border: 1px solid gray;
-    padding: 15px;
-    margin: 15px 0px;
-    background-color: whitesmoke;
-}
 
 @media (max-width: 767px) {
     .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
         color: #444;
-    }
-}
-
-@media (max-width: 990px) {
-    #mysidebar {
-        position: relative;
-    }
-}
-
-@media (min-width: 1000px) {
-
-    ul#mysidebar {
-        width: 225px;
-    }
-}
-
-@media (max-width: 900px) {
-
-    ul#mysidebar {
-        max-width: 100%;
     }
 }
 
@@ -937,20 +899,25 @@ body {
 	padding: 0 8px;
 }
 
+.col-sidebar {
+	margin-bottom: 32px;
+}
+
+
 @media (min-width: 768px) {
 	.page {
-		display: flex;
+		position: relative;
 		max-width: 972px;
 		padding: 0 16px;
 	}
 
 	.col-sidebar {
-		flex: 0 1 220px;
-		margin-right: 100px;
+		position: absolute;
+		width: $sidebar-width;
 	}
 
 	.col-content {
-		flex: 0 1 620px;
+		margin-left: $sidebar-width + 100px;
 	}
 }
 
@@ -1006,7 +973,21 @@ body {
 .post-content__image {
 	max-width: 100%;
 	border: 1px solid $border-color;
-	border-radius: 6px;
+	border-radius: $border-radius;
+}
+
+.post-content pre {
+    overflow-x: scroll;
+    margin: 40px 0px;
+    padding: 24px;
+    color: $secondary-color;
+    font-size: 13px;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+}
+
+.post-content code {
+	font-family: $font-family-mono;
 }
 
 
@@ -1068,5 +1049,10 @@ div.Notice {
 
 .NavList > *:first-child {
 	margin-top: 8px;
+}
+
+/* Tags are often displayed inline alongside text, give them a little breath to room. */
+.Tag {
+	margin-right: 4px;
 }
 
