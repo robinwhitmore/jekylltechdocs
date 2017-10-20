@@ -32,12 +32,6 @@ div.navbar-collapse .dropdown-menu > li > a:hover {
     background-color: #347DBE;
 }
 
-.nav li.thirdlevel > a {
-    background-color: #FAFAFA !important;
-    color: #248EC2;
-    font-weight: bold;
-}
-
 a[data-toggle="tooltip"] {
     color: #649345;
     font-style: italic;
@@ -48,11 +42,6 @@ a[data-toggle="tooltip"] {
 
 .printTitle {
     color: #015CAE !important;
-}
-
-
-.anchorjs-link:hover {
-    color: #216f9b;
 }
 
 div.sidebarTitle {
@@ -160,31 +149,9 @@ p.proc {
 }
 
 
-
-.breadcrumb > .active {color: #777 !important;}
-
 .post-content ol li,
 .post-content ul li {
     margin: 8px 0px;
-}
-
-.pageSummary {
-    font-size: $font-size-sm;
-    display:block;
-    margin-bottom:15px;
-    padding-left:20px;
-}
-
-.post-summary {
-    margin-bottom:12px;
-}
-
-.bs-example{
-    margin: 20px;
-}
-
-.breadcrumb li {
-    color: gray;
 }
 
 caption {
@@ -193,11 +160,6 @@ caption {
     color: #777;
     text-align: left;
 }
-
-// th {
-// 	font-size: $font-size-sm;
-//     text-align: left;
-// }
 
 table {
     margin-bottom: 24px;
@@ -232,13 +194,6 @@ p.external a {
     color: #0088cc;
     display:inline;
 }
-
-#definition-box-container div a.active {
-    font-weight: bold;
-}
-p.post-meta {font-size: 80%; color: #777;}
-
-.entry-date{font-size:14px;font-size:0.875rem;line-height:1.71429;margin-bottom:0;text-transform:uppercase;}
 
 /* search area */
 #search-demo-container ul#results-container {
@@ -295,21 +250,6 @@ li.dropdownActive a {
 
 .post-content a.fa-rss {
     color: orange;
-}
-
-
-.post-content .rssfeedLink {
-    color: #248EC2;
-}
-
-/* FAQ page */
-#accordion .panel-heading {
-    font-size: 12px;
-}
-
-a.accordion-toggle, a.accordion-collapsed {
-    font-size: 14px;
-    text-decoration: none;
 }
 
 /* navgoco sidebar styles (customized) */
@@ -604,10 +544,6 @@ dd {
     margin-top:10px;
 }
 
-a.accordion-toggle {
-    font-style: normal;
-}
-
 span.red {
     color: red;
     font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
@@ -631,31 +567,6 @@ span.red {
     color: red !important;
 }
 
-
-@media (max-width: 767px) {
-    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
-        color: #444;
-    }
-}
-
-.videoThumbs img {
-    float: left;
-    margin:15px 15px 15px 0px;
-    box-shadow: 2px 2px 1px #f0f0f0;
-    border: 1px solid #dedede;
-}
-
-
-*:hover > .anchorjs-link {
-    transition: color .25s linear;
-    text-decoration: none;
-}
-
-.kbCaption {
-    color: white;
-    background-color: #444;
-    padding:10px;
-}
 
 /* this part adds an icon after external links, using FontAwesome*/
 a[href^="http://"]:after, a[href^="https://"]:after {
@@ -706,19 +617,6 @@ div.results {
     width: 100%;
 }
 
-.post-link {
-    font-size: 22px;
-}
-
-.post-list p {
-    margin: 10px 0px;
-}
-
-.nav li.active > a.subfoldersTitle {
-    background-color: whitesmoke;
-    font-weight: bold;
-    color: black;
-    }
 
 a code {
     color: #248EC2;
@@ -815,14 +713,11 @@ div.box.box1 {
 /* BASE TYPOGRAPHY ---------------------------------------------------------- */
 
 body {
+    margin: 0;
+    padding: 0;
     color: #28292C;
 	font-family: $font-family;
 	font-size: 16px;
-
-	/* TEMP SOLUTION
-		Prevent content from going under fixed nav. Quick, crude fix to make sure Robin's writing
-		can continue. Proper fix coming after fixed nav styles are reviewed. */
-	padding-top: 128px;
 }
 
 p {
