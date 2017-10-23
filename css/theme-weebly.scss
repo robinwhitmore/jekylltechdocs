@@ -19,6 +19,7 @@ $border-color: #dfe6ee;
 $border-radius: 6px;
 $border-radius-sm: 4px;
 
+$page-max-width: 972px;
 $sidebar-width: 220px;
 
 .nav-tabs > li.active > a,
@@ -179,10 +180,6 @@ table th[class*="col-"] {
 }
 
 
-table.boldFirstColumn td:first-child {
-    font-weight: bold;
-}
-
 table tr td {
     hyphens: auto;
 }
@@ -225,7 +222,7 @@ ul#results-container a:hover {
 #search-input {
     padding: .5em;
     margin-left:20px;
-    width:20em;
+    width: 50px;
     font-size: 0.8em;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -412,8 +409,6 @@ h2 code {
 .alert a {
     text-decoration: underline;
 }
-
-div.tags {padding: 10px 5px;}
 
 .tabLabel {
     font-weight: normal;
@@ -730,6 +725,11 @@ figure {
 
 /* LAYOUT ------------------------------------------------------------------- */
 
+.top-nav {
+	margin: 0 auto;
+	padding: 0 8px;
+}
+
 .page {
 	margin: 0 auto;
 	padding: 0 8px;
@@ -741,9 +741,14 @@ figure {
 
 
 @media (min-width: 768px) {
+	.top-nav {
+		max-width: $page-max-width;
+		padding: 0 16px;
+	}
+
 	.page {
 		position: relative;
-		max-width: 972px;
+		max-width: $page-max-width;
 		padding: 0 16px;
 	}
 
