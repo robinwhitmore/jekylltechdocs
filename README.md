@@ -22,8 +22,9 @@ jekyll serve --config _config_Designer.yml
 Make sure jQuery is loaded ahead of bootstrap.js.
 
 *JSON load error.*
-- Remove comma at end of search.json.
-- Remove malformed entry using `"` in description.
+* Remove the trailing comma at the end of `x_designer_output/search.json`
+* Search for “The element-specific information lives within the objects”. Remove the extra quotes around `
+"elements"`.
 
 
 ## Documentations
