@@ -10,7 +10,7 @@ gem install jekyll bundler
 bundle install
 
 # Start dev env. Specify one the config files in the root folder.
-jekyll serve --config _config_Designer.yml
+jekyll serve --config _config_Designer.yml --incremental
 
 # Visit http://localhost:4008/
 
@@ -18,14 +18,10 @@ jekyll serve --config _config_Designer.yml
 
 ## Troubleshooting
 
-*jQuery not found error.*
-Make sure jQuery is loaded ahead of bootstrap.js.
-
-*JSON load error.*
-* Remove the trailing comma at the end of `x_designer_output/search.json`
+*JSON load error breaking Search*
+* Remove the trailing comma at the end of `x_designer_output/search.json`. (Or whichever config you are loading)
 * Search for “The element-specific information lives within the objects”. Remove the extra quotes around `
 "elements"`.
-
 
 ## Documentations
 
