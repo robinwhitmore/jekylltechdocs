@@ -25,7 +25,7 @@ The contributor is now listed on the site's detail page.
 {% include image.html file="cl_contributor_site.png" caption="Contributor on the site's detail page" %}
 
 ## Manage Site Contributors
-Once created, you can change a contributor's permissions or you can delete them as a contributor. Deleting a contributor only deletes that person's access to the site. .
+Once created, you can change a contributor's permissions or you can delete them as a contributor. Deleting a contributor only deletes that person's access to the site.
 
 **To manage a contributor:**
 1. In the Cloud Admin, search for or browse to the site that they contribute to.
