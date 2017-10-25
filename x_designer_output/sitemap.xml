@@ -32,6 +32,24 @@
   
   
   <url>
+    <loc>http://localhost:4008/ds_api_category.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_api_category_image.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_api_coupon.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4008/ds_api_form.html</loc>
   </url>
   
@@ -56,6 +74,12 @@
   
   
   <url>
+    <loc>http://localhost:4008/ds_api_order.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4008/ds_api_page.html</loc>
   </url>
   
@@ -63,6 +87,18 @@
   
   <url>
     <loc>http://localhost:4008/ds_api_plan.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_api_site.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_api_store.html</loc>
   </url>
   
   

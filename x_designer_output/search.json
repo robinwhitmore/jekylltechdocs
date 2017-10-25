@@ -48,6 +48,39 @@
 
 
 {
+"title": "Category API",
+"tags": "sites",
+"keywords": "category, categories",
+"url": "ds_api_category.html",
+"summary": "​Use the Categories API to retrieve category information, as well as to update, replace, create, and delete categories."
+}
+,
+
+
+
+{
+"title": "Category Image API",
+"tags": "sites",
+"keywords": "category, categories, image,",
+"url": "ds_api_category_image.html",
+"summary": "​Use the Category Image API to retrieve image information, as well as to create and delete category images."
+}
+,
+
+
+
+{
+"title": "Coupon API",
+"tags": "sites",
+"keywords": "coupon, store, checkout",
+"url": "ds_api_coupon.html",
+"summary": "Use the Coupons API to manage a store's coupons, including retrieving coupons, updating or deleting existing ones, and creating new ones."
+}
+,
+
+
+
+{
 "title": "Form API",
 "tags": "sites",
 "keywords": "forms",
@@ -92,6 +125,17 @@
 
 
 {
+"title": "Order API",
+"tags": "sites",
+"keywords": "store, order",
+"url": "ds_api_order.html",
+"summary": "Use the Order API to view information about a site's orders."
+}
+,
+
+
+
+{
 "title": "Page API",
 "tags": "sites",
 "keywords": "page, hidden, page order, layout, url",
@@ -108,6 +152,28 @@
 "keywords": "plans, plan, page limit, terms",
 "url": "ds_api_plan.html",
 "summary": "The Plan API lets you review your plans and add plans for a given site."
+}
+,
+
+
+
+{
+"title": "Site API",
+"tags": "sites",
+"keywords": "site, publish, unpublish, login, login link, credentials, restore, disable",
+"url": "ds_api_site.html",
+"summary": "Use the Site API to manage sites, including the ability to create, update, publish, disable, restore, and delete sites and to generate login links and set publish credentials."
+}
+,
+
+
+
+{
+"title": "Store API",
+"tags": "sites",
+"keywords": "store, eCommerce",
+"url": "ds_api_store.html",
+"summary": "The Store API provides methods for managing and creating stores owned by a given user."
 }
 ,
 
