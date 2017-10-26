@@ -106,14 +106,17 @@ entries:
     - title: Order Billing API
       url: /ds_api_order_billing.html
       output: web, pdf
+      #ready for review
 
     - title: Order Billing Transaction API
       url: /ds_api_order_billing_transaction.html
       output: web, pdf
+      #ready for review
 
     - title: Order Item API
       url: /ds_api_order_item.html
       output: web, pdf
+      # ready for review
 
     - title: Order Shipment API
       url: /ds_api_order_shipment.html
