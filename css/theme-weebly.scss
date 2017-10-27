@@ -870,6 +870,76 @@ figure {
 	margin-top: 0;
 }
 
+/* POPOVER ------------------------------------------------------------------- */
+
+[data-toggle="popover"] {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.popover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1060;
+    display: block;
+    max-width: 276px;
+    padding: 1px;
+    text-align: left;
+    text-align: start;
+    text-decoration: none;
+    word-break: normal;
+    word-spacing: normal;
+    word-wrap: break-word;
+    background-color: #fff;
+    border: 1px solid #0003;
+    border-radius: $border-radius;
+}
+
+.popover.top {
+    margin-top: -10px;
+}
+
+.popover.top > .arrow {
+    bottom: -11px;
+    left: 50%;
+    margin-left: -11px;
+    border-top-color: #999;
+    border-top-color: #0003;
+    border-bottom-width: 0;
+}
+
+.popover.top > .arrow:after {
+    bottom: 1px;
+    margin-left: -10px;
+    content: " ";
+    border-top-color: #fff;
+    border-bottom-width: 0;
+}
+
+.popover > .arrow:after {
+    content: "";
+    border-width: 10px;
+}
+
+.popover > .arrow {
+    border-width: 11px;
+}
+
+.popover > .arrow, .popover > .arrow:after {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: #0000;
+    border-style: solid;
+}
+
+.popover-content {
+    padding: 8px 16px;
+}
+
 
 /* ORBIT EXTERNAL OVERRIDES -----------------------------------------------------------*/
 
@@ -930,5 +1000,3 @@ div.Notice {
 .Tag {
 	margin-right: 4px;
 }
-
-
