@@ -59,5 +59,5 @@ jekyll serve --config _config_Designer.yml --incremental
 
 
 ## External Resources
-
+- [Orbit](https://github.intern.weebly.net/weebly/orbit) - Orbit is being imported with the css file `css/orbit.css`. Do not make changes directly to this file.
 - [Liquid Template Docs](https://shopify.github.io/liquid/)

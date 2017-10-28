@@ -7,11 +7,11 @@ topnav:
   items:
     - title: Getting Started
       url: /home.html
-    - title: Custom Apps
+    - title: Apps
       url: /ds_apps_gs.html
-    - title: Custom Themes
+    - title: Themes
       url: /ds_themes_start.html
-    - title: Cloud APIs
+    - title: APIs
       url: /ds_api_about.html
     - title: Topics
       url: /ds_tags_about.html

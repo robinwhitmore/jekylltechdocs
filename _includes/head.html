@@ -9,13 +9,10 @@
 <link rel="stylesheet" href="{{ "css/syntax.css" }}">
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-<link rel="stylesheet" href="{{ "css/orbit.css" }}">
-<link rel="stylesheet" href="{{ "css/orbit-external.css" }}">
-<link rel="stylesheet" href="{{ "css/theme-weebly.css" }}">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
+<link rel="stylesheet" media="screen" href="{{ "css/orbit-external.css" }}">
+<link rel="stylesheet" media="screen" href="{{ "css/orbit.css" }}">
+<link rel="stylesheet" media="screen" href="{{ "css/theme-weebly.css" }}">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
@@ -29,24 +26,20 @@
 
 <link rel="shortcut icon" href="{{ "images/favicon.ico"  }}">
 
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
-
-<!-- <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "feed.xml" | prepend: site.url }}"> -->
-
 <script type="text/javascript">
+
     $(document).ready(function() {
 
-        /*Bootstrap popovers are initialized with the following script. In the options, I'm setting the placement to be on the right, the trigger to be hover rather than click, and to allow HTML from the JSON data source. */
+        // Bootstrap popovers are initialized with the following script. In the options, I'm setting the placement to be on the right, the trigger to be hover rather than click, and to allow HTML from the JSON data source.
 
-        $('[data-toggle="popover"]').popover({
-            placement: 'top',
-            trigger: 'hover',
-            html: true
+        // $('[data-toggle="popover"]').popover({
+        //     placement: 'top',
+        //     trigger: 'hover',
+        //     html: true
+        // });
+
+        $('.mobile-nav-btn').click(function(){
+            $('.nav-group').toggleClass('open');
         });
     })
 </script>
