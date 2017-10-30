@@ -13,7 +13,11 @@ Your account representative will setup a default set of plans for you to get sta
 ## Create Plans with Cloud Admin
 
 You use the **Packages** tab in Cloud Admin to create the plans you need. For reference, Cloud Admin provides a link that describes and compares all Weebly plans. Use this to decide which plans you'd like to implement for your {{site.customer}}s.
+{% if site.project=="cloud" %}
 {% include image.html file="cl_plans_compare.png" caption="Comparison of Weebly plans" %}
+{% elsif site.project=="designer" %}
+{% include image.html file="ds_plans_compare.png" caption="" %}
+{%endif%}
 {% include note.html content="Prices shown with the Weebly plan descriptions may not accurately reflect the prices for your account. Please use this only as a reference for plan descriptions, not prices." %}
 
 **To create a plan:**
@@ -25,8 +29,12 @@ You use the **Packages** tab in Cloud Admin to create the plans you need. For re
 5. Optionally set a published page number limit (the site can have an unlimited amount of draft, unpublished pages).
 6. Set the monthly and/or yearly pricing for the plan.
 7. Optionally set the plan as the default. Only one plan can be the default.
-<!--TODO: Need a new image for Designer that doesn't show annual plan -->
-{% include image.html file="cl_plans.png" %}<br>
+{% if site.project=="cloud" %}
+{% include image.html file="cl_plans.png" %}
+{% elsif site.project=="designer" %}
+{% include image.html file="ds_plansAdd.png" caption="Add a plan" %}
+{%endif%}
+
 {% include note.html content="If you are editing a plan to add App Center access, any sites on that plan immediately gain access to the center once you save your changes. If you revoke access, then sites can't access the App Center going forward, but will continue to be able to use any apps already installed." %}
 {% if site.project=="cloud" %}
 

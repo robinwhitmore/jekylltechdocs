@@ -5,7 +5,7 @@
 
 ## CAN I FORCE A THEME UPDATE TO PUBLISHED SITES?
 
-If you want to force theme updates to live sites, use the Site API<!--todo: API link--> to republish sites after you upload the new zip.
+If you want to force theme updates to live sites, use the {% if site.project=="designer" %}[Site API](ds_api_site.html){%elsif site.project=="cloud" %}[Site API](cl_api_site.html){%elsif site.project=="platform" %}[Site API](pf_api_site.html){%endif%} to republish sites after you upload the new zip.
 
 
 ## WILL OPTION SETTINGS ON ONE SITE AFFECT ANOTHER?

@@ -11,7 +11,7 @@ Sites built on the Weebly Business plan can optionally use SSL outside of the ch
 {% include image.html file="cl_ssl.png" caption="SSL setting in the Weebly Editor" %}
 
 {% include note.html content="If the site contains a store, the checkout flow always uses HTTPs, regardless of how SSL is configured for the site. If the SSL option is not selected for the site or for checkout, the URL for the checkout flow is `checkout.weebly.com`. If the SSL option is selected, the site's own domain is used." %}
-However, by default the SSL option does not display on the General settings page. You need to make a call to the `Site` API <!--todo: add API link-->and update a site's record to enable the SSL option. You use the `PATCH` endpoint and set `allow_ssl` to `true`.
+However, by default the SSL option does not display on the General settings page. You need to make a call to the [Site](ds_api_site.html) API and update a site's record to enable the SSL option. You use the `PATCH` endpoint and set `allow_ssl` to `true`.
 ​Here's an example:
 <p class="codeTitle">Enable the SSL Option in the Editor:</p>
 
@@ -26,4 +26,4 @@ curl https://api.weeblycloud.com/user/USER_ID/site/SITE_ID \
 -H "X-Signed-Request-Hash: YOURSECRETHASH"
 {% endhighlight %}
 
-More info on using the Site API here.<!--todo: insert API link-->
+More info on using the Site [API here](ds_api_site.html).

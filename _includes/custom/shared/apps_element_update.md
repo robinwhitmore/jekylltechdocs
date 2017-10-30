@@ -6,7 +6,7 @@ When you release a new version of your app, here's what happens:
     {% include note.html content="Don't deprecate old server-side functionality that my be used by older versions until there is sufficient user adoption of newer versions." %}
 * If your app contains an element with settings (configured either in a Weebly dialog or at an external site), the site owners settings are merged with the settings in the manifest. If you've added settings, the defaults will be used until the customer changes them.
     {% include note.html content="Customer settings will be overridden if you change an existing default setting." %}
-* If your app includes webhooks,<!--todo: add API links--> any webhook subscriptions previously configured in the manifest will be deleted and replaced with the subscriptions defined in the new version. Subscriptions managed by the API will be copied over to the new version.
+* If your app includes {% if site.project=="designer" %}[webhooks](ds_wh_webhooks.html){%elsif site.project=="cloud" %}[webhooks](cl_wh_webhooks.html){%elsif site.project=="platform" %}[webhooks](pf_wh_webhooks.html){%endif%}, any webhook subscriptions previously configured in the manifest will be deleted and replaced with the subscriptions defined in the new version. Subscriptions managed by the API will be copied over to the new version.
 
 
 **To update your app**:

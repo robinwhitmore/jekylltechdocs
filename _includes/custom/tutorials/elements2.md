@@ -12,5 +12,8 @@ In this step, we’ll register the app in the {{site.portal}} so that we have th
 ​We now have a Client ID and Secret for the app (located in the card on the left). We’ll need the Client ID when we create the element’s manifest.
 {% if site.project=="cloud" %}
 {% include image.html file="cl_apps.png" %}
+{% elsif site.project=="designer" %}
+{% include image.html file="ds_apps.png" %}
+{% elsif site.project=="platfor" %}
+{% include image.html file="pf_apps.png" %}
 {% endif %}
-<!--todo: add screenshot for designer and platform-->

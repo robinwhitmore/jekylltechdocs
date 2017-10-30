@@ -1,5 +1,5 @@
 Your {{site.customer}}s access sites through the User Portal at `https://your-domain/portal`.
-
+<!--todo: find out why note doesn't display correctly-->
 {% include note.html content="If your domain is a subdomain of `weeblycloud.com`, then you can also access the portal from `https://weeblycloud.com/portal`." %}
 {% if page.permalink !="ds_gs_checklist.html" %}
 {% include image.html file="cl_userPortal.png" caption="The User Portal" %}

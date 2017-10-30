@@ -66,4 +66,8 @@ You can customize a theme directly from the Weebly Editor. Click the Theme tab a
 ## Have Questions?
 
 If you have any questions while you're building an app or customizing a theme, or suggestions for how we can improve the APIs, the Cloud Admin, or the documentation, use the **Submit Ticket** link in the Cloud Admin. Once submitted, a ticket is sent to the Cloud support team.
-{% include image.html file="cl_adminPortal_support.png" caption="Submit a Ticket from the Cloud Admin"%}<br>
+{% if site.project=="cloud" %}
+{% include image.html file="cl_adminPortal_support.png" caption="Submit a Ticket from the Cloud Admin"%}
+{% elsif site.project=="designer" %}
+{% include image.html file="ds_cloudAdminSupport.png" caption="Submit a Ticket from the Cloud Admin"%}
+{% endif %}

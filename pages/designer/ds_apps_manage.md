@@ -1,7 +1,7 @@
 ---
 title: Manage Your App
 keywords: manage, apps, custom, status, version, developer site,
-t_type: [concepts, task, reference, tutorial]
+t_type: [task]
 tags: [getting_started, apps]
 sidebar: ds_apps_sidebar
 permalink: ds_apps_manage.html

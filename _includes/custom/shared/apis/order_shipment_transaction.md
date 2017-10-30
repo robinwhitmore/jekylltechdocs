@@ -1,9 +1,13 @@
+Shipment transactions happen when the status of the shipment changes. For example, when a shipment goes from <code>label_created</code> to <code>shipped</code>, a transaction occurs.
+
+​Use the Order Shipment Transactions API to retrieve the shipment transactions for an order.
+
 {% if site.project == "platform" %}
 {% include custom/shared/note_oauthAPI.html%}
 {% endif %}
 <h2>Fields</h2>
 
-The following table shows all fields that exist for this API, those that are returned when you retrieve a list, those that are required for `PUT` and `POST`, and those that are changeable using `PATCH` and `PUT`. All fields are returned when you retrieve a single item.
+The following table shows all fields that exist for this API and those that are returned when you retrieve a list. All fields are returned when you retrieve a single item.
 <table>
     <tbody>
     <tr>
@@ -11,226 +15,113 @@ The following table shows all fields that exist for this API, those that are ret
         <td><strong>Description</strong></td>
         <td><strong>Type</strong></td>
         <td><strong>List</strong></td>
-        <td><strong>Required</strong></td>
-        <td><strong>Changeable</strong></td>
     </tr>
     <tr>
         <td>​<code>user_id</code></td>
         <td>The unique ID of the authenticated user</td>
         <td>string</td>
         <td>X</td>
-        <td></td>
-        <td></td>
     </tr>
     <tr>
         <td><code>site_id</code></td>
         <td>ID of a Weebly site, unique to the currently authenticated user​</td>
         <td>string</td>
         <td>X</td>
-        <td></td>
-        <td></td>
     </tr>
 
     <tr>
-        <td><code>field</code></td>
-        <td>description​</td>
+        <td><code>order_id</code></td>
+        <td>The unique order ID (within the store) of the {% if site.project=="designer" %}<a href="ds_api_order.html">order</a>{% elsif site.project=="cloud" %}<a href="cl_api_order.html">order</a>{% elsif site.project=="platform" %}<a href="pf_api_order.html">order</a>{% endif %}.</td>
         <td>string</td>
-        <td>list</td>
-        <td>rqd</td>
-        <td>chg</td>
+        <td>X</td>
     </tr>
     <tr>
-        <td><code>field</code></td>
-        <td>description</td>
+        <td><code>order_shipment_id</code></td>
+        <td>The unique ID (within the order) of the {% if site.project=="designer" %}<a href="ds_api_order_shipment.html">shipment</a>{% elsif site.project=="cloud" %}<a href="cl_api_order_shipment.html">shipment</a>{% elsif site.project=="platform" %}<a href="pf_api_order_shipment.html">shipent</a>{% endif %}.</td>
+        <td>integer</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>order_shipment_transaction_id</code></td>
+        <td>An incrementing ID unique to this shipment.</td>
+        <td>integer</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>tx_id</code></td>
+        <td>ID for this transaction</td>
         <td>string</td>
-        <td>list</td>
-        <td>reqd</td>
-        <td>chg</td>
+        <td></td>
     </tr>
     <tr>
-        <td><code>field</code></td>
-        <td>description</td>
+        <td><code>tx_type</code></td>
+        <td>Shipping method (as defined by the <a href="https://hc.weebly.com/hc/en-us/articles/226811948-Set-Up-Shipping-Areas-and-Rates">merchant</a>) used for this transaction, for example <code>UPS</code>.</td>
         <td>string</td>
-        <td>list</td>
-        <td>reqd</td>
-        <td>chg</td>
+        <td></td>
     </tr>
     <tr>
-        <td><code>field</code></td>
-        <td>description</td>
-        <td>type</td>
-        <td>list</td>
-        <td>req</td>
-        <td>ch</td>
+        <td><code>tx_date</code></td>
+        <td>Date the transaction was created.</td>
+        <td>​Unix timestamp in GMT</td>
+        <td></td>
     </tr>
     <tr>
-        <td><code>field</code></td>
-        <td>description</td>
-        <td>type</td>
-        <td>list</td>
-        <td>req</td>
-        <td>ch</td>
-    </tr>
-    <tr>
-        <td><code>field</code></td>
-        <td>description</td>
-        <td>type</td>
-        <td>list</td>
-        <td>req</td>
-        <td>ch</td>
-    </tr>
-    <tr>
-        <td><code>field</code></td>
-        <td>description</td>
-        <td>type</td>
-        <td>list</td>
-        <td>req</td>
-        <td>ch</td>
-    </tr>
-    <tr>
-        <td><code>field</code></td>
-        <td>description</td>
-        <td>type</td>
-        <td>list</td>
-        <td>req</td>
-        <td>ch</td>
+        <td><code>tx_status</code></td>
+        <td>Status for this transaction.<br>
+            Valid values are:
+            <ul>
+                <li><code>label_created</code></li>
+                <li><code>label_returned</code></li>
+                <li><code>shipped</code></li>
+            </ul>
+        </td>
+        <td>string</td>
+        <td></td>
     </tr>
     <tr>
         <td><code>created_date</code></td>
-        <td>Date the
+        <td>Date the transaction was created.</td>
         <td>Unix GMT Timestamp</td>
-        <td>X</td>
-        <td><br>
-        </td>
-        <td><br>
-        </td>
+        <td></td>
     </tr>
     <tr>
         <td><code>updated_date</code></td>
-        <td>Date the
+        <td>Date the transaction was last updated.</td>
         <td>Unix GMT Timestamp</td>
-        <td>X</td>
-        <td><br>
-        </td>
-        <td><br>
-        </td>
+        <td></td>
     </tr>
     </tbody>
 </table>
 {% include custom/notes/note_api_undoc.md %}
 
-<h2><span class="label label-get text-uppercase">get</span> Retrieve a List of <span style="color:red">Object</span>s
-</h2>
+<h2><span class="label label-get text-uppercase">get</span> Retrieve a List of Shipment Transactions</h2>
 
 {% highlight shell%}
 {% if site.project == "platform" %}
-GET /v1/user/sites/{SITE_ID}/
+GET /v1/user/sites/{SITE_ID}/store/orders/{ORDER_ID}/shipments/{ORDER_SHIPMENT_ID}/transactions
 
 {% else %}
-GET /user/USER_ID/site/{SITE_ID}/
+GET /user/USER_ID/site/{SITE_ID}/store/order/{ORDER_ID}/shipment/{ORDER_SHIPMENT_ID}/transaction
 {% endif %}
 {% endhighlight %}
 
-Returns all <span style="color:red">object</span>s for the given site. Only `list` fields are returned.
+Returns all transactions for the given shipment. Only `list` fields are returned.
 {% if site.project == "platform" %}
 <br>
-**scope:** `read:site`
+**scope:** `read:store-orders`
 {% endif %}
 
-<h3>Query Parameters</h3>
-Returned values are {% if site.project=="designer" %}[paginated](ds_api_about.html#pagination){%elsif site.project=="cloud" %}[paginated](cl_api_about.html#pagination.html){%elsif site.project=="platform" %}[paginated](pf_api_about.html#pagination.html){%endif%}. You can further filter results using these parameters:
-
-<table>
-    <tr>
-        <td><strong>Parameter</strong></td>
-        <td><strong>Description</strong></td>
-        <td><strong>Type</strong></td>
-    </tr>
-    <tr>
-        <td><code>page</code></td>
-        <td>Which page of results to return. Start is <code>1</code>.
-            {%include note.html content="Only the first 25 results are returned by default. If the result set is
-            expected to be over 25, you must implement pagination." %}
-        </td>
-        <td>integer</td>
-    </tr>
-    <tr>
-        <td><code>limit</code></td>
-        <td>Number of results per page to return. Default is <code>25</code>. <br>Max is <code>200</code>.</td>
-        <td>integer</td>
-    </tr>
-    <tr>
-        <td><code>query</code></td>
-        <td>Use to retrieve only pages that have a full-text match with the query string.</td>
-        <td>string</td>
-    </tr>
-    <tr>
-        <td><code>filterby</code></td>
-        <td>Field name to set a filter on. Valid values are:
-            <ul>
-                <li style="color:red">_id</li>
-            </ul>
-        </td>
-        <td>string</td>
-    </tr>
-    <tr>
-        <td><code>filterfor</code></td>
-        <td>​​​Value to search the filterby field for.<br>
-            You can use the following URL encoded operators with your <code>filterfor</code> parameter:
-            <ul>
-                <li><code>​<</code>: use <code>%3C</code></li>
-                <li><code>></code>: use <code>%3E</code></li>
-                <li><code><=</code>: use <code>%3C%3D</code></li>
-                <li><code>>=</code>: use <code>%3E%3D</code></li>
-                ​
-            </ul>
-        </td>
-        <td>string</td>
-    </tr>
-    <tr>
-        <td><code>sortby</code></td>
-        <td>Field name to sort by</td>
-        <td>string</td>
-    </tr>
-    <tr>
-        <td><code>sortdir</code></td>
-        <td>Sort direction. Valid values are:
-            <ul>
-                <li><code>asc</code></li>
-                <li><code>desc</code></li>
-            </ul>
-        </td>
-        <td>string</td>
-    </tr>
-</table>
-
-<p class="codeTitle">Example CURL request returning all <span style="color:red">object</span>s:</p>
+<p class="codeTitle">Example CURL request returning all shipment transactions:</p>
 {% highlight shell%}
 {% if site.project == "platform" %}
 curl --request GET \
---url https://api.weebly.com/v1/user/sites/987654321/objects \
+--url https://api.weebly.com/v1/user/sites/987654321/store/orders/456789/shipments/1/transactions \
 --header 'accept: application/vnd.weebly.v1+json' \
 --header 'content-type: application/json' \
 --header 'x-weebly-access-token: [YOUR_TOKEN]"
 
 {% else %}
-curl https://api.weeblycloud.com/user/123456/site/987654321/object \
--H "X-Public-Key: YOURAPIKEY" \
--H "X-Signed-Request-Hash: YOURSECRETHASH"
-{% endif %}
-{% endhighlight %}
-
-<p class="codeTitle">Example filtered request:</p>
-{% highlight shell%}
-{% if site.project == "platform" %}
-curl --request GET \
---url https://api.weebly.com/v1/user/sites/987654321/pages?filterby=layout&filterfor=tall-header \
---header 'accept: application/vnd.weebly.v1+json' \
---header 'content-type: application/json' \
---header 'x-weebly-access-token: [YOUR_TOKEN]"
-
-{% else %}
-curl https://api.weeblycloud.com/user/123456/site/987654321/page?filterby=layout&filterfor=tall-header \
+curl https://api.weeblycloud.com/user/123456/site/987654321/store/order/456789/shipment/1/transaction \
 -H "X-Public-Key: YOURAPIKEY" \
 -H "X-Signed-Request-Hash: YOURSECRETHASH"
 {% endif %}
@@ -239,136 +130,65 @@ curl https://api.weeblycloud.com/user/123456/site/987654321/page?filterby=layout
 <p class="codeTitle">Example response:</p>
 {% highlight json %}
 [
-{
-"page_id": "131221993403487092",
-"title": "new",
-"page_order": 2,
-"parent_id": "205694454183612584",
-"layout": "tall-header",
-"page_url": "new.html"
-},
-{
-"page_id": "205694454183612584",
-"title": "Blog",
-"page_order": 2,
-"parent_id": null,
-"layout": "tall-header",
-"page_url": "blog1.html"
-},
-{
-"page_id": "267240304658043510",
-"title": "members only",
-"page_order": 4,
-"parent_id": null,
-"layout": "tall-header",
-"page_url": "members-only.html"
-}
+    {
+        "user_id": "123456",
+        "site_id": "987654321",
+        "order_id": "456789",
+        "order_shipment_id": 1,
+        "order_shipment_transaction_id": 1
+    },
+    {
+        "user_id": "123456",
+        "site_id": "987654321",
+        "order_id": "456789",
+        "order_shipment_id": 1,
+        "order_shipment_transaction_id": 2
+    },
+    {
+        "user_id": "123456",
+        "site_id": "987654321",
+        "order_id": "456789",
+        "order_shipment_id": 1,
+        "order_shipment_transaction_id": 3
+    },
+    {
+        "user_id": "123456",
+        "site_id": "987654321",
+        "order_id": "456789",
+        "order_shipment_id": 1,
+        "order_shipment_transaction_id": 4
+    }
 ]
 {% endhighlight %}
 
-<h2><span class="label label-get text-uppercase">get</span> Retrieve Details for a <span style="color:red">object</span>
+<h2><span class="label label-get text-uppercase">get</span> Retrieve the Number of Transactions for a Shipment
 </h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
-GET /v1/user/sites/{SITE_ID}/
+GET /v1/user/sites/{SITE_ID}/store/orders/{ORDER_ID}/shipments/{ORDER_SHIPMENT_ID}/transactions/count
 
 {% else %}
-GET /user/USER_ID/site/{SITE_ID}/
+GET /user/USER_ID/site/{SITE_ID}/store/order/{ORDER_ID}/shipment/{ORDER_SHIPMENT_ID}/transaction/count
 {% endif %}
 {% endhighlight %}
 
-Returns all fields for the given <span style="color:red">object</span>.
+Returns the number of transactions for a shipment.
 {% if site.project == "platform" %}
 <br>
-**scope:** `read:site`
+**scope:** `read:store-orders`
 {% endif %}
 
 <p class="codeTitle">Example CURL request:</p>
 {% highlight shell%}
 {% if site.project == "platform" %}
 curl --request GET \
---url https://api.weebly.com/v1/user/sites/987654321/pages/1234567890 \
+--url https://api.weebly.com/v1/user/sites/987654321/store/orders/456789/shipments/1/transactions/count \
 --header 'accept: application/vnd.weebly.v1+json' \
 --header 'content-type: application/json' \
 --header 'x-weebly-access-token: [YOUR_TOKEN]"
 
 {% else %}
-curl https://api.weeblycloud.com/user/123456/site/987654321/page/1234567890 \
--H "X-Public-Key: YOURAPIKEY" \
--H "X-Signed-Request-Hash: YOURSECRETHASH"
-{% endif %}
-{% endhighlight %}
-
-<p class="codeTitle">Example response:</p>
-<p>See Fields table. All fields for the <span style="color:red">object</span> are returned.</p>
-{% highlight json %}
-[
-{
-"page_id": "1234567890",
-"title": "Contact",
-"hidden": false,
-"membership_required": null,
-"parent_id": null,
-"layout": "short-header",
-"updated_date": "2016-02-08 11:16:19",
-"page_url": "new.html"
-}
-]
-{% endhighlight %}
-
-<h2><span class="label label-patch text-uppercase">post</span> Create a <span style="color:red">object</span></h2>
-{% highlight shell%}
-{% if site.project == "platform" %}
-POST /v1/user/sites/{SITE_ID}/pages
-
-{% else %}
-POST /user/USER_ID/site/{SITE_ID}/page
-{% endif %}
-{% endhighlight %}
-
-Creates a <span style="color:red">object</span>.
-{% if site.project == "platform" %}
-<br>
-**scope:** `write:site`
-{% endif %}
-
-
-These fields can be created:
-
-<table>
-    <tr>
-        <td><strong>Name</strong></td>
-        <td><strong>Description</strong></td>
-        <td><strong>Type</strong></td>
-        <td><strong>Notes</strong></td>
-    </tr>
-    <tr>
-        <td><code>title</code></td>
-        <td>The page's title.</td>
-        <td>string</td>
-        <td>Required</td>
-    </tr>
-</table>
-
-<p class="codeTitle">Example CURL request:</p>
-{% highlight shell%}
-{% if site.project == "platform" %}
-curl --request POST \
---url https://api.weebly.com/v1/user/sites/987654321/pages \
---header 'accept: application/vnd.weebly.v1+json' \
---header 'content-type: application/json' \
---header 'x-weebly-access-token: [YOUR_TOKEN]"
---data '{
-"title": "My Title"
-}'
-
-{% else %}
-curl https://api.weeblycloud.com/user/123456/site/987654321/page \
--X POST \
--d '{
-"title": "My Title"
-}' \
--H "Content-type: application/json" \
+curl https://api.weeblycloud.com/user/123456/site/987654321/store/order/456789/shipment/1/transaction/count \
 -H "X-Public-Key: YOURAPIKEY" \
 -H "X-Signed-Request-Hash: YOURSECRETHASH"
 {% endif %}
@@ -377,195 +197,57 @@ curl https://api.weeblycloud.com/user/123456/site/987654321/page \
 <p class="codeTitle">Example response:</p>
 {% highlight json %}
 {
-"page_id": "1234567890",
-"title": "My Title",
-"hidden": false,
-"membership_required": null,
-"parent_id": null,
-"layout": "short-header",
-"updated_date": "2016-02-08 11:16:19",
-"page_url": "new.html"
+    "count": 4
 }
 {% endhighlight %}
 
-<h2><span class="label label-put text-uppercase">put</span> Replace a <span style="color:red">object</span></h2>
+<h2><span class="label label-get text-uppercase">get</span> Retrieve Details for a Shipment Transaction
+</h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
-PUT /v1/user/sites/{SITE_ID}/pages/{PAGE_ID}
+GET /v1/user/sites/{SITE_ID}/store/orders/{ORDER_ID}/shipments/{ORDER_SHIPMENTS_ID}/transactions/{ORDER_SHIPMENT_TRANSACTION_ID}
 
 {% else %}
-PUT /user/USER_ID/site/{SITE_ID}/page/{PAGE_ID}
+GET /user/USER_ID/site/{SITE_ID}/store/order/{ORDER_ID}/shipment/{ORDER_SHIPMENTS_ID}/transaction/{ORDER_SHIPMENT_TRANSACTION_ID}
 {% endif %}
 {% endhighlight %}
 
-Replaces the given <span style="color:red">object</span>.
+Returns all fields for the given shipment transaction.
 {% if site.project == "platform" %}
 <br>
-**scope:** `write:site`
+**scope:** `read:store-orders`
 {% endif %}
-
-
-These fields can be replaced:
-
-<table>
-    <tr>
-        <td><strong>Name</strong></td>
-        <td><strong>Description</strong></td>
-        <td><strong>Type</strong></td>
-        <td><strong>Notes</strong></td>
-    </tr>
-    <tr>
-        <td><code>title</code></td>
-        <td>The page's title.</td>
-        <td>string</td>
-        <td>Required</td>
-    </tr>
-</table>
 
 <p class="codeTitle">Example CURL request:</p>
 {% highlight shell%}
 {% if site.project == "platform" %}
-curl --request PUT \
---url https://api.weebly.com/v1/user/sites/987654321/pages/1234567890 \
+curl --request GET \
+--url https://api.weebly.com/v1/user/sites/987654321/store/orders/45678/shipments/1/transactions/2 \
 --header 'accept: application/vnd.weebly.v1+json' \
 --header 'content-type: application/json' \
 --header 'x-weebly-access-token: [YOUR_TOKEN]"
---data '{
-"title": "New Title"
-}'
 
 {% else %}
-curl https://api.weeblycloud.com/user/123456/site/987654321/page/1234567890 \
--X PUT \
--d '{
-"title": "New Title"
-}' \
--H "Content-type: application/json" \
+curl https://api.weeblycloud.com/user/123456/site/987654321/store/order/45678/shipment/1/transaction/2 \
 -H "X-Public-Key: YOURAPIKEY" \
 -H "X-Signed-Request-Hash: YOURSECRETHASH"
 {% endif %}
 {% endhighlight %}
 
 <p class="codeTitle">Example response:</p>
+<p>See Fields table. All fields for the shipment transaction are returned.</p>
 {% highlight json %}
 {
-"page_id": "1234567890",
-"title": "My Title",
-"hidden": false,
-"membership_required": null,
-"parent_id": null,
-"layout": "short-header",
-"updated_date": "2016-02-08 11:16:19",
-"page_url": "new.html"
+    "user_id": "123456",
+    "site_id": "987654321",
+    "order_id": "45678",
+    "order_shipment_id": "1",
+    "order_shipment_transaction_id": "2",
+    "tx_id": "123331",
+    "tx_type": "USPS",
+    "tx_date": 1443548303,
+    "tx_status": "label_returned",
+    "created_date": 1443548303,
+    "updated_date": 1443548303
 }
 {% endhighlight %}
-
-<h2><span class="label label-patch text-uppercase">patch</span> Update a <span style="color:red">object</span></h2>
-{% highlight shell%}
-{% if site.project == "platform" %}
-PATCH /v1/user/sites/{SITE_ID}/pages/{PAGE_ID}
-
-{% else %}
-PATCH /user/USER_ID/site/{SITE_ID}/page/{PAGE_ID}
-{% endif %}
-{% endhighlight %}
-
-Updates the given <span style="color:red">object</span>.
-{% if site.project == "platform" %}
-<br>
-**scope:** `write:site`
-{% endif %}
-
-
-These fields can be updated:
-
-<table>
-    <tr>
-        <td><strong>Name</strong></td>
-        <td><strong>Description</strong></td>
-        <td><strong>Type</strong></td>
-        <td><strong>Notes</strong></td>
-    </tr>
-    <tr>
-        <td><code>title</code></td>
-        <td>The page's title.</td>
-        <td>string</td>
-        <td>Required</td>
-    </tr>
-</table>
-
-<p class="codeTitle">Example CURL request:</p>
-{% highlight shell%}
-{% if site.project == "platform" %}
-curl --request PATCH \
---url https://api.weebly.com/v1/user/sites/987654321/pages/1234567890 \
---header 'accept: application/vnd.weebly.v1+json' \
---header 'content-type: application/json' \
---header 'x-weebly-access-token: [YOUR_TOKEN]"
---data '{
-"title": "New Title"
-}'
-
-{% else %}
-curl https://api.weeblycloud.com/user/987654321/site/123456/page/1234567890 \
--X PATCH \
--d '{
-"title": "My Title"
-}' \
--H "Content-type: application/json" \
--H "X-Public-Key: YOURAPIKEY" \
--H "X-Signed-Request-Hash: YOURSECRETHASH"
-{% endif %}
-{% endhighlight %}
-
-<p class="codeTitle">Example response:</p>
-See Fields table. All fields for the <span style="color:red">object</span> are returned.</p>
-{% highlight json %}
-{
-"page_id": "1234567890",
-"title": "My Title",
-"hidden": false,
-"membership_required": null,
-"parent_id": null,
-"layout": "short-header",
-"updated_date": "2016-02-08 11:16:19",
-"page_url": "new.html"
-}
-{% endhighlight %}
-
-<h2><span class="label label-delete text-uppercase">delete</span> Delete a <span style="color:red">object</span></h2>
-{% highlight shell%}
-{% if site.project == "platform" %}
-DELETE /v1/user/sites/{SITE_ID}/pages/{PAGE_ID}
-
-{% else %}
-DELETE /user/USER_ID/site/{SITE_ID}/page/{PAGE_ID}
-{% endif %}
-{% endhighlight %}
-
-Deletes the given <span style="color:red">object</span>.
-{% if site.project == "platform" %}
-<br>
-**scope:** `write:site`
-{% endif %}
-
-<p class="codeTitle">Example CURL request:</p>
-{% highlight shell%}
-{% if site.project == "platform" %}
-curl --request DELETE \
---url https://api.weebly.com/v1/user/sites/987654321/pages/1234567890 \
---header 'accept: application/vnd.weebly.v1+json' \
---header 'content-type: application/json' \
---header 'x-weebly-access-token: [YOUR_TOKEN]"
-
-{% else %}
-curl https://api.weeblycloud.com/user/123456/site/987654321/page/1234567890 \
--X DELETE \
--H "Content-type: application/json" \
--H "X-Public-Key: YOURAPIKEY" \
--H "X-Signed-Request-Hash: YOURSECRETHASH"
-{% endif %}
-{% endhighlight %}
-
-**Response**
-There is no response to a delete request.

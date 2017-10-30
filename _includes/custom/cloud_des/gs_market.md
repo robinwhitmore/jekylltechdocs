@@ -22,7 +22,11 @@ Before you can configure Weebly Cloud to use custom content in the Publish modal
 **To set the URL in the Cloud Admin:**
 1. Create your custom content at a URL that can be accessed by the modal.
 2. From the **Settings** page of the Cloud Admin, in the Configuration area, click the **Edit** icon for the **Upsell URL**.
+   {% if site.project=="cloud" %}
    {% include image.html file="cl_upsellURL.png" caption="Upsell URL on the Settings page in the Cloud Admin" %}
+   {% elsif site.project=="designer" %}
+   {% include image.html file="ds_upsellURL.png" caption="Upsell URL on the Settings page in the Cloud Admin" %}
+   {%endif%}
 3. Enter the URL to your custom content.
 
 {% if site.project=="cloud" %}

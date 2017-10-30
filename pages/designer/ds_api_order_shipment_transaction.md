@@ -1,9 +1,10 @@
 ---
-title:
-keywords:
-t_type: [concepts, task, reference, tutorial]
-tags: [getting_started, troubleshooting, configuration, clients, plans, sites, apps, elements, themes]
-sidebar: ds_gs_sidebar ds_apps_sidebar ds_themes_sidebar ds_apis_sidebar ds_plugins_sidebar
-permalink: ds_[X].html
-summary:
+title: Order Shipment Transaction API
+keywords: shipment, transaction
+t_type: [reference]
+tags: [sites]
+sidebar: ds_apis_sidebar
+permalink: ds_api_order_shipment_transaction.html
+summary: ​Use the Order Shipment Transactions API to retrieve the shipment transactions for an order.
 ---
+{% include custom/shared/apis/order_shipment_transaction.md %}

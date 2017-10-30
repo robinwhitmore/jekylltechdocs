@@ -55,7 +55,7 @@ The following table shows all fields that exist for this API, those that are ret
         <td>Full url to your {% if site.project=="designer" %}<a href="ds_gs_market.html">publish</a>{% elsif site.project=="cloud" %}<a href="cl_gs_market.html">publish</a>{% endif %} promotion page. This url will be loaded
             in an iframe (640px W by 200px H) upon site publish and can be used to
             advertise other services. You may override this setting at the site
-            level (using this Site API <!--todo: api link--> call).
+            level (using this {% if site.project=="designer" %}<a href="ds_api_site.html#patch-update-a-site">Site API </a>{% elsif site.project=="cloud" %}<a href="cl_api_site.html#patch-update-a-site">Site API </a>{% endif %}call).
         </td>
         <td>string</td>
         <td>X</td>

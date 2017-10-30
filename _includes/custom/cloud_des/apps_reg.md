@@ -7,5 +7,8 @@ Registering your app allows it to be managed in the Cloud Admin and consequently
 3. Enter a name for your app (18 characters or less). This is the name that will display in the Cloud Admin and in the sidebar of the Weebly Editor.
 
 When you click Save,  your app's detail page displays showing you the Client ID, secret, and other important info about your app. See {% if site.project=="designer" %}[Manage Your App](ds_apps_manage.html){%elsif site.project=="cloud" %}[Manage Your App](cl_apps_manage.html){%elsif site.project=="platform" %}[Manage Your App](pf_apps_manage.html){%endif%} for more info.
+{% if site.project=="cloud" %}
 {% include image.html file="cl_apps.png" caption="App Detail page in the Cloud Admin" %}
-
+{% elsif site.project=="designer" %}
+{% include image.html file="ds_apps.png" caption="App Detail page in the Cloud Admin" %}
+{%endif%}

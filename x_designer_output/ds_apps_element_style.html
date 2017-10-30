@@ -9,29 +9,12 @@
 
 
 <link rel="stylesheet" href="css/syntax.css">
-<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
- -->
-<!--
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="css/modern-business.css">
-<link rel="stylesheet" href="css/lavish-bootstrap.css">
--->
-<<<<<<< HEAD
-<link rel="stylesheet" href="css/lavish-bootstrap.css">
-=======
-
->>>>>>> parent of fe7650b... Fix conflict
-
-<link rel="stylesheet" href="css/orbit.css">
-<link rel="stylesheet" href="css/orbit-external.css">
-<link rel="stylesheet" href="css/theme-weebly.css">
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
-
+<link rel="stylesheet" media="screen" href="css/orbit-external.css">
+<link rel="stylesheet" media="screen" href="css/orbit.css">
+<link rel="stylesheet" media="screen" href="css/theme-weebly.css">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
@@ -45,24 +28,20 @@
 
 <link rel="shortcut icon" href="images/favicon.ico">
 
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
-
-<!-- <link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4008feed.xml"> -->
-
 <script type="text/javascript">
+
     $(document).ready(function() {
 
-        /*Bootstrap popovers are initialized with the following script. In the options, I'm setting the placement to be on the right, the trigger to be hover rather than click, and to allow HTML from the JSON data source. */
+        // Bootstrap popovers are initialized with the following script. In the options, I'm setting the placement to be on the right, the trigger to be hover rather than click, and to allow HTML from the JSON data source.
 
-        $('[data-toggle="popover"]').popover({
-            placement: 'top',
-            trigger: 'hover',
-            html: true
+        // $('[data-toggle="popover"]').popover({
+        //     placement: 'top',
+        //     trigger: 'hover',
+        //     html: true
+        // });
+
+        $('.mobile-nav-btn').click(function(){
+            $('.nav-group').toggleClass('open');
         });
     })
 </script>
@@ -108,70 +87,71 @@
 
 </head>
 <body>
-<!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container topnavlinks">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
 
-            <a class="fa fa-home fa-lg navbar-brand" href="home.html">&nbsp;<span class="projectTitle">
-                Weebly Cloud for Designers</span></a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right NavList horizontal">
-                <!-- entries without drop-downs appear here -->
-                
-                
-                
-                <li class="NavLinkLi">
-                	<a href="home.html" class="NavLink">Get Started</a>
-               	</li>
-                
-                
-                
-                <li class="NavLinkLi">
-                	<a href="ds_apps_gs.html" class="NavLink">Custom Apps</a>
-               	</li>
-                
-                
-                
-                <li class="NavLinkLi">
-                	<a href="ds_themes_start.html" class="NavLink">Custom Themes</a>
-               	</li>
-                
-                
-                
-                <li class="NavLinkLi">
-                	<a href="ds_api_about.html" class="NavLink">Cloud APIs</a>
-               	</li>
-                
-                
-                
-                <li class="NavLinkLi">
-                	<a href="ds_tags_about.html" class="NavLink">Tags</a>
-               	</li>
-                
-                
-                
-                <!-- entries with drop-downs appear here -->
-                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
-                
-                
+<!-- Navigation -->
+
+<div class="top-nav">
+
+	<div class="top-nav-item">
+		<img src="images/weebly_cloud_logo.svg" alt="Weebly Cloud" class="cloud-logo" role="button" tabindex="0" alt="menu"/>
+	</div>
+
+	<div class="top-nav-item">
+		<img class="mobile-nav-btn" src="images/icons/mobile-menu.svg" alt="">
+	</div>
+
+	<nav class="top-nav-item">
+		<div class="nav-group">
+			<ul class="NavList nav-group-list horizontal">
+				<!-- entries without drop-downs appear here -->
+				
+				
+				
+				<li class="NavLinkLi">
+					<a href="home.html" class="NavLink nav-group-list-link">Getting Started</a>
+				</li>
+				
+				
+				
+				<li class="NavLinkLi">
+					<a href="ds_apps_gs.html" class="NavLink nav-group-list-link">Apps</a>
+				</li>
+				
+				
+				
+				<li class="NavLinkLi">
+					<a href="ds_themes_start.html" class="NavLink nav-group-list-link">Themes</a>
+				</li>
+				
+				
+				
+				<li class="NavLinkLi">
+					<a href="ds_api_about.html" class="NavLink nav-group-list-link">APIs</a>
+				</li>
+				
+				
+				
+				<li class="NavLinkLi">
+					<a href="ds_tags_about.html" class="NavLink nav-group-list-link">Topics</a>
+				</li>
+				
+				
+				
+				<!-- entries with drop-downs appear here -->
+				<!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+				
+				
 			<li class="NavLinkLi">
 
 
 
-  <a class="email NavLink" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Add Stylesheets to an Element page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email NavLink nav-group-list-link" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Add Stylesheets to an Element page: ' + window.location.href;">Feedback</a>
 
 </li>
 
+
 		
-                <!--comment out this block if you want to hide search-->
+
                 <li>
                     <!--start search-->
                     <div id="search-demo-container">
@@ -185,28 +165,22 @@
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
                                 searchResultTemplate: '<li><a href="{url}" title="Add Stylesheets to an Element">{title}</a></li>',
-                    noResultsText: 'No results',
-                            limit: 10,
-                            fuzzy: true,
+                                noResultsText: '<span class="no-results">No results</span>',
+                                limit: 10,
+                                fuzzy: true,
                     })
                     </script>
                     <!--end search-->
                 </li>
             </ul>
         </div>
-        </div>
-        <!-- /.container -->
-</nav>
+	</nav>
+</div>
 
-<!-- Page Content -->
-<div class="container">
-    <div class="col-lg-12">&nbsp;</div>
-    <!-- Content Row -->
-    <div class="row">
-        <!-- Sidebar Column -->
-        <div class="col-md-3">
 
-          
+<div class="page">
+    <div class="col-sidebar">
+     	
 
 
 
@@ -672,15 +646,15 @@
     
 
 </ul>
-</div>
+
 
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <script>
 $("li.active").parents('li').toggleClass("active");
 </script>
 
-    <!-- Content Column -->
-    <div class="col-md-9">
+    </div>
+    <div class="col-content">
         <div>
     <div class="post-header">
         <h1 class="post-title-main display-2">Add Stylesheets to an Element</h1>
@@ -700,22 +674,25 @@ $("li.active").parents('li').toggleClass("active");
 
 
     
-    
-<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+    <!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
 <script>
 $( document ).ready(function() {
-  // Handler for .ready() called.
 
-$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2' });
+	$('#toc').toc({
+		minimumHeaders: 2, // Don't show ToC if there is only one header
+		listType: 'ul',
+		showSpeed: 0,
+		headers: 'h2'
+	});
 
-/* this offset helps account for the space taken up by the floating toolbar. */
-$('#toc').on('click', 'a', function() {
-  var target = $(this.getAttribute('href'))
-    , scroll_target = target.offset().top
+	/* this offset helps account for the space taken up by the floating toolbar. */
+	$('#toc').on('click', 'a', function() {
+	  var target = $(this.getAttribute('href'))
+	    , scroll_target = target.offset().top
 
-  $(window).scrollTop(scroll_target - 50);
-  return false
-})
+	  $(window).scrollTop(scroll_target - 50);
+	  return false
+	})
 
 });
 </script>
@@ -789,13 +766,14 @@ Here’s an example of a LESS variable used in a stylesheet:</p>
 
     <div class="tags">
         
-        <b>Tags: </b>
-        
-        
-        
-        <a href="tag_elements.html" class="btn btn-default navbar-btn cursorNorm" role="button">elements</a>
-        
-        
+	        Tags<br />
+	        
+	        
+				
+		        
+		        	<a href="tag_elements.html" class="btn btn-default navbar-btn cursorNorm" role="button">elements</a>
+		        
+	        
         
     </div>
 
@@ -810,7 +788,7 @@ Here’s an example of a LESS variable used in a stylesheet:</p>
 		<div class="col-lg-12">
 			<div class="footer__fineprint">
 				&copy;2017 Weebly. All rights reserved. <br />
-				 Site last generated: Oct 24, 2017
+				 Site last generated: Oct 30, 2017
 			</div>
 			<div class="footer__logo">
 				<img src="images/weebly_logo.svg" alt="Weebly logo"/>
@@ -821,11 +799,9 @@ Here’s an example of a LESS variable used in a stylesheet:</p>
 
 
     </div>
-    <!-- /.row -->
 </div>
-<!-- /.container -->
-    </div>
+
+
 
 </body>
-
 </html>

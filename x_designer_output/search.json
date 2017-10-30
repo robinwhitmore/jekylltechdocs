@@ -136,6 +136,61 @@
 
 
 {
+"title": "Order Billing API",
+"tags": "sites",
+"keywords": "payment provider, payment, billing address, payment method, transactions",
+"url": "ds_api_order_billing.html",
+"summary": "Use the Order Billings API to retrieve payment information like billing address or payment provider for payments against an order."
+}
+,
+
+
+
+{
+"title": "Order Billing Transactions API",
+"tags": "sites",
+"keywords": "order, transaction, billing, invoice, order method, credit card",
+"url": "ds_api_order_billing_transaction.html",
+"summary": "​Use the Order Billing Transactions API to retrieve information about the payment of orders, like the amount, payment processor, currency, credit card, and status."
+}
+,
+
+
+
+{
+"title": "Order Item API",
+"tags": "sites",
+"keywords": "order, order item, sku",
+"url": "ds_api_order_item.html",
+"summary": "Use the Order Item API to retrieve information about order items from a given order."
+}
+,
+
+
+
+{
+"title": "Order Shipment API",
+"tags": "sites",
+"keywords": "shipping, tax, tracking",
+"url": "ds_api_order_shipment.html",
+"summary": "Use the Order Shipment API to retrieve information about the shipment for an order."
+}
+,
+
+
+
+{
+"title": "Order Shipment Transaction API",
+"tags": "sites",
+"keywords": "shipment, transaction",
+"url": "ds_api_order_shipment_transaction.html",
+"summary": "​Use the Order Shipment Transactions API to retrieve the shipment transactions for an order."
+}
+,
+
+
+
+{
 "title": "Page API",
 "tags": "sites",
 "keywords": "page, hidden, page order, layout, url",

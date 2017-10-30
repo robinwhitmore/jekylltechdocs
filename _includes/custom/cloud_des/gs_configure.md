@@ -7,15 +7,22 @@ And{% endif %} here's an email sent inviting a new user showing Nash Hosting's n
 {% include image.html file="cl_settings_mail.png" %}<br>
 
 ​Once uploaded, your logo displays in the Cloud Admin as shown here:
+{% if site.project=="cloud" %}
 {% include image.html file="cl_settings_logo.png" %}<br>
-
+{% elsif site.project=="designer" %}
+{% include image.html file="ds_settingsLogo.png" caption="Set your logo and favicon" %}
+{%endif%}
 
 **To brand the editor{% if site.project=="cloud" %}, sites{%endif%} and the [Cloud Admin](http://weeblycloud.com/admin):**
 1. From the Cloud Admin, click the **Settings** tab.
 2. In the **Customize** area, click the **Edit** icon.
 2. Enter the company name.
 3. Upload your logo and favicon.
+{% if site.project=="cloud" %}
 {% include image.html file="cl_settings_uploadLogo.png" %}
+{% elsif site.project=="designer" %}
+{% include image.html file="ds_settingsLogoNew.png" caption="Upload new logo and favicon" %}
+{%endif%}
 
 ## Set Your Domain
 
@@ -26,8 +33,16 @@ You can set a domain to access both the Cloud Admin (`http://your_domain/admin`)
 **To set a subdomain:**
 1. From the Cloud Admin, click the **Settings** tab.
 2. In the **Domain** area, click the **Edit** icon.
-3. To use a subdomain of `weeblycloud.com`, click **Subdomain**, enter the subdomain to be used, and click **Save**. If the subdomain is available, a green checkmark displays. The subdomain will be applied to both the Cloud Admin and the User portal, and to the Site Editor URL.{% include image.html file="cl_settings_domain.png" %}<br>
-4. To use a custom domain, click **Custom domain**, enter the domain you'd like to use and click **Next**. {% include image.html file="cl_settings_customDomain.png" %}<br>You now need to add a `CNAME` that points `weeblycloud.com` to the DNS for your domain. Follow the instructions in the resulting dialog.
+3. To use a subdomain of `weeblycloud.com`, click **Subdomain**, enter the subdomain to be used, and click **Save**. If the subdomain is available, a green checkmark displays. The subdomain will be applied to both the Cloud Admin and the User portal, and to the Site Editor URL.
+    {% if site.project=="cloud" %}
+    {% include image.html file="cl_settings_domain.png" %}
+    {% elsif site.project=="designer" %}
+    {% include image.html file="ds_settings_domain.png" caption="Set your domain" %}
+    {%endif%}
+4. To use a custom domain, click **Custom domain**, enter the domain you'd like to use and click **Next**.
+    {% include image.html file="cl_settings_customDomain.png" %}
+
+You now need to add a `CNAME` that points `weeblycloud.com` to the DNS for your domain. Follow the instructions in the resulting dialog.
 
 ## {%if site.project=="cloud"%}Footer Link and {%endif%}Email URL
 
@@ -38,7 +53,8 @@ You can set a domain to access both the Cloud Admin (`http://your_domain/admin`)
 
 **To set the URL:**
 1. From the Cloud Admin, click the **Settings** tab.
-2. In the **Footer Message** area, click the **Edit** icon and enter the URL. {% include image.html file="cl_settings_URL.png" %}
+2. In the **Footer Message** area, click the **Edit** icon and enter the URL.
+    {% include image.html file="cl_settings_URL.png" %}
 
 ## Configure Basic Settings
 
@@ -80,12 +96,17 @@ You can create a message that displays to Weebly agents when you contact Weebly 
 
 
 From the **Agent Message** area, click the **Edit** icon and enter your message (up to 125 characters).
+{% if site.project=="cloud" %}
 {% include image.html file="cl_settings_message.png" %}
+{%elsif site.project=="designer" %}
+{% include image.html file="ds_settings_message.png" caption="Set a message to display to Weebly agents" %}
+{% endif %}
 
 ## Set Contact Info
 
 You can create three different ways that you can be contacted:
-* **Support**: Shown to your {{site.customer}}s in the Weebly editor. Your phone number and a link to your URL (shown as **Support Center**) display in the Help menu. All other entered information for this type of contact displays to the Weebly support team, in the case where the {{site.customer}} contacts Weebly directly.{% include image.html file="cl_settings_support.png" %}
+* **Support**: Shown to your {{site.customer}}s in the Weebly editor. Your phone number and a link to your URL (shown as **Support Center**) display in the Help menu. All other entered information for this type of contact displays to the Weebly support team, in the case where the {{site.customer}} contacts Weebly directly.
+    {% include image.html file="cl_settings_support.png" %}
 * **Billing**: Shown to Weebly support. This contact should be someone who can handle billing inquiries.
 * **Technical**: Shown to Weebly Support. This contact should be someone equipped to handle technical issues.<br>
 <br>
@@ -95,7 +116,11 @@ You can create three different ways that you can be contacted:
 3. Enter the needed information. You can only create one contact for each type.
 
 You can edit a created contact by clicking the **Edit** icon.
+{% if site.project=="cloud" %}
 {% include image.html file="cl_settings_contact.png" %}
+{% elsif site.project=="designer" %}
+{% include image.html file="ds_settings_contact.png" caption="" %}
+{%endif%}
 
 ## View and Create API Keys and Secrets
 API keys and secrets are used during {% if site.project=="designer" %}[API calls](ds_apis_about.html){%elsif site.project=="cloud" %}[API calls](cl_apis_about.html){%endif%} to verify the sender of a request. You need to create a key to use the API{%if site.project=="cloud"%}, and you'll also need to create a key when you install any <span style="color: red">plug-ins</span>{%endif%}.
@@ -108,4 +133,8 @@ API keys and secrets are used during {% if site.project=="designer" %}[API calls
 The API key and secret are automatically generated for you and cannot be changed. Click **Save Key** when done.
 
 Click the **Show link** to view the API secret. Click the Edit icon to edit the name of the key or to delete the key.
+{% if site.project=="cloud" %}
 {% include image.html file="cl_settings_api.png" %}
+{% elsif site.project=="designer" %}
+{% include image.html file="ds_settings_api.png" caption="" %}
+{%endif%}

@@ -37,7 +37,7 @@ The following table shows all fields that exist for this API, noting those that 
     </tr>
     <tr>
         <td><code>page_id</code></td>
-        <td>​​The unique ID of the page<!--todo: link--> that the blog is
+        <td>​​The unique ID of the {% if site.project=="designer" %}<a href="ds_api_page.html">page</a>{% elsif site.project=="cloud" %}<a href="cl_api_page.html">page</a>{% elsif site.project=="platform" %}<a href="pf_api_page.html">page</a>{% endif %} that the blog is
             on.</td>
         <td>string</td>
         <td>X</td>

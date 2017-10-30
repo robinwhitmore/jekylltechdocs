@@ -13,7 +13,12 @@ While each type has its own development process, they also all share some develo
 ## First Steps...
 
 You use the {%if site.project=="designer"%}[**APPS**](ds_apps_manage.html) {%elsif site.project=="cloud"%}[**APPS**](cl_apps_manage.html){%endif%} tab in <a data-container="body" data-toggle="popover" data-content="{{site.data.glossary.Cloud_Admin}}">Cloud Admin</a> to work with your app, including testing, uploading new versions, and managing the plans that the app is available to.
-<!--todo: get screenshot-->{% include image.html file="cl_apps.png"%}
+
+{% if site.project=="cloud" %}
+{% include image.html file="cl_apps.png" caption="Apps in Cloud Admin" %}
+{% elsif site.project=="designer" %}
+{% include image.html file="ds_apps.png" caption="Apps in Cloud Admin" %}
+{% endif %}
 
 You'll also be given access to your own development site {%if site.project=="cloud"%}(hosted on Weebly) {%endif%}that you can use to test your app. This site has special developer features, such as being able to install more than one version of your app. Team members with the {%if site.project=="designer"%}[role](ds_gs_team_members.html#team-member-roles) {% elsif site.project=="cloud"%}[role](cl_gs_team_members.html#team-member-roles){%endif%} of Admin or Technical are able to create and manage an app and use the development site.
 

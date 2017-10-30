@@ -121,10 +121,12 @@ entries:
     - title: Order Shipment API
       url: /ds_api_order_shipment.html
       output: web, pdf
+      # ready for review
 
     - title: Order Shipment Transaction API
       url: /ds_api_order_shipment_transaction.html
       output: web, pdf
+      # ready for review
 
     - title: Product API
       url: /ds_api_product.html
