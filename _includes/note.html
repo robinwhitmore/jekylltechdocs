@@ -1,9 +1,17 @@
 {% if include.type == 'tip' %}
-	<div markdown="span" class="Notice type_success" role="alert">
-		<b>Tip:</b> {{include.content}}
-	</div>
+<div markdown="span" class="Notice type_success" role="alert">
+	<b>Tip:</b> {{include.content}}
+</div>
+{% elsif include.type == 'warning' %}
+<div markdown="span" class="Notice type_warning" role="alert">
+	<b>Warning:</b> {{include.content}}
+</div>
+{% elsif include.type == 'error' %}
+<div markdown="span" class="Notice type_error" role="alert">
+	{{include.content}}
+</div>
 {% else %}
-	<div markdown="span" class="Notice type_info" role="alert">
-		<b>Note:</b> {{include.content}}
-	</div>
+<div markdown="span" class="Notice type_info" role="alert">
+	<b>Note:</b> {{include.content}}
+</div>
 {% endif %}

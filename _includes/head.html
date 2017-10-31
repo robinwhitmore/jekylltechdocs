@@ -5,41 +5,26 @@
 <meta name="keywords" content="{{page.tags}}{% if page.tags %}, {% endif %} {{page.keywords}}">
 <title>{{ page.title }} | {{ site.site_title }}</title>
 
+<link rel="shortcut icon" href="{{ "images/favicon.ico"  }}">
 
+<!-- Third-Party CSS -->
 <link rel="stylesheet" href="{{ "css/syntax.css" }}">
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-
+<!-- Custom CSS -->
 <link rel="stylesheet" media="screen" href="{{ "css/orbit-external.css" }}">
 <link rel="stylesheet" media="screen" href="{{ "css/orbit.css" }}">
 <link rel="stylesheet" media="screen" href="{{ "css/theme-weebly.css" }}">
 
+<!-- Third-Party JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-<script src="{{ "js/jquery.navgoco.min.js" }}"></script>
-
-
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="{{ "js/jquery.navgoco.min.js" }}"></script>
+<script src="{{ "js/jekyll-search.js"}}" type="text/javascript"></script>
 <script src="{{ "js/toc.js" }}"></script>
+
+<!-- Custom JS -->
 <script src="{{ "js/customscripts.js" }}"></script>
 
-<link rel="shortcut icon" href="{{ "images/favicon.ico"  }}">
 
-<script type="text/javascript">
-
-    $(document).ready(function() {
-
-        // Bootstrap popovers are initialized with the following script. In the options, I'm setting the placement to be on the right, the trigger to be hover rather than click, and to allow HTML from the JSON data source.
-
-        // $('[data-toggle="popover"]').popover({
-        //     placement: 'top',
-        //     trigger: 'hover',
-        //     html: true
-        // });
-
-        $('.mobile-nav-btn').click(function(){
-            $('.nav-group').toggleClass('open');
-        });
-    })
-</script>

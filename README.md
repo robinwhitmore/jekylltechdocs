@@ -32,7 +32,11 @@ jekyll serve --config _config_Designer.yml --incremental
 ```
 {% include note.html content="..." %}
 {% include note.html type="tip" content="..." %}
+{% include note.html type="warning" content="..." %}
+{% include note.html type="error" content="..." %}
 ```
+
+If you don't specify a note type, it will default to `type="info"`.
 
 ### label.html
 
@@ -48,7 +52,6 @@ jekyll serve --config _config_Designer.yml --incremental
 {% include label.html content="Hello There" %}
 
 ```
-
 
 ### image.html
 

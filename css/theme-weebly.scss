@@ -22,43 +22,12 @@ $border-radius-sm: 4px;
 $page-max-width: 1024px;
 $sidebar-width: 220px;
 
-.nav-tabs > li.active > a,
-.nav-tabs > li.active > a:hover,
-.nav-tabs > li.active > a:focus {
-	background-color: #248ec2;
-	color: white !important;
-}
-
-div.navbar-collapse .dropdown-menu > li > a:hover {
-	background-color: #347DBE;
-}
 
 a[data-toggle="tooltip"] {
 	color: #649345;
 	font-style: italic;
 	cursor: default;
 }
-/* top navbar */
-
-
-.printTitle {
-	color: #015CAE !important;
-}
-
-div.sidebarTitle {
-	color: #015CAE;
-}
-
-li.sidebarTitle {
-	margin-top:40px;
-	font-weight:normal;
-	font-size:130%;
-	color: #ED1951;
-	margin-bottom:10px;
-	margin-left: 5px;
-
-}
-
 
 /*--------
 what i added
@@ -67,19 +36,6 @@ div.next {
 	margin-top: 25px;
 }
 
-p.proc {
-	font-weight: bold;
-}
-
-.navbar-brand {
-	color: white !important;
-}
-
-.tagTable {
-	-webkit-columns: 100px 3; /* Chrome, Safari, Opera */
-	-moz-columns: 100px 3; /* Firefox */
-	columns: 100px 3;
-}
 
 .action {
 	-webkit-border-radius: 3px;
@@ -91,64 +47,6 @@ p.proc {
 	line-height: 26px;
 	font-weight: normal;
 }
-
-.bs-callout {
-	padding: 20px;
-	margin: 20px 0;
-	border: 1px solid #eee;
-	border-left-width: 5px;
-	border-radius: 3px;
-}
-.bs-callout h4 {
-	margin-top: 0;
-	margin-bottom: 5px;
-}
-.bs-callout p:last-child {
-	margin-bottom: 0;
-}
-.bs-callout code {
-	border-radius: 3px;
-}
-.bs-callout+.bs-callout {
-	margin-top: -5px;
-}
-.bs-callout-default {
-	border-left-color: #777;
-}
-.bs-callout-default h4 {
-	color: #777;
-}
-.bs-callout-primary {
-	border-left-color: #428bca;
-}
-.bs-callout-primary h4 {
-	color: #428bca;
-}
-.bs-callout-success {
-	border-left-color: #5cb85c;
-}
-.bs-callout-success h4 {
-	color: #5cb85c;
-}
-.bs-callout-danger {
-	border-left-color: #d9534f;
-}
-.bs-callout-danger h4 {
-	color: #d9534f;
-}
-.bs-callout-warning {
-	border-left-color: #f0ad4e;
-}
-.bs-callout-warning h4 {
-	color: #f0ad4e;
-}
-.bs-callout-info {
-	border-left-color: #5bc0de;
-}
-.bs-callout-info h4 {
-	color: #5bc0de;
-}
-
 
 .post-content ol li,
 .post-content ul li {
@@ -286,13 +184,6 @@ ul#results-container a:hover {
 
 /* end search */
 
-.filter-options {
-	margin-bottom: 20px;
-}
-.filter-options button {
-	margin: 3px;
-}
-
 
 li.dropdownActive a {
 	font-weight: bold;
@@ -345,10 +236,6 @@ figcaption {
 	color: red;
 }
 
-
-table.dataTable thead {
-	background-color: #444;
-}
 table td {
 	hyphens: auto;
 }
@@ -374,9 +261,6 @@ section table tr.danger, table tr.preference, table tr.preference > td.sorting  
 	color: orange;
 }
 
-table.profile thead tr th {
-	background-color: #248ec2;
-}
 
 table.request thead tr th {
 	background-color: #ED1951;
@@ -429,10 +313,17 @@ a.fa.fa-envelope-o.mailto {
 	overflow: hidden;
 }
 
-ol li ol li {list-style-type: lower-alpha;}
-ol li ul li {list-style-type: disc;}
+ol li ol li {
+	list-style-type: lower-alpha;
+}
 
-li img {clear:both; }
+ol li ul li {
+	list-style-type: disc;
+}
+
+li img {
+	clear:both;
+}
 
 .tab-content {
 	padding: 15px;
@@ -502,25 +393,6 @@ ol.series li {
 	padding-left: 0px;
 }
 
-.siteTagline {
-	font-size: 200%;
-	font-weight: bold;
-	color: silver;
-	font-family: monospace;
-	text-align: center;
-	line-height: 10px;
-	margin: 20px 0px;
-	display: block;
-}
-
-.versionTagline {
-	text-align: center;
-	margin-bottom: 20px;
-	font-family: courier;
-	color: silver;
-	color: #444;
-	display:block;
-}
 
 #mysidebar {
     padding-left: 0
@@ -572,14 +444,6 @@ video {
 }
 
 
-p.required,
-p.dataType {
-	display: block;
-	color: #c0c0c0;
-	font-size: 80%;
-	margin-left:4px;
-}
-
 dd {
 	margin-left:20px;
 }
@@ -592,7 +456,12 @@ dd {
 	font-weight: bold;
 }
 
-.note code, .alert code, .warning code, h2 code, h3 code, h4 code {
+.note code,
+.alert code,
+.warning code,
+h2 code,
+h3 code,
+h4 code {
 	color: inherit;
 	padding: 0px;
 }
@@ -643,36 +512,6 @@ a.no_icon:after
  {
 	content:"" !important;
 	padding-left: 0;
-}
-
-// .btn-default {
-//     margin-bottom: 10px;
-// }
-
-/* algolia search */
-
-.search {
-	text-align: left;
-}
-.search input {
-	font-size: 20px;
-	width: 300px;
-}
-.results {
-	margin: auto;
-	text-align: left;
-}
-.results ul {
-	list-style-type: none;
-	padding: 0;
-}
-
-/* algolia */
-
-div.results {
-	position: absolute;
-	background-color: white;
-	width: 100%;
 }
 
 
@@ -1183,10 +1022,6 @@ a.nav-group-list-link {
 	}
 }
 
-.navbar-collapse.collapsing .nav-group-list {
-	height: 100px;
-}
-
 .nav-group {
 
 	@media (max-width: 768px) {
@@ -1202,7 +1037,8 @@ a.nav-group-list-link {
 }
 
 
-/*Print Stuff*/
+/* Print Styles -----------------------------------------------------------*/
+/* TODO: Move these into printstyles.css */
 
 @media print {
 	.col-sidebar,
