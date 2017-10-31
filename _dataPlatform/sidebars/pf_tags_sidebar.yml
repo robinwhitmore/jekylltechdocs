@@ -11,7 +11,7 @@ entries:
     output: web
     folderitems:
 
-    - title: What are Tag Pages?
+    - title: Topics
       url: /pf_tags_about.html
       output: web
 

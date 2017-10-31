@@ -1,10 +1,10 @@
 ---
-title: What are Tag Pages?
+title: Topics
 keywords:
 tags:
-sidebar: ds_tags_sidebar
+sidebar: false
 permalink: ds_tags_about.html
-summary: Use tags to find topics based on subject matter.
+summary: Use topics to find articles based on subject matter..
 toc: false
 ---
 {% include custom/shared/tags_about.html %}

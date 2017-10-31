@@ -23,9 +23,8 @@ jekyll serve --config _config_Designer.yml --incremental
 * Search for “The element-specific information lives within the objects”. Remove the extra quotes around `
 "elements"`.
 
-## Documentations
 
-### Includes
+## Includes
 
 ### note.html
 

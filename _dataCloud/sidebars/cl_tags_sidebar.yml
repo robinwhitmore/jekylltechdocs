@@ -11,7 +11,7 @@ entries:
     output: web
     folderitems:
 
-    - title: What are tag pages?
+    - title: Topics
       url: /cl_tags_about.html
       output: web
 

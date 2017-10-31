@@ -662,9 +662,11 @@ figure {
 		width: $sidebar-width;
 	}
 
-	.col-content {
-		margin-left: $sidebar-width + 100px;
-	}
+  .page.has-sidebar {
+    .col-content {
+      margin-left: $sidebar-width + 100px;
+    }
+  }
 }
 
 
@@ -768,13 +770,25 @@ figure {
 
 /* CARD ------------------------------------------------------------------- */
 
-.Card {
-	margin-bottom: 24px;
+.card-header {
+	margin: 0;
+  font-size: 16px;
 }
 
-.card-header {
-	margin-top: 0;
+
+.topic-card {
+  display: block;
+  float: left;
+  max-width: 300px;
+  height: 160px;
+  margin: 0 24px 24px 0;
+
+  p {
+    color: $secondary-color;
+  }
 }
+
+
 
 /* POPOVER ------------------------------------------------------------------- */
 

@@ -10,7 +10,7 @@ entries:
     output: web
     folderitems:
 
-    - title: What are tag pages?
+    - title: Topics
       url: /ds_tags_about.html
       output: web
 
