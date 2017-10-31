@@ -131,22 +131,27 @@ entries:
     - title: Product API
       url: /ds_api_product.html
       output: web, pdf
+      # ready for review
 
     - title: Product Image API
       url: /ds_api_product_image.html
       output: web, pdf
+      # ready for review
 
     - title: Product Option API
       url: /ds_api_product_option.html
       output: web, pdf
-
-    - title: Product Option Choice API
-      url: /ds_api_product_option_choice.html
-      output: web, pdf
+      #ready for review
 
     - title: Product SKU API
       url: /ds_api_product_sku.html
       output: web, pdf
+      #ready for review
+
+    - title: Product SKU Option Choice API
+      url: /ds_api_product_sku_option_choice.html
+      output: web, pdf
+      #ready for review
 
     - title: Sub-Account API
       url: /ds_api_subaccount.html

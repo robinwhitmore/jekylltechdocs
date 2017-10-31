@@ -52,7 +52,7 @@
 "tags": "sites",
 "keywords": "category, categories",
 "url": "ds_api_category.html",
-"summary": "​Use the Categories API to retrieve category information, as well as to update, replace, create, and delete categories."
+"summary": "​Use the Category API to retrieve category information, as well as to update, replace, create, and delete categories."
 }
 ,
 
@@ -74,7 +74,7 @@
 "tags": "sites",
 "keywords": "coupon, store, checkout",
 "url": "ds_api_coupon.html",
-"summary": "Use the Coupons API to manage a store's coupons, including retrieving coupons, updating or deleting existing ones, and creating new ones."
+"summary": "Use the Coupon API to manage a store's coupons, including retrieving coupons, updating or deleting existing ones, and creating new ones."
 }
 ,
 
@@ -96,7 +96,7 @@
 "tags": "sites",
 "keywords": "forms, form entries, entries",
 "url": "ds_api_form_entry.html",
-"summary": "​Use the Form Entries API to return entries for a given form."
+"summary": "​Use the Form Entry API to return entries for a given form."
 }
 ,
 
@@ -140,7 +140,7 @@
 "tags": "sites",
 "keywords": "payment provider, payment, billing address, payment method, transactions",
 "url": "ds_api_order_billing.html",
-"summary": "Use the Order Billings API to retrieve payment information like billing address or payment provider for payments against an order."
+"summary": "Use the Order Billing API to retrieve payment information like billing address or payment provider for payments against an order."
 }
 ,
 
@@ -151,7 +151,7 @@
 "tags": "sites",
 "keywords": "order, transaction, billing, invoice, order method, credit card",
 "url": "ds_api_order_billing_transaction.html",
-"summary": "​Use the Order Billing Transactions API to retrieve information about the payment of orders, like the amount, payment processor, currency, credit card, and status."
+"summary": "​Use the Order Billing Transaction API to retrieve information about the payment of orders, like the amount, payment processor, currency, credit card, and status."
 }
 ,
 
@@ -184,7 +184,7 @@
 "tags": "sites",
 "keywords": "shipment, transaction",
 "url": "ds_api_order_shipment_transaction.html",
-"summary": "​Use the Order Shipment Transactions API to retrieve the shipment transactions for an order."
+"summary": "​Use the Order Shipment Transaction API to retrieve the shipment transactions for an order."
 }
 ,
 
@@ -195,7 +195,7 @@
 "tags": "sites",
 "keywords": "page, hidden, page order, layout, url",
 "url": "ds_api_page.html",
-"summary": "The Pages API provides methods for reading and updating information about the pages for a site."
+"summary": "The Page API provides methods for reading and updating information about the pages for a site."
 }
 ,
 
@@ -207,6 +207,61 @@
 "keywords": "plans, plan, page limit, terms",
 "url": "ds_api_plan.html",
 "summary": "The Plan API lets you review your plans and add plans for a given site."
+}
+,
+
+
+
+{
+"title": "Product API",
+"tags": "sites",
+"keywords": "product, price, tax,",
+"url": "ds_api_product.html",
+"summary": "Use the Product API to manage the product catalog for a site's store and to change the options and skus available for a product."
+}
+,
+
+
+
+{
+"title": "Product Image API",
+"tags": "sites",
+"keywords": "image, format, product",
+"url": "ds_api_product_image.html",
+"summary": "​Use the Product Image API to view and manage the images used to display products in a Weebly store."
+}
+,
+
+
+
+{
+"title": "Product Option API",
+"tags": "sites",
+"keywords": "option, choice",
+"url": "ds_api_product_option.html",
+"summary": "Use the Product Option API to retrieve or update the options available for a given product."
+}
+,
+
+
+
+{
+"title": "Product SKU API",
+"tags": "sites",
+"keywords": "sku, option, choice",
+"url": "ds_api_product_sku.html",
+"summary": "Use the Product SKU API to retrieve and update product SKUs. Use the Products API to create new SKUs."
+}
+,
+
+
+
+{
+"title": "Product SKU Option Choice API",
+"tags": "sites",
+"keywords": "sku, option, choice,",
+"url": "ds_api_product_sku_option_choice.html",
+"summary": "Use the Product SKU Option Choice API to retrieve the option choices for a given product sku."
 }
 ,
 
@@ -229,28 +284,6 @@
 "keywords": "store, eCommerce",
 "url": "ds_api_store.html",
 "summary": "The Store API provides methods for managing and creating stores owned by a given user."
-}
-,
-
-
-
-{
-"title": "API test",
-"tags": "themes",
-"keywords": "",
-"url": "ds_api_test.html",
-"summary": "Test API template"
-}
-,
-
-
-
-{
-"title": "Page API",
-"tags": "apispages",
-"keywords": "",
-"url": "ds_apis_page.html",
-"summary": "The Pages API provides methods for reading and updating information about the pages for a given user's site."
 }
 ,
 

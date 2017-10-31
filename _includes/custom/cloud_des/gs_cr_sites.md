@@ -200,6 +200,18 @@ From the site's detail page, click **Set Domain** and enter the new domain.
 {% include image.html file="ds_siteDomain.png" caption="Change the site's domain" %}
 {%endif%}
 
+{% if site.project=="designer" %}
+## Move a Site to Another Client
+
+You can move a site to another client from the Cloud Admin.
+
+From the site's detail page, click **Move to Client**.
+{% include image.html file="ds_siteMove.png" caption="Move a site to another client" %}
+
+Use the dropdown to select the client to move to and click **Move Site**.
+{% include image.html file="ds_siteMove2.png" caption="Select the target client" %}
+{%endif%}
+
 ## Suspend Access to a Site
 To temporarily prevent a user from updating their site in the event they are delinquent on their payment, their access to a site can be suspended using the {% if site.project=="designer" %}[`Site::disable`](ds_api_site.html#post-disable-a-site){%elsif site.project=="cloud" %}[`Site::disable`](cl_api_site.html#post-disable-a-site){%elsif site.project=="platform" %}[`Site::disable`](pf_api_site.html#post-disable-a-site){%endif%} endpoint. When a site is suspended, access to the Weebly editor is disabled (the published site remains unchanged and active).
 {% if site.project=="cloud"%}

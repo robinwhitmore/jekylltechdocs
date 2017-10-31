@@ -122,6 +122,36 @@
   
   
   <url>
+    <loc>http://localhost:4008/ds_api_product.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_api_product_image.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_api_product_option.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_api_product_sku.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_api_product_sku_option_choice.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4008/ds_api_site.html</loc>
   </url>
   
@@ -129,18 +159,6 @@
   
   <url>
     <loc>http://localhost:4008/ds_api_store.html</loc>
-  </url>
-  
-  
-  
-  <url>
-    <loc>http://localhost:4008/ds_api_test.html</loc>
-  </url>
-  
-  
-  
-  <url>
-    <loc>http://localhost:4008/ds_apis_page.html</loc>
   </url>
   
   
