@@ -1,13 +1,13 @@
 {% if include.content == 'get' %}
-	<div markdown="span" class="Tag type_info">GET</div>
+<div markdown="span" class="Tag type_info">GET</div>
 {% elsif include.content == 'post' %}
-	<div markdown="span" class="Tag type_warning">POST</div>
+<div markdown="span" class="Tag type_warning">POST</div>
 {% elsif include.content == 'put' %}
-	<div markdown="span" class="Tag type_warning">PUT</div>
+<div markdown="span" class="Tag type_warning">PUT</div>
 {% elsif include.content == 'delete' %}
-	<div markdown="span" class="Tag type_error">DELETE</div>
+<div markdown="span" class="Tag type_error">DELETE</div>
 {% elsif include.content == 'patch' %}
-	<div markdown="span" class="Tag type_warning">PATCH</div>
+<div markdown="span" class="Tag type_warning">PATCH</div>
 {% else %}
-	<div markdown="span" class="Tag type_info">{{include.content}}</div>
+<div markdown="span" class="Tag type_info">{{include.content}}</div>
 {% endif %}
