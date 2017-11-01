@@ -1,6 +1,9 @@
 # jekylltechdocs
 
-## Quick Start
+
+## Developing
+
+### Quick Start
 
 ```
 # Install Jekyll and the Gem Bundler
@@ -13,20 +16,35 @@ bundle install
 jekyll serve --config _config_Designer.yml --incremental
 
 # Visit http://localhost:4008/
-
 ```
 
-## Troubleshooting
+### Directory Structure
 
-*JSON load error breaking Search*
-* Remove the trailing comma at the end of `x_designer_output/search.json`. (Or whichever config you are loading)
-* Search for “The element-specific information lives within the objects”. Remove the extra quotes around `
-"elements"`.
+A list of commonly modified files in the repo.
 
+```
+.
+├── search.json - Generates JSON that powers search. Builds index from pages.
+├── css
+|   └── orbit.css - Generated from Orbit. Classes that map to Orbit components. ex. Nav, Card
+|   └── orbit-external.css - Generated from Orbit. Styles some HTML elements. ex. h1, h2, h3, p
+|   └── theme-weebly.scss - Styles for site layout and filling in Orbit's gaps. Also includes Orbit overrides. 
+├── js
+|   └── customscripts.js - All the JS we write lives in here.
+├── _x_*: Generated content.
+```
 
-## Includes
+### Third-party Libraries
 
-### note.html
+- [Jekyll](https://jekyllrb.com/) - Static site generator.
+- [Simple Jekyll Search](https://github.com/christian-fei/Simple-Jekyll-Search) 
+- [Bootstrap](http://getbootstrap.com/docs/3.3/) - We don't pull in the Bootstrap CSS. We just use the BootstrapJS for Tooltip and Popover functionality.
+
+## Writing
+
+### Includes
+
+#### note.html
 
 ```
 {% include note.html content="..." %}
@@ -37,7 +55,7 @@ jekyll serve --config _config_Designer.yml --incremental
 
 If you don't specify a note type, it will default to `type="info"`.
 
-### label.html
+#### label.html
 
 ```
 # Using any of the following content values will automatically color the label.
@@ -52,14 +70,9 @@ If you don't specify a note type, it will default to `type="info"`.
 
 ```
 
-### image.html
+#### image.html
 
 ```
 {% include image.html file="cl_apps.png" caption="App Detail page in the Cloud Admin" alt="Interface showing form to change details of an app" %}
 {% include image.html file="weebly.png" url="http://weebly.com" caption="Weebly.com" alt="Weebly logo" %}
 ```
-
-
-## External Resources
-- [Orbit](https://github.intern.weebly.net/weebly/orbit) - Orbit is being imported with the css file `css/orbit.css`. Do not make changes directly to this file.
-- [Liquid Template Docs](https://shopify.github.io/liquid/)
