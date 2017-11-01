@@ -46,6 +46,8 @@ A list of commonly modified files in the repo.
 
 #### note.html
 
+![Example of Notes](https://raw.githubusercontent.com/robinwhitmore/jekylltechdocs/gh-pages/images/readme/notes.png)
+
 ```
 {% include note.html content="..." %}
 {% include note.html type="tip" content="..." %}
@@ -56,6 +58,8 @@ A list of commonly modified files in the repo.
 If you don't specify a note type, it will default to `type="info"`.
 
 #### label.html
+
+![Example of Labels](https://raw.githubusercontent.com/robinwhitmore/jekylltechdocs/gh-pages/images/readme/labels.png)
 
 ```
 # Using any of the following content values will automatically color the label.
