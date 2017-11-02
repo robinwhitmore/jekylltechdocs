@@ -22,6 +22,7 @@ $border-radius-sm: 4px;
 $page-max-width: 1024px;
 $sidebar-width: 220px;
 
+$media-tablet: 767px; // 768 - 1 for iPad
 
 a[data-toggle="tooltip"] {
 	color: #649345;
@@ -91,26 +92,23 @@ p.external a {
 }
 
 #search-input {
-	width: 160px;
-	padding-left: 16px;
+	width: 100%;
+	margin-top: 8px;
+
+	@media (min-width: $media-tablet) {
+		width: 100px;
+		padding-left: 16px;
+	}
 }
 
 #search-demo-container .fa-search {
 	position: absolute;
 	top: 13px;
 	left: 18px;
-
-	// @media (min-width: 768px) {
-	// 	left: auto
-	// }
 }
 
 #search-demo-container {
     position: relative;
-}
-
-#search-input {
-    width: 100px;
 }
 
 #search-demo-container .fa-search {
@@ -118,7 +116,7 @@ p.external a {
     top: 4px;
     left: 0;
 
-    @media (min-width: 768px) {
+    @media (min-width: $media-tablet) {
         left: auto
     }
 }
@@ -130,13 +128,14 @@ p.external a {
 	position: absolute;
 	top: 41px; /* if you change anything about the nav, you'll prob. need to reset the top and left values here.*/
 	left: 20px;
-	width:223px;
 	right: 0;
+	width: 100%;
 	z-index: 1;
 	font-size: 14px;
 	left: auto;
 
-    @media (max-width: 768px) {
+    @media (max-width: $media-tablet) {
+		width:223px;
         left: 0;
         padding-left: 0;
     }
@@ -631,7 +630,7 @@ figure {
 .page {
     padding: 0 16px;
 
-    @media (min-width: 768px) {
+    @media (min-width: $media-tablet) {
         padding: 0 8px;
     }
 }
@@ -645,7 +644,7 @@ figure {
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: $media-tablet) {
 	.top-nav {
 		max-width: $page-max-width;
 		padding: 0 16px;
@@ -934,7 +933,7 @@ a.nav-group-list-link {
 
 .nav-group-list.horizontal {
 
-	@media (min-width: 768px) {
+	@media (min-width: $media-tablet) {
 		flex-direction: row;
 		justify-content: space-between;
 	}
@@ -943,7 +942,7 @@ a.nav-group-list-link {
 .nav-group-list.horizontal > * {
 	margin: 8px 0;
 
-	@media (min-width: 768px) {
+	@media (min-width: $media-tablet) {
 		margin: 0;
 		display: flex;
 		align-items: center;
@@ -953,7 +952,7 @@ a.nav-group-list-link {
 .nav-group-list.horizontal > *:first-child {
 	margin: 0 0 8px 0;
 
-	@media (min-width: 768px) {
+	@media (min-width: $media-tablet) {
 		margin: 0;
 	}
 }
@@ -962,9 +961,9 @@ a.nav-group-list-link {
 	margin-bottom: 0;
     margin-left: 0;
 
-    @media (min-width: 768px) {
-        margin: 0 0 0 20px;
-    }
+    // @media (min-width: $media-tablet) {
+    //     margin: 0 0 0 20px;
+    // }
 }
 
 .NavLinkLi {
@@ -984,20 +983,20 @@ a.nav-group-list-link {
 	align-items: center;
 	margin: 32px auto;
 
-	@media (min-width: 768px) {
+	@media (min-width: $media-tablet) {
 		margin: 32px auto 64px;
 		flex-wrap: nowrap;
 	}
 }
 
 .top-nav-item {
-	@media (max-width: 768px) {
+	@media (max-width: $media-tablet) {
 		flex: 1;
 	}
 }
 
 .top-nav-item:first-child {
-	padding-right: 46px;
+	padding-right: 26px;
 
 	@media (min-width: 992px) {
 		padding-right: 76px;
@@ -1011,7 +1010,7 @@ a.nav-group-list-link {
 
 .top-nav-item:last-child {
 
-	@media (max-width: 768px) {
+	@media (max-width: $media-tablet) {
 		flex-basis: 100%;
 		display: flex;
 		padding: 0 20px;
@@ -1020,8 +1019,8 @@ a.nav-group-list-link {
 		margin-top: 20px;
 	}
 
-	@media (min-width: 768px) {
-		flex: 1 0 0;
+	@media (min-width: $media-tablet) {
+		flex: 1;
 	}
 }
 
@@ -1033,7 +1032,7 @@ a.nav-group-list-link {
 	padding: 6px 16px;
 	vertical-align: middle;
 
-	@media (min-width: 768px) {
+	@media (min-width: $media-tablet) {
 		display: none;
 	}
 
@@ -1043,8 +1042,9 @@ a.nav-group-list-link {
 }
 
 .nav-group {
+	width: 100%;
 
-	@media (max-width: 768px) {
+	@media (max-width: $media-tablet) {
 		height: 1px;
         opacity: 0;
 		transition: 0.2s ease-in height, 0.2s ease-in opacity;
