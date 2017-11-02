@@ -273,7 +273,7 @@ The following table shows all fields that exist for this API, those that are ret
 </table>
 {% include custom/notes/note_api_undoc.md %}
 
-<h2><span class="label label-get text-uppercase">get</span> Retrieve a List of Sites
+<h2>{% include label.html content="get" %} Retrieve a List of Sites
 </h2>
 
 {% highlight shell%}
@@ -406,7 +406,7 @@ curl https://api.weeblycloud.com/user/123456/site?roll=owner \
 }
 {% endhighlight %}
 
-<h2><span class="label label-get text-uppercase">get</span> Retrieve Details for a Site
+<h2>{% include label.html content="get" %} Retrieve Details for a Site
 </h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
@@ -462,7 +462,7 @@ curl https://api.weeblycloud.com/user/123456/site/987654321 \
 }
 {% endhighlight %}
 
-<h2><span class="label label-patch text-uppercase">post</span> Create or Copy a Site</h2>
+<h2>{% include label.html content="post" %} Create or Copy a Site</h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
 POST /v1/user/sites/
@@ -665,7 +665,7 @@ curl https://api.weeblycloud.com/user/USER_ID/site \
 }
 {% endhighlight %}
 
-<h2><span class="label label-put text-uppercase">put</span> Replace a Site</h2>
+<h2>{% include label.html content="put" %} Replace a Site</h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
 PUT /v1/user/sites/{SITE_ID}
@@ -803,7 +803,7 @@ curl https://api.weeblycloud.com/user/123456/site/987654321 \
 }
 {% endhighlight %}
 
-<h2><span class="label label-patch text-uppercase">patch</span> Update a Site</h2>
+<h2>{% include label.html content="patch" %} Update a Site</h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
 PATCH /v1/user/sites/{SITE_ID}
@@ -997,7 +997,7 @@ curl https://api.weeblycloud.com/user/USER_ID/site/SITE_ID \
 }
 {% endhighlight %}
 
-<h2><span class="label label-post text-uppercase">post</span> Publish a Site</h2>
+<h2>{% include label.html content="post" %} Publish a Site</h2>
 {% highlight shell%}
 POST /user/USER_ID/site/{SITE_ID}/publish
 {% endhighlight %}
@@ -1021,7 +1021,7 @@ curl https://api.weeblycloud.com/user/123456/site/987654321/publish \
 }
 {% endhighlight %}
 
-<h2><span class="label label-post text-uppercase">post</span> Unpublish a Site</h2>
+<h2>{% include label.html content="post" %} Unpublish a Site</h2>
 {% highlight shell%}
 POST /user/USER_ID/site/{SITE_ID}/unpublish
 {% endhighlight %}
@@ -1045,7 +1045,7 @@ curl https://api.weeblycloud.com/user/123456/site/987654321/unpublish \
 }
 {% endhighlight %}
 
-<h2><span class="label label-post text-uppercase">post</span> Generate a Login Link</h2>
+<h2>{% include label.html content="post" %} Generate a Login Link</h2>
 {% highlight shell%}
 POST /user/USER_ID/site/{SITE_ID}/loginLink
 {% endhighlight %}
@@ -1070,7 +1070,7 @@ curl https://api.weeblycloud.com/user/123456/site/987654321/loginLink \
 {% endhighlight %}
 
 {% if site.project=="cloud" %}
-<h2><span class="label label-post text-uppercase">post</span> Set Publish Credentials</h2>
+{% include label.html content="post" %} Set Publish Credentials</h2>
 {% highlight shell%}
 POST /user/USER_ID/site/{SITE_ID}/setPublishCredentials
 {% endhighlight %}
@@ -1101,7 +1101,7 @@ curl https://api.weeblycloud.com/user/USER_ID/site/SITE_ID/setPublishCredentials
 {% endhighlight %}
 {% endif %}
 
-<h2><span class="label label-post text-uppercase">post</span> Restore a Site</h2>
+{% include label.html content="post" %} Restore a Site</h2>
 {% highlight shell%}
 POST /user/USER_ID/site/{SITE_ID}/restore
 {% endhighlight %}
@@ -1145,7 +1145,7 @@ curl https://api.weeblycloud.com/user/USER_ID/site/987654321/restore \
 }
 {% endhighlight %}
 
-<h2><span class="label label-post text-uppercase">post</span> Disable a Site</h2>
+<h2>{% include label.html content="post" %} Disable a Site</h2>
 {% highlight shell%}
 POST /user/USER_ID/site/{SITE_ID}/disable
 {% endhighlight %}
@@ -1169,7 +1169,7 @@ curl https://api.weeblycloud.com/user/123456/site/987654321/disable \
 }
 {% endhighlight %}
 
-<h2><span class="label label-post text-uppercase">post</span> Enable a Site</h2>
+<h2>{% include label.html content="post" %} Enable a Site</h2>
 {% highlight shell%}
 POST /user/USER_ID/site/{SITE_ID}/enable
 {% endhighlight %}
@@ -1193,7 +1193,7 @@ curl https://api.weeblycloud.com/user/123456/site/987654321/enable \
 }
 {% endhighlight %}
 
-<h2><span class="label label-delete text-uppercase">delete</span> Delete a Site</h2>
+<h2>{% include label.html content="delete" %} Delete a Site</h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
 DELETE /v1/user/sites/{SITE_ID}

@@ -7,83 +7,29 @@
 <meta name="keywords" content="elements,  elements, settings, manifest, group, properties">
 <title>Create Element Settings | Weebly Cloud for Designers Documentation</title>
 
+<link rel="shortcut icon" href="images/favicon.ico">
 
+<!-- Third-Party CSS -->
 <link rel="stylesheet" href="css/syntax.css">
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-
+<!-- Custom CSS -->
 <link rel="stylesheet" media="screen" href="css/orbit-external.css">
 <link rel="stylesheet" media="screen" href="css/orbit.css">
 <link rel="stylesheet" media="screen" href="css/theme-weebly.css">
 
+<!-- Third-Party JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-<script src="js/jquery.navgoco.min.js"></script>
-
-
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+<script src="js/jekyll-search.js" type="text/javascript"></script>
 <script src="js/toc.js"></script>
+
+<!-- Custom JS -->
 <script src="js/customscripts.js"></script>
 
-<link rel="shortcut icon" href="images/favicon.ico">
 
-<script type="text/javascript">
-
-    $(document).ready(function() {
-
-        // Bootstrap popovers are initialized with the following script. In the options, I'm setting the placement to be on the right, the trigger to be hover rather than click, and to allow HTML from the JSON data source.
-
-        // $('[data-toggle="popover"]').popover({
-        //     placement: 'top',
-        //     trigger: 'hover',
-        //     html: true
-        // });
-
-        $('.mobile-nav-btn').click(function(){
-            $('.nav-group').toggleClass('open');
-        });
-    })
-</script>
-
-    <script>
-        $(document).ready(function() {
-            // Initialize navgoco with default options
-            $("#mysidebar").navgoco({
-                caretHtml: '',
-                accordion: true,
-                openClass: 'active', // open
-                save: false, // leave false or nav highlighting doesn't work right
-                cookie: {
-                    name: 'navgoco',
-                    expires: false,
-                    path: '/'
-                },
-                slide: {
-                    duration: 400,
-                    easing: 'swing'
-                }
-            });
-
-            $("#collapseAll").click(function(e) {
-                e.preventDefault();
-                $("#mysidebar").navgoco('toggle', false);
-            });
-
-            $("#expandAll").click(function(e) {
-                e.preventDefault();
-                $("#mysidebar").navgoco('toggle', true);
-            });
-
-        });
-
-    </script>
-    <script>
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
-    </script>
-    
 
 </head>
 <body>
@@ -158,18 +104,6 @@
                         <input type="text" id="search-input" placeholder="Search...">
                         <ul id="results-container"></ul>
                     </div>
-                    <script src="js/jekyll-search.js" type="text/javascript"></script>
-                    <script type="text/javascript">
-                            SimpleJekyllSearch.init({
-                                searchInput: document.getElementById('search-input'),
-                                resultsContainer: document.getElementById('results-container'),
-                                dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Create Element Settings">{title}</a></li>',
-                                noResultsText: '<span class="no-results">No results</span>',
-                                limit: 10,
-                                fuzzy: true,
-                    })
-                    </script>
                     <!--end search-->
                 </li>
             </ul>
@@ -178,9 +112,14 @@
 </div>
 
 
-<div class="page">
-    <div class="col-sidebar">
-     	
+
+
+
+
+<div class="page has-sidebar">
+    
+      <div class="col-sidebar">
+       	
 
 
 
@@ -192,8 +131,6 @@
 
 
 <ul id="mysidebar" class="nav NavList">
-   <!--  <li class="sidebarTitle">Develop Weebly Apps </li> -->
-
     
 	    
 		    
@@ -653,7 +590,9 @@
 $("li.active").parents('li').toggleClass("active");
 </script>
 
-    </div>
+      </div>
+    
+
     <div class="col-content">
         <div>
     <div class="post-header">
@@ -787,20 +726,22 @@ $( document ).ready(function() {
   <li><code class="highlighter-rouge">name</code>: The internal name of your setting.  This name will be used to access the setting from within your element code.</li>
   <li><code class="highlighter-rouge">label</code>: The label for the setting displayed in the dialog.</li>
   <li><code class="highlighter-rouge">type</code>: The type of the setting.  This dictates how the setting will appear in the dialog, and what validations can be applied to it. See Setting Types, <a href="#setting-types">below</a>, for allowed options.</li>
-  <li>
-    <p><code class="highlighter-rouge">default</code>: The default value for this setting.</p>
+  <li><code class="highlighter-rouge">default</code>: The default value for this setting.</li>
+</ul>
 
-    <div class="Notice type_success" role="alert">
-      <b>Tip:</b> Use <code class="highlighter-rouge">default: " "</code>  for null.
-  </div>
-  </li>
-  <li>
-    <p><code class="highlighter-rouge">hidden</code>: Set to <code class="highlighter-rouge">true</code> if you don’t want this setting to display in the dialog. When set to <code class="highlighter-rouge">true</code>, you must supply a value for <code class="highlighter-rouge">default</code>. Default is <code class="highlighter-rouge">false.</code></p>
+<div class="Notice type_success" role="alert">
+	<b>Tip:</b> Use <code class="highlighter-rouge">default: " "</code>  for null.
+</div>
 
-    <div class="Notice type_info" role="alert">
-      <b>Note:</b> If you want to have all of your settings managed from an external URL (see <a href="#create-external-settings">below</a>), you can set <code class="highlighter-rouge">hidden</code> to <code class="highlighter-rouge">true</code> on all settings.  When the dialog displays, it will simply contain a button to open the iframe.
-  </div>
-  </li>
+<ul>
+  <li><code class="highlighter-rouge">hidden</code>: Set to <code class="highlighter-rouge">true</code> if you don’t want this setting to display in the dialog. When set to <code class="highlighter-rouge">true</code>, you must supply a value for <code class="highlighter-rouge">default</code>. Default is <code class="highlighter-rouge">false.</code></li>
+</ul>
+
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> If you want to have all of your settings managed from an external URL (see <a href="#create-external-settings">below</a>), you can set <code class="highlighter-rouge">hidden</code> to <code class="highlighter-rouge">true</code> on all settings.  When the dialog displays, it will simply contain a button to open the iframe.
+</div>
+
+<ul>
   <li><code class="highlighter-rouge">private</code>: Set to <code class="highlighter-rouge">true</code> to make the setting unavailable to the published site (default is <code class="highlighter-rouge">false</code>).  In some cases, settings may contain private information (such as API Keys).  This ensure that the data is not available to visitors of the site, and can only be used within the editor.</li>
   <li><code class="highlighter-rouge">tooltip</code>: A string that displays when the user hovers over the setting in the dialog. Max length is 100 characters. No HTML is allowed.</li>
 </ul>
@@ -864,18 +805,14 @@ $( document ).ready(function() {
 
 <p>If your application or element requires external data, or you feel that your customized settings panel will provide a better experience for users, you can provide some configuration options in an iframe that allows users to edit certain settings directly on your site, while others are kept in the Weebly dialog. We’ll provide a button in the dialog to open your site in an iframe.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div markdown="span" class="Notice type_info" role="alert"&gt;
-	&lt;b&gt;Note:&lt;/b&gt; Your server must be appropriately configured to send the right headers to allow us to load up the iframe. Please read the documentation about the [`X-Frame-Options HTTP header`](https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options) for more information.
-&lt;/div&gt;
-</code></pre>
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> Your server must be appropriately configured to send the right headers to allow us to load up the iframe. Please read the documentation about the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options"><code class="highlighter-rouge">X-Frame-Options HTTP header</code></a> for more information.
 </div>
 
 <p>​By default, the dialog that is opened for editing settings is an 800x600 modal.  You can change this with the <code class="highlighter-rouge">height</code> and <code class="highlighter-rouge">width</code> properties. The modal that we generate will never grow beyond the page bounds, regardless of the size specified in your manifest. You can instead choose it to be set to be <code class="highlighter-rouge">fullscreen</code>.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div markdown="span" class="Notice type_info" role="alert"&gt;
-	&lt;b&gt;Note:&lt;/b&gt; Your iframe settings panel should be constructed to expect requests from differently sized clients, as many users may not have the screen real estate expected.
-&lt;/div&gt;
-</code></pre>
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> Your iframe settings panel should be constructed to expect requests from differently sized clients, as many users may not have the screen real estate expected.
 </div>
 
 <p>​If your element does not have any visible settings or settings that use the Weebly dialog (they are all in the iframe), then only the iframe is displayed.</p>
@@ -883,46 +820,47 @@ $( document ).ready(function() {
 <p>Set the following to create external settings:</p>
 
 <ul>
-  <li>
-    <p><code class="highlighter-rouge">url</code>: A URL that contains a self-hosted page for editing settings.  The URL must use the <code class="highlighter-rouge">HTTPS</code> protocol.</p>
+  <li><code class="highlighter-rouge">url</code>: A URL that contains a self-hosted page for editing settings.  The URL must use the <code class="highlighter-rouge">HTTPS</code> protocol.</li>
+</ul>
 
-    <div class="Notice type_info" role="alert">
-      <b>Note:</b> All URLs must use the <code class="highlighter-rouge">HTTPS</code> protocol. You will not be able to upload an app that uses <code class="highlighter-rouge">HTTP</code>.
-  </div>
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> All URLs must use the <code class="highlighter-rouge">HTTPS</code> protocol. You will not be able to upload an app that uses <code class="highlighter-rouge">HTTP</code>.
+</div>
 
-    <p>We use a JSON web token (JWT) to inject information, including their <code class="highlighter-rouge">user_id</code>, <code class="highlighter-rouge">site_id</code>, <code class="highlighter-rouge">element_id</code>, <code class="highlighter-rouge">element_uuid</code>, <code class="highlighter-rouge">iat</code> (issued-at timestamp - i.e. the time the token was generated), and the <code class="highlighter-rouge">jti</code> (JWT token ID).</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>We use a JSON web token (JWT) to inject information, including their `user_id`, `site_id`, `element_id`, `element_uuid`, `iat` (issued-at timestamp - i.e. the time the token was generated), and the `jti` (JWT token ID).
+</code></pre>
+</div>
 
-    <div class="Notice type_info" role="alert">
-      <b>Note:</b> Weebly automatically appends the JWT string to the end of the URL, including any necessary operands (like <code class="highlighter-rouge">?</code> and <code class="highlighter-rouge">&amp;</code>). If you want the JWT to be placed in a specific part of the URL, you can use <code class="highlighter-rouge">:jwt</code>, and Weebly will replace that with the JWT (without adding any operands - you’ll need to include those).
-  </div>
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> Weebly automatically appends the JWT string to the end of the URL, including any necessary operands (like <code class="highlighter-rouge">?</code> and <code class="highlighter-rouge">&amp;</code>). If you want the JWT to be placed in a specific part of the URL, you can use <code class="highlighter-rouge">:jwt</code>, and Weebly will replace that with the JWT (without adding any operands - you’ll need to include those).
+</div>
 
-    <p>Below is an example of how to decode the JWT hash:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>Below is an example of how to decode the JWT hash:
 
-    <p><code class="highlighter-rouge">$decoded = JWT::decode($_GET['jwt'], $client_secret, array('HS256'));</code></p>
-  </li>
-  <li><code class="highlighter-rouge">label</code>: This string will be used as the label for button displayed in the dialog to open the iframe. Below shows what might be displayed if you set this to “Edit Your Map.”
-    <figure class="post-content__figure">
-	
+`$decoded = JWT::decode($_GET['jwt'], $client_secret, array('HS256'));` * `label`: This string will be used as the label for button displayed in the dialog to open the iframe. Below shows what might be displayed if you set this to "Edit Your Map."
+&lt;figure class="post-content__figure"&gt;
 
-  <img class="post-content__image" src="images/externalButton2.png" alt="" />
 
-	
+&lt;img class="post-content__image" src="images/externalButton2.png" alt=""  /&gt;
 
-	
-      <figcaption>Button using the label property to open an iframe</figcaption>
-  </figure>
-  </li>
+
+
+
+	&lt;figcaption&gt;Button using the label property to open an iframe&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+</div>
+
+<ul>
   <li><code class="highlighter-rouge">height</code>: The height the modal should be set to. Your iframe will be placed inside this modal size. Do not set if you want the modal to be fullscreen.</li>
   <li><code class="highlighter-rouge">width</code>: The width the modal should be set to. Your iframe will be placed inside this modal size. Do not set if you want the modal to be fullscreen.</li>
   <li><code class="highlighter-rouge">modal</code>: Set to <code class="highlighter-rouge">true</code> to have your iframe display in a modal. Set to <code class="highlighter-rouge">false</code> to allow the user to interact with the Weebly editor in the background.</li>
-  <li>
-    <p><code class="highlighter-rouge">fullscreen</code>: Set to <code class="highlighter-rouge">true</code> to have your iframe display in the entire screen area.</p>
-
-    <div class="Notice type_info" role="alert">
-      <b>Note:</b> <code class="highlighter-rouge">Fullscreen</code> should be used only when absolutely necessary, as it breaks the design flow for the user.
-  </div>
-  </li>
+  <li><code class="highlighter-rouge">fullscreen</code>: Set to <code class="highlighter-rouge">true</code> to have your iframe display in the entire screen area.</li>
 </ul>
+
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> <code class="highlighter-rouge">Fullscreen</code> should be used only when absolutely necessary, as it breaks the design flow for the user.
+</div>
 
 <p>The following shows an external setting using a modal:</p>
 
@@ -1029,10 +967,8 @@ $( document ).ready(function() {
     <span class="p">}</span>
 <span class="p">});</span></code></pre></figure>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div markdown="span" class="Notice type_info" role="alert"&gt;
-	&lt;b&gt;Note:&lt;/b&gt; You **must** remain on the same host/domain that you specify in `manifest.json`.  Any redirects will cause the `postMessage` protocol to fail. Additionally, all URLS must use the `HTTPS` protocol.
-&lt;/div&gt;
-</code></pre>
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> You <strong>must</strong> remain on the same host/domain that you specify in <code class="highlighter-rouge">manifest.json</code>.  Any redirects will cause the <code class="highlighter-rouge">postMessage</code> protocol to fail. Additionally, all URLS must use the <code class="highlighter-rouge">HTTPS</code> protocol.
 </div>
 
 <h2 id="access-settings-from-your-app">Access Settings from Your App</h2>
@@ -1063,7 +999,7 @@ $( document ).ready(function() {
 		<div class="col-lg-12">
 			<div class="footer__fineprint">
 				&copy;2017 Weebly. All rights reserved. <br />
-				 Site last generated: Oct 31, 2017
+				 Site last generated: Nov 1, 2017
 			</div>
 			<div class="footer__logo">
 				<img src="images/weebly_logo.svg" alt="Weebly logo"/>

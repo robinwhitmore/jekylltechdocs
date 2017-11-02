@@ -100,7 +100,7 @@ The following table shows all the fields that exist for this API and which are c
 {% include custom/notes/note_api_undoc.md %}
 
 
-<h2><span class="label label-get text-uppercase">get</span> Retrieve Details for a Store</h2>
+<h2>{% include label.html content="get" %} Retrieve Details for a Store</h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
 GET /v1/user/sites/{SITE_ID}/store
@@ -151,7 +151,7 @@ curl https://api.weeblycloud.com/user/123456/site/987654321/store \
 }
 {% endhighlight %}
 
-<h2><span class="label label-patch text-uppercase">patch</span> Update a Store</h2>
+<h2>{% include label.html content="patch" %} Update a Store</h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
 PATCH /v1/user/sites/{SITE_ID}/store

@@ -93,7 +93,7 @@
             $('[data-toggle="tooltip"]').tooltip()
         })
     </script>
-    
+
 
 </head>
 <body>
@@ -114,25 +114,25 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <!-- entries without drop-downs appear here -->
-                
-                
-                
+
+
+
                 <li><a href="home.html">Get Started</a></li>
-                
-                
-                
+
+
+
                 <li><a href="cl_apis_about.html">Cloud API</a></li>
-                
-                
-                
+
+
+
                 <li><a href="cl_apps_gs.html">Custom Apps</a></li>
-                
-                
-                
+
+
+
                 <!-- entries with drop-downs appear here -->
                 <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
-                
-                
+
+
 			<li>
 
 
@@ -141,7 +141,7 @@
 
 </li>
 
-		
+
                 <!--comment out this block if you want to hide search-->
                 <li>
                     <!--start search-->
@@ -177,7 +177,7 @@
         <!-- Sidebar Column -->
         <div class="col-md-3">
 
-          
+
 
 
 
@@ -190,33 +190,33 @@
 
 <ul id="mysidebar" class="nav">
     <li class="sidebarTitle">Weebly Cloud REST APIs </li>
-    
-    
-    
-        
-    
+
+
+
+
+
     <li>
         <a href="#">Use the REST APIs</a>
         <ul>
-            
-            
-            
+
+
+
             <li><a href="cl_apis_about.html">About the REST APIs</a></li>
-            
-            
-            
-            
-            
-            
+
+
+
+
+
+
             <li class="active"><a href="cl_apis_page.html">Page API</a></li>
-            
-            
-            
-            
+
+
+
+
         </ul>
-        
-        
-        
+
+
+
         <!-- if you aren't using the accordion, uncomment this block:
            <p class="external">
                <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
@@ -243,14 +243,14 @@
 
 <div class="post-content">
 
-   
+
     <div class="summary">The Pages API provides methods for reading and updating information about the pages for a given user's site.</div>
-   
 
 
 
-    
-    
+
+
+
 <!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
 <script>
 $( document ).ready(function() {
@@ -266,16 +266,16 @@ $('#toc').on('click', 'a', function() {
   $(window).scrollTop(scroll_target - 50);
   return false
 })
-  
+
 });
 </script>
 
 <div id="toc"></div>
 
-    
 
 
-    
+
+
 
   <!--TODO: move to md and remove all styling-->
 
@@ -380,12 +380,12 @@ $('#toc').on('click', 'a', function() {
 </table>
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Any fields returned that are not documented are currently unsupported and can be safely ignored.</div>
 
-<h2><span class="label label-get text-uppercase">get</span> Retrieve a List of Pages for a Given Site</h2>
+<h2>{% include label.html content="patch" %} Retrieve a List of Pages for a Given Site</h2>
 
 <figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/page</code></pre></figure>
 
 <p>Returns all pages for the given site. Only list fields are returned.
-    
+
 
 <h3>Query Paramters</h3>
 <p>Returned values are paginated. You can further filter results using these parameters</p>
@@ -486,13 +486,13 @@ $('#toc').on('click', 'a', function() {
 </span><span class="p">]</span></code></pre></figure>
 
 
-<h2><span class="label label-get text-uppercase">get</span> Retrieve Details for a Page</h2>
+<h2>{% include label.html content="patch" %} Retrieve Details for a Page</h2>
 
 <figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/page/<span class="o">{</span>PAGE_ID<span class="o">}</span></code></pre></figure>
 
 
 <p>Returns all fields for the given page.
-    
+
 
 <p class="codeTitle">Example CURL request:</p>
 
@@ -524,7 +524,7 @@ $('#toc').on('click', 'a', function() {
 
 
 <p>Updates the given page.
-    
+
 
 <h3>Updateable Fields</h3>
 <p>These fields can be updated</p>
@@ -583,22 +583,22 @@ $('#toc').on('click', 'a', function() {
 
 
     <div class="tags">
-        
+
         <b>Tags: </b>
-        
-        
-        
+
+
+
         <a href="tag_apis.html" class="btn btn-default navbar-btn cursorNorm" role="button">apis</a>
-        
-        
-        
+
+
+
         <a href="tag_pages.html" class="btn btn-default navbar-btn cursorNorm" role="button">pages</a>
-        
-        
-        
+
+
+
     </div>
 
-    
+
 
 </div>
 

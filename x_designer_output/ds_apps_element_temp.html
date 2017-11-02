@@ -7,83 +7,29 @@
 <meta name="keywords" content="elements,  template, element, mustache, content fields,">
 <title>Create an Element Template | Weebly Cloud for Designers Documentation</title>
 
+<link rel="shortcut icon" href="images/favicon.ico">
 
+<!-- Third-Party CSS -->
 <link rel="stylesheet" href="css/syntax.css">
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-
+<!-- Custom CSS -->
 <link rel="stylesheet" media="screen" href="css/orbit-external.css">
 <link rel="stylesheet" media="screen" href="css/orbit.css">
 <link rel="stylesheet" media="screen" href="css/theme-weebly.css">
 
+<!-- Third-Party JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-<script src="js/jquery.navgoco.min.js"></script>
-
-
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+<script src="js/jekyll-search.js" type="text/javascript"></script>
 <script src="js/toc.js"></script>
+
+<!-- Custom JS -->
 <script src="js/customscripts.js"></script>
 
-<link rel="shortcut icon" href="images/favicon.ico">
 
-<script type="text/javascript">
-
-    $(document).ready(function() {
-
-        // Bootstrap popovers are initialized with the following script. In the options, I'm setting the placement to be on the right, the trigger to be hover rather than click, and to allow HTML from the JSON data source.
-
-        // $('[data-toggle="popover"]').popover({
-        //     placement: 'top',
-        //     trigger: 'hover',
-        //     html: true
-        // });
-
-        $('.mobile-nav-btn').click(function(){
-            $('.nav-group').toggleClass('open');
-        });
-    })
-</script>
-
-    <script>
-        $(document).ready(function() {
-            // Initialize navgoco with default options
-            $("#mysidebar").navgoco({
-                caretHtml: '',
-                accordion: true,
-                openClass: 'active', // open
-                save: false, // leave false or nav highlighting doesn't work right
-                cookie: {
-                    name: 'navgoco',
-                    expires: false,
-                    path: '/'
-                },
-                slide: {
-                    duration: 400,
-                    easing: 'swing'
-                }
-            });
-
-            $("#collapseAll").click(function(e) {
-                e.preventDefault();
-                $("#mysidebar").navgoco('toggle', false);
-            });
-
-            $("#expandAll").click(function(e) {
-                e.preventDefault();
-                $("#mysidebar").navgoco('toggle', true);
-            });
-
-        });
-
-    </script>
-    <script>
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
-    </script>
-    
 
 </head>
 <body>
@@ -158,18 +104,6 @@
                         <input type="text" id="search-input" placeholder="Search...">
                         <ul id="results-container"></ul>
                     </div>
-                    <script src="js/jekyll-search.js" type="text/javascript"></script>
-                    <script type="text/javascript">
-                            SimpleJekyllSearch.init({
-                                searchInput: document.getElementById('search-input'),
-                                resultsContainer: document.getElementById('results-container'),
-                                dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Create an Element Template">{title}</a></li>',
-                                noResultsText: '<span class="no-results">No results</span>',
-                                limit: 10,
-                                fuzzy: true,
-                    })
-                    </script>
                     <!--end search-->
                 </li>
             </ul>
@@ -178,9 +112,14 @@
 </div>
 
 
-<div class="page">
-    <div class="col-sidebar">
-     	
+
+
+
+
+<div class="page has-sidebar">
+    
+      <div class="col-sidebar">
+       	
 
 
 
@@ -192,8 +131,6 @@
 
 
 <ul id="mysidebar" class="nav NavList">
-   <!--  <li class="sidebarTitle">Develop Weebly Apps </li> -->
-
     
 	    
 		    
@@ -653,7 +590,9 @@
 $("li.active").parents('li').toggleClass("active");
 </script>
 
-    </div>
+      </div>
+    
+
     <div class="col-content">
         <div>
     <div class="post-header">
@@ -740,10 +679,8 @@ $( document ).ready(function() {
 <p>Every content field must have a unique name. If two content fields share a name, only the first one will act as an editable content field, with the other remaining as text within the element.
 ​</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div markdown="span" class="Notice type_info" role="alert"&gt;
-	&lt;b&gt;Note:&lt;/b&gt; The DOM structure generated for the element differs between the editor and published sites.  You need to account for both DOM structures when styling your element.
-&lt;/div&gt;
-</code></pre>
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> The DOM structure generated for the element differs between the editor and published sites.  You need to account for both DOM structures when styling your element.
 </div>
 
 <p>If you want to be able to hide/display different areas of content at a time, then use CSS to set visibility and any content set to visible will be displayed. You can also set a width on the content area, for example, <code class="highlighter-rouge"><span class="p">{</span><span class="err">myContentArea:content</span><span class="w"> </span><span class="err">width=</span><span class="nt">"50%"</span><span class="err">}</span></code>. If a user moves or copies a <code class="highlighter-rouge"><span class="p">{</span><span class="err">content</span><span class="p">}</span></code> field, all child elements will get moved/copied as well.</p>
@@ -787,16 +724,12 @@ $( document ).ready(function() {
     {{/plans_each}}
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div markdown="span" class="Notice type_info" role="alert"&gt;
-	&lt;b&gt;Note:&lt;/b&gt; There is potential for name collisions here! If you have a setting named `plans`, and also a setting named `plans_each`, we will not generate the iterable value for you!
-&lt;/div&gt;
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> There is potential for name collisions here! If you have a setting named <code class="highlighter-rouge">plans</code>, and also a setting named <code class="highlighter-rouge">plans_each</code>, we will not generate the iterable value for you!
+</div>
 
-
-
-&lt;div markdown="span" class="Notice type_info" role="alert"&gt;
-	&lt;b&gt;Note:&lt;/b&gt; We will not generate loops for values that are greater than 100, for performance reasons.  If you have a setting that you intend to use as a loop, be sure to set appropriate minimums and maximums!
-&lt;/div&gt;
-</code></pre>
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> We will not generate loops for values that are greater than 100, for performance reasons.  If you have a setting that you intend to use as a loop, be sure to set appropriate minimums and maximums!
 </div>
 
 <h2 id="access-additional-data">Access Additional Data</h2>
@@ -811,10 +744,8 @@ $( document ).ready(function() {
      <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"your_image.png"</span> <span class="nt">/&gt;</span>
    <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div markdown="span" class="Notice type_info" role="alert"&gt;
-	&lt;b&gt;Note:&lt;/b&gt; If you provide a setting named `assets_path` in your manifest, it will be overridden with this value.
-&lt;/div&gt;
-</code></pre>
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> If you provide a setting named <code class="highlighter-rouge">assets_path</code> in your manifest, it will be overridden with this value.
 </div>
 
 <ul>
@@ -825,20 +756,16 @@ $( document ).ready(function() {
     {{user_id}} - {{site_id}} - {{element_id}}
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div markdown="span" class="Notice type_info" role="alert"&gt;
-	&lt;b&gt;Note:&lt;/b&gt; We can not guarantee that `element_id` and `site_id` will be universally unique.  We recommend that you use a composite key for any storage you may be doing on your servers or services!
-&lt;/div&gt;
-</code></pre>
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> We can not guarantee that <code class="highlighter-rouge">element_id</code> and <code class="highlighter-rouge">site_id</code> will be universally unique.  We recommend that you use a composite key for any storage you may be doing on your servers or services!
 </div>
 
 <h2 id="use-iframes">Use IFrames</h2>
 
 <p>If your element contains an iframe, we will automatically add an additional invisible overlay <code class="highlighter-rouge">div</code> for your element. This <code class="highlighter-rouge">div</code> ensures that Weebly users will have a clickable target for accessing settings. Once the settings panel is opened, the overlay is removed so that users can interact with your iframe.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div markdown="span" class="Notice type_info" role="alert"&gt;
-	&lt;b&gt;Note:&lt;/b&gt; If you dynamically add an iframe after page load, our system may not properly add an overlay `div`.  This will cause users to be unable to access your element settings!  Please try to avoid dynamically creating iframes during the lifecycle of your element.
-&lt;/div&gt;
-</code></pre>
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> If you dynamically add an iframe after page load, our system may not properly add an overlay <code class="highlighter-rouge">div</code>.  This will cause users to be unable to access your element settings!  Please try to avoid dynamically creating iframes during the lifecycle of your element.
 </div>
 
 
@@ -867,7 +794,7 @@ $( document ).ready(function() {
 		<div class="col-lg-12">
 			<div class="footer__fineprint">
 				&copy;2017 Weebly. All rights reserved. <br />
-				 Site last generated: Oct 31, 2017
+				 Site last generated: Nov 1, 2017
 			</div>
 			<div class="footer__logo">
 				<img src="images/weebly_logo.svg" alt="Weebly logo"/>

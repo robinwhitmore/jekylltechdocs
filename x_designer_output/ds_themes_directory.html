@@ -7,83 +7,29 @@
 <meta name="keywords" content="getting_startedthemes,  directory, folders, assets, manifest">
 <title>Theme Directory Structure | Weebly Cloud for Designers Documentation</title>
 
+<link rel="shortcut icon" href="images/favicon.ico">
 
+<!-- Third-Party CSS -->
 <link rel="stylesheet" href="css/syntax.css">
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-
+<!-- Custom CSS -->
 <link rel="stylesheet" media="screen" href="css/orbit-external.css">
 <link rel="stylesheet" media="screen" href="css/orbit.css">
 <link rel="stylesheet" media="screen" href="css/theme-weebly.css">
 
+<!-- Third-Party JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-<script src="js/jquery.navgoco.min.js"></script>
-
-
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+<script src="js/jekyll-search.js" type="text/javascript"></script>
 <script src="js/toc.js"></script>
+
+<!-- Custom JS -->
 <script src="js/customscripts.js"></script>
 
-<link rel="shortcut icon" href="images/favicon.ico">
 
-<script type="text/javascript">
-
-    $(document).ready(function() {
-
-        // Bootstrap popovers are initialized with the following script. In the options, I'm setting the placement to be on the right, the trigger to be hover rather than click, and to allow HTML from the JSON data source.
-
-        // $('[data-toggle="popover"]').popover({
-        //     placement: 'top',
-        //     trigger: 'hover',
-        //     html: true
-        // });
-
-        $('.mobile-nav-btn').click(function(){
-            $('.nav-group').toggleClass('open');
-        });
-    })
-</script>
-
-    <script>
-        $(document).ready(function() {
-            // Initialize navgoco with default options
-            $("#mysidebar").navgoco({
-                caretHtml: '',
-                accordion: true,
-                openClass: 'active', // open
-                save: false, // leave false or nav highlighting doesn't work right
-                cookie: {
-                    name: 'navgoco',
-                    expires: false,
-                    path: '/'
-                },
-                slide: {
-                    duration: 400,
-                    easing: 'swing'
-                }
-            });
-
-            $("#collapseAll").click(function(e) {
-                e.preventDefault();
-                $("#mysidebar").navgoco('toggle', false);
-            });
-
-            $("#expandAll").click(function(e) {
-                e.preventDefault();
-                $("#mysidebar").navgoco('toggle', true);
-            });
-
-        });
-
-    </script>
-    <script>
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
-    </script>
-    
 
 </head>
 <body>
@@ -158,18 +104,6 @@
                         <input type="text" id="search-input" placeholder="Search...">
                         <ul id="results-container"></ul>
                     </div>
-                    <script src="js/jekyll-search.js" type="text/javascript"></script>
-                    <script type="text/javascript">
-                            SimpleJekyllSearch.init({
-                                searchInput: document.getElementById('search-input'),
-                                resultsContainer: document.getElementById('results-container'),
-                                dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Theme Directory Structure">{title}</a></li>',
-                                noResultsText: '<span class="no-results">No results</span>',
-                                limit: 10,
-                                fuzzy: true,
-                    })
-                    </script>
                     <!--end search-->
                 </li>
             </ul>
@@ -178,9 +112,14 @@
 </div>
 
 
-<div class="page">
-    <div class="col-sidebar">
-     	
+
+
+
+
+<div class="page has-sidebar">
+    
+      <div class="col-sidebar">
+       	
 
 
 
@@ -192,8 +131,6 @@
 
 
 <ul id="mysidebar" class="nav NavList">
-   <!--  <li class="sidebarTitle">Develop Weebly Themes </li> -->
-
     
 	    
 		    
@@ -729,7 +666,9 @@
 $("li.active").parents('li').toggleClass("active");
 </script>
 
-    </div>
+      </div>
+    
+
     <div class="col-content">
         <div>
     <div class="post-header">
@@ -785,23 +724,25 @@ $( document ).ready(function() {
 <p>When you unzip the archive, you’ll see that the theme’s root directory contains the following:</p>
 <ul>
   <li><code class="highlighter-rouge">manifest.json</code> file.  This file provides <a href="ds_themes_manifest.html">configuration</a> for the theme, including optional functionality.</li>
-  <li>
-    <p><code class="highlighter-rouge">main_style.css</code> file. This is the stylesheet for the theme, when using CSS.</p>
+  <li><code class="highlighter-rouge">main_style.css</code> file. This is the stylesheet for the theme, when using CSS.</li>
+</ul>
 
-    <div class="Notice type_info" role="alert">
-      <b>Note:</b> If your theme uses LESS rather than CSS, the LESS stylesheet(s) is in the /styles directory. Your theme should use either CSS or LESS, not both. If both exist, the CSS file will be ignored.
-  </div>
-  </li>
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> If your theme uses LESS rather than CSS, the LESS stylesheet(s) is in the /styles directory. Your theme should use either CSS or LESS, not both. If both exist, the CSS file will be ignored.
+</div>
+
+<ul>
   <li>HTML template files for each of the different header types</li>
   <li>JavaScript files (these may be in the assets directory).</li>
   <li>assets (optional directory): Contains images, fonts, and Javascript files. If there are only a few of these files, they may be at the root instead.</li>
-  <li>
-    <p><code class="highlighter-rouge">partials</code> (directory): Contains custom partials used on the pages.</p>
+  <li><code class="highlighter-rouge">partials</code> (directory): Contains custom partials used on the pages.</li>
+</ul>
 
-    <div class="Notice type_info" role="alert">
-      <b>Note:</b> If you do not edit the default partials using the Weebly Code Editor, then they are not included in the Zip file. Only customized partials are included. So if you want to edit a partial, make a small edit to it in the editor and then export it.
-  </div>
-  </li>
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> If you do not edit the default partials using the Weebly Code Editor, then they are not included in the Zip file. Only customized partials are included. So if you want to edit a partial, make a small edit to it in the editor and then export it.
+</div>
+
+<ul>
   <li><code class="highlighter-rouge">images</code> (optional directory): You can either place your images in this directory, or keep them at the root. Just be sure to refer to them correctly.</li>
   <li><code class="highlighter-rouge">styles</code> (if using LESS): Contains the stylesheet(s) for the theme. If you use color variations, your theme will have more than one stylesheet.</li>
   <li><code class="highlighter-rouge">screenshot.jpg</code> file (once you <a href="ds_themes_screenshot.html">create</a> it): This file is used to display your theme in the Theme chooser, shown when a user creates a site or changes the theme and in the Cloud Admin.</li>
@@ -809,10 +750,8 @@ $( document ).ready(function() {
 
 <p>If you are working in an external editor, once you make your changes and need to test in Weebly, zip up the contents of the directory (and not the directory itself) and <a href="ds_themes_import_export.html">import</a> it into Weebly.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div markdown="span" class="Notice type_info" role="alert"&gt;
-	&lt;b&gt;Note:&lt;/b&gt; When zipping your theme, be sure to zip the contents of your root folder, and not the root folder itself.  Your theme will be invalid if it includes the root folder!
-&lt;/div&gt;
-</code></pre>
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> When zipping your theme, be sure to zip the contents of your root folder, and not the root folder itself.  Your theme will be invalid if it includes the root folder!
 </div>
 
 <p>The Code Editor displays a logical structure of the directories, which is different from the actual physical structure. Header type templates are shown in the <code class="highlighter-rouge">Header Type</code> directory. Partials are shown in the <code class="highlighter-rouge">Partials</code> directory. Every other file type is shown in the <code class="highlighter-rouge">Assets</code> directory. If you created any sub-directories, those also display in the <code class="highlighter-rouge">Assets</code> directory.</p>
@@ -829,10 +768,8 @@ $( document ).ready(function() {
 		<figcaption>Logical directory structure in the Editor</figcaption>
 	</figure>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div markdown="span" class="Notice type_info" role="alert"&gt;
-	&lt;b&gt;Note:&lt;/b&gt; Always use the physical path when you refer to assets in your code.  For example, to refer to images in the Base theme, you would use `/images/dark-background.jpg` and not `/assets/images/dark-background.jpg`.
-&lt;/div&gt;
-</code></pre>
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> Always use the physical path when you refer to assets in your code.  For example, to refer to images in the Base theme, you would use <code class="highlighter-rouge">/images/dark-background.jpg</code> and not <code class="highlighter-rouge">/assets/images/dark-background.jpg</code>.
 </div>
 
 
@@ -866,7 +803,7 @@ $( document ).ready(function() {
 		<div class="col-lg-12">
 			<div class="footer__fineprint">
 				&copy;2017 Weebly. All rights reserved. <br />
-				 Site last generated: Oct 31, 2017
+				 Site last generated: Nov 1, 2017
 			</div>
 			<div class="footer__logo">
 				<img src="images/weebly_logo.svg" alt="Weebly logo"/>

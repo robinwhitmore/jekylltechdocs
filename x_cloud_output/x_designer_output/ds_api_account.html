@@ -93,7 +93,7 @@
             $('[data-toggle="tooltip"]').tooltip()
         })
     </script>
-    
+
 
 </head>
 <body>
@@ -114,33 +114,33 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <!-- entries without drop-downs appear here -->
-                
-                
-                
+
+
+
                 <li><a href="home.html">Get Started</a></li>
-                
-                
-                
+
+
+
                 <li><a href="ds_apps_gs.html">Custom Apps</a></li>
-                
-                
-                
+
+
+
                 <li><a href="ds_themes_start.html">Custom Themes</a></li>
-                
-                
-                
+
+
+
                 <li><a href="ds_apis_about.html">Cloud APIs</a></li>
-                
-                
-                
+
+
+
                 <li><a href="ds_tags_about.html">Tags</a></li>
-                
-                
-                
+
+
+
                 <!-- entries with drop-downs appear here -->
                 <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
-                
-                
+
+
 			<li>
 
 
@@ -149,7 +149,7 @@
 
 </li>
 
-		
+
                 <!--comment out this block if you want to hide search-->
                 <li>
                     <!--start search-->
@@ -185,7 +185,7 @@
         <!-- Sidebar Column -->
         <div class="col-md-3">
 
-          
+
 
 
 
@@ -198,40 +198,40 @@
 
 <ul id="mysidebar" class="nav">
     <li class="sidebarTitle">Weebly Cloud REST APIs </li>
-    
-    
-    
-        
-    
+
+
+
+
+
     <li>
         <a href="#">Use the REST APIs</a>
         <ul>
-            
-            
-            
+
+
+
             <li><a href="ds_apis_about.html">About the REST APIs</a></li>
-            
-            
-            
-            
-            
-            
+
+
+
+
+
+
             <li><a href="ds_apis_account.html">Account API</a></li>
-            
-            
-            
-            
-            
-            
+
+
+
+
+
+
             <li><a href="ds_api_test.html">Test API</a></li>
-            
-            
-            
-            
+
+
+
+
         </ul>
-        
-        
-        
+
+
+
         <!-- if you aren't using the accordion, uncomment this block:
            <p class="external">
                <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
@@ -258,14 +258,14 @@
 
 <div class="post-content">
 
-   
+
     <div class="summary">The Account API provides methods for managing settings for the account authorized in this API call.</div>
-   
 
 
 
-    
-    
+
+
+
 <!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
 <script>
 $( document ).ready(function() {
@@ -281,18 +281,18 @@ $('#toc').on('click', 'a', function() {
   $(window).scrollTop(scroll_target - 50);
   return false
 })
-  
+
 });
 </script>
 
 <div id="toc"></div>
 
-    
 
 
-    
 
-  
+
+
+
 <p>The following table shows all fields that exist for this API, those that are returned when you retrieve a list, those that are required for <code class="highlighter-rouge">PUT</code>, and those that are changeable using <code class="highlighter-rouge">PATCH</code>. All fields are returned when you retrieve a single item.</p>
 <table>
     <tbody>
@@ -314,7 +314,7 @@ $('#toc').on('click', 'a', function() {
         <td>X</td>
         <td>X</td>
     </tr>
-    
+
     <tr>
         <td><code>publish_upsell_url</code></td>
         <td>Full url to your <a href="ds_gs_market.html">publish</a> promotion page. This url will be loaded
@@ -327,17 +327,17 @@ $('#toc').on('click', 'a', function() {
         <td>X</td>
         <td>X</td>
     </tr>
-    
+
     </tbody>
 </table>
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Any fields returned that are not documented are currently unsupported and can be safely ignored.</div>
 
-<h2><span class="label label-get text-uppercase">get</span> Retrieve Account Details</h2>
+<h2>{% include label.html content="patch" %} Retrieve Account Details</h2>
 
 <figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /account</code></pre></figure>
 
 <p>Returns details for the account authorized in this API call
-    
+
 
 
 <p class="codeTitle">Example CURL request returning details:</p>
@@ -363,7 +363,7 @@ $('#toc').on('click', 'a', function() {
 
 
 <p>Updates the given account. All fields are required.
-    
+
 
 <p class="codeTitle">Example CURL request:</p>
 
@@ -395,7 +395,7 @@ $('#toc').on('click', 'a', function() {
 
 
 <p>Updates the given account. All fields are updateable.
-    
+
 
 <p class="codeTitle">Example CURL request:</p>
 
@@ -425,18 +425,18 @@ $('#toc').on('click', 'a', function() {
 
 
     <div class="tags">
-        
+
         <b>Tags: </b>
-        
-        
-        
+
+
+
         <a href="tag_configuration.html" class="btn btn-default navbar-btn cursorNorm" role="button">configuration</a>
-        
-        
-        
+
+
+
     </div>
 
-    
+
 
 </div>
 

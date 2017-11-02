@@ -124,7 +124,7 @@ The following table shows all fields that exist for this API, those that are ret
 </table>
 {% include custom/notes/note_api_undoc.md %}
 
-<h2><span class="label label-get text-uppercase">get</span> Retrieve a List of Options for a Product
+<h2>{% include label.html content="get" %} Retrieve a List of Options for a Product
 </h2>
 
 {% highlight shell%}
@@ -195,7 +195,7 @@ curl https://api.weeblycloud.com/user/123456/site/987654321/store/product/123/op
 ]
 {% endhighlight %}
 
-<h2><span class="label label-get text-uppercase">get</span> Retrieve the Number of Options for a Product</h2>
+<h2>{% include label.html content="get" %} Retrieve the Number of Options for a Product</h2>
 
 {% highlight shell%}
 {% if site.project == "platform" %}
@@ -235,7 +235,7 @@ curl https://api.weeblycloud.com/user/123456/site/987654321/store/product/123/op
 }
 {% endhighlight %}
 
-<h2><span class="label label-get text-uppercase">get</span> Retrieve Details for a Product Option
+<h2>{% include label.html content="get" %} Retrieve Details for a Product Option
 </h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
@@ -288,7 +288,7 @@ curl https://api.weeblycloud.com/user/123456/site/987654321/store/product/123/op
 }
 {% endhighlight %}
 
-<h2><span class="label label-patch text-uppercase">patch</span> Update a Product Option</h2>
+<h2>{% include label.html content="patch" %} Update a Product Option</h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
 PATCH /v1/user/sites/{SITE_ID}/store/products/{PRODUCT_ID}/options/{PRODUCT_OPTION_ID}

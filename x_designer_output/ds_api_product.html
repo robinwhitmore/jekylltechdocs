@@ -7,83 +7,29 @@
 <meta name="keywords" content="sites,  product, price, tax,">
 <title>Product API | Weebly Cloud for Designers Documentation</title>
 
+<link rel="shortcut icon" href="images/favicon.ico">
 
+<!-- Third-Party CSS -->
 <link rel="stylesheet" href="css/syntax.css">
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-
+<!-- Custom CSS -->
 <link rel="stylesheet" media="screen" href="css/orbit-external.css">
 <link rel="stylesheet" media="screen" href="css/orbit.css">
 <link rel="stylesheet" media="screen" href="css/theme-weebly.css">
 
+<!-- Third-Party JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-<script src="js/jquery.navgoco.min.js"></script>
-
-
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+<script src="js/jekyll-search.js" type="text/javascript"></script>
 <script src="js/toc.js"></script>
+
+<!-- Custom JS -->
 <script src="js/customscripts.js"></script>
 
-<link rel="shortcut icon" href="images/favicon.ico">
 
-<script type="text/javascript">
-
-    $(document).ready(function() {
-
-        // Bootstrap popovers are initialized with the following script. In the options, I'm setting the placement to be on the right, the trigger to be hover rather than click, and to allow HTML from the JSON data source.
-
-        // $('[data-toggle="popover"]').popover({
-        //     placement: 'top',
-        //     trigger: 'hover',
-        //     html: true
-        // });
-
-        $('.mobile-nav-btn').click(function(){
-            $('.nav-group').toggleClass('open');
-        });
-    })
-</script>
-
-    <script>
-        $(document).ready(function() {
-            // Initialize navgoco with default options
-            $("#mysidebar").navgoco({
-                caretHtml: '',
-                accordion: true,
-                openClass: 'active', // open
-                save: false, // leave false or nav highlighting doesn't work right
-                cookie: {
-                    name: 'navgoco',
-                    expires: false,
-                    path: '/'
-                },
-                slide: {
-                    duration: 400,
-                    easing: 'swing'
-                }
-            });
-
-            $("#collapseAll").click(function(e) {
-                e.preventDefault();
-                $("#mysidebar").navgoco('toggle', false);
-            });
-
-            $("#expandAll").click(function(e) {
-                e.preventDefault();
-                $("#mysidebar").navgoco('toggle', true);
-            });
-
-        });
-
-    </script>
-    <script>
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
-    </script>
-    
 
 </head>
 <body>
@@ -158,18 +104,6 @@
                         <input type="text" id="search-input" placeholder="Search...">
                         <ul id="results-container"></ul>
                     </div>
-                    <script src="js/jekyll-search.js" type="text/javascript"></script>
-                    <script type="text/javascript">
-                            SimpleJekyllSearch.init({
-                                searchInput: document.getElementById('search-input'),
-                                resultsContainer: document.getElementById('results-container'),
-                                dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Product API">{title}</a></li>',
-                                noResultsText: '<span class="no-results">No results</span>',
-                                limit: 10,
-                                fuzzy: true,
-                    })
-                    </script>
                     <!--end search-->
                 </li>
             </ul>
@@ -178,9 +112,14 @@
 </div>
 
 
-<div class="page">
-    <div class="col-sidebar">
-     	
+
+
+
+
+<div class="page has-sidebar">
+    
+      <div class="col-sidebar">
+       	
 
 
 
@@ -192,8 +131,6 @@
 
 
 <ul id="mysidebar" class="nav NavList">
-   <!--  <li class="sidebarTitle">Weebly Cloud REST APIs </li> -->
-
     
 	    
 		    
@@ -494,17 +431,6 @@
 
 				            
 					            <li class="NavLinkLi">
-					            	<a href="ds_api_subaccount.html" class="NavLink isSecondary">Sub-Account API</a>
-					            </li>
-				            
-
-				            
-			            
-			            
-			            
-
-				            
-					            <li class="NavLinkLi">
 					            	<a href="ds_api_team_member.html" class="NavLink isSecondary">Team Member API</a>
 					            </li>
 				            
@@ -646,7 +572,9 @@
 $("li.active").parents('li').toggleClass("active");
 </script>
 
-    </div>
+      </div>
+    
+
     <div class="col-content">
         <div>
     <div class="post-header">
@@ -703,14 +631,12 @@ $( document ).ready(function() {
 <ul>
   <li><strong>Physical</strong>: Products that are tangible and are delivered to the customer. These can have shipping fees associated with them.</li>
   <li><strong>Service</strong>: Products that are not tangible, like landscaping or babysitting.</li>
-  <li>
-    <p><strong>Digital</strong>: Products that are files that the customer downloads. These can have download limits based on time or on the number of downloads.</p>
-
-    <div class="Notice type_info" role="alert">
-      <b>Note:</b> digital products cannot be created using the API.
-  </div>
-  </li>
+  <li><strong>Digital</strong>: Products that are files that the customer downloads. These can have download limits based on time or on the number of downloads.</li>
 </ul>
+
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> digital products cannot be created using the API.
+</div>
 
 <p>While merchants can always create products, only stores whose sites are on the Starter plan or better can actually sell products. And some plans have restrictions on the quantity and type of products that can be sold. More info on plans <a href="ds_gs_plans.html">here</a>. ​</p>
 
@@ -952,7 +878,10 @@ Once created, you can change the individual product SKUs. For example, you might
 </table>
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Any fields returned that are not documented are currently unsupported and can be safely ignored.</div>
 
-<h2><span class="label label-get text-uppercase">get</span> Retrieve a List of Products for a Store
+<h2>
+<div class="Tag type_info">GET</div>
+
+ Retrieve a List of Products for a Store
 </h2>
 
 <figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/store/product</code></pre></figure>
@@ -972,10 +901,10 @@ Once created, you can change the individual product SKUs. For example, you might
         <td><code>page</code></td>
         <td>Which page of results to return. Start is <code>1</code>.
             
-	<div class="Notice type_info" role="alert">
-		<b>Note:</b> Only the first 25 results are returned by default. If the result set is
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> Only the first 25 results are returned by default. If the result set is
             expected to be over 25, you must implement pagination.
-	</div>
+</div>
 
 
         </td>
@@ -1127,7 +1056,10 @@ Once created, you can change the individual product SKUs. For example, you might
     </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span></code></pre></figure>
 
-<h2><span class="label label-get text-uppercase">get</span> Retrieve the Number of Products for a Store
+<h2>
+<div class="Tag type_info">GET</div>
+
+ Retrieve the Number of Products for a Store
 </h2>
 
 <figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/store/product/count</code></pre></figure>
@@ -1146,7 +1078,10 @@ Once created, you can change the individual product SKUs. For example, you might
     </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<h2><span class="label label-get text-uppercase">get</span> Retrieve Details for a Product
+<h2>
+<div class="Tag type_info">GET</div>
+
+ Retrieve Details for a Product
 </h2>
 
 <figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/store/product/<span class="o">{</span>PRODUCT_ID<span class="o">}</span></code></pre></figure>
@@ -1323,7 +1258,10 @@ Once created, you can change the individual product SKUs. For example, you might
     </span><span class="p">]</span><span class="w">
 </span><span class="err">}</span></code></pre></figure>
 
-<h2><span class="label label-patch text-uppercase">post</span> Create a Product</h2>
+<h2>
+<div class="Tag type_warning">POST</div>
+
+ Create a Product</h2>
 
 <figure class="highlight"><pre><code class="language-shell" data-lang="shell">POST /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/store/product</code></pre></figure>
 
@@ -1483,7 +1421,10 @@ Once created, you can change the individual product SKUs. For example, you might
 -H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
 -H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
 
-<h2><span class="label label-put text-uppercase">put</span> Replace (Copy) a Product</h2>
+<h2>
+<div class="Tag type_warning">PUT</div>
+
+ Replace (Copy) a Product</h2>
 
 <figure class="highlight"><pre><code class="language-shell" data-lang="shell">PUT /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/store/product/<span class="o">{</span>PRODUCT_ID<span class="o">}</span></code></pre></figure>
 
@@ -1819,7 +1760,10 @@ Once created, you can change the individual product SKUs. For example, you might
     </span><span class="nt">"available"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<h2><span class="label label-patch text-uppercase">patch</span> Update a Product</h2>
+<h2>
+<div class="Tag type_warning">PATCH</div>
+
+ Update a Product</h2>
 
 <figure class="highlight"><pre><code class="language-shell" data-lang="shell">PATCH /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/store/product/<span class="o">{</span>PRODUCT_ID<span class="o">}</span></code></pre></figure>
 
@@ -1920,7 +1864,10 @@ Once created, you can change the individual product SKUs. For example, you might
     </span><span class="nt">"options"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
-<h2><span class="label label-delete text-uppercase">delete</span> Delete a Product</h2>
+<h2>
+<div class="Tag type_error">DELETE</div>
+
+ Delete a Product</h2>
 
 <figure class="highlight"><pre><code class="language-shell" data-lang="shell">DELETE /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/store/product/<span class="o">{</span>PRODUCT_ID<span class="o">}</span></code></pre></figure>
 
@@ -1963,7 +1910,7 @@ Once created, you can change the individual product SKUs. For example, you might
 		<div class="col-lg-12">
 			<div class="footer__fineprint">
 				&copy;2017 Weebly. All rights reserved. <br />
-				 Site last generated: Oct 31, 2017
+				 Site last generated: Nov 1, 2017
 			</div>
 			<div class="footer__logo">
 				<img src="images/weebly_logo.svg" alt="Weebly logo"/>

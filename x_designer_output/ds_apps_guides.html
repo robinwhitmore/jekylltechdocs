@@ -7,83 +7,29 @@
 <meta name="keywords" content="elements,  guidelines, icon, placeholder, element, elements">
 <title>Element Design Guidelines | Weebly Cloud for Designers Documentation</title>
 
+<link rel="shortcut icon" href="images/favicon.ico">
 
+<!-- Third-Party CSS -->
 <link rel="stylesheet" href="css/syntax.css">
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-
+<!-- Custom CSS -->
 <link rel="stylesheet" media="screen" href="css/orbit-external.css">
 <link rel="stylesheet" media="screen" href="css/orbit.css">
 <link rel="stylesheet" media="screen" href="css/theme-weebly.css">
 
+<!-- Third-Party JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-<script src="js/jquery.navgoco.min.js"></script>
-
-
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+<script src="js/jekyll-search.js" type="text/javascript"></script>
 <script src="js/toc.js"></script>
+
+<!-- Custom JS -->
 <script src="js/customscripts.js"></script>
 
-<link rel="shortcut icon" href="images/favicon.ico">
 
-<script type="text/javascript">
-
-    $(document).ready(function() {
-
-        // Bootstrap popovers are initialized with the following script. In the options, I'm setting the placement to be on the right, the trigger to be hover rather than click, and to allow HTML from the JSON data source.
-
-        // $('[data-toggle="popover"]').popover({
-        //     placement: 'top',
-        //     trigger: 'hover',
-        //     html: true
-        // });
-
-        $('.mobile-nav-btn').click(function(){
-            $('.nav-group').toggleClass('open');
-        });
-    })
-</script>
-
-    <script>
-        $(document).ready(function() {
-            // Initialize navgoco with default options
-            $("#mysidebar").navgoco({
-                caretHtml: '',
-                accordion: true,
-                openClass: 'active', // open
-                save: false, // leave false or nav highlighting doesn't work right
-                cookie: {
-                    name: 'navgoco',
-                    expires: false,
-                    path: '/'
-                },
-                slide: {
-                    duration: 400,
-                    easing: 'swing'
-                }
-            });
-
-            $("#collapseAll").click(function(e) {
-                e.preventDefault();
-                $("#mysidebar").navgoco('toggle', false);
-            });
-
-            $("#expandAll").click(function(e) {
-                e.preventDefault();
-                $("#mysidebar").navgoco('toggle', true);
-            });
-
-        });
-
-    </script>
-    <script>
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
-    </script>
-    
 
 </head>
 <body>
@@ -158,18 +104,6 @@
                         <input type="text" id="search-input" placeholder="Search...">
                         <ul id="results-container"></ul>
                     </div>
-                    <script src="js/jekyll-search.js" type="text/javascript"></script>
-                    <script type="text/javascript">
-                            SimpleJekyllSearch.init({
-                                searchInput: document.getElementById('search-input'),
-                                resultsContainer: document.getElementById('results-container'),
-                                dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Element Design Guidelines">{title}</a></li>',
-                                noResultsText: '<span class="no-results">No results</span>',
-                                limit: 10,
-                                fuzzy: true,
-                    })
-                    </script>
                     <!--end search-->
                 </li>
             </ul>
@@ -178,9 +112,14 @@
 </div>
 
 
-<div class="page">
-    <div class="col-sidebar">
-     	
+
+
+
+
+<div class="page has-sidebar">
+    
+      <div class="col-sidebar">
+       	
 
 
 
@@ -192,8 +131,6 @@
 
 
 <ul id="mysidebar" class="nav NavList">
-   <!--  <li class="sidebarTitle">Develop Weebly Apps </li> -->
-
     
 	    
 		    
@@ -653,7 +590,9 @@
 $("li.active").parents('li').toggleClass("active");
 </script>
 
-    </div>
+      </div>
+    
+
     <div class="col-content">
         <div>
     <div class="post-header">
@@ -738,10 +677,8 @@ Users can copy elements and place the copy on other pages in their site. All set
 
 <p>​Your element when displayed in the editor (the element placeholder) should give a preview of the content that will be displayed on the published site. This placeholder can allow minimal interactivity. For example, when dropped onto a page, your element might allow users to directly edit content or forms in the content, but there shouldn’t be any navigation or any wizard-like behavior. Plan your settings to handle this type of interactivity. You can create alternate HTML templates, Javascript, and CSS for the element placeholder when you need it to behave differently in the editor than on the published page.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div markdown="span" class="Notice type_info" role="alert"&gt;
-	&lt;b&gt;Note:&lt;/b&gt; The width of the placeholder can always be adjusted by the user. Weebly handles this resizing for you - please don't set a width on your element or it will not resize correctly on the page. For example, if the element has a set width and is dropped on a page and then a column is put next to it, it will stay at the predefined width and not display properly.
-&lt;/div&gt;
-</code></pre>
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> The width of the placeholder can always be adjusted by the user. Weebly handles this resizing for you - please don’t set a width on your element or it will not resize correctly on the page. For example, if the element has a set width and is dropped on a page and then a column is put next to it, it will stay at the predefined width and not display properly.
 </div>
 
 
@@ -770,7 +707,7 @@ Users can copy elements and place the copy on other pages in their site. All set
 		<div class="col-lg-12">
 			<div class="footer__fineprint">
 				&copy;2017 Weebly. All rights reserved. <br />
-				 Site last generated: Oct 31, 2017
+				 Site last generated: Nov 1, 2017
 			</div>
 			<div class="footer__logo">
 				<img src="images/weebly_logo.svg" alt="Weebly logo"/>

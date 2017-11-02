@@ -103,7 +103,7 @@ The following table shows all fields that exist for this API, those that are ret
 </table>
 {% include custom/notes/note_api_undoc.md %}
 
-<h2><span class="label label-get text-uppercase">get</span> Retrieve a List of Images for a Product
+<h2>{% include label.html content="get" %} Retrieve a List of Images for a Product
 </h2>
 
 {% highlight shell%}
@@ -158,7 +158,7 @@ curl https://api.weeblycloud.com/user/123456/site/987654321/store/product/12/ima
 ]
 {% endhighlight %}
 
-<h2><span class="label label-get text-uppercase">get</span> Retrieve the Number of Images for a Product
+<h2>{% include label.html content="get" %} Retrieve the Number of Images for a Product
 </h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
@@ -198,7 +198,7 @@ curl https://api.weeblycloud.com/user/123456/site/987654321/store/product/12/ima
 }
 {% endhighlight %}
 
-<h2><span class="label label-get text-uppercase">get</span> Retrieve Details for a Product Image
+<h2>{% include label.html content="get" %} Retrieve Details for a Product Image
 </h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
@@ -248,7 +248,7 @@ curl https://api.weeblycloud.com/user/123456/site/987654321/store/product/12/ima
 }
 {% endhighlight %}
 
-<h2><span class="label label-patch text-uppercase">post</span> Create a Product Image</h2>
+<h2>{% include label.html content="post" %} Create a Product Image</h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
 POST /v1/user/sites/{SITE_ID}/store/products/{PRODUCT_ID}/images
@@ -324,7 +324,7 @@ curl https://api.weeblycloud.com/user/123456/site/987654321/store/products/12/im
 {% endhighlight %}
 
 
-<h2><span class="label label-delete text-uppercase">delete</span> Delete a Product Image</h2>
+<h2>{% include label.html content="delete" %} Delete a Product Image</h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
 DELETE /v1/user/sites/{SITE_ID}/store/products/{PRODUCT_ID}/images/{IMAGE_ID}

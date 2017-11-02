@@ -7,83 +7,29 @@
 <meta name="keywords" content="elements,  JavaScript, element, scripts, events">
 <title>Add JavaScript to an Element | Weebly Cloud for Designers Documentation</title>
 
+<link rel="shortcut icon" href="images/favicon.ico">
 
+<!-- Third-Party CSS -->
 <link rel="stylesheet" href="css/syntax.css">
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-
+<!-- Custom CSS -->
 <link rel="stylesheet" media="screen" href="css/orbit-external.css">
 <link rel="stylesheet" media="screen" href="css/orbit.css">
 <link rel="stylesheet" media="screen" href="css/theme-weebly.css">
 
+<!-- Third-Party JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-<script src="js/jquery.navgoco.min.js"></script>
-
-
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+<script src="js/jekyll-search.js" type="text/javascript"></script>
 <script src="js/toc.js"></script>
+
+<!-- Custom JS -->
 <script src="js/customscripts.js"></script>
 
-<link rel="shortcut icon" href="images/favicon.ico">
 
-<script type="text/javascript">
-
-    $(document).ready(function() {
-
-        // Bootstrap popovers are initialized with the following script. In the options, I'm setting the placement to be on the right, the trigger to be hover rather than click, and to allow HTML from the JSON data source.
-
-        // $('[data-toggle="popover"]').popover({
-        //     placement: 'top',
-        //     trigger: 'hover',
-        //     html: true
-        // });
-
-        $('.mobile-nav-btn').click(function(){
-            $('.nav-group').toggleClass('open');
-        });
-    })
-</script>
-
-    <script>
-        $(document).ready(function() {
-            // Initialize navgoco with default options
-            $("#mysidebar").navgoco({
-                caretHtml: '',
-                accordion: true,
-                openClass: 'active', // open
-                save: false, // leave false or nav highlighting doesn't work right
-                cookie: {
-                    name: 'navgoco',
-                    expires: false,
-                    path: '/'
-                },
-                slide: {
-                    duration: 400,
-                    easing: 'swing'
-                }
-            });
-
-            $("#collapseAll").click(function(e) {
-                e.preventDefault();
-                $("#mysidebar").navgoco('toggle', false);
-            });
-
-            $("#expandAll").click(function(e) {
-                e.preventDefault();
-                $("#mysidebar").navgoco('toggle', true);
-            });
-
-        });
-
-    </script>
-    <script>
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
-    </script>
-    
 
 </head>
 <body>
@@ -158,18 +104,6 @@
                         <input type="text" id="search-input" placeholder="Search...">
                         <ul id="results-container"></ul>
                     </div>
-                    <script src="js/jekyll-search.js" type="text/javascript"></script>
-                    <script type="text/javascript">
-                            SimpleJekyllSearch.init({
-                                searchInput: document.getElementById('search-input'),
-                                resultsContainer: document.getElementById('results-container'),
-                                dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Add JavaScript to an Element">{title}</a></li>',
-                                noResultsText: '<span class="no-results">No results</span>',
-                                limit: 10,
-                                fuzzy: true,
-                    })
-                    </script>
                     <!--end search-->
                 </li>
             </ul>
@@ -178,9 +112,14 @@
 </div>
 
 
-<div class="page">
-    <div class="col-sidebar">
-     	
+
+
+
+
+<div class="page has-sidebar">
+    
+      <div class="col-sidebar">
+       	
 
 
 
@@ -192,8 +131,6 @@
 
 
 <ul id="mysidebar" class="nav NavList">
-   <!--  <li class="sidebarTitle">Develop Weebly Apps </li> -->
-
     
 	    
 		    
@@ -653,7 +590,9 @@
 $("li.active").parents('li').toggleClass("active");
 </script>
 
-    </div>
+      </div>
+    
+
     <div class="col-content">
         <div>
     <div class="post-header">
@@ -706,10 +645,8 @@ $( document ).ready(function() {
 
   <p>You can use JavaScript to add events, interactions, and effects to your element.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div markdown="span" class="Notice type_info" role="alert"&gt;
-	&lt;b&gt;Note:&lt;/b&gt; If your element doesn't need JavaScript, you still must create this file and leave it blank.
-&lt;/div&gt;
-</code></pre>
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> If your element doesn’t need JavaScript, you still must create this file and leave it blank.
 </div>
 
 <h2 id="editor-vs-published-scripts">Editor vs. Published Scripts</h2>
@@ -719,10 +656,8 @@ $( document ).ready(function() {
 <h2 id="javascript-structure">JavaScript Structure</h2>
 <p>We provide a <a href="http://backbonejs.org/#View">Backbone View</a> as the base class (<code class="highlighter-rouge">PlatformElement.js</code>) for you to extend to create your element’s JavaScript.  This allows you to easily define events for your element using the events hash.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div markdown="span" class="Notice type_info" role="alert"&gt;
-	&lt;b&gt;Note:&lt;/b&gt; If your element doesn't need JavaScript, you still must create this file (but you can leave it blank).
-&lt;/div&gt;
-</code></pre>
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> If your element doesn’t need JavaScript, you still must create this file (but you can leave it blank).
 </div>
 
 <p>​There are two ways for you to define your element javascript code: extending the base class and providing all your JavaScript in that extended class, or using a self executing anonymous function that allows more flexibility as to where the script lives. Both methods can refer to jQuery (use <code class="highlighter-rouge">$</code>) and Underscore (use <code class="highlighter-rouge">_</code> ).</p>
@@ -786,10 +721,8 @@ $( document ).ready(function() {
     <span class="p">}</span>
 <span class="p">});</span></code></pre></figure>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div markdown="span" class="Notice type_info" role="alert"&gt;
-	&lt;b&gt;Note:&lt;/b&gt; You can only update settings from the editor and not from the published site.  Attempting to update from the published site causes the `save` call to fail resolving.  You can catch this with the `.fail` chained method on your `save` call.
-&lt;/div&gt;
-</code></pre>
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> You can only update settings from the editor and not from the published site.  Attempting to update from the published site causes the <code class="highlighter-rouge">save</code> call to fail resolving.  You can catch this with the <code class="highlighter-rouge">.fail</code> chained method on your <code class="highlighter-rouge">save</code> call.
 </div>
 
 <p>​Once you update settings, you need to re-render the page for the new values to be applied.</p>
@@ -807,16 +740,12 @@ $( document ).ready(function() {
     <span class="p">}</span>
 <span class="p">});</span></code></pre></figure>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div markdown="span" class="Notice type_info" role="alert"&gt;
-	&lt;b&gt;Note:&lt;/b&gt; Triggering a rerender destroys the DOM nodes for your element and regenerates them.  This means that triggering the `render` method will interrupt any other JavaScript flow within the method, essentially acting as a return.
-&lt;/div&gt;
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> Triggering a rerender destroys the DOM nodes for your element and regenerates them.  This means that triggering the <code class="highlighter-rouge">render</code> method will interrupt any other JavaScript flow within the method, essentially acting as a return.
+</div>
 
-
-
-&lt;div markdown="span" class="Notice type_info" role="alert"&gt;
-	&lt;b&gt;Note:&lt;/b&gt; Calling the `render` method from within your `initialize` method will cause an infinite loop. This is because the editor will destroy and regenerate the DOM nodes repeatedly. Be careful not to do this!
-&lt;/div&gt;
-</code></pre>
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> Calling the <code class="highlighter-rouge">render</code> method from within your <code class="highlighter-rouge">initialize</code> method will cause an infinite loop. This is because the editor will destroy and regenerate the DOM nodes repeatedly. Be careful not to do this!
 </div>
 
 <h2 id="include-additional-data">Include Additional Data</h2>
@@ -842,10 +771,8 @@ $( document ).ready(function() {
     <span class="p">}</span>
 <span class="p">});</span></code></pre></figure>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div markdown="span" class="Notice type_info" role="alert"&gt;
-	&lt;b&gt;Note:&lt;/b&gt; We cannot guarantee that `element_id` and `site_id` will be universally unique. We recommend that you use a composite key for any storage you may be doing on your servers or services!
-&lt;/div&gt;
-</code></pre>
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> We cannot guarantee that <code class="highlighter-rouge">element_id</code> and <code class="highlighter-rouge">site_id</code> will be universally unique. We recommend that you use a composite key for any storage you may be doing on your servers or services!
 </div>
 
 
@@ -874,7 +801,7 @@ $( document ).ready(function() {
 		<div class="col-lg-12">
 			<div class="footer__fineprint">
 				&copy;2017 Weebly. All rights reserved. <br />
-				 Site last generated: Oct 31, 2017
+				 Site last generated: Nov 1, 2017
 			</div>
 			<div class="footer__logo">
 				<img src="images/weebly_logo.svg" alt="Weebly logo"/>

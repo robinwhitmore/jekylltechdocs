@@ -153,25 +153,25 @@ entries:
       output: web, pdf
       #ready for review
 
-    - title: Sub-Account API
-      url: /ds_api_subaccount.html
-      output: web, pdf
-
     - title: Team Member API
       url: /ds_api_team_member.html
       output: web, pdf
+      #ready for review
 
     - title: Themes (Custom Cloud) API
       url: /ds_api_themes_cloud.html
       output: web, pdf
+      #ready for review
 
     - title: Themes (User) API
       url: /ds_api_themes_user.html
       output: web, pdf
+      #ready for review
 
     - title: User API
       url: /ds_api_user.html
       output: web, pdf
+      # ready for review
 
   - title: Webhooks
     output: web, pdf

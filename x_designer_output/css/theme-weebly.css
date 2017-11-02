@@ -1,64 +1,13 @@
 /* New color */
 /* New color */
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus { background-color: #248ec2; color: white !important; }
-
-div.navbar-collapse .dropdown-menu > li > a:hover { background-color: #347DBE; }
-
 a[data-toggle="tooltip"] { color: #649345; font-style: italic; cursor: default; }
-
-/* top navbar */
-.printTitle { color: #015CAE !important; }
-
-div.sidebarTitle { color: #015CAE; }
-
-li.sidebarTitle { margin-top: 40px; font-weight: normal; font-size: 130%; color: #ED1951; margin-bottom: 10px; margin-left: 5px; }
 
 /*--------
 what i added
 --------*/
 div.next { margin-top: 25px; }
 
-p.proc { font-weight: bold; }
-
-.navbar-brand { color: white !important; }
-
-.tagTable { -webkit-columns: 100px 3; /* Chrome, Safari, Opera */ -moz-columns: 100px 3; /* Firefox */ columns: 100px 3; }
-
 .action { -webkit-border-radius: 3px; border-radius: 3px; background-clip: padding-box; background: rgba(0, 0, 0, 0.1); padding: 0; margin: 0 0 16px 0; line-height: 26px; font-weight: normal; }
-
-.bs-callout { padding: 20px; margin: 20px 0; border: 1px solid #eee; border-left-width: 5px; border-radius: 3px; }
-
-.bs-callout h4 { margin-top: 0; margin-bottom: 5px; }
-
-.bs-callout p:last-child { margin-bottom: 0; }
-
-.bs-callout code { border-radius: 3px; }
-
-.bs-callout + .bs-callout { margin-top: -5px; }
-
-.bs-callout-default { border-left-color: #777; }
-
-.bs-callout-default h4 { color: #777; }
-
-.bs-callout-primary { border-left-color: #428bca; }
-
-.bs-callout-primary h4 { color: #428bca; }
-
-.bs-callout-success { border-left-color: #5cb85c; }
-
-.bs-callout-success h4 { color: #5cb85c; }
-
-.bs-callout-danger { border-left-color: #d9534f; }
-
-.bs-callout-danger h4 { color: #d9534f; }
-
-.bs-callout-warning { border-left-color: #f0ad4e; }
-
-.bs-callout-warning h4 { color: #f0ad4e; }
-
-.bs-callout-info { border-left-color: #5bc0de; }
-
-.bs-callout-info h4 { color: #5bc0de; }
 
 .post-content ol li, .post-content ul li { margin: 8px 0px; }
 
@@ -104,10 +53,6 @@ ul#results-container a:hover { color: black; }
 #search-demo-container a:hover { color: black; }
 
 /* end search */
-.filter-options { margin-bottom: 20px; }
-
-.filter-options button { margin: 3px; }
-
 li.dropdownActive a { font-weight: bold; }
 
 .post-content a.fa-rss { color: orange; }
@@ -128,8 +73,6 @@ figcaption { padding-bottom: 12px; padding-top: 6px; max-width: 90%; margin-bott
 
 .preference { color: red; }
 
-table.dataTable thead { background-color: #444; }
-
 table td { hyphens: auto; }
 
 section table tr.success { background-color: #dff0d8 !important; }
@@ -141,8 +84,6 @@ section table tr.warning, table tr.testing, table tr.testing > td.sorting { back
 section table tr.danger, table tr.preference, table tr.preference > td.sorting { background-color: #f2dede !important; }
 
 .orange { color: orange; }
-
-table.profile thead tr th { background-color: #248ec2; }
 
 table.request thead tr th { background-color: #ED1951; }
 
@@ -197,10 +138,6 @@ a[data-toggle="tooltip"] { color: #649345; font-style: italic; cursor: default; 
 
 ol.series li { list-style-type: decimal; margin-left: 40px; padding-left: 0px; }
 
-.siteTagline { font-size: 200%; font-weight: bold; color: silver; font-family: monospace; text-align: center; line-height: 10px; margin: 20px 0px; display: block; }
-
-.versionTagline { text-align: center; margin-bottom: 20px; font-family: courier; color: silver; color: #444; display: block; }
-
 #mysidebar { padding-left: 0; }
 
 #mysidebar > .NavLinkLi { margin-bottom: 16px; }
@@ -225,8 +162,6 @@ table p { margin-top: 12px; margin-bottom: 12px; }
 
 video { display: block; margin: 30px 0px; border: 1px solid #c0c0c0; }
 
-p.required, p.dataType { display: block; color: #c0c0c0; font-size: 80%; margin-left: 4px; }
-
 dd { margin-left: 20px; }
 
 .post-content img.inline { margin: 0px; margin-bottom: 6px; }
@@ -250,18 +185,6 @@ a[href^="http://"]:after, a[href^="https://"]:after { content: "\f08e"; font-fam
 
 /* Strip the outbound icon when this class is present */
 a[href].noCrossRef::after, a.no_icon:after { content: "" !important; padding-left: 0; }
-
-/* algolia search */
-.search { text-align: left; }
-
-.search input { font-size: 20px; width: 300px; }
-
-.results { margin: auto; text-align: left; }
-
-.results ul { list-style-type: none; padding: 0; }
-
-/* algolia */
-div.results { position: absolute; background-color: white; width: 100%; }
 
 a code { color: #248EC2; }
 
@@ -316,7 +239,7 @@ figure { margin: 0; }
 @media (min-width: 768px) { .top-nav { max-width: 1024px; padding: 0 16px; }
   .page { position: relative; max-width: 1024px; padding: 0 16px; }
   .col-sidebar { position: absolute; width: 220px; }
-  .col-content { margin-left: 320px; } }
+  .page.has-sidebar .col-content { margin-left: 320px; } }
 /* POST --------------------------------------------------------------------- */
 /* POST TOC */
 .toc { border-bottom: 1px solid #dfe6ee; padding-bottom: 8px; margin-bottom: 24px; }
@@ -350,9 +273,10 @@ figure { margin: 0; }
 .footer__fineprint { margin-bottom: 16px; line-height: 1.5em; }
 
 /* CARD ------------------------------------------------------------------- */
-.Card { margin-bottom: 24px; }
+.card-header { margin: 0; font-size: 16px; }
 
-.card-header { margin-top: 0; }
+.topic-card { display: block; float: left; max-width: 300px; height: 160px; margin: 0 24px 24px 0; }
+.topic-card p { color: #5B6D7F; }
 
 /* POPOVER ------------------------------------------------------------------- */
 [data-toggle="popover"]:hover { cursor: pointer; }
@@ -430,11 +354,10 @@ a.nav-group-list-link { font-weight: 400; color: #000b2e; font-size: 16px; }
 @media (min-width: 768px) { .mobile-nav-btn { display: none; } }
 .mobile-nav-btn:hover { cursor: pointer; }
 
-.navbar-collapse.collapsing .nav-group-list { height: 100px; }
-
 @media (max-width: 768px) { .nav-group { height: 1px; opacity: 0; transition: 0.2s ease-in height, 0.2s ease-in opacity; }
   .nav-group.open { height: 281px; opacity: 1; } }
 
-/*Print Stuff*/
+/* Print Styles -----------------------------------------------------------*/
+/* TODO: Move these into printstyles.css */
 @media print { .col-sidebar, .top-nav { display: none; }
   .col-content { margin-left: 0; } }

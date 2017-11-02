@@ -198,7 +198,7 @@ The following table shows all fields that exist for this API and those that are 
 </table>
 {% include custom/notes/note_api_undoc.md %}
 
-<h2><span class="label label-get text-uppercase">get</span> Retrieve a List of Orders</h2>
+<h2>{% include label.html content="get" %} Retrieve a List of Orders</h2>
 
 {% highlight shell%}
 {% if site.project == "platform" %}
@@ -346,7 +346,7 @@ curl https://api.weeblycloud.com/user/123456/site/987654321/store/order?sortby=o
 ]
 {% endhighlight %}
 
-<h2><span class="label label-get text-uppercase">get</span> Retrieve the Number of Orders for a Site
+<h2>{% include label.html content="get" %} Retrieve the Number of Orders for a Site
 </h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
@@ -386,7 +386,7 @@ curl https://api.weeblycloud.com/user/123456/site/987654321/store/order/count \
 }
 {% endhighlight %}
 
-<h2><span class="label label-get text-uppercase">get</span> Retrieve Details for an order</h2>
+<h2>{% include label.html content="get" %} Retrieve Details for an order</h2>
 {% highlight shell%}
 {% if site.project == "platform" %}
 GET /v1/user/sites/{SITE_ID}/store/orders/{ORDER_ID}
