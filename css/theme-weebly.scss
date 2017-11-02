@@ -9,7 +9,7 @@ $nav-color: $heading-color;
 $brand-color: #0073ff;
 $post-link-color: #46A2FF; /* New color */
 
-$font-family: "effra", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+$font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
 $font-family-mono: Menlo, Monaco, Consolas, "Courier New", monospace;
 $font-size: 16px;
 $font-size-sm: 13px;
@@ -863,10 +863,14 @@ figure {
 
 /* ORBIT EXTERNAL OVERRIDES -----------------------------------------------------------*/
 
+h1 {
+  font-weight: 600;
+}
+
 h2 {
 	margin-top: 32px;
 	font-size: 24px;
-	font-weight: 400;
+	font-weight: 500;
 }
 
 h3 {
@@ -880,6 +884,8 @@ h3 {
 .post-title-main { /* Overrides .display-2 */
 	margin-top: 0;
 	margin-bottom: 6px;
+  font-size: 36px;
+  font-weight: 600;
 }
 
 div.Notice {
