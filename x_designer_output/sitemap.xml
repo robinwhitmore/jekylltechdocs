@@ -746,6 +746,48 @@
   
   
   <url>
+    <loc>http://localhost:4008/ds_wh_blog.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_wh_form.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_wh_member.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_wh_site.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_wh_store.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_wh_user.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_wh_webhooks.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4008/cl_glossary.html</loc>
   </url>
   

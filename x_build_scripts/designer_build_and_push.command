@@ -1,10 +1,10 @@
 # build Designer
-cd Documents/jekylltechdocs
+cd Documents/NewDocs
 bundle exec jekyll build --config _config_Designer.yml --destination x_designer_output
 
 # copy output to Git Designer output dir
 cd ../..
-cp -R ~/Documents/jekylltechdocs/x_designer_output/ ~/Documents/DesignerDocs/
+cp -R ~/Documents/NewDocs/x_designer_output/ ~/Documents/DesignerDocs/
 
 cd Documents/DesignerDocs/
 

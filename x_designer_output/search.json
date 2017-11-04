@@ -986,6 +986,62 @@
 		}, 
 	
 		{
+			"title": "Blog Webhooks",
+			"tags": "sitesappselements",
+			"keywords": "blog, blog post",
+			"url": "ds_wh_blog.html",
+			"summary": "Blog webhooks notify you when blogs and blog posts are created and updated."
+		}, 
+	
+		{
+			"title": "Form Webhooks",
+			"tags": "sitesappselements",
+			"keywords": "form",
+			"url": "ds_wh_form.html",
+			"summary": "Form webhooks notify you when an entry for a form has been submitted."
+		}, 
+	
+		{
+			"title": "Member Webhooks",
+			"tags": "sitesappselements",
+			"keywords": "member, membership, register",
+			"url": "ds_wh_member.html",
+			"summary": "Member webhooks notify you when a change occurs to a site&#39;s member."
+		}, 
+	
+		{
+			"title": "Site Webhooks",
+			"tags": "sitesappselements",
+			"keywords": "site, manage",
+			"url": "ds_wh_site.html",
+			"summary": "Site webhooks notify you when certain events happen for a site."
+		}, 
+	
+		{
+			"title": "Store Webhooks",
+			"tags": "appselements",
+			"keywords": "category, product, cart, order, coupon",
+			"url": "ds_wh_store.html",
+			"summary": "Store webhooks notify you when an event happens in the site&#39;s store."
+		}, 
+	
+		{
+			"title": "User Webhooks",
+			"tags": "appselements",
+			"keywords": "user",
+			"url": "ds_wh_user.html",
+			"summary": "User webhooks notify you when an event happens for a user."
+		}, 
+	
+		{
+			"title": "Use Webhooks",
+			"tags": "appselements",
+			"keywords": "webhooks, subscribe, callback url,",
+			"url": "ds_wh_webhooks.html",
+			"summary": "Webhooks allow your app to be notified of events that happen in a Weebly site."
+		}, 
+	
+		{
 			"title": "Glossary",
 			"tags": "getting_started",
 			"keywords": "",

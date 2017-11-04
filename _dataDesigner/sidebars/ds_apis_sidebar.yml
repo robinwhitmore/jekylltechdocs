@@ -180,27 +180,34 @@ entries:
     - title: How to Use Webhooks
       url: /ds_wh_webhooks.html
       output: web, pdf
+      # ready for review
 
     - title: User Webhooks
       url: /ds_wh_user.html
       output: web, pdf
+      # ready for review
 
     - title: Site Webhooks
       url: /ds_wh_site.html
       output: web, pdf
+      # ready for review
 
     - title: Store Webhooks
       url: /ds_wh_store.html
       output: web, pdf
+      # ready for review
 
     - title: Member Webhooks
       url: /ds_wh_member.html
       output: web, pdf
+      # ready for review
 
     - title: Form Webhooks
       url: /ds_wh_form.html
       output: web, pdf
+      # ready for review
 
     - title: Blog Webhooks
       url: /ds_wh_blog.html
       output: web, pdf
+      # ready for review
