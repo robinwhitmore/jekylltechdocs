@@ -33,8 +33,11 @@ a[data-toggle="tooltip"] {
 /*--------
 what i added
 --------*/
+/* .next is used on the button at the bottom of an intro page for a series.
+Classname could be improved. */
 div.next {
-	margin-top: 25px;
+	margin-top: 32px;
+  margin-bottom: 16px;
 }
 
 
@@ -276,9 +279,6 @@ button.cursorNorm {
 	cursor: default;
 }
 
-a.dropdown-toggle {
-	margin-left: 10px;
-}
 
 hr.faded {
 	border: 0;
@@ -331,16 +331,6 @@ li img {
 
 span.tagTitle {font-weight: 500;}
 
-li.activeSeries {
-	font-weight: bold;
-}
-
-.seriesContext .dropdown-menu li.active {
-	font-weight: bold;
-	margin-left: 43px;
-	font-size:18px;
-}
-
 .alert-warning {
 	color: #444;
 }
@@ -376,21 +366,6 @@ a[data-toggle="tooltip"] {
 	cursor: default;
 }
 
-.seriesNext,
-.seriesContext {
-	margin-top: 15px;
-	margin-bottom: 15px;
-}
-
-.seriescontext ol li {
-	list-style-type: upper-roman;
-}
-
-ol.series li {
-	list-style-type: decimal;
-	margin-left: 40px;
-	padding-left: 0px;
-}
 
 
 #mysidebar {
@@ -398,28 +373,12 @@ ol.series li {
 }
 
 #mysidebar > .NavLinkLi {
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 
 #mysidebar .nav-group-list.Children {
     padding-left: 8px;
     margin: 16px 0 0 0;
-}
-
-.nav ul.series li {
-	list-style: decimal;
-	font-size:12px;
-}
-
-.nav ul.series li a:hover {
-	background-color: gray;
-}
-.nav ul.series {
-	padding-left: 30px;
-}
-
-.nav ul.series {
-	background-color: #FAFAFA;
 }
 
 span.muted {color: #666;}
@@ -788,6 +747,47 @@ figure {
 }
 
 
+/* SERIES ------------------------------------------------------------------- */
+
+/* Hiding the Series Dropdown.
+   Seem unnecessary. List of steps is visible in the sidebar. */
+
+.seriesContext {
+  display: none;
+}
+
+.btn-group {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 24px;
+  max-width: 320px;
+  padding-left: 16px;
+  background-color: white;
+  border: 1px solid $border-color;
+  box-shadow: 0 1px 3px 1px rgba(0, 11, 46, .2);
+  list-style: none;
+
+  .active {
+    font-weight: bold;
+  }
+}
+
+.btn-group.open .dropdown-menu {
+  display: block;
+}
+
+.series-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
 
 /* POPOVER ------------------------------------------------------------------- */
 
@@ -916,7 +916,6 @@ div.Notice {
 /* Nav Stuff -----------------------------------------------------------*/
 
 a.nav-group-list-link {
-	@extend .font-base;
 	@extend .font-smoothing;
 	font-weight: 400;
 	color: $nav-color;
@@ -964,6 +963,12 @@ a.nav-group-list-link {
     // @media (min-width: $media-tablet) {
     //     margin: 0 0 0 20px;
     // }
+}
+
+.NavLink {
+  /* Reduce font-size font by 1. System fonts tend to be bigger than Effra. */
+  font-size: 15px;
+  line-height: 17px;
 }
 
 .NavLinkLi {
