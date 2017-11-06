@@ -77,12 +77,6 @@ table th[class*="col-"] {
 	float: none;
 }
 
-
-table tr td {
-	hyphens: auto;
-}
-
-
 p.external a {
 	text-align:right;
 	font-size:12px;
@@ -236,10 +230,6 @@ figcaption {
 
 .preference {
 	color: red;
-}
-
-table td {
-	hyphens: auto;
 }
 
 section table tr.success {
@@ -630,7 +620,6 @@ figure {
   }
 }
 
-
 /* POST --------------------------------------------------------------------- */
 
 /* POST TOC */
@@ -654,7 +643,7 @@ figure {
 
 /* POST HEADER */
 
-.pageType {
+.page-type {
 	margin-bottom: 12px;
 	color: $muted-color;
 	text-transform: uppercase;
@@ -872,8 +861,11 @@ a.Card .card-header {
     padding: 8px 16px;
 }
 
-
-/* ORBIT EXTERNAL OVERRIDES -----------------------------------------------------------*/
+/* ORBIT EXTERNAL - OVERRIDES -----------------------------------------------------------*/
+/*
+  orbit-exernal.css is generated from https://github.intern.weebly.net/weebly/orbit-3rd-party.
+  It includes Orbit style rules applied to HTML elements.
+*/
 
 h1 {
   font-weight: 600;
@@ -891,7 +883,20 @@ h3 {
 	font-weight: 400;
 }
 
-/* ORBIT OVERRIDES -----------------------------------------------------------*/
+td {
+  font-size: 15px;
+  vertical-align: top;
+}
+
+td:first-child {
+  padding-left: 16px;
+}
+
+/* ORBIT - OVERRIDES -----------------------------------------------------------*/
+/*
+  orbit.css is generated from https://github.intern.weebly.net/weebly/orbit.
+  It includes all the Orbit CSS. All the rules apply to classes and do not target HTML elements.
+*/
 
 .post-title-main { /* Overrides .display-2 */
 	margin-top: 0;
@@ -916,10 +921,6 @@ div.Notice {
 .Children {
 	margin-top: 0;
 }
-
-// .nav-group-list > *:first-child {
-// 	margin-top: 8px;
-// }
 
 /* Tags are often displayed inline alongside text, give them a little breath to room. */
 .Tag {
@@ -971,11 +972,7 @@ a.nav-group-list-link {
 
 .nav-group-list.horizontal > *:last-child {
 	margin-bottom: 0;
-    margin-left: 0;
-
-    // @media (min-width: $media-tablet) {
-    //     margin: 0 0 0 20px;
-    // }
+  margin-left: 0;
 }
 
 .NavLink {
@@ -1010,6 +1007,10 @@ a.nav-group-list-link {
 .top-nav-item {
 	@media (max-width: $media-tablet) {
 		flex: 1;
+    text-align: right;
+    * {
+      text-align: left;
+    }
 	}
 }
 
