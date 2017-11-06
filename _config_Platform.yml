@@ -102,7 +102,7 @@ sidebars:
 - pf_apis_sidebar
 - pf_themes_sidebar
 - pf_tutorials_sidebar
-- pf_tags_sidebar
+- tags_sidebar
 - other
 
 description: "Everything you need to build an app for the Weebly platform"

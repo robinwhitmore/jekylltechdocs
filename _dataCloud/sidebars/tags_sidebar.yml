@@ -7,13 +7,9 @@ entries:
   folders:
 
 
-  - title: Tag Pages
+  - title: Topics
     output: web
     folderitems:
-
-    - title: Topics
-      url: /cl_tags_about.html
-      output: web
 
     - title: Getting Started
       url: /tag_getting_started.html

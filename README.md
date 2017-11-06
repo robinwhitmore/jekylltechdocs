@@ -3,6 +3,7 @@
 
 ## Developing
 
+
 ### Quick Start
 
 ```
@@ -12,10 +13,17 @@ gem install jekyll bundler
 # Install gems (~5 min)
 bundle install
 
-# Start dev env. Specify one the config files in the root folder.
+# Start dev env. Specify one the three config files in the root folder.
+jekyll serve --config _config_Designer.yml
+# jekyll serve --config _config_Cloud.yml
+# jekyll serve --config _config_Platform.yml
+
+# For speedier compilation (0.5s rather than 5s) use the incremental flag.
+# Note: Some edits, such as those to data files will not be caught with this flag on.
 jekyll serve --config _config_Designer.yml --incremental
 
-# Visit http://localhost:4008/
+# Visit http://localhost:400[X]/
+# Check the port number noted in your Terminal. It will be 4000, 4006, or 4008.
 ```
 
 ### Directory Structure

@@ -109,7 +109,7 @@ sidebars:
 - cl_gs_sidebar
 - cl_apps_sidebar
 - cl_apis_sidebar
-- cl_tags_sidebar
+- tags_sidebar
 - other
 
 description: "Everything you need to install, configure, and manage Weebly Cloud"

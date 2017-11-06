@@ -1,36 +1,43 @@
 <div class="row">
 
-  {% for allowed-tags in site.data.tags.allowed-tags %}
-  	{% assign tagName = allowed-tags %}
+  {% assign sidebar = site.data.sidebars.tags_sidebar.entries | first %}
+  {% assign tagFolder = sidebar.folders | first %}
+  {% assign tags = tagFolder.folderitems %}
 
-    <div class="topic-cards">
-      <div class="Card theme_default topic-card">
-        <h3 class="card-header">{{tagName}}</h3>
+  <div class="topic-cards">
+  {% for tag in tags %}
+    {% assign name = tag.title | replace: ' ', '_' | downcase %}
 
-        {% if tagName == "getting_started" %}
-            {% if site.project != "platform" %}
-        		<p>Learn all about how to set up and configure {{site.name}}</p>
-        	{% elsif site.project == "platform" %}
-            	<p>Start creating your app!</p>
-        	{% endif %}
-        {% elsif tagName == "requirements" %}
-        	<p>Read about the requirements your app will need to adhere to.</p>
-        {% elsif tagName == "elements" %}
-        	<p>Learn how to build custom elements that users drag and drop to build a web site.</p>
-        {% elsif tagName == "backend_services" %}
-        	<p>Learn how to build backend services that integrate directly with Weebly via the REST API.</p>
-        {% elsif tagName == "snippets" %}
-        	<p>Create HTML code snippets that can be installed onto a sites pages.</p>
-        {% elsif tagName == "dashboard_cards" %}
-        	<p>Create dynamic cards that your app uses to show site information or that provide a place to configure and maintain your app.</p>
-        {% elsif tagName == "custom_apps" %}
-        	<p>Create apps that you can install directly to your customer's sites.</p>
-        {% elsif tagName == "sites" %}
-        	<p>Create and manage your customer's sites.</p>
-        {% elsif tagName == "apis" %}
-        	<p>Work with the Weebly API.</p>
-        {% endif %}
-      </div>
-    </div>
-  {% endfor %}
+      <a href="{{ tag.url }}" class="Card theme_default topic-card">
+        <div class="card-header" role="heading">{{ tag.title }}</div>
+
+        <p class="card-description">
+          {% if name == "getting_started" %}
+              {% if site.project != "platform" %}
+          		Learn all about how to set up and configure {{site.name}}
+          	{% elsif site.project == "platform" %}
+              	Start creating your app!
+          	{% endif %}
+          {% elsif name == "requirements" %}
+          	Read about the requirements your app will need to adhere to.
+          {% elsif name == "elements" %}
+          	Learn how to build custom elements that users drag and drop to build a web site.
+          {% elsif name == "backend_services" %}
+          	Learn how to build backend services that integrate directly with Weebly via the REST API.
+          {% elsif name == "snippets" %}
+          	Create HTML code snippets that can be installed onto a sites pages.
+          {% elsif name == "dashboard_cards" %}
+          	Create dynamic cards that your app uses to show site information or that provide a place to configure and maintain your app.
+          {% elsif name == "custom_apps" %}
+          	Create apps that you can install directly to your customer's sites.
+          {% elsif name == "sites" %}
+          	Create and manage your customer's sites.
+          {% elsif name == "apis" %}
+          	Work with the Weebly API.
+          {% endif %}
+        </p>
+      </a>
+    {% endfor %}
+
+  </div>
 </div>

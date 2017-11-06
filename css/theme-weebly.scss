@@ -367,7 +367,6 @@ a[data-toggle="tooltip"] {
 }
 
 
-
 #mysidebar {
     padding-left: 0
 }
@@ -379,6 +378,10 @@ a[data-toggle="tooltip"] {
 #mysidebar .nav-group-list.Children {
     padding-left: 8px;
     margin: 16px 0 0 0;
+}
+
+#mysidebar .NavList > *:first-child {
+  margin-top: 8px;
 }
 
 span.muted {color: #666;}
@@ -733,6 +736,16 @@ figure {
   font-size: 16px;
 }
 
+a.Card,
+a.Card:hover {
+  color: $color;
+}
+
+a.Card .card-header {
+  /*color: $color;*/
+  font-weight: 600;
+}
+
 
 .topic-card {
   display: block;
@@ -968,11 +981,11 @@ a.nav-group-list-link {
 .NavLink {
   /* Reduce font-size font by 1. System fonts tend to be bigger than Effra. */
   font-size: 15px;
-  line-height: 17px;
 }
 
 .NavLinkLi {
-	margin: 8px 0;
+  margin: 8px 0;
+  line-height: 1.4;
 }
 
 /* When a nested Nav Link is active, Orbit does not highlight the parent. */

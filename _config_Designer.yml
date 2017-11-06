@@ -110,7 +110,7 @@ sidebars:
 - ds_apps_sidebar
 - ds_themes_sidebar
 - ds_apis_sidebar
-- ds_tags_sidebar
+- tags_sidebar
 - other
 
 description: "Everything you need to install, configure, and manage Weebly Cloud for Designers"

@@ -1,3 +1,7 @@
+# TODO: Move this content into tags.yml?
+# TODO: Merge all tags together between cloud, designer, and platform. They shares tag descriptions.
+#       Add a new field to denote which section uses which tag. Add descriptions here.
+
 # This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
 
 entries:
@@ -6,13 +10,9 @@ entries:
   version:
   folders:
 
-  - title: Tag Pages
+  - title: Topics
     output: web
     folderitems:
-
-    - title: Topics
-      url: /ds_tags_about.html
-      output: web
 
     - title: Getting Started
       url: /tag_getting_started.html
