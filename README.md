@@ -70,7 +70,7 @@ If you don't specify a note type, it will default to `type="info"`.
 
 If you want to add HTML to the content of a Note, for example a link, or use variables to construct the message, then you'll need to use the `capture` tag to construct the message and store it in a varaible ahead of passing it to the *note*.
 
-![Note with HTML](https://raw.githubusercontent.com/robinwhitmore/jekylltechdocs/gh-pages/images/readme/note_with_html.png)
+![Note with HTML](https://raw.githubusercontent.com/robinwhitmore/jekylltechdocs/gh-pages/images/readme/note_html.png)
 
 ```
 {% capture my_var_name %}
