@@ -59,7 +59,7 @@ layout: default
 	        {% for tag in page.tags %}
 				{% if forloop.index != 1 %}, {% endif %}
 		        {% if projectTags contains tag %}
-		        	<a href="{{ "tag_" | append: tag | append: ".html" }}" class="btn btn-default navbar-btn cursorNorm" role="button">{{page.tagName}}{{tag}}</a>
+		        	<a href="{{ "tag_" | append: tag | append: ".html" }}" class="btn btn-default navbar-btn" role="button">{{page.tagName}}{{tag}}</a>
 		        {% endif %}
 	        {% endfor %}
         {% endif %}
