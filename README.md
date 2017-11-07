@@ -75,7 +75,7 @@ If you want to add HTML to the content of a Note, for example a link, or use var
 ```
 {% capture my_var_name %}
 Add [links](home.html) and use variables inside of the capture tag. {%if site.project=="designer" %}Hi Designer.{% endif %}
-{% endcapture%}
+{% endcapture %}
 
 {% include note.html content=my_var_name %}
 ```
