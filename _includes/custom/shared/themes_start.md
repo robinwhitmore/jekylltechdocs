@@ -49,5 +49,11 @@ When they use one of your themes and you {%if site.project=="designer"%}[update]
 If you deliver the theme as a zip file, then you can't really update it. However, you can deliver a zip with an updated version and the user can import and apply it as though it was a new theme. All existing settings will remain.
 
 Whether you create a Cloud theme for all users, or a theme for one user, any user that is an owner of a site can customize that theme. However when they do, they must rename it as a different theme and so cannot override the original.
-<div markdown="span" class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> If you want to restrict access to themes, add the user as a {%if site.project=="designer"%}[contributor](ds_gs_access_sites.html) {%elsif site.project=="cloud"%}[contributor](cl_gs_access_sites.html){%endif%} to the site (instead of as the site's owner) and disallow access to the Theme tab.</div>
+
+{% capture restrict_theme_note %}
+If you want to restrict access to themes, add the user as a {%if site.project=="designer"%}[contributor](ds_gs_access_sites.html) {%elsif site.project=="cloud"%}[contributor](cl_gs_access_sites.html){%endif%} to the site (instead of as the site's owner) and disallow access to the Theme tab.
+{% endcapture %}
+
+{% include note.html content=restrict_theme_note %}
+
 {%endif%}
