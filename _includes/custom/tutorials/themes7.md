@@ -6,8 +6,11 @@ Let's edit the blog post partial. Currently, it displays the date below the titl
 
 Let's switch the date to be above the title.
 
+{% capture post_change_note %}
+In order to see your changes, you need to create a blog post. Follow the instructions <a href="https://hc.weebly.com/hc/en-us/articles/201405086-Create-a-Blog-Post">here</a>.
+{% endcapture%}
 
-<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip: </b> In order to see your changes, you need to create a blog post. Follow the instructions <a href="https://hc.weebly.com/hc/en-us/articles/201405086-Create-a-Blog-Post">here</a>.</div>
+{% include note.html type="tip" content=post_change_note %}
 
 
 Now, let's edit the partial.

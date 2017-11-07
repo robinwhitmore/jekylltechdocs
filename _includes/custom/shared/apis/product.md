@@ -8,7 +8,11 @@ There are three different types of products:
 
 While merchants can always create products, only stores whose sites are on the Starter plan or better can actually sell products. And some plans have restrictions on the quantity and type of products that can be sold. More info on plans {% if site.project=="designer" %}[here](ds_gs_plans.html){%elsif site.project=="cloud" %}[here](cl_gs_plans.html){%elsif site.project=="platform" %}[here](https://www.weebly.com/pricing){%endif%}. ​
 
-<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip: </b>Use <code>plan_level</code> on the {% if site.project=="designer" %}<a href="ds_apis_site.html">Site API</a>{% elsif site.project=="cloud" %}<a href="cl_apis_site.html">Site API</a>{% elsif site.project=="platform" %}<a href="pf_apis_site.html">Site API</a>{% endif %} to determine the site's current plan. </div>
+{% capture plan_level_note %}
+Use <code>plan_level</code> on the {% if site.project=="designer" %}<a href="ds_apis_site.html">Site API</a>{% elsif site.project=="cloud" %}<a href="cl_apis_site.html">Site API</a>{% elsif site.project=="platform" %}<a href="pf_apis_site.html">Site API</a>{% endif %} to determine the site's current plan. 
+{% endcapture %}
+
+{% include note.html type="tip" content=plan_level_note %}
 
 Products can be assigned to {% if site.project=="designer" %}[categories](ds_api_category.html){%elsif site.project=="cloud" %}[categories](cl_api_category.html){%elsif site.project=="platform" %}[categories](pf_api_categories.html){%endif%} in order to group similar items together. And like categories, products can have one or more {% if site.project=="designer" %}[images](ds_api_product_image.html){%elsif site.project=="cloud" %}[images](cl_api_product_image.html){%elsif site.project=="platform" %}[images](pf_api_product_images.html){%endif%}images used for display in the store. Products can be taxable (by default they are) and can have a sale price and a regular price.
 

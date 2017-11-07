@@ -97,7 +97,12 @@ POST /user/USER_ID/theme
 {% endhighlight %}
 
 Creates a new theme in the user account.
-<div markdown="span" class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> "The URL for <code>theme_zip</code> must be publicly accessible and follow the structure for {% if site.project=="designer" %}<a href="ds_themes_directory.html">custom themes</a>{% elsif site.project=="cloud" %}<a href="cl_themes_directory.html">custom themes</a>{% endif %}."</div>
+
+{% capture theme_url_note %}
+"The URL for <code>theme_zip</code> must be publicly accessible and follow the structure for {% if site.project=="designer" %}<a href="ds_themes_directory.html">custom themes</a>{% elsif site.project=="cloud" %}<a href="cl_themes_directory.html">custom themes</a>{% endif %}."
+{% endcapture%}
+
+{% include note.html content=theme_url_note %}
 
 These fields can be created:
 
