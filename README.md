@@ -51,9 +51,8 @@ A list of commonly modified files in the repo.
 
 ## Writing
 
-### Includes
 
-#### note.html
+### note.html
 
 ![Example of Notes](https://raw.githubusercontent.com/robinwhitmore/jekylltechdocs/gh-pages/images/readme/notes.png)
 
@@ -83,7 +82,7 @@ Add [links](home.html) and use variables inside of the capture tag. {%if site.pr
 Don't use quotes around the content value if you are using a variable.
 
 
-#### label.html
+### label.html
 
 ![Example of Labels](https://raw.githubusercontent.com/robinwhitmore/jekylltechdocs/gh-pages/images/readme/labels.png)
 
@@ -100,7 +99,7 @@ Don't use quotes around the content value if you are using a variable.
 
 ```
 
-#### image.html
+### image.html
 
 ```
 {% include image.html file="cl_apps.png" caption="App Detail page in the Cloud Admin" alt="Interface showing form to change details of an app" %}
