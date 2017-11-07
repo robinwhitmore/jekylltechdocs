@@ -5,7 +5,9 @@ a[data-toggle="tooltip"] { color: #649345; font-style: italic; cursor: default; 
 /*--------
 what i added
 --------*/
-div.next { margin-top: 25px; }
+/* .next is used on the button at the bottom of an intro page for a series.
+Classname could be improved. */
+div.next { margin-top: 32px; margin-bottom: 16px; }
 
 .action { -webkit-border-radius: 3px; border-radius: 3px; background-clip: padding-box; background: rgba(0, 0, 0, 0.1); padding: 0; margin: 0 0 16px 0; line-height: 26px; font-weight: normal; }
 
@@ -90,8 +92,6 @@ table.request thead tr th { background-color: #ED1951; }
 
 button.cursorNorm { cursor: default; }
 
-a.dropdown-toggle { margin-left: 10px; }
-
 hr.faded { border: 0; height: 1px; background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); }
 
 hr.shaded { height: 12px; border: 0; box-shadow: inset 0 2px 2px -2px rgba(0, 0, 0, 0.5); margin-top: 70px; background: white; width: 100%; margin-bottom: 10px; }
@@ -112,10 +112,6 @@ li img { clear: both; }
 
 span.tagTitle { font-weight: 500; }
 
-li.activeSeries { font-weight: bold; }
-
-.seriesContext .dropdown-menu li.active { font-weight: bold; margin-left: 43px; font-size: 18px; }
-
 .alert-warning { color: #444; }
 
 div.alert code, h2 code { background-color: transparent !important; }
@@ -131,25 +127,11 @@ button.cursorNorm { cursor: pointer; }
 
 a[data-toggle="tooltip"] { color: #649345; font-style: italic; cursor: default; }
 
-.seriesNext, .seriesContext { margin-top: 15px; margin-bottom: 15px; }
-
-.seriescontext ol li { list-style-type: upper-roman; }
-
-ol.series li { list-style-type: decimal; margin-left: 40px; padding-left: 0px; }
-
 #mysidebar { padding-left: 0; }
 
-#mysidebar > .NavLinkLi { margin-bottom: 16px; }
+#mysidebar > .NavLinkLi { margin-bottom: 12px; }
 
 #mysidebar .nav-group-list.Children { padding-left: 8px; margin: 16px 0 0 0; }
-
-.nav ul.series li { list-style: decimal; font-size: 12px; }
-
-.nav ul.series li a:hover { background-color: gray; }
-
-.nav ul.series { padding-left: 30px; }
-
-.nav ul.series { background-color: #FAFAFA; }
 
 span.muted { color: #666; }
 
@@ -216,7 +198,7 @@ button.btn.btn-default.btn-lg.modalButton1 { margin-left: -20px; }
 div.box.box1 { margin-left: -20px; }
 
 /* EXTENDABLES -------------------------------------------------------------- */
-.font-base, a.nav-group-list-link { color: #003055; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif; font-size: 16px; line-height: 1.5; }
+.font-base { color: #003055; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif; font-size: 16px; line-height: 1.5; }
 
 .font-smoothing, a.nav-group-list-link { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
 
@@ -277,6 +259,19 @@ figure { margin: 0; }
 .topic-card { display: block; float: left; max-width: 300px; height: 160px; margin: 0 24px 24px 0; }
 .topic-card p { color: #5B6D7F; }
 
+/* SERIES ------------------------------------------------------------------- */
+/* Hiding the Series Dropdown. Seem unnecessary. List of steps is visible in the sidebar. */
+.seriesContext { display: none; }
+
+.btn-group { position: relative; margin-bottom: 16px; }
+
+.dropdown-menu { display: none; position: absolute; z-index: 1; top: 24px; max-width: 320px; padding-left: 16px; background-color: white; border: 1px solid #dfe6ee; box-shadow: 0 1px 3px 1px rgba(0, 11, 46, 0.2); list-style: none; }
+.dropdown-menu .active { font-weight: bold; }
+
+.btn-group.open .dropdown-menu { display: block; }
+
+.series-nav { display: flex; justify-content: space-between; margin-bottom: 16px; }
+
 /* POPOVER ------------------------------------------------------------------- */
 [data-toggle="popover"]:hover { cursor: pointer; }
 
@@ -329,6 +324,8 @@ a.nav-group-list-link { font-weight: 400; color: #000b2e; font-size: 16px; }
 @media (min-width: 767px) { .nav-group-list.horizontal > *:first-child { margin: 0; } }
 
 .nav-group-list.horizontal > *:last-child { margin-bottom: 0; margin-left: 0; }
+
+.NavLink { /* Reduce font-size font by 1. System fonts tend to be bigger than Effra. */ font-size: 15px; line-height: 17px; }
 
 .NavLinkLi { margin: 8px 0; }
 

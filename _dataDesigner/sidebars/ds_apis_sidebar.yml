@@ -43,46 +43,6 @@ entries:
       output: web, pdf
       # ready for review
 
-    - title: Form API
-      url: /ds_api_form.html
-      output: web, pdf
-      # ready for review
-
-    - title: Form Entry API
-      url: /ds_api_form_entry.html
-      output: web, pdf
-      # ready for review
-
-    - title: Member API
-      url: /ds_api_member.html
-      output: web, pdf
-      # ready for review
-
-    - title: Group API
-      url: /ds_api_group.html
-      output: web, pdf
-      # ready for review
-
-    - title: Page API
-      url: /ds_api_page.html
-      output: web, pdf
-      # ready for review
-
-    - title: Plan API
-      url: /ds_api_plan.html
-      output: web, pdf
-      # ready for review
-
-    - title: Site API
-      url: /ds_api_site.html
-      output: web, pdf
-      # ready for review
-
-    - title: Store API
-      url: /ds_api_store.html
-      output: web, pdf
-      # ready for review
-
     - title: Category API
       url: /ds_api_category.html
       output: web, pdf
@@ -93,10 +53,43 @@ entries:
       output: web, pdf
       # ready for review
 
+    - title: Client API
+      url: /ds_api_client.html
+      output: web, pdf
+      # ready for review
+
+    - title: Client Site API
+      url: /ds_api_client_site.html
+      output: web, pdf
+      # ready for review
+
+
     - title: Coupon API
       url: /ds_api_coupon.html
       output: web, pdf
       # ready for review
+
+
+    - title: Form API
+      url: /ds_api_form.html
+      output: web, pdf
+      # ready for review
+
+    - title: Form Entry API
+      url: /ds_api_form_entry.html
+      output: web, pdf
+      # ready for review
+
+
+    - title: Group API
+      url: /ds_api_group.html
+      output: web, pdf
+      # ready for review
+
+    - title: Member API
+      url: /ds_api_member.html
+      output: web, pdf
+     # ready for review
 
     - title: Order API
       url: /ds_api_order.html
@@ -128,6 +121,16 @@ entries:
       output: web, pdf
       # ready for review
 
+    - title: Page API
+      url: /ds_api_page.html
+      output: web, pdf
+      # ready for review
+
+    - title: Plan API
+      url: /ds_api_plan.html
+      output: web, pdf
+      # ready for review
+
     - title: Product API
       url: /ds_api_product.html
       output: web, pdf
@@ -152,6 +155,16 @@ entries:
       url: /ds_api_product_sku_option_choice.html
       output: web, pdf
       #ready for review
+
+    - title: Site API
+      url: /ds_api_site.html
+      output: web, pdf
+      # ready for review
+
+    - title: Store API
+      url: /ds_api_store.html
+      output: web, pdf
+      # ready for review
 
     - title: Team Member API
       url: /ds_api_team_member.html
@@ -182,8 +195,18 @@ entries:
       output: web, pdf
       # ready for review
 
-    - title: User Webhooks
-      url: /ds_wh_user.html
+    - title: Blog Webhooks
+      url: /ds_wh_blog.html
+      output: web, pdf
+      # ready for review
+
+    - title: Form Webhooks
+      url: /ds_wh_form.html
+      output: web, pdf
+      # ready for review
+
+    - title: Member Webhooks
+      url: /ds_wh_member.html
       output: web, pdf
       # ready for review
 
@@ -197,17 +220,7 @@ entries:
       output: web, pdf
       # ready for review
 
-    - title: Member Webhooks
-      url: /ds_wh_member.html
-      output: web, pdf
-      # ready for review
-
-    - title: Form Webhooks
-      url: /ds_wh_form.html
-      output: web, pdf
-      # ready for review
-
-    - title: Blog Webhooks
-      url: /ds_wh_blog.html
+    - title: User Webhooks
+      url: /ds_wh_user.html
       output: web, pdf
       # ready for review

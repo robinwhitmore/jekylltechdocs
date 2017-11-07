@@ -172,9 +172,7 @@ The following table shows all fields that exist for this API, noting those that 
             <code>time_zone</code>
         </td>
         <td>Time zone of the blog. ​Valid
-            values can be found <a
-                    href="http://cloud-developer.weebly.com/uploads/3/0/3/1/30316827/timezones.json"
-                    target="_blank">here<!--todo: Need to repost this somewhere--></a>.<br>
+          values can be found {% if site.project=="designer" %}<a href="ds_timezones.html">here</a>{% elsif site.project=="cloud" %}<a href="cl_timezones.html">here</a>{% elsif site.project=="platform" %}<a href="pf_timezones.html">here</a>{% endif %}.
         </td>
         <td>string</td>
         <td>

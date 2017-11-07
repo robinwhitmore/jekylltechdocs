@@ -38,12 +38,9 @@ More [here](ds_gs_plans.html).
 Your clients are the people you design and create web sites for. You create and manage your clients from the Cloud Admin. You need a name and an email to set up a client. Learn how [here](ds_gs_clients.html).
 
 ## 7. Determine the Level of Access a Client Has
-<!--todo: find out which is correct -->
-By default, clients have <span style="color: red">[[need to check]]</span>
 
-[complete access to their site when it's created. They can view, edit, and publish the site by logging into the User Portal. You can restrict their access by setting them up as a [site contributor](ds_gs_access_sites.html) with limited permissions.]
+By default, clients don't have access to any sites that you create for them. You need to set them up as a {% if site.project=="designer" %}[site contributor](ds_gs_access_sites.html){%elsif site.project=="cloud" %}[site contributor](cl_gs_access_sites.html){%endif%} and set the level access you'd like them to have.
 
-[no access to their site when it's created. But you can give them full or restricted access by setting them up as a [site contributor](ds_gs_access_sites.html) for a site.]
 
 ## 8. Create and Publish a Site
 Once you have a client, and you've created at least one plan, you can create a site. From the client's detail page, it's a simple as clicking **Add Site**. You're taken to the Weebly Editor, where you can drag and drop elements to build the site. Once created, you edit, preview, and publish the site. Learn about creating, editing, and managing sites [here](ds_gs_cr_sites.html).

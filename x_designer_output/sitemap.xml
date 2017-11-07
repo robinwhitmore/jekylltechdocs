@@ -44,6 +44,18 @@
   
   
   <url>
+    <loc>http://localhost:4008/ds_api_client.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_api_client_site.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4008/ds_api_coupon.html</loc>
   </url>
   
@@ -741,6 +753,12 @@
   
   <url>
     <loc>http://localhost:4008/ds_themes_variations.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4008/ds_timezones.html</loc>
   </url>
   
   

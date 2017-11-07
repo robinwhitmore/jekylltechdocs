@@ -142,19 +142,19 @@ If you use plug-ins with Weebly Cloud, then your users create sites using the pl
 {% endif %}
 
 ## Edit a Site
-
+{% if site.project=="cloud" %}
 Once a site is created, you can edit the site one of two ways:
 
 From the {{site.user}}'s detail page of the Cloud Admin, click **Login**.
 <!--todo: cloud: add image from user detail-->
-<!--todo: designer: this doesnt seem available-->
 Then click **Edit** from the portal.
 {% include image.html file="cl_userPortal.png" %}<br>
 
 Or, from the site's detail page in the Cloud Admin, click **Edit Site**.
-{% if site.project=="cloud" %}
 {% include image.html file="cl_site_detail_edit.png" %}
+
 {% elsif site.project=="designer" %}
+From the site's detail page in the Cloud Admin, click **Edit Site**.
 {% include image.html file="ds_siteDetailEdit.png" caption="Edit a Site from the Cloud Admin" %}
 {%endif%}
 
