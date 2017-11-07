@@ -39,7 +39,8 @@ A list of commonly modified files in the repo.
 |   └── theme-weebly.scss - Styles for site layout and filling in Orbit's gaps. Also includes Orbit overrides. 
 ├── js
 |   └── customscripts.js - All the JS we write lives in here.
-├── _x_*: Generated content.
+├── _site: Auto-generated. Do not edit.
+├── _x_*: Auto-generated. Do not edit.
 ```
 
 ### Third-party Libraries
@@ -64,6 +65,23 @@ A list of commonly modified files in the repo.
 ```
 
 If you don't specify a note type, it will default to `type="info"`.
+
+#### Using HTML and Variables in a Note
+
+If you want to add HTML to the content of a Note, for example a link, or use variables to construct the message, then you'll need to use the `capture` tag to construct the message and store it in a varaible ahead of passing it to the *note*.
+
+![Note with HTML](https://raw.githubusercontent.com/robinwhitmore/jekylltechdocs/gh-pages/images/readme/note_with_html.png)
+
+```
+{% capture my_var_name %}
+Add [links](home.html) and use variables inside of the capture tag. {%if site.project=="designer" %}Hi Designer.{% endif %}
+{% endcapture%}
+
+{% include note.html content=my_var_name %}
+```
+
+Don't use quotes around the content value if you are using a variable.
+
 
 #### label.html
 
