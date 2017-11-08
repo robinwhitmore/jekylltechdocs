@@ -769,6 +769,23 @@ a.Card .card-header {
     padding: 8px 16px;
 }
 
+/* Tags -----------------------------------------------------------*/
+.tags .tags-link {
+	&:after {
+		content: ",";
+		cursor: default;
+		color: $color;
+		margin-right: 2px;
+	}
+
+	&:only-child,
+	&:last-child {
+		&:after {
+			content: '';
+		}
+	}
+}
+
 /* ORBIT EXTERNAL - OVERRIDES -----------------------------------------------------------*/
 /*
   orbit-exernal.css is generated from https://github.intern.weebly.net/weebly/orbit-3rd-party.
