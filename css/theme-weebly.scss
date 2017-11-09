@@ -64,25 +64,6 @@ caption {
     text-align: left;
 }
 
-table col[class*="col-"] {
-	position: static;
-	display: table-column;
-	float: none;
-}
-table td[class*="col-"],
-
-table th[class*="col-"] {
-	position: static;
-	display: table-cell;
-	float: none;
-}
-
-
-table tr td {
-	hyphens: auto;
-}
-
-
 p.external a {
 	text-align:right;
 	font-size:12px;
@@ -230,55 +211,6 @@ figcaption {
 	color: gray;
 }
 
-.testing {
-	color: orange;
-}
-
-.preference {
-	color: red;
-}
-
-table td {
-	hyphens: auto;
-}
-
-section table tr.success {
-	background-color: #dff0d8 !important;
-}
-
-table tr.info {
-	background-color: #d9edf7 !important;
-}
-
-section table tr.warning,
-table tr.testing,
-table tr.testing > td.sorting  {
-	background-color: #fcf8e3 !important;
-}
-section table tr.danger, table tr.preference, table tr.preference > td.sorting  {
-	background-color: #f2dede !important;
-}
-
-.orange {
-	color: orange;
-}
-
-
-table.request thead tr th {
-	background-color: #ED1951;
-}
-
-.audienceLabel {
-	margin: 10px;
-	float: right;
-	border:1px solid #dedede;
-	padding:7px;
-}
-
-button.cursorNorm {
-	cursor: default;
-}
-
 
 hr.faded {
 	border: 0;
@@ -303,11 +235,6 @@ a[data-toggle] {
 	color: #248EC2;
 }
 
-
-a.fa.fa-envelope-o.mailto {
-	font-weight: 600;
-}
-
 .alert, .callout {
 	overflow: hidden;
 }
@@ -324,13 +251,6 @@ li img {
 	clear:both;
 }
 
-.tab-content {
-	padding: 15px;
-	background-color: #FAFAFA;
-}
-
-span.tagTitle {font-weight: 500;}
-
 .alert-warning {
 	color: #444;
 }
@@ -344,10 +264,6 @@ h2 code {
 	text-decoration: underline;
 }
 
-.tabLabel {
-	font-weight: normal;
-}
-
 hr {
 	background: #999;
 	margin: 30px 0px;
@@ -356,16 +272,11 @@ hr {
 	margin-right: auto;
 }
 
-button.cursorNorm {
-	cursor: pointer;
-}
-
 a[data-toggle="tooltip"] {
 	color: #649345;
 	font-style: italic;
 	cursor: default;
 }
-
 
 
 #mysidebar {
@@ -379,6 +290,10 @@ a[data-toggle="tooltip"] {
 #mysidebar .nav-group-list.Children {
     padding-left: 8px;
     margin: 16px 0 0 0;
+}
+
+#mysidebar .NavList > *:first-child {
+  margin-top: 8px;
 }
 
 span.muted {color: #666;}
@@ -436,20 +351,6 @@ span.red {
 
 .githubEditButton {
 	margin-bottom:7px;
-}
-
-.endpoint {
-	padding: 15px;
-	background-color: #f0f0f0;
-	font-family: courier;
-	font-size: 110%;
-	margin: 20px 0px;
-	color: #444;
-}
-
-.parameter {
-	font-family: courier;
-	color: red !important;
 }
 
 
@@ -627,7 +528,6 @@ figure {
   }
 }
 
-
 /* POST --------------------------------------------------------------------- */
 
 /* POST TOC */
@@ -651,7 +551,7 @@ figure {
 
 /* POST HEADER */
 
-.pageType {
+.page-type {
 	margin-bottom: 12px;
 	color: $muted-color;
 	text-transform: uppercase;
@@ -731,6 +631,16 @@ figure {
 .card-header {
 	margin: 0;
   font-size: 16px;
+}
+
+a.Card,
+a.Card:hover {
+  color: $color;
+}
+
+a.Card .card-header {
+  /*color: $color;*/
+  font-weight: 600;
 }
 
 
@@ -859,8 +769,28 @@ figure {
     padding: 8px 16px;
 }
 
+/* Tags -----------------------------------------------------------*/
+.tags .tags-link {
+	&:after {
+		content: ",";
+		cursor: default;
+		color: $color;
+		margin-right: 2px;
+	}
 
-/* ORBIT EXTERNAL OVERRIDES -----------------------------------------------------------*/
+	&:only-child,
+	&:last-child {
+		&:after {
+			content: '';
+		}
+	}
+}
+
+/* ORBIT EXTERNAL - OVERRIDES -----------------------------------------------------------*/
+/*
+  orbit-exernal.css is generated from https://github.intern.weebly.net/weebly/orbit-3rd-party.
+  It includes Orbit style rules applied to HTML elements.
+*/
 
 h1 {
   font-weight: 600;
@@ -878,7 +808,24 @@ h3 {
 	font-weight: 400;
 }
 
-/* ORBIT OVERRIDES -----------------------------------------------------------*/
+table {
+  margin-bottom: 32px;
+}
+
+td {
+  font-size: 15px;
+  vertical-align: top;
+}
+
+td:first-child {
+  padding-left: 16px;
+}
+
+/* ORBIT - OVERRIDES -----------------------------------------------------------*/
+/*
+  orbit.css is generated from https://github.intern.weebly.net/weebly/orbit.
+  It includes all the Orbit CSS. All the rules apply to classes and do not target HTML elements.
+*/
 
 .post-title-main { /* Overrides .display-2 */
 	margin-top: 0;
@@ -903,10 +850,6 @@ div.Notice {
 .Children {
 	margin-top: 0;
 }
-
-// .nav-group-list > *:first-child {
-// 	margin-top: 8px;
-// }
 
 /* Tags are often displayed inline alongside text, give them a little breath to room. */
 .Tag {
@@ -958,21 +901,17 @@ a.nav-group-list-link {
 
 .nav-group-list.horizontal > *:last-child {
 	margin-bottom: 0;
-    margin-left: 0;
-
-    // @media (min-width: $media-tablet) {
-    //     margin: 0 0 0 20px;
-    // }
+  margin-left: 0;
 }
 
 .NavLink {
   /* Reduce font-size font by 1. System fonts tend to be bigger than Effra. */
   font-size: 15px;
-  line-height: 17px;
 }
 
 .NavLinkLi {
-	margin: 8px 0;
+  margin: 8px 0;
+  line-height: 1.4;
 }
 
 /* When a nested Nav Link is active, Orbit does not highlight the parent. */
@@ -997,6 +936,10 @@ a.nav-group-list-link {
 .top-nav-item {
 	@media (max-width: $media-tablet) {
 		flex: 1;
+    text-align: right;
+    * {
+      text-align: left;
+    }
 	}
 }
 
