@@ -11,14 +11,14 @@ function msg {
 }
 
 
-SOURCE="jekylltechdocs"
+SOURCE="NewDocs"
 DESTINATION="x_designer_output"
 PROJECT="designer"
 
 export PROOF=true
 export NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 
-cd Documents/jekylltechdocs
+cd Documents/NewDocs
 
 # 1.
 # msg "Installing..."

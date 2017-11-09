@@ -123,7 +123,7 @@ You can edit a created contact by clicking the **Edit** icon.
 {%endif%}
 
 ## View and Create API Keys and Secrets
-API keys and secrets are used during {% if site.project=="designer" %}[API calls](ds_apis_about.html){%elsif site.project=="cloud" %}[API calls](cl_apis_about.html){%endif%} to verify the sender of a request. You need to create a key to use the API{%if site.project=="cloud"%}, and you'll also need to create a key when you install any <span style="color: red">plug-ins</span>{%endif%}.
+API keys and secrets are used during {% if site.project=="designer" %}[API calls](ds_api_about.html){%elsif site.project=="cloud" %}[API calls](cl_api_about.html){%endif%} to verify the sender of a request. You need to create a key to use the API{%if site.project=="cloud"%}, and you'll also need to create a key when you install any <span style="color: red">plug-ins</span>{%endif%}.
 
 **To create a key:**
 1. From the Cloud Admin, click the **Settings** tab.

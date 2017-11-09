@@ -31,4 +31,4 @@ Here is a list of royalty free photography sites that allow you to distribute im
 These sites might come in handy while you're designing and implementing your theme:
 * Interactions:​ [codrops](http://tympanus.net/codrops/)
 * HeroImages:​ [Heroes](http://ui8.net/product/heroes)
-* Libraries: [codepen](​https://codepen.io/​) and [Animate.css](​https://daneden.github.io/animate.css/)
+* Libraries: [codepen](https://codepen.io) and [Animate.css](https://daneden.github.io/animate.css)
