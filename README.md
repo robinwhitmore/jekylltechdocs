@@ -1,8 +1,10 @@
 # Weebly Developer Docs
 
-## 🖥 Developing
+1. **[Getting Started](#getting-started)** - Steps to set up the project locally so you can begin developing and writing.
+1. **[Developing](#developing)** - Info on working with templates, styles, and data.
+1. **[Writing](#writing)** - Info on writing content.
 
-### Quick Start
+## Getting Started
 
 ```
 # Install Jekyll and the Gem Bundler
@@ -23,6 +25,8 @@ jekyll serve --config _config_Designer.yml --incremental
 # Visit http://localhost:400[X]/
 # Check the port number noted in your Terminal. It will be 4000, 4006, or 4008.
 ```
+
+## 🖥 Developing
 
 ### Directory Structure
 
@@ -49,21 +53,25 @@ Please follow the `.editorconfig` settings which are taken from the official Jek
 
 ### CSS 
 
+#### Writing CSS
+
+The majority of the CSS you'll be modifying lives in `theme-weebly.scss`. Jekyll has built-in support for SASS, so you can utilize variables, extend, and mixins. The available variables are placed at the top of the file.
+
 #### Importing the Latest Orbit Styles
 
-If Orbit goes through significant visual changes we should consider bringing these changes in to Developer Docs to keep this project aligned with the rest of the Weebly ecosystem. The new Orbit styles will not automatically be imported in to Developer Docs. To bring the new styles in, follow the instructions noted below.
+If Orbit goes through significant visual changes then it is worth considering bringing these changes in to Developer Docs to keep this project aligned with the rest of the Weebly ecosystem. The new Orbit styles will not automatically be imported in to Developer Docs. To bring the new styles in, follow the instructions noted below.
 
 This project has two CSS files that bring in Orbit styles. They are both generated from other repos.
 
+1. **orbit-external.css** - Generated from the [orbit-3rd-party](https://github.intern.weebly.net/weebly/orbit-3rd-party) repo. Adds styles to HTML elements. ex. h1, h2, h3, p
 1. **orbit.css** - Generated from the [orbit](https://github.intern.weebly.net/weebly/orbit) repo. Includes CSS classes that map to Orbit Components. ex. .Nav, .Card
-2. **orbit-external.css** - Generated from the [orbit-3rd-party](https://github.intern.weebly.net/weebly/orbit-3rd-party) repo. Adds styles to HTML elements. ex. h1, h2, h3, p
 
 Do not manually edit either of these files. If you need to override styles from these imports, add them to their respective section near the bottom of `theme-weebly.scss`:
 
-1. Orbit External - Overrides
-2. Orbit - Overrides'
+1. "Orbit External - Overrides"
+2. "Orbit - Overrides"
 
-#### Updating `orbit-exernal.css`
+#### 1. Updating `orbit-exernal.css`
 
 1. Clone the [orbit-3rd-party repo](https://github.intern.weebly.net/weebly/orbit-3rd-party).
 1. Update the Orbit version in `package.json`
@@ -71,9 +79,17 @@ Do not manually edit either of these files. If you need to override styles from 
 1. `npm run build`
 1. Copy `dist/orbit.css`. Rename to `orbit-external.css`. Drop in to this repo's `/css` folder..
 
-#### Updating `orbit.css`
+#### 2. Updating `orbit.css`
 
-WIP
+This process is manual. The steps below might not be complete. Update this README if you find any gaps.
+
+1. Clone the [Orbit repo](https://github.intern.weebly.net/weebly/orbit/).
+1. `npm install`
+1. Update the webpack config to not hash the CSS classnames. Open up `build/webpack.config.build.js` and update the `localIdentName` value. `localIdentName: '[local]',`
+1. `./node_modules/.bin/webpack --config build/webpack.config.build.js`
+1. Open up `styles.css`. Do a _find and replace_, replacing all "_0" references with an empty string "".
+1. Copy the contents of `style.css` and paste into `css/orbit.css` in this project.
+1. You're not quite done yet. Find the Notice section in the CSS. You'll see a set of 'type_' classes. Update each of these selectors to include `.Notice`. ex. `.type_info` becomes `.Notice.type_info`
 
 
 ### Third-party Libraries
