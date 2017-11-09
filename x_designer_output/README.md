@@ -1,7 +1,6 @@
-# jekylltechdocs
+# Weebly Developer Docs
 
-
-## Developing
+## 🖥 Developing
 
 ### Quick Start
 
@@ -12,10 +11,17 @@ gem install jekyll bundler
 # Install gems (~5 min)
 bundle install
 
-# Start dev env. Specify one the config files in the root folder.
+# Start dev env. Specify one the three config files in the root folder.
+jekyll serve --config _config_Designer.yml
+# jekyll serve --config _config_Cloud.yml
+# jekyll serve --config _config_Platform.yml
+
+# For speedier compilation (0.5s rather than 5s) use the incremental flag.
+# Note: Some edits, such as those to data files will not be caught with this flag on.
 jekyll serve --config _config_Designer.yml --incremental
 
-# Visit http://localhost:4008/
+# Visit http://localhost:400[X]/
+# Check the port number noted in your Terminal. It will be 4000, 4006, or 4008.
 ```
 
 ### Directory Structure
@@ -24,15 +30,51 @@ A list of commonly modified files in the repo.
 
 ```
 .
-├── search.json - Generates JSON that powers search. Builds index from pages.
+├── _data: Data for templates stored in YAML files.
+├── _site: Auto-generated. Do not edit.
 ├── css
-|   └── orbit.css - Generated from Orbit. Classes that map to Orbit components. ex. Nav, Card
-|   └── orbit-external.css - Generated from Orbit. Styles some HTML elements. ex. h1, h2, h3, p
+|   └── orbit.css - Generated from orbit. Do not edit.
+|   └── orbit-external.css - Generated from orbit-3rd-party. Do not edit.
 |   └── theme-weebly.scss - Styles for site layout and filling in Orbit's gaps. Also includes Orbit overrides. 
 ├── js
 |   └── customscripts.js - All the JS we write lives in here.
-├── _x_*: Generated content.
+├── pages: Markdown files for the page content.
+├── x_*: Auto-generated. Do not edit.
+├── search.json - Generates JSON that powers search. Builds index from pages.
 ```
+
+### Code Style
+
+Please follow the `.editorconfig` settings which are taken from the official Jekyll project. Indent style is '2 spaces'.
+
+### CSS 
+
+#### Importing the Latest Orbit Styles
+
+If Orbit goes through significant visual changes we should consider bringing these changes in to Developer Docs to keep this project aligned with the rest of the Weebly ecosystem. The new Orbit styles will not automatically be imported in to Developer Docs. To bring the new styles in, follow the instructions noted below.
+
+This project has two CSS files that bring in Orbit styles. They are both generated from other repos.
+
+1. **orbit.css** - Generated from the [orbit](https://github.intern.weebly.net/weebly/orbit) repo. Includes CSS classes that map to Orbit Components. ex. .Nav, .Card
+2. **orbit-external.css** - Generated from the [orbit-3rd-party](https://github.intern.weebly.net/weebly/orbit-3rd-party) repo. Adds styles to HTML elements. ex. h1, h2, h3, p
+
+Do not manually edit either of these files. If you need to override styles from these imports, add them to their respective section near the bottom of `theme-weebly.scss`:
+
+1. Orbit External - Overrides
+2. Orbit - Overrides'
+
+#### Updating `orbit-exernal.css`
+
+1. Clone the [orbit-3rd-party repo](https://github.intern.weebly.net/weebly/orbit-3rd-party).
+1. Update the Orbit version in `package.json`
+1. `npm install`
+1. `npm run build`
+1. Copy `dist/orbit.css`. Rename to `orbit-external.css`. Drop in to this repo's `/css` folder..
+
+#### Updating `orbit.css`
+
+WIP
+
 
 ### Third-party Libraries
 
@@ -40,11 +82,11 @@ A list of commonly modified files in the repo.
 - [Simple Jekyll Search](https://github.com/christian-fei/Simple-Jekyll-Search) 
 - [Bootstrap](http://getbootstrap.com/docs/3.3/) - We don't pull in the Bootstrap CSS. We just use the BootstrapJS for Tooltip and Popover functionality.
 
-## Writing
 
-### Includes
+## ✏️ Writing
 
-#### note.html
+
+### note.html
 
 ![Example of Notes](https://raw.githubusercontent.com/robinwhitmore/jekylltechdocs/gh-pages/images/readme/notes.png)
 
@@ -57,7 +99,24 @@ A list of commonly modified files in the repo.
 
 If you don't specify a note type, it will default to `type="info"`.
 
-#### label.html
+#### Using HTML and Variables in a Note
+
+If you want to add HTML to the content of a Note, for example a link, or use variables to construct the message, then you'll need to use the `capture` tag to construct the message and store it in a variable ahead of passing it to the *note*.
+
+![Note with HTML](https://raw.githubusercontent.com/robinwhitmore/jekylltechdocs/gh-pages/images/readme/note_html.png)
+
+```
+{% capture my_var_name %}
+Add [links](home.html) and use variables inside of the capture tag. {%if site.project=="designer" %}Hi Designer.{% endif %}
+{% endcapture %}
+
+{% include note.html content=my_var_name %}
+```
+
+Don't use quotes around the content value if you are using a variable.
+
+
+### label.html
 
 ![Example of Labels](https://raw.githubusercontent.com/robinwhitmore/jekylltechdocs/gh-pages/images/readme/labels.png)
 
@@ -74,7 +133,7 @@ If you don't specify a note type, it will default to `type="info"`.
 
 ```
 
-#### image.html
+### image.html
 
 ```
 {% include image.html file="cl_apps.png" caption="App Detail page in the Cloud Admin" alt="Interface showing form to change details of an app" %}

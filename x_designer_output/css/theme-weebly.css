@@ -15,12 +15,6 @@ div.next { margin-top: 32px; margin-bottom: 16px; }
 
 caption { padding-top: 8px; padding-bottom: 8px; color: #777; text-align: left; }
 
-table col[class*="col-"] { position: static; display: table-column; float: none; }
-
-table td[class*="col-"], table th[class*="col-"] { position: static; display: table-cell; float: none; }
-
-table tr td { hyphens: auto; }
-
 p.external a { text-align: right; font-size: 12px; color: #0088cc; display: inline; }
 
 #search-demo-container { position: relative; }
@@ -70,35 +64,11 @@ dl.dl-horizontal dd { padding-top: 20px; }
 
 figcaption { padding-bottom: 12px; padding-top: 6px; max-width: 90%; margin-bottom: 20px; font-style: italic; color: gray; }
 
-.testing { color: orange; }
-
-.preference { color: red; }
-
-table td { hyphens: auto; }
-
-section table tr.success { background-color: #dff0d8 !important; }
-
-table tr.info { background-color: #d9edf7 !important; }
-
-section table tr.warning, table tr.testing, table tr.testing > td.sorting { background-color: #fcf8e3 !important; }
-
-section table tr.danger, table tr.preference, table tr.preference > td.sorting { background-color: #f2dede !important; }
-
-.orange { color: orange; }
-
-table.request thead tr th { background-color: #ED1951; }
-
-.audienceLabel { margin: 10px; float: right; border: 1px solid #dedede; padding: 7px; }
-
-button.cursorNorm { cursor: default; }
-
 hr.faded { border: 0; height: 1px; background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); }
 
 hr.shaded { height: 12px; border: 0; box-shadow: inset 0 2px 2px -2px rgba(0, 0, 0, 0.5); margin-top: 70px; background: white; width: 100%; margin-bottom: 10px; }
 
 a[data-toggle] { color: #248EC2; }
-
-a.fa.fa-envelope-o.mailto { font-weight: 600; }
 
 .alert, .callout { overflow: hidden; }
 
@@ -108,10 +78,6 @@ ol li ul li { list-style-type: disc; }
 
 li img { clear: both; }
 
-.tab-content { padding: 15px; background-color: #FAFAFA; }
-
-span.tagTitle { font-weight: 500; }
-
 .alert-warning { color: #444; }
 
 div.alert code, h2 code { background-color: transparent !important; }
@@ -119,11 +85,7 @@ div.alert code, h2 code { background-color: transparent !important; }
 /* without this, the links in these notes aren't visible.*/
 .alert a { text-decoration: underline; }
 
-.tabLabel { font-weight: normal; }
-
 hr { background: #999; margin: 30px 0px; width: 90%; margin-left: auto; margin-right: auto; }
-
-button.cursorNorm { cursor: pointer; }
 
 a[data-toggle="tooltip"] { color: #649345; font-style: italic; cursor: default; }
 
@@ -132,6 +94,8 @@ a[data-toggle="tooltip"] { color: #649345; font-style: italic; cursor: default; 
 #mysidebar > .NavLinkLi { margin-bottom: 12px; }
 
 #mysidebar .nav-group-list.Children { padding-left: 8px; margin: 16px 0 0 0; }
+
+#mysidebar .NavList > *:first-child { margin-top: 8px; }
 
 span.muted { color: #666; }
 
@@ -156,10 +120,6 @@ dd { margin-left: 20px; }
 span.red { color: red; font-family: Monaco, Menlo, Consolas, "Courier New", monospace; }
 
 .githubEditButton { margin-bottom: 7px; }
-
-.endpoint { padding: 15px; background-color: #f0f0f0; font-family: courier; font-size: 110%; margin: 20px 0px; color: #444; }
-
-.parameter { font-family: courier; color: red !important; }
 
 /* this part adds an icon after external links, using FontAwesome*/
 a[href^="http://"]:after, a[href^="https://"]:after { content: "\f08e"; font-family: FontAwesome; font-weight: normal; font-style: normal; display: inline-block; text-decoration: none; padding-left: 3px; }
@@ -230,7 +190,7 @@ figure { margin: 0; }
 .toc > ul::before { content: "Table of Contents"; font-size: 14px; color: #000b2e; }
 
 /* POST HEADER */
-.pageType { margin-bottom: 12px; color: #bdccdc; text-transform: uppercase; }
+.page-type { margin-bottom: 12px; color: #bdccdc; text-transform: uppercase; }
 
 .summary { color: #5B6D7F; line-height: 1.5; margin-bottom: 40px; }
 
@@ -255,6 +215,10 @@ figure { margin: 0; }
 
 /* CARD ------------------------------------------------------------------- */
 .card-header { margin: 0; font-size: 16px; }
+
+a.Card, a.Card:hover { color: #003055; }
+
+a.Card .card-header { /*color: $color;*/ font-weight: 600; }
 
 .topic-card { display: block; float: left; max-width: 300px; height: 160px; margin: 0 24px 24px 0; }
 .topic-card p { color: #5B6D7F; }
@@ -291,14 +255,28 @@ figure { margin: 0; }
 
 .popover-content { padding: 8px 16px; }
 
-/* ORBIT EXTERNAL OVERRIDES -----------------------------------------------------------*/
+/* Tags -----------------------------------------------------------*/
+.tags .tags-link:after { content: ","; cursor: default; color: #003055; margin-right: 2px; }
+.tags .tags-link:only-child:after, .tags .tags-link:last-child:after { content: ''; }
+
+/* ORBIT EXTERNAL - OVERRIDES -----------------------------------------------------------*/
+/* orbit-exernal.css is generated from https://github.intern.weebly.net/weebly/orbit-3rd-party. It includes Orbit style rules applied to HTML elements.
+*/
 h1 { font-weight: 600; }
 
 h2 { margin-top: 32px; font-size: 24px; font-weight: 500; }
 
 h3 { margin-top: 16px; font-size: 20px; font-weight: 400; }
 
-/* ORBIT OVERRIDES -----------------------------------------------------------*/
+table { margin-bottom: 32px; }
+
+td { font-size: 15px; vertical-align: top; }
+
+td:first-child { padding-left: 16px; }
+
+/* ORBIT - OVERRIDES -----------------------------------------------------------*/
+/* orbit.css is generated from https://github.intern.weebly.net/weebly/orbit. It includes all the Orbit CSS. All the rules apply to classes and do not target HTML elements.
+*/
 .post-title-main { /* Overrides .display-2 */ margin-top: 0; margin-bottom: 6px; font-size: 36px; font-weight: 600; }
 
 div.Notice { display: block; margin-bottom: 24px; background-image: url(/images/icons/circle.svg); background-repeat: no-repeat; background-position: 20px 20px; padding-left: 42px; }
@@ -325,9 +303,9 @@ a.nav-group-list-link { font-weight: 400; color: #000b2e; font-size: 16px; }
 
 .nav-group-list.horizontal > *:last-child { margin-bottom: 0; margin-left: 0; }
 
-.NavLink { /* Reduce font-size font by 1. System fonts tend to be bigger than Effra. */ font-size: 15px; line-height: 17px; }
+.NavLink { /* Reduce font-size font by 1. System fonts tend to be bigger than Effra. */ font-size: 15px; }
 
-.NavLinkLi { margin: 8px 0; }
+.NavLinkLi { margin: 8px 0; line-height: 1.4; }
 
 /* When a nested Nav Link is active, Orbit does not highlight the parent. */
 .NavLinkLi.active > .NavLink { color: #0073ff; font-weight: 500; }
@@ -335,7 +313,8 @@ a.nav-group-list-link { font-weight: 400; color: #000b2e; font-size: 16px; }
 .top-nav { display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; margin: 32px auto; }
 @media (min-width: 767px) { .top-nav { margin: 32px auto 64px; flex-wrap: nowrap; } }
 
-@media (max-width: 767px) { .top-nav-item { flex: 1; } }
+@media (max-width: 767px) { .top-nav-item { flex: 1; text-align: right; }
+  .top-nav-item * { text-align: left; } }
 
 .top-nav-item:first-child { padding-right: 26px; }
 @media (min-width: 992px) { .top-nav-item:first-child { padding-right: 76px; } }

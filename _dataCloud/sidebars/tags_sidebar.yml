@@ -1,0 +1,48 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: Tag Pages
+  version:
+  folders:
+
+
+  - title: Topics
+    output: web
+    folderitems:
+
+    - title: Getting Started
+      url: /tag_getting_started.html
+      output: web
+
+    - title: Troubleshooting
+      url: /tag_troubleshooting.html
+      output: web
+
+    - title: Configuration
+      url: /tag_configuration.html
+      output: web
+
+    - title: Custom Apps
+      url: /tag_custom_apps.html
+      output: web
+
+    - title: Users
+      url: /tag_users.html
+      output: web
+
+    - title: Plans
+      url: /tag_plans.html
+      output: web
+
+    - title: Sites
+      url: /tag_sites.html
+      output: web
+
+    - title: APIs
+      url: /tag_apis.html
+      output: web
+
+    - title: Plug-ins
+      url: /tag_plugins.html
+      output: web
