@@ -35,4 +35,5 @@ You can do the following from here:
 1. From the Clients tab of the Cloud Admin, browse or search for the client and click their name.
 2. Use links on the details page to take the required action. Click [here](ds_gs_cr_sites.html) to find info about creating sites for a client or [here](ds_gs_access_sites.html) for setting contributor access.
 
-{% include note.html content="You can't delete a client if they are contributors to any active sites. You need to delete the sites first." %}
+<!-- Todo: need to hide until functionality is available
+{% include note.html content="You can't delete a client if they are contributors to any active sites. You need to delete the sites first." %} -->
