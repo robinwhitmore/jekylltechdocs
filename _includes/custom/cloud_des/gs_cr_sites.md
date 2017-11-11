@@ -213,17 +213,17 @@ Use the dropdown to select the client to move to and click **Move Site**.
 {%endif%}
 
 ## Suspend Access to a Site
-To temporarily prevent a user from updating their site in the event they are delinquent on their payment, their access to a site can be suspended using the {% if site.project=="designer" %}[`Site::disable`](ds_api_site.html#post-disable-a-site){%elsif site.project=="cloud" %}[`Site::disable`](cl_api_site.html#post-disable-a-site){%elsif site.project=="platform" %}[`Site::disable`](pf_api_site.html#post-disable-a-site){%endif%} endpoint. When a site is suspended, access to the Weebly editor is disabled (the published site remains unchanged and active).
+To temporarily prevent a user from updating their site in the event they are delinquent on their payment, their access to a site can be suspended using the {% if site.project=="designer" %}[`Site::disable`](ds_api_site.html#postdisable-a-site){%elsif site.project=="cloud" %}[`Site::disable`](cl_api_site.html#postdisable-a-site){%elsif site.project=="platform" %}[`Site::disable`](pf_api_site.html#postdisable-a-site){%endif%} endpoint. When a site is suspended, access to the Weebly editor is disabled (the published site remains unchanged and active).
 {% if site.project=="cloud"%}
 SSO loginLinks<!--todo: Cloud: add link--> can still be generated for a suspended site. Clicking on a loginLink will inform the user that access to the site is disabled and will point them to contact their administrator.
 {%endif%}
-Use the {% if site.project=="designer" %}[`GET /site`](ds_api_site.html#get-retrieve-details-for-a-site){%elsif site.project=="cloud" %}[`GET /site`](cl_api_site.html#get-retrieve-details-for-a-site){%elsif site.project=="platform" %}[`GET /site`](pf_api_site.html#get-retrieve-details-for-a-site){%endif%} API which returns a `suspended` parameter with a value of `true` or `false` to determine if a site is suspended (the Cloud Admin also shows you if a site is suspended).  A site can be taken out of a suspended state by making a call to {% if site.project=="designer" %}[`Site::enable`](ds_api_site.html#post-enable-a-site){%elsif site.project=="cloud" %}[`Site::enable`](cl_api_site.html#post-enable-a-site){%elsif site.project=="platform" %}[`Site::enable`](pf_api_site.html#post-enable-a-site){%endif%}.​
+Use the {% if site.project=="designer" %}[`GET /site`](ds_api_site.html#getretrieve-details-for-a-site){%elsif site.project=="cloud" %}[`GET /site`](cl_api_site.html#getretrieve-details-for-a-site){%elsif site.project=="platform" %}[`GET /site`](pf_api_site.html#getretrieve-details-for-a-site){%endif%} API which returns a `suspended` parameter with a value of `true` or `false` to determine if a site is suspended (the Cloud Admin also shows you if a site is suspended).  A site can be taken out of a suspended state by making a call to {% if site.project=="designer" %}[`Site::enable`](ds_api_site.html#postenable-a-site){%elsif site.project=="cloud" %}[`Site::enable`](cl_api_site.html#postenable-a-site){%elsif site.project=="platform" %}[`Site::enable`](pf_api_site.html#postenable-a-site){%endif%}.​
 {% if site.project=="cloud"%}
 If you use the WHMCS plug-in, you can use that to suspend and reactivate accounts.<!--todo: Cloud: add link-->
 {%endif%}
 
 ## Unpublish a Site
-In the event you want to unpublish a site you can use the {% if site.project=="designer" %}[`Site::unpublish`](ds_api_site.html#post-unpublish-a-site){%elsif site.project=="cloud" %}[`Site::unpublish`](cl_api_site.html#post-unpublish-a-site){%elsif site.project=="platform" %}[`Site::unpublish`](pf_api_site.html#post-unpublish-a-site){%endif%} endpoint. This will unpublish the site, but not prevent the user from republishing, if they have access to do so. This API method should not be taken lightly. Unpublishing a user's site should be communicated far in advance so the user can take the appropriate steps to remedy the situation.
+In the event you want to unpublish a site you can use the {% if site.project=="designer" %}[`Site::unpublish`](ds_api_site.html#postunpublish-a-site){%elsif site.project=="cloud" %}[`Site::unpublish`](cl_api_site.html#postunpublish-a-site){%elsif site.project=="platform" %}[`Site::unpublish`](pf_api_site.html#postunpublish-a-site){%endif%} endpoint. This will unpublish the site, but not prevent the user from republishing, if they have access to do so. This API method should not be taken lightly. Unpublishing a user's site should be communicated far in advance so the user can take the appropriate steps to remedy the situation.
 
 {% if site.project=="designer"%}
 You'll no longer be billed for the unpublished site.
@@ -236,7 +236,7 @@ If a user cancels their subscription you can delete their site(s). This complete
 {% elsif site.project=="designer" %}
 {% include image.html file="ds_siteDelete.png" caption="Delete a site from the Cloud Admin" %}
 {%endif%}
-You can also delete a site by making a call to the {% if site.project=="designer" %}[DELETE /site API](ds_api_site.html#delete-delete-a-site){%elsif site.project=="cloud" %}[DELETE /site API](cl_api_site.html#delete-delete-a-site){%elsif site.project=="platform" %}[DELETE /site API](pf_api_site.html#delete-delete-a-site){%endif%}.
+You can also delete a site by making a call to the {% if site.project=="designer" %}[DELETE /site API](ds_api_site.html#deletedelete-a-site){%elsif site.project=="cloud" %}[DELETE /site API](cl_api_site.html#deletedelete-a-site){%elsif site.project=="platform" %}[DELETE /site API](pf_api_site.html#deletedelete-a-site){%endif%}.
 
 
 

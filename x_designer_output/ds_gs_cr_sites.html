@@ -726,12 +726,12 @@ OR, in the Cloud Admin, from the site’s detail page, click the <strong>Site Pr
 	</figure>
 
 <h2 id="suspend-access-to-a-site">Suspend Access to a Site</h2>
-<p>To temporarily prevent a user from updating their site in the event they are delinquent on their payment, their access to a site can be suspended using the <a href="ds_api_site.html#post-disable-a-site"><code class="highlighter-rouge">Site::disable</code></a> endpoint. When a site is suspended, access to the Weebly editor is disabled (the published site remains unchanged and active).</p>
+<p>To temporarily prevent a user from updating their site in the event they are delinquent on their payment, their access to a site can be suspended using the <a href="ds_api_site.html#postdisable-a-site"><code class="highlighter-rouge">Site::disable</code></a> endpoint. When a site is suspended, access to the Weebly editor is disabled (the published site remains unchanged and active).</p>
 
-<p>Use the <a href="ds_api_site.html#get-retrieve-details-for-a-site"><code class="highlighter-rouge">GET /site</code></a> API which returns a <code class="highlighter-rouge">suspended</code> parameter with a value of <code class="highlighter-rouge">true</code> or <code class="highlighter-rouge">false</code> to determine if a site is suspended (the Cloud Admin also shows you if a site is suspended).  A site can be taken out of a suspended state by making a call to <a href="ds_api_site.html#post-enable-a-site"><code class="highlighter-rouge">Site::enable</code></a>.​</p>
+<p>Use the <a href="ds_api_site.html#getretrieve-details-for-a-site"><code class="highlighter-rouge">GET /site</code></a> API which returns a <code class="highlighter-rouge">suspended</code> parameter with a value of <code class="highlighter-rouge">true</code> or <code class="highlighter-rouge">false</code> to determine if a site is suspended (the Cloud Admin also shows you if a site is suspended).  A site can be taken out of a suspended state by making a call to <a href="ds_api_site.html#postenable-a-site"><code class="highlighter-rouge">Site::enable</code></a>.​</p>
 
 <h2 id="unpublish-a-site">Unpublish a Site</h2>
-<p>In the event you want to unpublish a site you can use the <a href="ds_api_site.html#post-unpublish-a-site"><code class="highlighter-rouge">Site::unpublish</code></a> endpoint. This will unpublish the site, but not prevent the user from republishing, if they have access to do so. This API method should not be taken lightly. Unpublishing a user’s site should be communicated far in advance so the user can take the appropriate steps to remedy the situation.</p>
+<p>In the event you want to unpublish a site you can use the <a href="ds_api_site.html#postunpublish-a-site"><code class="highlighter-rouge">Site::unpublish</code></a> endpoint. This will unpublish the site, but not prevent the user from republishing, if they have access to do so. This API method should not be taken lightly. Unpublishing a user’s site should be communicated far in advance so the user can take the appropriate steps to remedy the situation.</p>
 
 <p>You’ll no longer be billed for the unpublished site.</p>
 
@@ -749,7 +749,7 @@ OR, in the Cloud Admin, from the site’s detail page, click the <strong>Site Pr
 		<figcaption>Delete a site from the Cloud Admin</figcaption>
 	</figure>
 
-<p>You can also delete a site by making a call to the <a href="ds_api_site.html#delete-delete-a-site">DELETE /site API</a>.</p>
+<p>You can also delete a site by making a call to the <a href="ds_api_site.html#deletedelete-a-site">DELETE /site API</a>.</p>
 
 
 

@@ -20,9 +20,15 @@
       }
       return this.id;
     }), output = $(this);
+
     if (!headers.length || headers.length < settings.minimumHeaders || !output.length) {
       return;
     }
+
+    /* Remove whitespace */
+    headers.each(function(idx, header){
+      header.id = header.id.replace(/\s+/g, '');
+    })
 
     if (0 === settings.showSpeed) {
       settings.showEffect = 'none';
