@@ -666,6 +666,78 @@
 		}, 
 	
 		{
+			"title": "About Migrating to Weebly Cloud for Designers",
+			"tags": "getting_started",
+			"keywords": "migration, map",
+			"url": "ds_mg_about.html",
+			"summary": "Use these topics to understand how to do your work in the Cloud Admin"
+		}, 
+	
+		{
+			"title": "Setting Up Your Account",
+			"tags": "getting_startedconfiguration",
+			"keywords": "account, email, migration",
+			"url": "ds_mg_account.html",
+			"summary": "This topic shows how to edit your account information."
+		}, 
+	
+		{
+			"title": "Working with Clients",
+			"tags": "getting_startedclients",
+			"keywords": "migration, clients",
+			"url": "ds_mg_clients.html",
+			"summary": "This topic shows how to work with your clients in the Cloud Admin"
+		}, 
+	
+		{
+			"title": "Controlling Access to a Site",
+			"tags": "getting_startedclientssites",
+			"keywords": "access, site, migrating, staff, team, migration",
+			"url": "ds_mg_control.html",
+			"summary": "This topic shows how to control client and staff access to sites."
+		}, 
+	
+		{
+			"title": "Configuring the Company Portal",
+			"tags": "getting_startedconfiguration",
+			"keywords": "migration, portal, contacts, brand, urls, settings",
+			"url": "ds_mg_portal.html",
+			"summary": "This topic describes how to configure UI settings the Cloud Admin and the User Portal like contact info and branding."
+		}, 
+	
+		{
+			"title": "Retired Features",
+			"tags": "getting_startedtroubleshooting",
+			"keywords": "migration, retired",
+			"url": "ds_mg_retired.html",
+			"summary": "This topic lists features from the Designer Platform that don&#39;t exist in Cloud Admin."
+		}, 
+	
+		{
+			"title": "Working with Sites",
+			"tags": "getting_startedclientssites",
+			"keywords": "migration, sites",
+			"url": "ds_mg_sites.html",
+			"summary": "This topic shows how to create and manage sites in the Cloud Admin."
+		}, 
+	
+		{
+			"title": "Working with Staff",
+			"tags": "getting_started",
+			"keywords": "migration, staff, team member",
+			"url": "ds_mg_staff.html",
+			"summary": "This topic explains how you create and manage your staff, now called Team Members."
+		}, 
+	
+		{
+			"title": "Getting Support",
+			"tags": "getting_startedtroubleshooting",
+			"keywords": "support, migration",
+			"url": "ds_mg_support.html",
+			"summary": "This topic shows how to get support from the Cloud Admin"
+		}, 
+	
+		{
 			"title": "Topics",
 			"tags": "",
 			"keywords": "",

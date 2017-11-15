@@ -35,6 +35,7 @@ entries:
       output: web, pdf
       #status: in review
 
+
     - title: Use Weebly Cloud Admin
       url: /ds_gs_admin.html
       output: web, pdf
@@ -111,6 +112,55 @@ entries:
       url: /ds_gs_invoice.html
       output: web, pdf
       #status: needs review
+
+  - title: Migrating from Designer Platform to Weebly Cloud
+    output: web, pdf
+    folderitems:
+
+    - title: Migrating to Weebly Cloud for Designers
+      url: /ds_mg_about.html
+      output: web, pdf
+      #status: in review
+
+    - title: Working with Clients
+      url: /ds_mg_clients.html
+      output: web, pdf
+      #status: in review
+
+    - title: Working with Sites
+      url: /ds_mg_sites.html
+      output: web, pdf
+      #status: in review
+
+    - title: Controlling Access to a Site
+      url: /ds_mg_control.html
+      output: web, pdf
+      #status: in review
+
+    - title: Working with Staff
+      url: /ds_mg_staff.html
+      output: web, pdf
+      #status: in review
+
+    - title: Configuring the Company Portal
+      url: /ds_mg_portal.html
+      output: web, pdf
+      #status: in review
+
+    - title: Setting Up Your Account
+      url: /ds_mg_account.html
+      output: web, pdf
+      #status: in review
+
+    - title: Getting Support
+      url: /ds_mg_support.html
+      output: web, pdf
+      #status: in review
+
+    - title: Retired Features
+      url: /ds_mg_retired.html
+      output: web, pdf
+      #status: in review
 
   - title: Troubleshooting
     output: web, pdf

@@ -97,7 +97,7 @@ The following table shows all fields that exist for this API, those that are ret
     </tr>
     <tr>
         <td><code>product_ids</code></td>
-        <td>For <code>products</code> criteria, an array of {% if site.project=="designer" %}<a href="ds_apis_product.html">product IDs</a>{% elsif site.project=="cloud" %}<a href="cl_apis_product.html">product IDs</a>{% elsif site.project=="platform" %}<a href="pf_apis_product.html">product IDs</a>{% endif %} that the coupon is valid for.
+        <td>For <code>products</code> criteria, an array of {% if site.project=="designer" %}<a href="ds_api_product.html">product IDs</a>{% elsif site.project=="cloud" %}<a href="cl_api_product.html">product IDs</a>{% elsif site.project=="platform" %}<a href="pf_api_product.html">product IDs</a>{% endif %} that the coupon is valid for.
         </td>
         <td>array of strings</td>
         <td></td>
