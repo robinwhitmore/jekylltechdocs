@@ -1,5 +1,5 @@
 ---
-title: Order Billing Transactions API
+title: Order Billing Transactions APIs
 keywords: order, transaction, billing, invoice, order method, credit card
 t_type: [reference]
 tags: [sites]

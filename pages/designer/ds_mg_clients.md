@@ -44,15 +44,14 @@ Click a client's name from the Client List to open details page to edit the clie
 You'll do most of your client work from this page.
 
 Here's what you can do:
+<ul>
+  <li>Edit the name, email, phone, and ID: Click <strong>Edit</strong> in the client card to change contact info.
+    {% include image.html file="new_clientEdit.png" caption="Edit a client's info" %}</li>
+  <li>{% include label.html content="NEW!" %}Add a note: Click <strong>Edit</strong> in the Notes area to add a note.
+    {% include image.html file="new_clientNote.png" caption="Add a note for the client" %}</li>
 
-* Edit the name, email, phone, and ID: Click **Edit** in the client card to change contact info.
-  {% include image.html file="new_clientEdit.png" caption="Edit a client's info" %}
-
-<!--todo: need to add a New icon when available -->
-* Add a note: Client **Edit** in the Notes area to add a note.
-  {% include image.html file="new_clientNote.png" caption="Add a note for the client" %}
-
-* View the list of client's current sites
-* <!--todo: need to add a New icon when available -->View a list of any deleted<!--todo: add link--> sites: Click the **Deleted Sites** link.
-* <!--todo: need to add a New icon when available -->Restore<!--todo: add link--> deleted sites
-* Add sites<!--todo: add link-->
+  <li>View the list of client's current sites</li>
+  <li>{% include label.html content="NEW!" %}View a list of any <a href="ds_gs_cr_sites.html#delete-a-site">deleted</a> sites: Click the <strong>Deleted Sites</strong> link.</li>
+  <li>{% include label.html content="NEW!" %}<a href="ds_gs_restore.md">Restore</a> deleted sites</li>
+  <li><a href="ds_gs_cr_sites.md">Add sites</a></li>
+</ul>

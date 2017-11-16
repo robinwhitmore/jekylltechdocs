@@ -1,5 +1,5 @@
 ---
-title: Themes (Custom) API
+title: Themes (Custom) APIs
 keywords: themes
 t_type: [reference]
 tags: [themes]

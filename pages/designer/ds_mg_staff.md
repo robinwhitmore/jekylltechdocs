@@ -2,7 +2,7 @@
 title: Working with Staff
 keywords: migration, staff, team member
 t_type: [reference]
-tags: [getting_started]
+tags: []
 sidebar: ds_gs_sidebar
 pdf: true
 permalink: ds_mg_staff.html

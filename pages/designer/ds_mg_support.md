@@ -2,7 +2,7 @@
 title: Getting Support
 keywords: support, migration
 t_type: [reference]
-tags: [getting_started, troubleshooting]
+tags: [troubleshooting]
 sidebar: ds_gs_sidebar
 pdf: true
 permalink: ds_mg_support.html

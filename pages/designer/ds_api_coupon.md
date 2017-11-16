@@ -1,5 +1,5 @@
 ---
-title: Coupon API
+title: Coupon APIs
 keywords: coupon, store, checkout
 t_type: [reference]
 tags: [sites]

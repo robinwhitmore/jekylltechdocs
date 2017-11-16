@@ -1,5 +1,5 @@
 ---
-title: Category Image API
+title: Category Image APIs
 keywords: category, categories, image,
 t_type: [reference]
 tags: [sites]

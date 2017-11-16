@@ -1,5 +1,5 @@
 ---
-title: Order Billing API
+title: Order Billing APIs
 keywords: payment provider, payment, billing address, payment method, transactions
 t_type: [reference]
 tags: [sites]

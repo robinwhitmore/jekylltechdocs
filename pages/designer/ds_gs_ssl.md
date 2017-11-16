@@ -2,7 +2,7 @@
 title: Allow Sites to Use SSL
 keywords: ssl, sites
 t_type: [task]
-tags: [getting_started, configuration, sites]
+tags: [configuration, sites]
 sidebar: ds_gs_sidebar
 permalink: ds_gs_ssl.html
 summary: Weebly sites can use SSL, as long as they are on the Weebly Business plan. However, you'll need to use the Weebly Cloud API to enable the SSL option to display in the Site's settings so that the site owner can enable it.

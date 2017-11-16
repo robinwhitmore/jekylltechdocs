@@ -2,7 +2,7 @@
 title: Setting Up Your Account
 keywords: account, email, migration
 t_type: [reference]
-tags: [getting_started, configuration]
+tags: [configuration]
 sidebar: ds_gs_sidebar
 permalink: ds_mg_account.html
 pdf: true

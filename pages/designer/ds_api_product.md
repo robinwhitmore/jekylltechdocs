@@ -1,5 +1,5 @@
 ---
-title: Product API
+title: Product APIs
 keywords: product, price, tax,
 t_type: [reference]
 tags: [sites]

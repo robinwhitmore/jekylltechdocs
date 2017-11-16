@@ -1,5 +1,5 @@
 ---
-title: Category API
+title: Category APIs
 keywords: category, categories
 t_type: [reference]
 tags: [sites]

@@ -1,21 +1,16 @@
 ## HTML Template Pages and Layout
-<div style="width:100%;overflow:hidden">
-    <div style="width:60%;overflow:hidden;float:left">
-        <p>Weebly templates are HTML pages that use the Mustache templating language. Mustache allows pages to use variables that are resolved using data from the site. A Weebly page usually has the following:</p>
-        <ul>
-            <li><strong>Menu/navigation</strong>: This area contains the generated navigation (created based on how the site owner organizes their pages), cart, login, and optionally search. Some themes place this at the top of the page, some after a header image, and others at the bottom.</li>
 
-            <li><strong>Header/banner</strong>: At the top of the page, this area generally includes the headline and any headline text, often in a banner. The user can change the background of a header, insert a video, or change the height or layout, all without needing to touch any code. And as a theme developer, you don't need to do anything extra to provide this functionality if you start with the Base theme (or other theme). It's built in.
-    <!--todo: figure out why size isn't working here-->
-                <img src="images/themeHeader.png" width="100px"></li>
-        </ul>
+Weebly templates are HTML pages that use the Mustache templating language. Mustache allows pages to use variables that are resolved using data from the site. A Weebly page usually has the following:
 
-    </div>
-    <div style="float:right">
-        {% include image.html file="themeslayout.png" %}
-    <!--todo: not displaying on git pages-->
-    </div>
-</div>
+* **Menu/navigation**: This area contains the generated navigation (created based on how the site owner organizes their pages), cart, login, and optionally search. Some themes place this at the top of the page, some after a header image, and others at the bottom.
+
+ * **Header/banner**: At the top of the page, this area generally includes the headline and any headline text, often in a banner. The user can change the background of a header, insert a video, or change the height or layout, all without needing to touch any code. And as a theme developer, you don't need to do anything extra to provide this functionality if you start with the Base theme (or other theme). It's built in.
+    {% include image.html file="themeHeader.png" caption="Header" %}
+
+<!--        {% include image.html file="themeslayout.png" width="100px" %} -->
+
+<!--todo: need to get better graphics. should be all the same site-->
+
 * **Body/content**: This is the area where site owners add their main content by choosing from predefined layouts, or by designing the area from scratch using elements (you don't need to add that functionality to your theme - like the header layouts, it's built in). You can add sections to the body, which allow the owner to add distinct areas with different layouts. If you don't include sections in your template, users can add them later, after they choose your template.
     {% include image.html file="themesSectionChange.png" caption="You can drag elements into the body area" %}
 

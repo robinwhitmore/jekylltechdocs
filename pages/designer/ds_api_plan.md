@@ -1,5 +1,5 @@
 ---
-title: Plan API
+title: Plan APIs
 keywords: plans, plan, page limit, terms
 t_type: [reference]
 tags: [plans]

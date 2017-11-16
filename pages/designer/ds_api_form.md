@@ -1,5 +1,5 @@
 ---
-title: Form API
+title: Form APIs
 keywords: forms
 t_type: [reference]
 tags: [sites]

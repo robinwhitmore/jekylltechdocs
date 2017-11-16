@@ -2,7 +2,7 @@
 title: Configuring the Company Portal
 keywords: migration, portal, contacts, brand, urls, settings
 t_type: [reference]
-tags: [getting_started, configuration]
+tags: [configuration]
 sidebar: ds_gs_sidebar
 pdf: true
 permalink: ds_mg_portal.html

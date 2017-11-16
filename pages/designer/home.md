@@ -3,7 +3,7 @@ title: Get Started with Weebly Cloud for Designers
 keywords: get started, test mode, editor, code, apps, themes, custom,
 type: first_page
 t_type: [concepts]
-tags: [getting_started, apps]
+tags: [getting_started]
 sidebar: ds_gs_sidebar
 permalink: home.html
 folder: designer

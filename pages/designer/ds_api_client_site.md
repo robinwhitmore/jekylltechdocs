@@ -1,5 +1,5 @@
 ---
-title: Client Site API
+title: Client Site APIs
 keywords: client, site
 t_type: [reference]
 tags: [clients, sites, apps, elements]

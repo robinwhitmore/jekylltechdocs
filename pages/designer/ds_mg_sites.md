@@ -2,7 +2,7 @@
 title: Working with Sites
 keywords: migration, sites
 t_type: [reference]
-tags: [getting_started, clients, sites]
+tags: [clients, sites]
 sidebar: ds_gs_sidebar 
 pdf: true
 permalink: ds_mg_sites.html

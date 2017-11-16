@@ -1,5 +1,5 @@
 ---
-title: Order API
+title: Order APIs
 keywords: store, order
 t_type: [reference]
 tags: [sites]

@@ -48,3 +48,7 @@ sidebar configuration for print files
 {% if site.product == "cloud_apps" %}
 {% assign sidebar_pdf = site.data.sidebars.cl_apps_sidebar.entries %}
 {% endif %}
+
+{% if site.product == "designer_gs" %}
+{% assign sidebar_pdf = site.data.sidebars.ds_gs_sidebar.entries %}
+{% endif %}

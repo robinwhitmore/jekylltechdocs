@@ -1,5 +1,5 @@
 ---
-title: Order Item API
+title: Order Item APIs
 keywords: order, order item, sku
 t_type: [reference]
 tags: [sites]

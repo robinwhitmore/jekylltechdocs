@@ -1,5 +1,5 @@
 ---
-title: Blog Post API
+title: Blog Post APIs
 keywords: blog, blog post, post
 t_type: [reference]
 tags: [sites]

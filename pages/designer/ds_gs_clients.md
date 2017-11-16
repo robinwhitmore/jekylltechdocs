@@ -2,7 +2,7 @@
 title: Create and Manage Clients
 keywords: clients, admin, configure,
 t_type: [task]
-tags: [getting_started, troubleshooting, configuration, clients, plans, sites]
+tags: [getting_started, clients, sites]
 sidebar: ds_gs_sidebar
 permalink: ds_gs_clients.html
 summary: You create and manage your clients in the Cloud Admin. Along with contact information, you can manage a client's sites and their access to functionality on those sites.

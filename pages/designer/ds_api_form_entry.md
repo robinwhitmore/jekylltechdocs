@@ -1,5 +1,5 @@
 ---
-title: Form Entry API
+title: Form Entry APIs
 keywords: forms, form entries, entries
 t_type: [reference]
 tags: [sites]

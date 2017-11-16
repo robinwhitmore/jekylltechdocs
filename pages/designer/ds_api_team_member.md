@@ -1,5 +1,5 @@
 ---
-title: Team Member
+title: Team Member APIs
 keywords: user, contributor,
 t_type: [reference]
 tags: [configuration]

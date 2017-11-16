@@ -1,5 +1,5 @@
 ---
-title: Page API
+title: Page APIs
 keywords: page, hidden, page order, layout, url
 t_type: [reference]
 tags: [sites]

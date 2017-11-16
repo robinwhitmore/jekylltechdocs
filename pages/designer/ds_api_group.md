@@ -1,5 +1,5 @@
 ---
-title: Group API
+title: Group APIs
 keywords: member, membership, group,
 t_type: [reference]
 tags: [sites]

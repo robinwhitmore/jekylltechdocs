@@ -1,5 +1,5 @@
 ---
-title: Site API
+title: Site APIs
 keywords: site, publish, unpublish, login, login link, credentials, restore, disable
 t_type: [reference]
 tags: [sites]

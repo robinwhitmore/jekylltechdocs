@@ -1,5 +1,5 @@
 ---
-title: Theme (User) API
+title: Theme (User) APIs
 keywords: theme, 
 t_type: [reference]
 tags: [sites, themes]

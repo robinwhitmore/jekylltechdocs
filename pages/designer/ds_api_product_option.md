@@ -1,5 +1,5 @@
 ---
-title: Product Option API
+title: Product Option APIs
 keywords: option, choice
 t_type: [reference]
 tags: [sites]

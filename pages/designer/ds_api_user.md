@@ -1,5 +1,5 @@
 ---
-title: User API
+title: User APIs
 keywords: user, login link, email
 t_type: [reference]
 tags: [configuration, sites]

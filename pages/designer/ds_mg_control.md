@@ -2,7 +2,7 @@
 title: Controlling Access to a Site
 keywords: access, site, migrating, staff, team, migration
 t_type: [reference]
-tags: [getting_started, clients, sites]
+tags: [clients, sites]
 sidebar: ds_gs_sidebar 
 pdf: true
 permalink: ds_mg_control.html

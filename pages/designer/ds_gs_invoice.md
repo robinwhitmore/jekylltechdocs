@@ -2,7 +2,7 @@
 title: View and Pay Weebly Invoices
 keywords: invoices, clients, bills, billing
 t_type: [task]
-tags: [getting_started, clients]
+tags: [clients]
 sidebar: ds_gs_sidebar
 permalink: ds_gs_invoice.html
 summary: Cloud Admin has a Billing tab that displays your current Weebly invoices. You can view the details of those invoices and download the current activity. You can also pay invoices from here.

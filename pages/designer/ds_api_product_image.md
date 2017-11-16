@@ -1,5 +1,5 @@
 ---
-title: Product Image API
+title: Product Image APIs
 keywords: image, format, product
 t_type: [reference]
 tags: [sites]

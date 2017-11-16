@@ -26,8 +26,8 @@ entries:
       url: /tag_configuration.html
       output: web
 
-    - title: Users
-      url: /tag_users.html
+    - title: Clients
+      url: /tag_clients.html
       output: web
 
     - title: Plans
@@ -39,7 +39,7 @@ entries:
       output: web
 
     - title: Custom Apps
-      url: /tag_custom_apps.html
+      url: /tag_apps.html
       output: web
 
     - title: Elements

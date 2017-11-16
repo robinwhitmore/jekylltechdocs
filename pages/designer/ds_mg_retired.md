@@ -2,7 +2,7 @@
 title: Retired Features
 keywords: migration, retired
 t_type: [reference]
-tags: [getting_started, troubleshooting]
+tags: [troubleshooting]
 sidebar: ds_gs_sidebar
 permalink: ds_mg_retired.html
 pdf: true

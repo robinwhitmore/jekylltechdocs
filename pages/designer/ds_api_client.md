@@ -1,5 +1,5 @@
 ---
-title: Client API
+title: Client APIs
 keywords: client
 t_type: [reference]
 tags: [clients]

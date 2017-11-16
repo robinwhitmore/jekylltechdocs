@@ -1,5 +1,5 @@
 ---
-title: Store API
+title: Store APIs
 keywords: store, eCommerce
 t_type: [reference]
 tags: [sites]

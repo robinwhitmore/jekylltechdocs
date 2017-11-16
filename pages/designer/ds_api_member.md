@@ -1,5 +1,5 @@
 ---
-title: Member API
+title: Member APIs
 keywords: member, membership, login,
 t_type: [reference]
 tags: [sites]

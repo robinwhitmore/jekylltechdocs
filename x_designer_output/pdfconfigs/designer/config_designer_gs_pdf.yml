@@ -1,0 +1,21 @@
+destination: x_designer_output/pdf
+url: "http://127.0.0.1:4010"
+baseurl: "/designer-gs-pdf"
+port: 4010
+output: pdf
+product: designer_gs
+print_title: Designer Platform Migration to Weebly Cloud
+print_subtitle: How to do Your Work in the Cloud Admin
+output: pdf
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page_print"
+      comments: true
+      search: true
+
+pdf_sidebar: ds_gs_sidebar
+

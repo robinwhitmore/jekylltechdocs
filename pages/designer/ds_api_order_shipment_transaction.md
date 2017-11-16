@@ -1,5 +1,5 @@
 ---
-title: Order Shipment Transaction API
+title: Order Shipment Transaction APIs
 keywords: shipment, transaction
 t_type: [reference]
 tags: [sites]
