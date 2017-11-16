@@ -3,7 +3,7 @@ title: Controlling Access to a Site
 keywords: access, site, migrating, staff, team, migration
 t_type: [reference]
 tags: [clients, sites]
-sidebar: ds_gs_sidebar 
+sidebar: ds_migration_sidebar
 pdf: true
 permalink: ds_mg_control.html
 summary: This topic shows how to control client and staff access to sites.

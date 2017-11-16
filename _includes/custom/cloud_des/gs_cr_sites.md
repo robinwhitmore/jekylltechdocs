@@ -44,7 +44,7 @@ You can create up to 30 templates.
 1. Optionally create a {{site.user}} that will "own" the template sites, then create your template sites under this {{site.user}}. While you can create a template out of any {{site.user}}'s site, this is a great way to organize and manage your templates.
 2. Create a site following the instructions above. Add elements and design your site.
 3. Optionally add apps from the Weebly App Center {% if site.project=="cloud" %}or your own custom apps{% endif %}. But remember that access to apps is {% if site.project=="cloud" %}[based on plans](cl_gs_plans.html) {% elsif site.project=="designer" %} [based on plans](ds_gs_plans.html){% endif %}, so you may be restricting the potential sites that can use the template by adding apps. To avoid this, when you use the template, you can temporarily change the plan the new site is on so that it allows access to the App Center. More below.
-   {% include note.html type="tip" content="Remember that a template is a starting point. Don't add too many elements, or design too specifically. It may end up being more work to remove what isn't needed than it would have been to start from scratch." %}
+      {% include note.html type="tip" content="Remember that a template is a starting point. Don't add too many elements, or design too specifically. It may end up being more work to remove what isn't needed than it would have been to start from scratch." %}
 4. In the Cloud Admin, from the details page for your template site, click **Add as Template**.
     {% if site.project=="cloud" %}
    {% include image.html file="cl_addTemplate.png" %}

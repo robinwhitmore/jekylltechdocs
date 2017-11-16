@@ -3,7 +3,7 @@ title: Configuring the Company Portal
 keywords: migration, portal, contacts, brand, urls, settings
 t_type: [reference]
 tags: [configuration]
-sidebar: ds_gs_sidebar
+sidebar: ds_migration_sidebar
 pdf: true
 permalink: ds_mg_portal.html
 summary: This topic describes how to configure UI settings the Cloud Admin and the User Portal like contact info and branding.

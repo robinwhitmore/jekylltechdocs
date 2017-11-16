@@ -3,7 +3,7 @@ title: Retired Features
 keywords: migration, retired
 t_type: [reference]
 tags: [troubleshooting]
-sidebar: ds_gs_sidebar
+sidebar: ds_migration_sidebar
 permalink: ds_mg_retired.html
 pdf: true
 summary: This topic lists features from the Designer Platform that don't exist in Cloud Admin.

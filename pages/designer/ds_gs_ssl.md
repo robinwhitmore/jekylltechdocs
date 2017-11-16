@@ -26,4 +26,4 @@ curl https://api.weeblycloud.com/user/USER_ID/site/SITE_ID \
 -H "X-Signed-Request-Hash: YOURSECRETHASH"
 {% endhighlight %}
 
-More info on using the Site [API here](ds_api_site.html).
+More info on using the Site API [here](ds_api_site.html).

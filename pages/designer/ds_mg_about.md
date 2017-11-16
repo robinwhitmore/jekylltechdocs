@@ -3,11 +3,14 @@ title: About Migrating to Weebly Cloud for Designers
 keywords: migration, map
 t_type: [concepts]
 tags: [getting_started]
-sidebar: ds_gs_sidebar 
+sidebar: ds_migration_sidebar 
 permalink: ds_mg_about.html
 pdf: true
 summary: Use these topics to understand how to do your work in the Cloud Admin
 ---
+<div style="background-color: #ff2825; padding-left: 10px">
+  <p style="color: #ffffff">Read these topics only if you are migrating from the original Weebly Designer Platform</p>
+</div>
 Welcome to the new Weebly Cloud for Designers!
 
 These topics will help you understand how to do everything you used to do in the Designer Platform portal in Weebly Cloud.

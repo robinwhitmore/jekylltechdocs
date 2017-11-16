@@ -5,7 +5,7 @@
 topnav:
 - title: Topnav
   items:
-    - title: Getting Started
+    - title: Get Started
       url: /home.html
     - title: Apps
       url: /ds_apps_gs.html
@@ -15,3 +15,5 @@ topnav:
       url: /ds_api_about.html
     - title: Topics
       url: /ds_tags_about.html
+    - title: Migration
+      url: /ds_mg_about.html

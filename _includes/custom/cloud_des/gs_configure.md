@@ -49,7 +49,10 @@ You now need to add a `CNAME` that points `weeblycloud.com` to the DNS for your 
 {%if site.project=="cloud"%}Your company name displays as a link in the footer of all your customer sites (the color and styling of the link is determined by the theme in use). {%endif%}You must add a URL to a specific page about your company {% if site.project == "designer" %}that will be {%elsif site.project=="cloud"%} for that link. This URL is also {%endif%}used as the return email address on emails automatically sent by the Cloud Admin, such as the team member and {{site.customer}} invitations. This URL is required. {%if site.project=="cloud"%}In this example, the company's name is Nash Hosting.
 {% include image.html file="cl_settings_footerName.png" %}{% endif %}
 
-<div markdown="span" class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> While the emails will appear to be from this destination, they are actually sent from a Weebly IP address. Because of this, you need to create an SPF record for the Weebly IP. More info {% if site.project=="designer" %}[here](ds_gs_trouble.html){%elsif site.project=="cloud" %}[here](cl_gs_trouble.html){%endif%}.</div>
+{% capture email %}
+While the emails will appear to be from this destination, they are actually sent from a Weebly IP address. Because of this, you need to create an SPF record for the Weebly IP. More info {% if site.project=="designer" %}[here](ds_gs_trouble.html){%elsif site.project=="cloud" %}[here](cl_gs_trouble.html){%endif%}.
+{% endcapture %}
+{% include note.html content=email %}
 
 **To set the URL:**
 1. From the Cloud Admin, click the **Settings** tab.

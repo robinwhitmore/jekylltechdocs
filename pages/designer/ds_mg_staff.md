@@ -3,7 +3,7 @@ title: Working with Staff
 keywords: migration, staff, team member
 t_type: [reference]
 tags: []
-sidebar: ds_gs_sidebar
+sidebar: ds_migration_sidebar
 pdf: true
 permalink: ds_mg_staff.html
 summary: This topic explains how you create and manage your staff, now called Team Members.

@@ -3,7 +3,7 @@ title: Getting Support
 keywords: support, migration
 t_type: [reference]
 tags: [troubleshooting]
-sidebar: ds_gs_sidebar
+sidebar: ds_migration_sidebar
 pdf: true
 permalink: ds_mg_support.html
 summary: This topic shows how to get support from the Cloud Admin

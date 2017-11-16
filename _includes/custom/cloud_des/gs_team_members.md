@@ -18,9 +18,15 @@ Team members must have a unique email as an identifier (and is the username for 
 When you create a team member, you must associate them with a role. Roles determine what they can and cannot do in Cloud Admin.
 
 Here are the roles and their permissions:
+
 * **Admin**: Can access all portal functionality. Can view, create, edit, and delete {{site.customer}} and team members. Can view, create, edit, log into, and publish all websites. Can access account settings and billing information.
 
-<div markdown="span" class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> If you want a team member to {%if site.project=="designer"%}[have access](ds_gs_access_sites.html) {%elsif site.project=="cloud"%}[have access](cl_gs_access_sites.html){%endif%} to a specific site, then you must also create them as a <a data-container="body" data-toggle="popover" data-content="{{site.data.glossary.site_contributor}}">contributor</a> for that site.</div>
+    {% capture contributor %}
+    If you want a team member to {%if site.project=="designer"%}[have access](ds_gs_access_sites.html) {%elsif site.project=="cloud"%}[have access](cl_gs_access_sites.html){%endif%} to a specific site, then you must also create them as a <a data-container="body" data-toggle="popover" data-content="{{site.data.glossary.site_contributor}}">contributor</a> for that site.
+    {% endcapture %}
+
+    {% include note.html type="tip" content=contributor %}
+
 * **Technical**: Can access all {{site.customer}} and site functionality, as well as account settings. Does not have access to team member or billing functionality.
 * **Support**: Can view and edit {{site.customer}}s. Has full access to site functionality. Cannot access team member, account settings or billing functionality.
 * **Editor**: Can only view {{site.customer}}s and view and edit sites. Cannot access anything else.

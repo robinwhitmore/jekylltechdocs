@@ -3,7 +3,7 @@ title: Working with Clients
 keywords: migration, clients
 t_type: [reference]
 tags: [getting_started, clients]
-sidebar: ds_gs_sidebar
+sidebar: ds_migration_sidebar
 pdf: true
 permalink: ds_mg_clients.html
 summary: This topic shows how to work with your clients in the Cloud Admin

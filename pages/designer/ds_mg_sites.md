@@ -3,7 +3,7 @@ title: Working with Sites
 keywords: migration, sites
 t_type: [reference]
 tags: [clients, sites]
-sidebar: ds_gs_sidebar 
+sidebar: ds_migration_sidebar
 pdf: true
 permalink: ds_mg_sites.html
 summary: This topic shows how to create and manage sites in the Cloud Admin.
