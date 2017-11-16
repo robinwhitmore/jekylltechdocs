@@ -1,0 +1,509 @@
+<div class="post-header">
+    <h1 class="post-title-main" id="ds_api_member.html">Member API</h1>
+</div>
+
+<div class="post-content">
+
+    
+    <div class="summary">Use the Member API to return information about members, as well as to create, update, and delete members.</div>
+    
+    <p>Site owners can enable membership for their site, which allows them to restrict specified pages to members or <a href="ds_api_group.html">groups</a> of members only. Use the Member API to return information about members, as well as to create, update, and delete members.</p>
+
+<h2>Fields</h2>
+
+<p>The following table shows all fields that exist for this API, those that are returned when you retrieve a list, those that are required for <code class="highlighter-rouge">POST</code> and those that are changeable using <code class="highlighter-rouge">PATCH</code>. All fields are returned when you retrieve a single item.</p>
+<table>
+    <tbody>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>List</th>
+        <th>Required</th>
+        <th>Changeable</th>
+    </tr>
+    <tr>
+        <td>​<code>user_id</code></td>
+        <td>The unique ID of the authenticated user</td>
+        <td>string</td>
+        <td>X</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>site_id</code></td>
+        <td>ID of a Weebly site, unique to the currently authenticated user​</td>
+        <td>string</td>
+        <td>X</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>member_id</code></td>
+        <td>​The unique ID (within the site) of the member.</td>
+        <td>string</td>
+        <td>X</td>
+        <td></td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>name</code></td>
+        <td>​The member's full name.</td>
+        <td>string</td>
+        <td>X</td>
+        <td></td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>email</code></td>
+        <td>​The member's email address.</td>
+        <td>string</td>
+        <td>X</td>
+        <td>X</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>last_login</code></td>
+        <td>​An array of IDs for pages the member has access to.</td>
+        <td>Unix timestamp in GMT</td>
+        <td>X</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>approved</code></td>
+        <td>
+            Whether or not a member has been approved.<br />
+            Valid values are:
+            <ul>
+                <li><code>true</code></li>
+                <li><code>false</code></li>
+            </ul>
+        </td>
+        <td>boolean</td>
+        <td>list</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>password_set</code></td>
+        <td>
+            Whether or not the member has set a password.<br />
+            Valid values are:
+            <ul>
+                <li><code>true</code></li>
+                <li><code>false</code></li>
+            </ul>
+        </td>
+        <td>boolean</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>group_ids</code></td>
+        <td>
+            An array of IDs for all <a href="ds_api_group.html">groups</a> the member belongs to.​
+        </td>
+        <td>array of strings</td>
+        <td>X</td>
+        <td><br /></td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>page_ids</code></td>
+        <td>​An array of IDs for pages the member has access to.</td>
+        <td>array of strings</td>
+        <td>X<br /></td>
+        <td><br /></td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>send_welcome_message</code></td>
+        <td>
+            ​Whether or not a welcome message should be sent when the user is first created. ​This is never returned, but can be set using POST.<br />
+            Valid values are:
+            <ul>
+                <li><code>true</code></li>
+                <li><code>false</code></li>
+            </ul>
+        </td>
+        <td>boolean</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>welcome_message</code></td>
+        <td>​The welcome message to be sent. ​This is never returned, but can be set using POST.</td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>created_date</code></td>
+        <td>Date the member was created.</td>
+        <td>Unix GMT Timestamp</td>
+        <td>X</td>
+        <td><br /></td>
+        <td><br /></td>
+    </tr>
+    <tr>
+        <td><code>updated_date</code></td>
+        <td>Date the member was last updated</td>
+        <td>Unix GMT Timestamp</td>
+        <td>X</td>
+        <td><br /></td>
+        <td><br /></td>
+    </tr>
+    </tbody>
+</table>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Any fields returned that are not documented are currently unsupported and can be safely ignored.</div>
+
+<h2>
+<div class="Tag type_info">GET</div>
+
+ Retrieve a List of Members
+</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/member</code></pre></figure>
+
+<p>Returns all members for the given site. Only <code class="highlighter-rouge">list</code> fields are returned.</p>
+
+<h3>Query Parameters</h3>
+<p>Returned values are <a href="ds_api_about.html#pagination">paginated</a>. You can further filter results using these parameters:</p>
+
+<table>
+    <tr>
+        <th>Parameter</th>
+        <th>Description</th>
+        <th>Type</th>
+    </tr>
+    <tr>
+        <td><code>page</code></td>
+        <td>Which page of results to return. Start is <code>1</code>.
+            
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> Only the first 25 results are returned by default. If the result set is
+            expected to be over 25, you must implement pagination.
+</div>
+
+
+        </td>
+        <td>integer</td>
+    </tr>
+    <tr>
+        <td><code>limit</code></td>
+        <td>Number of results per page to return. Default is <code>25</code>. <br />Max is <code>200</code>.</td>
+        <td>integer</td>
+    </tr>
+    <tr>
+        <td><code>query</code></td>
+        <td>Use to retrieve only pages that have a full-text match with the query string.</td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td><code>filterby</code></td>
+        <td>Field name to set a filter on.
+        </td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td><code>filterfor</code></td>
+        <td>​Value to search the filterby field for.</td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td><code>sortby</code></td>
+        <td>Field name to sort by</td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td><code>sortdir</code></td>
+        <td>Sort direction. Valid values are:
+            <ul>
+                <li><code>asc</code></li>
+                <li><code>desc</code></li>
+            </ul>
+        </td>
+        <td>string</td>
+    </tr>
+</table>
+
+<p class="codeTitle">Example CURL request returning all members:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/member <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example filtered request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321//member?sortby<span class="o">=</span>name&amp;sortdir<span class="o">=</span>asc <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"member_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Member One"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"memberone@example.com"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"group_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="nt">"page_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1458752636</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1458752636</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"member_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Member Two"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"membertwo@example.com"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"group_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="nt">"page_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"267240304658043510"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1458752643</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1458752643</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"member_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Member Three"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"memberthree@example.com"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"group_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="nt">"page_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1458752646</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1458752646</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span></code></pre></figure>
+
+<h2>
+<div class="Tag type_info">GET</div>
+
+ Retrieve Details for a Member</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/member/<span class="o">{</span>MEMBER_ID<span class="o">}</span></code></pre></figure>
+
+<p>Returns all fields for the given member.</p>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/member/3 <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+<p>See Fields table. All fields (except <code>password</code> for the member are returned.</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"member_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Member Three"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"memberthree@example.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="mi">1415318631</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"approved"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"password_set"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"group_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"1"</span><span class="p">],</span><span class="w">
+    </span><span class="nt">"page_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"676764642912660801"</span><span class="p">],</span><span class="w">
+    </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1458752646</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1458752646</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<h2>
+<div class="Tag type_warning">POST</div>
+
+ Create a Member</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">POST /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/member</code></pre></figure>
+
+<p>Creates a member. You can choose to send a custom welcome message to the member using the <code class="highlighter-rouge">send_welcome_message</code> and <code class="highlighter-rouge">welcome_message</code> fields. To assign the member to a set of groups and give them permission to view a set of pages, first create the member using <code class="highlighter-rouge">POST</code> and then use <code class="highlighter-rouge">PATCH</code> to update with group and page IDs.</p>
+
+<p>These fields can be created:</p>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Notes</th>
+    </tr>
+    <tr>
+        <td><code>name</code></td>
+        <td>​The member's full name.</td>
+        <td>string</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>email</code></td>
+        <td>​The member's email address.</td>
+        <td>string</td>
+        <td>Required</td>
+    </tr>
+    <tr>
+        <td><code>password</code></td>
+        <td>​The member's password.</td>
+        <td>string</td>
+        <td>Required</td>
+    </tr>
+    <tr>
+        <td><code>send_welcome_message</code></td>
+        <td>​Whether or not a welcome message should be sent when the user is first created. ​This is never returned, but can be set using POST.<br />
+            Valid values are:
+            <ul>
+            <li><code>true</code></li>
+            <li><code>false</code></li>
+            </ul>
+        </td>
+        <td>boolean</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>welcome_message</code></td>
+        <td>​The welcome message to be sent. ​This is never returned, but can be set using POST.
+        </td>
+        <td>string</td>
+        <td></td>
+    </tr>
+</table>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/page <span class="se">\</span>
+-X POST <span class="se">\</span>
+-d <span class="s1">'{
+        "name": "John Doe",
+        "email": "memberfour@example.com",
+        "password": "my_password"
+    }'</span> <span class="se">\</span>
+-H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"member_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John Doe"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"memberfour@example.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"approved"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"password_set"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"group_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nt">"page_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1458789000</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1458789000</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<h2>
+<div class="Tag type_warning">PATCH</div>
+
+ Update a Member</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">PATCH /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/member/<span class="o">{</span>MEMBER_ID<span class="o">}</span></code></pre></figure>
+
+<p>Updates the given member.</p>
+
+<p>These fields can be updated:</p>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Notes</th>
+    </tr>
+    <tr>
+        <td><code>member_id</code></td>
+        <td>​The unique ID (within the site) of the member.</td>
+        <td>string</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>name</code></td>
+        <td>​The member's full name.</td>
+        <td>string</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>email</code></td>
+        <td>​The member's email address.</td>
+        <td>string</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>group_ids</code></td>
+        <td>An array of IDs for all <a href="ds_api_group.html">groups</a>&lt;/a&gt; the member belongs to.​</td>
+        <td>array of strings</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>page_ids</code></td>
+        <td>​An array of IDs for pages the member has access to.</td>
+        <td>array of strings</td>
+        <td></td>
+    </tr>
+</table>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/987654321/site/123456/member/2 <span class="se">\</span>
+-X PATCH <span class="se">\</span>
+-d <span class="s1">'{
+        "name": "John Doe 2",
+        "email": "memberfive@example.com"
+    }'</span> <span class="se">\</span>
+-H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+<p>See Fields table. All fields for the <span style="color:red">object</span> are returned.</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"member_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John Doe 2"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"memberfive@example.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"last_login"</span><span class="p">:</span><span class="w"> </span><span class="mi">1415318631</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"approved"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"password_set"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"group_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nt">"page_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1458789081</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1458789000</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<h2>
+<div class="Tag type_error">DELETE</div>
+
+ Delete a Member</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">DELETE /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/member/<span class="o">{</span>MEMBER_ID<span class="o">}</span></code></pre></figure>
+
+<p>Deletes the given member.</p>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/member/2 <span class="se">\</span>
+-X DELETE <span class="se">\</span>
+-H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p><strong>Response</strong>
+There is no response to a delete request.</p>
+
+</div>

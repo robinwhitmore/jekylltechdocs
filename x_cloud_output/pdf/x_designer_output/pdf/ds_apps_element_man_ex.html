@@ -1,0 +1,155 @@
+<div class="post-header">
+    <h1 class="post-title-main" id="ds_apps_element_man_ex.html">Element Manifest Example</h1>
+</div>
+
+<div class="post-content">
+
+    
+    <div class="summary">The following example shows the manifest from the Pricing Chart sample element. This manifest contains both application-level manifest data and element manifest data. The element-specific information lives within the objects in the "elements" array.</div>
+    
+    
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nt">"manifest"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.1.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"elements"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Price Chart"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"files"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.1.0"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"settings"</span><span class="p">:</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"config"</span><span class="p">:</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"autopop"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"settings"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Settings"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"group"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"plans"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Plans"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"int"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"step"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"min"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"tooltip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Select the number of plans to display."</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"features"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Features"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"int"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"step"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"min"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"tooltip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Select the number of features for each plan."</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"location"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sign Up Button"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"select"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                        </span><span class="s2">"Top"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"Bottom"</span><span class="w">
+                    </span><span class="p">],</span><span class="w">
+                    </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Top"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"alignment"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Align"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"align"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"center"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"advanced"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Advanced"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"group"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"currency"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Currency"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"select"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD ($)"</span><span class="p">,</span><span class="w">
+                        </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"'$'"</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EUR (€)"</span><span class="p">,</span><span class="w">
+                        </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"'€'"</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GBP (£)"</span><span class="p">,</span><span class="w">
+                        </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"'£'"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                    </span><span class="p">],</span><span class="w">
+                     </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"'$'"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"titleColor"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Title Background"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"color"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#F8F8F8"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"backgroundColor"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Content Background"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"color"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#FFFFFF"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"numberColor"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"color"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#222222"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"borderColor"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Border Color"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"color"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#C9CDCF"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"tutorial"</span><span class="p">:</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"introduction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The price chart is a simple way to visually compare different plans with their features and prices."</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"topics"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Setup instructions"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"introduction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Follow these simple steps to help you get started!"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"steps"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"Choose the number of plans you would like. Each plan will add a new column
+                        to the chart."</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"Choose the number of features for each plan. Each feature will add a row
+                        to the chart."</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"Modify the currency setting to ensure the price of each plan is in the
+                        correct currency."</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"Fill out each plan's name, price, and list of features."</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"Choose where to put your sign up button. It can be place at the end of the
+                        features list or at the top with the plan's price."</span><span class="p">,</span><span class="w">
+                    </span><span class="p">]</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Build an online store"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"introduction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"View an in-depth webinar about building an online store
+                        with Weebly."</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6clKBa8x1qk"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nt">"autopop"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+</div>

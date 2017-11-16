@@ -4,6 +4,7 @@ keywords: migration, sites
 t_type: [reference]
 tags: [getting_started, clients, sites]
 sidebar: ds_gs_sidebar 
+pdf: true
 permalink: ds_mg_sites.html
 summary: This topic shows how to create and manage sites in the Cloud Admin.
 ---
@@ -50,11 +51,11 @@ You delete a site from the site's detail page.
 You can view all deleted sites from the client's detail page.
 {% include image.html file="new_siteDeletedList.png" caption="List deleted sites" %}
 
-## Restore a Site <!--todo: add new icon-->
+<h2>{% include label.html content="new!" %}Restore a Site</h2>
 You can restore a deleted site from the Deleted Sites dialog accessed from the [Deleted Sites](#delete-a-site) link on the client detail page.
 {% include image.html file="new_restoreSite.png" caption="Restore sites" %}
 
-## Restore Text Elements to a Page on a Site <!--todo: add new icon-->
+<h2>{% include label.html content="new!" %}Restore Text Elements to a Page on a Site</h2>
 You can restore deleted text elements back to a page from the site's detail page in the Cloud Admin. In the Pages section, click the gear icon for the page with the deleted elements and choose **Restore Elements**.
 {% include image.html file="new_elementRestore.png" caption="Restore elements to a page" %}
 
@@ -88,8 +89,8 @@ You now access site stats from the User Portal. You access that portal from `you
 
   And you manage the entries from the resulting dialog.
 {% include image.html file="new_formEntry.png" caption="Form entries" %}
-  
-## Change a Site's Plan
+
+<h2>{% include label.html content="new!" %}Change a Site's Plan</h2>
   You can change the plan a site is on from the bottom of the site's detail page.
 {% include image.html file="new_sitePlan.png" caption="Site plans can be changed" %}
   

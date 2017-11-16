@@ -1,0 +1,52 @@
+<div class="post-header">
+    <h1 class="post-title-main" id="ds_themes_update.html">Update Your Theme</h1>
+</div>
+
+<div class="post-content">
+
+    
+    <div class="summary">After you've created a theme and added it to the Gallery, you can create a new version.</div>
+    
+    <p>You update a theme in the same way as customizing an existing theme, and your changes can be as small as changing the name (done in the Cloud Admin) or changing the screenshot, to changing styles, templates, or partials. Once you make your changes to the theme’s files, you zip them up and upload the new zip using the <a data-container="body" data-toggle="popover" data-content="The site used to manage your users, site owners and their accounts, as well as apps and billing. You access Cloud Admin at weeblycloud.com/admin">Cloud Admin</a>. Any site that is using the theme will receive the updates, though the changes won’t be on the live site until it is republished.</p>
+
+<h2 id="change-the-themes-name">Change the Theme’s Name</h2>
+
+<p>You can change the theme’s name in the Cloud Admin - no need to edit any of the files in the zip.</p>
+
+<ol>
+  <li>
+    <p>From the <strong>Themes</strong> tab In the Cloud Admin, click the theme’s <strong>Manage</strong> link.</p>
+  </li>
+  <li>
+    <p>In the dialog, change the name and click <strong>Update Theme</strong>.
+​   The name changes for the theme and is also changed in the Theme Gallery where your users select themes.</p>
+  </li>
+</ol>
+
+<h2 id="update-a-themes-files">​Update a Theme’s Files</h2>
+
+<p>Changes other than to the theme’s name require you to edit the theme’s files, create a new zip, and upload it to the Cloud Admin.
+​
+<strong>​To update a theme</strong>:</p>
+<ol>
+  <li>
+    <p>Follow the steps in <a href="ds_themes_create.html">How to Create a Theme</a> to make your changes.</p>
+  </li>
+  <li>
+    <p>Once you’ve tested your changes, <a href="ds_themes_import_export.html">export</a> the theme to a local directory.</p>
+  </li>
+  <li>
+    <p>From the <strong>Themes</strong> tab In the Cloud Admin, click the theme’s <strong>Manage</strong> link.</p>
+  </li>
+  <li>
+    <p>In the dialog, click <strong>Upload Theme Zip</strong>.</p>
+  </li>
+</ol>
+
+<p>Any sites using the theme will get your updates, including sites that were created as a copy from another site or from a template that used the theme. The changes won’t be active until the site is published again but users will see your changes in the Editor. If your theme contains color palettes, variations, or options, previous selections made by the user will be retained after the update.</p>
+
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip: </b>If you want to force theme updates to live sites, use the <a href="ds_api_site.html">Site API</a> to republish sites after you upload the new zip."</div>
+
+<p>If you are updating a theme for a single user (that is, you don’t want to make it available to all users via the Cloud Admin), then simply deliver the updated zip file. The user can <a href="ds_themes_import_export.html">import</a> the new zip and apply the update as though it were a new theme. The theme’s name will have a number appended to it to indicate that it’s a version of the original. For example, if you had originally provided a zip named <code class="highlighter-rouge">MyTheme.zip</code> and then provided a new zip with the same name, when the user imports it, Weebly changes the name to <code class="highlighter-rouge">MyTheme_1.zip</code>, keeping the original intact.</p>
+
+</div>

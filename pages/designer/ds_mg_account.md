@@ -5,6 +5,7 @@ t_type: [reference]
 tags: [getting_started, configuration]
 sidebar: ds_gs_sidebar
 permalink: ds_mg_account.html
+pdf: true
 summary: This topic shows how to edit your account information.
 ---
 {% include image.html file="old_account.png" caption="Account info in Designer Platform" %}

@@ -1,0 +1,154 @@
+<div class="post-header">
+    <h1 class="post-title-main" id="ds_api_account.html">Account APIs</h1>
+</div>
+
+<div class="post-content">
+
+    
+    <div class="summary">The Account API provides methods for managing settings for the account authorized in this API call.</div>
+    
+    
+<h2 id="fields">Fields</h2>
+<p>The following table shows all fields that exist for this API, those that are returned when you retrieve a list, those that are required for <code class="highlighter-rouge">PUT</code>, and those that are changeable using <code class="highlighter-rouge">PATCH</code>. All fields are returned when you retrieve a single item.</p>
+<table>
+    <tbody>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>List</th>
+        <th>Required</th>
+        <th>Changeable</th>
+    </tr>
+    <tr>
+        <td><code>brand_name</code><br />
+        </td>
+        <td>Your <a href="ds_gs_configure.html#brand-your-sites-and-the-cloud-admin">brand</a>  name. Displays in the footer of any free sites.
+            You may override this setting at the site level.</td>
+        <td>string</td>
+        <td>X</td>
+        <td>X</td>
+        <td>X</td>
+    </tr>
+    
+    <tr>
+        <td><code>publish_upsell_url</code></td>
+        <td>Full url to your <a href="ds_gs_market.html">publish</a> promotion page. This url will be loaded
+            in an iframe (640px W by 200px H) upon site publish and can be used to
+            advertise other services. You may override this setting at the site
+            level (using this <a href="ds_api_site.html#patchupdate-a-site">Site API </a>call).
+        </td>
+        <td>string</td>
+        <td>X</td>
+        <td>X</td>
+        <td>X</td>
+    </tr>
+    
+    </tbody>
+</table>
+
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> Any fields returned that are not documented are currently unsupported and can be safely ignored.
+</div>
+
+<h2>
+<div class="Tag type_info">GET</div>
+
+ Retrieve Account Details</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /account</code></pre></figure>
+
+<p>Returns details for the account authorized in this API call
+    
+
+
+<p class="codeTitle">Example CURL request returning details:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/account <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+
+<p class="codeTitle">Example response:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+</span><span class="nt">"account"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"brand_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Brand"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"publish_upsell_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http:\/\/www.mybrand.com\/upsell.html"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+
+<h2>
+<div class="Tag type_warning">PUT</div>
+
+ Update the Given Fields for an Account</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">PUT /account</code></pre></figure>
+
+
+<p>Updates the given account. All fields are required.
+    
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/account <span class="se">\</span>
+-X PUT <span class="se">\</span>
+-d <span class="s1">'{
+        "brand_name": "My New Brand",
+        "publish_upsell_url": "http:\/\/www.mynewbrand.com\/upsell.html"
+}'</span> <span class="se">\</span>
+-H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+
+<p class="codeTitle">Example response:</p>
+<p>See Fields table. All fields for the account are returned.</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nt">"account"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"brand_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Brand"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"publish_upsell_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http:\/\/www.mynewbrand.com\/upsell.html"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+
+<h2>
+<div class="Tag type_warning">PATCH</div>
+
+ Update an Account</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">PATCH /account</code></pre></figure>
+
+
+<p>Updates the given account. All fields are updateable.
+    
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/account <span class="se">\</span>
+-X PATCH <span class="se">\</span>
+-d <span class="s1">'{
+        "brand_name": "My Brand",
+        "publish_upsell_url": "http:\/\/www.mynewbrand.com\/upsell.html"
+    }'</span> <span class="se">\</span>
+-H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+
+<p class="codeTitle">Example response:</p>
+<p>See Fields table. All fields for the account are returned.</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nt">"account"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"brand_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Brand"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"publish_upsell_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http:\/\/www.mynewbrand.com\/upsell.html"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+
+</p></p></p>
+
+</div>

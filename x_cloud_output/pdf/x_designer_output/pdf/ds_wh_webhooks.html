@@ -1,0 +1,89 @@
+<div class="post-header">
+    <h1 class="post-title-main" id="ds_wh_webhooks.html">Use Webhooks</h1>
+</div>
+
+<div class="post-content">
+
+    
+    <div class="summary">Webhooks allow your app to be notified of events that happen in a Weebly site.</div>
+    
+    <p>Webhooks allow your app to be notified of events that happen in a Weebly site. For example, your app can be notified when a site is published, store products get updated, or an order is created. You configure a callback URL and events are sent to that address using a <code class="highlighter-rouge">POST</code> request. You can use the information you receive from the webhook to get further information from the API.</p>
+
+<h2 id="subscribe-to-webhooks">Subscribe to Webhooks</h2>
+<p>Before you can use webhooks, you need to subscribe to the events, using your app’s <a href="ds_apps_manifest.html">manifest</a>. Set the callback URL (where the event notice should be sent) and an array of the events you want to be notified of.</p>
+
+<p>Refer to these docs for the supported events:</p>
+<ul>
+  <li><a href="ds_wh_user.html">User</a></li>
+  <li><a href="ds_wh_site.html">Site</a></li>
+  <li><a href="ds_wh_store.html">Store</a></li>
+  <li><a href="ds_wh_member.html">Membership</a></li>
+  <li><a href="ds_wh_form.html">Form</a></li>
+  <li><a href="ds_wh_blog.html">Blog</a></li>
+</ul>
+
+<p>For example, if you want to be notified when a store payment happens and when a site is updated, you’d set something like this in the manifest (read the <a href="ds_apps_manifest.html">manifest</a> topic for comprehensive placement and syntax info):</p>
+
+<p class="codeTitle">Subscribe to Webhooks:</p>
+<p></p>
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="s2">"webhooks"</span><span class="err">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"callback_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://my-site.com/webhooks"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"events"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"store.order.pay"</span><span class="p">,</span><span class="w"> </span><span class="s2">"site.update"</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="err">,</span></code></pre></figure>
+
+<h2 id="receive-webhooks">Receive Webhooks</h2>
+
+<p>​When you subscribe to an event, you’ll receive a <code class="highlighter-rouge">POST</code> request at the callback URL you specified. To acknowledge that you received the webhook without error, your server should return a <code class="highlighter-rouge">200</code> HTTP status code, otherwise we will consider it not received (we will attempt 12 retries over a space of 48 hours before failing).</p>
+
+<p>All webhooks contain the following payload:</p>
+<ul>
+  <li><code class="highlighter-rouge">client_id</code>: Your client ID found on your Developer Admin Portal page</li>
+  <li><code class="highlighter-rouge">client_version</code>: The app’s version</li>
+  <li><code class="highlighter-rouge">event</code>: The event name</li>
+  <li><code class="highlighter-rouge">timestamp</code>: Unix epoc time</li>
+  <li><code class="highlighter-rouge">data </code>: Additional data, based on the event (refer to the docs to understand exactly what data will be returned)</li>
+  <li><code class="highlighter-rouge">hmac</code>: The <code class="highlighter-rouge">client_id</code>, <code class="highlighter-rouge">client_version</code>, <code class="highlighter-rouge">event</code>, <code class="highlighter-rouge">timestamp</code>, and <code class="highlighter-rouge">data</code>, process through HMAC-SHA256 using the app’s secret key.</li>
+</ul>
+
+<p>​Fields will be in the same order as the list above. For example, for the <code class="highlighter-rouge">site.publish</code> webhook, you might have this in the hash:
+</p>
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="nt">"client_id"</span><span class="p">:</span><span class="s2">"CLIENT_ID"</span><span class="p">,</span><span class="nt">"client_version"</span><span class="p">:</span><span class="s2">"VERSION"</span><span class="p">,</span><span class="nt">"event"</span><span class="p">:</span><span class="s2">"EVENT"</span><span class="p">,</span><span class="nt">"timestamp"</span><span class="p">:</span><span class="err">TIMESTAMP</span><span class="p">,</span><span class="nt">"data"</span><span class="p">:{</span><span class="nt">"user_id"</span><span class="p">:</span><span class="s2">"USER_ID,"</span><span class="err">site_id</span><span class="s2">":"</span><span class="err">SITE_ID</span><span class="s2">","</span><span class="err">domain</span><span class="s2">":"</span><span class="err">DOMAIN"</span><span class="p">}}</span></code></pre></figure>
+
+<p>You might decode and verify like this:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">
+<span class="nv">$hash_string</span> <span class="o">=</span> <span class="s1">'{"client_id":"[CLIENT_ID]","client_version":"[VERSION]","event":"[EVENT]","timestamp":[TIMESTAMP],"data":{"user_id":"[USER_ID],"site_id":"[SITE_ID]","domain":"[DOMAIN]"}}'</span>;
+<span class="nv">$hash</span> <span class="o">=</span> hash_hmac<span class="o">(</span><span class="s1">'sha256'</span>, <span class="nv">$hash_string</span>, SECRET_KEY<span class="o">)</span>;</code></pre></figure>
+
+<p>You can use the data provided in the webhook to fetch additional data from a relevant API. For example, say you want to be notified when an order is paid and then get additional info about the transaction.  You would subscribe to the <code class="highlighter-rouge">store.order.pay webhook</code>. According the the doc, the additional payload will be:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">user_id </code>(string)</li>
+  <li><code class="highlighter-rouge">site_id </code>(string)</li>
+  <li><code class="highlighter-rouge">order_id </code>(string)</li>
+  <li><code class="highlighter-rouge">order_billing_id </code>(string)</li>
+  <li><code class="highlighter-rouge">order_billing_transaction_id </code>(string)</li>
+</ul>
+
+<p>So here’s what might be sent:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="err"></span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="nt">"client_id"</span><span class="p">:</span><span class="s2">"109104XXXX"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"client_version"</span><span class="p">:</span><span class="s2">"1.0.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"event"</span><span class="p">:</span><span class="s2">"store.order.pay"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"timestamp"</span><span class="p">:</span><span class="mi">1440016771</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="s2">"5530XXXX"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"site_id"</span><span class="p">:</span><span class="s2">"37391779819XXXX"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"order_id"</span><span class="p">:</span><span class="s2">"1826571643"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"order_billing_id"</span><span class="p">:</span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"order_billing_transaction_id"</span><span class="p">:</span><span class="s2">"1"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+</span><span class="nt">"hmac"</span><span class="p">:</span><span class="s2">"XXXXXXXX"</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<p>From that, you might use the <code class="highlighter-rouge">order_id</code> API to get info like the amount of the transaction, the order items, shipment info, etc.</p>
+
+
+</div>

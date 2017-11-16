@@ -1,0 +1,613 @@
+<div class="post-header">
+    <h1 class="post-title-main" id="ds_api_category.html">Category API</h1>
+</div>
+
+<div class="post-content">
+
+    
+    <div class="summary">​Use the Category API to retrieve category information, as well as to update, replace, create, and delete categories.</div>
+    
+    <p>Stores use <a href="https://hc.weebly.com/hc/en-us/articles/227050287-Organize-Your-Store-with-Categories">categories</a> to group and display similar products. Categories can be nested. Products can be assigned to one or more categories.</p>
+<figure class="post-content__figure">
+	
+
+	<img class="post-content__image" src="images/api_categories.png" alt="" />
+
+	
+
+	
+		<figcaption>Categories in a store</figcaption>
+	</figure>
+
+<p>​Use the Categories API to retrieve category information, as well as to update, replace, create, and delete categories.</p>
+
+<h2>Fields</h2>
+
+<p>The following table shows all fields that exist for this API, those that are returned when you retrieve a list, those that are required for <code class="highlighter-rouge">PUT</code> and <code class="highlighter-rouge">POST</code>, and those that are changeable using <code class="highlighter-rouge">PATCH</code> and <code class="highlighter-rouge">PUT</code>. All fields are returned when you retrieve a single item.</p>
+<table>
+    <tbody>
+    <tr>
+        <td><strong>Name</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Type</strong></td>
+        <td><strong>List</strong></td>
+        <td><strong>Required</strong></td>
+        <td><strong>Changeable</strong></td>
+    </tr>
+    <tr>
+        <td>​<code>user_id</code></td>
+        <td>The unique ID of the authenticated user</td>
+        <td>string</td>
+        <td>X</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>site_id</code></td>
+        <td>ID of a Weebly site, unique to the currently authenticated user​</td>
+        <td>string</td>
+        <td>X</td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td><code>url</code></td>
+        <td>​Direct URL to the category's page.</td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>category_id</code></td>
+        <td>​Unique ID (to the store) of the category.</td>
+        <td>string</td>
+        <td>X</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>name</code></td>
+        <td>​Name of the category.</td>
+        <td>string</td>
+        <td>X</td>
+        <td>X</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>seo_page_title</code></td>
+        <td>​The SEO title for the category. Site owners can create a title as a meta tag used by search engines.</td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>seo_page_description</code></td>
+        <td>​The SEO description for the category. Site owners can create a title as a meta tag used by search engines.
+        </td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>product_ids</code></td>
+        <td>​The unique ID (to the store) of all <a href="ds_api_product.html">products</a> associated with this category.</td>
+        <td>array of strings</td>
+        <td></td>
+        <td></td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>images</code></td>
+        <td>An array of images to display for this category. Use the <a href="ds_api_category_image.html">Category Images</a> API to work with images.</td>
+        <td>array of image objects</td>
+        <td>X</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>parent_category_id</code></td>
+        <td>For nested categories, ​ID of the category that is the parent to this category.</td>
+        <td>string</td>
+        <td>X</td>
+        <td></td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>created_date</code></td>
+        <td>Date the</td>
+        <td>Unix GMT Timestamp</td>
+        <td>X</td>
+        <td><br />
+        </td>
+        <td><br />
+        </td>
+    </tr>
+    <tr>
+        <td><code>updated_date</code></td>
+        <td>Date the</td>
+        <td>Unix GMT Timestamp</td>
+        <td>X</td>
+        <td><br />
+        </td>
+        <td><br />
+        </td>
+    </tr>
+    </tbody>
+</table>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Any fields returned that are not documented are currently unsupported and can be safely ignored.</div>
+
+<h2>
+<div class="Tag type_info">GET</div>
+
+ Retrieve a List of Categories</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/store/category</code></pre></figure>
+
+<p>Returns all categories for the given site. Only <code class="highlighter-rouge">list</code> fields are returned.</p>
+
+<h3>Query Parameters</h3>
+<p>Returned values are <a href="ds_api_about.html#pagination">paginated</a>. You can further filter results using these parameters:</p>
+
+<table>
+    <tr>
+        <td><strong>Parameter</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Type</strong></td>
+    </tr>
+    <tr>
+        <td><code>page</code></td>
+        <td>Which page of results to return. Start is <code>1</code>.
+            
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> Only the first 25 results are returned by default. If the result set is
+            expected to be over 25, you must implement pagination.
+</div>
+
+
+        </td>
+        <td>integer</td>
+    </tr>
+    <tr>
+        <td><code>limit</code></td>
+        <td>Number of results per page to return. Default is <code>25</code>. <br />Max is <code>200</code>.</td>
+        <td>integer</td>
+    </tr>
+    <tr>
+        <td><code>filterby</code></td>
+        <td>Field name to set a filter on.
+        </td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td><code>filterfor</code></td>
+        <td>​Value to search the filterby field for. You can use the URL encoded characters for following operators:
+        <ul>
+            <li><code>&lt;</code>    use   <code>%3C</code></li>
+            <li><code>&gt;</code>    use   <code>%3E</code></li>
+            <li><code>&lt;=</code>  use  <code>%3C%3D</code></li>
+            <li><code>&gt;=</code>  use  <code>%3E%#D</code></li>
+        </ul>
+        </td>
+        <td>string</td>
+    </tr>
+</table>
+
+<p class="codeTitle">Example CURL request returning all categories:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/store/category <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example filtered request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/store/category?filterby<span class="o">=</span>parent_category_id&amp;filterfor<span class="o">=</span>1 <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"category_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Featured Products"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="nt">"parent_category_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"category_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fruit"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://654321.weebly.com/uploads/5/4/9/1/54914441/s242778913223969860_c7.jpeg"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"category_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"category_image_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="err">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="nt">"parent_category_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"category_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Berries"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://654321.weebly.com/uploads/5/4/9/1/54914441/s242778913.jpeg"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"category_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"category_image_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="nt">"parent_category_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"category_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Citrus"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://654321.weebly.com/uploads/5/4/9/1/54914441/s242778913223969860_c9.jpeg"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"category_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"category_image_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+        </span><span class="s2">"parent_category"</span><span class="err">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span></code></pre></figure>
+
+<h2>
+<div class="Tag type_info">GET</div>
+
+ Retrieve the Quantity of Categories</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/store/category/count</code></pre></figure>
+
+<p>Returns the number categories in the store.</p>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/store/category/count <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<h2>
+<div class="Tag type_info">GET</div>
+
+ Retrieve Details for a Category</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/store/category/<span class="o">{</span>CATEGORY_ID<span class="o">}</span></code></pre></figure>
+
+<p>Returns all fields for the given category.</p>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/store/category/7 <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+<p>See Fields table. All fields for the category are returned.</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://hf4u.weebly.com/store/c7/Fruit.html"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"category_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fruit"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"seo_page_title"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"seo_page_description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"product_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"7"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"8"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"14"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"16"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"18"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"25"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"28"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"29"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"31"</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nt">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1445624678</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1445625218</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://654321.weebly.com/uploads/5/4/9/1/54914441/s242778913223969860_c7.jpeg"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"category_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"category_image_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="err">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nt">"parent_category_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<h2>
+<div class="Tag type_warning">POST</div>
+
+ Create a Category</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">POST /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/store/category</code></pre></figure>
+
+<p>Creates a category.</p>
+
+<p>These fields can be created:</p>
+
+<table>
+    <tr>
+        <td><strong>Name</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Type</strong></td>
+        <td><strong>Notes</strong></td>
+    </tr>
+    <tr>
+        <td><code>name</code></td>
+        <td>​Name of the category.</td>
+        <td>string</td>
+        <td>Required</td>
+    </tr>
+    <tr>
+        <td><code>seo_page_title</code></td>
+        <td>​The SEO title for the category. Site owners can create a title as a meta tag used by search engines.</td>
+        <td>string</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>seo_page_description</code></td>
+        <td>​The SEO description for the category. Site owners can create a title as a meta tag used by search engines.
+        </td>
+        <td>string</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>product_ids</code></td>
+        <td>​The unique ID (to the store) of all <a href="ds_api_product.html">products</a> associated with this category.</td>
+        <td>array of strings</td>
+        <td></td>
+    </tr>
+    <tr>
+    <td><code>parent_category_id</code></td>
+    <td>For nested categories, ​ID of the category that is the parent to this category.</td>
+    <td>string</td>
+</tr>
+</table>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/store/category <span class="se">\</span>
+-X POST <span class="se">\</span>
+-d <span class="s1">'{
+        "name": "New Category",
+        "parent_category": "1"
+}'</span> <span class="se">\</span>
+-H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://hf4u.weebly.com/store/c13/new_category.html"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"category_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"13"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"New Category"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"seo_page_title"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"seo_page_description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"product_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nt">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1476313140</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1476313140</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nt">"parent_category_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<h2>
+<div class="Tag type_warning">PUT</div>
+
+ Replace a Category</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">PUT /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/store/category/<span class="o">{</span>CATEGORY_ID<span class="o">}</span></code></pre></figure>
+
+<p>Replaces the given category.</p>
+
+<p>These fields can be replaced:</p>
+
+<table>
+    <tr>
+        <td><strong>Name</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Type</strong></td>
+        <td><strong>Notes</strong></td>
+    </tr>
+    <tr>
+        <td><code>name</code></td>
+        <td>​Name of the category.</td>
+        <td>string</td>
+        <td>Required</td>
+    </tr>
+    <tr>
+        <td><code>seo_page_title</code></td>
+        <td>​The SEO title for the category. Site owners can create a title as a meta tag used by search engines.</td>
+        <td>string</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>seo_page_description</code></td>
+        <td>​The SEO description for the category. Site owners can create a title as a meta tag used by search engines.
+        </td>
+        <td>string</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>product_ids</code></td>
+        <td>​The unique ID (to the store) of all <a href="ds_api_product.html">products</a> associated with this category.</td>
+        <td>array of strings</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>parent_category_id</code></td>
+        <td>For nested categories, ​ID of the category that is the parent to this category.</td>
+        <td>string</td>
+    </tr>
+</table>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/store/category/13 <span class="se">\</span>
+-X PUT <span class="se">\</span>
+-d <span class="s1">'{
+        "name": "New Category",
+        "parent_category": "1"
+    }'</span> <span class="se">\</span>
+-H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://hf4u.weebly.com/store/c13/new_category.html"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"category_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"13"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"New Category"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"seo_page_title"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"seo_page_description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"product_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nt">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1476313140</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1476313140</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nt">"parent_category_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<h2>
+<div class="Tag type_warning">PATCH</div>
+
+ Update a Category</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">PATCH /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/store/category/<span class="o">{</span>CATEGORY_ID<span class="o">}</span></code></pre></figure>
+
+<p>Updates the given category.</p>
+
+<p>These fields can be updated:</p>
+
+<table>
+    <tr>
+        <td><strong>Name</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Type</strong></td>
+    </tr>
+    <tr>
+        <td><code>name</code></td>
+        <td>​Name of the category.</td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td><code>seo_page_title</code></td>
+        <td>​The SEO title for the category. Site owners can create a title as a meta tag used by search engines.</td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td><code>seo_page_description</code></td>
+        <td>​The SEO description for the category. Site owners can create a title as a meta tag used by search engines.
+        </td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td><code>product_ids</code></td>
+        <td>​The unique ID (to the store) of all <a href="ds_api_product.html">products</a> associated with this category.</td>
+        <td>array of strings</td>
+    </tr>
+    <tr>
+        <td><code>parent_category_id</code></td>
+        <td>For nested categories, ​ID of the category that is the parent to this category.</td>
+        <td>string</td>
+    </tr>
+</table>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/987654321/site/123456/store/category/9 <span class="se">\</span>
+-X PATCH <span class="se">\</span>
+-d <span class="s1">'{
+        "name":"Flowers"
+    }'</span> <span class="se">\</span>
+-H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+<p>See Fields table. All fields for the category are returned.&lt;/p&gt;</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://hf4u.weebly.com/store/c9/Flowers.html"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"category_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Flowers"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"seo_page_title"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"seo_page_description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"product_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"27"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"30"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"32"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"34"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"35"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"36"</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nt">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1445624817</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1476314995</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://821263702103547270.weebly.com/uploads/5/4/9/1/54914441/s242c9_i1_w3000.jpeg"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"category_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"category_image_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="err">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nt">"parent_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<h2>
+<div class="Tag type_error">DELETE</div>
+
+ Delete a Category</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">DELETE /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/store/category/<span class="o">{</span>CATEGORY_ID<span class="o">}</span></code></pre></figure>
+
+<p>Deletes the given category.</p>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/store/category/9 <span class="se">\</span>
+-X DELETE <span class="se">\</span>
+-H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p><strong>Response</strong>
+There is no response to a delete request.</p>
+
+</div>

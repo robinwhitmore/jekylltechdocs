@@ -5,6 +5,7 @@ t_type: [reference]
 tags: [getting_started, troubleshooting]
 sidebar: ds_gs_sidebar
 permalink: ds_mg_retired.html
+pdf: true
 summary: This topic lists features from the Designer Platform that don't exist in Cloud Admin.
 ---
 * Customize User Portal color

@@ -70,6 +70,9 @@ kramdown:
 
 # filter used to process markdown. note that kramdown differs from github-flavored markdown in some subtle ways
 
+gems:
+  - jekyll-pdf
+
 collections:
   tooltips:
     output: false
@@ -85,6 +88,7 @@ defaults:
       comments: true
       search: true
       sidebar: ds_gs_sidebar
+      pdf: true
 
 
 # these are defaults used for the frontmatter for these file types

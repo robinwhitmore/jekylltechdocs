@@ -1,0 +1,289 @@
+<div class="post-header">
+    <h1 class="post-title-main" id="ds_api_form_entry.html">Form Entry API</h1>
+</div>
+
+<div class="post-content">
+
+    
+    <div class="summary">​Use the Form Entry API to return entries for a given form.</div>
+    
+    <p>Each submitted <a href="ds_api_form.html">form</a> on a site is saved as a form entry.</p>
+
+<p>​Use the Form Entries API to return these entries.</p>
+
+<h2 id="fields">Fields</h2>
+<p>The following table shows all fields that exist for this API and those that are returned when you retrieve a list. All fields are returned when you retrieve a single item.</p>
+<table>
+    <tbody>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>List</th>
+    </tr>
+    <tr>
+        <td><code>elements</code></td>
+        <td>Each element object represents a field in the form and has 3 properties:
+            <ul>
+                <li><code>type</code></li>
+                <li><code>form_element_name</code></li>
+                <li><code>values</code>: The <code>values</code> property is an array of objects representing field subtypes, each with a key and value property. The key is the the subtype name (empty string if none), and value is the value of the subtype.</li>
+            </ul> </td>
+        <td>array of objects</td>
+        <td>X</td>
+    </tr>
+
+    <tr>
+        <td><code>date_submitted</code></td>
+        <td>Date the form entry was submitted
+        </td>
+        <td>Unix timestamp in GMT.</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>ip_address</code></td>
+        <td>​The IP address of the machine submitting the form.</td>
+        <td>string</td>
+        <td>X</td>
+        </tr>
+    <tr>
+        <td><code>form_entry_id</code></td>
+        <td>The unique ID for a form entry.</td>
+        <td>string</td>
+        <td>X</td>
+    </tr>
+    </tbody>
+</table>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Any fields returned that are not documented are currently unsupported and can be safely ignored.</div>
+
+<h2>
+<div class="Tag type_info">GET</div>
+
+ Retrieve a List of Form Entries
+</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/form/<span class="o">{</span>FORM_ID<span class="o">}</span>/entry</code></pre></figure>
+
+<p>Returns all entries for the given form.</p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+<p>Returned values are <a href="ds_api_about.html#pagination">paginated</a>. You can further filter results using these parameters:</p>
+
+<table>
+    <tr>
+        <th>Parameter</th>
+        <th>Description</th>
+        <th>Type</th>
+    </tr>
+    <tr>
+        <td><code>page</code></td>
+        <td>Which page of results to return. Start is <code>1</code>.
+            
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> Only the first 25 results are returned by default. If the result set is
+            expected to be over 25, you must implement pagination.
+</div>
+
+
+        </td>
+        <td>integer</td>
+    </tr>
+    <tr>
+        <td><code>limit</code></td>
+        <td>Number of results per page to return. Default is <code>25</code>. <br />Max is <code>200</code>.</td>
+        <td>integer</td>
+    </tr>
+    <tr>
+        <td><code>query</code></td>
+        <td>Use to retrieve only entries that have a full-text match with the query string.</td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td><code>filterby</code></td>
+        <td>Field name to set a filter on. </td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td><code>filterfor</code></td>
+        <td>​Value to search the filterby field for.</td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td><code>sortby</code></td>
+        <td>Field name to sort by</td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td><code>sortdir</code></td>
+        <td>Sort direction. Valid values are:
+            <ul>
+                <li><code>asc</code></li>
+                <li><code>desc</code></li>
+            </ul>
+        </td>
+        <td>string</td>
+    </tr>
+</table>
+
+<p class="codeTitle">Example CURL request returning all entries:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/form/56789/entry <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example filtered request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/form/56789/entry?sortdir<span class="o">=</span>asc <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"date_submitted"</span><span class="p">:</span><span class="s2">"1453382915"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"ip_address"</span><span class="p">:</span><span class="s2">"74.115.50.52"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"form_entry_id"</span><span class="p">:</span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"elements"</span><span class="p">:[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"type"</span><span class="p">:</span><span class="s2">"Name"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"form_element_name"</span><span class="p">:</span><span class="s2">"Name"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"values"</span><span class="p">:[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="nt">"key"</span><span class="p">:</span><span class="s2">"first"</span><span class="p">,</span><span class="w">
+                        </span><span class="nt">"value"</span><span class="p">:</span><span class="s2">"John"</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="nt">"key"</span><span class="p">:</span><span class="s2">"last"</span><span class="p">,</span><span class="w">
+                        </span><span class="nt">"value"</span><span class="p">:</span><span class="s2">"Doe"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"type"</span><span class="p">:</span><span class="s2">"email"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"form_element_name"</span><span class="p">:</span><span class="s2">"Email"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="nt">"key"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+                        </span><span class="nt">"value"</span><span class="p">:</span><span class="s2">"john.doe@email.com"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"type"</span><span class="p">:</span><span class="s2">"Options Buttons"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"form_element_name"</span><span class="p">:</span><span class="s2">"Receive Emails?"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="nt">"key"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+                        </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yes"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"date_submitted"</span><span class="p">:</span><span class="s2">"1453382925"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"ip_address"</span><span class="p">:</span><span class="s2">"74.115.90.232"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"form_entry_id"</span><span class="p">:</span><span class="s2">"18724587"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"elements"</span><span class="p">:[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"type"</span><span class="p">:</span><span class="s2">"Name"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"form_element_name"</span><span class="p">:</span><span class="s2">"Name"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"values"</span><span class="p">:[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="nt">"key"</span><span class="p">:</span><span class="s2">"first"</span><span class="p">,</span><span class="w">
+                        </span><span class="nt">"value"</span><span class="p">:</span><span class="s2">"Jane"</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="nt">"key"</span><span class="p">:</span><span class="s2">"last"</span><span class="p">,</span><span class="w">
+                        </span><span class="nt">"value"</span><span class="p">:</span><span class="s2">"Smith"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"type"</span><span class="p">:</span><span class="s2">"email"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"form_element_name"</span><span class="p">:</span><span class="s2">"Email"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="nt">"key"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+                        </span><span class="nt">"value"</span><span class="p">:</span><span class="s2">"jane.smith@email.com"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"type"</span><span class="p">:</span><span class="s2">"Options Buttons"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"form_element_name"</span><span class="p">:</span><span class="s2">"Receive Emails?"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="nt">"key"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+                        </span><span class="nt">"value"</span><span class="p">:</span><span class="s2">"no"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span></code></pre></figure>
+
+<h2>
+<div class="Tag type_info">GET</div>
+
+ Retrieve Details for a Form Entry
+</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/form/<span class="o">{</span>FORM_ID<span class="o">}</span>/entry/<span class="o">{</span>ENTRY_ID<span class="o">}</span></code></pre></figure>
+
+<p>Returns all fields for the given form entry.</p>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/form/56789/entry/654321 <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+<p>See Fields table. All fields for the entry are returned.</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nt">"date_submitted"</span><span class="p">:</span><span class="s2">"1453382925"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"ip_address"</span><span class="p">:</span><span class="s2">"74.115.90.232"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"form_entry_id"</span><span class="p">:</span><span class="s2">"654321"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"elements"</span><span class="p">:[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"type"</span><span class="p">:</span><span class="s2">"Name"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"form_element_name"</span><span class="p">:</span><span class="s2">"Name"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"values"</span><span class="p">:[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nt">"key"</span><span class="p">:</span><span class="s2">"first"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"value"</span><span class="p">:</span><span class="s2">"Jane"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nt">"key"</span><span class="p">:</span><span class="s2">"last"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"value"</span><span class="p">:</span><span class="s2">"Smith"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"type"</span><span class="p">:</span><span class="s2">"email"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"form_element_name"</span><span class="p">:</span><span class="s2">"Email"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nt">"key"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"value"</span><span class="p">:</span><span class="s2">"jane.smith@email.com"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"type"</span><span class="p">:</span><span class="s2">"Options Buttons"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"form_element_name"</span><span class="p">:</span><span class="s2">"Receive Emails?"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nt">"key"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"value"</span><span class="p">:</span><span class="s2">"no"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+
+</div>

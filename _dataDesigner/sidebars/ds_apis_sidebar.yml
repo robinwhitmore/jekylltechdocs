@@ -20,207 +20,207 @@ entries:
       type: frontmatter
 
   - title: Use the REST APIs
-    output: web, pdf
+    output: web
     folderitems:
 
     - title: How to Use the REST APIs
       url: /ds_api_about.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: Account API
       url: /ds_api_account.html
-      output: web, pdf
+      output: web
       # ready for review
 
     - title: Blog API
       url: /ds_api_blog.html
-      output: web, pdf
+      output: web
       # ready for review
 
     - title: Blog Post API
       url: /ds_api_blog_post.html
-      output: web, pdf
+      output: web
       # ready for review
 
     - title: Category API
       url: /ds_api_category.html
-      output: web, pdf
+      output: web
       # ready for review
 
     - title: Category Image API
       url: /ds_api_category_image.html
-      output: web, pdf
+      output: web
       # ready for review
 
     - title: Client API
       url: /ds_api_client.html
-      output: web, pdf
+      output: web
       # ready for review
 
     - title: Client Site API
       url: /ds_api_client_site.html
-      output: web, pdf
+      output: web
       # ready for review
 
 
     - title: Coupon API
       url: /ds_api_coupon.html
-      output: web, pdf
+      output: web
       # ready for review
 
 
     - title: Form API
       url: /ds_api_form.html
-      output: web, pdf
+      output: web
       # ready for review
 
     - title: Form Entry API
       url: /ds_api_form_entry.html
-      output: web, pdf
+      output: web
       # ready for review
 
 
     - title: Group API
       url: /ds_api_group.html
-      output: web, pdf
+      output: web
       # ready for review
 
     - title: Member API
       url: /ds_api_member.html
-      output: web, pdf
+      output: web
      # ready for review
 
     - title: Order API
       url: /ds_api_order.html
-      output: web, pdf
+      output: web
       # ready for review
 
     - title: Order Billing API
       url: /ds_api_order_billing.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: Order Billing Transaction API
       url: /ds_api_order_billing_transaction.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: Order Item API
       url: /ds_api_order_item.html
-      output: web, pdf
+      output: web
       # ready for review
 
     - title: Order Shipment API
       url: /ds_api_order_shipment.html
-      output: web, pdf
+      output: web
       # ready for review
 
     - title: Order Shipment Transaction API
       url: /ds_api_order_shipment_transaction.html
-      output: web, pdf
+      output: web
       # ready for review
 
     - title: Page API
       url: /ds_api_page.html
-      output: web, pdf
+      output: web
       # ready for review
 
     - title: Plan API
       url: /ds_api_plan.html
-      output: web, pdf
+      output: web
       # ready for review
 
     - title: Product API
       url: /ds_api_product.html
-      output: web, pdf
+      output: web
       # ready for review
 
     - title: Product Image API
       url: /ds_api_product_image.html
-      output: web, pdf
+      output: web
       # ready for review
 
     - title: Product Option API
       url: /ds_api_product_option.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: Product SKU API
       url: /ds_api_product_sku.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: Product SKU Option Choice API
       url: /ds_api_product_sku_option_choice.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: Site API
       url: /ds_api_site.html
-      output: web, pdf
+      output: web
       # ready for review
 
     - title: Store API
       url: /ds_api_store.html
-      output: web, pdf
+      output: web
       # ready for review
 
     - title: Team Member API
       url: /ds_api_team_member.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: Themes (Custom Cloud) API
       url: /ds_api_themes_cloud.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: Themes (User) API
       url: /ds_api_themes_user.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: User API
       url: /ds_api_user.html
-      output: web, pdf
+      output: web
       # ready for review
 
   - title: Webhooks
-    output: web, pdf
+    output: web
     folderitems:
 
     - title: How to Use Webhooks
       url: /ds_wh_webhooks.html
-      output: web, pdf
+      output: web
       # ready for review
 
     - title: Blog Webhooks
       url: /ds_wh_blog.html
-      output: web, pdf
+      output: web
       # ready for review
 
     - title: Form Webhooks
       url: /ds_wh_form.html
-      output: web, pdf
+      output: web
       # ready for review
 
     - title: Member Webhooks
       url: /ds_wh_member.html
-      output: web, pdf
+      output: web
       # ready for review
 
     - title: Site Webhooks
       url: /ds_wh_site.html
-      output: web, pdf
+      output: web
       # ready for review
 
     - title: Store Webhooks
       url: /ds_wh_store.html
-      output: web, pdf
+      output: web
       # ready for review
 
     - title: User Webhooks
       url: /ds_wh_user.html
-      output: web, pdf
+      output: web
       # ready for review

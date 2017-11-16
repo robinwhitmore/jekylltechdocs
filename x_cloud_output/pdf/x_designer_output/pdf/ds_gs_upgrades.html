@@ -1,0 +1,58 @@
+<div class="post-header">
+    <h1 class="post-title-main" id="ds_gs_upgrades.html">Handle Site Upgrades</h1>
+</div>
+
+<div class="post-content">
+
+    
+    <div class="summary">Plans determine what functionality a site has. If you try to access functionality not supported by the plan, a popup displays information about upgrading. If you expect your clients to be using the Weebly Editor, you need to provide the content for this popup and you need to handle the upgrade process. If clients won't be using the editor, you'll be shown the standard Weebly dialog.</div>
+    
+    <!--currently not included in site, since will likely handle upgrades manually-->
+<p>When a user encounters a feature in the Weebly Editor that is part of a plan they do not currently have, they will be prompted to upgrade. This triggers a popup window which loads a URL showing the plans they can upgrade to. You need to create this content, and then handle the upgrade.</p>
+
+<p>You set the upgrade URL in the Cloud Admin (or via the API) on either the Weebly Cloud Account or the Site level (in the event a different URL is set at the site and account level, the site level has the higher precedence).</p>
+<figure class="post-content__figure">
+	
+
+	<img class="post-content__image" src="images/cl_upgrade.png" alt="" />
+
+	
+
+	
+		<figcaption>Upgrade settings in the Cloud Admin</figcaption>
+	</figure>
+
+<p>​When the user tries to access something requiring an upgrade, the following parameters are passed in the upgrade URL:</p>
+<ul>
+  <li><code class="highlighter-rouge">user_id</code>: The user identification number.</li>
+  <li><code class="highlighter-rouge">site</code>: The site the user is modifying.</li>
+  <li><code class="highlighter-rouge">plan</code>: The lowest supported Weebly plan that contains the requested feature. This may be empty if the upgrade is for an element or theme that is not part of a standard Weebly plan, such as a custom element or theme.</li>
+  <li><code class="highlighter-rouge">upgrade_type</code>: Element, theme or feature.</li>
+  <li><code class="highlighter-rouge">upgrade_id</code>: The identifier for the element, theme, or feature.</li>
+  <li><code class="highlighter-rouge">plan_ids</code>: Comma separated list of all plan ids that satisfy the upgrade request.</li>
+  <li><code class="highlighter-rouge">hash</code>: A SHA1 hash of the following fields, pipe-separated:
+    <ul>
+      <li><code class="highlighter-rouge">user_id</code></li>
+      <li><code class="highlighter-rouge">site_id</code></li>
+      <li><strong>upgrade hash</strong> (the upgrade hash can be found in the Upgrade Settings section on the Settings tab of Cloud Admin - see the above image).
+Example hash: <code class="highlighter-rouge">"1234567|1234567891011234|fp16iw6bjadsubbpsok8wfze4l3cn222"</code>.</li>
+    </ul>
+  </li>
+</ul>
+
+<p class="codeTitle">Example Upgrade URL:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">http://your-url.com/upgrade.html?user_id<span class="o">=</span>1234567&amp;site<span class="o">=</span>1234567891011234&amp;plan<span class="o">=</span>starter&amp;upgrade_type<span class="o">=</span>feature&amp;upgrade_id<span class="o">=</span>edit_footer&amp;plan_ids<span class="o">=</span>40%2C14%2C41%2C10%2C35%2C39&amp;hash<span class="o">=</span>e71ca960fad7e87df447bb7879a27a8d14fa5a48&amp;</code></pre></figure>
+
+<p class="codeTitle">Upgrade Hash:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">$user_id</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="mi">4736582015</span><span class="err">;</span><span class="w">
+</span><span class="err">$site_id</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="mi">59705954748010</span><span class="err">;</span><span class="w">
+</span><span class="err">$upgrade_hash</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">'fp</span><span class="mi">16</span><span class="err">iw</span><span class="mi">6</span><span class="err">bjadsubbpsok</span><span class="mi">8</span><span class="err">wfze</span><span class="mi">4</span><span class="err">l</span><span class="mi">3</span><span class="err">cn</span><span class="mi">222</span><span class="err">';</span><span class="w">
+</span><span class="err">$hash</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">sha</span><span class="mi">1</span><span class="err">($user_id</span><span class="w"> </span><span class="err">.</span><span class="w"> </span><span class="s2">"|"</span><span class="w"> </span><span class="err">.</span><span class="w"> </span><span class="err">$site_id</span><span class="w"> </span><span class="err">.</span><span class="w"> </span><span class="s2">"|"</span><span class="w"> </span><span class="err">.</span><span class="w"> </span><span class="err">$upgrade_hash);</span></code></pre></figure>
+
+<p>This hash is a way for the upgrade window to verify the request is coming from the Weebly editor. You need to verify the hash by comparing it to the hash set the Settings section of Cloud Admin. Once verified, you then need to handle the purchase of the upgrade.</p>
+
+<p>Once a client has successfully purchased a new plan, you must call the Plan API to change the plan for the site. You then should display confirmation content in the popup notifying the client that their account has been upgraded. Once the popup is closed, the Weebly Editor will be refreshed and the new plan loaded.</p>
+
+</div>

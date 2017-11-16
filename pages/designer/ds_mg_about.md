@@ -5,6 +5,7 @@ t_type: [concepts]
 tags: [getting_started]
 sidebar: ds_gs_sidebar 
 permalink: ds_mg_about.html
+pdf: true
 summary: Use these topics to understand how to do your work in the Cloud Admin
 ---
 Welcome to the new Weebly Cloud for Designers!

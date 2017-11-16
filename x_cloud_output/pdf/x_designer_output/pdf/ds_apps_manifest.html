@@ -1,0 +1,70 @@
+<div class="post-header">
+    <h1 class="post-title-main" id="ds_apps_manifest.html">Create the App Manifest</h1>
+</div>
+
+<div class="post-content">
+
+    
+    <div class="summary">The manifest.json file outlines the structure of the app, and provides pertinent information about locales, authorship, and more. It must exist for each app and must live at the root of the application's zip file.</div>
+    
+    <p>Create your manifest with the following elements:</p>
+
+<ul>
+  <li>
+    <p><code class="highlighter-rouge">manifest</code>: (required)
+ The version of the Weebly Platform API your application was built to work with.  The only currently supported value is <code class="highlighter-rouge">1</code>.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">version</code>: (required)
+ The version of your application.  Provided as a string, following Semantic Versioning guidelines (<code class="highlighter-rouge">Major.Minor.Patch</code>: for example <code class="highlighter-rouge">1.5.13</code>).</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">locale</code>: (optional)
+ Describes the default and supported locales with the following properties:</p>
+    <ul>
+      <li><code class="highlighter-rouge">default</code>: The default locale that the application supports, provided as a language/country code. Default value is <code class="highlighter-rouge">en-us</code>, for US English.</li>
+      <li><code class="highlighter-rouge">supported</code>: An array of country code strings, dictating which languages your application supports.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> Currently, the only supported local is <code class="highlighter-rouge">en-us</code>. Other locales will be supported in the future.
+</div>
+
+<ul>
+  <li><code class="highlighter-rouge">webhooks</code>: (optional)
+ Describes the events and callback URL the webhook supports, using the following properties:
+    <ul>
+      <li><code class="highlighter-rouge">callback_url</code>: (required)
+ The url for the webhook to call each time a supported event occurs</li>
+      <li><code class="highlighter-rouge">events</code>
+ An array event names to subscribe to. See the webhooks section for full list.</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">snippet</code>: (optional)
+ The relative path from the root to a file containing the snippet of html that will be included on every page of a published site. Useful for adding analytics to websites. This is a shortcut for calling the snippet API.</li>
+</ul>
+
+<p>​Your manifest requires additional entries if you are creating an <a href="ds_apps_element_create.html">element</a>.</p>
+
+<p>Here’s a manifest showing all elements for a backend service or snippet - an element or dashboard card will require more.</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+   </span><span class="nt">"manifest"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456D"</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"locale"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en-us"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"supported"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"en-us"</span><span class="p">,</span><span class="w"> </span><span class="s2">"fr"</span><span class="p">,</span><span class="w"> </span><span class="s2">"de"</span><span class="p">]</span><span class="w">
+   </span><span class="p">},</span><span class="w">
+   </span><span class="nt">"webhooks"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"callback_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://my-site.com/webhooks"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"events"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"site.publish"</span><span class="p">,</span><span class="w"> </span><span class="s2">"site.update"</span><span class="p">]</span><span class="w">
+   </span><span class="p">},</span><span class="w">
+   </span><span class="nt">"snippet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path/to/snippet.tpl"</span><span class="w">
+</span><span class="err">.</span><span class="w"> </span><span class="err">.</span><span class="w"> </span><span class="err">.</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+
+</div>

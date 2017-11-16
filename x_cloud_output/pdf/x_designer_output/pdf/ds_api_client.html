@@ -1,0 +1,455 @@
+<div class="post-header">
+    <h1 class="post-title-main" id="ds_api_client.html">Client API</h1>
+</div>
+
+<div class="post-content">
+
+    
+    <div class="summary">Use the Client API to create and manage clients and their sites.</div>
+    
+    
+<h2>Fields</h2>
+
+<p>The following table shows all fields that exist for this API, those that are returned when you retrieve a list, those that are required for <code class="highlighter-rouge">PUT</code> and <code class="highlighter-rouge">POST</code>, and those that are changeable using <code class="highlighter-rouge">PATCH</code> and <code class="highlighter-rouge">PUT</code>. All fields are returned when you retrieve a single item.</p>
+<table>
+    <tbody>
+    <tr>
+        <td><strong>Name</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Type</strong></td>
+        <td><strong>List</strong></td>
+        <td><strong>Required</strong></td>
+        <td><strong>Changeable</strong></td>
+    </tr>
+    <tr>
+        <td>​<code>user_id</code></td>
+        <td>The unique ID of the authenticated user</td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>site_id</code></td>
+        <td>ID of a Weebly site, unique to the currently authenticated user​</td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td><code>client_id</code></td>
+        <td>description​</td>
+        <td>string</td>
+        <td>X</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>name</code></td>
+        <td>description</td>
+        <td>string</td>
+        <td>list</td>
+        <td>X</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>email</code></td>
+        <td>description</td>
+        <td>string</td>
+        <td>list</td>
+        <td>X</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>phone</code></td>
+        <td>description</td>
+        <td>string</td>
+        <td>list</td>
+        <td></td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>note</code></td>
+        <td>description</td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>created_date</code></td>
+      <td>Date the client was created.</td>
+        <td>Unix GMT Timestamp</td>
+        <td></td>
+        <td><br />
+        </td>
+        <td><br />
+        </td>
+    </tr>
+    <tr>
+        <td><code>updated_date</code></td>
+      <td>Date the client was last updated.</td>
+        <td>Unix GMT Timestamp</td>
+        <td></td>
+        <td><br />
+        </td>
+        <td><br />
+        </td>
+    </tr>
+    </tbody>
+</table>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Any fields returned that are not documented are currently unsupported and can be safely ignored.</div>
+
+<h2>
+<div class="Tag type_info">GET</div>
+
+ Retrieve a List of Clients</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /client</code></pre></figure>
+
+<p>Returns all clients for the designer. Only <code class="highlighter-rouge">list</code> fields are returned.</p>
+
+<h3>Query Parameters</h3>
+<p>Returned values are <a href="ds_api_about.html#pagination">paginated</a>. You can further filter results using these parameters:</p>
+
+<table>
+    <tr>
+        <td><strong>Parameter</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Type</strong></td>
+    </tr>
+    <tr>
+        <td><code>page</code></td>
+        <td>Which page of results to return. Start is <code>1</code>.
+            
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> Only the first 25 results are returned by default. If the result set is
+            expected to be over 25, you must implement pagination.
+</div>
+
+
+        </td>
+        <td>integer</td>
+    </tr>
+    <tr>
+        <td><code>limit</code></td>
+        <td>Number of results per page to return. Default is <code>25</code>. <br />Max is <code>200</code>.</td>
+        <td>integer</td>
+    </tr>
+    <tr>
+        <td><code>query</code></td>
+        <td>Use to retrieve only pages that have a full-text match with the query string.</td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td><code>filterby</code></td>
+        <td>Field name to set a filter on. </td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td><code>filterfor</code></td>
+        <td>​​​Value to search the filterby field for.<br />
+            You can use the following URL encoded operators with your <code>filterfor</code> parameter:
+            <ul>
+                <li><code>​&lt;</code>: use <code>%3C</code></li>
+                <li><code>&gt;</code>: use <code>%3E</code></li>
+                <li><code>&lt;=</code>: use <code>%3C%3D</code></li>
+                <li><code>&gt;=</code>: use <code>%3E%3D</code></li>
+                ​
+            </ul>
+        </td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td><code>sortby</code></td>
+        <td>Field name to sort by.</td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td><code>sortdir</code></td>
+        <td>Sort direction. Valid values are:
+            <ul>
+                <li><code>asc</code></li>
+                <li><code>desc</code></li>
+            </ul>
+        </td>
+        <td>string</td>
+    </tr>
+</table>
+
+<p class="codeTitle">Example CURL request returning all clients:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/client <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example filtered request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/client?filterby<span class="o">=</span>phone&amp;filterfor<span class="o">=</span>555-555-5555 <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Client One"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"clientone@email.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-555-5555"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"note"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654322"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Client Two"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"clienttwo@email.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-555-5556"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"note"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654323"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Client Three"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"clientthree@email.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-555-5557"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"note"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span></code></pre></figure>
+
+<h2>
+<div class="Tag type_info">GET</div>
+
+ Retrieve Details for a Client</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /client/<span class="o">{</span>CLIENT_ID<span class="o">}</span></code></pre></figure>
+
+<p>Returns all fields for the given client.</p>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/client/1 <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+<p>See Fields table. All fields for the client are returned.</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Client One"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"clientone@email.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-555-5555"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"note"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<h2>
+<div class="Tag type_warning">POST</div>
+
+ Create a Client</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">POST /client</code></pre></figure>
+
+<p>Creates a client.</p>
+
+<p>These fields can be created:</p>
+
+<table>
+    <tr>
+        <td><strong>Name</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Type</strong></td>
+        <td><strong>Notes</strong></td>
+    </tr>
+  <tr>
+    <td><code>name</code></td>
+    <td>description</td>
+    <td>string</td>
+    <td>Required</td>
+  </tr>
+  <tr>
+    <td><code>email</code></td>
+    <td>description</td>
+    <td>string</td>
+    <td>Required</td>
+  </tr>
+  <tr>
+    <td><code>phone</code></td>
+    <td>description</td>
+    <td>string</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><code>note</code></td>
+    <td>description</td>
+    <td>string</td>
+    <td></td>
+  </tr>
+</table>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/client <span class="se">\</span>
+-X POST <span class="se">\</span>
+-d <span class="s1">'{
+      "name": "New Client",
+      "email": "newclient@email.com",
+      "phone": "555-555-5559"
+    }'</span> <span class="se">\</span>
+-H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"New Client"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"newclient@email.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-555-5559"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"note"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+</span><span class="p">}</span><span class="w">         </span></code></pre></figure>
+
+<h2>
+<div class="Tag type_warning">PUT</div>
+
+ Replace a Client</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">PUT /client/<span class="o">{</span>CLIENT_ID<span class="o">}</span></code></pre></figure>
+
+<p>Replaces the given client.</p>
+
+<p>These fields can be replaced:</p>
+
+<table>
+    <tr>
+        <td><strong>Name</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Type</strong></td>
+        <td><strong>Notes</strong></td>
+    </tr>
+  <tr>
+    <td><code>name</code></td>
+    <td>description</td>
+    <td>string</td>
+    <td>Required</td>
+  </tr>
+  <tr>
+    <td><code>email</code></td>
+    <td>description</td>
+    <td>string</td>
+    <td>Required</td>
+  </tr>
+  <tr>
+    <td><code>phone</code></td>
+    <td>description</td>
+    <td>string</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><code>note</code></td>
+    <td>description</td>
+    <td>string</td>
+    <td></td>
+  </tr>
+</table>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/client/1 <span class="se">\</span>
+-X PUT <span class="se">\</span>
+-d <span class="s1">'{
+      "name": "New Client One"
+      "email": newclientone@email.com
+    }'</span> <span class="se">\</span>
+-H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"New Client One"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"newclientone@email.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-555-5555"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"note"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<h2>
+<div class="Tag type_warning">PATCH</div>
+
+ Update a Client</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">PATCH /client/<span class="o">{</span>CLIENT_ID<span class="o">}</span></code></pre></figure>
+
+<p>Updates the given client.</p>
+
+<p>These fields can be updated:</p>
+
+<table>
+    <tr>
+        <td><strong>Name</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Type</strong></td>
+    </tr>
+  <tr>
+    <td><code>name</code></td>
+    <td>description</td>
+    <td>string</td>
+  </tr>
+  <tr>
+    <td><code>email</code></td>
+    <td>description</td>
+    <td>string</td>
+  </tr>
+  <tr>
+    <td><code>phone</code></td>
+    <td>description</td>
+    <td>string</td>
+  </tr>
+  <tr>
+    <td><code>note</code></td>
+    <td>description</td>
+    <td>string</td>
+  </tr>
+</table>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/client/2 <span class="se">\</span>
+-X PATCH <span class="se">\</span>
+-d <span class="s1">'{
+      "note": "A new note."
+    }'</span> <span class="se">\</span>
+-H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+<p>See Fields table. All fields for the client are returned.</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654322"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Client Two"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"clienttwo@email.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-555-5556"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"note"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A new note."</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+
+</div>

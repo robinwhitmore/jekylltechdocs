@@ -1,0 +1,583 @@
+<div class="post-header">
+    <h1 class="post-title-main" id="ds_api_order.html">Order API</h1>
+</div>
+
+<div class="post-content">
+
+    
+    <div class="summary">Use the Order API to view information about a site's orders.</div>
+    
+    <p>When customers purchase products from a site’s store an <a href="https://hc.weebly.com/hc/en-us/articles/227064787-About-Managing-Orders">order</a> is created. An order contains order items that represent the products the customer purchased. Orders can have one or more <a href="ds_api_order_shipment.html">shipments</a> and <a href="ds_api_order_shipment_transaction.html">shipment transactions</a> that show the charges for shipping. Orders also include <a href="ds_api_order_billing.html">billings</a>, which are the payment methods and billing addresses, as well as <a href="ds_api_order_billing_transaction.html">billing transactions</a> which are the actual charges.</p>
+
+<p>Orders can also be associated with <a href="ds_api_coupon.html">coupons</a> and discounts used with the order, as well as notes that the customer may have left for the store owner.</p>
+
+<h2>Fields</h2>
+
+<p>The following table shows all fields that exist for this API and those that are returned when you retrieve a list. All fields are returned when you retrieve a single item.</p>
+<table>
+    <tbody>
+    <tr>
+        <td><strong>Name</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Type</strong></td>
+        <td><strong>List</strong></td>
+    </tr>
+    <tr>
+        <td>​<code>user_id</code></td>
+        <td>The unique ID of the authenticated user</td>
+        <td>string</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>site_id</code></td>
+        <td>ID of a Weebly site, unique to the currently authenticated user​</td>
+        <td>string</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>order_id</code></td>
+        <td>The unique order id (within the store) of the order.</td>
+        <td>string</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>order_date</code></td>
+        <td>The date that the order was placed.</td>
+        <td>Unix timestamp in GMT</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>full_name</code></td>
+        <td>​Full name of the person who placed the order, as entered during checkout.</td>
+        <td>string</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>is_marketing_updates_subscribed</code></td>
+        <td>Whether or not the customer of this order elected to receive marketing updates.<br />
+            Valid values are:
+            <ul>
+                <li><code>true</code></li>
+                <li><code>false</code></li>
+            </ul>
+        </td>
+        <td>boolean</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>order_status</code></td>
+        <td>The order status.<br /> Valid values are:
+            <ul>
+                <li><code>pending</code></li>
+                <li><code>paid</code></li>
+                <li><code>shipped</code></li>
+                <li><code>cancelled</code></li>
+                <li><code>refunded</code></li>
+                <li><code>sent</code> (for use with digital products)</li>
+                <li><code>returned</code></li>
+                <li><code>completed</code> (for use with service products)</li>
+            </ul></td>
+        <td>string</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>order_currency</code></td>
+        <td>​Currency used for this order</td>
+        <td>string</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>order_item_tax_total</code></td>
+        <td>Total tax charged for all items</td>
+        <td>decimal</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>order_tax_total</code></td>
+        <td>​Total tax charged for this order</td>
+        <td>decimal</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>order_tax_rates</code></td>
+        <td>An object that breaks down the total_tax for the order into an array of the different tax rates for the order. For example, an order that has both state and local taxes charged on a $100 order might have this:
+            <pre>
+{
+    "total_tax": 8.50,
+    "rates": [
+        {
+            "name": "State",
+            "rate": 0.075,
+            "amount":7.5
+        },
+        {
+            "name": "City",
+            "rate": 0.010,
+            "amount": 1.0
+        }
+     ]
+}
+</pre>
+        </td>
+        <td>object</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>order_shipping_total</code></td>
+        <td>​Total amount of shipping charged for this order.</td>
+        <td>decimal</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>order_shipping_taxes_total</code></td>
+        <td>​Total amount of tax charged against shipping.</td>
+        <td>integer</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>order_shipping_subtotal</code></td>
+        <td>​Amount of shipping charged before any shipping tax.</td>
+        <td>integer</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>order_shipping_method</code></td>
+        <td>The method used to ship the order. These are defined by the store owner when they configure their <a href="https://hc.weebly.com/hc/en-us/articles/226811488-All-About-Shipping">shipping rates</a>.</td>
+        <td>string</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>order_subtotal</code></td>
+        <td>Amount of order before taxes and shipping charges.</td>
+        <td>decimal</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>order_total</code></td>
+        <td>​Amount of order, including taxes and shipping charges.</td>
+        <td>integer</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>order_notes</code></td>
+        <td>Notes entered by the customer when the order was placed.</td>
+        <td>string</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>items</code></td>
+        <td>An array of <a href="ds_api_order_item.html">order items</a>.</td>
+        <td>array</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>shipments</code></td>
+        <td>An array of <a href="ds_api_order_shipment.html">order shipments</a></td>
+        <td>array</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>billings</code></td>
+        <td>An array of <a href="ds_api_order_billing.html">order billings</a></td>
+        <td>array</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>coupons</code></td>
+        <td>An array of <a href="ds_api_coupon.html">coupons</a></td>
+        <td>array</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>created_date</code></td>
+        <td>Date the order was created </td>
+        <td>Unix GMT Timestamp</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>updated_date</code></td>
+        <td>Date the order was last updated </td>
+        <td>Unix GMT Timestamp</td>
+        <td></td>
+    </tr>
+    </tbody>
+</table>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Any fields returned that are not documented are currently unsupported and can be safely ignored.</div>
+
+<h2>
+<div class="Tag type_info">GET</div>
+
+ Retrieve a List of Orders</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/store/order</code></pre></figure>
+
+<p>Returns all orders for the given site. Only <code class="highlighter-rouge">list</code> fields are returned.</p>
+
+<h3>Query Parameters</h3>
+<p>Returned values are <a href="ds_api_about.html#pagination">paginated</a>. You can further filter results using these parameters:</p>
+
+<table>
+    <tr>
+        <td><strong>Parameter</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Type</strong></td>
+    </tr>
+    <tr>
+        <td><code>page</code></td>
+        <td>Which page of results to return. Start is <code>1</code>.
+            
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> Only the first 25 results are returned by default. If the result set is
+            expected to be over 25, you must implement pagination.
+</div>
+
+
+        </td>
+        <td>integer</td>
+    </tr>
+    <tr>
+        <td><code>limit</code></td>
+        <td>Number of results per page to return. Default is <code>25</code>. <br />Max is <code>200</code>.</td>
+        <td>integer</td>
+    </tr>
+    <tr>
+        <td><code>query</code></td>
+        <td>Use to retrieve only pages that have a full-text match with the query string.</td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td><code>filterby</code></td>
+        <td>Field name to set a filter on.
+        </td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td><code>filterfor</code></td>
+        <td>​​​Value to search the filterby field for.<br />
+            You can use the following URL encoded operators with your <code>filterfor</code> parameter:
+            <ul>
+                <li><code>​&lt;</code>: use <code>%3C</code></li>
+                <li><code>&gt;</code>: use <code>%3E</code></li>
+                <li><code>&lt;=</code>: use <code>%3C%3D</code></li>
+                <li><code>&gt;=</code>: use <code>%3E%3D</code></li>​
+            </ul>
+        </td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td><code>sortby</code></td>
+        <td>Field name to sort by. You can sort on <code>order_date</code>.</td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td><code>sortdir</code></td>
+        <td>Sort direction. Valid values are:
+            <ul>
+                <li><code>asc</code></li>
+                <li><code>desc</code></li>
+            </ul>
+        </td>
+        <td>string</td>
+    </tr>
+</table>
+
+<p class="codeTitle">Example CURL request returning all orders:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/store/order <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example filtered request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/store/order?sortby<span class="o">=</span>order_date&amp;sortdir<span class="o">=</span>asc <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"order_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"963728582"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"order_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1415061315</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"full_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jane Doe "</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"order_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pending"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"order_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"order_total"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"order_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"989398230"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"order_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1443305684</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"full_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John Smith "</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"order_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"shipped"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"order_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"order_total"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"order_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"997590262"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"order_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1443389596</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"full_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John Doe "</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"order_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pending"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"order_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"order_total"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span></code></pre></figure>
+
+<h2>
+<div class="Tag type_info">GET</div>
+
+ Retrieve the Number of Orders for a Site
+</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/store/order/count</code></pre></figure>
+
+<p>Returns the number of non-deleted orders.</p>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/store/order/count <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<h2>
+<div class="Tag type_info">GET</div>
+
+ Retrieve Details for an order</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/store/order/<span class="o">{</span>ORDER_ID<span class="o">}</span></code></pre></figure>
+
+<p>Returns all fields for the given order.</p>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/store/order/997590262 <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+<p>See Fields table. All fields for the order are returned.</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"order_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"997590262"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"order_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1443305684</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"full_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jane Doe"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"is_marketing_updates_subscribed"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"order_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pending"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"order_currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"order_item_tax_total"</span><span class="p">:</span><span class="w"> </span><span class="mf">8.50</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"order_tax_total"</span><span class="p">:</span><span class="w"> </span><span class="mf">8.50</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"order_tax_rates"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"total_tax"</span><span class="p">:</span><span class="w"> </span><span class="mf">8.50</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"rates"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"State"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.075</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"amount"</span><span class="p">:</span><span class="mf">7.5</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"City"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.010</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.0</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"order_shipping_total"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"order_shipping_taxes_total"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"order_shipping_subtotal"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"order_shipping_method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USPS"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"order_subtotal"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"order_total"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"order_notes"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1442892536</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1443548303</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"discounted_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"track_inventory"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"order_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"997590262"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"order_item_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"site_product_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"site_product_sku_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"T-shirt"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"short_description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100% Cotton"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"product_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"physical"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"download_limit_type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"download_units_remaining"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"sale_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"total_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"weight_unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lb"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"sku"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"options"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"Color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"red"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"Size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"small"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nt">"returned"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"discounts"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nt">"discount_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"markdown"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"discount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nt">"original_product_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://mystore.weebly.com/store/p2/tshirt.html"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1442892536</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1442892536</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"discounted_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"track_inventory"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"order_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"997590262"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"order_item_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"site_product_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"site_product_sku_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sticker"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"short_description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Iron on sticker"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"product_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"physical"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"download_limit_type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"download_units_remaining"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"sale_price"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"total_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"weight_unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lb"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">" ghjktyu t"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"options"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rainbow"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nt">"returned"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"discounts"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+            </span><span class="nt">"original_product_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://mystore.weebly.com/store/p1/sticker.html"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1443295500</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1443295500</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nt">"shipments"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"order_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"997590262"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"order_shipment_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"shipping_provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USPS"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"weight_unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lb"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"depth"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"full_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jane Doe"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jane.doe@email.com"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-555-5555"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"business_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"460 Bryant St"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"street2"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"San Francisco"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CA"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"postal_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"94107"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"shipment_tax_total"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"shipment_tax_rates"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"shipment_total"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"charge_taxes_on_shipping"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USPS"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"shipment_date"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"tracking_number"</span><span class="p">:</span><span class="w"> </span><span class="mi">123331</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"shipped"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1443305683</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1443547605</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"transactions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nt">"order_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"997590262"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"order_shipment_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"order_shipment_transaction_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"tx_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123331"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"tx_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USPS"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"tx_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1443547605</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"tx_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"shipped"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1443547605</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1443547605</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nt">"order_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"997590262"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"order_shipment_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"order_shipment_transaction_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"tx_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123331"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"tx_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USPS"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"tx_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1443548303</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"tx_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"label_returned"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1443548303</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1443548303</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nt">"billings"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"order_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"997590262"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"order_billing_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"gateway"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Stripe"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"full_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jim Doe"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jim.doe@email.com"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"business_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"street"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"street2"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"region"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"postal_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"94107"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1443305683</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1443305683</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"transactions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nt">"order_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"997590262"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"order_billing_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"order_billing_transaction_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"purchase"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"tx_fee"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"tx_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ch_16pQwKKRCoO7IeaF6wfR7gBB"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"tx_message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Transaction approved"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"cc_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Visa"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"cc_last_4"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4242"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1443305683</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1443305684</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nt">"coupons"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+
+</div>

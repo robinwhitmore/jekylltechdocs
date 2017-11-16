@@ -1,0 +1,878 @@
+<div class="post-header">
+    <h1 class="post-title-main" id="ds_api_coupon.html">Coupon API</h1>
+</div>
+
+<div class="post-content">
+
+    
+    <div class="summary">Use the Coupon API to manage a store's coupons, including retrieving coupons, updating or deleting existing ones, and creating new ones.</div>
+    
+    <p>Store owners can create <a href="https://hc.weebly.com/hc/en-us/articles/227111587-Create-a-Coupon">coupons</a> for use on their site. Coupons can be either an amount deducted from the order, a percentage off of an order, or free shipping. They can be restricted either by the order amount needing to meet a certain threshold, or they can be restricted to specific products. The owner can also limit the number of coupons available and the date range that they are valid for.</p>
+
+<p>For free shipping coupons, the coupon can be for a specific <a href="https://hc.weebly.com/hc/en-us/articles/226811948-Set-Up-Shipping-Areas-and-Rates">rate or method</a> that the store owner has already configured. You cannot create free shipping coupons using the API.</p>
+
+<p>Use the Coupons API to manage a store’s coupons, including retrieving coupons, updating or deleting existing ones, and creating new ones.</p>
+
+<h2>Fields</h2>
+
+<p>The following table shows all fields that exist for this API, those that are returned when you retrieve a list, those that are required for <code class="highlighter-rouge">PUT</code> and <code class="highlighter-rouge">POST</code>, and those that are changeable using <code class="highlighter-rouge">PATCH</code> and <code class="highlighter-rouge">PUT</code>. All fields are returned when you retrieve a single item.</p>
+<table>
+    <tbody>
+    <tr>
+        <td><strong>Name</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Type</strong></td>
+        <td><strong>List</strong></td>
+        <td><strong>Required</strong></td>
+        <td><strong>Changeable</strong></td>
+    </tr>
+    <tr>
+        <td>​<code>user_id</code></td>
+        <td>The unique ID of the authenticated user</td>
+        <td>string</td>
+        <td>X</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>site_id</code></td>
+        <td>ID of a Weebly site, unique to the currently authenticated user​</td>
+        <td>string</td>
+        <td>X</td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td><code>availability</code></td>
+        <td>Date range that the coupon is valid for.
+        </td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>summary</code></td>
+        <td>Calculated string that describes the coupon, based on the posted criteria.
+        </td>
+        <td>string</td>
+        <td>X</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>num_available</code></td>
+        <td>Total number of coupons available.</td>
+        <td>integer</td>
+        <td></td>
+        <td></td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>num_used</code></td>
+        <td>​Number of coupons redeemed by the store's customers.</td>
+        <td>integer</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>shipping_method_ids</code></td>
+        <td>For free shipping coupons, an array of <code>shipping_method_ids</code> that provide free shipping. This must already be configured in the store.</td>
+        <td>array of strings</td>
+        <td></td>
+        <td>Required if <code>type=​shipping</code></td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>shipping_rate_ids</code></td>
+        <td>For free shipping coupons, an array of <code>shipping_rate_ids</code> that provide free shipping. This must already be configured in the store.</td>
+        <td>array of strings</td>
+        <td></td>
+        <td>Required if <code>type=​shipping</code></td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>category_ids</code></td>
+        <td>For <code>categories</code> criteria, an array of <a href="ds_api_category.html">category IDs</a> that the coupon is valid for.</td>
+        <td>array of strings</td>
+        <td></td>
+        <td>Required if <code>criteria=categories</code></td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>product_ids</code></td>
+        <td>For <code>products</code> criteria, an array of <a href="ds_api_product.html">product IDs</a> that the coupon is valid for.
+        </td>
+        <td>array of strings</td>
+        <td></td>
+        <td>Required if <code>criteria=products</code></td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>coupon_id</code></td>
+        <td>​Unique ID (within the store) of the coupon
+        </td>
+        <td>string</td>
+        <td>X</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>code</code></td>
+        <td>​​The coupon code that the customer must enter to redeem the coupon
+        </td>
+        <td>string</td>
+        <td>X</td>
+        <td>X</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>type</code></td>
+        <td>The type of this coupon.<br />
+            Valid values are:
+            <ul>
+                <li><code>percent</code>: percentage amount off the total order</li>
+                <li><code>absolute</code>: absolute amount off the total order</li>
+                <li><code>shipping</code>: free shipping (only available if the store owner has configured shipping rates for their store)</li>
+            </ul>
+        </td>
+        <td>string</td>
+        <td></td>
+        <td>X</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>amount</code></td>
+        <td>The amount of the coupon, for example <code>5.00</code> for an absolute amount of <code>$5.00</code>. For percent types, use a percentage amount, for example <code>20.00</code> for <code>20%</code>.
+        </td>
+        <td>decimal</td>
+        <td></td>
+        <td>Required if <code>type=absolute</code></td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>start_date</code></td>
+        <td>​​The first date the coupon is valid.
+        </td>
+        <td>​Unix timestamp in GMT
+        </td>
+        <td></td>
+        <td><br />
+        </td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>end_date</code></td>
+        <td>​​​The last date the coupon is valid.
+        </td>
+        <td>​​Unix timestamp in GMT
+        </td>
+        <td></td>
+        <td><br />
+        </td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>criteria</code></td>
+        <td>The limiting criteria for applying a coupon.<br />
+            Valid values are:
+            <ul>
+                <li><code>all</code>: no limitations</li>
+                <li><code>total_over</code>: only orders over X dollar amount</li>
+                <li><code>categories</code>: only orders containing products from specific categories</li>
+                <li><code>products</code>: only orders containing specific products</li>
+            </ul>
+        </td>
+        <td>string</td>
+        <td></td>
+        <td>X</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>criteria_amount</code></td>
+        <td>​​For <code>total_over</code> criteria, the threshold amount an order must meet in order for the coupon to be valid.
+        </td>
+        <td>decimal</td>
+        <td></td>
+        <td>Required
+            If <code>criteria=
+            ​total_over</code>
+        </td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>created_date</code></td>
+        <td>Date the coupon was created </td>
+        <td>Unix GMT Timestamp</td>
+        <td></td>
+        <td><br />
+        </td>
+        <td><br />
+        </td>
+    </tr>
+    <tr>
+        <td><code>updated_date</code></td>
+        <td>Date the coupon was last updated </td>
+        <td>Unix GMT Timestamp</td>
+        <td></td>
+        <td><br />
+        </td>
+        <td><br />
+        </td>
+    </tr>
+    </tbody>
+</table>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Any fields returned that are not documented are currently unsupported and can be safely ignored.</div>
+
+<h2>
+<div class="Tag type_info">GET</div>
+
+ Retrieve a List of Coupons
+</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/store/coupon</code></pre></figure>
+
+<p>Returns all coupons for the given site. Only <code class="highlighter-rouge">list</code> fields are returned.</p>
+
+<h3>Query Parameters</h3>
+<p>Returned values are <a href="ds_api_about.html#pagination">paginated</a>. You can further filter results using these parameters:</p>
+
+<table>
+    <tr>
+        <td><strong>Parameter</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Type</strong></td>
+    </tr>
+    <tr>
+        <td><code>page</code></td>
+        <td>Which page of results to return. Start is <code>1</code>.
+            
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> Only the first 25 results are returned by default. If the result set is
+            expected to be over 25, you must implement pagination.
+</div>
+
+
+        </td>
+        <td>integer</td>
+    </tr>
+    <tr>
+        <td><code>limit</code></td>
+        <td>Number of results per page to return. Default is <code>25</code>. <br />Max is <code>200</code>.</td>
+        <td>integer</td>
+    </tr>
+    <tr>
+        <td><code>filterby</code></td>
+        <td>Field name to set a filter on.
+        </td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td><code>filterfor</code></td>
+        <td>​​​Value to search the filterby field for.<br />
+            You can use the following URL encoded operators with your filterfor parameter:
+            <ul>
+                <li><code>​&lt;</code>: use <code>%3C</code></li>
+                <li><code>&gt;</code>: use <code>%3E</code></li>
+                <li><code>&lt;=</code>: use <code>%3C%3D</code></li>
+                <li><code>&gt;=</code>: use <code>%3E%3D</code></li>​
+            </ul>
+        </td>
+        <td>string</td>
+    </tr>
+</table>
+
+<p class="codeTitle">Example CURL request returning all coupons:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/store/coupon <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example filtered request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/store/coupon?filterby<span class="o">=</span>num_avail&amp;filterfor<span class="o">=</span><span class="nv">$3</span> <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"summary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"$10 off orders over $100"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"coupon_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10OFF"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"summary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"$10 off select products"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"coupon_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SPRINGTIME"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"summary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"$10 off select products"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"coupon_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SPRINGFLING"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span></code></pre></figure>
+
+<h2>
+<div class="Tag type_info">GET</div>
+
+ Retrieve the Number of Coupons for a Site
+</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/store/coupon/count</code></pre></figure>
+
+<p>Returns the number of coupons.</p>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/store/coupon/count <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<h2>
+<div class="Tag type_info">GET</div>
+
+ Retrieve Details for a Coupon
+</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/store/coupon/<span class="o">{</span>COUPON_ID<span class="o">}</span></code></pre></figure>
+
+<p>Returns all fields for the given coupon.</p>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/store/coupon/3 <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+<p>See Fields table. All fields for the coupon are returned.</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"availability"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3/1/2017 - 3/31/2017"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"summary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"$10 off orders over $100"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"num_available"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"num_used"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"shipping_method_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nt">"category_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nt">"product_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nt">"coupon_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10OFF"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"absolute"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"start_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1488326400</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"end_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1490918400</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"criteria"</span><span class="p">:</span><span class="w"> </span><span class="s2">"total_over"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"criteria_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1486166397</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1486166397</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"shipping_rate_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<h2>
+<div class="Tag type_warning">POST</div>
+
+ Create a Coupon</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">POST /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/store/coupon</code></pre></figure>
+
+<p>Creates a new coupon for the site’s store.</p>
+
+<p>These fields can be created:</p>
+
+<table>
+    <tr>
+        <td><strong>Name</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Type</strong></td>
+        <td><strong>Notes</strong></td>
+    </tr>
+    <tr>
+        <td><code>code</code></td>
+        <td>​​The coupon code that the customer must enter to redeem the coupon
+        </td>
+        <td>string</td>
+        <td>Required</td>
+    </tr>
+    <tr>
+        <td><code>type</code></td>
+        <td>The type of this coupon.<br />
+            Valid values are:
+            <ul>
+                <li><code>percent</code>: percentage amount off the total order</li>
+                <li><code>absolute</code>: absolute amount off the total order</li>
+                <li><code>shipping</code>: free shipping (only available if the store owner has configured shipping rates for their store)</li>
+            </ul>
+        </td>
+        <td>string</td>
+        <td>Required</td>
+    </tr>
+    <tr>
+        <td><code>criteria</code></td>
+        <td>The limiting criteria for applying a coupon.<br />
+            Valid values are:
+            <ul>
+                <li><code>all</code>: no limitations</li>
+                <li><code>total_over</code>: only orders over X dollar amount</li>
+                <li><code>categories</code>: only orders containing products from specific categories</li>
+                <li><code>products</code>: only orders containing specific products</li>
+            </ul>
+        </td>
+        <td>string</td>
+        <td>Required</td>
+    </tr>
+    <tr>
+        <td><code>amount</code></td>
+        <td>The amount of the coupon, for example <code>5.00</code> for an absolute amount of <code>$5.00</code>. For percent types, use a percentage amount, for example <code>20.00</code> for <code>20%</code>.
+        </td>
+        <td>decimal</td>
+        <td>Required if <code>type=absolute</code></td>
+    </tr>
+    <tr>
+        <td><code>criteria_amount</code></td>
+        <td>​​For <code>total_over</code> criteria, the threshold amount an order must meet in order for the coupon to be valid.
+        </td>
+        <td>decimal</td>
+        <td>Required if <code>criteria=total_over</code>
+        </td>
+    </tr>
+    <tr>
+        <td><code>category_ids</code></td>
+        <td>For <code>categories</code> criteria, an array of <a href="ds_api_category.html">category IDs</a> that the coupon is valid for.</td>
+        <td>array of strings</td>
+        <td>Required if <code>criteria=categories</code></td>
+    </tr>
+    <tr>
+        <td><code>product_ids</code></td>
+        <td>For <code>products</code> criteria, an array of <a href="ds_api_product.html">product IDs</a> that the coupon is valid for.
+        </td>
+        <td>array of strings</td>
+        <td>Required if <code>criteria=products</code></td>
+    </tr>
+    <tr>
+        <td><code>shipping_method_ids</code></td>
+        <td>For free shipping coupons, an array of <code>shipping_method_ids</code> that provide free shipping. This must already be configured in the store.</td>
+        <td>array of strings</td>
+        <td>Required if <code>type=shipping</code></td>
+    </tr>
+    <tr>
+        <td><code>shipping_rate_ids</code></td>
+        <td>For free shipping coupons, an array of <code>shipping_rate_ids</code> that provide free shipping. This must already be configured in the store.</td>
+        <td>array of strings</td>
+        <td>Required if <code>type=shipping</code></td>
+    </tr>
+    <tr>
+        <td><code>num_available</code></td>
+        <td>Total number of coupons available.</td>
+        <td>integer</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>start_date</code></td>
+        <td>​​The first date the coupon is valid.
+        </td>
+        <td>​Unix timestamp in GMT
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>end_date</code></td>
+        <td>​​​The last date the coupon is valid.
+        </td>
+        <td>​​Unix timestamp in GMT
+        </td>
+        <td></td>
+    </tr>
+</table>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/store/coupon <span class="se">\</span>
+-X POST <span class="se">\</span>
+-d <span class="s1">'{
+        "code": "5-OFF",
+        "type": "absolute",
+        "amount": 5,
+        "criteria": "total_over",
+        "criteria_amount": "5.00",
+        "num_available": 100,
+        "start_date": 1493596800,
+        "end_date": 1496275199
+    }'</span> <span class="se">\</span>
+-H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"availability"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4/30/2017 - 5/31/2017"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"summary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"$5 off orders over $5"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"num_available"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"num_used"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"shipping_method_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nt">"shipping_rate_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nt">"category_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nt">"product_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nt">"coupon_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5-OFF"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"absolute"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"start_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1493596800</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"end_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1496275199</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"criteria"</span><span class="p">:</span><span class="w"> </span><span class="s2">"total_over"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"criteria_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1486410889</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1486410889</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<h2>
+<div class="Tag type_warning">PUT</div>
+
+ Replace a Coupon</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">PUT /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/store/coupon/<span class="o">{</span>COUPON_ID<span class="o">}</span></code></pre></figure>
+
+<p>Replaces the given coupon.</p>
+
+<p>These fields can be replaced:</p>
+
+<table>
+    <tr>
+        <td><strong>Name</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Type</strong></td>
+        <td><strong>Notes</strong></td>
+    </tr>
+    <tr>
+        <td><code>code</code></td>
+        <td>​​The coupon code that the customer must enter to redeem the coupon
+        </td>
+        <td>string</td>
+        <td>Required</td>
+    </tr>
+    <tr>
+        <td><code>type</code></td>
+        <td>The type of this coupon.<br />
+            Valid values are:
+            <ul>
+                <li><code>percent</code>: percentage amount off the total order</li>
+                <li><code>absolute</code>: absolute amount off the total order</li>
+                <li><code>shipping</code>: free shipping (only available if the store owner has configured shipping rates for their store)</li>
+            </ul>
+        </td>
+        <td>string</td>
+        <td>Required</td>
+    </tr>
+    <tr>
+        <td><code>criteria</code></td>
+        <td>The limiting criteria for applying a coupon.<br />
+            Valid values are:
+            <ul>
+                <li><code>all</code>: no limitations</li>
+                <li><code>total_over</code>: only orders over X dollar amount</li>
+                <li><code>categories</code>: only orders containing products from specific categories</li>
+                <li><code>products</code>: only orders containing specific products</li>
+            </ul>
+        </td>
+        <td>string</td>
+        <td>Required</td>
+    </tr>
+    <tr>
+        <td><code>amount</code></td>
+        <td>The amount of the coupon, for example <code>5.00</code> for an absolute amount of <code>$5.00</code>. For percent types, use a percentage amount, for example <code>20.00</code> for <code>20%</code>.
+        </td>
+        <td>decimal</td>
+        <td>Required if <code>type=absolute</code></td>
+    </tr>
+    <tr>
+        <td><code>criteria_amount</code></td>
+        <td>​​For <code>total_over</code> criteria, the threshold amount an order must meet in order for the coupon to be valid.
+        </td>
+        <td>decimal</td>
+        <td>Required if <code>criteria=total_over</code>
+        </td>
+    </tr>
+    <tr>
+        <td><code>category_ids</code></td>
+        <td>For <code>categories</code> criteria, an array of <a href="ds_api_category.html">category IDs</a> that the coupon is valid for.</td>
+        <td>array of strings</td>
+        <td>Required if <code>criteria=categories</code></td>
+    </tr>
+    <tr>
+        <td><code>product_ids</code></td>
+        <td>For <code>products</code> criteria, an array of <a href="ds_api_product.html">product IDs</a> that the coupon is valid for.
+        </td>
+        <td>array of strings</td>
+        <td>Required if <code>criteria=products</code></td>
+    </tr>
+    <tr>
+        <td><code>shipping_method_ids</code></td>
+        <td>For free shipping coupons, an array of <code>shipping_method_ids</code> that provide free shipping. This must already be configured in the store.</td>
+        <td>array of strings</td>
+        <td>Required if <code>type=shipping</code></td>
+    </tr>
+    <tr>
+        <td><code>shipping_rate_ids</code></td>
+        <td>For free shipping coupons, an array of <code>shipping_rate_ids</code> that provide free shipping. This must already be configured in the store.</td>
+        <td>array of strings</td>
+        <td>Required if <code>type=shipping</code></td>
+    </tr>
+    <tr>
+        <td><code>num_available</code></td>
+        <td>Total number of coupons available.</td>
+        <td>integer</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>start_date</code></td>
+        <td>​​The first date the coupon is valid.
+        </td>
+        <td>​Unix timestamp in GMT
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>end_date</code></td>
+        <td>​​​The last date the coupon is valid.
+        </td>
+        <td>​​Unix timestamp in GMT
+        </td>
+        <td></td>
+    </tr>
+</table>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/store/coupon/<span class="o">{</span>COUPON_ID<span class="o">}</span> <span class="se">\</span>
+-X PUT <span class="se">\</span>
+-d <span class="s1">'{
+        "code": "VIP",
+        "type": "absolute",
+        "amount": "100",
+        "criteria": "all",
+        "criteria_amount": "1",
+        "product_ids": "[]",
+        "category_ids": "[]",
+        "shipping_rate_ids": "[]"
+    }'</span> <span class="se">\</span>
+-H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"availability"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Never expires"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"summary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10% off all orders"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"num_available"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"num_used"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"shipping_rate_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w">
+    </span><span class="nt">"category_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w">
+    </span><span class="nt">"product_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w">
+    </span><span class="nt">"coupon_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VIP"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"absolute"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"start_date"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"end_date"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"criteria"</span><span class="p">:</span><span class="w"> </span><span class="s2">"all"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"criteria_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1458873551</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1461024564</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<h2>
+<div class="Tag type_warning">PATCH</div>
+
+ Update a Coupon</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">PATCH /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/store/coupon/<span class="o">{</span>COUPON_ID<span class="o">}</span></code></pre></figure>
+
+<p>Updates the given coupon.</p>
+
+<p>These fields can be updated:</p>
+
+<table>
+    <tr>
+        <td><strong>Name</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Type</strong></td>
+        <td><strong>Notes</strong></td>
+    </tr>
+    <tr>
+        <td><code>code</code></td>
+        <td>​​The coupon code that the customer must enter to redeem the coupon
+        </td>
+        <td>string</td>
+        <td>Required</td>
+    </tr>
+    <tr>
+        <td><code>type</code></td>
+        <td>The type of this coupon.<br />
+            Valid values are:
+            <ul>
+                <li><code>percent</code>: percentage amount off the total order</li>
+                <li><code>absolute</code>: absolute amount off the total order</li>
+                <li><code>shipping</code>: free shipping (only available if the store owner has configured shipping rates for their store)</li>
+            </ul>
+        </td>
+        <td>string</td>
+        <td>Required</td>
+    </tr>
+    <tr>
+        <td><code>criteria</code></td>
+        <td>The limiting criteria for applying a coupon.<br />
+            Valid values are:
+            <ul>
+                <li><code>all</code>: no limitations</li>
+                <li><code>total_over</code>: only orders over X dollar amount</li>
+                <li><code>categories</code>: only orders containing products from specific categories</li>
+                <li><code>products</code>: only orders containing specific products</li>
+            </ul>
+        </td>
+        <td>string</td>
+        <td>Required</td>
+    </tr>
+    <tr>
+        <td><code>amount</code></td>
+        <td>The amount of the coupon, for example <code>5.00</code> for an absolute amount of <code>$5.00</code>. For percent types, use a percentage amount, for example <code>20.00</code> for <code>20%</code>.
+        </td>
+        <td>decimal</td>
+        <td>Required if <code>type=absolute</code></td>
+    </tr>
+    <tr>
+        <td><code>criteria_amount</code></td>
+        <td>​​For <code>total_over</code> criteria, the threshold amount an order must meet in order for the coupon to be valid.
+        </td>
+        <td>decimal</td>
+        <td>Required if <code>criteria=total_over</code>
+        </td>
+    </tr>
+    <tr>
+        <td><code>category_ids</code></td>
+        <td>For <code>categories</code> criteria, an array of <a href="ds_api_category.html">category IDs</a> that the coupon is valid for.</td>
+        <td>array of strings</td>
+        <td>Required if <code>criteria=categories</code></td>
+    </tr>
+    <tr>
+        <td><code>product_ids</code></td>
+        <td>For <code>products</code> criteria, an array of <a href="ds_api_product.html">product IDs</a> that the coupon is valid for.
+        </td>
+        <td>array of strings</td>
+        <td>Required if <code>criteria=products</code></td>
+    </tr>
+    <tr>
+        <td><code>shipping_method_ids</code></td>
+        <td>For free shipping coupons, an array of <code>shipping_method_ids</code> that provide free shipping. This must already be configured in the store.</td>
+        <td>array of strings</td>
+        <td>Required if <code>type=shipping</code></td>
+    </tr>
+    <tr>
+        <td><code>shipping_rate_ids</code></td>
+        <td>For free shipping coupons, an array of <code>shipping_rate_ids</code> that provide free shipping. This must already be configured in the store.</td>
+        <td>array of strings</td>
+        <td>Required if <code>type=shipping</code></td>
+    </tr>
+    <tr>
+        <td><code>num_available</code></td>
+        <td>Total number of coupons available.</td>
+        <td>integer</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>start_date</code></td>
+        <td>​​The first date the coupon is valid.
+        </td>
+        <td>​Unix timestamp in GMT
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>end_date</code></td>
+        <td>​​​The last date the coupon is valid.
+        </td>
+        <td>​​Unix timestamp in GMT
+        </td>
+        <td></td>
+    </tr>
+</table>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/store/coupon/5 <span class="se">\</span>
+-X PATCH <span class="se">\</span>
+-d <span class="s1">'{
+        "num_available": 90
+        "amount": 10
+    }'</span> <span class="se">\</span>
+-H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"availability"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2/28/2017 - 3/30/2017"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"summary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"$10 off all orders"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"num_available"</span><span class="p">:</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"num_used"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"shipping_method_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nt">"category_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nt">"product_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nt">"coupon_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10OFF"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"absolute"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"start_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1488326400</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"end_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1490918400</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"criteria"</span><span class="p">:</span><span class="w"> </span><span class="s2">"all"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"criteria_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1486166397</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1486415167</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<h2>
+<div class="Tag type_error">DELETE</div>
+
+ Delete a Coupon</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">DELETE /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/store/coupon/<span class="o">{</span>COUPON_ID<span class="o">}</span></code></pre></figure>
+
+<p>Deletes the given coupon.</p>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/store/coupon/3 <span class="se">\</span>
+-X DELETE <span class="se">\</span>
+-H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p><strong>Response</strong>
+There is no response to a delete request.</p>
+
+</div>

@@ -4,6 +4,7 @@ keywords: migration, portal, contacts, brand, urls, settings
 t_type: [reference]
 tags: [getting_started, configuration]
 sidebar: ds_gs_sidebar
+pdf: true
 permalink: ds_mg_portal.html
 summary: This topic describes how to configure UI settings the Cloud Admin and the User Portal like contact info and branding.
 ---

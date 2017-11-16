@@ -20,234 +20,234 @@ entries:
       type: frontmatter
 
   - title: Get Started with Customizing Themes
-    output: web, pdf
+    output: web
     folderitems:
 
     - title: Customizing Themes
       url: /ds_themes_start.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: Download Sample Themes
       url: /ds_themes_sample.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: Anatomy of a Theme
       url: /ds_themes_anatomy.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: Theme Directory Structure
       url: /ds_themes_directory.html
-      output: web, pdf
+      output: web
       #ready for review
 
 
     - title: Known Issues
       url: /ds_themes_issues.html
-      output: web, pdf
+      output: web
       #ready for review
 
   - title: Tutorial&#58; Customize a Theme
-    output: web, pdf
+    output: web
     folderitems:
 
     - title: Customize a Weebly Theme
       url: /ds_themes_tutorial.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: 1. Download the Base Theme
       url: /ds_themes_1.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: 2. Apply YOur Theme to a Test Site
       url: /ds_themes_2.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: 3. Add a Color Palette
       url: /ds_themes_3.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: 4. Create Variations of the Theme
       url: /ds_themes_4.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: 5. Edit the Header Template
       url: /ds_themes_5.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: 6. Edit the main.less File
       url: /ds_themes_6.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: 7. Edit the Blog Post Partial
       url: /ds_themes_7.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: 8. Add a Theme Option
       url: /ds_themes_8.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: 9. Add a Screenshot
       url: /ds_themes_9.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: 10. Deliver Your Theme
       url: /ds_themes_10.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: Finish
       url: /ds_themes_finish.html
-      output: web, pdf
+      output: web
       #ready for review
 
   - title: Theme Design
-    output: web, pdf
+    output: web
     folderitems:
 
     - title: Theme Design Guidelines
       url: /ds_themes_guidelines.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: Page Guidelines for Themes
       url: /ds_themes_page.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: Element Guidelines for Themes
       url: /ds_themes_element_guidelines.html
-      output: web, pdf
+      output: web
       #ready for review
 
   - title: Create a Theme
-    output: web, pdf
+    output: web
     folderitems:
 
     - title: How to Create a Theme
       url: /ds_themes_create.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: Import and Export Themes
       url: /ds_themes_import_export.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: Implement the CSS
       url: /ds_themes_implement_css.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: Create HTML Layout Templates
       url: /ds_themes_create_templates.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: Use Partials
       url: /ds_themes_partials.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: Create the Theme Manifest
       url: /ds_themes_manifest.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: Add Options to Your Themes
       url: /ds_themes_options.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: Create a Color Palette
       url: /ds_themes_palette.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: Add Color Variations
       url: /ds_themes_variations.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: Create a Theme Screenshot
       url: /ds_themes_screenshot.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: Deliver Your Theme
       url: /ds_themes_deliver.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: Update Your Theme
       url: /ds_themes_update.html
-      output: web, pdf
+      output: web
       #ready for review
 
   - title: Theme Resources
-    output: web, pdf
+    output: web
     folderitems:
 
     - title: Design Resources
       url: /ds_themes_design_resources.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: About LESS
       url: /ds_themes_LESS.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: About Mustache
       url: /ds_themes_mustache.html
-      output: web, pdf
+      output: web
 
   - title: Partial Maps
-    output: web, pdf
+    output: web
     folderitems:
 
     - title: Blog Partials
       url: /ds_themes_blogPartials.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: Commerce Partials
       url: /ds_themes_comPartials.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: Membership Partials
       url: /ds_themes_membershipPartials.html
-      output: web, pdf
+      output: web
       #ready for review
 
     - title: Navigation Partials
       url: /ds_themes_navPartials.html
-      output: web, pdf
+      output: web
       # ready for review
 
     - title: Search Partials
       url: /ds_themes_searchPartials.html
-      output: web, pdf
+      output: web
       #read for review
 
   - title: Theme FAQs
-    output: web, pdf
+    output: web
     folderitems:
 
     - title: Theme FAQs
       url: /ds_themes_faqs.html
-      output: web, pdf
+      output: web
 

@@ -1,0 +1,413 @@
+<div class="post-header">
+    <h1 class="post-title-main" id="ds_api_user.html">User API</h1>
+</div>
+
+<div class="post-content">
+
+    
+    <div class="summary">The User API provides methods for managing and creating Weebly Cloud users. For designers, this is your team members.</div>
+    
+    
+<h2>Fields</h2>
+
+<p>The following table shows all fields that exist for this API, those that are required for <code class="highlighter-rouge">PUT</code> and <code class="highlighter-rouge">POST</code>, and those that are changeable using <code class="highlighter-rouge">PATCH</code> and <code class="highlighter-rouge">PUT</code>. All fields are returned when you retrieve a single item.</p>
+<table>
+    <tbody>
+    <tr>
+        <td><strong>Name</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Type</strong></td>
+        <td><strong>Required</strong></td>
+        <td><strong>Changeable</strong></td>
+    </tr>
+    <tr>
+        <td>​<code>user_id</code></td>
+        <td>The unique ID of the given user</td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>email</code></td>
+        <td>User's email. This is user name.​</td>
+        <td>string</td>
+        <td>X</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>language</code></td>
+        <td>A two letter language code to set the user's default language.<br />
+          The supported languages with their two character codes:
+          <ul>
+            <li><code>da</code>: Danish</li>
+          <li><code>de</code>: German</li>
+            <li><code>en</code>: English</li>
+            <li><code>es</code>: Spanish</li>
+            <li><code>fr</code>: French</li>
+            <li><code>it</code>: Italian</li>
+            <li><code>ja</code>: Japanese</li>
+          <li><code>nl</code>: Dutch</li>
+          <li><code>no</code>: Norwegian</li>
+            <li><code>pl</code>: Polish</li>
+          <li><code>pt</code>: Portuguese</li>
+            <li><code>ru</code>: Russian</li>
+          <li><code>sv</code>: Swedish</li>
+            <li><code>tr</code>: Turkish</li>
+            <li><code>zh</code>: Chinese (simplified)</li>
+        </ul>
+        </td>
+        <td>string</td>
+        <td></td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>test_mode</code></td>
+        <td>Denotes whether a user is a test user or not. Test users are meant to be used when testing the API or general Weebly Cloud functionality. When <code>true</code>, a user will be created in test mode and the account will not be charged.
+        </td>
+        <td>boolean</td>
+        <td></td>
+        <td>X</td>
+    </tr>
+    <tr>
+      <td><code>loginLink</code></td>
+      <td>A one-time link that will direct users to the editor for the last site that was modified in the account. The link will only work if the user account is enabled and has at least one site associated with it. </td>
+      <td>string</td>
+      <td></td>
+      <td></td>
+    </tr>
+    </tbody>
+</table>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Any fields returned that are not documented are currently unsupported and can be safely ignored.</div>
+
+<h2>
+<div class="Tag type_info">GET</div>
+
+ Retrieve Details for a User</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /user/<span class="o">{</span>USER_ID<span class="o">}</span></code></pre></figure>
+
+<p>Returns all fields for the given user.</p>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456 <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+<p>See Fields table. All fields for the user are returned.</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nt">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sampleuser@weebly.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"test_mode"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="s2">"language"</span><span class="err">:</span><span class="w"> </span><span class="s2">"en"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<h2>
+<div class="Tag type_warning">POST</div>
+
+ Create a User</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">POST /user</code></pre></figure>
+
+<p>Creates a User.</p>
+
+<p>These fields can be created:</p>
+
+<table>
+    <tr>
+        <td><strong>Name</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Type</strong></td>
+        <td><strong>Notes</strong></td>
+    </tr>
+  <tr>
+    <td><code>email</code></td>
+    <td>User's email. This is user name.​</td>
+    <td>string</td>
+    <td>Required</td>
+  </tr>
+  <tr>
+    <td><code>language</code></td>
+    <td>A two letter language code to set the user's default language.<br />
+      The supported languages with their two character codes:
+      <ul>
+        <li><code>da</code>: Danish</li>
+        <li><code>de</code>: German</li>
+        <li><code>en</code>: English</li>
+        <li><code>es</code>: Spanish</li>
+        <li><code>fr</code>: French</li>
+        <li><code>it</code>: Italian</li>
+        <li><code>ja</code>: Japanese</li>
+        <li><code>nl</code>: Dutch</li>
+        <li><code>no</code>: Norwegian</li>
+        <li><code>pl</code>: Polish</li>
+        <li><code>pt</code>: Portuguese</li>
+        <li><code>ru</code>: Russian</li>
+        <li><code>sv</code>: Swedish</li>
+        <li><code>tr</code>: Turkish</li>
+        <li><code>zh</code>: Chinese (simplified)</li>
+      </ul>
+    </td>
+    <td>string</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><code>test_mode</code></td>
+    <td>Denotes whether a user is a test user or not. Test users are meant to be used when testing the API or general Weebly Cloud functionality. When <code>true</code>, a user will be created in test mode and the account will not be charged.
+    </td>
+    <td>boolean</td>
+    <td></td>
+  </tr>
+</table>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user <span class="se">\</span>
+-X POST <span class="se">\</span>
+-d <span class="s1">'{
+      "email": "test@weebly.com",
+      "test_mode": true,
+      "language": "en"
+    }'</span> <span class="se">\</span>
+-H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nt">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"39793399"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test@weebly.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"test_mode"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<h2>
+<div class="Tag type_warning">PUT</div>
+
+ Replace a User</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">PUT /user/<span class="o">{</span>USER_ID<span class="o">}</span></code></pre></figure>
+
+<p>Replaces the given user.</p>
+
+<p>These fields can be updated:</p>
+
+<table>
+    <tr>
+        <td><strong>Name</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Type</strong></td>
+        <td><strong>Notes</strong></td>
+    </tr>
+  <tr>
+    <td><code>email</code></td>
+    <td>User's email. This is user name.​</td>
+    <td>string</td>
+    <td>Required</td>
+  </tr>
+  <tr>
+    <td><code>language</code></td>
+    <td>A two letter language code to set the user's default language.<br />
+      The supported languages with their two character codes:
+      <ul>
+        <li><code>da</code>: Danish</li>
+        <li><code>de</code>: German</li>
+        <li><code>en</code>: English</li>
+        <li><code>es</code>: Spanish</li>
+        <li><code>fr</code>: French</li>
+        <li><code>it</code>: Italian</li>
+        <li><code>ja</code>: Japanese</li>
+        <li><code>nl</code>: Dutch</li>
+        <li><code>no</code>: Norwegian</li>
+        <li><code>pl</code>: Polish</li>
+        <li><code>pt</code>: Portuguese</li>
+        <li><code>ru</code>: Russian</li>
+        <li><code>sv</code>: Swedish</li>
+        <li><code>tr</code>: Turkish</li>
+        <li><code>zh</code>: Chinese (simplified)</li>
+      </ul>
+    </td>
+    <td>string</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><code>test_mode</code></td>
+    <td>Denotes whether a user is a test user or not. Test users are meant to be used when testing the API or general Weebly Cloud functionality. When <code>true</code>, a user will be created in test mode and the account will not be charged.
+    </td>
+    <td>boolean</td>
+    <td>Required</td>
+  </tr>
+</table>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456 <span class="se">\</span>
+-X PUT <span class="se">\</span>
+-d <span class="s1">'{
+      "email": "test9999@weebly.com",
+      "test_mode": false,
+      "language": "en"
+    }'</span> <span class="se">\</span>
+-H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nt">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test9999@weebly.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"test_mode"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<h2>
+<div class="Tag type_warning">PATCH</div>
+
+ Update a User</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">PATCH /user/<span class="o">{</span>USER_ID<span class="o">}</span></code></pre></figure>
+
+<p>Updates the given user.</p>
+
+<p>These fields can be updated:</p>
+
+<table>
+    <tr>
+        <td><strong>Name</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Type</strong></td>
+    </tr>
+  <tr>
+    <td><code>email</code></td>
+    <td>User's email. This is user name.​</td>
+    <td>string</td>
+  </tr>
+  <tr>
+    <td><code>language</code></td>
+    <td>A two letter language code to set the user's default language.<br />
+      The supported languages with their two character codes:
+      <ul>
+        <li><code>da</code>: Danish</li>
+        <li><code>de</code>: German</li>
+        <li><code>en</code>: English</li>
+        <li><code>es</code>: Spanish</li>
+        <li><code>fr</code>: French</li>
+        <li><code>it</code>: Italian</li>
+        <li><code>ja</code>: Japanese</li>
+        <li><code>nl</code>: Dutch</li>
+        <li><code>no</code>: Norwegian</li>
+        <li><code>pl</code>: Polish</li>
+        <li><code>pt</code>: Portuguese</li>
+        <li><code>ru</code>: Russian</li>
+        <li><code>sv</code>: Swedish</li>
+        <li><code>tr</code>: Turkish</li>
+        <li><code>zh</code>: Chinese (simplified)</li>
+      </ul>
+    </td>
+    <td>string</td>
+  </tr>
+  <tr>
+    <td><code>test_mode</code></td>
+    <td>Denotes whether a user is a test user or not. Test users are meant to be used when testing the API or general Weebly Cloud functionality. When <code>true</code>, a user will be created in test mode and the account will not be charged.
+    </td>
+    <td>boolean</td>
+  </tr>
+</table>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/987654321 <span class="se">\</span>
+-X PATCH <span class="se">\</span>
+-d <span class="s1">'{
+      "email": "test9@weebly.com"
+    }'</span> <span class="se">\</span>
+-H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nt">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test9@weebly.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"test_mode"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<h2>
+<div class="Tag type_warning">POST</div>
+
+ Enable a User</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">POST /user/<span class="o">{</span>USER_ID<span class="o">}</span>/enable</code></pre></figure>
+
+<p>Enables a user account after an account has been disabled. Enabling a user account will allow users to log into the editor. When a user is created, their account is automatically enabled.</p>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/987654321/enable <span class="se">\</span>
+-X POST <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nt">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<h2>
+<div class="Tag type_warning">POST</div>
+
+ Disable a User</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">POST /user/<span class="o">{</span>USER_ID<span class="o">}</span>/disable</code></pre></figure>
+
+<p>Disables a user account. When a user account is disabled, the user will no longer be able to log into the editor. If an attempt to create a login link is made on a disabled account, an error is thrown.</p>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/987654321/disable <span class="se">\</span>
+-X POST <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+</span><span class="nt">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<h2>
+<div class="Tag type_warning">POST</div>
+
+ Create a Login Link</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">POST /user/<span class="o">{</span>USER_ID<span class="o">}</span>/loginLink</code></pre></figure>
+
+<p>Generates a one-time link that will direct users to the editor for the last site that was modified in the account. This method requires that the account is enabled and that the account has at least one site.</p>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/987654321/loginLink <span class="se">\</span>
+-X POST <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nt">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.weebly.com/editor/login.php?t=c4e48646d7943bdaab0992fdbb5c9594&amp;redirect=toSite.php%3Fsite=682490944919028999"</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+
+</div>

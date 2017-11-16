@@ -1,0 +1,60 @@
+<div class="post-header">
+    <h1 class="post-title-main" id="ds_apps_files.html">Create the App File Structure</h1>
+</div>
+
+<div class="post-content">
+
+    
+    <div class="summary">The file structure for your app must be as Weebly expects in order for you to upload it to the App Center.</div>
+    
+    <p>Applications are the core package that can contain backend services and/or elements. You bundle each Application as a ZIP file. This archive must have a specific structure.</p>
+
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> When zipping your application for upload, be sure to zip the contents of your root folder, and not the root folder itself.  This will cause your application to be invalid! Also, make sure all directories and files have read/write permissions.
+</div>
+
+<h2 id="app-directories">App Directories</h2>
+<p>The root directory of every application contains the <code class="highlighter-rouge">manifest.json</code> file.  The manifest provides the defining characteristics of the application. Backend services require only this file in the directory.</p>
+
+<p>​This shows the structure for a backend service named <code class="highlighter-rouge">MyApp</code>.</p>
+
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">MyApp
+  - manifest.json</code></pre></figure>
+
+<p>Your directory structure may also require additional directories and files if you are creating an element.</p>
+
+<h2 id="element-directories">Element Directories</h2>
+
+<p>Directly below the root folder for your app, you add an element directory for each element you create. Within that directory, you can add the following directories and files (required files are noted):</p>
+<ul>
+  <li><strong>html:</strong> holds the templates for your element.
+The <code class="highlighter-rouge">element.tpl</code> file is required. This file is the main template for your element. If you need a different template for your element when it is in the editor, then you can also create the <code class="highlighter-rouge">editor_element.tpl</code> file.</li>
+  <li><strong>js:</strong> holds JavaScript files.
+The <code class="highlighter-rouge">element.js</code> file is required. This file is the main JavaScript for your element. If you need different JavaScript for your element when it is in the editor, then you can also create the <code class="highlighter-rouge">editor.js</code> file.</li>
+  <li><strong>css:</strong> holds the CSS (stylesheet) files.
+The <code class="highlighter-rouge">element.css</code> file is required. This file is the main stylesheet for your element. If you need different styles for your element when it is in the editor, then you can also create the <code class="highlighter-rouge">editor.css</code> file.</li>
+  <li><strong>assets:</strong> holds <code class="highlighter-rouge">.png</code>, <code class="highlighter-rouge">.jpg</code>, or other assets needed by your element</li>
+  <li><code class="highlighter-rouge">icon.svg:</code> This is the required icon used to display your element in the editor’s element tray.
+The <code class="highlighter-rouge">icon.svg</code> file must live in the root folder for your element (not the root folder for your app).  The icon should be provided in a greyscale format that matches the Weebly UI. Follow our <a href="ds_apps_icon.html">icon guidelines</a> when creating your icon.</li>
+</ul>
+
+<p>The following shows the file structure for an app that contains one element.</p>
+
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">MyAp
+|--manifest.json
+|--MyElement
+|   |--assets
+|   |   |--logo.png
+|   |--css
+|   |   |--element.css
+|   |   |--editor.css
+|   |--html
+|   |   |--element.tpl
+|   |   |--editor_element.tpl
+|   |--icon.svg
+|   |--js
+|   |   |--element.js
+|   |   |--editor.js</code></pre></figure>
+
+
+</div>

@@ -1,0 +1,49 @@
+<div class="post-header">
+    <h1 class="post-title-main" id="ds_apps_guides.html">Element Design Guidelines</h1>
+</div>
+
+<div class="post-content">
+
+    
+    <div class="summary">Follow these guidelines to create an element that behaves like a native Weebly element.</div>
+    
+    <h2 id="element-flow">Element Flow</h2>
+
+<p>How an element behaves when dropped onto a page is an important user interaction, so try to emulate the Weebly elements, as closely as possible. Weebly elements generally fall into one or a combination of one of the following user flows:</p>
+<ul>
+  <li><strong>Simple</strong>: There are no settings. Weebly examples include Title and Text.</li>
+  <li><strong>Settings</strong>: The element has configurable settings. The Weebly Map and Button are examples of elements that use settings.</li>
+  <li><strong>Connect</strong>: The element connects to external data. The user is presented with a popup dialog (optionally auto-pop) in order to find or create the data needed for the element. The Weebly Product element is an external element. It connects to a product in the store’s catalog.</li>
+</ul>
+
+<h2 id="design-the-element-settings">Design the Element Settings</h2>
+
+<p>When determining settings for your element, try to use the same setting metaphors that you see in Weebly elements. Use the Weebly settings UI (the default) and try to not call out to an external site that displays in an iFrame. External settings can be confusing to our users as they are used to the way Weebly elements and their settings behave.</p>
+
+<p>Here are some questions to think about before you start coding. You’ll need the answers in order to create your element:</p>
+<ul>
+  <li>Should the element dialog display automatically when the element is dropped onto the page? Or will the user need to click the element to open the dialog?</li>
+  <li>Will the element’s settings display in the native Weebly dialog using Weebly components (preferred) or will the user be presented with an external site displayed in an iframe?</li>
+  <li>What type of display (such as text, integer, color picker) is needed for each setting? The Weebly dialog supports <a href="ds_apps_element_settings.html#setting-types">these types</a>.</li>
+  <li>What settings can be grouped together and displayed on one dialog page? What settings will need their own section?</li>
+  <li>Do the settings require tooltips to help the user configure them correctly?</li>
+  <li>Is configuring and using the element complicated and so might need a tutorial? Should the tutorial be include a set of steps or a video?</li>
+  <li>What needs to be handled if a user copies the element to another page?
+Users can copy elements and place the copy on other pages in their site. All setting values are also copied over.</li>
+  <li>Will your element need to behave differently in the editor than on the published site? If so, you may want to create two sets of JavaScript, HTML, and/or CSS files.</li>
+</ul>
+
+<h2 id="element-icon">Element Icon</h2>
+
+<p>​You need to create an <code class="highlighter-rouge">svg</code> file to represent your element in the element tray. It must be named <code class="highlighter-rouge">icon.svg</code>, and must live in the root folder of your element.  Follow our element icon <a href="ds_apps_icon.html">guidelines</a> when creating your icon.</p>
+
+<h2 id="element-placeholder">Element Placeholder</h2>
+
+<p>​Your element when displayed in the editor (the element placeholder) should give a preview of the content that will be displayed on the published site. This placeholder can allow minimal interactivity. For example, when dropped onto a page, your element might allow users to directly edit content or forms in the content, but there shouldn’t be any navigation or any wizard-like behavior. Plan your settings to handle this type of interactivity. You can create alternate HTML templates, Javascript, and CSS for the element placeholder when you need it to behave differently in the editor than on the published page.</p>
+
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> The width of the placeholder can always be adjusted by the user. Weebly handles this resizing for you - please don’t set a width on your element or it will not resize correctly on the page. For example, if the element has a set width and is dropped on a page and then a column is put next to it, it will stay at the predefined width and not display properly.
+</div>
+
+
+</div>

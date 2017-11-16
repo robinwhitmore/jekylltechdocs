@@ -1,0 +1,326 @@
+<div class="post-header">
+    <h1 class="post-title-main" id="ds_api_page.html">Page API</h1>
+</div>
+
+<div class="post-content">
+
+    
+    <div class="summary">The Page API provides methods for reading and updating information about the pages for a site.</div>
+    
+    <p>Sites are made up of <a href="https://hc.weebly.com/hc/en-us/articles/201994638-Manage-Pages">pages</a> that can be rearranged as needed. Each page has a title and a <a href="https://hc.weebly.com/hc/en-us/articles/227027928-Adding-Sections-to-Your-Pages">layout</a>. Site owners can hide pages and can also make pages restricted to <a href="ds_api_member.html">members</a> of the site.</p>
+
+<p>The Pages API provides methods for reading and updating information about the pages for a site.</p>
+
+<h2>Fields</h2>
+
+<p>The following table shows all fields that exist for this API, those that are returned when you retrieve a list and those that are changeable using <code class="highlighter-rouge">PATCH</code>. All fields are returned when you retrieve a single item.</p>
+<table>
+    <tbody>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>List</th>
+        <th>Changeable</th>
+    </tr>
+    <tr>
+        <td>​<code>page_id</code></td>
+        <td>The unique ID of a page</td>
+        <td>string</td>
+        <td>X</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>title</code></td>
+        <td>The title of a given page ​</td>
+        <td>string</td>
+        <td>X</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><code>page_order</code></td>
+        <td>
+            Where this page appears in its of pages, as configured on the Pages tab of the editor. For example: ​
+            <pre>
+Home - page_order 1
+    HomeSubPage - page_order 1
+    HomeSubPage - page_order 2
+About - page_order 2
+    AboutSubPage - page_order 1
+Contact - page_order 3
+    ContactSubPage - page_order 1
+        </pre>You can determine the hierarchy using the parent_id for the page.
+        </td>
+        <td>integer</td>
+        <td>X</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>hidden</code></td>
+        <td>
+            Whether or not the page is hidden from the site's navigation.<br />
+            Valid values are:
+            <ul>
+                <li><code>true</code></li>
+                <li><code>false</code></li>
+            </ul>
+        </td>
+        <td>boolean</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>membership_required</code></td>
+        <td>
+            Whether or not the page requires site <a href="ds_api_member.html">membership</a> in order to be viewed.<br />
+            Valid values are:
+            <ul>
+                <li><code>true</code></li>
+                <li><code>false</code></li>
+            </ul>
+        </td>
+        <td>boolean</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>parent_id</code></td>
+        <td>The <code>page_id</code> of the page one level up in the navigation hierarchy. If there is no parent, nothing is returned.</td>
+        <td>string</td>
+        <td>X</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>layout</code></td>
+        <td>
+            The layout header used for the page.<br />
+            Valid values are:
+            <ul>
+                <li><code>short-header</code></li>
+                <li><code>tall-header</code></li>
+                <li><code>no-header</code></li>
+            </ul>
+        </td>
+        <td>string</td>
+        <td>X</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>page_url</code></td>
+        <td>
+            Relative URL for the page. You can get the domain from <a href="ds_api_site.html"><code>GET /user/sites/SITEID</code></a>
+        </td>
+        <td>string</td>
+        <td>X</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><code>updated_date</code></td>
+        <td>Date the page was last updated.</td>
+        <td>Unix GMT Timestamp</td>
+        <td>X</td>
+        <td></td>
+    </tr>
+    </tbody>
+</table>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Any fields returned that are not documented are currently unsupported and can be safely ignored.</div>
+
+<h2>
+<div class="Tag type_info">GET</div>
+
+ Retrieve a List of Pages
+</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/page</code></pre></figure>
+
+<p>Returns all pages for the given site. Only <code class="highlighter-rouge">list</code> fields are returned.</p>
+
+<h3>Query Parameters</h3>
+<p>Returned values are <a href="ds_api_about.html#pagination">paginated</a>. You can further filter results using these parameters:</p>
+
+<table>
+    <tr>
+        <th>Parameter</th>
+        <th>Description</th>
+        <th>Type</th>
+    </tr>
+    <tr>
+        <td><code>page</code></td>
+        <td>Which page of results to return. Start is <code>1</code>.
+            
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> Only the first 25 results are returned by default. If the result set is
+            expected to be over 25, you must implement pagination.
+</div>
+
+
+        </td>
+        <td>integer</td>
+    </tr>
+    <tr>
+        <td><code>limit</code></td>
+        <td>Number of results per page to return. Default is <code>25</code>. <br />Max is <code>200</code>.</td>
+        <td>integer</td>
+    </tr>
+    <tr>
+        <td><code>query</code></td>
+        <td>Use to retrieve only pages that have a full-text match with the query string.</td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td><code>filterby</code></td>
+        <td>Field name to set a filter on. Valid values are:
+            <ul>
+                <li><code>page_id</code></li>
+                <li><code>title</code></li>
+                <li><code>layout</code></li>
+            </ul>
+        </td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td><code>filterfor</code></td>
+        <td>​Value to search the filterby field for.</td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td><code>sortby</code></td>
+        <td>Field name to sort by</td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td><code>sortdir</code></td>
+        <td>Sort direction. Valid values are:
+            <ul>
+                <li><code>asc</code></li>
+                <li><code>desc</code></li>
+            </ul>
+        </td>
+        <td>string</td>
+    </tr>
+</table>
+
+<p class="codeTitle">Example CURL request returning all pages:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/page <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example filtered request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/page?filterby<span class="o">=</span>layout&amp;filterfor<span class="o">=</span>tall-header <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"page_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"131221993403487092"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"new"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"page_order"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"parent_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"205694454183612584"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"layout"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tall-header"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"page_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"new.html"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"page_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"205694454183612584"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Blog"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"page_order"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"parent_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"layout"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tall-header"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"page_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"blog1.html"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"page_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"267240304658043510"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"members only"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"page_order"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"parent_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"layout"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tall-header"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"page_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"members-only.html"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span></code></pre></figure>
+
+<h2>
+<div class="Tag type_info">GET</div>
+
+ Retrieve Details for a Page
+</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/page/<span class="o">{</span>PAGE_ID<span class="o">}</span></code></pre></figure>
+
+<p>Returns all fields for the given page.</p>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/123456/site/987654321/page/131221993403487092 <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+<p>See Fields table. All fields for the page are returned.</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nt">"page_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"131221993403487092"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"new"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"hidden"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"membership_required"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"parent_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"205694454183612584"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"layout"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tall-header"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014-11-06 15:57:56"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"page_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"new.html"</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<h2>
+<div class="Tag type_warning">PATCH</div>
+
+ Update a Page</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">PATCH /user/USER_ID/site/<span class="o">{</span>SITE_ID<span class="o">}</span>/page/<span class="o">{</span>PAGE_ID<span class="o">}</span></code></pre></figure>
+
+<p>Updates the given page.</p>
+
+<p>These fields can be updated:</p>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Notes</th>
+    </tr>
+    <tr>
+        <td><code>title</code></td>
+        <td>The page's title.</td>
+        <td>string</td>
+        <td>Required</td>
+    </tr>
+</table>
+
+<p class="codeTitle">Example CURL request:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/987654321/site/123456/page/1234567890 <span class="se">\</span>
+-X PATCH <span class="se">\</span>
+-d <span class="s1">'{
+        "title": "New Title"
+    }'</span> <span class="se">\</span>
+-H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
+-H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+-H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p class="codeTitle">Example response:</p>
+<p>See Fields table. All fields for the page are returned.</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nt">"page_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1234567890"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"New Title"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"hidden"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"membership_required"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"parent_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"layout"</span><span class="p">:</span><span class="w"> </span><span class="s2">"short-header"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-02-08 11:16:19"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"page_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"new.html"</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+
+</div>

@@ -1,0 +1,51 @@
+<div class="post-header">
+    <h1 class="post-title-main" id="ds_apps_backend.html">Create a Backend Service</h1>
+</div>
+
+<div class="post-content">
+
+    
+    <div class="summary">Backend services typically provide additional functionality for a user's website. They can be full-fledged apps that run on your server and access our API, or they can be simple snippets.</div>
+    
+    <h2 id="backend-service-apps">Backend Service Apps</h2>
+
+<p>Backend services typically provide additional functionality for a user’s website, often without requiring an element to be dropped onto a page. Once installed, the app runs natively on the user’s site.</p>
+
+<p>​For example, someone might create a backend service that  manages a site’s data about its members. Let’s call it Subscribe. The Subscribe app gains access to the Weebly API to get information about the customer and the site it’s being installed into, as well as information about the site’s members.</p>
+
+<h2 id="snippets">Snippets</h2>
+
+<p>​You can also create a snippet of code to be installed on every page in a user’s published site. To create a snippet, create an HTML page that includes the needed code and save it as an HTML template file (you can save it to the root of your directory with the manifest). Then include the path to the snippet in the manifest. When installed, the code is appended to every page.</p>
+
+<p>This example shows the <code class="highlighter-rouge">snippet.tpl</code> - a very simple snippet.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script&gt;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"a4 snippet found"</span><span class="p">);</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;div&gt;</span>here is snippet from test app 4 (a4-snippet)<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>And here’s the manifest entry  for it.</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nt">"manifest"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.4"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"locale"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en-us"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"supported"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"en-us"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"snippet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"files/html/snippet.tpl"</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> Because apps that run natively on iOS mobile devices need to use App Transport Security, any URLS in your app must use HTTPS. Also note that because the Weebly editor and published sites use jQuery and Underscore, if your app also needs to use these libraries, do not expose any global variables, as conflicts may arise.
+</div>
+
+<p>Snippets are active only on published sites and not in the Weebly editor.</p>
+
+<h2 id="create-a-backend-service-or-snippet">Create a Backend Service or Snippet</h2>
+<p>​To create a backend service or snippet, aside from the code for the app’s functionality, you’ll need to provide log in, configure, and manage capabilities at an external web site (if needed). Once you’ve created those sites and your app, follow the steps for <a href="ds_apps_dev.html">developing an app</a> .</p>
+
+
+</div>
