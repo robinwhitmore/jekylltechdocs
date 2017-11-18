@@ -38,12 +38,14 @@ Let's use the following as the primary and accent colors:
 {% include image.html file="themes_colorpresets.gif" caption="Add presets" %}
 {:start="6"}
 6. ​Click Save.
+    
     The palette displays in the editor. Click on the first circle to apply that palette.
-    {% include note.html content="​Nothing will change in the preview because we need to now use the primary and accent colors in the theme." %}
+    
+{% include note.html content="​Nothing will change in the preview because we need to now use the primary and accent colors in the theme." %}
 
-    {% include image.html file="theme_palette.png" caption="Color palette with two colors" %}
+{% include image.html file="theme_palette.png" caption="Color palette with two colors" %}
 
-    {% include note.html type="tip" content="If you don't see the palette, try refreshing your browser." %}
+{% include note.html type="tip" content="If you don't see the palette, try refreshing your browser." %}
 
 
 ### What Just Happened?

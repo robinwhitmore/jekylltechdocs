@@ -26,5 +26,6 @@ Once you've completed your theme, use the Weebly editor to zip it up for you.
     Your theme will be downloaded and is ready for distribution.
     {% include note.html content="All themes use the same default partials, which are available only in the Editor. Only customized partials are downloaded when you export a theme. So if you want to work in an external tool and want to change a partial, make a small change first in the Weebly editor, and then export the theme." %}
 {% if site.project=="cloud" or "designer" %}
+{:start="4"}
 4. Use the <a data-container="body" data-toggle="popover" data-content="{{site.data.glossary.Cloud_Admin}}">Cloud Admin</a> to make the theme available to your customers.
 {% endif %}

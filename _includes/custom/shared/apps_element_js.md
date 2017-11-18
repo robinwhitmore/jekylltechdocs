@@ -51,7 +51,6 @@ If you use the self executing anonymous function, you can move code outside of t
 {% endhighlight %}
 
 {% include custom/notes/note_https.md %}
-
 ## Access Settings
 Within your JavaScript, you can access element settings using `this.settings`, which acts as a [Backbone Model](http://backbonejs.org/#Model), and the `get` method.  Any settings that are defined as private in your `manifest.json` will not be available to your JavaScript on the published site.  This is for security reasons, and allows you to place API Keys in your settings without exposing them to site visitors.
 

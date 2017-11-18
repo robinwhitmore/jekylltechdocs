@@ -125,13 +125,17 @@ If your application or element requires external data, or you feel that your cus
 Set the following to create external settings:
 
 * `url`: A URL that contains a self-hosted page for editing settings.  The URL must use the `HTTPS` protocol.
-    {% include note.html content="All URLs must use the `HTTPS` protocol. You will not be able to upload an app that uses `HTTP`." %}
-    We use a JSON web token (JWT) to inject information, including their `user_id`, `site_id`, `element_id`, `element_uuid`, `iat` (issued-at timestamp - i.e. the time the token was generated), and the `jti` (JWT token ID).
+    
+{% include note.html content="All URLs must use the `HTTPS` protocol. You will not be able to upload an app that uses `HTTP`." %}
+    
+We use a JSON web token (JWT) to inject information, including their `user_id`, `site_id`, `element_id`, `element_uuid`, `iat` (issued-at timestamp - i.e. the time the token was generated), and the `jti` (JWT token ID).
+    
     {% include note.html content="Weebly automatically appends the JWT string to the end of the URL, including any necessary operands (like `?` and `&`). If you want the JWT to be placed in a specific part of the URL, you can use `:jwt`, and Weebly will replace that with the JWT (without adding any operands - you'll need to include those)." %}
 
-    Below is an example of how to decode the JWT hash:
+Below is an example of how to decode the JWT hash:
 
-    `$decoded = JWT::decode($_GET['jwt'], $client_secret, array('HS256'));`
+`$decoded = JWT::decode($_GET['jwt'], $client_secret, array('HS256'));`
+
 * `label`: This string will be used as the label for button displayed in the dialog to open the iframe. Below shows what might be displayed if you set this to "Edit Your Map."
     {% include image.html file="externalButton2.png" caption="Button using the label property to open an iframe" %}
 * `height`: The height the modal should be set to. Your iframe will be placed inside this modal size. Do not set if you want the modal to be fullscreen.

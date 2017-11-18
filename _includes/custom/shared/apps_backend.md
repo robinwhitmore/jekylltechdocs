@@ -37,5 +37,5 @@ And here's the manifest entry  for it.
 Snippets are active only on published sites and not in the Weebly editor.
 
 ## Create a Backend Service or Snippet
-​To create a backend service or snippet, aside from the code for the app's functionality, you'll need to provide log in, configure, and manage capabilities at an external web site (if needed). Once you've created those sites and your app, follow the steps for {%if site.project=="designer"%}[developing an app](ds_apps_dev.html) {%elsif site.project=="cloud"%}[developing an app](cl_apps_dev.html){%elsif site.project=="platform"%}[developing an app](pf_apps_dev.html){%endif%}.
+​To create a backend service or snippet, aside from the code for the app's functionality, you'll need to provide log in, configure, and manage capabilities at an external web site (if needed). Once you've created those sites and your app, follow the steps for {%if site.project=="designer"%}[developing an app](ds_apps_dev.html){%elsif site.project=="cloud"%}[developing an app](cl_apps_dev.html){%elsif site.project=="platform"%}[developing an app](pf_apps_dev.html){%endif%}.
 

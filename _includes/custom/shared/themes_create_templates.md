@@ -48,9 +48,11 @@ For example, the sample below shows the foundation for a header template.
 * **{footer}**: Displays footer content at the bottom of the page
 
 Where you place these tags and how you style the generated content is up to you. If you create a new file (and aren't editing one from an existing theme), then these are added for you.
-{% include note.html content="The editor adds the {title} tag, but you can replace that with the {logo} tag if you want." %}
-​​This graphic shows where these tags are used in the Base theme:
-​{% include image.html file="themesHTML.png"  %}
+{% include note.html content="The editor adds the `{title}` tag, but you can replace that with the `{logo}` tag if you want." %}
+​​
+This graphic shows where these tags are used in the Base theme:
+{% include image.html file="themesHTML.png" caption="Mandatory tags in the Base theme" %}
+
 
 ​Here's the code from the Base theme showing the mandatory tags:
 

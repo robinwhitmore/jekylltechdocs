@@ -5,7 +5,7 @@ Let's style the title and menu.​ We'll use the accent color we added for the t
 2. Under the **Styles** area, click `main.less` to open it.​
 ​
 3. Scroll down to the **Header** area to find the `.wsite-logo` class. You'll notice that there is styling for the link color (logos by default are a link to the home page), an image height (for when a user uploads a logo graphic to use instead of the title text), and styling for the title text. The link style uses the accent color we created:
-{% highlight css %}
+    {% highlight css %}
 .wsite-logo {
     display: block;
     margin: 20px auto 0;
@@ -24,9 +24,10 @@ Let's style the title and menu.​ We'll use the accent color we added for the t
         font-weight: bold;
     }
 }
-{% endhighlight %}
+    {% endhighlight %}
 
-Let's float the entire logo area to the left. Let's also make the title bigger. ​​
+{:start="4"}
+4. Let's float the entire logo area to the left. Let's also make the title bigger. ​​
     For the `.wsite-logo` class, add a `float` property and set it to `left`.
     For the `#wsite-title` element, change the `font-size` property to `5em`.
 
@@ -54,7 +55,7 @@ Let's float the entire logo area to the left. Let's also make the title bigger. 
 
 {% include image.html file="theme_float_left.gif" caption="Change the styles pf title to use our accent color and change the size to be larger" %}
 
-{:start="4"}
+{:start="5"}
 5. Now let's float the menu to the right. Scroll down to the **Navigation** area until you find the `.wsite-menu-default` class. Like the `.wsite-logo` class, this menu class includes styles for multiple aspects of the menu, including active and hover link styles, font styles and padding. Since the link color uses the `@text_color` variable, it will use the primary color set by the user (remember we set the `@text_color` variable to use the `@site-primary-color` variable in {%if site.project=="designer"%}[Step 5](ds_themes_5.html){%elsif site.project=="cloud"%}[Step 5](cl_themes_5.html){%elsif site.project=="platform"%}[Step 5](pf_themes_5.html){%endif%}). And the link hover style will use the accent color.
 
 {% highlight css %}
@@ -80,7 +81,8 @@ Let's float the entire logo area to the left. Let's also make the title bigger. 
 }
 {% endhighlight %}
 
-Let's float the menu to the right by adding the `float` property, and change the text so that it's all uppercase by adding the `text-transform` property.
+{:start="6"}
+6. Let's float the menu to the right by adding the `float` property, and change the text so that it's all uppercase by adding the `text-transform` property.
 
 {% highlight css %}
 .wsite-menu-default {
@@ -109,7 +111,7 @@ Let's float the menu to the right by adding the `float` property, and change the
 
 {% include image.html file="theme_float_right.gif" caption="Float the menu to the right and change the text to uppercase" %}
 
-{:start="5"}
+{:start="7"}
 7. Click **Save**.
 
 The layout of the header has changed. If the title doesn't seem to be lining up correctly, it's because the editor window is too small.

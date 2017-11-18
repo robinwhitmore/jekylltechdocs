@@ -1,7 +1,7 @@
 ---
 title: Upload Your App
 keywords: upload, zip, dev admin portal,
-t_type: [concepts, task, reference, tutorial]
+t_type: [task]
 tags: [apps, elements]
 sidebar: ds_apps_sidebar
 permalink: ds_apps_element_upload.html

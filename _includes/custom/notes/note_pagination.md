@@ -1,1 +1,1 @@
-<div markdown="span" class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Only the first 25 results are returned by default. If the result set is expected to be over 25, you must implement pagination.</div>
+{% include note.html content="Only the first 25 results are returned by default. If the result set is expected to be over 25, you must implement pagination" %}

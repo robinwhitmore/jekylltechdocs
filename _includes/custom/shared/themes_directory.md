@@ -3,7 +3,7 @@ Instead of creating directories and files, {%if site.project=="designer"%}[downl
 When you unzip the archive, you'll see that the theme's root directory contains the following:
 * `manifest.json` file.  This file provides {%if site.project=="designer"%}[configuration](ds_themes_manifest.html){%elsif site.project=="cloud"%}[configuration](cl_themes_manifest.html){%elsif site.project=="platform"%}[configuration](pf_themes_manifest.html){%endif%} for the theme, including optional functionality.
 * `main_style.css` file. This is the stylesheet for the theme, when using CSS.
-    {% include note.html content="If your theme uses LESS rather than CSS, the LESS stylesheet(s) is in the /styles directory. Your theme should use either CSS or LESS, not both. If both exist, the CSS file will be ignored." %}
+    {% include note.html content="If your theme uses LESS rather than CSS, the LESS stylesheet(s) is in the `/styles` directory. Your theme should use either CSS or LESS, not both. If both exist, the CSS file will be ignored." %}
 * HTML template files for each of the different header types
 * JavaScript files (these may be in the assets directory).
 * assets (optional directory): Contains images, fonts, and Javascript files. If there are only a few of these files, they may be at the root instead.

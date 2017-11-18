@@ -1,4 +1,4 @@
-aPartials are {% if site.project=="designer" %}[Mustache](ds_themes_mustache.html){%elsif site.project=="cloud" %}[Mustache](cl_themes_mustache.html){%elsif site.project=="platform" %}[Mustache](pf_themes_mustache.html){%endif%} template files that are included in a page, similar to an include, import, or a nested template.
+Partials are {% if site.project=="designer" %}[Mustache](ds_themes_mustache.html){%elsif site.project=="cloud" %}[Mustache](cl_themes_mustache.html){%elsif site.project=="platform" %}[Mustache](pf_themes_mustache.html){%endif%} template files that are included in a page, similar to an include, import, or a nested template.
 
 You don't determine where partials display in your templates. Your templates only determine the layout of the large blocks of content, like headers, banners, footer, and sections. Partials and their content automatically display based on the type of page being rendered, such as a product or a blog.
 

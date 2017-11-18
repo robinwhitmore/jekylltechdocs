@@ -14,59 +14,58 @@ The following table shows all fields that exist for this API, those that are ret
         <td><strong>Changeable</strong></td>
     </tr>
     <tr>
-        <td>​<code>user_id</code></td>
-        <td>The unique ID of the authenticated user</td>
-        <td>string</td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><code>site_id</code></td>
-        <td>ID of a Weebly site, unique to the currently authenticated user​</td>
-        <td>string</td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-
-    <tr>
-        <td><code>client_id</code></td>
-        <td>description​</td>
+        <td><code>reseller_client_id</code></td>
+        <td>The unique ID (to the designer's account) for this client.</td>
         <td>string</td>
         <td>X</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
+      <td><code>reseller_id</code></td>
+      <td>The unique ID for the designer.</td>
+      <td>string</td>
+      <td>X</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>custom_client_id</code></td>
+      <td>The optional ID entered when the client was created. </td>
+      <td>string</td>
+      <td>X</td>
+      <td></td>
+      <td>X</td>
+    </tr>
+    <tr>
         <td><code>name</code></td>
-        <td>description</td>
+        <td>The full name of the client.</td>
         <td>string</td>
-        <td>list</td>
+        <td>X</td>
         <td>X</td>
         <td>X</td>
     </tr>
     <tr>
         <td><code>email</code></td>
-        <td>description</td>
+        <td>The client's email. This will be used by the client to log into the portal.</td>
         <td>string</td>
-        <td>list</td>
+        <td>X</td>
         <td>X</td>
         <td>X</td>
     </tr>
     <tr>
         <td><code>phone</code></td>
-        <td>description</td>
+        <td>Client's phone number</td>
         <td>string</td>
-        <td>list</td>
+        <td>X</td>
         <td></td>
         <td>X</td>
     </tr>
     <tr>
         <td><code>note</code></td>
-        <td>description</td>
+        <td>An optional note created by the designer.</td>
         <td>string</td>
-        <td></td>
+        <td>X</td>
         <td></td>
         <td>X</td>
     </tr>
@@ -74,7 +73,7 @@ The following table shows all fields that exist for this API, those that are ret
         <td><code>created_date</code></td>
       <td>Date the client was created.</td>
         <td>Unix GMT Timestamp</td>
-        <td></td>
+        <td>X</td>
         <td><br>
         </td>
         <td><br>
@@ -84,7 +83,7 @@ The following table shows all fields that exist for this API, those that are ret
         <td><code>updated_date</code></td>
       <td>Date the client was last updated.</td>
         <td>Unix GMT Timestamp</td>
-        <td></td>
+        <td>X</td>
         <td><br>
         </td>
         <td><br>
@@ -180,42 +179,48 @@ curl https://api.weeblycloud.com/client?filterby=phone&filterfor=555-555-5555 \
 -H "X-Signed-Request-Hash: YOURSECRETHASH"
 {% endhighlight %}
 
-<p class="codeTitle">Example response:</p>
+<p class="codeTitle">Example response (unfiltered):</p>
 {% highlight json %}
 [
   {
-    "user_id": "123456",
-    "site_id": "987654321",
-    "client_id": "1",
+    "reseller_client_id": "1",
+    "reseller_id": "123456789",
+    "custom_client_id": "12345",
     "name": "Client One",
+    "phone": null,
+    "note": "Here's a new note about Client One.",
     "email": "clientone@email.com",
-    "phone": "555-555-5555",
-    "note": null
+    "created_date": 1506977100,
+    "updated_date": 1506977100
   },
   {
-    "user_id": "123456",
-    "site_id": "987654322",
-    "client_id": "2",
+    "reseller_client_id": "2",
+    "reseller_id": "123456789",
+    "custom_client_id": "5678",
     "name": "Client Two",
+    "phone": null,
+    "note": null,
     "email": "clienttwo@email.com",
-    "phone": "555-555-5556",
-    "note": null
+    "created_date": 1506977137,
+    "updated_date": 1506977137
   },
   {
-    "user_id": "123456",
-    "site_id": "987654323",
-    "client_id": "3",
+    "reseller_client_id": "3",
+    "reseller_id": "123456789",
+    "custom_client_id": null,
     "name": "Client Three",
+    "phone": null,
+    "note": null,
     "email": "clientthree@email.com",
-    "phone": "555-555-5557",
-    "note": null
+    "created_date": 1507665663,
+    "updated_date": 1507665663
   }
 ]
 {% endhighlight %}
 
 <h2>{% include label.html content="get" %} Retrieve Details for a Client</h2>
 {% highlight shell%}
-GET /client/{CLIENT_ID}
+GET /client/{RESELLER_CLIENT_ID}
 {% endhighlight %}
 
 Returns all fields for the given client.
@@ -231,13 +236,15 @@ curl https://api.weeblycloud.com/client/1 \
 <p>See Fields table. All fields for the client are returned.</p>
 {% highlight json %}
 {
-  "user_id": "123456",
-  "site_id": "987654321",
-  "client_id": "1",
+  "reseller_client_id": "1",
+  "reseller_id": "123456789",
+  "custom_client_id": "12345",
   "name": "Client One",
+  "phone": null,
+  "note": "Here's a new note about Client One.",
   "email": "clientone@email.com",
-  "phone": "555-555-5555",
-  "note": null
+  "created_date": 1506977100,
+  "updated_date": 1506977100
 }
 {% endhighlight %}
 
@@ -260,25 +267,31 @@ These fields can be created:
     </tr>
   <tr>
     <td><code>name</code></td>
-    <td>description</td>
+    <td>The full name of the client.</td>
     <td>string</td>
     <td>Required</td>
   </tr>
   <tr>
     <td><code>email</code></td>
-    <td>description</td>
+    <td>The client's email. This will be used by the client to log into the portal.</td>
     <td>string</td>
     <td>Required</td>
   </tr>
   <tr>
+    <td><code>custom_client_id</code></td>
+    <td>Optional Designer-defined ID.</td>
+    <td>string</td>
+    <td></td>
+  </tr>
+  <tr>
     <td><code>phone</code></td>
-    <td>description</td>
+    <td>Client's phone number</td>
     <td>string</td>
     <td></td>
   </tr>
   <tr>
     <td><code>note</code></td>
-    <td>description</td>
+    <td>An optional note created by the designer.</td>
     <td>string</td>
     <td></td>
   </tr>
@@ -291,7 +304,7 @@ curl https://api.weeblycloud.com/client \
 -d '{
       "name": "New Client",
       "email": "newclient@email.com",
-      "phone": "555-555-5559"
+      "custom_client_id": "1234"
     }' \
 -H "Content-type: application/json" \
 -H "X-Public-Key: YOURAPIKEY" \
@@ -301,19 +314,21 @@ curl https://api.weeblycloud.com/client \
 <p class="codeTitle">Example response:</p>
 {% highlight json %}
 {
-  "user_id": "123456",
-  "site_id": "987654321",
-  "client_id": "4",
+  "reseller_client_id": "6",
+  "reseller_id": "123456789",
+  "custom_client_id": "1234",
   "name": "New Client",
+  "phone": null,
+  "note": null,
   "email": "newclient@email.com",
-  "phone": "555-555-5559",
-  "note": null
+  "created_date": 1510949700,
+  "updated_date": 1510949700
 }         
 {% endhighlight %}
 
 <h2>{% include label.html content="put" %} Replace a Client</h2>
 {% highlight shell%}
-PUT /client/{CLIENT_ID}
+PUT /client/{RESELLER_CLIENT_ID}
 {% endhighlight %}
 
 Replaces the given client.
@@ -322,33 +337,39 @@ Replaces the given client.
 These fields can be replaced:
 
 <table>
-    <tr>
-        <td><strong>Name</strong></td>
-        <td><strong>Description</strong></td>
-        <td><strong>Type</strong></td>
-        <td><strong>Notes</strong></td>
-    </tr>
+  <tr>
+    <td><strong>Name</strong></td>
+    <td><strong>Description</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Notes</strong></td>
+  </tr>
   <tr>
     <td><code>name</code></td>
-    <td>description</td>
+    <td>The full name of the client.</td>
     <td>string</td>
     <td>Required</td>
   </tr>
   <tr>
     <td><code>email</code></td>
-    <td>description</td>
+    <td>The client's email. This will be used by the client to log into the portal.</td>
     <td>string</td>
     <td>Required</td>
   </tr>
   <tr>
+    <td><code>custom_client_id</code></td>
+    <td>Optional Designer-defined ID.</td>
+    <td>string</td>
+    <td></td>
+  </tr>
+  <tr>
     <td><code>phone</code></td>
-    <td>description</td>
+    <td>Client's phone number</td>
     <td>string</td>
     <td></td>
   </tr>
   <tr>
     <td><code>note</code></td>
-    <td>description</td>
+    <td>An optional note created by the designer.</td>
     <td>string</td>
     <td></td>
   </tr>
@@ -370,19 +391,21 @@ curl https://api.weeblycloud.com/client/1 \
 <p class="codeTitle">Example response:</p>
 {% highlight json %}
 {
-  "user_id": "123456",
-  "site_id": "987654321",
-  "client_id": "1",
+  "reseller_client_id": "1",
+  "reseller_id": "123456789",
+  "custom_client_id": "1234",
   "name": "New Client One",
+  "phone": null,
+  "note": null,
   "email": "newclientone@email.com",
-  "phone": "555-555-5555",
-  "note": null
+  "created_date": 1510949700,
+  "updated_date": 1510949700
 }
 {% endhighlight %}
 
 <h2>{% include label.html content="patch" %} Update a Client</h2>
 {% highlight shell%}
-PATCH /client/{CLIENT_ID}
+PATCH /client/{RESELLER_CLIENT_ID}
 {% endhighlight %}
 
 Updates the given client.
@@ -391,29 +414,34 @@ Updates the given client.
 These fields can be updated:
 
 <table>
-    <tr>
-        <td><strong>Name</strong></td>
-        <td><strong>Description</strong></td>
-        <td><strong>Type</strong></td>
-    </tr>
+  <tr>
+    <td><strong>Name</strong></td>
+    <td><strong>Description</strong></td>
+    <td><strong>Type</strong></td>
+  </tr>
   <tr>
     <td><code>name</code></td>
-    <td>description</td>
+    <td>The full name of the client.</td>
     <td>string</td>
   </tr>
   <tr>
     <td><code>email</code></td>
-    <td>description</td>
+    <td>The client's email. This will be used by the client to log into the portal.</td>
+    <td>string</td>
+  </tr>
+  <tr>
+    <td><code>custom_client_id</code></td>
+    <td>Optional Designer-defined ID.</td>
     <td>string</td>
   </tr>
   <tr>
     <td><code>phone</code></td>
-    <td>description</td>
+    <td>Client's phone number</td>
     <td>string</td>
   </tr>
   <tr>
     <td><code>note</code></td>
-    <td>description</td>
+    <td>An optional note created by the designer.</td>
     <td>string</td>
   </tr>
 </table>
@@ -436,13 +464,15 @@ curl https://api.weeblycloud.com/client/2 \
 See Fields table. All fields for the client are returned.
 {% highlight json %}
 {
-    "user_id": "123456",
-    "site_id": "987654322",
-    "client_id": "2",
-    "name": "Client Two",
-    "email": "clienttwo@email.com",
-    "phone": "555-555-5556",
-    "note": "A new note."
+"reseller_client_id": "2",
+"reseller_id": "123456789",
+"custom_client_id": "1234",
+"name": "Client Two",
+"phone": null,
+"note": "A new note.",
+"email": "clienttwo@email.com",
+"created_date": 1510949700,
+"updated_date": 1510949700
 }
 {% endhighlight %}
 

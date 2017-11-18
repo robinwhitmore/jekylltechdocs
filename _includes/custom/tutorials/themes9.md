@@ -6,7 +6,8 @@ Now that we're done customizing the theme, let's take a screenshot so that it ca
 
     {%include note.html type="tip" content="Normally, you'd take the screenshot from a published site, but for this tutorial, we'll just use the editor preview." %}
 
-2. Save the screenshot to a local directory with the name `screenshot.jpg`.
+{:start="3"}
+3. Save the screenshot to a local directory with the name `screenshot.jpg`.
 
 ​The screenshot needs to be part of the zip file that you'll upload to Weebly. We'll do that in the next step.
 

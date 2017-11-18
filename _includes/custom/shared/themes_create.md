@@ -6,8 +6,12 @@ Here's an overview on how to create a theme. Click on the links for detailed ins
 1. Find a theme that you want to start with and open it in the editor (don't try to create a theme from scratch). Or import our {% if site.project=="designer" %}[Base theme](ds_themes_sample.html){%elsif site.project=="cloud" %}[Base theme](cl_themes_sample.html){%elsif site.project=="platform" %}[Base theme](pf_themes_sample.html){%endif%}, and start from there.
 
 2. If you want to use external tools, {% if site.project=="designer" %}[export](ds_themes_import_export.html){%elsif site.project=="cloud" %}[export](cl_themes_import_export.html){%elsif site.project=="platform" %}[export](pf_themes_import_export.html){%endif%} the theme you want to use as a base.
-    <div markdown="span" class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> {% if site.project=="designer" %}[Partials](ds_themes_partials.html){%elsif site.project=="cloud" %}[Partials](cl_themes_partials.html){%elsif site.project=="platform" %}[Partials](pf_themes_partials.html){%endif%} are not exported unless they've been customized. So if you want to edit any partials, make a small change to them before exporting.</div>
+    {% capture partials %}
+    {% if site.project=="designer" %}[Partials](ds_themes_partials.html){%elsif site.project=="cloud" %}[Partials](cl_themes_partials.html){%elsif site.project=="platform" %}[Partials](pf_themes_partials.html){%endif%} are not exported unless they've been customized. So if you want to edit any partials, make a small change to them before exporting.
+    {% endcapture %}
+    {% include note.html content=partials %}
 
+{:start="3"}
 3. {% if site.project=="designer" %}[Implement the CSS or LESS](ds_themes_implement_css.html){%elsif site.project=="cloud" %}[Implement the CSS or LESS](cl_themes_implement_css.html){%elsif site.project=="platform" %}[Implement the CSS or LESS](pf_themes_implement_css.html){%endif%}. The quickest way to start seeing changes in your theme is to start editing or adding styles. You can look at the styles from other themes for ideas and inspiration.
 
 4. Optionally edit or create the {% if site.project=="designer" %}[HTML template](ds_themes_create_templates.html){%elsif site.project=="cloud" %}[HTML template](cl_themes_create_templates.html){%elsif site.project=="platform" %}[HTML template](pf_themes_create_templates.html){%endif%} files. You'll need a template for each header type that you want your theme to use. Add optional header areas or sections.

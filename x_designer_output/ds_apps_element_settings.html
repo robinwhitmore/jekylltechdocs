@@ -84,7 +84,7 @@
 				
 				
 				<li class="NavLinkLi">
-					<a href="ds_mg_about.html" class="NavLink nav-group-list-link">Migration</a>
+					<a href="ds_mg_about.html" class="NavLink nav-group-list-link">Migrated Designer?</a>
 				</li>
 				
 				
@@ -832,31 +832,29 @@ $( document ).ready(function() {
 	<b>Note:</b> All URLs must use the <code class="highlighter-rouge">HTTPS</code> protocol. You will not be able to upload an app that uses <code class="highlighter-rouge">HTTP</code>.
 </div>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>We use a JSON web token (JWT) to inject information, including their `user_id`, `site_id`, `element_id`, `element_uuid`, `iat` (issued-at timestamp - i.e. the time the token was generated), and the `jti` (JWT token ID).
-</code></pre>
-</div>
+<p>We use a JSON web token (JWT) to inject information, including their <code class="highlighter-rouge">user_id</code>, <code class="highlighter-rouge">site_id</code>, <code class="highlighter-rouge">element_id</code>, <code class="highlighter-rouge">element_uuid</code>, <code class="highlighter-rouge">iat</code> (issued-at timestamp - i.e. the time the token was generated), and the <code class="highlighter-rouge">jti</code> (JWT token ID).</p>
 
 <div class="Notice type_info" role="alert">
 	<b>Note:</b> Weebly automatically appends the JWT string to the end of the URL, including any necessary operands (like <code class="highlighter-rouge">?</code> and <code class="highlighter-rouge">&amp;</code>). If you want the JWT to be placed in a specific part of the URL, you can use <code class="highlighter-rouge">:jwt</code>, and Weebly will replace that with the JWT (without adding any operands - you’ll need to include those).
 </div>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>Below is an example of how to decode the JWT hash:
+<p>Below is an example of how to decode the JWT hash:</p>
 
-`$decoded = JWT::decode($_GET['jwt'], $client_secret, array('HS256'));` * `label`: This string will be used as the label for button displayed in the dialog to open the iframe. Below shows what might be displayed if you set this to "Edit Your Map."
-&lt;figure class="post-content__figure"&gt;
-
-
-&lt;img class="post-content__image" src="images/externalButton2.png" alt=""  /&gt;
-
-
-
-
-	&lt;figcaption&gt;Button using the label property to open an iframe&lt;/figcaption&gt;
-&lt;/figure&gt;
-</code></pre>
-</div>
+<p><code class="highlighter-rouge">$decoded = JWT::decode($_GET['jwt'], $client_secret, array('HS256'));</code></p>
 
 <ul>
+  <li><code class="highlighter-rouge">label</code>: This string will be used as the label for button displayed in the dialog to open the iframe. Below shows what might be displayed if you set this to “Edit Your Map.”
+    <figure class="post-content__figure">
+	
+
+  <img class="post-content__image" src="images/externalButton2.png" alt="" />
+
+	
+
+	
+      <figcaption>Button using the label property to open an iframe</figcaption>
+  </figure>
+  </li>
   <li><code class="highlighter-rouge">height</code>: The height the modal should be set to. Your iframe will be placed inside this modal size. Do not set if you want the modal to be fullscreen.</li>
   <li><code class="highlighter-rouge">width</code>: The width the modal should be set to. Your iframe will be placed inside this modal size. Do not set if you want the modal to be fullscreen.</li>
   <li><code class="highlighter-rouge">modal</code>: Set to <code class="highlighter-rouge">true</code> to have your iframe display in a modal. Set to <code class="highlighter-rouge">false</code> to allow the user to interact with the Weebly editor in the background.</li>
@@ -1006,7 +1004,7 @@ $( document ).ready(function() {
 		<div class="col-lg-12">
 			<div class="footer__fineprint">
 				&copy;2017 Weebly. All rights reserved. <br />
-				 Site last generated: Nov 16, 2017
+				 Site last generated: Nov 17, 2017
 			</div>
 			<div class="footer__logo">
 				<img src="images/weebly_logo.svg" alt="Weebly logo"/>

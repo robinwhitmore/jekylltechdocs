@@ -84,7 +84,7 @@
 				
 				
 				<li class="NavLinkLi">
-					<a href="ds_mg_about.html" class="NavLink nav-group-list-link">Migration</a>
+					<a href="ds_mg_about.html" class="NavLink nav-group-list-link">Migrated Designer?</a>
 				</li>
 				
 				
@@ -667,59 +667,58 @@ $( document ).ready(function() {
         <td><strong>Changeable</strong></td>
     </tr>
     <tr>
-        <td>​<code>user_id</code></td>
-        <td>The unique ID of the authenticated user</td>
-        <td>string</td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><code>site_id</code></td>
-        <td>ID of a Weebly site, unique to the currently authenticated user​</td>
-        <td>string</td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-
-    <tr>
-        <td><code>client_id</code></td>
-        <td>description​</td>
+        <td><code>reseller_client_id</code></td>
+        <td>The unique ID (to the designer's account) for this client.</td>
         <td>string</td>
         <td>X</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
+      <td><code>reseller_id</code></td>
+      <td>The unique ID for the designer.</td>
+      <td>string</td>
+      <td>X</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>custom_client_id</code></td>
+      <td>The optional ID entered when the client was created. </td>
+      <td>string</td>
+      <td>X</td>
+      <td></td>
+      <td>X</td>
+    </tr>
+    <tr>
         <td><code>name</code></td>
-        <td>description</td>
+        <td>The full name of the client.</td>
         <td>string</td>
-        <td>list</td>
+        <td>X</td>
         <td>X</td>
         <td>X</td>
     </tr>
     <tr>
         <td><code>email</code></td>
-        <td>description</td>
+        <td>The client's email. This will be used by the client to log into the portal.</td>
         <td>string</td>
-        <td>list</td>
+        <td>X</td>
         <td>X</td>
         <td>X</td>
     </tr>
     <tr>
         <td><code>phone</code></td>
-        <td>description</td>
+        <td>Client's phone number</td>
         <td>string</td>
-        <td>list</td>
+        <td>X</td>
         <td></td>
         <td>X</td>
     </tr>
     <tr>
         <td><code>note</code></td>
-        <td>description</td>
+        <td>An optional note created by the designer.</td>
         <td>string</td>
-        <td></td>
+        <td>X</td>
         <td></td>
         <td>X</td>
     </tr>
@@ -727,7 +726,7 @@ $( document ).ready(function() {
         <td><code>created_date</code></td>
       <td>Date the client was created.</td>
         <td>Unix GMT Timestamp</td>
-        <td></td>
+        <td>X</td>
         <td><br />
         </td>
         <td><br />
@@ -737,7 +736,7 @@ $( document ).ready(function() {
         <td><code>updated_date</code></td>
       <td>Date the client was last updated.</td>
         <td>Unix GMT Timestamp</td>
-        <td></td>
+        <td>X</td>
         <td><br />
         </td>
         <td><br />
@@ -745,7 +744,10 @@ $( document ).ready(function() {
     </tr>
     </tbody>
 </table>
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Any fields returned that are not documented are currently unsupported and can be safely ignored.</div>
+
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> Any fields returned that are not documented are currently unsupported and can be safely ignored
+</div>
 
 <h2>
 <div class="Tag type_info">GET</div>
@@ -836,35 +838,41 @@ $( document ).ready(function() {
 -H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
 -H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
 
-<p class="codeTitle">Example response:</p>
+<p class="codeTitle">Example response (unfiltered):</p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"reseller_client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"reseller_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456789"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"custom_client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Client One"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"note"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Here's a new note about Client One."</span><span class="p">,</span><span class="w">
     </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"clientone@email.com"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-555-5555"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"note"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="nt">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1506977100</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1506977100</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654322"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"reseller_client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"reseller_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456789"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"custom_client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5678"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Client Two"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"note"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"clienttwo@email.com"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-555-5556"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"note"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="nt">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1506977137</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1506977137</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654323"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"reseller_client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"reseller_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456789"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"custom_client_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Client Three"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"note"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"clientthree@email.com"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-555-5557"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"note"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="nt">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1507665663</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1507665663</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span></code></pre></figure>
 
@@ -873,7 +881,7 @@ $( document ).ready(function() {
 
  Retrieve Details for a Client</h2>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /client/<span class="o">{</span>CLIENT_ID<span class="o">}</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">GET /client/<span class="o">{</span>RESELLER_CLIENT_ID<span class="o">}</span></code></pre></figure>
 
 <p>Returns all fields for the given client.</p>
 
@@ -887,13 +895,15 @@ $( document ).ready(function() {
 <p>See Fields table. All fields for the client are returned.</p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-  </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"reseller_client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"reseller_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456789"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"custom_client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Client One"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"note"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Here's a new note about Client One."</span><span class="p">,</span><span class="w">
   </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"clientone@email.com"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-555-5555"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"note"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="nt">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1506977100</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1506977100</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
 <h2>
@@ -916,25 +926,31 @@ $( document ).ready(function() {
     </tr>
   <tr>
     <td><code>name</code></td>
-    <td>description</td>
+    <td>The full name of the client.</td>
     <td>string</td>
     <td>Required</td>
   </tr>
   <tr>
     <td><code>email</code></td>
-    <td>description</td>
+    <td>The client's email. This will be used by the client to log into the portal.</td>
     <td>string</td>
     <td>Required</td>
   </tr>
   <tr>
+    <td><code>custom_client_id</code></td>
+    <td>Optional Designer-defined ID.</td>
+    <td>string</td>
+    <td></td>
+  </tr>
+  <tr>
     <td><code>phone</code></td>
-    <td>description</td>
+    <td>Client's phone number</td>
     <td>string</td>
     <td></td>
   </tr>
   <tr>
     <td><code>note</code></td>
-    <td>description</td>
+    <td>An optional note created by the designer.</td>
     <td>string</td>
     <td></td>
   </tr>
@@ -947,7 +963,7 @@ $( document ).ready(function() {
 -d <span class="s1">'{
       "name": "New Client",
       "email": "newclient@email.com",
-      "phone": "555-555-5559"
+      "custom_client_id": "1234"
     }'</span> <span class="se">\</span>
 -H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
 -H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
@@ -956,13 +972,15 @@ $( document ).ready(function() {
 <p class="codeTitle">Example response:</p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-  </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"reseller_client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"reseller_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456789"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"custom_client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1234"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"New Client"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"note"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"newclient@email.com"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-555-5559"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"note"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="nt">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1510949700</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1510949700</span><span class="w">
 </span><span class="p">}</span><span class="w">         </span></code></pre></figure>
 
 <h2>
@@ -970,40 +988,46 @@ $( document ).ready(function() {
 
  Replace a Client</h2>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">PUT /client/<span class="o">{</span>CLIENT_ID<span class="o">}</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">PUT /client/<span class="o">{</span>RESELLER_CLIENT_ID<span class="o">}</span></code></pre></figure>
 
 <p>Replaces the given client.</p>
 
 <p>These fields can be replaced:</p>
 
 <table>
-    <tr>
-        <td><strong>Name</strong></td>
-        <td><strong>Description</strong></td>
-        <td><strong>Type</strong></td>
-        <td><strong>Notes</strong></td>
-    </tr>
+  <tr>
+    <td><strong>Name</strong></td>
+    <td><strong>Description</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Notes</strong></td>
+  </tr>
   <tr>
     <td><code>name</code></td>
-    <td>description</td>
+    <td>The full name of the client.</td>
     <td>string</td>
     <td>Required</td>
   </tr>
   <tr>
     <td><code>email</code></td>
-    <td>description</td>
+    <td>The client's email. This will be used by the client to log into the portal.</td>
     <td>string</td>
     <td>Required</td>
   </tr>
   <tr>
+    <td><code>custom_client_id</code></td>
+    <td>Optional Designer-defined ID.</td>
+    <td>string</td>
+    <td></td>
+  </tr>
+  <tr>
     <td><code>phone</code></td>
-    <td>description</td>
+    <td>Client's phone number</td>
     <td>string</td>
     <td></td>
   </tr>
   <tr>
     <td><code>note</code></td>
-    <td>description</td>
+    <td>An optional note created by the designer.</td>
     <td>string</td>
     <td></td>
   </tr>
@@ -1024,13 +1048,15 @@ $( document ).ready(function() {
 <p class="codeTitle">Example response:</p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-  </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654321"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"reseller_client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"reseller_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456789"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"custom_client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1234"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"New Client One"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"note"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"newclientone@email.com"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-555-5555"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"note"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="nt">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1510949700</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1510949700</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
 <h2>
@@ -1038,36 +1064,41 @@ $( document ).ready(function() {
 
  Update a Client</h2>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">PATCH /client/<span class="o">{</span>CLIENT_ID<span class="o">}</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">PATCH /client/<span class="o">{</span>RESELLER_CLIENT_ID<span class="o">}</span></code></pre></figure>
 
 <p>Updates the given client.</p>
 
 <p>These fields can be updated:</p>
 
 <table>
-    <tr>
-        <td><strong>Name</strong></td>
-        <td><strong>Description</strong></td>
-        <td><strong>Type</strong></td>
-    </tr>
+  <tr>
+    <td><strong>Name</strong></td>
+    <td><strong>Description</strong></td>
+    <td><strong>Type</strong></td>
+  </tr>
   <tr>
     <td><code>name</code></td>
-    <td>description</td>
+    <td>The full name of the client.</td>
     <td>string</td>
   </tr>
   <tr>
     <td><code>email</code></td>
-    <td>description</td>
+    <td>The client's email. This will be used by the client to log into the portal.</td>
+    <td>string</td>
+  </tr>
+  <tr>
+    <td><code>custom_client_id</code></td>
+    <td>Optional Designer-defined ID.</td>
     <td>string</td>
   </tr>
   <tr>
     <td><code>phone</code></td>
-    <td>description</td>
+    <td>Client's phone number</td>
     <td>string</td>
   </tr>
   <tr>
     <td><code>note</code></td>
-    <td>description</td>
+    <td>An optional note created by the designer.</td>
     <td>string</td>
   </tr>
 </table>
@@ -1087,13 +1118,15 @@ $( document ).ready(function() {
 <p>See Fields table. All fields for the client are returned.</p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987654322"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Client Two"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"clienttwo@email.com"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-555-5556"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"note"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A new note."</span><span class="w">
+</span><span class="nt">"reseller_client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"reseller_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456789"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"custom_client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1234"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Client Two"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+</span><span class="nt">"note"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A new note."</span><span class="p">,</span><span class="w">
+</span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"clienttwo@email.com"</span><span class="p">,</span><span class="w">
+</span><span class="nt">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1510949700</span><span class="p">,</span><span class="w">
+</span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1510949700</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
 
@@ -1124,7 +1157,7 @@ $( document ).ready(function() {
 		<div class="col-lg-12">
 			<div class="footer__fineprint">
 				&copy;2017 Weebly. All rights reserved. <br />
-				 Site last generated: Nov 16, 2017
+				 Site last generated: Nov 17, 2017
 			</div>
 			<div class="footer__logo">
 				<img src="images/weebly_logo.svg" alt="Weebly logo"/>
