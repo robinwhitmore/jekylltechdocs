@@ -1,9 +1,9 @@
 ## What are Site Contributors?
-{% if site.project=="cloud" %}
-Site contributors are users that have access to edit and manage a site, but are not owners of the site. For example, a site owner might employ a blog post writer who should have access to blog pages and nothing else. Or they might have someone who does order fulfillment and should only be able to view orders.
-{% elsif site.project=="designer" %}
-Site contributors are users that have access to edit and manage a site, but are not owners of the site. For example, you might set up a client as a contributor to their site so that they can manage their store, but not edit or publish the site. Or you might provide access to certain pages to a team member at your company.
-{% endif %}
+
+Site contributors are users that have access to edit and manage a site, but are not owners of the site. While {% if site.project=="designer" %}[team members](ds_gs_team_members.html){%elsif site.project=="cloud" %}[team members](cl_gs_team_members.html){%endif%} generally have access to all sites, site contributors have access only to the sites that they are added to.
+
+For example, you might set up a {{site.customer}} as a contributor to their site so that they can manage their store, but not edit or publish the site. Or you might provide access to a specific site to an employee at your company.
+
 
 Site contributors can have one of two levels of access:
 * **Admin:** The contributor can do everything.

@@ -1,5 +1,5 @@
 ---
-title: Give Clients and Team Members Site Access
+title: Give Clients and Staff Site Access
 keywords: site contributor, contributor, access, permissions, authorization, site access, site
 t_type: [concepts, task]
 tags: [getting_started, clients, sites]

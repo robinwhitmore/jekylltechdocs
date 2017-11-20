@@ -19,7 +19,6 @@ You create a client from the Client tab of the Cloud Admin.
 1. From the Client tab of the Cloud Admin, click **Add Client**.
 2. Enter a name and email for your client and optional ID and phone number.
     {% include image.html file="ds_clientsAdd.png" caption="Add a client" %}
-    The email must be unique to Weebly, as this is what they will use to log into the <a data-container="body" data-toggle="popover" data-content="{{site.data.glossary.user_portal}}">User Portal.</a>
 
 Once you create a client, they are assigned an ID and you're taken to their detail page.
 

@@ -27,14 +27,5 @@ Once you set access, the client is listed as a contributor on the site's detail 
 ## Staff Access
 {% include image.html file="old_staffAccess.png" caption="Staff access in Designer Platform" %}
 
-In Weebly Cloud, your staff are called *team members*. You create and manage team members from the **TEAM** tab of the Cloud Admin.
-{% include image.html file="new_team.png" caption="Team members in the Cloud Admin" %}
-
-Click **Add Member** to create a new team member. You can restrict Cloud Admin access and general site editing access from here.
-{% include image.html file="new_teamAdd.png" caption="Add a team member" %}
-
-You can further restrict access to specific sites in the same way that you restrict access for your clients. But instead of creating a new site contributor, choose **Existing User** from the Add Contributor dialog and search for the team member by their email address.
-{% include image.html file="new_teamAccess.png" caption="Search for team member" %}
-
-
+In Weebly Cloud, your staff are called *team members*. [Team Members](ds_mg_staff.html), except those assigned to the Finance role, have access to all sites. If you want a staff member to have access only to specific sites, then create them as site contributors as you would for a client.
 

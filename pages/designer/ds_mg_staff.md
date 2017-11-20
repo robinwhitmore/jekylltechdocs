@@ -46,8 +46,10 @@ Click the **Reset Password** link to reset the team member's password.
 You control general access for a team member from the team member's detail page.
 {% include image.html file="new_teamDetails.png" caption="Team member detail page" %}
 
-You control a team member's specific [site-level access](ds_mg_control.html) from the site's detail page.
+{% capture contrib %}
+Team members, other than those assigned to the Finance role, have access to all sites. If you want to limit access to just one or more specific sites, then instead of creating a team member, create a [site contributor](ds_mg_control.html).
+{% endcapture %}
 
-
+{% include note.html content=contrib %}
 
 
