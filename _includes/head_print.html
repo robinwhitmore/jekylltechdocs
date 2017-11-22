@@ -5,7 +5,7 @@
 <meta name="keywords" content="{{page.tags}}{% if page.tags %}, {% endif %} {{page.keywords}}">
 <title>{% if page.homepage == true %} {{site.homepage_title}} {% elsif page.title %}{{ page.title }}{% endif %}  | {{ site.site_title }}</title>
 
-
+<!--
 <link rel="stylesheet" href="{{ "/css/syntax.css" | prepend: site.baseurl | prepend: site.url }}">
 <link rel="stylesheet" href="{{ "/css/font-awesome.min.css" | prepend: site.baseurl | prepend: site.url }}">
 <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl | prepend: site.url }}">
@@ -14,6 +14,15 @@
 <link rel="stylesheet" href="{{ "/css/syntax.css" | prepend: site.baseurl | prepend: site.url }}">
 <link rel="stylesheet" href="{{ "/css/printstyles.css" | prepend: site.baseurl }}">
 <link rel="stylesheet" href="{{ "/css/orbit.css" | prepend: site.baseurl | prepend: site.url }}">
+-->
+<!-- Third-Party CSS -->
+<link rel="stylesheet" href="{{ "css/syntax.css" }}">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="{{ "css/orbit-external.css" }}">
+<link rel="stylesheet" href="{{ "css/orbit.css" }}">
+<link rel="stylesheet" href="{{ "css/theme-weebly.css" }}">
 
 <script>
     Prince.addScriptFunc("datestamp", function() {
@@ -23,7 +32,7 @@
 
 <script>
     Prince.addScriptFunc("guideName", function() {
-        return "{{site.print_title}} User Guide";
+        return "{{site.print_title}}";
     });
 </script>
 

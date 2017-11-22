@@ -122,5 +122,5 @@ description: "Everything you need to install, configure, and manage Weebly Cloud
 # the description is used in the feed.xml file
 
 # needed for sitemap.xml file only
-url: robinwhitmore.github.io
+url: https://robinwhitmore.github.io
 baseurl:

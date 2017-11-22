@@ -18,7 +18,8 @@ To set access for a client, from the site's [detail page](ds_mg_sites.html#site_
 
 Make sure **New User** is selected at the top, and enter the client's name, email address (other settings are optional) and click **Set Permissions**.
 {% include image.html file="new_ContributorAdd.png" caption="Add site contributor" %}
-By default, the new contributor is given full access to the site. To limit access, select **Limit Editor Permissions** and configure the access level. More about setting access levels [here](ds_gs_access_sites.html).
+By default, the new contributor is given full access to the site. To limit access, select **Limit Editor Permissions** and configure the access level. More about setting access levels {% if site.output=="web" %}[here](ds_gs_access_sites.html){%elsif site.output=="pdf"%}
+[here](https://robinwhitmore.github.io{{site.baseurl}}/ds_gs_access_sites.html){%endif%}.
 {% include image.html file="new_contributorSet.png" caption="Set levels of access" %}
 
 Once you set access, the client is listed as a contributor on the site's detail page and you can change the access level at any time by clicking the **Permissions** link.

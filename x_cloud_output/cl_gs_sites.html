@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Once a user is created, they can create and implement their site(s). Or you can create a site for them, either from Cloud Admin or programmatically. You can ...">
+<meta name="keywords" content="getting_startedsites,  publish, copy, preview, template, templates, apps">
+<title>Create Sites | Weebly Cloud Developer Documentation</title>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- Third-Party CSS -->
+<link rel="stylesheet" href="css/syntax.css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" media="screen" href="css/orbit-external.css">
+<link rel="stylesheet" media="screen" href="css/orbit.css">
+<link rel="stylesheet" media="screen" href="css/theme-weebly.css">
+
+<!-- Third-Party JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+<script src="js/jekyll-search.js" type="text/javascript"></script>
+<script src="js/toc.js"></script>
+
+<!-- Custom JS -->
+<script src="js/customscripts.js"></script>
+
+
+
+</head>
+<body>
+
+<!-- Navigation -->
+
+<div class="top-nav">
+
+	<div class="top-nav-item">
+		<img src="images/weebly_cloud_logo.svg" alt="Weebly Cloud" class="cloud-logo" role="button" tabindex="0" alt="menu"/>
+	</div>
+
+	<div class="top-nav-item">
+		<img class="mobile-nav-btn" src="images/icons/mobile-menu.svg" alt="">
+	</div>
+
+	<nav class="top-nav-item">
+		<div class="nav-group">
+			<ul class="NavList nav-group-list horizontal">
+				<!-- entries without drop-downs appear here -->
+				
+				
+				
+				<li class="NavLinkLi">
+					<a href="home.html" class="NavLink nav-group-list-link">Get Started</a>
+				</li>
+				
+				
+				
+				<li class="NavLinkLi">
+					<a href="cl_apis_about.html" class="NavLink nav-group-list-link">Cloud API</a>
+				</li>
+				
+				
+				
+				<li class="NavLinkLi">
+					<a href="cl_apps_gs.html" class="NavLink nav-group-list-link">Custom Apps</a>
+				</li>
+				
+				
+				
+				<!-- entries with drop-downs appear here -->
+				<!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+				
+				
+			<li class="NavLinkLi">
+
+
+
+  <a class="email NavLink nav-group-list-link" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud Developer Docs feedback&body=I have some feedback about the Create Sites page: ' + window.location.href;">Feedback</a>
+
+</li>
+
+
+		
+
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="Search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+	</nav>
+</div>
+
+
+
+
+
+
+<div class="page has-sidebar">
+    
+      <div class="col-sidebar">
+       	
+
+
+
+
+
+
+
+
+
+
+
+
+<ul id="mysidebar" class="nav NavList">
+    
+	    
+		    
+	    
+		    
+
+			    <li class="NavLinkLi">
+			        <a href="#" class="NavLink isSecondary">Get Started</a>
+			        <ul class="NavList Children">
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="home.html" class="NavLink isSecondary">Get Started with Weebly Cloud</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="cl_gs_integration.html" class="NavLink isSecondary">Integration Overview</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="cl_gs_custom.html" class="NavLink isSecondary">Creating Custom Apps</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="cl_gs_hosting.html" class="NavLink isSecondary">Understanding Hosting Options</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="cl_gs_configure.html" class="NavLink isSecondary">Configure Weebly Cloud</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="cl_gs_admin_users.html" class="NavLink isSecondary">Create Cloud Admin Users</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			        </ul>
+			    </li>
+		    
+	    
+		    
+
+			    <li class="NavLinkLi">
+			        <a href="#" class="NavLink isSecondary">Integrate Weebly</a>
+			        <ul class="NavList Children">
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="cl_gs_plans.html" class="NavLink isSecondary">Create Plans</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="cl_gs_users.html" class="NavLink isSecondary">Create and Manage Users</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="active isActive NavLinkLi">
+					            	<a href="cl_gs_sites.html" class="NavLink  isSecondary">Create Sites</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			        </ul>
+			    </li>
+		    
+	    
+		    
+
+			    <li class="NavLinkLi">
+			        <a href="#" class="NavLink isSecondary">Manage Weebly</a>
+			        <ul class="NavList Children">
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="cl_gs_upgrades.html" class="NavLink isSecondary">Handle Upgrades</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="cl_gs_loginlink.html" class="NavLink isSecondary">Provide SSO Access with a loginLink</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			            
+
+				            
+					            <li class="NavLinkLi">
+					            	<a href="cl_gs_suspend.html" class="NavLink isSecondary">Suspend and Remove Sites</a>
+					            </li>
+				            
+
+				            
+			            
+			            
+			        </ul>
+			    </li>
+		    
+	    
+    
+
+</ul>
+
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>
+$("li.active").parents('li').toggleClass("active");
+</script>
+
+      </div>
+    
+
+    <div class="col-content">
+        <div>
+    <div class="post-header">
+        <h1 class="post-title-main display-1">Create Sites</h1>
+    </div>
+    <div class="page-type">  concepts  task </div>
+</div>
+
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary">Once a user is created, they can create and implement their site(s). Or you can create a site for them, either from Cloud Admin or programmatically. You can also create templates that you can copy to create new sites. Once the site is created, you can use the Editor to edit, preview, and publish the site.</div>
+   
+
+    
+    <!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+
+	$('#toc').toc({
+		minimumHeaders: 2, // Don't show ToC if there is only one header
+		listType: 'ul',
+		showSpeed: 0,
+		headers: 'h2'
+	});
+
+	/* this offset helps account for the space taken up by the floating toolbar. */
+	$('#toc').on('click', 'a', function() {
+	  var target = $(this.getAttribute('href'))
+	    , scroll_target = target.offset().top
+
+	  $(window).scrollTop(scroll_target - 50);
+	  return false
+	})
+
+});
+</script>
+
+<div id="toc" class="toc"></div>
+
+    
+
+    
+
+  <h2 id="use-cloud-admin-to-create-sites">Use Cloud Admin to Create Sites</h2>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Using Cloud Admin to work with user and sites is not available to all Weebly installations. If you do not have this functionality and want more info, contact your Weebly representative.</div>
+
+<p>Once you’ve <a href="cl_gs_users.html">created</a>
+ a user, you can then use Cloud Admin to create a site for that user.</p>
+
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> You must create at least one <a href="cl_gs_plans.html">plan</a> before you can create a site.
+</div>
+
+<p><strong>To create a site:</strong></p>
+<ol>
+  <li>In the <a href="https://weeblycloud.com/admin">Cloud Admin</a>, from the user’s detail page, in the <strong>Sites</strong> area click <strong>Add Site</strong>.</li>
+  <li>In the Add Site dialog, you must provide a title and a unique domain, and select a plan to assign to the site.</li>
+</ol>
+
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> Domain names must be unique and must not contain <code class="highlighter-rouge">weebly</code>.
+</div>
+
+<ol>
+  <li>In the <strong>Site Template</strong> area, select <strong>New Site</strong> to create a new site from scratch. Or use a template or copy an existing site (more in the next sections).</li>
+  <li>
+    <p>Optionally, provide site settings like timezone, date format, language, and more.</p>
+  </li>
+  <li>In the Theme Gallery, choose the theme for the site. If you’ve created <a href="cl_themes_start.html">custom themes</a> they display on the tab with your company name.
+    <figure class="post-content__figure">
+	
+
+ <img class="post-content__image" src="images/cl_theme_gallery.png" alt="" />
+
+	
+
+	
+     <figcaption>caption text</figcaption>
+ </figure>
+  </li>
+  <li>Click <strong>Save</strong>.</li>
+</ol>
+
+<p>Unless you set <a href="cl_gs_access_sites.html">contributor permissions</a>, the user has complete access to all pages and settings for the site, including the ability to edit and publish. You can restrict that access by setting their <a href="cl_gs_access_sites.html">Site Contributor permissions</a>.</p>
+
+<h2 id="create-a-site-using-a-template">Create a Site Using a Template</h2>
+
+<p>Instead of creating a site from scratch, you can start with a template. Templates are sites that you’ve created to use as a starting point for new sites. For example, you might create a template for an online store and one for a portfolio site.</p>
+
+<p>You can create up to 30 templates.</p>
+
+<p><strong>To create a template:</strong></p>
+
+<ol>
+  <li>Optionally create a user that will “own” the template sites, then create your template sites under this user. While you can create a template out of any user’s site, this is a great way to organize and manage your templates.</li>
+  <li>Create a site following the instructions above. Add elements and design your site.</li>
+  <li>Optionally add apps from the Weebly App Center or your own custom apps. But remember that access to apps is <a href="cl_gs_plans.html">based on plans</a> , so you may be restricting the potential sites that can use the template by adding apps. To avoid this, when you use the template, you can temporarily change the plan the new site is on so that it allows access to the App Center. More below.</li>
+</ol>
+
+<div class="Notice type_success" role="alert">
+	<b>Tip:</b> Remember that a template is a starting point. Don’t add too many elements, or design too specifically. It may end up being more work to remove what isn’t needed than it would have been to start from scratch.
+</div>
+
+<ol>
+  <li>
+    <p>In the Cloud Admin, from the details page for your template site, click <strong>Add as Template</strong>.</p>
+
+    <figure class="post-content__figure">
+	
+
+ <img class="post-content__image" src="images/cl_addTemplate.png" alt="" />
+
+	
+
+ </figure>
+  </li>
+</ol>
+
+<p>Once added, that site appears as a template available for use when you chose to copy a site. More in the next section.</p>
+
+<p><strong>To remove a template:</strong><br />
+If you want to stop using a site as a template, from the Site Details page, click <strong>Remove as Template</strong>.</p>
+
+<figure class="post-content__figure">
+	
+
+	<img class="post-content__image" src="images/cl_remove_template.png" alt="" />
+
+	
+
+	</figure>
+
+<h2 id="copy-a-site">Copy a Site</h2>
+
+<p>Instead of creating a site from scratch, you can copy an existing one. There are two common use cases for copying a site:</p>
+<ul>
+  <li>You’ve created templates that you copy to create new sites</li>
+  <li>A user wants to create a clone of one of their existing sites</li>
+</ul>
+
+<p>When you copy a site, it copies the existing site and theme, and copies all pages and page content. Orders and members are not copied, and neither are blog posts. Products, membership settings, and any installed apps are copied. Apps from the App Center will appear in the new site as they do in the original, however they will be in a disconnected state. You or the site owner will need to explicitly grant permission to reconnect the app when logging into the Editor.</p>
+<figure class="post-content__figure">
+	
+
+	<img class="post-content__image" src="images/sh_reconnect.png" alt="" />
+
+	
+
+	</figure>
+
+<p>​</p>
+
+<p><strong>To copy a site:</strong></p>
+
+<ol>
+  <li>Following the steps above for creating a site in Cloud Admin.</li>
+  <li>In the Add Site dialog, scroll down to the <strong>Site Template</strong> section.</li>
+  <li>Choose to either copy a template that you’ve created or to copy an existing site.
+    <figure class="post-content__figure">
+	
+
+ <img class="post-content__image" src="images/cl_copysite.png" alt="" />
+
+	
+
+ </figure>
+  </li>
+</ol>
+
+<p><br />
+   If you choose to copy a template, a dropdown displays showin all templates that you have created. Select the one to use.</p>
+<figure class="post-content__figure">
+	
+
+	<img class="post-content__image" src="images/cl_createfromtemplate.png" alt="" />
+
+	
+
+	</figure>
+
+<p><br />
+   If you choose to copy an existing site, select one of the existing sites from the dropdown.</p>
+<figure class="post-content__figure">
+	
+
+	<img class="post-content__image" src="images/cl_copysite.png" alt="" />
+
+	
+
+	</figure>
+
+<p><br /></p>
+
+<p>If the new site is not on a plan that allows access to the App Center, the app will work, but you will need to temporarily change the plan to connect the app.</p>
+
+<p><strong>To allow an app on a plan that doesn’t support the App Center:</strong></p>
+<ol>
+  <li>Temporarily change the site’s plan to one that has access to the App Center.</li>
+  <li>Log into the site from the Cloud Admin and in the Editor, grant the permissions for the app.</li>
+  <li>Change the plan back to the original one.</li>
+</ol>
+
+<p>Anyone editing the site will be able to manage the app, but will not be able to visit the App Center.</p>
+
+<h2 id="use-the-api-to-create-sites">Use the API to Create Sites</h2>
+
+<p>Instead of using the Cloud Admin to create or copy a site, you can use the API directly.</p>
+
+<p>When creating a Weebly site you must provide a domain name. Errors will be thrown if the <code class="highlighter-rouge">user_id</code> is invalid or the domain name is already assigned to a Weebly site. A site id (ex. <code class="highlighter-rouge">447410440673519990</code>) is returned upon successful creation of a site. ​</p>
+
+<p class="codeTitle">Create a Site for a User</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/USER_ID/site <span class="se">\</span>
+  -X POST <span class="se">\</span>
+  -d <span class="s1">'{
+        "domain": "mynewsite.com",
+        "site_title": "My Amazing Website"
+}'</span> <span class="se">\</span>
+  -H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+  -H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p>You can also create a site by copying an existing site. You pass in a <code class="highlighter-rouge">copy_source object</code>, which is the <code class="highlighter-rouge">user_id</code> and <code class="highlighter-rouge">site_id</code> of the source site.</p>
+<p class="codeTitle">Copy a Site</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/user/USER_ID/site <span class="se">\</span>
+  -X POST <span class="se">\</span>
+  -d <span class="s1">'{
+        "domain": "mynewsite.com",
+        "site_title": "My Amazing Website",
+        "copy_source": {
+          "site_id": "123456",
+          "user_id": "987654321"
+}'</span> <span class="se">\</span>
+  -H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
+  -H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
+
+<p>There are many optional parameters that can be passed when creating a site. More information can be found in the API doc, <a href="cl_apis_site.html">here</a>.</p>
+
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> If no <code class="highlighter-rouge">plan_id</code> is provided, then the site is assigned the default plan.
+</div>
+
+<hr />
+
+<h2 id="use-plug-ins-to-create-sites">Use Plug-ins to Create Sites</h2>
+
+<p>If you use plug-ins with Weebly Cloud, then your users create sites using the plug-in’s UI. This image shows the page in APS2 Weebly Cloud plug-in UI where you can create a site.
+<!-- TODO: add CLOUD link to plugins --></p>
+<figure class="post-content__figure">
+	
+
+	<img class="post-content__image" src="images/cl_odin_createsite.png" alt="" />
+
+	
+
+	</figure>
+
+<p><br /></p>
+
+<h2 id="edit-a-site">Edit a Site</h2>
+
+<p>Once a site is created, you can edit the site one of two ways:</p>
+
+<p>From the user’s detail page of the Cloud Admin, click <strong>Login</strong>.
+<!--todo: cloud: add image from user detail-->
+Then click <strong>Edit</strong> from the portal.</p>
+<figure class="post-content__figure">
+	
+
+	<img class="post-content__image" src="images/cl_userPortal.png" alt="" />
+
+	
+
+	</figure>
+
+<p><br /></p>
+
+<p>Or, from the site’s detail page in the Cloud Admin, click <strong>Edit Site</strong>.</p>
+<figure class="post-content__figure">
+	
+
+	<img class="post-content__image" src="images/cl_site_detail_edit.png" alt="" />
+
+	
+
+	</figure>
+
+<p>​The site opens in the Editor, where you can make any needed changes.</p>
+<figure class="post-content__figure">
+	
+
+	<img class="post-content__image" src="images/cl_editor2.png" alt="" />
+
+	
+
+	</figure>
+
+<p><br /></p>
+
+<h2 id="preview-a-site-before-publishing">Preview a Site Before Publishing</h2>
+
+<p>You can preview how a site will appear live without publishing, from the Editor. The site displays in a preview window with a temporary URL. You can send this URL to team members or users so they can view the site. The URL remains valid for 30 days.</p>
+
+<p><strong>To preview a site:</strong></p>
+
+<p>In the Editor, click <strong>Preview</strong>.</p>
+
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> Only users accessing the Editor from Cloud Admin will see the Preview button. It is unavailable to users accessing the site from the User Portal.
+</div>
+
+<figure class="post-content__figure">
+	
+
+	<img class="post-content__image" src="images/cl_editor2.png" alt="" />
+
+	
+
+	</figure>
+
+<p><br />
+OR, in the Cloud Admin, from the site’s detail page, click the <strong>Site Preview</strong> link.</p>
+
+<figure class="post-content__figure">
+	
+
+	<img class="post-content__image" src="images/cl_site_previewlink.png" alt="" />
+
+	
+
+	</figure>
+
+<p>The site displays in a preview window. Copy the URL from here and send to the user or team member.</p>
+<figure class="post-content__figure">
+	
+
+	<img class="post-content__image" src="images/cl_site_preview.png" alt="" />
+
+	
+
+	</figure>
+
+<p><br /></p>
+
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> Blogs, Commerce, Search, Forms, and Membership do not work in preview sites.
+</div>
+
+<h2 id="publish-a-site">Publish a Site</h2>
+
+<p>When you publish a site, it goes live at the domain you’ve registered for the site and can be immediately accessed.</p>
+
+<p><strong>To publish a site:</strong></p>
+
+<p>From the Editor, click <strong>Publish</strong>.</p>
+<figure class="post-content__figure">
+	
+
+	<img class="post-content__image" src="images/cl_editor2.png" alt="" />
+
+	
+
+	</figure>
+
+<h2 id="change-a-sites-domain">Change a Site’s Domain</h2>
+<p>You can change a site’s domain when needed.</p>
+
+<p>From the site’s detail page, click <strong>Set Domain</strong> and enter the new domain.</p>
+
+<div class="Notice type_info" role="alert">
+	<b>Note:</b> Domain names must be unique and must not contain <code class="highlighter-rouge">weebly</code>.
+</div>
+
+<figure class="post-content__figure">
+	
+
+	<img class="post-content__image" src="images/cl_site_detail_domain.png" alt="" />
+
+	
+
+	
+		<figcaption>Change the site's domain</figcaption>
+	</figure>
+
+<h2 id="suspend-access-to-a-site">Suspend Access to a Site</h2>
+<p>To temporarily prevent a user from updating their site in the event they are delinquent on their payment, their access to a site can be suspended using the <a href="cl_api_site.html#postdisable-a-site"><code class="highlighter-rouge">Site::disable</code></a> endpoint. When a site is suspended, access to the Weebly editor is disabled (the published site remains unchanged and active).</p>
+
+<p>SSO loginLinks<!--todo: Cloud: add link--> can still be generated for a suspended site. Clicking on a loginLink will inform the user that access to the site is disabled and will point them to contact their administrator.</p>
+
+<p>Use the <a href="cl_api_site.html#getretrieve-details-for-a-site"><code class="highlighter-rouge">GET /site</code></a> API which returns a <code class="highlighter-rouge">suspended</code> parameter with a value of <code class="highlighter-rouge">true</code> or <code class="highlighter-rouge">false</code> to determine if a site is suspended (the Cloud Admin also shows you if a site is suspended).  A site can be taken out of a suspended state by making a call to <a href="cl_api_site.html#postenable-a-site"><code class="highlighter-rouge">Site::enable</code></a>.​</p>
+
+<p>If you use the WHMCS plug-in, you can use that to suspend and reactivate accounts.<!--todo: Cloud: add link--></p>
+
+<h2 id="unpublish-a-site">Unpublish a Site</h2>
+<p>In the event you want to unpublish a site you can use the <a href="cl_api_site.html#postunpublish-a-site"><code class="highlighter-rouge">Site::unpublish</code></a> endpoint. This will unpublish the site, but not prevent the user from republishing, if they have access to do so. This API method should not be taken lightly. Unpublishing a user’s site should be communicated far in advance so the user can take the appropriate steps to remedy the situation.</p>
+
+<h2 id="delete-a-site">Delete a Site</h2>
+<p>If a user cancels their subscription you can delete their site(s). This completely prevents the user from accessing the site by SSO loginLink or login credentials. Weebly will no longer bill the partner for the site once it is deleted. You can delete a site from the site detail page in the Cloud Admin.</p>
+
+<figure class="post-content__figure">
+	
+
+	<img class="post-content__image" src="images/cl_site_detail_delete.png" alt="" />
+
+	
+
+	
+		<figcaption>Delete a site from the Cloud Admin</figcaption>
+	</figure>
+
+<p>You can also delete a site by making a call to the <a href="cl_api_site.html#deletedelete-a-site">DELETE /site API</a>.</p>
+
+
+
+    <div class="tags">
+        
+            Tags:<br/>
+	        
+
+            
+
+                
+		        	<a href="tag_getting_started.html" class="btn btn-default navbar-btn cursorNorm tags-link" role="button">getting_started</a>
+		        
+
+	        
+
+                
+		        	<a href="tag_sites.html" class="btn btn-default navbar-btn cursorNorm tags-link" role="button">sites</a>
+		        
+
+	        
+        
+    </div>
+
+    
+
+</div>
+
+<hr class="shaded"/>
+
+<footer class="footer">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="footer__fineprint">
+				&copy;2017 Weebly. All rights reserved. <br />
+				 Site last generated: Nov 20, 2017
+			</div>
+			<div class="footer__logo">
+				<img src="images/weebly_logo.svg" alt="Weebly logo"/>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+    </div>
+</div>
+
+
+
+</body>
+</html>

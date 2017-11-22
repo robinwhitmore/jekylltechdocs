@@ -54,3 +54,7 @@ sidebar configuration for print files
 {% if site.product == "designer_gs" %}
 {% assign sidebar_pdf = site.data.sidebars.ds_gs_sidebar.entries %}
 {% endif %}
+
+{% if site.product == "Designer Platform" %}
+{% assign sidebar_pdf = site.data.sidebars.ds_migration_sidebar.entries %}
+{% endif %}
