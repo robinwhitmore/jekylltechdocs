@@ -51,8 +51,9 @@
 				</li>
 				{% endfor %}
 				{% endfor %}
-				{% if site.feedback_disable == null or site.feedback_disable == false %}
-			{% include feedback.html %}
+				<!--{% if site.feedback_disable == null or site.feedback_disable == false %}
+			{% include feedback.html %}-->
+        {% include custom/portal.html %}
 		{% endif %}
 
                 <li>

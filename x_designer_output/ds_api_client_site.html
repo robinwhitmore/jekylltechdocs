@@ -92,13 +92,19 @@
 				<!-- entries with drop-downs appear here -->
 				<!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
 				
-				
+				<!--
 			<li class="NavLinkLi">
 
 
 
   <a class="email NavLink nav-group-list-link" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:rwhitmore@weebly.com?subject=Weebly Cloud for Designers Docs feedback&body=I have some feedback about the Client Site APIs page: ' + window.location.href;">Feedback</a>
 
+</li>
+
+-->
+        <li class="NavLinkLi">
+
+  <a href="https://weeblycloud.com/admin" target="_blank">Cloud Admin</a>
 </li>
 
 
@@ -666,15 +672,12 @@ $( document ).ready(function() {
         <td><strong>Type</strong></td>
         <td><strong>List</strong></td>
         <td><strong>Required</strong></td>
-        <td><strong>Changeable</strong></td>
     </tr>
     <tr>
       <td><code>user_id</code></td>
       <td>ID of the <a href="ds_api_user.html">user object</a> that this site is associated with. For designers, this user object is needed to access the rest of the Weebly Cloud API on behalf the site. Each site has a unique <code>user_id</code>​</td>
       <td>string</td>
       <td>X</td>
-      <td></td>
-      <td></td>
       <td></td>
     </tr>
     <tr>
@@ -683,16 +686,12 @@ $( document ).ready(function() {
       <td>string</td>
       <td>X</td>
       <td></td>
-      <td></td>
-      <td></td>
     </tr>
     <tr>
       <td><code>reseller_client_site_id</code></td>
       <td>ID of a client's site, unique to the designer. ​</td>
       <td>string</td>
       <td>X</td>
-      <td></td>
-      <td></td>
       <td></td>
     </tr>
     <tr>
@@ -701,16 +700,12 @@ $( document ).ready(function() {
       <td>string</td>
       <td>X</td>
       <td></td>
-      <td></td>
-      <td></td>
     </tr>
     <tr>
       <td><code>site_title</code></td>
       <td>Title given to a site.</td>
       <td>string</td>
       <td>X</td>
-      <td></td>
-      <td></td>
       <td></td>
     </tr>
     <tr>
@@ -719,8 +714,6 @@ $( document ).ready(function() {
       <td>string</td>
       <td>X</td>
       <td>X</td>
-      <td></td>
-      <td></td>
     </tr>
     <tr>
       <td><code>published</code></td>
@@ -732,10 +725,6 @@ $( document ).ready(function() {
       </td>
       <td>boolean</td>
       <td>X</td>
-      <td><br />
-      </td>
-      <td><br />
-      </td>
       <td></td>
     </tr>
     <tr>
@@ -744,16 +733,12 @@ $( document ).ready(function() {
       <td>string</td>
       <td>X</td>
       <td></td>
-      <td></td>
-      <td></td>
     </tr>
     <tr>
       <td><code>reseller_plan_name</code></td>
       <td>Name of the <a href="ds_api_plan.html">plan</a> assigned to this site.</td>
       <td>string</td>
       <td>X</td>
-      <td></td>
-      <td></td>
       <td></td>
     </tr>
     <tr>
@@ -762,7 +747,62 @@ $( document ).ready(function() {
       <td>string</td>
       <td>X</td>
       <td></td>
+    </tr>
+    <tr>
+      <td><code>brand_name</code></td>
+      <td>Your <a href="ds_gs_configure.html#brand-your-sites-and-the-cloud-admin">brand name</a>, as set in the Cloud Admin. If not set on the site level, the <code>brand_name</code> set in the Cloud Admin is used. Passing a <code>NULL</code> value will ensure the site uses the value defined in the Cloud Admin.<br />
+        Can be sent in POST request, but is not returned.
+      </td>
+      <td>string</td>
       <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>brand_url</code></td>
+      <td>Full <a href="ds_gs_configure.html#email-url">URL</a> to your website, as set in the Cloud Admin. The link in the footer of a published site will go to this site. If not set on the site level, the brand_url set in the Cloud Admin is used. Passing a <code>NULL</code> value will ensure the site uses the value defined in the Cloud Admin.<br />
+      Can be sent in POST request, but is not returned.</td>
+      <td>string</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>plan_id</code></td>
+      <td>Unique ID for the <a href="ds_api_plan.html">plan</a> for this site.<br />
+        Can be sent in POST request, but is not returned.</td>
+      <td>string</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>term</code></td>
+      <td>Amount of time, in months, that the <a href="ds_api_plan.html">plan</a> is good for.<br />
+        Can be sent in POST request, but is not returned.</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>time_zone</code></td>
+      <td>Timezone used on the site. Valid values can be found <a href="http://cloud-developer.weebly.com/uploads/3/0/3/1/30316827/timezones.json">here.<br />
+        Can be sent in POST request, but is not returned.</a>.
+      </td>
+      <td>string</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>time_format</code></td>
+      <td>Format used for time on the site. Values are <code>12</code> and <code>24</code>.<br />
+        Can be sent in POST request, but is not returned.
+      </td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>date_format</code></td>
+      <td>Format used for dates on the site. Values are <code>n/j/Y</code> for month/day/year and <code>j/n/Y</code> for day/month/year.<br />
+        Can be sent in POST request, but is not returned.
+      </td>
+      <td>string</td>
       <td></td>
     </tr>
     <tr>
@@ -770,20 +810,14 @@ $( document ).ready(function() {
       <td>Date the client's site was created.</td>
         <td>Unix GMT Timestamp</td>
         <td>X</td>
-        <td><br />
-        </td>
-        <td><br />
-        </td>
+      <td><br /></td>
     </tr>
     <tr>
         <td><code>updated_date</code></td>
       <td>Date the client's site was last updated.</td>
         <td>Unix GMT Timestamp</td>
         <td>X</td>
-        <td><br />
-        </td>
-        <td><br />
-        </td>
+      <td><br /></td>
     </tr>
     </tbody>
 </table>
@@ -983,6 +1017,59 @@ $( document ).ready(function() {
     <td>string</td>
     <td>If no plan is provided in the request, the default is assigned.</td>
   </tr>
+  <tr>
+    <td><code>brand_name</code></td>
+    <td>Your <a href="ds_gs_configure.html#brand-your-sites-and-the-cloud-admin">brand name</a>, as set in the Cloud Admin. If not set on the site level, the <code>brand_name</code> set in the Cloud Admin is used. Passing a <code>NULL</code> value will ensure the site uses the value defined in the Cloud Admin.<br />
+      Can be sent in POST request, but is not returned.
+    </td>
+    <td>string</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><code>brand_url</code></td>
+    <td>Full <a href="ds_gs_configure.html#email-url">URL</a> to your website, as set in the Cloud Admin. The link in the footer of a published site will go to this site. If not set on the site level, the brand_url set in the Cloud Admin is used. Passing a <code>NULL</code> value will ensure the site uses the value defined in the Cloud Admin.<br />
+      Can be sent in POST request, but is not returned.</td>
+    <td>string</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><code>plan_id</code></td>
+    <td>Unique ID for the <a href="ds_api_plan.html">plan</a> for this site.<br />
+      Can be sent in POST request, but is not returned.</td>
+    <td>string</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><code>term</code></td>
+    <td>Amount of time, in months, that the <a href="ds_api_plan.html">plan</a> is good for.<br />
+      Can be sent in POST request, but is not returned.</td>
+    <td>string</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><code>time_zone</code></td>
+    <td>Timezone used on the site. Valid values can be found <a href="http://cloud-developer.weebly.com/uploads/3/0/3/1/30316827/timezones.json">here.<br />
+      Can be sent in POST request, but is not returned.</a>.
+    </td>
+    <td>string</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><code>time_format</code></td>
+    <td>Format used for time on the site. Values are <code>12</code> and <code>24</code>.<br />
+      Can be sent in POST request, but is not returned.
+    </td>
+    <td>string</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><code>date_format</code></td>
+    <td>Format used for dates on the site. Values are <code>n/j/Y</code> for month/day/year and <code>j/n/Y</code> for day/month/year.<br />
+      Can be sent in POST request, but is not returned.
+    </td>
+    <td>string</td>
+    <td></td>
+  </tr>
 </table>
 
 <p class="codeTitle">Example CURL request:</p>
@@ -1012,104 +1099,6 @@ $( document ).ready(function() {
   </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1510960433</span><span class="p">,</span><span class="w">
   </span><span class="nt">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1510960433</span><span class="w">
 </span><span class="p">}</span><span class="w">       </span></code></pre></figure>
-
-<h2>
-<div class="Tag type_warning">PUT</div>
-
- Replace a Client Site</h2>
-
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">PUT /client/<span class="o">{</span>RESELLER_CLIENT_ID<span class="o">}</span>/site/<span class="o">{</span>RESELLER_CLIENT_SITE_ID<span class="o">}</span></code></pre></figure>
-
-<p>Replaces the given client site.</p>
-
-<p>These fields can be replaced:</p>
-
-<table>
-    <tr>
-        <td><strong>Name</strong></td>
-        <td><strong>Description</strong></td>
-        <td><strong>Type</strong></td>
-        <td><strong>Notes</strong></td>
-    </tr>
- <!--todo: add fields once tested-->
-</table>
-
-<p class="codeTitle">Example CURL request:</p>
-
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/client/3/site/8 <span class="se">\</span>
--X PUT <span class="se">\</span>
--d <span class="s1">'{
-      "site_title": "My Brand New Site"
-    }'</span> <span class="se">\</span>
--H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
--H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
--H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
-
-<p class="codeTitle">Example response:</p>
-
-<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-  </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123654789"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"reseller_client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"reseller_client_site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9876451263"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"site_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Brand New Site"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"site_domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"www.anothernewsite.com"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"published"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"site_contributor_count"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"reseller_plan_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Free"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"reseller_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"23456789"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1510960433</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1510960433</span><span class="w">
-</span><span class="p">}</span></code></pre></figure>
-
-<h2>
-<div class="Tag type_warning">PATCH</div>
-
- Update a Client Site</h2>
-
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">PATCH /client/<span class="o">{</span>RESELLER_CLIENT_ID<span class="o">}</span>/site/<span class="o">{</span>RESELLER_CLIENT_SITE_ID<span class="o">}</span></code></pre></figure>
-
-<p>Updates the given client site.</p>
-
-<p>These fields can be updated:</p>
-
-<table>
-    <tr>
-        <td><strong>Name</strong></td>
-        <td><strong>Description</strong></td>
-        <td><strong>Type</strong></td>
-    </tr>
-  <!--todo: add fields once tested-->
-</table>
-
-<p class="codeTitle">Example CURL request:</p>
-
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://api.weeblycloud.com/client/3/site/8 <span class="se">\</span>
--X PATCH <span class="se">\</span>
--d <span class="s1">'{
-      "site_title": "My Brand New Site"
-    }'</span> <span class="se">\</span>
--H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
--H <span class="s2">"X-Public-Key: YOURAPIKEY"</span> <span class="se">\</span>
--H <span class="s2">"X-Signed-Request-Hash: YOURSECRETHASH"</span></code></pre></figure>
-
-<p class="codeTitle">Example response:</p>
-<p>See Fields table. All fields for the client are returned.</p>
-
-<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-  </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123654789"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"reseller_client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"reseller_client_site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9876451263"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"site_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Brand New Site"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"site_domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"www.anothernewsite.com"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"published"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"site_contributor_count"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"reseller_plan_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Free"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"reseller_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"23456789"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1510960433</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1510960433</span><span class="w">
-</span><span class="p">}</span></code></pre></figure>
 
 <!--todo: add delete?-->
 
@@ -1159,7 +1148,7 @@ $( document ).ready(function() {
 		<div class="col-lg-12">
 			<div class="footer__fineprint">
 				&copy;2017 Weebly. All rights reserved. <br />
-				 Site last generated: Nov 22, 2017
+				 Site last generated: Dec 1, 2017
 			</div>
 			<div class="footer__logo">
 				<img src="images/weebly_logo.svg" alt="Weebly logo"/>

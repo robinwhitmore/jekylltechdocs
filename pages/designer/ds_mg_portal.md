@@ -18,7 +18,7 @@ You set up your company's contact info from the **SETTINGS** tab of the Cloud Ad
 * Technical
 
 More info about the different contact types and how they are used can be found {% if site.output=="web" %}[here](ds_gs_configure.html#set-contact-info){%elsif site.output=="pdf"%}
-[here](https://robinwhitmore.github.io{{site.baseurl}}/ds_gs_configure.html#set-contact-info){%endif%}. Click the **Add Contact** link to add a new contact.
+here: [https://cloud-designer.weebly.com/ds_gs_configure.html#set-contact-info](https://cloud-designer.weebly.com/ds_gs_configure.html#set-contact-info){%endif%}. Click the **Add Contact** link to add a new contact.
 
 {% include image.html file="new_contacts.png" caption="Contact info in the Cloud Admin" %}
 
@@ -34,7 +34,7 @@ Click the **SETTINGS** tab of the Cloud Admin and upload icons from the **Custom
 {% include image.html file="new_settingsIcon.png" caption="Brand settings in the Cloud Admin" %}
 
 More info about where the icons and footer message display can be found {% if site.output=="web" %}[here](ds_gs_configure.html#brand-your-sites-and-the-cloud-admin){%elsif site.output=="pdf"%}
-[here](https://robinwhitmore.github.io{{site.baseurl}}/ds_gs_configure.html#brand-your-sites-and-the-cloud-admin){%endif%}.
+here: [https://cloud-designer.weebly.com/ds_gs_configure.html#brand-your-sites-and-the-cloud-admin](https://cloud-designer.weebly.com/ds_gs_configure.html#brand-your-sites-and-the-cloud-admin){%endif%}.
 
 ## Set URLs
 {% include image.html file="old_urls.png" caption="Setting URLs in Designer Platform" %}

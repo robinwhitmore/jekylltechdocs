@@ -23,7 +23,7 @@ This partial provides the **next** and **previous** links when there are more pr
 
 ### `​product.tpl`
 
-The `product` partial displays the product images, titles, and prices (sale and regular) in the category grouping.
+The `product` partial displays the product images, titles, inventory level alerts, and prices (sale and regular) in the category grouping.
 {% include image.html file="partial_commerce_product.png" caption="Product partial" %}
 
 ### `subcategory.tpl`

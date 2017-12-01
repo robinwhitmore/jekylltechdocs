@@ -4,7 +4,7 @@ echo 'Killing all Jekyll instances'
 kill -9 $(ps aux | grep '[j]ekyll' | awk '{print $2}')
 clear
 
-echo "Building PDF-friendly HTML site for Cloud Getting Started ...";
+echo "Building PDF-friendly HTML site for Designer Migration ...";
 bundle exec jekyll serve --detach --config _config_Designer.yml,pdfconfigs/config_designer_gs_pdf.yml;
 echo "done";
 

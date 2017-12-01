@@ -32,7 +32,7 @@ You add a client from the **Client List** page on the Clients tab.
 
 {% include image.html file="new_clientAdd2.png" caption="Add a client" %}
 
-More about creating clients {% if site.output=="web" %}[here](ds_gs_clients.html){%elsif site.output=="pdf" %}[here](https://robinwhitmore.github.io{{site.baseurl}}/ds_gs_clients.html){%endif%}.
+More about creating clients {% if site.output=="web" %}[here](ds_gs_clients.html){%elsif site.output=="pdf" %}here: [https://cloud-designer.weebly.com/ds_gs_clients.html](https://cloud-designer.weebly.com/ds_gs_clients.html){%endif%}.
 
 ## Edit a Client
 {% include image.html file="old_editClient.png" caption="Edit a client from the Designer Platform" %}
@@ -51,7 +51,7 @@ Here's what you can do:
     {% include image.html file="new_clientNote.png" caption="Add a note for the client" %}</li>
 
   <li>View the list of client's current sites</li>
-  <li>{% include label.html content="NEW!" %}View a list of any {% if site.output=="web" %}<a href="ds_gs_cr_sites.html#delete-a-site">deleted</a>{%elsif site.output=="pdf" %}<a href="https://robinwhitmore.github.io{{site.baseurl}}/ds_gs_cr_sites.html#delete-a-site">deleted</a>{%endif%} sites: Click the <strong>Deleted Sites</strong> link.</li>
-  <li>{% include label.html content="NEW!" %}{% if site.output=="web"%}<a href="ds_gs_restore.md">Restore</a>{%elsif site.output=="pdf"%}<a href="https://robinwhitmore.github.io{{site.baseurl}}/ds_gs_restore.md">Restore</a>{%endif%} deleted sites</li>
-  <li>{% if site.output=="web"%}<a href="ds_gs_cr_sites.md">Add Sites</a>{%elsif site.output=="pdf"%}<a href="https://robinwhitmore.github.io{{site.baseurl}}/ds_gs_cr_sites.md">Add sites</a>{%endif%}</li>
+  <li>{% include label.html content="NEW!" %}View a list of any {% if site.output=="web" %}<a href="ds_gs_cr_sites.html#delete-a-site">deleted sites</a>{%elsif site.output=="pdf" %} deleted sites <a href="https://cloud-designer.weebly.com/ds_gs_cr_sites.html#delete-a-site">(https://cloud-designer.weebly.com/ds_gs_cr_sites.html#delete-a-site)</a>{%endif%}: Click the <strong>Deleted Sites</strong> link.</li>
+  <li>{% include label.html content="NEW!" %}{% if site.output=="web"%}<a href="ds_gs_restore.html">Restore</a>  deleted sites{%elsif site.output=="pdf"%}Restore deleted sites <a href="https://cloud-designer.weebly.com/ds_gs_restore.html">(https://cloud-designer.weebly.com/ds_gs_restore.html)</a>{%endif%}</li>
+  <li>{% if site.output=="web"%}<a href="ds_gs_cr_sites.html">Add Sites</a>{%elsif site.output=="pdf"%}Add sites <a href="https://cloud-designer.weebly.com/ds_gs_cr_sites.html">(https://cloud-designer.weebly.com/ds_gs_cr_sites.html)</a>{%endif%}</li>
 </ul>

@@ -11,15 +11,12 @@ The following table shows all fields that exist for this API, those that are ret
         <td><strong>Type</strong></td>
         <td><strong>List</strong></td>
         <td><strong>Required</strong></td>
-        <td><strong>Changeable</strong></td>
     </tr>
     <tr>
       <td><code>user_id</code></td>
       <td>ID of the <a href="ds_api_user.html">user object</a> that this site is associated with. For designers, this user object is needed to access the rest of the Weebly Cloud API on behalf the site. Each site has a unique <code>user_id</code>​</td>
       <td>string</td>
       <td>X</td>
-      <td></td>
-      <td></td>
       <td></td>
     </tr>
     <tr>
@@ -28,16 +25,12 @@ The following table shows all fields that exist for this API, those that are ret
       <td>string</td>
       <td>X</td>
       <td></td>
-      <td></td>
-      <td></td>
     </tr>
     <tr>
       <td><code>reseller_client_site_id</code></td>
       <td>ID of a client's site, unique to the designer. ​</td>
       <td>string</td>
       <td>X</td>
-      <td></td>
-      <td></td>
       <td></td>
     </tr>
     <tr>
@@ -46,16 +39,12 @@ The following table shows all fields that exist for this API, those that are ret
       <td>string</td>
       <td>X</td>
       <td></td>
-      <td></td>
-      <td></td>
     </tr>
     <tr>
       <td><code>site_title</code></td>
       <td>Title given to a site.</td>
       <td>string</td>
       <td>X</td>
-      <td></td>
-      <td></td>
       <td></td>
     </tr>
     <tr>
@@ -64,8 +53,6 @@ The following table shows all fields that exist for this API, those that are ret
       <td>string</td>
       <td>X</td>
       <td>X</td>
-      <td></td>
-      <td></td>
     </tr>
     <tr>
       <td><code>published</code></td>
@@ -77,10 +64,6 @@ The following table shows all fields that exist for this API, those that are ret
       </td>
       <td>boolean</td>
       <td>X</td>
-      <td><br>
-      </td>
-      <td><br>
-      </td>
       <td></td>
     </tr>
     <tr>
@@ -89,16 +72,12 @@ The following table shows all fields that exist for this API, those that are ret
       <td>string</td>
       <td>X</td>
       <td></td>
-      <td></td>
-      <td></td>
     </tr>
     <tr>
       <td><code>reseller_plan_name</code></td>
       <td>Name of the <a href="ds_api_plan.html">plan</a> assigned to this site.</td>
       <td>string</td>
       <td>X</td>
-      <td></td>
-      <td></td>
       <td></td>
     </tr>
     <tr>
@@ -107,7 +86,62 @@ The following table shows all fields that exist for this API, those that are ret
       <td>string</td>
       <td>X</td>
       <td></td>
+    </tr>
+    <tr>
+      <td><code>brand_name</code></td>
+      <td>Your {% if site.project=="designer" %}<a href="ds_gs_configure.html#brand-your-sites-and-the-cloud-admin">brand name</a>{% elsif site.project=="cloud" %}<a href="cl_gs_configure.html#brand-your-sites-and-the-cloud-admin">brand name</a>{% endif %}, as set in the Cloud Admin. If not set on the site level, the <code>brand_name</code> set in the Cloud Admin is used. Passing a <code>NULL</code> value will ensure the site uses the value defined in the Cloud Admin.<br>
+        Can be sent in POST request, but is not returned.
+      </td>
+      <td>string</td>
       <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>brand_url</code></td>
+      <td>Full {% if site.project=="designer" %}<a href="ds_gs_configure.html#email-url">URL</a>{% elsif site.project=="cloud" %}<a href="cl_gs_configure.html#email-url">URL</a>{% endif %} to your website, as set in the Cloud Admin. The link in the footer of a published site will go to this site. If not set on the site level, the brand_url set in the Cloud Admin is used. Passing a <code>NULL</code> value will ensure the site uses the value defined in the Cloud Admin.<br>
+      Can be sent in POST request, but is not returned.</td>
+      <td>string</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>plan_id</code></td>
+      <td>Unique ID for the {% if site.project=="designer" %}<a href="ds_api_plan.html">plan</a>{% elsif site.project=="cloud" %}<a href="cl_api_plan.html">plan</a>{% endif %} for this site.<br>
+        Can be sent in POST request, but is not returned.</td>
+      <td>string</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>term</code></td>
+      <td>Amount of time, in months, that the {% if site.project=="designer" %}<a href="ds_api_plan.html">plan</a>{% elsif site.project=="cloud" %}<a href="cl_api_plan.html">plan</a>{% endif %} is good for.<br>
+        Can be sent in POST request, but is not returned.</td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>time_zone</code></td>
+      <td>Timezone used on the site. Valid values can be found <a href="http://cloud-developer.weebly.com/uploads/3/0/3/1/30316827/timezones.json">here.<br>
+        Can be sent in POST request, but is not returned.</a>.
+      </td>
+      <td>string</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>time_format</code></td>
+      <td>Format used for time on the site. Values are <code>12</code> and <code>24</code>.<br>
+        Can be sent in POST request, but is not returned.
+      </td>
+      <td>string</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>date_format</code></td>
+      <td>Format used for dates on the site. Values are <code>n/j/Y</code> for month/day/year and <code>j/n/Y</code> for day/month/year.<br>
+        Can be sent in POST request, but is not returned.
+      </td>
+      <td>string</td>
       <td></td>
     </tr>
     <tr>
@@ -115,20 +149,14 @@ The following table shows all fields that exist for this API, those that are ret
       <td>Date the client's site was created.</td>
         <td>Unix GMT Timestamp</td>
         <td>X</td>
-        <td><br>
-        </td>
-        <td><br>
-        </td>
+      <td><br></td>
     </tr>
     <tr>
         <td><code>updated_date</code></td>
       <td>Date the client's site was last updated.</td>
         <td>Unix GMT Timestamp</td>
         <td>X</td>
-        <td><br>
-        </td>
-        <td><br>
-        </td>
+      <td><br></td>
     </tr>
     </tbody>
 </table>
@@ -322,6 +350,59 @@ These fields can be created:
     <td>string</td>
     <td>If no plan is provided in the request, the default is assigned.</td>
   </tr>
+  <tr>
+    <td><code>brand_name</code></td>
+    <td>Your {% if site.project=="designer" %}<a href="ds_gs_configure.html#brand-your-sites-and-the-cloud-admin">brand name</a>{% elsif site.project=="cloud" %}<a href="cl_gs_configure.html#brand-your-sites-and-the-cloud-admin">brand name</a>{% endif %}, as set in the Cloud Admin. If not set on the site level, the <code>brand_name</code> set in the Cloud Admin is used. Passing a <code>NULL</code> value will ensure the site uses the value defined in the Cloud Admin.<br>
+      Can be sent in POST request, but is not returned.
+    </td>
+    <td>string</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><code>brand_url</code></td>
+    <td>Full {% if site.project=="designer" %}<a href="ds_gs_configure.html#email-url">URL</a>{% elsif site.project=="cloud" %}<a href="cl_gs_configure.html#email-url">URL</a>{% endif %} to your website, as set in the Cloud Admin. The link in the footer of a published site will go to this site. If not set on the site level, the brand_url set in the Cloud Admin is used. Passing a <code>NULL</code> value will ensure the site uses the value defined in the Cloud Admin.<br>
+      Can be sent in POST request, but is not returned.</td>
+    <td>string</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><code>plan_id</code></td>
+    <td>Unique ID for the {% if site.project=="designer" %}<a href="ds_api_plan.html">plan</a>{% elsif site.project=="cloud" %}<a href="cl_api_plan.html">plan</a>{% endif %} for this site.<br>
+      Can be sent in POST request, but is not returned.</td>
+    <td>string</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><code>term</code></td>
+    <td>Amount of time, in months, that the {% if site.project=="designer" %}<a href="ds_api_plan.html">plan</a>{% elsif site.project=="cloud" %}<a href="cl_api_plan.html">plan</a>{% endif %} is good for.<br>
+      Can be sent in POST request, but is not returned.</td>
+    <td>string</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><code>time_zone</code></td>
+    <td>Timezone used on the site. Valid values can be found <a href="http://cloud-developer.weebly.com/uploads/3/0/3/1/30316827/timezones.json">here.<br>
+      Can be sent in POST request, but is not returned.</a>.
+    </td>
+    <td>string</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><code>time_format</code></td>
+    <td>Format used for time on the site. Values are <code>12</code> and <code>24</code>.<br>
+      Can be sent in POST request, but is not returned.
+    </td>
+    <td>string</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><code>date_format</code></td>
+    <td>Format used for dates on the site. Values are <code>n/j/Y</code> for month/day/year and <code>j/n/Y</code> for day/month/year.<br>
+      Can be sent in POST request, but is not returned.
+    </td>
+    <td>string</td>
+    <td></td>
+  </tr>
 </table>
 
 <p class="codeTitle">Example CURL request:</p>
@@ -354,106 +435,6 @@ curl https://api.weeblycloud.com/client/{RESELLER_CLIENT_ID}/site \
 }       
 {% endhighlight %}
 
-<h2>{% include label.html content="put" %} Replace a Client Site</h2>
-{% highlight shell%}
-PUT /client/{RESELLER_CLIENT_ID}/site/{RESELLER_CLIENT_SITE_ID}
-{% endhighlight %}
 
-Replaces the given client site.
-
-
-These fields can be replaced:
-
-<table>
-    <tr>
-        <td><strong>Name</strong></td>
-        <td><strong>Description</strong></td>
-        <td><strong>Type</strong></td>
-        <td><strong>Notes</strong></td>
-    </tr>
- <!--todo: add fields once tested-->
-</table>
-
-<p class="codeTitle">Example CURL request:</p>
-{% highlight shell%}
-curl https://api.weeblycloud.com/client/3/site/8 \
--X PUT \
--d '{
-      "site_title": "My Brand New Site"
-    }' \
--H "Content-type: application/json" \
--H "X-Public-Key: YOURAPIKEY" \
--H "X-Signed-Request-Hash: YOURSECRETHASH"
-{% endhighlight %}
-
-<p class="codeTitle">Example response:</p>
-{% highlight json %}
-{
-  "user_id": "123654789",
-  "reseller_client_id": "3",
-  "reseller_client_site_id": "8",
-  "site_id": "9876451263",
-  "site_title": "My Brand New Site",
-  "site_domain": "www.anothernewsite.com",
-  "published": false,
-  "site_contributor_count": "0",
-  "reseller_plan_name": "Free",
-  "reseller_id": "23456789",
-  "updated_date": 1510960433,
-  "created_date": 1510960433
-}
-{% endhighlight %}
-
-<h2>{% include label.html content="patch" %} Update a Client Site</h2>
-{% highlight shell%}
-PATCH /client/{RESELLER_CLIENT_ID}/site/{RESELLER_CLIENT_SITE_ID}
-{% endhighlight %}
-
-Updates the given client site.
-
-
-These fields can be updated:
-
-<table>
-    <tr>
-        <td><strong>Name</strong></td>
-        <td><strong>Description</strong></td>
-        <td><strong>Type</strong></td>
-    </tr>
-  <!--todo: add fields once tested-->
-</table>
-
-<p class="codeTitle">Example CURL request:</p>
-{% highlight shell%}
-
-curl https://api.weeblycloud.com/client/3/site/8 \
--X PATCH \
--d '{
-      "site_title": "My Brand New Site"
-    }' \
--H "Content-type: application/json" \
--H "X-Public-Key: YOURAPIKEY" \
--H "X-Signed-Request-Hash: YOURSECRETHASH"
-
-{% endhighlight %}
-
-<p class="codeTitle">Example response:</p>
-See Fields table. All fields for the client are returned.
-{% highlight json %}
-{
-  "user_id": "123654789",
-  "reseller_client_id": "3",
-  "reseller_client_site_id": "8",
-  "site_id": "9876451263",
-  "site_title": "My Brand New Site",
-  "site_domain": "www.anothernewsite.com",
-  "published": false,
-  "site_contributor_count": "0",
-  "reseller_plan_name": "Free",
-  "reseller_id": "23456789",
-  "updated_date": 1510960433,
-  "created_date": 1510960433
-}
-{% endhighlight %}
 
 <!--todo: add delete?-->

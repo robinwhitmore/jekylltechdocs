@@ -17,7 +17,7 @@ In the Cloud Admin, you add a site from the client's detail page.
 
 You can create the site from scratch, or you can copy an existing site or use a template.
 More about creating sites {% if site.output=="web" %}[here](ds_gs_cr_sites.html){%elsif site.output=="pdf"%}
-[here](https://robinwhitmore.github.io{{site.baseurl}}/ds_gs_cr_sites.html){%endif%}.
+here: [https://cloud-designer.weebly.com/ds_gs_cr_sites.html](https://cloud-designer.weebly.com/ds_gs_cr_sites.html){%endif%}.
 <a name="site_detail"></a>
 When you create a site, you're taken to the site's detail page where you can further manage it.
 {% include image.html file="new_siteDetail.png" caption="Site's detail page" %}
@@ -41,7 +41,7 @@ You can also preview a site from the site's detail page.
 {% include image.html file="new_sitePreview2.png" caption="Preview a site from the details page" %}
 
 More about previewing a site, and sending a preview link to your client, {% if site.output=="web" %}[here](ds_gs_cr_sites.html#preview-a-site-before-publishing){%elsif site.output=="pdf"%}
-[here](https://robinwhitmore.github.io{{site.baseurl}}/ds_gs_cr_sites.html#preview-a-site-before-publishing){%endif%}.
+here: [https://cloud-designer.weebly.com/ds_gs_cr_sites.html#preview-a-site-before-publishing](https://cloud-designer.weebly.com/ds_gs_cr_sites.html#preview-a-site-before-publishing){%endif%}.
 
 ## Delete a Site
 {% include image.html file="old_siteDelete.png" caption="Delete a site in Designer Platform" %}

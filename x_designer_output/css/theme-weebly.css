@@ -23,7 +23,7 @@ div.next { margin-top: 32px; margin-bottom: 16px; }
 
 .post-content ol li, .post-content ul li { margin: 8px 0px; }
 
-caption { padding-top: 8px; padding-bottom: 8px; color: #777; text-align: left; }
+caption { padding-top: 8px; padding-bottom: 8px; color: #777; text-align: left; page-break-before: avoid; }
 
 p.external a { text-align: right; font-size: 12px; color: #0088cc; display: inline; }
 
@@ -72,7 +72,7 @@ dl dd { margin-top: 10px; margin-bottom: 10px; }
 
 dl.dl-horizontal dd { padding-top: 20px; }
 
-figcaption { padding-bottom: 12px; padding-top: 6px; max-width: 90%; margin-bottom: 20px; font-style: italic; color: gray; }
+figcaption { padding-bottom: 12px; padding-top: 6px; max-width: 90%; margin-bottom: 20px; font-style: italic; color: gray; page-break-before: avoid; }
 
 hr.faded { border: 0; height: 1px; background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); }
 
@@ -208,7 +208,7 @@ figure { margin: 0; }
 .post-content a, .post-content a:hover { color: #46A2FF; }
 
 /* Images are wrapped by <figure> */
-.post-content__figure { margin: 24px 0; }
+.post-content__figure { margin: 24px 0; page-break-before: avoid; }
 
 .post-content__image { max-width: 100%; border: 1px solid #dfe6ee; border-radius: 2px; }
 

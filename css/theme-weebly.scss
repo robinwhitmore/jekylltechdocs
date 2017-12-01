@@ -75,6 +75,7 @@ caption {
     padding-bottom: 8px;
     color: #777;
     text-align: left;
+    page-break-before: avoid;
 }
 
 p.external a {
@@ -222,6 +223,7 @@ figcaption {
 	margin-bottom:20px;
 	font-style: italic;
 	color: gray;
+  page-break-before: avoid;
 }
 
 
@@ -587,6 +589,7 @@ figure {
 /* Images are wrapped by <figure> */
 .post-content__figure {
 	margin: 24px 0;
+  page-break-before: avoid;
 }
 
 .post-content__image {

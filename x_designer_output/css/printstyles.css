@@ -49,7 +49,7 @@ a[href*="mailto"]::after, a[data-toggle="tooltip"]::after, a[href].noCrossRef::a
 
 .printSubtitle {
     font-size: 19pt;
-    color: #cccccc !important;
+    color: grey !important;
     front-family: "Grotesque MT Light";
     line-height: 22pt;
     letter-spacing: -.5px;
@@ -76,14 +76,13 @@ a[href*="mailto"]::after, a[data-toggle="tooltip"]::after, a[href].noCrossRef::a
 }
 
 .copyrightBoilerplate {
-    page-break-before:always;
     font-size:14px;
 }
 
 .lastGeneratedDate {
     font-style: italic;
     font-size:14px;
-    color: gray;
+    color: #cccccc;
 }
 
 .alert a {
@@ -158,5 +157,9 @@ h1 { string-set: doctitle content() }
 
 pre {
     background-color: #fafafa;
+}
+
+ul {
+  page-break-before: avoid;
 }
 

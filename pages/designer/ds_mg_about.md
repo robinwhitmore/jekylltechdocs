@@ -8,7 +8,7 @@ permalink: ds_mg_about.html
 pdf: true
 summary: Use these topics to understand how to do your work in the Cloud Admin
 ---
-{%unless site.ouput=="pdf"%}<a href="downloads/Migration.pdf"><button type="button" class="btn btn-primary">Download a PDF version</button></a>{%endunless%}
+{%if site.output=="web"%}<a href="downloads/Migration.pdf"><button type="button" class="btn btn-primary">Download a PDF version</button></a>{%endif%}
 <div style="background-color: #ff2825; padding-left: 10px">
   <p style="color: #ffffff">Read these topics only if you are migrating from the original Weebly Designer Platform</p>
 </div>
