@@ -37,11 +37,11 @@ Use the following properties to create your tutorial in the manifest:
 * `label`: Required when nesting topics, this is the name of the nested topic. It displays as the title in the parent topic. Use only for nested topics.
 * `introduction`: The text that appears at the top of the dialog. If you are nesting topics, each has its own introduction.
 * `type`: The type of content in this topic. Valid values are:
-    * `step`: Creates a numbered procedure list.
+    * `steps`: Creates a numbered procedure list.
     * `video`: Embeds a YouTube video.
     * `topics`: Denotes this as the parent topic to nested child topics
 * `content`: Holds the actual content to display. Valid values depend on the type.
-    * `step`: An array of strings, one for each step. The maximum number of steps is 5.
+    * `steps`: An array of strings, one for each step. The maximum number of steps is 5.
     * `video`: Enter the YouTube ID as a string (for example, as29f83)
 * `autopop`: Set to `true` to have the tutorial automatically open the first time the user drags the element onto the page. The default is `false`. If you also set `autopop=true` on your element, the tutorial opens first and then the settings dialog.
 
