@@ -21,8 +21,9 @@ Once your account is set up, head on over to {%if site.project=="designer"%}[Con
 ## Test Mode
 
 When first getting acquainted with the Weebly Cloud, your account will be in <a data-container="body" data-toggle="popover" data-content="{{site.data.glossary.test_mode}}">test mode</a>. There are no functional limitations while in test mode, it simply defaults any users and sites created to test so that you won't be charged for them. They will be periodically removed from the system, but only after your Weebly Cloud account is in production mode.
-
+{% if site.project=="cloud" %}
 Once in production mode you can still create a test user in the Cloud Admin or by passing the optional parameter of **test_mode**. Learn more about the {%if site.project=="designer"%}[User API](ds_api_user.html) {%elsif site.project=="cloud"%}[User API](cl_api_user).{%endif%}
+{% endif %}
 
 {% if site.project=="cloud"%}
 ## Decide Where to Host the Weebly Sites

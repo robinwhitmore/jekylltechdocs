@@ -713,14 +713,7 @@ $( document ).ready(function() {
         <td></td>
         <td>X</td>
     </tr>
-    <tr>
-        <td><code>test_mode</code></td>
-        <td>Denotes whether a user is a test user or not. Test users are meant to be used when testing the API or general Weebly Cloud functionality. When <code>true</code>, a user will be created in test mode and the account will not be charged.
-        </td>
-        <td>boolean</td>
-        <td></td>
-        <td>X</td>
-    </tr>
+    
     <tr>
       <td><code>loginLink</code></td>
       <td>A one-time link that will direct users to the editor for the last site that was modified in the account. The link will only work if the user account is enabled and has at least one site associated with it. </td>
@@ -755,9 +748,9 @@ $( document ).ready(function() {
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="nt">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123456</span><span class="p">,</span><span class="w">    
     </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sampleuser@weebly.com"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"test_mode"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-    </span><span class="s2">"language"</span><span class="err">:</span><span class="w"> </span><span class="s2">"en"</span><span class="w">
+    </span><span class="nt">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
@@ -810,13 +803,7 @@ $( document ).ready(function() {
     <td>string</td>
     <td></td>
   </tr>
-  <tr>
-    <td><code>test_mode</code></td>
-    <td>Denotes whether a user is a test user or not. Test users are meant to be used when testing the API or general Weebly Cloud functionality. When <code>true</code>, a user will be created in test mode and the account will not be charged.
-    </td>
-    <td>boolean</td>
-    <td></td>
-  </tr>
+  
 </table>
 
 <p class="codeTitle">Example CURL request:</p>
@@ -825,7 +812,6 @@ $( document ).ready(function() {
 -X POST <span class="se">\</span>
 -d <span class="s1">'{
       "email": "test@weebly.com",
-      "test_mode": true,
       "language": "en"
     }'</span> <span class="se">\</span>
 -H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
@@ -836,9 +822,8 @@ $( document ).ready(function() {
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="nt">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"39793399"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test@weebly.com"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"test_mode"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
     </span><span class="nt">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
@@ -892,13 +877,7 @@ $( document ).ready(function() {
     <td>string</td>
     <td></td>
   </tr>
-  <tr>
-    <td><code>test_mode</code></td>
-    <td>Denotes whether a user is a test user or not. Test users are meant to be used when testing the API or general Weebly Cloud functionality. When <code>true</code>, a user will be created in test mode and the account will not be charged.
-    </td>
-    <td>boolean</td>
-    <td>Required</td>
-  </tr>
+  
 </table>
 
 <p class="codeTitle">Example CURL request:</p>
@@ -907,7 +886,6 @@ $( document ).ready(function() {
 -X PUT <span class="se">\</span>
 -d <span class="s1">'{
       "email": "test9999@weebly.com",
-      "test_mode": false,
       "language": "en"
     }'</span> <span class="se">\</span>
 -H <span class="s2">"Content-type: application/json"</span> <span class="se">\</span>
@@ -919,7 +897,6 @@ $( document ).ready(function() {
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="nt">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test9999@weebly.com"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"test_mode"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
     </span><span class="nt">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
@@ -970,12 +947,7 @@ $( document ).ready(function() {
     </td>
     <td>string</td>
   </tr>
-  <tr>
-    <td><code>test_mode</code></td>
-    <td>Denotes whether a user is a test user or not. Test users are meant to be used when testing the API or general Weebly Cloud functionality. When <code>true</code>, a user will be created in test mode and the account will not be charged.
-    </td>
-    <td>boolean</td>
-  </tr>
+  
 </table>
 
 <p class="codeTitle">Example CURL request:</p>
@@ -994,7 +966,6 @@ $( document ).ready(function() {
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
   </span><span class="nt">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test9@weebly.com"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"test_mode"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
     </span><span class="nt">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
@@ -1099,7 +1070,7 @@ $( document ).ready(function() {
 		<div class="col-lg-12">
 			<div class="footer__fineprint">
 				&copy;2017 Weebly. All rights reserved. <br />
-				 Site last generated: Dec 1, 2017
+				 Site last generated: Dec 5, 2017
 			</div>
 			<div class="footer__logo">
 				<img src="images/weebly_logo.svg" alt="Weebly logo"/>

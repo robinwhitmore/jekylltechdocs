@@ -53,6 +53,7 @@ The following table shows all fields that exist for this API, those that are req
         <td></td>
         <td>X</td>
     </tr>
+    {% if site.project=="cloud" %}
     <tr>
         <td><code>test_mode</code></td>
         <td>Denotes whether a user is a test user or not. Test users are meant to be used when testing the API or general Weebly Cloud functionality. When <code>true</code>, a user will be created in test mode and the account will not be charged.
@@ -61,6 +62,7 @@ The following table shows all fields that exist for this API, those that are req
         <td></td>
         <td>X</td>
     </tr>
+    {% endif %}
     <tr>
       <td><code>loginLink</code></td>
       <td>A one-time link that will direct users to the editor for the last site that was modified in the account. The link will only work if the user account is enabled and has at least one site associated with it. </td>
@@ -109,8 +111,9 @@ curl https://api.weeblycloud.com/user/123456 \
 {% highlight json %}
 {
   "user": {
-    "email": "sampleuser@weebly.com",
-    "test_mode": true
+    "user_id": 123456,    
+    "email": "sampleuser@weebly.com",{% if site.project=="cloud" %}
+    "test_mode": true,{% endif %}
     "language": "en"
   }
 }
@@ -164,6 +167,7 @@ These fields can be created:
     <td>string</td>
     <td></td>
   </tr>
+  {% if site.project=="cloud" %}
   <tr>
     <td><code>test_mode</code></td>
     <td>Denotes whether a user is a test user or not. Test users are meant to be used when testing the API or general Weebly Cloud functionality. When <code>true</code>, a user will be created in test mode and the account will not be charged.
@@ -171,6 +175,7 @@ These fields can be created:
     <td>boolean</td>
     <td></td>
   </tr>
+  {% endif %}
 </table>
 
 <p class="codeTitle">Example CURL request:</p>
@@ -179,7 +184,6 @@ curl https://api.weeblycloud.com/user \
 -X POST \
 -d '{
       "email": "test@weebly.com",
-      "test_mode": true,
       "language": "en"
     }' \
 -H "Content-type: application/json" \
@@ -191,9 +195,9 @@ curl https://api.weeblycloud.com/user \
 {% highlight json %}
 {
   "user": {
-    "user_id": "39793399",
-    "email": "test@weebly.com",
-    "test_mode": true,
+    "user_id": "123456",
+    "email": "test@weebly.com",{% if site.project=="cloud" %}
+    "test_mode": true,{% endif %}
     "language": "en"
   }
 }
@@ -248,6 +252,7 @@ These fields can be updated:
     <td>string</td>
     <td></td>
   </tr>
+  {% if site.project=="cloud" %}
   <tr>
     <td><code>test_mode</code></td>
     <td>Denotes whether a user is a test user or not. Test users are meant to be used when testing the API or general Weebly Cloud functionality. When <code>true</code>, a user will be created in test mode and the account will not be charged.
@@ -255,6 +260,7 @@ These fields can be updated:
     <td>boolean</td>
     <td>Required</td>
   </tr>
+  {% endif %}
 </table>
 
 <p class="codeTitle">Example CURL request:</p>
@@ -263,7 +269,6 @@ curl https://api.weeblycloud.com/user/123456 \
 -X PUT \
 -d '{
       "email": "test9999@weebly.com",
-      "test_mode": false,
       "language": "en"
     }' \
 -H "Content-type: application/json" \
@@ -275,8 +280,8 @@ curl https://api.weeblycloud.com/user/123456 \
 {% highlight json %}
 {
   "user": {
-    "email": "test9999@weebly.com",
-    "test_mode": false,
+    "email": "test9999@weebly.com",{% if site.project=="cloud" %}
+    "test_mode": true,{% endif %}
     "language": "en"
   }
 }
@@ -326,12 +331,14 @@ These fields can be updated:
     </td>
     <td>string</td>
   </tr>
+  {% if site.project=="cloud" %}
   <tr>
     <td><code>test_mode</code></td>
     <td>Denotes whether a user is a test user or not. Test users are meant to be used when testing the API or general Weebly Cloud functionality. When <code>true</code>, a user will be created in test mode and the account will not be charged.
     </td>
     <td>boolean</td>
   </tr>
+  {% endif %}
 </table>
 
 <p class="codeTitle">Example CURL request:</p>
@@ -351,8 +358,8 @@ curl https://api.weeblycloud.com/user/987654321 \
 {% highlight json %}
 {
   "user": {
-    "email": "test9@weebly.com",
-    "test_mode": false,
+    "email": "test9@weebly.com",{% if site.project=="cloud" %}
+    "test_mode": true,{% endif %}
     "language": "en"
   }
 }
